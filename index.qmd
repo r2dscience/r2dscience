@@ -1,7 +1,21 @@
 ---
-title: "r2dscience"
+title: "R2D Science"
 ---
 
-This is a Quarto website.
+# Recursively Realized Distinguishability
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+**R2D** is a framework for understanding physical and biological systems from a primitive architecture of recursive counting.
+
+This website is the living home of the R2D project.
+
+## The Project
+
+R2D begins with a simple premise:
+
+> Counting requires distinguishability.
+
+From this starting point, the framework develops a recursive architecture connecting multiplicity, constraint, recurrence, and scale.
+
+## R2D Canon
+
+The formal R2D canon, addenda, applications, and supporting essays will be collected here.

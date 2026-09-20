@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "r2dscience",
+    "title": "R2D Science",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "R2D is a framework for understanding physical and biological systems from a primitive architecture of recursive counting.\nThis website is the living home of the R2D project.\n\n\nR2D begins with a simple premise:\n\nCounting requires distinguishability.\n\nFrom this starting point, the framework develops a recursive architecture connecting multiplicity, constraint, recurrence, and scale.\n\n\n\nThe formal R2D canon, addenda, applications, and supporting essays will be collected here."
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,19 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "index.html#the-project",
+    "href": "index.html#the-project",
+    "title": "R2D Science",
+    "section": "",
+    "text": "R2D begins with a simple premise:\n\nCounting requires distinguishability.\n\nFrom this starting point, the framework develops a recursive architecture connecting multiplicity, constraint, recurrence, and scale."
+  },
+  {
+    "objectID": "index.html#r2d-canon",
+    "href": "index.html#r2d-canon",
+    "title": "R2D Science",
+    "section": "",
+    "text": "The formal R2D canon, addenda, applications, and supporting essays will be collected here."
   }
 ]
