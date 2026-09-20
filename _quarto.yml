@@ -1,21 +1,19 @@
 project:
   type: website
+  output-dir: _site
 
 website:
-  title: "r2dscience"
+  title: "R2D Science"
+  search: true
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
     css: styles.css
     toc: true
-
-
-

@@ -2,4 +2,8 @@
 title: "About"
 ---
 
-About this site
+# About R2D Science
+
+R2D Science is the home of Recursively Realized Distinguishability (R2D), a scientific framework developed by Josh E. Baker.
+
+Contact: josh@r2dscience.org
