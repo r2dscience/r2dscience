@@ -11,7 +11,7 @@ Science has a math that describes what an object does.
 
 ![](../images/r2d-bridge.png){width="100%"}
 
-We discovered R²D in muscle, where chemistry, thermodynamics, and mechanics apply to a macroscopic object like a muscle fiber, and the exact same science applies to a microscopic object like a myosin molecule.
+We discovered R²D in muscle, where chemistry, thermodynamics, and mechanics apply to both a macroscopic muscle fiber and a microscopic myosin molecule. Science does not smoothly change across these scales; it describes muscle and a myosin molecule as two distinctly different objects.
 
 **Science is boundary dependent. It does not privilege any one object. It does not privilege any one scale.** 
 
@@ -19,6 +19,6 @@ The formal breakthrough was to define macrostate and microstate as boundary-depe
 
 Once microstate and macrostate are properly defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures: thermodynamics before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.  
 
-R²D gives AI something science has never provided: a single mathematical structure onto which chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by demonstrating inconsistencies with scientific laws across domains. AI consistently preserves both R²D and scientific laws. It breaks conventional ontologies.  
+R²D gives AI something science doesn't provide: a single mathematical structure onto which chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by identifying inconsistencies with scientific laws across domains. AI consistently preserves both R²D and scientific laws. It breaks conventional ontologies.  
 
 Upload R²D into an LLM. Give it a scientific law, a paradox, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows.
