@@ -17,12 +17,6 @@ AI can solve mathematics.
 
 </div>
 
-<div class="r2d-sublead">
-
-Science has mathematics that describes what an object does.  
-**R<sup>2</sup>D provides mathematics that defines what an object is.**
-</div>
-
 <div class="r2d-what-link">
 
 [WHAT IS R<sup>2</sup>D? →](understand/what-is-r2d.qmd)
@@ -43,7 +37,7 @@ Give R²D to an AI and use it to interrogate a scientific law, paradox, paper, o
 :::
 ::: {.r2d-pathway}
 ### TEST R<sup>2</sup>D
-See what happens when the same mathematical structure is applied to muscle, thermodynamics, quantum statistics, gravity, geometry, fluids, and biology.  
+See what happens when the same mathematical structure is applied to thermodynamics, quantum statistics, gravity, geometry, fluids, and biology.  
 [EXPLORE APPLICATIONS](applications/index.qmd){.r2d-pathway-link}
 :::
 :::

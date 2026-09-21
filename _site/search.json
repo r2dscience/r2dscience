@@ -1,38 +1,17 @@
 [
   {
-    "objectID": "understand/index.html",
-    "href": "understand/index.html",
-    "title": "Understand R²D",
+    "objectID": "understand/what-is-r2d.html",
+    "href": "understand/what-is-r2d.html",
+    "title": "What is R²D?",
     "section": "",
-    "text": "Understand R²D\nLearn the boundary-dependent mathematics underlying R²D."
+    "text": "Science has a math that describes what an object does.\nR²D provides a math that defines what an object is.\n\nWe discovered R²D in muscle, where chemistry, thermodynamics, and mechanics apply to a macroscopic object like a muscle fiber, and the exact same science applies to a microscopic object like a myosin molecule.\nScience is boundary dependent. It does not privilege any one object. It does not privilege any one scale.\nThe formal breakthrough was to define macrostate and microstate as boundary-dependent mathematical objects. Changing the boundary does not blur an object; it replaces its state domain. At one boundary, a water molecule is the scientific object. At another boundary, a glass of water replaces a water molecule as the scientific object. R²D merely states that a glass of water is not a water molecule.\nOnce microstate and macrostate are properly defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures: thermodynamics before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.\nR²D gives AI something science has never provided: a single mathematical structure onto which chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by demonstrating inconsistencies with scientific laws across domains. AI consistently preserves both R²D and scientific laws. It breaks conventional ontologies.\nUpload R²D into an LLM. Give it a scientific law, a paradox, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows."
   },
   {
-    "objectID": "index.html#r2d-at-a-glance",
-    "href": "index.html#r2d-at-a-glance",
-    "title": "Use AI to solve science.",
-    "section": "R2D at a glance",
-    "text": "R2D at a glance"
-  },
-  {
-    "objectID": "index.html#read-it.-run-it.-test-it.",
-    "href": "index.html#read-it.-run-it.-test-it.",
-    "title": "Use AI to solve science.",
-    "section": "Read it. Run it. Test it.",
-    "text": "Read it. Run it. Test it."
-  },
-  {
-    "objectID": "applications/index.html",
-    "href": "applications/index.html",
-    "title": "Test R²D",
+    "objectID": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-the-mathematics-that-allows-ai-to-solve-science.",
+    "href": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-the-mathematics-that-allows-ai-to-solve-science.",
+    "title": "What is R²D?",
     "section": "",
-    "text": "Test R²D\nExplore applications of R²D across physics, chemistry, biology, and geometry."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About R2D Science\nR2D Science is the home of Recursively Realized Distinguishability (R2D), a scientific framework developed by Josh E. Baker.\nContact: josh@r2dscience.org"
+    "text": "Science has a math that describes what an object does.\nR²D provides a math that defines what an object is.\n\nWe discovered R²D in muscle, where chemistry, thermodynamics, and mechanics apply to a macroscopic object like a muscle fiber, and the exact same science applies to a microscopic object like a myosin molecule.\nScience is boundary dependent. It does not privilege any one object. It does not privilege any one scale.\nThe formal breakthrough was to define macrostate and microstate as boundary-dependent mathematical objects. Changing the boundary does not blur an object; it replaces its state domain. At one boundary, a water molecule is the scientific object. At another boundary, a glass of water replaces a water molecule as the scientific object. R²D merely states that a glass of water is not a water molecule.\nOnce microstate and macrostate are properly defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures: thermodynamics before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.\nR²D gives AI something science has never provided: a single mathematical structure onto which chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by demonstrating inconsistencies with scientific laws across domains. AI consistently preserves both R²D and scientific laws. It breaks conventional ontologies.\nUpload R²D into an LLM. Give it a scientific law, a paradox, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows."
   },
   {
     "objectID": "run/index.html",
@@ -42,17 +21,31 @@
     "text": "Run R²D\nUse R²D with AI to interrogate scientific laws, paradoxes, and problems."
   },
   {
-    "objectID": "understand/what-is-r2d.html",
-    "href": "understand/what-is-r2d.html",
-    "title": "What is R²D?",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Science has a math that describes what an object does. R²D provides a math that defines what an object is.\nWe discovered R²D in muscle, where chemistry, thermodynamics, and mechanics apply to a single object like a muscle fiber. They apply equally to a subordinate object like a myosin molecule when that subordinate object becomes the object.\nScience is boundary dependent. It does not privilege any one object. It does not privilege any one scale.\nThe formal breakthrough was to define macrostate and microstate as boundary-dependent mathematical objects. Changing the boundary does not blur an object; it replaces its state domain. At one boundary, a water molecule is the object. At another boundary, a glass of water replaces a water molecule as the object. R²D simply states that a glass of water is not a water molecule.\nOnce microstate and macrostate are formally defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures: thermodynamics before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.\nR²D gives AI something science has never provided: a single mathematical structure onto which chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by demonstrating inconsistencies with scientific laws across domains. AI consistently preserves both R²D and scientific laws. It breaks conventional ontologies.\nUpload R²D into an LLM. Give it a scientific law, a paradox, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows."
+    "text": "About R2D Science\nR2D Science is the home of Recursively Realized Distinguishability (R2D), a scientific framework developed by Josh E. Baker.\nContact: josh@r2dscience.org"
   },
   {
-    "objectID": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-the-mathematics-that-allows-ai-to-solve-science.",
-    "href": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-the-mathematics-that-allows-ai-to-solve-science.",
-    "title": "What is R²D?",
+    "objectID": "applications/index.html",
+    "href": "applications/index.html",
+    "title": "Test R²D",
     "section": "",
-    "text": "Science has a math that describes what an object does. R²D provides a math that defines what an object is.\nWe discovered R²D in muscle, where chemistry, thermodynamics, and mechanics apply to a single object like a muscle fiber. They apply equally to a subordinate object like a myosin molecule when that subordinate object becomes the object.\nScience is boundary dependent. It does not privilege any one object. It does not privilege any one scale.\nThe formal breakthrough was to define macrostate and microstate as boundary-dependent mathematical objects. Changing the boundary does not blur an object; it replaces its state domain. At one boundary, a water molecule is the object. At another boundary, a glass of water replaces a water molecule as the object. R²D simply states that a glass of water is not a water molecule.\nOnce microstate and macrostate are formally defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures: thermodynamics before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.\nR²D gives AI something science has never provided: a single mathematical structure onto which chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by demonstrating inconsistencies with scientific laws across domains. AI consistently preserves both R²D and scientific laws. It breaks conventional ontologies.\nUpload R²D into an LLM. Give it a scientific law, a paradox, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows."
+    "text": "Test R²D\nExplore applications of R²D across physics, chemistry, biology, and geometry."
+  },
+  {
+    "objectID": "index.html#r2d-at-a-glance",
+    "href": "index.html#r2d-at-a-glance",
+    "title": "Use AI to solve science.",
+    "section": "R2D at a glance",
+    "text": "R2D at a glance"
+  },
+  {
+    "objectID": "understand/index.html",
+    "href": "understand/index.html",
+    "title": "Understand R²D",
+    "section": "",
+    "text": "Understand R²D\nLearn the boundary-dependent mathematics underlying R²D."
   }
 ]
