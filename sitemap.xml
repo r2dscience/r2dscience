@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2dscience.org/understand/what-is-r2d.html</loc>
-    <lastmod>2026-09-21T12:40:34.587Z</lastmod>
+    <lastmod>2026-09-21T16:52:53.761Z</lastmod>
   </url>
   <url>
     <loc>https://r2dscience.org/run/index.html</loc>
@@ -21,6 +21,22 @@
     <lastmod>2026-09-19T18:45:10.421Z</lastmod>
   </url>
   <url>
+    <loc>https://r2dscience.org/about/publications.html</loc>
+    <lastmod>2026-09-21T16:16:29.149Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about/index.html</loc>
+    <lastmod>2026-09-21T16:23:47.491Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about/contact.html</loc>
+    <lastmod>2026-09-21T16:23:50.891Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about/josh-baker.html</loc>
+    <lastmod>2026-09-21T16:16:21.489Z</lastmod>
+  </url>
+  <url>
     <loc>https://r2dscience.org/about.html</loc>
     <lastmod>2026-09-20T04:38:09.868Z</lastmod>
   </url>
@@ -34,7 +50,7 @@
   </url>
   <url>
     <loc>https://r2dscience.org/index.html</loc>
-    <lastmod>2026-09-21T12:00:28.362Z</lastmod>
+    <lastmod>2026-09-21T16:49:08.078Z</lastmod>
   </url>
   <url>
     <loc>https://r2dscience.org/understand/index.html</loc>

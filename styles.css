@@ -126,3 +126,34 @@
 .r2d-what-link a:hover {
   text-decoration: underline;
 }
+/* Essays and social links */
+
+.r2d-follow {
+  max-width: 900px;
+  margin: 3rem auto 4rem auto;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.r2d-follow h2 {
+  margin-bottom: 1rem;
+}
+
+.r2d-social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.r2d-social-links a {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.r2d-social-links a:hover {
+  text-decoration: underline;
+}
