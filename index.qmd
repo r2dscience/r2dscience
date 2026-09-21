@@ -13,7 +13,7 @@ toc: false
 <div class="r2d-lead">
 
 AI can solve mathematics.     
-**R<sup>2</sup>D is the mathematics that allows AI to solve science.**
+**R<sup>2</sup>D is a mathematical interface that turns scientific objects into mathematics that AI can solve.**
 
 </div>
 
@@ -27,7 +27,7 @@ AI can solve mathematics.
 ::: {.r2d-pathways}
 ::: {.r2d-pathway}
 ### READ R<sup>2</sup>D
-Learn the boundary-dependent mathematics behind the framework—from recursive counting and replacement to multiplicity, constraint, closure, and scale.  
+Learn about the boundary-dependent mathematics behind the framework — from recursive counting and replacement to multiplicity, constraint, closure, and scale.  
 [UNDERSTAND R²D](understand/index.qmd){.r2d-pathway-link}
 :::
 ::: {.r2d-pathway}

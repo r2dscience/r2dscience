@@ -28,5 +28,17 @@
   },
   "understand/what-is-r2d.qmd": {
     "what-is-r2d.html": "a733c004"
+  },
+  "about/contact.qmd": {
+    "contact.html": "2a0b6397"
+  },
+  "about/index.qmd": {
+    "index.html": "dbc21bba"
+  },
+  "about/josh-baker.qmd": {
+    "josh-baker.html": "2a48e06a"
+  },
+  "about/publications.qmd": {
+    "publications.html": "34725a92"
   }
 }

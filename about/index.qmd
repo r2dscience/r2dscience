@@ -1,0 +1,16 @@
+::: {.r2d-follow}
+
+## Follow R²D
+
+Long-form essays and ongoing commentary are published at  
+[**The Hand & The Arrow →**](YOUR-SUBSTACK-URL){target="_blank"}
+
+<div class="r2d-social-links">
+
+[Facebook](YOUR-FACEBOOK-URL){target="_blank"}
+[X](YOUR-X-URL){target="_blank"}
+[LinkedIn](YOUR-LINKEDIN-URL){target="_blank"}
+
+</div>
+
+:::

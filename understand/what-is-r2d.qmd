@@ -3,7 +3,7 @@ title: "What is R²D?"
 toc: true
 ---
 
-## AI can solve mathematics. R²D is the mathematics that allows AI to solve science.
+## AI can solve mathematics. R²D is the mathematical interface that turns science into mathematics AI can solve.
 
 Science has a math that describes what an object does.  
 
@@ -11,7 +11,7 @@ Science has a math that describes what an object does.
 
 ![](../images/r2d-bridge.png){width="100%"}
 
-We discovered R²D in muscle, where chemistry, thermodynamics, and mechanics apply to both a macroscopic muscle fiber and a microscopic myosin molecule. Science does not smoothly change across these scales; it describes muscle and a myosin molecule as two distinctly different objects.
+We discovered R²D in muscle, where chemistry, thermodynamics, and mechanics apply equally to a macroscopic muscle fiber and a microscopic myosin molecule. The science is the same; the scientific object is replaced. 
 
 **Science is boundary dependent. It does not privilege any one object. It does not privilege any one scale.** 
 

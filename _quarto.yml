@@ -3,14 +3,39 @@ project:
   output-dir: _site
 
 website:
-  title: "R2D Science"
-  search: true
+  title: "R²D Science"
+
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
-        text: About
+
+      - text: Understand
+        menu:
+          - href: understand/what-is-r2d.qmd
+            text: What is R²D?
+          - href: understand/index.qmd
+            text: Understand R²D
+
+      - href: run/index.qmd
+        text: Run R²D
+
+      - href: applications/index.qmd
+        text: Applications
+
+      - href: canon/index.qmd
+        text: Canon
+
+      - text: About
+        menu:
+          - href: about/index.qmd
+            text: About R²D Science
+          - href: about/josh-baker.qmd
+            text: Josh Baker
+          - href: about/publications.qmd
+            text: Publications & Archive
+          - href: about/contact.qmd
+            text: Contact
 
 format:
   html:
