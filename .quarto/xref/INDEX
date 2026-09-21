@@ -16,5 +16,17 @@
   },
   "essays.qmd": {
     "essays.html": "1aaefc3b"
+  },
+  "applications/index.qmd": {
+    "index.html": "372f8d99"
+  },
+  "run/index.qmd": {
+    "index.html": "754fa3bc"
+  },
+  "understand/index.qmd": {
+    "index.html": "a51eed15"
+  },
+  "understand/what-is-r2d.qmd": {
+    "what-is-r2d.html": "a733c004"
   }
 }

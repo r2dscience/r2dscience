@@ -1,0 +1,7 @@
+---
+title: "Run R²D"
+---
+
+# Run R²D
+
+Use R²D with AI to interrogate scientific laws, paradoxes, and problems.

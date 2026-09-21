@@ -1,0 +1,7 @@
+---
+title: "Test R²D"
+---
+
+# Test R²D
+
+Explore applications of R²D across physics, chemistry, biology, and geometry.

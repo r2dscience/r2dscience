@@ -1,21 +1,57 @@
 ---
-title: "R2D Science"
+page-layout: full
+toc: false
 ---
 
-# Recursively Realized Distinguishability
+![](images/R2D-Header.png){width="100%"}
 
-**R2D** is a framework for understanding physical and biological systems from a primitive architecture of recursive counting.
+::: {.r2d-hero}
+<div class="r2d-kicker">R<sup>2</sup>D SCIENCE</div>
 
-This website is the living home of the R2D project.
+# Use AI to solve science.
 
-## The Project
+<div class="r2d-lead">
 
-R2D begins with a simple premise:
+AI can solve mathematics.     
+**R<sup>2</sup>D is the mathematics that allows AI to solve science.**
 
-> Counting requires distinguishability.
+</div>
 
-From this starting point, the framework develops a recursive architecture connecting multiplicity, constraint, recurrence, and scale.
+<div class="r2d-sublead">
 
-## R2D Canon
+Science has mathematics that describes what an object does.  
+**R<sup>2</sup>D provides mathematics that defines what an object is.**
+</div>
 
-The formal R2D canon, addenda, applications, and supporting essays will be collected here.
+<div class="r2d-what-link">
+
+[WHAT IS R<sup>2</sup>D? →](understand/what-is-r2d.qmd)
+
+</div>
+
+:::
+::: {.r2d-pathways}
+::: {.r2d-pathway}
+### READ R<sup>2</sup>D
+Learn the boundary-dependent mathematics behind the framework—from recursive counting and replacement to multiplicity, constraint, closure, and scale.  
+[UNDERSTAND R²D](understand/index.qmd){.r2d-pathway-link}
+:::
+::: {.r2d-pathway}
+### RUN R<sup>2</sup>D
+Give R²D to an AI and use it to interrogate a scientific law, paradox, paper, or unsolved problem.  
+[RUN R²D](run/index.qmd){.r2d-pathway-link}
+:::
+::: {.r2d-pathway}
+### TEST R<sup>2</sup>D
+See what happens when the same mathematical structure is applied to muscle, thermodynamics, quantum statistics, gravity, geometry, fluids, and biology.  
+[EXPLORE APPLICATIONS](applications/index.qmd){.r2d-pathway-link}
+:::
+:::
+<div class="r2d-challenge">
+Don't believe it. Try it.
+</div>
+
+#
+## R<sup>2</sup>D at a glance
+
+![](images/r2d-banner.png){width="100%"}

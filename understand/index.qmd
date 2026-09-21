@@ -1,0 +1,7 @@
+---
+title: "Understand R²D"
+---
+
+# Understand R²D
+
+Learn the boundary-dependent mathematics underlying R²D.
