@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index – R²D Science</title>
+<title>Boundaries Define Scientific Objects – R²D Science</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -165,93 +194,350 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#understand-r²d" id="toc-understand-r²d" class="nav-link active" data-scroll-target="#understand-r²d">Understand R²D</a>
+  <li><a href="#boundaries-define-scientific-objects" id="toc-boundaries-define-scientific-objects" class="nav-link active" data-scroll-target="#boundaries-define-scientific-objects">Boundaries Define Scientific Objects</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">0. Introduction</a></li>
-  <li><a href="#define-the-object" id="toc-define-the-object" class="nav-link" data-scroll-target="#define-the-object">1. Define the object</a></li>
-  <li><a href="#define-what-can-be-realized" id="toc-define-what-can-be-realized" class="nav-link" data-scroll-target="#define-what-can-be-realized">2. Define what can be realized</a></li>
-  <li><a href="#define-direction" id="toc-define-direction" class="nav-link" data-scroll-target="#define-direction">3. Define direction</a></li>
-  <li><a href="#define-recurrence" id="toc-define-recurrence" class="nav-link" data-scroll-target="#define-recurrence">4. Define recurrence</a></li>
-  <li><a href="#put-it-together" id="toc-put-it-together" class="nav-link" data-scroll-target="#put-it-together">5. Put it together</a></li>
-  <li><a href="#understand-the-implications" id="toc-understand-the-implications" class="nav-link" data-scroll-target="#understand-the-implications">6. Understand the implications</a></li>
-  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  <li><a href="#a-boundary-is-not-necessarily-a-physical-surface" id="toc-a-boundary-is-not-necessarily-a-physical-surface" class="nav-link" data-scroll-target="#a-boundary-is-not-necessarily-a-physical-surface">A Boundary Is Not Necessarily a Physical Surface</a></li>
+  <li><a href="#the-boundary-defines-the-object" id="toc-the-boundary-defines-the-object" class="nav-link" data-scroll-target="#the-boundary-defines-the-object">The Boundary Defines the Object</a></li>
+  <li><a href="#the-same-physical-system-can-support-different-objects" id="toc-the-same-physical-system-can-support-different-objects" class="nav-link" data-scroll-target="#the-same-physical-system-can-support-different-objects">The Same Physical System Can Support Different Objects</a></li>
+  <li><a href="#there-is-no-privileged-physical-scale" id="toc-there-is-no-privileged-physical-scale" class="nav-link" data-scroll-target="#there-is-no-privileged-physical-scale">There Is No Privileged Physical Scale</a></li>
+  <li><a href="#boundary-relative-statehood" id="toc-boundary-relative-statehood" class="nav-link" data-scroll-target="#boundary-relative-statehood">Boundary-Relative Statehood</a></li>
+  <li><a href="#immediately-subordinate-peer-boundaries" id="toc-immediately-subordinate-peer-boundaries" class="nav-link" data-scroll-target="#immediately-subordinate-peer-boundaries">Immediately Subordinate Peer Boundaries</a></li>
+  <li><a href="#compatibility-comes-before-multiplicity" id="toc-compatibility-comes-before-multiplicity" class="nav-link" data-scroll-target="#compatibility-comes-before-multiplicity">Compatibility Comes Before Multiplicity</a></li>
+  <li><a href="#resolution-changes-the-count-boundary" id="toc-resolution-changes-the-count-boundary" class="nav-link" data-scroll-target="#resolution-changes-the-count-boundary">Resolution Changes the Count Boundary</a></li>
+  <li><a href="#the-causal-question-changes-too" id="toc-the-causal-question-changes-too" class="nav-link" data-scroll-target="#the-causal-question-changes-too">The Causal Question Changes Too</a></li>
+  <li><a href="#a-boundary-is-not-coarse-graining" id="toc-a-boundary-is-not-coarse-graining" class="nav-link" data-scroll-target="#a-boundary-is-not-coarse-graining">A Boundary Is Not Coarse-Graining</a></li>
+  <li><a href="#boundaries-make-recursive-replacement-possible" id="toc-boundaries-make-recursive-replacement-possible" class="nav-link" data-scroll-target="#boundaries-make-recursive-replacement-possible">Boundaries Make Recursive Replacement Possible</a></li>
+  <li><a href="#scientific-objecthood-is-boundary-indexed" id="toc-scientific-objecthood-is-boundary-indexed" class="nav-link" data-scroll-target="#scientific-objecthood-is-boundary-indexed">Scientific Objecthood Is Boundary Indexed</a></li>
+  <li><a href="#the-boundary-comes-first" id="toc-the-boundary-comes-first" class="nav-link" data-scroll-target="#the-boundary-comes-first">The Boundary Comes First</a></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Boundaries Define Scientific Objects</h1>
+<p class="subtitle lead">The count domain comes before the object</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="understand-r²d" class="level1">
-<h1>Understand R²D</h1>
-<p>R²D begins with two familiar statistical concepts—macrostate and microstate—and asks a more primitive question:</p>
-<p><strong>Relative to what is a state a microstate?</strong></p>
-<p>The Part I Introduction provides the shortest route into the full framework.</p>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">0. Introduction</h2>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="boundaries-define-scientific-objects" class="level1">
+<h1>Boundaries Define Scientific Objects</h1>
+<p>R<sup>2</sup>D begins with the principle:</p>
+<blockquote class="blockquote">
+<p><strong>Counting requires distinguishability.</strong></p>
+</blockquote>
+<p>But distinguishability alone is not enough.</p>
+<p>A scientific count also requires a boundary that determines <strong>what counts as a distinction</strong>.</p>
+<p>R<sup>2</sup>D therefore makes the boundary primitive to the scientific object.</p>
+<blockquote class="blockquote">
+<p><strong>A boundary defines the count domain.</strong></p>
+</blockquote>
+<p>The boundary does not merely surround an already-defined object.</p>
+<p>It participates in defining what the object is.</p>
+<section id="a-boundary-is-not-necessarily-a-physical-surface" class="level2">
+<h2 class="anchored" data-anchor-id="a-boundary-is-not-necessarily-a-physical-surface">A Boundary Is Not Necessarily a Physical Surface</h2>
+<p>In ordinary language, a boundary often means a wall, membrane, surface, or spatial edge.</p>
+<p>That is not the primitive R<sup>2</sup>D definition.</p>
+<p>A boundary is the relation that determines:</p>
 <ul>
-<li><a href="../understand/introduction.html">READ THE PART I INTRODUCTION →</a></li>
+<li>which differences are distinguishable;</li>
+<li>which subordinate realizations are mutually compatible;</li>
+<li>which compatible realizations belong to the same readable state;</li>
+<li>and which completed subordinate processes count as realizations of an enclosing occurrence.</li>
 </ul>
+<p>A membrane can define a boundary.</p>
+<p>So can an ensemble definition.</p>
+<p>So can an experimental measurement.</p>
+<p>So can the distinction between one molecular state and another.</p>
+<p>The primitive requirement is not a physical surface.</p>
+<p>It is a <strong>count domain</strong>.</p>
 </section>
-<section id="define-the-object" class="level2">
-<h2 class="anchored" data-anchor-id="define-the-object">1. Define the object</h2>
-<ul>
-<li><a href="../understand/counting.html">Counting Requires Distinguishability</a></li>
-<li><a href="../understand/boundaries.html">Boundaries Define Scientific Objects</a></li>
-<li><a href="../understand/macrostate-microstate.html">Macrostate and Microstate</a></li>
-</ul>
+<section id="the-boundary-defines-the-object" class="level2">
+<h2 class="anchored" data-anchor-id="the-boundary-defines-the-object">The Boundary Defines the Object</h2>
+<p>Consider a single coin.</p>
+<p>At one boundary, the readable states are</p>
+<p><span class="math display">\[
+H
+\qquad \text{and} \qquad
+T.
+\]</span></p>
+<p>The coin is the object.</p>
+<p>Now consider ten coins together.</p>
+<p>At the ensemble boundary, the readable states might instead be</p>
+<p><span class="math display">\[
+(10H,0T),\;
+(9H,1T),\;
+\dots,\;
+(0H,10T).
+\]</span></p>
+<p>The ten-coin ensemble is now the object.</p>
+<p>The individual heads and tails have not disappeared physically.</p>
+<p>But they no longer possess the same state meaning at the ensemble boundary.</p>
+<p>The boundary has changed.</p>
+<p>Therefore the count domain has changed.</p>
+<p>Therefore the scientific object has changed.</p>
+<p><a href="../understand/coins.html">Work through the coins example →</a></p>
 </section>
-<section id="define-what-can-be-realized" class="level2">
-<h2 class="anchored" data-anchor-id="define-what-can-be-realized">2. Define what can be realized</h2>
-<ul>
-<li><a href="../understand/multiplicity.html">Multiplicity</a></li>
-<li><a href="../understand/occupancy-occurrence.html">Occupancy and Occurrence</a></li>
-<li><a href="../understand/recursive-replacement.html">Recursive Replacement</a></li>
-<li><a href="../understand/recursive-carry.html">Recursive Carry</a></li>
-</ul>
+<section id="the-same-physical-system-can-support-different-objects" class="level2">
+<h2 class="anchored" data-anchor-id="the-same-physical-system-can-support-different-objects">The Same Physical System Can Support Different Objects</h2>
+<p>This distinction becomes especially important in science.</p>
+<p>Consider water.</p>
+<p>At one boundary, the scientific object may be a water molecule.</p>
+<p>Its readable states belong to the molecular state domain.</p>
+<p>At another boundary, the scientific object may be a glass of water.</p>
+<p>Its readable states belong to an enclosing thermodynamic or mechanical state domain.</p>
+<p>The glass is not a poorly resolved water molecule.</p>
+<p>And the molecule is not a highly resolved glass.</p>
+<p>They are different scientific objects because they are defined at different count boundaries.</p>
+<p>R<sup>2</sup>D therefore rejects the assumption that increasing or decreasing resolution always reveals more or less detail about one ontologically fixed object.</p>
+<p>Instead:</p>
+<p><span class="math display">\[
+\boxed{
+\text{change boundary}
+\rightarrow
+\text{change count domain}
+\rightarrow
+\text{change scientific object}
+}
+\]</span></p>
 </section>
-<section id="define-direction" class="level2">
-<h2 class="anchored" data-anchor-id="define-direction">3. Define direction</h2>
+<section id="there-is-no-privileged-physical-scale" class="level2">
+<h2 class="anchored" data-anchor-id="there-is-no-privileged-physical-scale">There Is No Privileged Physical Scale</h2>
+<p>Statistical mechanics itself provides an important clue.</p>
+<p>The same combinatorial mathematics can describe an ensemble of:</p>
 <ul>
-<li><a href="../understand/possibility.html">Possibility</a></li>
-<li><a href="../understand/constraint-retention.html">Constraint and Retention</a></li>
-<li><a href="../understand/asymmetry.html">Asymmetry</a></li>
-<li><a href="../understand/causal-inversion.html">The Causal Inversion</a></li>
+<li>spins;</li>
+<li>electrons;</li>
+<li>molecules;</li>
+<li>proteins;</li>
+<li>molecular motors;</li>
+<li>cells;</li>
+<li>coins;</li>
+<li>or other distinguishable systems.</li>
 </ul>
+<p>Nothing in the combinatorics declares one of these objects to be the uniquely fundamental scale.</p>
+<p>A protein can be the object.</p>
+<p>A molecular state within that protein can be the object.</p>
+<p>An ensemble of proteins can be the object.</p>
+<p>A muscle fiber can be the object.</p>
+<p>Which one is being counted depends on the boundary.</p>
+<blockquote class="blockquote">
+<p><strong>Science is boundary dependent. It does not privilege one object or one scale.</strong></p>
+</blockquote>
 </section>
-<section id="define-recurrence" class="level2">
-<h2 class="anchored" data-anchor-id="define-recurrence">4. Define recurrence</h2>
+<section id="boundary-relative-statehood" class="level2">
+<h2 class="anchored" data-anchor-id="boundary-relative-statehood">Boundary-Relative Statehood</h2>
+<p>This leads directly to the most important definitions in R<sup>2</sup>D.</p>
+<p>A state does not first exist independently of the boundary and then receive a label such as “microstate” or “macrostate.”</p>
+<p>Those terms describe a relationship to a boundary.</p>
+<p>At boundary (B_n):</p>
 <ul>
-<li><a href="../understand/closure.html">Closure</a></li>
-<li><a href="../understand/recurrence.html">Recurrence</a></li>
-<li><a href="../understand/recursive-counting.html">Recursive Counting Across Scale</a></li>
+<li>a <strong>macrostate</strong> is a distinguishable state readable at (B_n);</li>
+<li>a <strong>formal microstate</strong> is one compatible joint realization of the immediately subordinate peer boundaries.</li>
 </ul>
+<p>The distinction is relational.</p>
+<p>A state can therefore have macrostate meaning at one boundary and microstate meaning relative to another.</p>
+<p><a href="../understand/macrostate-microstate.html">Macrostate and Microstate →</a></p>
 </section>
-<section id="put-it-together" class="level2">
-<h2 class="anchored" data-anchor-id="put-it-together">5. Put it together</h2>
-<ul>
-<li><a href="../understand/r2d-law.html">The R²D Law</a></li>
-<li><a href="../understand/second-law.html">The R²D Second Law</a></li>
-</ul>
+<section id="immediately-subordinate-peer-boundaries" class="level2">
+<h2 class="anchored" data-anchor-id="immediately-subordinate-peer-boundaries">Immediately Subordinate Peer Boundaries</h2>
+<p>Suppose the boundary being considered is</p>
+<p><span class="math display">\[
+B_n.
+\]</span></p>
+<p>Let its immediately subordinate peer boundaries be</p>
+<p><span class="math display">\[
+\{B_{n-1,\alpha}\}.
+\]</span></p>
+<p>Each subordinate peer possesses its own state domain.</p>
+<p>A realization of the enclosing boundary involves some joint realization of those peers.</p>
+<p>Not every formally imaginable combination must be compatible.</p>
+<p>The enclosing boundary (B_n) determines which joint peer realizations belong to its admissible count domain.</p>
+<p>Schematically:</p>
+<p><span class="math display">\[
+\text{peer realizations}
+\rightarrow
+\text{compatibility at } B_n
+\rightarrow
+\text{state domain at } B_n.
+\]</span></p>
+<p>This is why the enclosing boundary is not simply a passive container.</p>
+<p>It defines the relation under which subordinate realizations count together.</p>
 </section>
-<section id="understand-the-implications" class="level2">
-<h2 class="anchored" data-anchor-id="understand-the-implications">6. Understand the implications</h2>
-<ul>
-<li><a href="../understand/not-coarse-graining.html">Why R²D Is Not Coarse-Graining</a></li>
-<li><a href="../understand/scientific-objecthood.html">Scientific Objecthood</a></li>
-<li><a href="../understand/before-units.html">Why the Mathematics Comes Before Units</a></li>
-<li><a href="../understand/from-count-to-physics.html">From Count Space to Physical Science</a></li>
-</ul>
+<section id="compatibility-comes-before-multiplicity" class="level2">
+<h2 class="anchored" data-anchor-id="compatibility-comes-before-multiplicity">Compatibility Comes Before Multiplicity</h2>
+<p>Once the boundary has defined which subordinate realizations are compatible, those realizations can be classified into readable states.</p>
+<p>If many compatible subordinate realizations are classified as the same readable state, that state has multiplicity.</p>
+<p>Thus the logical order is:</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary}
+\rightarrow
+\text{compatible realizations}
+\rightarrow
+\text{classification}
+\rightarrow
+\text{multiplicity}
+}
+\]</span></p>
+<p>Multiplicity therefore does not create the boundary.</p>
+<p>The boundary defines the count domain in which multiplicity can be counted.</p>
+<p><a href="../understand/multiplicity.html">Understand Multiplicity →</a></p>
 </section>
-<section id="reference" class="level2">
-<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<section id="resolution-changes-the-count-boundary" class="level2">
+<h2 class="anchored" data-anchor-id="resolution-changes-the-count-boundary">Resolution Changes the Count Boundary</h2>
+<p>This has an important consequence for observation.</p>
+<p>Suppose a subordinate transition is not individually readable at (B_n).</p>
+<p>One might imagine that better experimental resolution simply reveals that hidden transition while leaving the scientific description unchanged.</p>
+<p>R<sup>2</sup>D says something more precise.</p>
+<p>To read the subordinate transition directly, the observer must move to the subordinate boundary where that transition is distinguishable.</p>
+<p>But once the boundary changes, the state classification changes too.</p>
+<p>The transition that had <strong>microstate meaning</strong> relative to (B_n) now has <strong>macrostate meaning</strong> at (B_{n-1}).</p>
+<p>Therefore:</p>
+<p><span class="math display">\[
+\boxed{
+\text{increased resolution}
+\rightarrow
+\text{change of boundary}
+\rightarrow
+\text{change of state meaning}
+}
+\]</span></p>
+<p>Observation has not merely revealed more detail about the same formal state.</p>
+<p>It has changed the count domain from which the state is defined.</p>
+</section>
+<section id="the-causal-question-changes-too" class="level2">
+<h2 class="anchored" data-anchor-id="the-causal-question-changes-too">The Causal Question Changes Too</h2>
+<p>Return to the ten-coin example.</p>
+<p>At the ten-coin boundary, one may ask:</p>
+<blockquote class="blockquote">
+<p>Why does the ensemble occupy one macrostate rather than another?</p>
+</blockquote>
+<p>To resolve an individual coin transition, the observer changes to the single-coin boundary.</p>
+<p>The question is now:</p>
+<blockquote class="blockquote">
+<p>Why does this coin realize heads rather than tails?</p>
+</blockquote>
+<p>These are not the same causal question at different resolutions.</p>
+<p>They belong to different count domains.</p>
+<p>This matters because bottom-up causation is often inferred by resolving smaller and smaller mechanisms.</p>
+<p>R<sup>2</sup>D warns that increasing resolution changes the boundary from which causality is being defined.</p>
+<p>A subordinate mechanism can be necessary for the realization of an enclosing state without therefore being the source of the organization that distinguishes the enclosing state.</p>
+<p><a href="../understand/causal-inversion.html">The Causal Inversion →</a></p>
+</section>
+<section id="a-boundary-is-not-coarse-graining" class="level2">
+<h2 class="anchored" data-anchor-id="a-boundary-is-not-coarse-graining">A Boundary Is Not Coarse-Graining</h2>
+<p>The difference from ordinary coarse-graining is fundamental.</p>
+<p>A coarse-graining picture often suggests:</p>
+<p><span class="math display">\[
+\text{same underlying state}
+\rightarrow
+\text{less information}.
+\]</span></p>
+<p>R<sup>2</sup>D instead proposes:</p>
+<p><span class="math display">\[
+\text{new boundary}
+\rightarrow
+\text{new classification}
+\rightarrow
+\text{new state domain}.
+\]</span></p>
+<p>The subordinate realization can remain physically consequential.</p>
+<p>But its internal path, source identity, and state classification need not remain readable as the same objects from the enclosing boundary.</p>
+<p>Changing the boundary is therefore not merely forgetting information.</p>
+<p>It changes the ontology of the count.</p>
+<p><a href="../understand/not-coarse-graining.html">Why R²D Is Not Coarse-Graining →</a></p>
+</section>
+<section id="boundaries-make-recursive-replacement-possible" class="level2">
+<h2 class="anchored" data-anchor-id="boundaries-make-recursive-replacement-possible">Boundaries Make Recursive Replacement Possible</h2>
+<p>Once statehood is boundary dependent, recursive replacement follows naturally.</p>
+<p>A subordinate state is readable at its own boundary.</p>
+<p>When an enclosing boundary becomes the count domain, the subordinate distinctions no longer remain the states being counted.</p>
+<p>Their compatible realizations instead participate in defining the multiplicity and state structure of the enclosing object.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\text{subordinate state domain}
+\rightarrow
+\text{boundary change}
+\rightarrow
+\text{enclosing state domain}.
+\]</span></p>
+<p>The subordinate object has not been erased.</p>
+<p>Its count meaning has changed.</p>
+<p>R<sup>2</sup>D calls this operation <strong>recursive replacement</strong>.</p>
+<p><a href="../understand/recursive-replacement.html">Recursive Replacement →</a></p>
+</section>
+<section id="scientific-objecthood-is-boundary-indexed" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-objecthood-is-boundary-indexed">Scientific Objecthood Is Boundary Indexed</h2>
+<p>The broader implication is straightforward.</p>
+<p>A particle can be real.</p>
+<p>A molecule can be real.</p>
+<p>A protein can be real.</p>
+<p>A cell can be real.</p>
+<p>A muscle can be real.</p>
+<p>A planet can be real.</p>
+<p>A spacetime metric can be real.</p>
+<p>R<sup>2</sup>D does not require any of them to be illusions.</p>
+<p>It requires only that their scientific identity be indexed to the boundary that makes their states distinguishable.</p>
+<p>A scientific object can therefore be:</p>
 <ul>
-<li><a href="../understand/definitions.html">Definitions &amp; Symbols</a></li>
-<li><a href="../understand/coins.html">The Coins Example</a></li>
+<li>completely real;</li>
+<li>measurable;</li>
+<li>predictive;</li>
+<li>and causally useful</li>
 </ul>
+<p>without being primitive at every scale.</p>
+<p>This is why R<sup>2</sup>D is not merely a theory about particular objects.</p>
+<p>It is a proposed theory of <strong>scientific objecthood</strong>.</p>
+<p><a href="../understand/scientific-objecthood.html">Scientific Objecthood →</a></p>
+</section>
+<section id="the-boundary-comes-first" class="level2">
+<h2 class="anchored" data-anchor-id="the-boundary-comes-first">The Boundary Comes First</h2>
+<p>The primitive sequence can now be expanded:</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinction}
+\rightarrow
+\text{compatible realization}
+\rightarrow
+\text{state classification}
+\rightarrow
+\text{count}
+}
+\]</span></p>
+<p>The scientific object appears only after the count domain has been defined.</p>
+<p>This is the inversion at the foundation of R<sup>2</sup>D:</p>
+<blockquote class="blockquote">
+<p><strong>The boundary does not merely tell us where the object is.<br>
+The boundary helps define what the object is.</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<p><a href="../understand/macrostate-microstate.html">Macrostate and Microstate →</a></p>
+<p><a href="../understand/multiplicity.html">Multiplicity →</a></p>
+<p><a href="../understand/recursive-replacement.html">Recursive Replacement →</a></p>
+<p><a href="../understand/index.html">Back to Understand R²D →</a></p>
 
 
 </section>

@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Macrostate and Microstate – R²D Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R²D Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-understand" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Understand</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-understand">    
+        <li>
+    <a class="dropdown-item" href="../understand/what-is-r2d.html">
+ <span class="dropdown-text">What is R²D?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../understand/index.html">
+ <span class="dropdown-text">Understand R²D</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../run/index.html"> 
+<span class="menu-text">Run R²D</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../applications/index.html"> 
+<span class="menu-text">Applications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../canon/index.html"> 
+<span class="menu-text">Canon</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About R²D Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/authors.html">
+ <span class="dropdown-text">Authors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/publications.html">
+ <span class="dropdown-text">Publications &amp; Archive</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/contact.html">
+ <span class="dropdown-text">Contact</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#macrostate-and-microstate" id="toc-macrostate-and-microstate" class="nav-link active" data-scroll-target="#macrostate-and-microstate">Macrostate and Microstate</a>
+  <ul class="collapse">
+  <li><a href="#the-conventional-picture" id="toc-the-conventional-picture" class="nav-link" data-scroll-target="#the-conventional-picture">The Conventional Picture</a></li>
+  <li><a href="#the-r2d-definition" id="toc-the-r2d-definition" class="nav-link" data-scroll-target="#the-r2d-definition">The R<sup>2</sup>D Definition</a></li>
+  <li><a href="#the-macrostate-is-a-classification" id="toc-the-macrostate-is-a-classification" class="nav-link" data-scroll-target="#the-macrostate-is-a-classification">The Macrostate Is a Classification</a></li>
+  <li><a href="#a-simple-example-ten-coins" id="toc-a-simple-example-ten-coins" class="nav-link" data-scroll-target="#a-simple-example-ten-coins">A Simple Example: Ten Coins</a></li>
+  <li><a href="#multiplicity-is-the-size-of-the-macrostate-class" id="toc-multiplicity-is-the-size-of-the-macrostate-class" class="nav-link" data-scroll-target="#multiplicity-is-the-size-of-the-macrostate-class">Multiplicity Is the Size of the Macrostate Class</a></li>
+  <li><a href="#three-different-mathematical-objects" id="toc-three-different-mathematical-objects" class="nav-link" data-scroll-target="#three-different-mathematical-objects">Three Different Mathematical Objects</a></li>
+  <li><a href="#the-boundary-owns-the-classification" id="toc-the-boundary-owns-the-classification" class="nav-link" data-scroll-target="#the-boundary-owns-the-classification">The Boundary Owns the Classification</a></li>
+  <li><a href="#a-macrostate-at-one-boundary-can-have-microstate-meaning-at-another" id="toc-a-macrostate-at-one-boundary-can-have-microstate-meaning-at-another" class="nav-link" data-scroll-target="#a-macrostate-at-one-boundary-can-have-microstate-meaning-at-another">A Macrostate at One Boundary Can Have Microstate Meaning at Another</a></li>
+  <li><a href="#microstate-does-not-mean-hidden-little-object" id="toc-microstate-does-not-mean-hidden-little-object" class="nav-link" data-scroll-target="#microstate-does-not-mean-hidden-little-object">Microstate Does Not Mean Hidden Little Object</a></li>
+  <li><a href="#the-primitive-observer-effect" id="toc-the-primitive-observer-effect" class="nav-link" data-scroll-target="#the-primitive-observer-effect">The Primitive Observer Effect</a></li>
+  <li><a href="#why-better-resolution-does-not-recover-one-fixed-ontology" id="toc-why-better-resolution-does-not-recover-one-fixed-ontology" class="nav-link" data-scroll-target="#why-better-resolution-does-not-recover-one-fixed-ontology">Why Better Resolution Does Not Recover One Fixed Ontology</a></li>
+  <li><a href="#this-is-not-ordinary-coarse-graining" id="toc-this-is-not-ordinary-coarse-graining" class="nav-link" data-scroll-target="#this-is-not-ordinary-coarse-graining">This Is Not Ordinary Coarse-Graining</a></li>
+  <li><a href="#why-this-matters-for-causality" id="toc-why-this-matters-for-causality" class="nav-link" data-scroll-target="#why-this-matters-for-causality">Why This Matters for Causality</a></li>
+  <li><a href="#statehood-comes-before-physical-ontology" id="toc-statehood-comes-before-physical-ontology" class="nav-link" data-scroll-target="#statehood-comes-before-physical-ontology">Statehood Comes Before Physical Ontology</a></li>
+  <li><a href="#the-logical-fulcrum" id="toc-the-logical-fulcrum" class="nav-link" data-scroll-target="#the-logical-fulcrum">The Logical Fulcrum</a></li>
+  <li><a href="#the-core-definitions" id="toc-the-core-definitions" class="nav-link" data-scroll-target="#the-core-definitions">The Core Definitions</a>
+  <ul class="collapse">
+  <li><a href="#formal-microstate" id="toc-formal-microstate" class="nav-link" data-scroll-target="#formal-microstate">Formal microstate</a></li>
+  <li><a href="#macrostate" id="toc-macrostate" class="nav-link" data-scroll-target="#macrostate">Macrostate</a></li>
+  <li><a href="#multiplicity" id="toc-multiplicity" class="nav-link" data-scroll-target="#multiplicity">Multiplicity</a></li>
+  <li><a href="#logarithmic-multiplicity" id="toc-logarithmic-multiplicity" class="nav-link" data-scroll-target="#logarithmic-multiplicity">Logarithmic multiplicity</a></li>
+  </ul></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Macrostate and Microstate</h1>
+<p class="subtitle lead">Statehood is a relation to a boundary</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="macrostate-and-microstate" class="level1">
+<h1>Macrostate and Microstate</h1>
+<p>Much of R<sup>2</sup>D follows from two familiar words:</p>
+<p><strong>macrostate</strong> and <strong>microstate</strong>.</p>
+<p>Statistical mechanics uses both constantly.</p>
+<p>R<sup>2</sup>D asks a more primitive question:</p>
+<blockquote class="blockquote">
+<p><strong>Relative to what is a state a microstate?</strong></p>
+</blockquote>
+<p>The answer is the count boundary.</p>
+<p>A microstate is not an intrinsically microscopic object.</p>
+<p>A macrostate is not an intrinsically large object.</p>
+<p>Both terms describe the relationship between a state and the boundary from which that state is counted.</p>
+<blockquote class="blockquote">
+<p><strong>Statehood is boundary relative.</strong></p>
+</blockquote>
+<p><a href="../understand/boundaries.html">Boundaries Define Scientific Objects →</a></p>
+<section id="the-conventional-picture" class="level2">
+<h2 class="anchored" data-anchor-id="the-conventional-picture">The Conventional Picture</h2>
+<p>A familiar description of statistical mechanics is:</p>
+<p><span class="math display">\[
+\text{microscopic reality}
+\rightarrow
+\text{coarse-grained macroscopic description}.
+\]</span></p>
+<p>On this picture, the microstate is often treated as the fully detailed underlying reality.</p>
+<p>The macrostate is then a less detailed description obtained by ignoring some microscopic information.</p>
+<p>This is often computationally useful.</p>
+<p>But it leaves a foundational question unanswered:</p>
+<blockquote class="blockquote">
+<p><strong>What makes the underlying state a microstate in the first place?</strong></p>
+</blockquote>
+<p>R<sup>2</sup>D does not define “microstate” by physical size.</p>
+<p>It defines it relative to a count boundary.</p>
+</section>
+<section id="the-r2d-definition" class="level2">
+<h2 class="anchored" data-anchor-id="the-r2d-definition">The R<sup>2</sup>D Definition</h2>
+<p>Let the boundary of interest be</p>
+<p><span class="math display">\[
+B_n.
+\]</span></p>
+<p>Immediately subordinate to (B_n) is a collection of peer boundaries</p>
+<p><span class="math display">\[
+\{B_{n-1,\alpha}\}_{\alpha \in I_{n-1}}.
+\]</span></p>
+<p>Each subordinate peer boundary has its own possible realization domain.</p>
+<p>Let</p>
+<p><span class="math display">\[
+\mathfrak{X}_{n-1,\alpha}
+\]</span></p>
+<p>denote the possible realization domain of peer ().</p>
+<p>A complete joint peer realization has the form</p>
+<p><span class="math display">\[
+\mathbf{x}_{n-1}
+=
+\{x_{n-1,\alpha}\}_{\alpha \in I_{n-1}},
+\]</span></p>
+<p>where</p>
+<p><span class="math display">\[
+x_{n-1,\alpha}
+\in
+\mathfrak{X}_{n-1,\alpha}.
+\]</span></p>
+<p>If every combination of peer realizations were allowed, the complete product domain would be</p>
+<p><span class="math display">\[
+\prod_{\alpha \in I_{n-1}}
+\mathfrak{X}_{n-1,\alpha}.
+\]</span></p>
+<p>But an enclosing boundary need not admit every formally imaginable combination.</p>
+<p>Boundary (B_n) defines which joint realizations are compatible.</p>
+<p>The compatible subset is the formal microstate domain:</p>
+<p><span class="math display">\[
+\mathfrak{M}_n
+\subseteq
+\prod_{\alpha \in I_{n-1}}
+\mathfrak{X}_{n-1,\alpha}.
+\]</span></p>
+<p>A <strong>formal microstate at (B_n)</strong> is one compatible joint peer realization:</p>
+<p><span class="math display">\[
+\mu_n
+=
+\{x_{n-1,\alpha}\}_{\alpha \in I_{n-1}}
+\in
+\mathfrak{M}_n.
+\]</span></p>
+<p>This is the first formal definition.</p>
+<blockquote class="blockquote">
+<p><strong>A microstate at (B_n) is one compatible joint realization of the immediately subordinate peer boundaries.</strong></p>
+</blockquote>
+<p>It is not defined by being physically small.</p>
+<p>It is defined by its relation to (B_n).</p>
+</section>
+<section id="the-macrostate-is-a-classification" class="level2">
+<h2 class="anchored" data-anchor-id="the-macrostate-is-a-classification">The Macrostate Is a Classification</h2>
+<p>The enclosing boundary does not ordinarily distinguish every peer-resolved joint realization individually.</p>
+<p>Instead, it classifies compatible formal microstates into states that are readable at (B_n).</p>
+<p>Let</p>
+<p><span class="math display">\[
+\mathcal{M}_n
+\]</span></p>
+<p>be the readable macrostate set.</p>
+<p>Define the classification map</p>
+<p><span class="math display">\[
+\pi_n:
+\mathfrak{M}_n
+\rightarrow
+\mathcal{M}_n.
+\]</span></p>
+<p>If</p>
+<p><span class="math display">\[
+\pi_n(\mu_n)=i,
+\]</span></p>
+<p>then formal microstate (_n) is read at boundary (B_n) as macrostate (i).</p>
+<p>This gives the second definition:</p>
+<blockquote class="blockquote">
+<p><strong>A macrostate at (B_n) is a distinguishable classification of compatible formal microstates that is readable at (B_n).</strong></p>
+</blockquote>
+<p>The macrostate is therefore not primitively assembled by adding subordinate states together.</p>
+<p>It is a boundary-defined classification.</p>
+</section>
+<section id="a-simple-example-ten-coins" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-example-ten-coins">A Simple Example: Ten Coins</h2>
+<p>Suppose ten coins form one ensemble.</p>
+<p>At the single-coin boundary, the readable states are</p>
+<p><span class="math display">\[
+H
+\qquad\text{and}\qquad
+T.
+\]</span></p>
+<p>Now change to the ten-coin boundary.</p>
+<p>One formal microstate might be</p>
+<p><span class="math display">\[
+HHTHTHTTHH.
+\]</span></p>
+<p>Another might be</p>
+<p><span class="math display">\[
+THHHTHTHTH.
+\]</span></p>
+<p>These are distinct peer-resolved joint realizations.</p>
+<p>But the ten-coin boundary may classify both simply by the number of heads.</p>
+<p>If each realization contains six heads, then</p>
+<p><span class="math display">\[
+\pi_n(\mu_n)=6H.
+\]</span></p>
+<p>The ensemble macrostate is therefore</p>
+<p><span class="math display">\[
+N_H=6.
+\]</span></p>
+<p>Many different formal microstates belong to the same readable macrostate.</p>
+<p>This is exactly what multiplicity counts.</p>
+<p><a href="../understand/coins.html">The Coins Example →</a></p>
+</section>
+<section id="multiplicity-is-the-size-of-the-macrostate-class" class="level2">
+<h2 class="anchored" data-anchor-id="multiplicity-is-the-size-of-the-macrostate-class">Multiplicity Is the Size of the Macrostate Class</h2>
+<p>For a macrostate (i), the complete set of formal microstates classified as (i) is the preimage</p>
+<p><span class="math display">\[
+\pi_n^{-1}(i)
+=
+\{
+\mu_n \in \mathfrak{M}_n :
+\pi_n(\mu_n)=i
+\}.
+\]</span></p>
+<p>The notation</p>
+<p><span class="math display">\[
+\pi_n^{-1}(i)
+\]</span></p>
+<p>means:</p>
+<blockquote class="blockquote">
+<p>all formal microstates that the classification map (_n) sends to macrostate (i).</p>
+</blockquote>
+<p>Its cardinality is the multiplicity:</p>
+<p><span class="math display">\[
+\boxed{
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|
+}
+\]</span></p>
+<p>The vertical bars mean <strong>the number of members in the set</strong>.</p>
+<p>So:</p>
+<p><span class="math display">\[
+W_{n,i}
+\]</span></p>
+<p>is the number of compatible joint peer realizations that boundary (B_n) classifies as macrostate (i).</p>
+<p>Its logarithmic coordinate is</p>
+<p><span class="math display">\[
+S_{n,i}
+=
+\ln W_{n,i}.
+\]</span></p>
+<p>At this stage, (S) is not yet thermodynamic entropy.</p>
+<p>It is the logarithmic coordinate of multiplicity.</p>
+<p><a href="../understand/multiplicity.html">Multiplicity →</a></p>
+</section>
+<section id="three-different-mathematical-objects" class="level2">
+<h2 class="anchored" data-anchor-id="three-different-mathematical-objects">Three Different Mathematical Objects</h2>
+<p>It is important not to collapse microstate, macrostate, and multiplicity into one idea.</p>
+<p>They are three different things:</p>
+<p><span class="math display">\[
+\boxed{
+\mu_n
+=
+\text{one compatible joint peer realization}
+}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+i
+=
+\text{the readable classification of that realization at } B_n
+}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+W_{n,i}
+=
+\text{the number of compatible realizations classified as } i
+}
+\]</span></p>
+<p>A microstate is a realization.</p>
+<p>A macrostate is a classification.</p>
+<p>Multiplicity is a count of compatible realizations belonging to that classification.</p>
+</section>
+<section id="the-boundary-owns-the-classification" class="level2">
+<h2 class="anchored" data-anchor-id="the-boundary-owns-the-classification">The Boundary Owns the Classification</h2>
+<p>The classification map</p>
+<p><span class="math display">\[
+\pi_n
+\]</span></p>
+<p>belongs to boundary (B_n).</p>
+<p>Change the boundary and the classification changes.</p>
+<p>This means a formal microstate at (B_n) does not simply remain the same microstate at (B_{n+1}).</p>
+<p>The enclosing boundary defines:</p>
+<ul>
+<li>a different peer realization domain;</li>
+<li>a different compatibility relation;</li>
+<li>a different formal microstate space;</li>
+<li>and a different classification map.</li>
+</ul>
+<p>Therefore:</p>
+<p><span class="math display">\[
+\boxed{
+B_n \rightarrow B_{n+1}
+\quad\Rightarrow\quad
+\text{new state domain}
+}
+\]</span></p>
+<p>Changing the boundary changes what counts as a state.</p>
+<p>This is why R<sup>2</sup>D treats scientific objecthood as boundary dependent.</p>
+<p><a href="../understand/scientific-objecthood.html">Scientific Objecthood →</a></p>
+</section>
+<section id="a-macrostate-at-one-boundary-can-have-microstate-meaning-at-another" class="level2">
+<h2 class="anchored" data-anchor-id="a-macrostate-at-one-boundary-can-have-microstate-meaning-at-another">A Macrostate at One Boundary Can Have Microstate Meaning at Another</h2>
+<p>This is one of the most important consequences.</p>
+<p>Suppose a transition</p>
+<p><span class="math display">\[
+u \rightarrow v
+\]</span></p>
+<p>is directly readable at subordinate boundary</p>
+<p><span class="math display">\[
+B_{n-1,\alpha}.
+\]</span></p>
+<p>At that boundary, (u) and (v) are macrostates.</p>
+<p>The transition is a readable macrostate transition.</p>
+<p>Now consider the same physical occurrence from enclosing boundary (B_n).</p>
+<p>The individual subordinate peer transition is no longer the state being classified.</p>
+<p>It participates in a joint realization of the peer ensemble.</p>
+<p>Relative to (B_n), the same subordinate change therefore has <strong>microstate meaning</strong>.</p>
+<p>Schematically:</p>
+<p><span class="math display">\[
+\boxed{
+\text{macrostate transition at } B_{n-1}
+=
+\text{microstate transition relative to } B_n
+}
+\]</span></p>
+<p>The physical occurrence has not necessarily changed.</p>
+<p>Its <strong>count meaning</strong> has.</p>
+</section>
+<section id="microstate-does-not-mean-hidden-little-object" class="level2">
+<h2 class="anchored" data-anchor-id="microstate-does-not-mean-hidden-little-object">Microstate Does Not Mean Hidden Little Object</h2>
+<p>This distinction is easy to miss.</p>
+<p>R<sup>2</sup>D does not say that the microstate is a tiny physical object hiding beneath the macrostate.</p>
+<p>A formal microstate is mathematically defined relative to the enclosing classification.</p>
+<p>Its complete peer-resolved identity may be formally specified without being individually readable from the enclosing boundary.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>Defined does not imply readable.</strong></p>
+</blockquote>
+<p>Boundary (B_n) can classify a joint realization without resolving which subordinate peer transition produced it.</p>
+<p>This is the primitive source of a distinction that later becomes important in both quantum and many-body descriptions.</p>
+</section>
+<section id="the-primitive-observer-effect" class="level2">
+<h2 class="anchored" data-anchor-id="the-primitive-observer-effect">The Primitive Observer Effect</h2>
+<p>Suppose a microstate transition relative to (B_n) is not directly readable.</p>
+<p>How can the observer see it?</p>
+<p>The observer must change to the subordinate boundary where that distinction is readable as a macrostate transition.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{resolution}
+\rightarrow
+\text{change of count boundary}
+\rightarrow
+\text{change of state classification}
+}
+\]</span></p>
+<p>This gives R<sup>2</sup>D a primitive observer effect before particles, measuring devices, wavefunctions, or quantum mechanics have been introduced.</p>
+<p>Observation does not need to begin by physically perturbing an independently fixed microscopic state.</p>
+<p>Increasing resolution changes the boundary from which the state is classified.</p>
+<p>And therefore changes what the state <strong>is</strong> relative to the count.</p>
+</section>
+<section id="why-better-resolution-does-not-recover-one-fixed-ontology" class="level2">
+<h2 class="anchored" data-anchor-id="why-better-resolution-does-not-recover-one-fixed-ontology">Why Better Resolution Does Not Recover One Fixed Ontology</h2>
+<p>Consider the ten-coin ensemble again.</p>
+<p>At the ensemble boundary, the question might be:</p>
+<blockquote class="blockquote">
+<p>Why does the ten-coin system occupy (N_H=6) rather than (N_H=5)?</p>
+</blockquote>
+<p>If we increase resolution and follow one particular coin, the question becomes:</p>
+<blockquote class="blockquote">
+<p>Why did this coin change from (H) to (T)?</p>
+</blockquote>
+<p>The second question does not simply reveal the hidden detailed answer to the first.</p>
+<p>It is a different question at a different boundary.</p>
+<p>The object has changed.</p>
+<p>The state domain has changed.</p>
+<p>The causal relation being investigated has changed.</p>
+<p>This is why R<sup>2</sup>D rejects the assumption that causal explanation can always be made more fundamental merely by increasing resolution.</p>
+</section>
+<section id="this-is-not-ordinary-coarse-graining" class="level2">
+<h2 class="anchored" data-anchor-id="this-is-not-ordinary-coarse-graining">This Is Not Ordinary Coarse-Graining</h2>
+<p>The conventional coarse-graining picture can be written schematically as</p>
+<p><span class="math display">\[
+\text{same underlying microscopic state}
+\rightarrow
+\text{less detailed macroscopic description}.
+\]</span></p>
+<p>R<sup>2</sup>D instead proposes</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary change}
+\rightarrow
+\text{state-domain replacement}
+}
+\]</span></p>
+<p>The subordinate realization may remain physically consequential.</p>
+<p>But it does not retain the same classification, path identity, or source identity at the enclosing boundary.</p>
+<p>A macrostate is therefore not merely a blurry microstate.</p>
+<p>And a microstate is not merely a sharper macrostate.</p>
+<p>They belong to different boundary-relative count relations.</p>
+<p><a href="../understand/not-coarse-graining.html">Why R²D Is Not Coarse-Graining →</a></p>
+</section>
+<section id="why-this-matters-for-causality" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters-for-causality">Why This Matters for Causality</h2>
+<p>Suppose one tries to place directional causality entirely inside the microstate transitions.</p>
+<p>At boundary (B_n), however, those transitions are not individually readable as microstate transitions.</p>
+<p>To define their direction directly, one must move to (B_{n-1}), where the same transition has macrostate meaning.</p>
+<p>But at that boundary, its directional relation is itself defined relative to its enclosing compatibility.</p>
+<p>So moving the proposed cause “down into the microstates” does not escape the recursive architecture.</p>
+<p>It changes the count boundary.</p>
+<p>Schematically:</p>
+<p><span class="math display">\[
+\text{microstate at } B_n
+\longrightarrow
+\text{macrostate at } B_{n-1}
+\longrightarrow
+\text{enclosing relation at } B_n.
+\]</span></p>
+<p>This motivates the later R<sup>2</sup>D distinction between:</p>
+<p><strong>local realization</strong></p>
+<p>and</p>
+<p><strong>enclosing directional organization.</strong></p>
+<p><a href="../understand/causal-inversion.html">The Causal Inversion →</a></p>
+</section>
+<section id="statehood-comes-before-physical-ontology" class="level2">
+<h2 class="anchored" data-anchor-id="statehood-comes-before-physical-ontology">Statehood Comes Before Physical Ontology</h2>
+<p>Nothing in the formal definitions requires the peer boundaries to be:</p>
+<ul>
+<li>molecules;</li>
+<li>atoms;</li>
+<li>particles;</li>
+<li>spins;</li>
+<li>proteins;</li>
+<li>cells;</li>
+<li>coins;</li>
+<li>or spatial regions.</li>
+</ul>
+<p>Those physical interpretations come later.</p>
+<p>The primitive structure is:</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary}
+\rightarrow
+\text{compatible joint realization}
+\rightarrow
+\text{classification}
+\rightarrow
+\text{readable state}
+}
+\]</span></p>
+<p>Only afterward does science assign a physical interpretation to that state.</p>
+<p>This is why the R<sup>2</sup>D mathematics is intended to operate across scientific domains.</p>
+<p>The physical object changes.</p>
+<p>The count grammar can remain the same.</p>
+</section>
+<section id="the-logical-fulcrum" class="level2">
+<h2 class="anchored" data-anchor-id="the-logical-fulcrum">The Logical Fulcrum</h2>
+<p>The entire R<sup>2</sup>D program can therefore be challenged at a very specific point.</p>
+<p>Ask:</p>
+<blockquote class="blockquote">
+<p><strong>Are these definitions of macrostate and microstate wrong?</strong></p>
+</blockquote>
+<p>If they are wrong, the architecture built upon them fails.</p>
+<p>If they are accepted, several later features of R<sup>2</sup>D follow naturally:</p>
+<ul>
+<li>boundary-relative objecthood;</li>
+<li>recursive replacement;</li>
+<li>the distinction between possible structure and realization;</li>
+<li>the primitive observer effect;</li>
+<li>the many-body readability problem;</li>
+<li>recursive carry;</li>
+<li>and eventually the complementary readability horizons.</li>
+</ul>
+<p>The definitions are therefore not merely terminology.</p>
+<p>They determine the architecture that follows.</p>
+<hr>
+</section>
+<section id="the-core-definitions" class="level2">
+<h2 class="anchored" data-anchor-id="the-core-definitions">The Core Definitions</h2>
+<p>At boundary (B_n):</p>
+<section id="formal-microstate" class="level3">
+<h3 class="anchored" data-anchor-id="formal-microstate">Formal microstate</h3>
+<p><span class="math display">\[
+\boxed{
+\mu_n
+\in
+\mathfrak{M}_n
+}
+\]</span></p>
+<p>One compatible joint realization of the immediately subordinate peer boundaries.</p>
+</section>
+<section id="macrostate" class="level3">
+<h3 class="anchored" data-anchor-id="macrostate">Macrostate</h3>
+<p><span class="math display">\[
+\boxed{
+i
+=
+\pi_n(\mu_n)
+}
+\]</span></p>
+<p>The distinguishable classification of that realization readable at (B_n).</p>
+</section>
+<section id="multiplicity" class="level3">
+<h3 class="anchored" data-anchor-id="multiplicity">Multiplicity</h3>
+<p><span class="math display">\[
+\boxed{
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|
+}
+\]</span></p>
+<p>The number of compatible formal microstates classified as macrostate (i).</p>
+</section>
+<section id="logarithmic-multiplicity" class="level3">
+<h3 class="anchored" data-anchor-id="logarithmic-multiplicity">Logarithmic multiplicity</h3>
+<p><span class="math display">\[
+\boxed{
+S_{n,i}
+=
+\ln W_{n,i}
+}
+\]</span></p>
+<p>The dimensionless logarithmic coordinate of that multiplicity.</p>
+<hr>
+</section>
+</section>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<p><a href="../understand/multiplicity.html">Multiplicity — Possible Structure Before Realization →</a></p>
+<p><a href="../understand/occupancy-occurrence.html">Occupancy and Occurrence →</a></p>
+<p><a href="../understand/recursive-replacement.html">Recursive Replacement →</a></p>
+<p><a href="../understand/index.html">Back to Understand R²D →</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/r2dscience\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

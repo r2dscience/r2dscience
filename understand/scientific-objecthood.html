@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Scientific Objecthood – R²D Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R²D Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-understand" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Understand</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-understand">    
+        <li>
+    <a class="dropdown-item" href="../understand/what-is-r2d.html">
+ <span class="dropdown-text">What is R²D?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../understand/index.html">
+ <span class="dropdown-text">Understand R²D</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../run/index.html"> 
+<span class="menu-text">Run R²D</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../applications/index.html"> 
+<span class="menu-text">Applications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../canon/index.html"> 
+<span class="menu-text">Canon</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About R²D Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/authors.html">
+ <span class="dropdown-text">Authors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/publications.html">
+ <span class="dropdown-text">Publications &amp; Archive</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/contact.html">
+ <span class="dropdown-text">Contact</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#scientific-objecthood" id="toc-scientific-objecthood" class="nav-link active" data-scroll-target="#scientific-objecthood">Scientific Objecthood</a>
+  <ul class="collapse">
+  <li><a href="#from-objects-to-objecthood" id="toc-from-objects-to-objecthood" class="nav-link" data-scroll-target="#from-objects-to-objecthood">From Objects to Objecthood</a></li>
+  <li><a href="#a-boundary-defines-a-state-domain" id="toc-a-boundary-defines-a-state-domain" class="nav-link" data-scroll-target="#a-boundary-defines-a-state-domain">A Boundary Defines a State Domain</a></li>
+  <li><a href="#a-scientific-object-is-a-readable-distinction" id="toc-a-scientific-object-is-a-readable-distinction" class="nav-link" data-scroll-target="#a-scientific-object-is-a-readable-distinction">A Scientific Object Is a Readable Distinction</a></li>
+  <li><a href="#objecthood-is-real" id="toc-objecthood-is-real" class="nav-link" data-scroll-target="#objecthood-is-real">Objecthood Is Real</a></li>
+  <li><a href="#reality-and-primitiveness-are-different-claims" id="toc-reality-and-primitiveness-are-different-claims" class="nav-link" data-scroll-target="#reality-and-primitiveness-are-different-claims">Reality and Primitiveness Are Different Claims</a></li>
+  <li><a href="#the-primitive-object-error" id="toc-the-primitive-object-error" class="nav-link" data-scroll-target="#the-primitive-object-error">The Primitive-Object Error</a></li>
+  <li><a href="#objecthood-changes-with-the-boundary" id="toc-objecthood-changes-with-the-boundary" class="nav-link" data-scroll-target="#objecthood-changes-with-the-boundary">Objecthood Changes With the Boundary</a></li>
+  <li><a href="#a-coin-is-already-boundary-relative" id="toc-a-coin-is-already-boundary-relative" class="nav-link" data-scroll-target="#a-coin-is-already-boundary-relative">A Coin Is Already Boundary Relative</a></li>
+  <li><a href="#a-component-is-also-an-object-at-its-own-boundary" id="toc-a-component-is-also-an-object-at-its-own-boundary" class="nav-link" data-scroll-target="#a-component-is-also-an-object-at-its-own-boundary">A Component Is Also an Object — At Its Own Boundary</a></li>
+  <li><a href="#components-do-not-create-the-multiplicity-of-the-whole" id="toc-components-do-not-create-the-multiplicity-of-the-whole" class="nav-link" data-scroll-target="#components-do-not-create-the-multiplicity-of-the-whole">Components Do Not Create the Multiplicity of the Whole</a></li>
+  <li><a href="#the-whole-is-not-the-arithmetic-sum-of-its-objects" id="toc-the-whole-is-not-the-arithmetic-sum-of-its-objects" class="nav-link" data-scroll-target="#the-whole-is-not-the-arithmetic-sum-of-its-objects">The Whole Is Not the Arithmetic Sum of Its Objects</a></li>
+  <li><a href="#persistence-does-not-require-persistent-parts" id="toc-persistence-does-not-require-persistent-parts" class="nav-link" data-scroll-target="#persistence-does-not-require-persistent-parts">Persistence Does Not Require Persistent Parts</a></li>
+  <li><a href="#object-persistence-is-recurrent-organization" id="toc-object-persistence-is-recurrent-organization" class="nav-link" data-scroll-target="#object-persistence-is-recurrent-organization">Object Persistence Is Recurrent Organization</a></li>
+  <li><a href="#stability-does-not-make-an-object-primitive" id="toc-stability-does-not-make-an-object-primitive" class="nav-link" data-scroll-target="#stability-does-not-make-an-object-primitive">Stability Does Not Make an Object Primitive</a></li>
+  <li><a href="#change-can-occur-without-loss-of-objecthood" id="toc-change-can-occur-without-loss-of-objecthood" class="nav-link" data-scroll-target="#change-can-occur-without-loss-of-objecthood">Change Can Occur Without Loss of Objecthood</a></li>
+  <li><a href="#structural-change-can-redefine-the-object" id="toc-structural-change-can-redefine-the-object" class="nav-link" data-scroll-target="#structural-change-can-redefine-the-object">Structural Change Can Redefine the Object</a></li>
+  <li><a href="#objecthood-is-not-mere-spatial-containment" id="toc-objecthood-is-not-mere-spatial-containment" class="nav-link" data-scroll-target="#objecthood-is-not-mere-spatial-containment">Objecthood Is Not Mere Spatial Containment</a></li>
+  <li><a href="#objecthood-comes-before-physical-geometry" id="toc-objecthood-comes-before-physical-geometry" class="nav-link" data-scroll-target="#objecthood-comes-before-physical-geometry">Objecthood Comes Before Physical Geometry</a></li>
+  <li><a href="#objecthood-comes-before-probability" id="toc-objecthood-comes-before-probability" class="nav-link" data-scroll-target="#objecthood-comes-before-probability">Objecthood Comes Before Probability</a></li>
+  <li><a href="#objecthood-comes-before-energy" id="toc-objecthood-comes-before-energy" class="nav-link" data-scroll-target="#objecthood-comes-before-energy">Objecthood Comes Before Energy</a></li>
+  <li><a href="#different-sciences-can-have-different-real-objects" id="toc-different-sciences-can-have-different-real-objects" class="nav-link" data-scroll-target="#different-sciences-can-have-different-real-objects">Different Sciences Can Have Different Real Objects</a></li>
+  <li><a href="#unification-does-not-require-one-universal-object" id="toc-unification-does-not-require-one-universal-object" class="nav-link" data-scroll-target="#unification-does-not-require-one-universal-object">Unification Does Not Require One Universal Object</a></li>
+  <li><a href="#a-particle-and-an-organism-need-not-share-an-ontology" id="toc-a-particle-and-an-organism-need-not-share-an-ontology" class="nav-link" data-scroll-target="#a-particle-and-an-organism-need-not-share-an-ontology">A Particle and an Organism Need Not Share an Ontology</a></li>
+  <li><a href="#mechanism-does-not-define-objecthood" id="toc-mechanism-does-not-define-objecthood" class="nav-link" data-scroll-target="#mechanism-does-not-define-objecthood">Mechanism Does Not Define Objecthood</a></li>
+  <li><a href="#effective-causes-can-be-real" id="toc-effective-causes-can-be-real" class="nav-link" data-scroll-target="#effective-causes-can-be-real">Effective Causes Can Be Real</a></li>
+  <li><a href="#object-interaction-and-organizing-structure" id="toc-object-interaction-and-organizing-structure" class="nav-link" data-scroll-target="#object-interaction-and-organizing-structure">Object, Interaction, and Organizing Structure</a></li>
+  <li><a href="#predictive-success-does-not-establish-primitive-objecthood" id="toc-predictive-success-does-not-establish-primitive-objecthood" class="nav-link" data-scroll-target="#predictive-success-does-not-establish-primitive-objecthood">Predictive Success Does Not Establish Primitive Objecthood</a></li>
+  <li><a href="#no-view-from-no-boundary" id="toc-no-view-from-no-boundary" class="nav-link" data-scroll-target="#no-view-from-no-boundary">No View From No Boundary</a></li>
+  <li><a href="#boundary-relative-does-not-mean-observer-arbitrary" id="toc-boundary-relative-does-not-mean-observer-arbitrary" class="nav-link" data-scroll-target="#boundary-relative-does-not-mean-observer-arbitrary">Boundary Relative Does Not Mean Observer Arbitrary</a></li>
+  <li><a href="#scientific-truth-can-be-boundary-relative" id="toc-scientific-truth-can-be-boundary-relative" class="nav-link" data-scroll-target="#scientific-truth-can-be-boundary-relative">Scientific Truth Can Be Boundary Relative</a></li>
+  <li><a href="#the-primitive-invariant-is-not-the-object" id="toc-the-primitive-invariant-is-not-the-object" class="nav-link" data-scroll-target="#the-primitive-invariant-is-not-the-object">The Primitive Invariant Is Not the Object</a></li>
+  <li><a href="#r2d-as-a-theory-of-scientific-objecthood" id="toc-r2d-as-a-theory-of-scientific-objecthood" class="nav-link" data-scroll-target="#r2d-as-a-theory-of-scientific-objecthood">R<sup>2</sup>D as a Theory of Scientific Objecthood</a></li>
+  <li><a href="#the-architecture-in-one-view" id="toc-the-architecture-in-one-view" class="nav-link" data-scroll-target="#the-architecture-in-one-view">The Architecture in One View</a></li>
+  <li><a href="#the-key-distinction" id="toc-the-key-distinction" class="nav-link" data-scroll-target="#the-key-distinction">The Key Distinction</a></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Scientific Objecthood</h1>
+<p class="subtitle lead">The boundary participates in defining what counts as the object</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="scientific-objecthood" class="level1">
+<h1>Scientific Objecthood</h1>
+<p>Science is organized around objects.</p>
+<p>Physics has particles, fields, masses, charges, and spacetime.</p>
+<p>Chemistry has atoms, molecules, and reactions.</p>
+<p>Biology has proteins, cells, tissues, and organisms.</p>
+<p>Other sciences define still other objects.</p>
+<p>R<sup>2</sup>D begins with a question that comes before deciding which of these objects is most fundamental:</p>
+<blockquote class="blockquote">
+<p><strong>What makes something a scientific object in the first place?</strong></p>
+</blockquote>
+<p>Its answer is boundary relative.</p>
+<blockquote class="blockquote">
+<p><strong>An object is a readable state distinction defined at a count boundary.</strong></p>
+</blockquote>
+<p>The boundary does not merely surround an independently existing object.</p>
+<p>It participates in defining what counts as the object.</p>
+<section id="from-objects-to-objecthood" class="level2">
+<h2 class="anchored" data-anchor-id="from-objects-to-objecthood">From Objects to Objecthood</h2>
+<p>A conventional foundational question is:</p>
+<blockquote class="blockquote">
+<p>What are the fundamental objects of nature?</p>
+</blockquote>
+<p>R<sup>2</sup>D asks a logically earlier question:</p>
+<blockquote class="blockquote">
+<p>What conditions must be satisfied before anything can count as an object?</p>
+</blockquote>
+<p>Before an electron, molecule, protein, cell, or organism can be scientifically identified, some differences must be readable.</p>
+<p>Those differences must be classified relative to a count domain.</p>
+<p>A boundary must therefore already define:</p>
+<ul>
+<li>which distinctions are readable;</li>
+<li>which realizations are compatible;</li>
+<li>which compatible realizations belong to the same state;</li>
+<li>and which differences count as changes of that state.</li>
+</ul>
+<p>Objecthood begins with this classification architecture.</p>
+<p><a href="../understand/boundaries.html">Boundaries Define Scientific Objects →</a></p>
+</section>
+<section id="a-boundary-defines-a-state-domain" class="level2">
+<h2 class="anchored" data-anchor-id="a-boundary-defines-a-state-domain">A Boundary Defines a State Domain</h2>
+<p>At boundary (B_n), let</p>
+<p><span class="math display">\[
+\mathfrak M_n
+\]</span></p>
+<p>be the compatible formal microstate domain.</p>
+<p>Let</p>
+<p><span class="math display">\[
+\mathcal M_n
+\]</span></p>
+<p>be the readable macrostate domain.</p>
+<p>The boundary supplies the classification</p>
+<p><span class="math display">\[
+\boxed{
+\pi_n:
+\mathfrak M_n
+\rightarrow
+\mathcal M_n.
+}
+\]</span></p>
+<p>A readable state</p>
+<p><span class="math display">\[
+i\in\mathcal M_n
+\]</span></p>
+<p>is therefore defined relative to that boundary.</p>
+<p>Its multiplicity is</p>
+<p><span class="math display">\[
+\boxed{
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+}
+\]</span></p>
+<p>The object is not added afterward to this structure.</p>
+<p>The readable state classification is what makes the object scientifically distinguishable there.</p>
+</section>
+<section id="a-scientific-object-is-a-readable-distinction" class="level2">
+<h2 class="anchored" data-anchor-id="a-scientific-object-is-a-readable-distinction">A Scientific Object Is a Readable Distinction</h2>
+<p>R<sup>2</sup>D therefore uses a deliberately broad concept of objecthood.</p>
+<p>An object need not be a small solid thing.</p>
+<p>A scientific object can be any stable readable distinction defined by an appropriate boundary.</p>
+<p>Thus a particle can be an object.</p>
+<p>A molecule can be an object.</p>
+<p>A protein conformation can be an object.</p>
+<p>A cell can be an object.</p>
+<p>An organism can be an object.</p>
+<p>The common requirement is not a shared substance.</p>
+<p>It is a shared formal condition:</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary}
+\rightarrow
+\text{readable distinction}
+\rightarrow
+\text{state identity}.
+}
+\]</span></p>
+</section>
+<section id="objecthood-is-real" class="level2">
+<h2 class="anchored" data-anchor-id="objecthood-is-real">Objecthood Is Real</h2>
+<p>Boundary-relative objecthood does not mean that objects are illusions.</p>
+<p>A molecule can be physically real.</p>
+<p>A cell can be physically real.</p>
+<p>A particle can be physically real.</p>
+<p>Their properties can be measured.</p>
+<p>Their transitions can be manipulated.</p>
+<p>They can enter highly predictive causal models.</p>
+<p>R<sup>2</sup>D does not require otherwise.</p>
+<p>The restriction is narrower:</p>
+<p><span class="math display">\[
+\boxed{
+\text{real at }B_n
+\not\Rightarrow
+\text{primitive at every boundary}.
+}
+\]</span></p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>Boundary-relative reality is still reality.</strong></p>
+</blockquote>
+</section>
+<section id="reality-and-primitiveness-are-different-claims" class="level2">
+<h2 class="anchored" data-anchor-id="reality-and-primitiveness-are-different-claims">Reality and Primitiveness Are Different Claims</h2>
+<p>Suppose an object is experimentally readable at (B_n).</p>
+<p>That establishes its scientific reality relative to that boundary.</p>
+<p>It does not automatically establish that the same identity survives as a primitive object at</p>
+<p><span class="math display">\[
+B_{n+1}.
+\]</span></p>
+<p>R<sup>2</sup>D therefore separates:</p>
+<p><span class="math display">\[
+\boxed{
+\text{scientific reality}
+}
+\]</span></p>
+<p>from</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary-independent primitiveness}.
+}
+\]</span></p>
+<p>These are not equivalent claims.</p>
+<p>This distinction allows familiar scientific objects to remain completely real without requiring one privileged ontology to persist through all scales.</p>
+</section>
+<section id="the-primitive-object-error" class="level2">
+<h2 class="anchored" data-anchor-id="the-primitive-object-error">The Primitive-Object Error</h2>
+<p>Suppose an object is a legitimate readable state distinction at (B_n).</p>
+<p>Now change the count boundary.</p>
+<p>The old state identity may no longer remain readable as the same state at</p>
+<p><span class="math display">\[
+B_{n+1}.
+\]</span></p>
+<p>Its realization may instead contribute to the multiplicity of a newly classified enclosing state.</p>
+<p>If the subordinate identity is nevertheless assumed to remain independently primitive, R<sup>2</sup>D calls this a <strong>primitive-object projection</strong>.</p>
+<p>Schematically:</p>
+<p><span class="math display">\[
+\boxed{
+\text{object at }B_n
+\not\Rightarrow
+\text{same primitive object at }B_{n+1}.
+}
+\]</span></p>
+<p>The problem is not believing that the object exists.</p>
+<p>The problem is assuming that its boundary-specific identity must persist unchanged after the state classification has changed.</p>
+</section>
+<section id="objecthood-changes-with-the-boundary" class="level2">
+<h2 class="anchored" data-anchor-id="objecthood-changes-with-the-boundary">Objecthood Changes With the Boundary</h2>
+<p>At (B_n), an object may be represented by macrostate</p>
+<p><span class="math display">\[
+i_n.
+\]</span></p>
+<p>At (B_{n+1}), that local identity can become part of a compatible formal microstate realization:</p>
+<p><span class="math display">\[
+\mu_{n+1}.
+\]</span></p>
+<p>Thus the same recursively organized realization can change status:</p>
+<p><span class="math display">\[
+\boxed{
+\text{macrostate meaning at }B_n
+\rightarrow
+\text{microstate meaning relative to }B_{n+1}.
+}
+\]</span></p>
+<p>This is not merely a change in vocabulary.</p>
+<p>It is a change in the count relation by which the object is defined.</p>
+<p><a href="../understand/macrostate-microstate.html">Macrostate and Microstate →</a></p>
+</section>
+<section id="a-coin-is-already-boundary-relative" class="level2">
+<h2 class="anchored" data-anchor-id="a-coin-is-already-boundary-relative">A Coin Is Already Boundary Relative</h2>
+<p>A single coin provides the simplest example.</p>
+<p>At one boundary, the readable states may be</p>
+<p><span class="math display">\[
+H
+\qquad\text{and}\qquad
+T.
+\]</span></p>
+<p>The coin is the scientific object.</p>
+<p>Now place ten coins inside an ensemble boundary.</p>
+<p>The readable object can instead be the ensemble state</p>
+<p><span class="math display">\[
+N_H=0,1,\ldots,10.
+\]</span></p>
+<p>At that boundary, the individual coin states participate in the realization of the ensemble macrostate.</p>
+<p>The scientifically readable object has changed.</p>
+<p>The coins have not become unreal.</p>
+<p>But the ensemble is not merely another name for one of them.</p>
+<p>It has its own state domain and multiplicity.</p>
+<p><a href="../understand/coins.html">The Coins Example →</a></p>
+</section>
+<section id="a-component-is-also-an-object-at-its-own-boundary" class="level2">
+<h2 class="anchored" data-anchor-id="a-component-is-also-an-object-at-its-own-boundary">A Component Is Also an Object — At Its Own Boundary</h2>
+<p>This avoids another common misunderstanding.</p>
+<p>Calling something a component does not make it less real.</p>
+<p>A myosin molecule is a legitimate object at a molecular boundary.</p>
+<p>A protein is a legitimate object at a protein boundary.</p>
+<p>A cell is a legitimate object at a cellular boundary.</p>
+<p>But relative to a larger boundary, that same object may serve as one subordinate realization among many.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{object}
+\leftrightarrow
+\text{component}
+}
+\]</span></p>
+<p>is itself boundary dependent.</p>
+<p>What is a whole at one boundary can participate as a component of another.</p>
+</section>
+<section id="components-do-not-create-the-multiplicity-of-the-whole" class="level2">
+<h2 class="anchored" data-anchor-id="components-do-not-create-the-multiplicity-of-the-whole">Components Do Not Create the Multiplicity of the Whole</h2>
+<p>Suppose boundary (B_n) defines macrostate (i).</p>
+<p>Its multiplicity is</p>
+<p><span class="math display">\[
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+\]</span></p>
+<p>That cardinality is defined by the boundary classification.</p>
+<p>A particular subordinate component realization can occupy one member of that class.</p>
+<p>It cannot create the cardinality of the class by occurring.</p>
+<p>Therefore:</p>
+<blockquote class="blockquote">
+<p><strong>Components realize multiplicity structure.<br>
+They do not create multiplicity structure.</strong></p>
+</blockquote>
+<p>This distinction is central to R<sup>2</sup>D objecthood.</p>
+<p>The object defined at the enclosing boundary has a possible structure that is not reducible to the history of one subordinate component.</p>
+<p><a href="../understand/multiplicity.html">Multiplicity →</a></p>
+</section>
+<section id="the-whole-is-not-the-arithmetic-sum-of-its-objects" class="level2">
+<h2 class="anchored" data-anchor-id="the-whole-is-not-the-arithmetic-sum-of-its-objects">The Whole Is Not the Arithmetic Sum of Its Objects</h2>
+<p>Suppose many peer boundaries are jointly compatible.</p>
+<p>Their possible realizations compose multiplicatively:</p>
+<p><span class="math display">\[
+W_{\mathrm{joint}}
+=
+\prod_\alpha W_\alpha.
+\]</span></p>
+<p>The enclosing boundary then classifies those compatible joint realizations into its own readable macrostates.</p>
+<p>Thus the whole-system object is not simply</p>
+<p><span class="math display">\[
+\text{object}_1
++
+\text{object}_2
++
+\cdots.
+\]</span></p>
+<p>Instead:</p>
+<p><span class="math display">\[
+\boxed{
+\text{compatible peer realizations}
+\rightarrow
+\text{new enclosing classification}.
+}
+\]</span></p>
+<p>The larger object exists through a new multiplicity structure.</p>
+</section>
+<section id="persistence-does-not-require-persistent-parts" class="level2">
+<h2 class="anchored" data-anchor-id="persistence-does-not-require-persistent-parts">Persistence Does Not Require Persistent Parts</h2>
+<p>Boundary-relative objecthood also changes what it means for an object to persist.</p>
+<p>Suppose the classification defining an enclosing object remains stable while its subordinate realizations change.</p>
+<p>Then the object can remain identifiable even while its components are replaced.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{persistent object identity}
+\not\Rightarrow
+\text{persistent subordinate identity}.
+}
+\]</span></p>
+<p>This is common in organized systems.</p>
+<p>A biological structure can persist while molecules turn over.</p>
+<p>A cell can persist while proteins are synthesized and degraded.</p>
+<p>An organism can persist while large numbers of its subordinate components change.</p>
+<p>Persistence belongs to the boundary-defined organization, not necessarily to the permanent identity of every subordinate part.</p>
+</section>
+<section id="object-persistence-is-recurrent-organization" class="level2">
+<h2 class="anchored" data-anchor-id="object-persistence-is-recurrent-organization">Object Persistence Is Recurrent Organization</h2>
+<p>What makes an object persist is therefore not simply possession of the same matter at every occurrence.</p>
+<p>More generally, persistence requires that the boundary continue to support the distinctions by which the object is identified.</p>
+<p>Schematically:</p>
+<p><span class="math display">\[
+\boxed{
+\text{stable boundary classification}
++
+\text{recurrent compatible realization}
+\rightarrow
+\text{persistent objecthood}.
+}
+\]</span></p>
+<p>The particular subordinate realization can change.</p>
+<p>The organizing relation can remain.</p>
+<p>This gives R<sup>2</sup>D a natural account of objects whose components continually turn over.</p>
+</section>
+<section id="stability-does-not-make-an-object-primitive" class="level2">
+<h2 class="anchored" data-anchor-id="stability-does-not-make-an-object-primitive">Stability Does Not Make an Object Primitive</h2>
+<p>A long-lived object may appear especially fundamental.</p>
+<p>But persistence does not establish boundary independence.</p>
+<p>An object can remain stable for billions of local recurrences and still be defined relative to a particular count domain.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{stability}
+\not\Rightarrow
+\text{primitiveness}.
+}
+\]</span></p>
+<p>Stability tells us that a classification is recurrently realized.</p>
+<p>It does not tell us that the classification exists independently of every boundary.</p>
+</section>
+<section id="change-can-occur-without-loss-of-objecthood" class="level2">
+<h2 class="anchored" data-anchor-id="change-can-occur-without-loss-of-objecthood">Change Can Occur Without Loss of Objecthood</h2>
+<p>An object also need not remain in one macrostate to remain the same scientific object.</p>
+<p>Its state may change:</p>
+<p><span class="math display">\[
+i
+\rightarrow
+k.
+\]</span></p>
+<p>What persists is the boundary-defined state domain within which both macrostates belong to the same object classification.</p>
+<p>Thus a muscle can shorten.</p>
+<p>A protein can change conformation.</p>
+<p>A cell can divide or differentiate.</p>
+<p>An atom can change state.</p>
+<p>Objecthood does not require absence of change.</p>
+<p>It requires that the change remain readable within an organizing state domain.</p>
+</section>
+<section id="structural-change-can-redefine-the-object" class="level2">
+<h2 class="anchored" data-anchor-id="structural-change-can-redefine-the-object">Structural Change Can Redefine the Object</h2>
+<p>But sometimes the classification itself changes.</p>
+<p>Suppose</p>
+<p><span class="math display">\[
+\pi_n
+\rightarrow
+\pi_n'.
+\]</span></p>
+<p>Then the state domain changes.</p>
+<p>The previous object classification may no longer apply.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{parameter change}
+\neq
+\text{classification change}.
+}
+\]</span></p>
+<p>A model can therefore fail not because one parameter drifted, but because the scientific object itself has been redefined by a changed count boundary.</p>
+<p>This distinction can be important in systems undergoing phase transitions, developmental transitions, structural reorganization, or other changes in what distinctions remain scientifically meaningful.</p>
+</section>
+<section id="objecthood-is-not-mere-spatial-containment" class="level2">
+<h2 class="anchored" data-anchor-id="objecthood-is-not-mere-spatial-containment">Objecthood Is Not Mere Spatial Containment</h2>
+<p>A boundary in R<sup>2</sup>D is not necessarily a physical surface.</p>
+<p>Therefore objecthood is not defined merely by drawing a geometric outline around something.</p>
+<p>A boundary is the relation that defines the count domain.</p>
+<p>It determines which differences belong to the same state classification and which do not.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{object boundary}
+\neq
+\text{necessarily geometric surface}.
+}
+\]</span></p>
+<p>A spatial surface can later become one physical read of a boundary.</p>
+<p>But boundary-defined objecthood comes first.</p>
+</section>
+<section id="objecthood-comes-before-physical-geometry" class="level2">
+<h2 class="anchored" data-anchor-id="objecthood-comes-before-physical-geometry">Objecthood Comes Before Physical Geometry</h2>
+<p>This has an important consequence.</p>
+<p>If a physical object must already be distinguishable before we can assign it a position, radius, volume, or trajectory, then those spatial coordinates cannot be logically prior to objecthood.</p>
+<p>The order is</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary-defined distinction}
+\rightarrow
+\text{object}
+\rightarrow
+\text{physical coordinate}.
+}
+\]</span></p>
+<p>Not</p>
+<p><span class="math display">\[
+\text{pre-existing spatial coordinate}
+\rightarrow
+\text{object}.
+\]</span></p>
+<p>The later gravitational program develops this distinction much further.</p>
+<p><a href="../understand/before-units.html">Why the Mathematics Comes Before Units →</a></p>
+</section>
+<section id="objecthood-comes-before-probability" class="level2">
+<h2 class="anchored" data-anchor-id="objecthood-comes-before-probability">Objecthood Comes Before Probability</h2>
+<p>The same argument applies statistically.</p>
+<p>Before assigning a probability to an object being in state (i), the state domain must already exist.</p>
+<p>The boundary must already define</p>
+<p><span class="math display">\[
+\mathcal M_n.
+\]</span></p>
+<p>The compatible realizations must already define</p>
+<p><span class="math display">\[
+W_{n,i}.
+\]</span></p>
+<p>Only then can those counts be normalized into probability.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{object and state definition}
+\rightarrow
+\text{possible count}
+\rightarrow
+\text{probability}.
+}
+\]</span></p>
+<p>Probability does not define the object whose states it normalizes.</p>
+</section>
+<section id="objecthood-comes-before-energy" class="level2">
+<h2 class="anchored" data-anchor-id="objecthood-comes-before-energy">Objecthood Comes Before Energy</h2>
+<p>Likewise, assigning an energy</p>
+<p><span class="math display">\[
+E_i
+\]</span></p>
+<p>to state (i) presupposes that state (i) has already been distinguished.</p>
+<p>So the logical order is</p>
+<p><span class="math display">\[
+\boxed{
+\text{state distinction}
+\rightarrow
+\text{physical energy read}.
+}
+\]</span></p>
+<p>R<sup>2</sup>D therefore begins before energetic ontology.</p>
+<p>Part II asks how energetic quantities become physical readings of already defined recursive count relations.</p>
+</section>
+<section id="different-sciences-can-have-different-real-objects" class="level2">
+<h2 class="anchored" data-anchor-id="different-sciences-can-have-different-real-objects">Different Sciences Can Have Different Real Objects</h2>
+<p>If objecthood is boundary relative, then different sciences do not need to share one privileged object vocabulary.</p>
+<p>Physics can legitimately describe particles.</p>
+<p>Chemistry can legitimately describe molecules.</p>
+<p>Biology can legitimately describe cells and organisms.</p>
+<p>The existence of one level does not make the others fictional.</p>
+<p>Each domain can identify real objects defined by the distinctions readable there.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>Boundary-relative objecthood permits scientific pluralism without abandoning formal unification.</strong></p>
+</blockquote>
+<p>What changes across domains is the object.</p>
+<p>What can remain invariant is the grammar by which an object is defined.</p>
+</section>
+<section id="unification-does-not-require-one-universal-object" class="level2">
+<h2 class="anchored" data-anchor-id="unification-does-not-require-one-universal-object">Unification Does Not Require One Universal Object</h2>
+<p>This changes the usual unification problem.</p>
+<p>A common strategy is to search for one final object from which every other scientific object is built.</p>
+<p>R<sup>2</sup>D proposes a different invariant.</p>
+<p>Not:</p>
+<p><span class="math display">\[
+\boxed{
+\text{one object at every scale}.
+}
+\]</span></p>
+<p>But:</p>
+<p><span class="math display">\[
+\boxed{
+\text{one formal architecture by which objects become distinguishable}.
+}
+\]</span></p>
+<p>That architecture is</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinction}
+\rightarrow
+\text{classification}
+\rightarrow
+\text{multiplicity}
+\rightarrow
+\text{realization}.
+}
+\]</span></p>
+<p>The objects change.</p>
+<p>The grammar need not.</p>
+</section>
+<section id="a-particle-and-an-organism-need-not-share-an-ontology" class="level2">
+<h2 class="anchored" data-anchor-id="a-particle-and-an-organism-need-not-share-an-ontology">A Particle and an Organism Need Not Share an Ontology</h2>
+<p>This is why R<sup>2</sup>D does not need to claim that an organism is “really” only a collection of particles in order to connect physics and biology formally.</p>
+<p>Nor does it need to claim that particles and organisms are the same kind of physical object.</p>
+<p>Their count domains differ.</p>
+<p>Their readable states differ.</p>
+<p>Their physical coordinates differ.</p>
+<p>Yet both can instantiate the same primitive relation:</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary-defined objecthood}.
+}
+\]</span></p>
+<p>The unification occurs at the level of the grammar, not the domain-specific object.</p>
+</section>
+<section id="mechanism-does-not-define-objecthood" class="level2">
+<h2 class="anchored" data-anchor-id="mechanism-does-not-define-objecthood">Mechanism Does Not Define Objecthood</h2>
+<p>Once an object has been defined, one can ask how its state changes.</p>
+<p>That is a mechanistic question.</p>
+<p>A sequence of subordinate transitions may realize</p>
+<p><span class="math display">\[
+i\rightarrow k.
+\]</span></p>
+<p>Those events can be necessary.</p>
+<p>They can be experimentally manipulable.</p>
+<p>They can be legitimate effective causes.</p>
+<p>But the mechanism does not, by itself, define the state domain within which</p>
+<p><span class="math display">\[
+i
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+k
+\]</span></p>
+<p>are distinguishable.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{mechanism}
+\neq
+\text{definition of the object}.
+}
+\]</span></p>
+<p>Mechanism operates within an object architecture that must already be specified.</p>
+</section>
+<section id="effective-causes-can-be-real" class="level2">
+<h2 class="anchored" data-anchor-id="effective-causes-can-be-real">Effective Causes Can Be Real</h2>
+<p>Boundary-relative causality follows the same logic as boundary-relative objecthood.</p>
+<p>Suppose manipulating local variable (X) changes readable outcome (Y).</p>
+<p>Then (X) can legitimately be described as an effective cause within that boundary.</p>
+<p>R<sup>2</sup>D does not prohibit such causal language.</p>
+<p>It asks a separate question:</p>
+<blockquote class="blockquote">
+<p>Does that local effective cause also define the enclosing organization under which the relation is realized?</p>
+</blockquote>
+<p>Not necessarily.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{effective cause}
+\not\Rightarrow
+\text{primitive causal organizer}.
+}
+\]</span></p>
+<p><a href="../understand/causal-inversion.html">The Causal Inversion →</a></p>
+</section>
+<section id="object-interaction-and-organizing-structure" class="level2">
+<h2 class="anchored" data-anchor-id="object-interaction-and-organizing-structure">Object, Interaction, and Organizing Structure</h2>
+<p>R<sup>2</sup>D identifies a common explanatory sequence.</p>
+<p>First, a boundary-relative object is treated as primitive.</p>
+<p>Then correlations among such objects are represented as primitive object-object interactions.</p>
+<p>Then a field, potential, geometry, wavefunction, or other organizing structure may be introduced to organize those interactions.</p>
+<p>Schematically,</p>
+<p><span class="math display">\[
+\boxed{
+\text{recursive organization}
+\rightarrow
+\text{object}
+\rightarrow
+\text{interaction}
+\rightarrow
+\text{organizing field or geometry}.
+}
+\]</span></p>
+<p>The resulting theories can be extraordinarily accurate.</p>
+<p>R<sup>2</sup>D does not object to their mathematics.</p>
+<p>It asks whether the projected objects and structures have been promoted too far down the ontological hierarchy.</p>
+</section>
+<section id="predictive-success-does-not-establish-primitive-objecthood" class="level2">
+<h2 class="anchored" data-anchor-id="predictive-success-does-not-establish-primitive-objecthood">Predictive Success Does Not Establish Primitive Objecthood</h2>
+<p>A theory written in terms of boundary-relative objects can be extremely predictive.</p>
+<p>That is expected.</p>
+<p>Stable enclosing organization can generate stable local correlations.</p>
+<p>A model of those correlations can therefore work exceptionally well.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{predictive success}
+\not\Rightarrow
+\text{primitive objecthood}.
+}
+\]</span></p>
+<p>The equations may be right.</p>
+<p>The question of what their variables are <strong>fundamentally</strong> remains separate.</p>
+</section>
+<section id="no-view-from-no-boundary" class="level2">
+<h2 class="anchored" data-anchor-id="no-view-from-no-boundary">No View From No Boundary</h2>
+<p>If every readable object is boundary indexed, there is no scientifically readable description from “no boundary.”</p>
+<p>Every measurement resolves some distinctions and not others.</p>
+<p>Every state classification belongs to some count domain.</p>
+<p>Science can compare boundaries.</p>
+<p>It can move between them.</p>
+<p>It can reconstruct recursive relations.</p>
+<p>But a readable scientific object is always defined somewhere.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>There is no view from no boundary.</strong></p>
+</blockquote>
+<p>This does not make science subjective.</p>
+<p>The boundary is part of the formal definition of what is being measured.</p>
+</section>
+<section id="boundary-relative-does-not-mean-observer-arbitrary" class="level2">
+<h2 class="anchored" data-anchor-id="boundary-relative-does-not-mean-observer-arbitrary">Boundary Relative Does Not Mean Observer Arbitrary</h2>
+<p>A boundary is also not merely whatever an observer chooses to imagine.</p>
+<p>The proposed boundary must correctly identify:</p>
+<ul>
+<li>the readable distinctions;</li>
+<li>the compatible realization domain;</li>
+<li>the macrostate classification;</li>
+<li>the multiplicity structure;</li>
+<li>the observable transitions;</li>
+<li>and the enclosing relations organizing realization.</li>
+</ul>
+<p>A poor boundary definition will fail empirically.</p>
+<p>Boundary relativity therefore does not mean arbitrary relativity.</p>
+<p>It means that scientific claims must be indexed to the count domain in which their objects are defined.</p>
+</section>
+<section id="scientific-truth-can-be-boundary-relative" class="level2">
+<h2 class="anchored" data-anchor-id="scientific-truth-can-be-boundary-relative">Scientific Truth Can Be Boundary Relative</h2>
+<p>A particle description can be true within the boundary where particles are readable.</p>
+<p>A thermodynamic description can be true where temperature, entropy, heat, and work are readable.</p>
+<p>A gravitational geometry can be true where that geometry is the appropriate physical read.</p>
+<p>These truths do not have to be false merely because R<sup>2</sup>D places them downstream of a more primitive count architecture.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary-relative truth}
+\neq
+\text{falsehood}.
+}
+\]</span></p>
+<p>The stronger question is whether a boundary-relative scientific coordinate should be promoted to universal primitive ontology.</p>
+</section>
+<section id="the-primitive-invariant-is-not-the-object" class="level2">
+<h2 class="anchored" data-anchor-id="the-primitive-invariant-is-not-the-object">The Primitive Invariant Is Not the Object</h2>
+<p>This leads to the broadest interpretation of R<sup>2</sup>D.</p>
+<p>The proposed invariant across science is not:</p>
+<ul>
+<li>one particle;</li>
+<li>one molecule;</li>
+<li>one force;</li>
+<li>one field;</li>
+<li>one organism;</li>
+<li>one geometry;</li>
+<li>or one universal ruler.</li>
+</ul>
+<p>It is the architecture by which scientific objects become defined.</p>
+<p>That architecture includes:</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary}
+}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+\text{distinguishability}
+}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+\text{classification}
+}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+\text{multiplicity}
+}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+\text{occurrence}
+}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+\text{occupancy}
+}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+\text{recurrence}
+}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\boxed{
+\text{recursive replacement}.
+}
+\]</span></p>
+<p>The object can change.</p>
+<p>The architecture can remain.</p>
+</section>
+<section id="r2d-as-a-theory-of-scientific-objecthood" class="level2">
+<h2 class="anchored" data-anchor-id="r2d-as-a-theory-of-scientific-objecthood">R<sup>2</sup>D as a Theory of Scientific Objecthood</h2>
+<p>This is why R<sup>2</sup>D is broader than a proposal about one physical domain.</p>
+<p>It does not primarily ask:</p>
+<blockquote class="blockquote">
+<p>What is an electron?</p>
+</blockquote>
+<p>It asks:</p>
+<blockquote class="blockquote">
+<p>What makes an electron count as one scientific object?</p>
+</blockquote>
+<p>It does not primarily ask:</p>
+<blockquote class="blockquote">
+<p>What is a protein?</p>
+</blockquote>
+<p>It asks:</p>
+<blockquote class="blockquote">
+<p>What makes a protein a persistent readable state while its subordinate realization changes?</p>
+</blockquote>
+<p>It does not primarily ask:</p>
+<blockquote class="blockquote">
+<p>What is an organism?</p>
+</blockquote>
+<p>It asks:</p>
+<blockquote class="blockquote">
+<p>What defines the boundary within which an organism remains a scientific object despite continual component replacement?</p>
+</blockquote>
+<p>And it does not begin by asking:</p>
+<blockquote class="blockquote">
+<p>What is spacetime?</p>
+</blockquote>
+<p>It asks:</p>
+<blockquote class="blockquote">
+<p>What must already be distinguishable before a spatial or temporal coordinate can be assigned?</p>
+</blockquote>
+<p>That is why the Canon describes R<sup>2</sup>D as a proposed theory of <strong>scientific objecthood and organization</strong>.</p>
+</section>
+<section id="the-architecture-in-one-view" class="level2">
+<h2 class="anchored" data-anchor-id="the-architecture-in-one-view">The Architecture in One View</h2>
+<p>Scientific objecthood can be summarized as</p>
+<p><span class="math display">\[
+\boxed{
+\begin{array}{c}
+B_n
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{readable distinctions}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\mathcal M_n
+\\[4pt]
+\Downarrow
+\\[4pt]
+W_{n,i}
+=
+\left|\pi_n^{-1}(i)\right|
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{realized state}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{scientific object at }B_n
+\end{array}
+}
+\]</span></p>
+<p>Changing the boundary gives</p>
+<p><span class="math display">\[
+\boxed{
+B_n
+\rightarrow
+B_{n+1}
+\quad\Rightarrow\quad
+\text{new count domain}
+\rightarrow
+\text{new object classification}.
+}
+\]</span></p>
+<p>So:</p>
+<p><span class="math display">\[
+\boxed{
+\text{object at }B_n
+\not\Rightarrow
+\text{primitive object at }B_{n+1}.
+}
+\]</span></p>
+</section>
+<section id="the-key-distinction" class="level2">
+<h2 class="anchored" data-anchor-id="the-key-distinction">The Key Distinction</h2>
+<p>The simplest summary is:</p>
+<blockquote class="blockquote">
+<p><strong>An object is real where it is distinguishable.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Its identity is defined by the boundary that makes those distinctions countable.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Its subordinate realizations can change while its organization persists.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Its reality at one boundary does not require its identity to remain primitive at every other boundary.</strong></p>
+</blockquote>
+<p>R<sup>2</sup>D therefore shifts the foundational question from</p>
+<blockquote class="blockquote">
+<p><strong>What is the fundamental object?</strong></p>
+</blockquote>
+<p>to</p>
+<blockquote class="blockquote">
+<p><strong>What is the formal grammar by which anything becomes a scientific object?</strong></p>
+</blockquote>
+<p>The next step is to recognize that this grammar has been defined without meters, seconds, joules, kelvin, or any other physical unit.</p>
+<hr>
+</section>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<p><a href="../understand/before-units.html">Why the Mathematics Comes Before Units →</a></p>
+<p><a href="../understand/from-count-to-physics.html">From Count to Physical Science →</a></p>
+<p><a href="../understand/not-coarse-graining.html">Why R²D Is Not Coarse-Graining →</a></p>
+<p><a href="../understand/index.html">Back to Understand R²D →</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/r2dscience\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

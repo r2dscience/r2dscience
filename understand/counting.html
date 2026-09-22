@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index – R²D Science</title>
+<title>Counting Requires Distinguishability – R²D Science</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -165,93 +194,265 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#understand-r²d" id="toc-understand-r²d" class="nav-link active" data-scroll-target="#understand-r²d">Understand R²D</a>
+  <li><a href="#counting-requires-distinguishability" id="toc-counting-requires-distinguishability" class="nav-link active" data-scroll-target="#counting-requires-distinguishability">Counting Requires Distinguishability</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">0. Introduction</a></li>
-  <li><a href="#define-the-object" id="toc-define-the-object" class="nav-link" data-scroll-target="#define-the-object">1. Define the object</a></li>
-  <li><a href="#define-what-can-be-realized" id="toc-define-what-can-be-realized" class="nav-link" data-scroll-target="#define-what-can-be-realized">2. Define what can be realized</a></li>
-  <li><a href="#define-direction" id="toc-define-direction" class="nav-link" data-scroll-target="#define-direction">3. Define direction</a></li>
-  <li><a href="#define-recurrence" id="toc-define-recurrence" class="nav-link" data-scroll-target="#define-recurrence">4. Define recurrence</a></li>
-  <li><a href="#put-it-together" id="toc-put-it-together" class="nav-link" data-scroll-target="#put-it-together">5. Put it together</a></li>
-  <li><a href="#understand-the-implications" id="toc-understand-the-implications" class="nav-link" data-scroll-target="#understand-the-implications">6. Understand the implications</a></li>
-  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  <li><a href="#a-count-is-not-yet-a-physical-quantity" id="toc-a-count-is-not-yet-a-physical-quantity" class="nav-link" data-scroll-target="#a-count-is-not-yet-a-physical-quantity">A Count Is Not Yet a Physical Quantity</a></li>
+  <li><a href="#boltzmann-provides-the-mathematical-clue" id="toc-boltzmann-provides-the-mathematical-clue" class="nav-link" data-scroll-target="#boltzmann-provides-the-mathematical-clue">Boltzmann Provides the Mathematical Clue</a></li>
+  <li><a href="#multiplication-comes-before-logarithmic-addition" id="toc-multiplication-comes-before-logarithmic-addition" class="nav-link" data-scroll-target="#multiplication-comes-before-logarithmic-addition">Multiplication Comes Before Logarithmic Addition</a></li>
+  <li><a href="#but-distinguishability-is-not-enough" id="toc-but-distinguishability-is-not-enough" class="nav-link" data-scroll-target="#but-distinguishability-is-not-enough">But Distinguishability Is Not Enough</a></li>
+  <li><a href="#statistical-mechanics-has-no-preferred-object" id="toc-statistical-mechanics-has-no-preferred-object" class="nav-link" data-scroll-target="#statistical-mechanics-has-no-preferred-object">Statistical Mechanics Has No Preferred Object</a></li>
+  <li><a href="#the-whole-is-not-the-arithmetic-sum-of-its-parts" id="toc-the-whole-is-not-the-arithmetic-sum-of-its-parts" class="nav-link" data-scroll-target="#the-whole-is-not-the-arithmetic-sum-of-its-parts">The Whole Is Not the Arithmetic Sum of Its Parts</a></li>
+  <li><a href="#counting-changes-the-question-of-scale" id="toc-counting-changes-the-question-of-scale" class="nav-link" data-scroll-target="#counting-changes-the-question-of-scale">Counting Changes the Question of Scale</a></li>
+  <li><a href="#the-minimal-example" id="toc-the-minimal-example" class="nav-link" data-scroll-target="#the-minimal-example">The Minimal Example</a></li>
+  <li><a href="#the-primitive-sequence" id="toc-the-primitive-sequence" class="nav-link" data-scroll-target="#the-primitive-sequence">The Primitive Sequence</a></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
   </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Counting Requires Distinguishability</h1>
+<p class="subtitle lead">The primitive starting point of R²D</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="understand-r²d" class="level1">
-<h1>Understand R²D</h1>
-<p>R²D begins with two familiar statistical concepts—macrostate and microstate—and asks a more primitive question:</p>
-<p><strong>Relative to what is a state a microstate?</strong></p>
-<p>The Part I Introduction provides the shortest route into the full framework.</p>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">0. Introduction</h2>
-<ul>
-<li><a href="../understand/introduction.html">READ THE PART I INTRODUCTION →</a></li>
-</ul>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="counting-requires-distinguishability" class="level1">
+<h1>Counting Requires Distinguishability</h1>
+<p>R<sup>2</sup>D begins before particles, molecules, forces, fields, energy, space, time, probability, or information.</p>
+<p>It begins with a simpler requirement:</p>
+<blockquote class="blockquote">
+<p><strong>Counting requires distinguishability.</strong></p>
+</blockquote>
+<p>Before something can be measured, modeled, or assigned a physical unit, there must first be a distinction that can count as one state rather than another.</p>
+<p>If nothing is distinguishable, there is nothing to count.</p>
+<p>This is the primitive starting point of Recursively Realized Distinguishability.</p>
+<section id="a-count-is-not-yet-a-physical-quantity" class="level2">
+<h2 class="anchored" data-anchor-id="a-count-is-not-yet-a-physical-quantity">A Count Is Not Yet a Physical Quantity</h2>
+<p>Consider the statement:</p>
+<p><strong>There are ten possible realizations.</strong></p>
+<p>The number ten has no units.</p>
+<p>It is not ten joules, ten meters, ten seconds, or ten particles. It is a dimensionless count.</p>
+<p>R<sup>2</sup>D begins with these primitive counts and asks how the physical quantities used by science can later become readable coordinates of their relations.</p>
+<p>This reverses the usual explanatory order.</p>
+<p>A conventional scientific description often begins with something like</p>
+<p><span class="math display">\[
+\text{object}
+\rightarrow
+\text{physical quantity}
+\rightarrow
+\text{mathematics}.
+\]</span></p>
+<p>R<sup>2</sup>D asks whether the more primitive order is</p>
+<p><span class="math display">\[
+\text{distinguishable count structure}
+\rightarrow
+\text{physical read}
+\rightarrow
+\text{scientific object}.
+\]</span></p>
+<p><a href="../understand/before-units.html">Why the mathematics comes before units →</a></p>
 </section>
-<section id="define-the-object" class="level2">
-<h2 class="anchored" data-anchor-id="define-the-object">1. Define the object</h2>
-<ul>
-<li><a href="../understand/counting.html">Counting Requires Distinguishability</a></li>
-<li><a href="../understand/boundaries.html">Boundaries Define Scientific Objects</a></li>
-<li><a href="../understand/macrostate-microstate.html">Macrostate and Microstate</a></li>
-</ul>
+<section id="boltzmann-provides-the-mathematical-clue" class="level2">
+<h2 class="anchored" data-anchor-id="boltzmann-provides-the-mathematical-clue">Boltzmann Provides the Mathematical Clue</h2>
+<p>The familiar Boltzmann relation is</p>
+<p><span class="math display">\[
+S = \ln W,
+\]</span></p>
+<p>where (W) is multiplicity.</p>
+<p>R<sup>2</sup>D first reads this not as a statement about thermodynamic entropy, but as a statement about counting.</p>
+<p>Multiplicity (W) is the number of distinguishable compatible realizations belonging to a state.</p>
+<p>Equivalently,</p>
+<p><span class="math display">\[
+W = e^S.
+\]</span></p>
+<p>Because (W) is a count, it is dimensionless. Its logarithm is therefore also dimensionless before a later physical calibration is assigned to it.</p>
+<p>In Part I, (S) is not yet thermodynamic entropy.</p>
+<p>It is the logarithmic coordinate of multiplicity.</p>
+<p><a href="../understand/multiplicity.html">Understand multiplicity →</a></p>
 </section>
-<section id="define-what-can-be-realized" class="level2">
-<h2 class="anchored" data-anchor-id="define-what-can-be-realized">2. Define what can be realized</h2>
+<section id="multiplication-comes-before-logarithmic-addition" class="level2">
+<h2 class="anchored" data-anchor-id="multiplication-comes-before-logarithmic-addition">Multiplication Comes Before Logarithmic Addition</h2>
+<p>Suppose several subordinate distinctions must all be compatible for one joint realization to occur.</p>
+<p>If their multiplicities are</p>
+<p><span class="math display">\[
+W_1, W_2, \ldots, W_m,
+\]</span></p>
+<p>then the number of compatible joint possibilities is</p>
+<p><span class="math display">\[
+W_{\mathrm{joint}}
+=
+\prod_{\alpha=1}^{m} W_\alpha.
+\]</span></p>
+<p>Taking the logarithm gives</p>
+<p><span class="math display">\[
+\ln W_{\mathrm{joint}}
+=
+\sum_{\alpha=1}^{m} \ln W_\alpha.
+\]</span></p>
+<p>This is a central mathematical observation in R<sup>2</sup>D:</p>
+<blockquote class="blockquote">
+<p><strong>Compatible possibilities multiply. Their logarithmic coordinates add.</strong></p>
+</blockquote>
+<p>There is a second operation as well.</p>
+<p>Within one count domain, mutually exclusive alternatives add.</p>
+<p>Thus two very simple count operations sit underneath much of the additive mathematics later used in science:</p>
 <ul>
-<li><a href="../understand/multiplicity.html">Multiplicity</a></li>
-<li><a href="../understand/occupancy-occurrence.html">Occupancy and Occurrence</a></li>
-<li><a href="../understand/recursive-replacement.html">Recursive Replacement</a></li>
-<li><a href="../understand/recursive-carry.html">Recursive Carry</a></li>
+<li><strong>compatible possibilities multiply;</strong></li>
+<li><strong>mutually exclusive alternatives add.</strong></li>
 </ul>
+<p>Logarithms convert multiplicative composition into an additive coordinate.</p>
+<p>R<sup>2</sup>D therefore does not reject additive mathematics.</p>
+<p>It asks:</p>
+<blockquote class="blockquote">
+<p><strong>What is the additive coordinate counting?</strong></p>
+</blockquote>
 </section>
-<section id="define-direction" class="level2">
-<h2 class="anchored" data-anchor-id="define-direction">3. Define direction</h2>
-<ul>
-<li><a href="../understand/possibility.html">Possibility</a></li>
-<li><a href="../understand/constraint-retention.html">Constraint and Retention</a></li>
-<li><a href="../understand/asymmetry.html">Asymmetry</a></li>
-<li><a href="../understand/causal-inversion.html">The Causal Inversion</a></li>
-</ul>
+<section id="but-distinguishability-is-not-enough" class="level2">
+<h2 class="anchored" data-anchor-id="but-distinguishability-is-not-enough">But Distinguishability Is Not Enough</h2>
+<p>To say that two things are different is not yet enough to define a scientific count.</p>
+<p>We must also specify <strong>where the distinction is being made</strong>.</p>
+<p>Consider a coin.</p>
+<p>At one boundary, the readable distinction may be</p>
+<p><span class="math display">\[
+H \quad \text{or} \quad T.
+\]</span></p>
+<p>At another boundary, the object may instead be an ensemble of ten coins, with readable states such as</p>
+<p><span class="math display">\[
+(10H,0T),\;(9H,1T),\ldots,(0H,10T).
+\]</span></p>
+<p>The individual heads and tails have not simply become blurry.</p>
+<p>The count has changed.</p>
+<p>What counts as a state at the single-coin boundary is not what counts as a state at the ten-coin boundary.</p>
+<p>This introduces the second primitive requirement:</p>
+<blockquote class="blockquote">
+<p><strong>A boundary defines what is being counted.</strong></p>
+</blockquote>
+<p><a href="../understand/boundaries.html">Boundaries define scientific objects →</a></p>
 </section>
-<section id="define-recurrence" class="level2">
-<h2 class="anchored" data-anchor-id="define-recurrence">4. Define recurrence</h2>
+<section id="statistical-mechanics-has-no-preferred-object" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-mechanics-has-no-preferred-object">Statistical Mechanics Has No Preferred Object</h2>
+<p>The same combinatorial structure can describe:</p>
 <ul>
-<li><a href="../understand/closure.html">Closure</a></li>
-<li><a href="../understand/recurrence.html">Recurrence</a></li>
-<li><a href="../understand/recursive-counting.html">Recursive Counting Across Scale</a></li>
+<li>coins with two readable states;</li>
+<li>molecular switches with two readable states;</li>
+<li>proteins with alternative states;</li>
+<li>spins with alternative states;</li>
+<li>or any other system whose boundary defines the corresponding distinctions.</li>
 </ul>
+<p>The mathematics itself does not announce that one of these is the fundamental object.</p>
+<p>The identity of the object comes from the count boundary.</p>
+<p>This is why R<sup>2</sup>D does not define <em>microstate</em> as “the smallest thing.”</p>
+<p>A microstate is a relation to a boundary.</p>
+<p>Likewise, a macrostate is not intrinsically “large.”</p>
+<p>A state can have macrostate meaning at one boundary and microstate meaning relative to another.</p>
+<p><a href="../understand/macrostate-microstate.html">Macrostate and microstate →</a></p>
 </section>
-<section id="put-it-together" class="level2">
-<h2 class="anchored" data-anchor-id="put-it-together">5. Put it together</h2>
-<ul>
-<li><a href="../understand/r2d-law.html">The R²D Law</a></li>
-<li><a href="../understand/second-law.html">The R²D Second Law</a></li>
-</ul>
+<section id="the-whole-is-not-the-arithmetic-sum-of-its-parts" class="level2">
+<h2 class="anchored" data-anchor-id="the-whole-is-not-the-arithmetic-sum-of-its-parts">The Whole Is Not the Arithmetic Sum of Its Parts</h2>
+<p>Suppose many subordinate realizations are compatible with the same readable state.</p>
+<p>The enclosing state is not defined by simply adding the subordinate objects together.</p>
+<p>Its multiplicity is the number of compatible subordinate realizations that the boundary classifies as that state.</p>
+<p>Schematically,</p>
+<p><span class="math display">\[
+\text{subordinate realizations}
+\longrightarrow
+\text{boundary classification}
+\longrightarrow
+\text{readable state}.
+\]</span></p>
+<p>This distinction becomes fundamental later.</p>
+<p>A subordinate transition can change <strong>which realization occurs</strong>.</p>
+<p>It cannot, by that transition alone, create the entire multiplicity structure within which the realization is classified.</p>
+<p>R<sup>2</sup>D therefore separates:</p>
+<blockquote class="blockquote">
+<p><strong>possible structure</strong></p>
+</blockquote>
+<p>from</p>
+<blockquote class="blockquote">
+<p><strong>particular realization.</strong></p>
+</blockquote>
+<p>That separation is the beginning of the distinction among multiplicity, occurrence, and occupancy.</p>
+<p><a href="../understand/multiplicity.html">Multiplicity →</a></p>
+<p><a href="../understand/occupancy-occurrence.html">Occupancy and occurrence →</a></p>
 </section>
-<section id="understand-the-implications" class="level2">
-<h2 class="anchored" data-anchor-id="understand-the-implications">6. Understand the implications</h2>
-<ul>
-<li><a href="../understand/not-coarse-graining.html">Why R²D Is Not Coarse-Graining</a></li>
-<li><a href="../understand/scientific-objecthood.html">Scientific Objecthood</a></li>
-<li><a href="../understand/before-units.html">Why the Mathematics Comes Before Units</a></li>
-<li><a href="../understand/from-count-to-physics.html">From Count Space to Physical Science</a></li>
-</ul>
+<section id="counting-changes-the-question-of-scale" class="level2">
+<h2 class="anchored" data-anchor-id="counting-changes-the-question-of-scale">Counting Changes the Question of Scale</h2>
+<p>Conventional reasoning often imagines scale change as increased or decreased resolution of the same underlying object:</p>
+<p><span class="math display">\[
+\text{same object}
+\rightarrow
+\text{more detail or less detail}.
+\]</span></p>
+<p>R<sup>2</sup>D proposes a different architecture:</p>
+<p><span class="math display">\[
+\text{change boundary}
+\rightarrow
+\text{change count domain}
+\rightarrow
+\text{change state meaning}.
+\]</span></p>
+<p>Changing scale therefore need not merely hide or reveal detail.</p>
+<p>It can change what the scientific object is.</p>
+<p>This is the foundation of <strong>recursive replacement</strong>.</p>
+<p><a href="../understand/recursive-replacement.html">Recursive replacement →</a></p>
 </section>
-<section id="reference" class="level2">
-<h2 class="anchored" data-anchor-id="reference">Reference</h2>
-<ul>
-<li><a href="../understand/definitions.html">Definitions &amp; Symbols</a></li>
-<li><a href="../understand/coins.html">The Coins Example</a></li>
-</ul>
+<section id="the-minimal-example" class="level2">
+<h2 class="anchored" data-anchor-id="the-minimal-example">The Minimal Example</h2>
+<p>Coins provide a useful demonstration because they remove nearly all physical interpretation.</p>
+<p>No energy, force, field, temperature, molecular mechanism, or probability is needed to define the combinatorics.</p>
+<p>The example shows how:</p>
+<ol type="1">
+<li>a boundary defines readable states;</li>
+<li>subordinate realizations generate multiplicity;</li>
+<li>realization changes occupancy without creating multiplicity;</li>
+<li>changing the boundary changes the meaning of the state being counted.</li>
+</ol>
+<p><a href="../understand/coins.html">Work through the coins example →</a></p>
+</section>
+<section id="the-primitive-sequence" class="level2">
+<h2 class="anchored" data-anchor-id="the-primitive-sequence">The Primitive Sequence</h2>
+<p>The starting architecture can therefore be summarized as</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinction}
+\rightarrow
+\text{state}
+\rightarrow
+\text{count}
+}
+\]</span></p>
+<p>R<sup>2</sup>D then asks what happens when these count domains are recursively related.</p>
+<p>That question leads to macrostate and microstate, multiplicity, recursive replacement, possibility, constraint, closure, recurrence, and eventually the R<sup>2</sup>D law.</p>
+<p>But the entire structure begins here:</p>
+<blockquote class="blockquote">
+<p><strong>Nothing can be counted until something can be distinguished.</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<p><a href="../understand/boundaries.html">Boundaries Define Scientific Objects →</a></p>
+<p><a href="../understand/macrostate-microstate.html">Macrostate and Microstate →</a></p>
+<p><a href="../understand/definitions.html">Definitions &amp; Symbols →</a></p>
 
 
 </section>

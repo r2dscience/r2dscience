@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Test R²D – R²D Science</title>
+<title>Applications – R²D Science</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +74,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -165,7 +194,65 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#test-r²d" id="toc-test-r²d" class="nav-link active" data-scroll-target="#test-r²d">Test R²D</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link active" data-scroll-target="#applications">Applications</a>
+  <ul class="collapse">
+  <li><a href="#three-application-programs" id="toc-three-application-programs" class="nav-link" data-scroll-target="#three-application-programs">Three Application Programs</a></li>
+  </ul></li>
+  <li><a href="#thermodynamics-the-calibration-regime" id="toc-thermodynamics-the-calibration-regime" class="nav-link" data-scroll-target="#thermodynamics-the-calibration-regime">1. Thermodynamics — The Calibration Regime</a>
+  <ul class="collapse">
+  <li><a href="#entropy-reads-multiplicity" id="toc-entropy-reads-multiplicity" class="nav-link" data-scroll-target="#entropy-reads-multiplicity">Entropy Reads Multiplicity</a></li>
+  <li><a href="#gibbs-free-energy-reads-compatible-count-direction" id="toc-gibbs-free-energy-reads-compatible-count-direction" class="nav-link" data-scroll-target="#gibbs-free-energy-reads-compatible-count-direction">Gibbs Free Energy Reads Compatible-Count Direction</a></li>
+  <li><a href="#chemical-activity-reads-a-change-in-possibility" id="toc-chemical-activity-reads-a-change-in-possibility" class="nav-link" data-scroll-target="#chemical-activity-reads-a-change-in-possibility">Chemical Activity Reads a Change in Possibility</a></li>
+  <li><a href="#work-reads-retained-distinguishability" id="toc-work-reads-retained-distinguishability" class="nav-link" data-scroll-target="#work-reads-retained-distinguishability">Work Reads Retained Distinguishability</a></li>
+  <li><a href="#irreversibility-reads-background-production" id="toc-irreversibility-reads-background-production" class="nav-link" data-scroll-target="#irreversibility-reads-background-production">Irreversibility Reads Background Production</a></li>
+  <li><a href="#muscle-provides-the-experimental-calibration" id="toc-muscle-provides-the-experimental-calibration" class="nav-link" data-scroll-target="#muscle-provides-the-experimental-calibration">Muscle Provides the Experimental Calibration</a></li>
+  <li><a href="#the-hill-relation-is-a-critical-test" id="toc-the-hill-relation-is-a-critical-test" class="nav-link" data-scroll-target="#the-hill-relation-is-a-critical-test">The Hill Relation Is a Critical Test</a></li>
+  </ul></li>
+  <li><a href="#projection-what-physics-builds-from-what-remains-readable" id="toc-projection-what-physics-builds-from-what-remains-readable" class="nav-link" data-scroll-target="#projection-what-physics-builds-from-what-remains-readable">2. Projection — What Physics Builds From What Remains Readable</a>
+  <ul class="collapse">
+  <li><a href="#three-readability-regimes" id="toc-three-readability-regimes" class="nav-link" data-scroll-target="#three-readability-regimes">Three Readability Regimes</a></li>
+  <li><a href="#the-quantum-facing-projection" id="toc-the-quantum-facing-projection" class="nav-link" data-scroll-target="#the-quantum-facing-projection">The Quantum-Facing Projection</a></li>
+  <li><a href="#the-gravitational-facing-projection" id="toc-the-gravitational-facing-projection" class="nav-link" data-scroll-target="#the-gravitational-facing-projection">The Gravitational-Facing Projection</a></li>
+  <li><a href="#projection-is-not-illusion" id="toc-projection-is-not-illusion" class="nav-link" data-scroll-target="#projection-is-not-illusion">Projection Is Not Illusion</a></li>
+  <li><a href="#primitive-objects-are-one-projection" id="toc-primitive-objects-are-one-projection" class="nav-link" data-scroll-target="#primitive-objects-are-one-projection">Primitive Objects Are One Projection</a></li>
+  <li><a href="#interactions-are-another-projection" id="toc-interactions-are-another-projection" class="nav-link" data-scroll-target="#interactions-are-another-projection">Interactions Are Another Projection</a></li>
+  <li><a href="#organizing-fields-and-geometry-are-a-third-projection" id="toc-organizing-fields-and-geometry-are-a-third-projection" class="nav-link" data-scroll-target="#organizing-fields-and-geometry-are-a-third-projection">Organizing Fields and Geometry Are a Third Projection</a></li>
+  <li><a href="#part-iv-follows-this-projection-outward" id="toc-part-iv-follows-this-projection-outward" class="nav-link" data-scroll-target="#part-iv-follows-this-projection-outward">Part IV Follows This Projection Outward</a></li>
+  <li><a href="#deprojection-runs-the-logic-backward" id="toc-deprojection-runs-the-logic-backward" class="nav-link" data-scroll-target="#deprojection-runs-the-logic-backward">Deprojection Runs the Logic Backward</a></li>
+  </ul></li>
+  <li><a href="#the-addenda-the-active-stress-test-program" id="toc-the-addenda-the-active-stress-test-program" class="nav-link" data-scroll-target="#the-addenda-the-active-stress-test-program">3. The Addenda — The Active Stress-Test Program</a>
+  <ul class="collapse">
+  <li><a href="#continuum-breakdown-and-navierstokes" id="toc-continuum-breakdown-and-navierstokes" class="nav-link" data-scroll-target="#continuum-breakdown-and-navierstokes">Continuum Breakdown and Navier–Stokes</a></li>
+  <li><a href="#mass-scale-and-the-quantumgravity-crossover" id="toc-mass-scale-and-the-quantumgravity-crossover" class="nav-link" data-scroll-target="#mass-scale-and-the-quantumgravity-crossover">Mass, Scale, and the Quantum–Gravity Crossover</a></li>
+  </ul></li>
+  <li><a href="#biology-the-directly-observable-recursive-window" id="toc-biology-the-directly-observable-recursive-window" class="nav-link" data-scroll-target="#biology-the-directly-observable-recursive-window">Biology — The Directly Observable Recursive Window</a>
+  <ul class="collapse">
+  <li><a href="#addendum-4-myosin-switch-realization" id="toc-addendum-4-myosin-switch-realization" class="nav-link" data-scroll-target="#addendum-4-myosin-switch-realization">Addendum 4 — Myosin Switch Realization</a></li>
+  <li><a href="#addendum-5-ensemble-replacement" id="toc-addendum-5-ensemble-replacement" class="nav-link" data-scroll-target="#addendum-5-ensemble-replacement">Addendum 5 — Ensemble Replacement</a></li>
+  <li><a href="#addendum-6-replacement-across-biological-timescales" id="toc-addendum-6-replacement-across-biological-timescales" class="nav-link" data-scroll-target="#addendum-6-replacement-across-biological-timescales">Addendum 6 — Replacement Across Biological Timescales</a></li>
+  <li><a href="#addendum-7-frequency-selected-readability" id="toc-addendum-7-frequency-selected-readability" class="nav-link" data-scroll-target="#addendum-7-frequency-selected-readability">Addendum 7 — Frequency-Selected Readability</a></li>
+  <li><a href="#addendum-8-biological-replacement-is-directly-observable" id="toc-addendum-8-biological-replacement-is-directly-observable" class="nav-link" data-scroll-target="#addendum-8-biological-replacement-is-directly-observable">Addendum 8 — Biological Replacement Is Directly Observable</a></li>
+  <li><a href="#addendum-9-biology-between-the-two-horizons" id="toc-addendum-9-biology-between-the-two-horizons" class="nav-link" data-scroll-target="#addendum-9-biology-between-the-two-horizons">Addendum 9 — Biology Between the Two Horizons</a></li>
+  <li><a href="#addendum-10-protein-folding" id="toc-addendum-10-protein-folding" class="nav-link" data-scroll-target="#addendum-10-protein-folding">Addendum 10 — Protein Folding</a></li>
+  <li><a href="#addendum-11-protein-function" id="toc-addendum-11-protein-function" class="nav-link" data-scroll-target="#addendum-11-protein-function">Addendum 11 — Protein Function</a></li>
+  </ul></li>
+  <li><a href="#gravity-horizons-and-cosmology" id="toc-gravity-horizons-and-cosmology" class="nav-link" data-scroll-target="#gravity-horizons-and-cosmology">Gravity, Horizons, and Cosmology</a></li>
+  <li><a href="#cosmology-and-continuum-limits" id="toc-cosmology-and-continuum-limits" class="nav-link" data-scroll-target="#cosmology-and-continuum-limits">Cosmology and Continuum Limits</a></li>
+  <li><a href="#one-architecture-many-stress-tests" id="toc-one-architecture-many-stress-tests" class="nav-link" data-scroll-target="#one-architecture-many-stress-tests">One Architecture, Many Stress Tests</a></li>
+  <li><a href="#how-to-read-the-status-of-an-application" id="toc-how-to-read-the-status-of-an-application" class="nav-link" data-scroll-target="#how-to-read-the-status-of-an-application">How to Read the Status of an Application</a>
+  <ul class="collapse">
+  <li><a href="#exact-mathematical-consequence" id="toc-exact-mathematical-consequence" class="nav-link" data-scroll-target="#exact-mathematical-consequence">Exact mathematical consequence</a></li>
+  <li><a href="#physical-mapping" id="toc-physical-mapping" class="nav-link" data-scroll-target="#physical-mapping">Physical mapping</a></li>
+  <li><a href="#empirical-calibration" id="toc-empirical-calibration" class="nav-link" data-scroll-target="#empirical-calibration">Empirical calibration</a></li>
+  <li><a href="#r2d-postulate" id="toc-r2d-postulate" class="nav-link" data-scroll-target="#r2d-postulate">R<sup>2</sup>D postulate</a></li>
+  <li><a href="#conditional-derivation" id="toc-conditional-derivation" class="nav-link" data-scroll-target="#conditional-derivation">Conditional derivation</a></li>
+  <li><a href="#open-hypothesis" id="toc-open-hypothesis" class="nav-link" data-scroll-target="#open-hypothesis">Open hypothesis</a></li>
+  </ul></li>
+  <li><a href="#the-test" id="toc-the-test" class="nav-link" data-scroll-target="#the-test">The Test</a></li>
+  <li><a href="#why-applications-matter-for-ai" id="toc-why-applications-matter-for-ai" class="nav-link" data-scroll-target="#why-applications-matter-for-ai">Why Applications Matter for AI</a>
+  <ul class="collapse">
+  <li><a href="#try-it" id="toc-try-it" class="nav-link" data-scroll-target="#try-it">Try It</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -174,7 +261,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Test R²D</h1>
+<h1 class="title">Applications</h1>
+<p class="subtitle lead">Where R²D is tested against existing science</p>
 </div>
 
 
@@ -191,11 +279,939 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="test-r²d" class="level1">
-<h1>Test R²D</h1>
-<p>Explore applications of R²D across physics, chemistry, biology, and geometry.</p>
+<section id="applications" class="level1">
+<h1>Applications</h1>
+<p>A mathematical framework becomes scientifically useful only when it can be tested against things science already knows.</p>
+<p>R<sup>2</sup>D begins with a dimensionless count architecture:</p>
+<p><span class="math display">\[
+\text{boundary}
+\rightarrow
+\text{distinction}
+\rightarrow
+\text{multiplicity}
+\rightarrow
+\text{realization}
+\rightarrow
+\text{closure}
+\rightarrow
+\text{recurrence}.
+\]</span></p>
+<p>Applications ask whether that architecture survives contact with physical science.</p>
+<p>The goal is not to rename familiar equations.</p>
+<p>The goal is to determine whether independently defined R<sup>2</sup>D relations map onto established scientific quantities <strong>without changing their primitive definitions to make the answer fit</strong>.</p>
+<blockquote class="blockquote">
+<p><strong>Don’t believe R<sup>2</sup>D. Test it.</strong></p>
+</blockquote>
+<section id="three-application-programs" class="level2">
+<h2 class="anchored" data-anchor-id="three-application-programs">Three Application Programs</h2>
+<p>The current application program has three layers.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Program</th>
+<th>Question</th>
+<th>Primary role</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Thermodynamics</strong></td>
+<td>Can the dimensionless count architecture be mapped onto jointly measurable physical quantities?</td>
+<td>Calibration</td>
+</tr>
+<tr class="even">
+<td><strong>Projection and deprojection</strong></td>
+<td>What physical descriptions appear when only part of the recursive relation remains readable?</td>
+<td>Reconstruction</td>
+</tr>
+<tr class="odd">
+<td><strong>Addenda</strong></td>
+<td>Does the same architecture survive new systems, limits, and experimental tests?</td>
+<td>Stress testing</td>
+</tr>
+</tbody>
+</table>
+<p>These layers do not have equal evidentiary status.</p>
+<p>Thermodynamics currently provides the strongest direct physical mappings.</p>
+<p>Projection develops a broader interpretation of quantum, gravitational, and other physical coordinates.</p>
+<p>The addenda push the framework into new systems where it can succeed, fail, or require revision.</p>
+</section>
+</section>
+<section id="thermodynamics-the-calibration-regime" class="level1">
+<h1>1. Thermodynamics — The Calibration Regime</h1>
+<p>Thermodynamics is where R<sup>2</sup>D first becomes directly physical.</p>
+<p>The reason is unusual.</p>
+<p>At ordinary thermodynamic scales, many parts of the recursive architecture remain accessible at the same time.</p>
+<p>One can measure:</p>
+<ul>
+<li>state occupancy;</li>
+<li>chemical direction;</li>
+<li>temperature;</li>
+<li>recurrence rate;</li>
+<li>mechanical constraint;</li>
+<li>work;</li>
+<li>heat;</li>
+<li>and entropy production.</li>
+</ul>
+<p>That makes thermodynamics a <strong>joint-readability regime</strong>.</p>
+<p>The dimensionless relations introduced before physical units can therefore be compared directly with measurable physical quantities.</p>
+<section id="entropy-reads-multiplicity" class="level2">
+<h2 class="anchored" data-anchor-id="entropy-reads-multiplicity">Entropy Reads Multiplicity</h2>
+<p>R<sup>2</sup>D begins with multiplicity:</p>
+<p><span class="math display">\[
+W_{n,i}.
+\]</span></p>
+<p>Its logarithmic coordinate is</p>
+<p><span class="math display">\[
+\boxed{
+S_{n,i}
+=
+\ln W_{n,i}.
+}
+\]</span></p>
+<p>Thermodynamics supplies the familiar dimensional read</p>
+<p><span class="math display">\[
+\boxed{
+S_{n,i}^{\mathrm{th}}
+=
+k_B\ln W_{n,i}.
+}
+\]</span></p>
+<p>The logical order is therefore</p>
+<p><span class="math display">\[
+\boxed{
+\text{multiplicity}
+\rightarrow
+\text{logarithmic count}
+\rightarrow
+\text{thermodynamic entropy}.
+}
+\]</span></p>
+<p>Entropy does not create multiplicity.</p>
+<p>It physically reads it.</p>
+</section>
+<section id="gibbs-free-energy-reads-compatible-count-direction" class="level2">
+<h2 class="anchored" data-anchor-id="gibbs-free-energy-reads-compatible-count-direction">Gibbs Free Energy Reads Compatible-Count Direction</h2>
+<p>For the fixed-temperature, fixed-pressure chemical realization developed in the Canon, the complete compatible-count direction maps onto the Gibbs reaction criterion.</p>
+<p>At the molecular-event level,</p>
+<p><span class="math display">\[
+\boxed{
+\Delta S+\Delta P
+=
+-
+\frac{\Delta g}{k_BT}.
+}
+\]</span></p>
+<p>The left side is defined before energetic units are assigned.</p>
+<p>The right side is the thermodynamic energetic read.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{compatible enclosing count direction}
+\longleftrightarrow
+\text{Gibbs reaction direction}.
+}
+\]</span></p>
+<p>This is one of the strongest bridges in the current R<sup>2</sup>D program.</p>
+<p>It is an exact mapping within its specified thermodynamic domain.</p>
+<p>It is not yet a derivation of thermodynamics from the R<sup>2</sup>D axioms.</p>
+</section>
+<section id="chemical-activity-reads-a-change-in-possibility" class="level2">
+<h2 class="anchored" data-anchor-id="chemical-activity-reads-a-change-in-possibility">Chemical Activity Reads a Change in Possibility</h2>
+<p>Chemical activity changes the enclosing conditions under which a local chemical state is realized.</p>
+<p>Within the R<sup>2</sup>D mapping, this gives a physical read of changing enclosing possibility.</p>
+<p>Schematically,</p>
+<p><span class="math display">\[
+\boxed{
+\text{activity change}
+\longleftrightarrow
+\text{change in enclosing compatible count}.
+}
+\]</span></p>
+<p>This makes chemical direction explicitly recursive.</p>
+<p>The molecular transition realizes the reaction.</p>
+<p>The enclosing thermodynamic relation determines which direction is supported.</p>
+</section>
+<section id="work-reads-retained-distinguishability" class="level2">
+<h2 class="anchored" data-anchor-id="work-reads-retained-distinguishability">Work Reads Retained Distinguishability</h2>
+<p>Primitive retention is</p>
+<p><span class="math display">\[
+\boxed{
+\Delta R
+=
+C^{\mathrm{out}}\lambda.
+}
+\]</span></p>
+<p>In a mechanical realization,</p>
+<p><span class="math display">\[
+C^{\mathrm{out}}
+\]</span></p>
+<p>can acquire a generalized-force read and</p>
+<p><span class="math display">\[
+\lambda
+\]</span></p>
+<p>a generalized-displacement read.</p>
+<p>Then</p>
+<p><span class="math display">\[
+C^{\mathrm{out}}\lambda
+\]</span></p>
+<p>can acquire a familiar work-like form.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+\boxed{
+C^{\mathrm{out}}\lambda
+\xrightarrow{\text{mechanical read}}
+F d.
+}
+\]</span></p>
+<p>Pressure-volume work, tensile work, chemical coupling, electrical work, and other conjugate pairs can occupy the same structural role.</p>
+<p>The physical coordinate changes.</p>
+<p>The primitive relation does not.</p>
+</section>
+<section id="irreversibility-reads-background-production" class="level2">
+<h2 class="anchored" data-anchor-id="irreversibility-reads-background-production">Irreversibility Reads Background Production</h2>
+<p>The R<sup>2</sup>D Second Law defines local occurrence-count nonreciprocity:</p>
+<p><span class="math display">\[
+L_{\tau}
+=
+\ln
+\left(
+\frac{\nu_H}{\nu_L}
+\right)
+\geq0.
+\]</span></p>
+<p>and relates it to enclosing background:</p>
+<p><span class="math display">\[
+\boxed{
+\delta_{\mathcal C}\Phi
+=
+L_{\tau}.
+}
+\]</span></p>
+<p>Thermodynamics then provides the dimensional entropy read</p>
+<p><span class="math display">\[
+\boxed{
+S_{\mathrm{gen},\mathcal C}^{\mathrm{th}}
+=
+k_B
+\delta_{\mathcal C}\Phi
+=
+k_B L_{\tau}.
+}
+\]</span></p>
+<p>Thus generated thermodynamic entropy is mapped onto the enclosing read of nonreciprocal local realization.</p>
+<p>This keeps several familiar quantities distinct:</p>
+<p><span class="math display">\[
+\boxed{
+\text{heat}
+\neq
+\text{work}
+\neq
+\text{constraint}
+\neq
+\text{entropy production}.
+}
+\]</span></p>
+<p>Each can exist in a reversible process.</p>
+<p>Irreversibility enters through nonreciprocity.</p>
+</section>
+<section id="muscle-provides-the-experimental-calibration" class="level2">
+<h2 class="anchored" data-anchor-id="muscle-provides-the-experimental-calibration">Muscle Provides the Experimental Calibration</h2>
+<p>Muscle is the physical system from which much of the R<sup>2</sup>D program emerged.</p>
+<p>It is unusually useful because several recursively related quantities can be measured in the same functioning system.</p>
+<p>At molecular and ensemble boundaries, experiments can access:</p>
+<ul>
+<li>myosin structural-state occupancy;</li>
+<li>ATP-dependent chemical direction;</li>
+<li>ATPase and molecular cycling;</li>
+<li>muscle force;</li>
+<li>shortening;</li>
+<li>mechanical work;</li>
+<li>heat production;</li>
+<li>and frequency-dependent mechanical response.</li>
+</ul>
+<p>The system therefore exposes both subordinate realization and enclosing function.</p>
+</section>
+<section id="the-hill-relation-is-a-critical-test" class="level2">
+<h2 class="anchored" data-anchor-id="the-hill-relation-is-a-critical-test">The Hill Relation Is a Critical Test</h2>
+<p>A.V. Hill’s force-velocity relation partitions muscle free-energy realization between mechanical output and shortening heat.</p>
+<p>After the required physical energetic and rate mappings are supplied, its structure can be compared directly with the R<sup>2</sup>D relation</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n}.
+}
+\]</span></p>
+<p>This makes Hill’s relation an empirical calibration of the recursive architecture.</p>
+<p>It should not be described as though the Hill parameters had been derived from primitive combinatorics.</p>
+<p>The stronger claim is testable:</p>
+<blockquote class="blockquote">
+<p><strong>Do independently measurable chemical, structural, mechanical, and recurrence coordinates occupy the positions predicted by the dimensionless R<sup>2</sup>D law?</strong></p>
+</blockquote>
+<p>That is the thermodynamic test.</p>
+</section>
+</section>
+<section id="projection-what-physics-builds-from-what-remains-readable" class="level1">
+<h1>2. Projection — What Physics Builds From What Remains Readable</h1>
+<p>Thermodynamics is informative because distinguishability and recurrence can remain jointly accessible.</p>
+<p>But they need not remain jointly readable at every boundary.</p>
+<p>The next application asks:</p>
+<blockquote class="blockquote">
+<p><strong>What scientific description appears when one side of the recursive relation becomes unreadable?</strong></p>
+</blockquote>
+<p>This is the projection program.</p>
+<p>The Canon develops the readability architecture first and then asks how familiar physical objects and coordinates arise from what remains.</p>
+<section id="three-readability-regimes" class="level2">
+<h2 class="anchored" data-anchor-id="three-readability-regimes">Three Readability Regimes</h2>
+<p>The central picture is</p>
+<p><span class="math display">\[
+\boxed{
+\text{Quantum}
+\longleftrightarrow
+\text{Thermodynamics}
+\longleftrightarrow
+\text{Gravity}.
+}
+\]</span></p>
+<p>The arrows indicate changing readability.</p>
+<p>They do <strong>not</strong> mean that quantum systems physically transform into thermodynamic systems and then into gravitational systems.</p>
+<p>The proposed regimes are:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Regime</th>
+<th>Distinguishability</th>
+<th>Recurrence</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Quantum-facing</td>
+<td>increasingly unreadable</td>
+<td>readable</td>
+</tr>
+<tr class="even">
+<td>Thermodynamic</td>
+<td>readable</td>
+<td>readable</td>
+</tr>
+<tr class="odd">
+<td>Gravitational-facing</td>
+<td>readable</td>
+<td>increasingly unreadable</td>
+</tr>
+</tbody>
+</table>
+<p>Thermodynamics occupies the middle because enough of both relations remains accessible to expose the recursive architecture directly.</p>
+</section>
+<section id="the-quantum-facing-projection" class="level2">
+<h2 class="anchored" data-anchor-id="the-quantum-facing-projection">The Quantum-Facing Projection</h2>
+<p>Toward the quantum-facing horizon, subordinate distinguishability becomes unreadable while recurrence remains accessible.</p>
+<p>The surviving physical description therefore becomes increasingly organized around quantities such as:</p>
+<ul>
+<li>recurrence frequency;</li>
+<li>phase;</li>
+<li>occupancy;</li>
+<li>amplitude;</li>
+<li>normalized probability;</li>
+<li>spectral state;</li>
+<li>and particle count.</li>
+</ul>
+<p>The R<sup>2</sup>D question is not whether quantum mechanics works.</p>
+<p>It does.</p>
+<p>The question is:</p>
+<blockquote class="blockquote">
+<p><strong>What primitive count relations are the quantum variables reading once subordinate distinguishability is no longer available?</strong></p>
+</blockquote>
+<p>The program therefore examines blackbody radiation, atomic spectral closure, measurement, phase, wavefunction structure, and gauge relations as recurrence-dominant physical reads.</p>
+</section>
+<section id="the-gravitational-facing-projection" class="level2">
+<h2 class="anchored" data-anchor-id="the-gravitational-facing-projection">The Gravitational-Facing Projection</h2>
+<p>Toward the opposite horizon, enclosing distinguishability remains readable while the relevant enclosing recurrence becomes progressively inaccessible.</p>
+<p>The physical description then becomes increasingly geometric.</p>
+<p>Candidate surviving reads include:</p>
+<ul>
+<li>distance;</li>
+<li>area;</li>
+<li>force;</li>
+<li>field;</li>
+<li>metric;</li>
+<li>curvature;</li>
+<li>horizon structure;</li>
+<li>and spacetime geometry.</li>
+</ul>
+<p>The R<sup>2</sup>D question again begins one level earlier:</p>
+<blockquote class="blockquote">
+<p><strong>What count relation remains readable before it is represented as gravitational geometry?</strong></p>
+</blockquote>
+<p>This leads to the area-before-radius program and to the proposed deprojection of gravitational geometry into boundary-relative distinguishability.</p>
+</section>
+<section id="projection-is-not-illusion" class="level2">
+<h2 class="anchored" data-anchor-id="projection-is-not-illusion">Projection Is Not Illusion</h2>
+<p>R<sup>2</sup>D does not use <em>projection</em> to mean that a physical quantity is fake.</p>
+<p>A projected quantity can be:</p>
+<ul>
+<li>physically real;</li>
+<li>directly measurable;</li>
+<li>mathematically exact;</li>
+<li>experimentally indispensable;</li>
+<li>and extraordinarily predictive.</li>
+</ul>
+<p>Projection becomes an ontological error only when a boundary-specific physical read is promoted into the primitive cause of the recursive relation from which it arises.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>A projected coordinate can be completely real without being primitive.</strong></p>
+</blockquote>
+</section>
+<section id="primitive-objects-are-one-projection" class="level2">
+<h2 class="anchored" data-anchor-id="primitive-objects-are-one-projection">Primitive Objects Are One Projection</h2>
+<p>A particle can be real.</p>
+<p>A molecule can be real.</p>
+<p>A mass can be real.</p>
+<p>A charge can be real.</p>
+<p>A cell can be real.</p>
+<p>The projection question is whether the object’s readable identity should be assumed to remain primitively unchanged across every count boundary.</p>
+<p>R<sup>2</sup>D proposes instead:</p>
+<p><span class="math display">\[
+\boxed{
+\text{object at }B_n
+\not\Rightarrow
+\text{primitive object at every }B.
+}
+\]</span></p>
+</section>
+<section id="interactions-are-another-projection" class="level2">
+<h2 class="anchored" data-anchor-id="interactions-are-another-projection">Interactions Are Another Projection</h2>
+<p>Once independently primitive objects are assumed, their stable correlations are naturally represented as direct interactions.</p>
+<p>R<sup>2</sup>D asks whether some such correlations instead reflect common enclosing organization:</p>
+<p><span class="math display">\[
+\boxed{
+B_{n+1}
+\Longrightarrow
+\left(
+B_{n,\alpha},
+B_{n,\beta}
+\right).
+}
+\]</span></p>
+<p>If the enclosing relation is omitted, the surviving local correlation may be represented as</p>
+<p><span class="math display">\[
+B_{n,\alpha}
+\leftrightarrow
+B_{n,\beta}.
+\]</span></p>
+<p>The interaction can remain mathematically predictive.</p>
+<p>The question concerns its causal position.</p>
+</section>
+<section id="organizing-fields-and-geometry-are-a-third-projection" class="level2">
+<h2 class="anchored" data-anchor-id="organizing-fields-and-geometry-are-a-third-projection">Organizing Fields and Geometry Are a Third Projection</h2>
+<p>A further step is then natural.</p>
+<p>Stable object-object interactions require mathematical organization.</p>
+<p>Science introduces:</p>
+<ul>
+<li>potentials;</li>
+<li>fields;</li>
+<li>wavefunctions;</li>
+<li>connections;</li>
+<li>metrics;</li>
+<li>curvature.</li>
+</ul>
+<p>R<sup>2</sup>D does not reject these structures.</p>
+<p>It asks whether they are the primitive organization or the mathematical coordinate system required to represent a boundary-relative projection.</p>
+<p>The projected sequence is therefore</p>
+<p><span class="math display">\[
+\boxed{
+\text{recursive organization}
+\rightarrow
+\text{object}
+\rightarrow
+\text{interaction}
+\rightarrow
+\text{field or geometry}.
+}
+\]</span></p>
+</section>
+<section id="part-iv-follows-this-projection-outward" class="level2">
+<h2 class="anchored" data-anchor-id="part-iv-follows-this-projection-outward">Part IV Follows This Projection Outward</h2>
+<p>The projection program examines, in sequence, physical reads associated with:</p>
+<p><span class="math display">\[
+\boxed{
+\text{particles}
+\rightarrow
+\text{mass and charge}
+\rightarrow
+\text{motion}
+\rightarrow
+\text{fields}
+}
+\]</span></p>
+<p>followed by</p>
+<p><span class="math display">\[
+\boxed{
+\text{quantum phase and amplitude}
+}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\boxed{
+\text{gravitational geometry and spacetime}.
+}
+\]</span></p>
+<p>Cosmology asks what happens when these projected coordinates are extended to the largest readable physical boundaries.</p>
+</section>
+<section id="deprojection-runs-the-logic-backward" class="level2">
+<h2 class="anchored" data-anchor-id="deprojection-runs-the-logic-backward">Deprojection Runs the Logic Backward</h2>
+<p>Applications are not limited to constructing projections.</p>
+<p>They can also begin with an established physical law and ask:</p>
+<blockquote class="blockquote">
+<p><strong>What dimensionless count relation must exist for this physical equation to be readable?</strong></p>
+</blockquote>
+<p>That is <strong>deprojection</strong>.</p>
+<p>Schematically,</p>
+<p><span class="math display">\[
+\boxed{
+\text{established physical law}
+\rightarrow
+\text{identify boundary}
+\rightarrow
+\text{identify surviving read}
+\rightarrow
+\text{recover recursive count relation}.
+}
+\]</span></p>
+<p>This is one of the main ways R<sup>2</sup>D can be used as a discovery tool.</p>
+</section>
+</section>
+<section id="the-addenda-the-active-stress-test-program" class="level1">
+<h1>3. The Addenda — The Active Stress-Test Program</h1>
+<p>The core Canon develops the general architecture.</p>
+<p>The addenda ask whether that architecture survives new systems that were not required to define the core.</p>
+<p>They are intentionally more exploratory.</p>
+<p>Some addenda establish exact mathematical results.</p>
+<p>Some construct physical mappings.</p>
+<p>Some provide empirical calibrations.</p>
+<p>Some are conditional derivations.</p>
+<p>Others identify open targets.</p>
+<p>They should not all be read as having the same logical status.</p>
+<blockquote class="blockquote">
+<p><strong>The addenda are where R<sup>2</sup>D is pushed hard enough to break.</strong></p>
+</blockquote>
+<section id="continuum-breakdown-and-navierstokes" class="level2">
+<h2 class="anchored" data-anchor-id="continuum-breakdown-and-navierstokes">Continuum Breakdown and Navier–Stokes</h2>
+<p>The first addendum applies recursive replacement to the problem of a continuum singularity.</p>
+<p>The central question is:</p>
+<blockquote class="blockquote">
+<p><strong>Can a continuous field remain a valid physical read as the count domain supporting that continuum becomes sparsely occupied?</strong></p>
+</blockquote>
+<p>For the finite-time Navier–Stokes construction examined there, the R<sup>2</sup>D argument is that a finite physical occupancy threshold is crossed before the mathematical continuum reaches its formal singular limit.</p>
+<p>Schematically,</p>
+<p><span class="math display">\[
+\boxed{
+\text{dense count domain}
+\rightarrow
+\text{sparse realization}
+\rightarrow
+\text{change of readable boundary}
+\rightarrow
+\text{formal continuum singularity if extrapolated further}.
+}
+\]</span></p>
+<p>The proposal is therefore not that physical reality suddenly becomes discrete at the singularity.</p>
+<p>It is that the continuum description was already a projection, and that the projection can cease to be physically admissible before its own mathematics diverges.</p>
+<p>The addendum does not derive Navier–Stokes from R<sup>2</sup>D.</p>
+<p>It defines the next target:</p>
+<blockquote class="blockquote">
+<p><strong>What invariant recursive count relation projects as the Navier–Stokes equation?</strong></p>
+</blockquote>
+</section>
+<section id="mass-scale-and-the-quantumgravity-crossover" class="level2">
+<h2 class="anchored" data-anchor-id="mass-scale-and-the-quantumgravity-crossover">Mass, Scale, and the Quantum–Gravity Crossover</h2>
+<p>The next addenda ask whether familiar physical quantities belong to a boundary before they belong to a universal physical coordinate system.</p>
+<p>Mass is treated as a physical read of boundary coupling rather than as a primitive substance.</p>
+<p>The complementary-readability program then asks whether quantum phase and gravitational radius are opposite physical reads of a more primitive recurrence-distinguishability relation.</p>
+<p>This leads to a different interpretation of the Planck regime.</p>
+<p>Rather than assuming that Planck quantities are themselves the primitive architecture, R<sup>2</sup>D asks whether they mark a crossover between physical rulers defined by opposite readability limits.</p>
+<p>The common target remains:</p>
+<p><span class="math display">\[
+\boxed{
+\text{unification before units}.
+}
+\]</span></p>
+</section>
+</section>
+<section id="biology-the-directly-observable-recursive-window" class="level1">
+<h1>Biology — The Directly Observable Recursive Window</h1>
+<p>Addenda 4–11 form a particularly coherent application program.</p>
+<p>Biology is useful because several neighboring recursive boundaries can remain experimentally accessible within the same physical specimen.</p>
+<p>In muscle, one can observe an enclosing mechanical function while also measuring ensemble occupancy, individual molecular states, and faster subordinate dynamics.</p>
+<p>That makes recursive replacement unusually difficult to hide.</p>
+<section id="addendum-4-myosin-switch-realization" class="level2">
+<h2 class="anchored" data-anchor-id="addendum-4-myosin-switch-realization">Addendum 4 — Myosin Switch Realization</h2>
+<p><strong>Enclosing Organization Occurs Before Myosin Switch Realization</strong></p>
+<p>The spectroscopically resolved myosin-switch relation is separated into chemical possibility and mechanical retention.</p>
+<p>The central architecture is</p>
+<p><span class="math display">\[
+\boxed{
+A_M
+=
+P_M-R_M.
+}
+\]</span></p>
+<p>The switch remains the local realization mechanism.</p>
+<p>Its direction is organized by a relation that extends beyond the isolated switch.</p>
+</section>
+<section id="addendum-5-ensemble-replacement" class="level2">
+<h2 class="anchored" data-anchor-id="addendum-5-ensemble-replacement">Addendum 5 — Ensemble Replacement</h2>
+<p><strong>Ensemble Replacement Occurs Before Muscle-Scale Statehood</strong></p>
+<p>Individual myosin switches possess identifiable states at their own boundaries.</p>
+<p>At the ensemble boundary, however, many distinct switch assignments can realize the same ensemble occupancy.</p>
+<p>Their identities are replaced by multiplicity.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{individual switch assignments}
+\rightarrow
+\text{ensemble multiplicity and occupancy}.
+}
+\]</span></p>
+<p>The individual switches remain physically necessary.</p>
+<p>They do not remain the state coordinates of the ensemble.</p>
+</section>
+<section id="addendum-6-replacement-across-biological-timescales" class="level2">
+<h2 class="anchored" data-anchor-id="addendum-6-replacement-across-biological-timescales">Addendum 6 — Replacement Across Biological Timescales</h2>
+<p><strong>Closure-Complete Subordinate Dynamics Occur Before Biological Function</strong></p>
+<p>The myosin switch is not primitive either.</p>
+<p>It is itself realized through faster protein dynamics, which are realized through still faster molecular recurrence.</p>
+<p>The same recursive operation can therefore repeat:</p>
+<p><span class="math display">\[
+\boxed{
+\text{native trajectory}
+\rightarrow
+\text{closure}
+\rightarrow
+\text{replacement}
+\rightarrow
+\text{new enclosing state}.
+}
+\]</span></p>
+<p>No single trajectory must persist across the entire biological hierarchy.</p>
+</section>
+<section id="addendum-7-frequency-selected-readability" class="level2">
+<h2 class="anchored" data-anchor-id="addendum-7-frequency-selected-readability">Addendum 7 — Frequency-Selected Readability</h2>
+<p><strong>Frequency-Selected Readability Occurs Before Cross-Scale Spectra</strong></p>
+<p>Mechanical oscillation provides an experimental way to move the read through recursive depth.</p>
+<p>The physical specimen remains the same muscle.</p>
+<p>But changing perturbation frequency changes which native recurrence can complete relative to the measurement.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+B_{\mathrm{system}}
+=
+\text{constant},
+}
+\]</span></p>
+<p>while</p>
+<p><span class="math display">\[
+\boxed{
+B_{\mathrm{read}}
+=
+B_{\mathrm{read}}(f_p).
+}
+\]</span></p>
+<p>Frequency therefore acts as an experimental selector of candidate recursive depth.</p>
+</section>
+<section id="addendum-8-biological-replacement-is-directly-observable" class="level2">
+<h2 class="anchored" data-anchor-id="addendum-8-biological-replacement-is-directly-observable">Addendum 8 — Biological Replacement Is Directly Observable</h2>
+<p><strong>Biological Function Makes Recursive Replacement Observable</strong></p>
+<p>Biology provides more than multiple timescales.</p>
+<p>It provides independently identifiable state boundaries on both sides of replacement.</p>
+<p>One can measure the enclosing function.</p>
+<p>One can measure subordinate state occupancy.</p>
+<p>One can perturb subordinate dynamics.</p>
+<p>And one can shift the read among them.</p>
+<p>Thus biology provides a regime in which recursive replacement can be <strong>observed rather than inferred solely from a projected theory</strong>.</p>
+</section>
+<section id="addendum-9-biology-between-the-two-horizons" class="level2">
+<h2 class="anchored" data-anchor-id="addendum-9-biology-between-the-two-horizons">Addendum 9 — Biology Between the Two Horizons</h2>
+<p><strong>Joint Readability Occurs Before the Quantum and Gravitational Horizons</strong></p>
+<p>The biological window is interpreted as a directly accessible middle regime.</p>
+<p>Here both distinguishability and recurrence can remain readable:</p>
+<p><span class="math display">\[
+\boxed{
+(\lambda,\nu)
+=
+(\mathrm{readable},\mathrm{readable}).
+}
+\]</span></p>
+<p>Moving toward the quantum-facing limit loses subordinate distinction first.</p>
+<p>Moving toward the gravitational-facing limit loses the relevant enclosing recurrence first.</p>
+<p>Biology therefore provides a possible experimental bridge between the dimensionless architecture and the two one-sided projection regimes.</p>
+</section>
+<section id="addendum-10-protein-folding" class="level2">
+<h2 class="anchored" data-anchor-id="addendum-10-protein-folding">Addendum 10 — Protein Folding</h2>
+<p><strong>Folded Statehood Occurs Before the Folding Trajectory</strong></p>
+<p>A folded protein is not identified with one unique microscopic configuration.</p>
+<p>Many subordinate conformations and many different folding histories can realize the same folded structural state.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{conformational multiplicity}
+\rightarrow
+\text{folded structural statehood}.
+}
+\]</span></p>
+<p>The folding trajectory is real at the boundary where it is readable.</p>
+<p>The folded state belongs to a new enclosing classification.</p>
+</section>
+<section id="addendum-11-protein-function" class="level2">
+<h2 class="anchored" data-anchor-id="addendum-11-protein-function">Addendum 11 — Protein Function</h2>
+<p><strong>Enclosing Relation Occurs Before Biological Function</strong></p>
+<p>Protein structure constrains what a protein can do.</p>
+<p>But structure alone does not uniquely define what function is realized.</p>
+<p>A motor requires mechanical constraint.</p>
+<p>An enzyme requires a reaction relation.</p>
+<p>A receptor requires ligand and network context.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{structure}
++
+\text{enclosing relation}
+\rightarrow
+\text{realized function}.
+}
+\]</span></p>
+<p>The sequence</p>
+<p><span class="math display">\[
+\text{sequence}
+\rightarrow
+\text{structure}
+\rightarrow
+\text{function}
+\]</span></p>
+<p>therefore contains multiple recursive replacements.</p>
+<p>Taken together, Addenda 4–11 produce the biological hierarchy</p>
+<p><span class="math display">\[
+\boxed{
+\text{subordinate recurrence}
+\rightarrow
+\text{closure}
+\rightarrow
+\text{replacement}
+\rightarrow
+\text{structure}
+\rightarrow
+\text{replacement}
+\rightarrow
+\text{function}.
+}
+\]</span></p>
+</section>
+</section>
+<section id="gravity-horizons-and-cosmology" class="level1">
+<h1>Gravity, Horizons, and Cosmology</h1>
+<p>The later addenda push the same logic much farther into gravitational physics.</p>
+<p>The program asks whether familiar geometric relations can be reconstructed in a logical order that begins before metric geometry.</p>
+<p>Among the targets are:</p>
+<ul>
+<li>boundary-relative motion and reference;</li>
+<li>Lorentz and rapidity relations;</li>
+<li>free fall;</li>
+<li>tidal distinguishability;</li>
+<li>curvature;</li>
+<li>Keplerian closure;</li>
+<li>inverse-square relations;</li>
+<li>gravitational area and radius;</li>
+<li>Schwarzschild clock-ruler structure;</li>
+<li>horizons and horizon multiplicity;</li>
+<li>gravitational background calibration;</li>
+<li>source compatibility and Einstein geometry;</li>
+<li>gravitational radiation;</li>
+<li>de Sitter and Nariai boundary replacement;</li>
+<li>cosmological expansion;</li>
+<li>cosmological singularities;</li>
+<li>and continuum-breakdown criteria.</li>
+</ul>
+<p>The status varies substantially across this program.</p>
+<p>Some results begin from established physical relations and deproject them.</p>
+<p>Some produce conditional derivations once a specified projection class and physical calibration are assumed.</p>
+<p>Some remain hypotheses about how gravitational geometry is generated from the more primitive count architecture.</p>
+<p>The important methodological rule is the same throughout:</p>
+<blockquote class="blockquote">
+<p><strong>A successful downstream equation does not by itself establish the primitive ontology assigned to its variables.</strong></p>
+</blockquote>
+</section>
+<section id="cosmology-and-continuum-limits" class="level1">
+<h1>Cosmology and Continuum Limits</h1>
+<p>The cosmological addenda extend the projection problem to the largest physical boundaries.</p>
+<p>The central question is whether familiar cosmological coordinates remain valid when the boundary that defines them changes.</p>
+<p>The program therefore distinguishes:</p>
+<p><span class="math display">\[
+\boxed{
+\text{physical coordinate singularity}
+}
+\]</span></p>
+<p>from</p>
+<p><span class="math display">\[
+\boxed{
+\text{failure of the count architecture}.
+}
+\]</span></p>
+<p>A scale factor, density, temperature, or continuum field can become singular under extrapolation even if the more primitive count description requires a boundary replacement before that limit is physically realized.</p>
+<p>This parallels the Navier–Stokes question at a very different physical scale.</p>
+<p>The common problem is:</p>
+<blockquote class="blockquote">
+<p><strong>When does a successful continuous projection cease to describe the count domain capable of realizing it?</strong></p>
+</blockquote>
+</section>
+<section id="one-architecture-many-stress-tests" class="level1">
+<h1>One Architecture, Many Stress Tests</h1>
+<p>The application program can now be summarized:</p>
+<p><span class="math display">\[
+\boxed{
+\begin{array}{ccc}
+\text{Thermodynamics}
+&amp;
+\longrightarrow
+&amp;
+\text{direct physical calibration}
+\\[8pt]
+\text{Quantum / Gravity}
+&amp;
+\longrightarrow
+&amp;
+\text{projection and deprojection}
+\\[8pt]
+\text{Biology}
+&amp;
+\longrightarrow
+&amp;
+\text{direct observation of recursive replacement}
+\\[8pt]
+\text{Continuum singularities}
+&amp;
+\longrightarrow
+&amp;
+\text{boundary-failure tests}
+\\[8pt]
+\text{Cosmology}
+&amp;
+\longrightarrow
+&amp;
+\text{largest-scale projection tests}
+\end{array}
+}
+\]</span></p>
+<p>These are not separate theories.</p>
+<p>They are attempts to break the same primitive grammar in different scientific domains.</p>
+</section>
+<section id="how-to-read-the-status-of-an-application" class="level1">
+<h1>How to Read the Status of an Application</h1>
+<p>Every application should identify its logical status explicitly.</p>
+<section id="exact-mathematical-consequence" class="level3">
+<h3 class="anchored" data-anchor-id="exact-mathematical-consequence">Exact mathematical consequence</h3>
+<p>The result follows from the defined count architecture or established mathematics.</p>
+</section>
+<section id="physical-mapping" class="level3">
+<h3 class="anchored" data-anchor-id="physical-mapping">Physical mapping</h3>
+<p>An R<sup>2</sup>D relation is assigned a measurable physical read.</p>
+</section>
+<section id="empirical-calibration" class="level3">
+<h3 class="anchored" data-anchor-id="empirical-calibration">Empirical calibration</h3>
+<p>Independent measurements test whether the proposed physical quantities occupy the predicted R<sup>2</sup>D roles.</p>
+</section>
+<section id="r2d-postulate" class="level3">
+<h3 class="anchored" data-anchor-id="r2d-postulate">R<sup>2</sup>D postulate</h3>
+<p>The relation is part of the proposed recursive framework but does not follow from combinatorics alone.</p>
+</section>
+<section id="conditional-derivation" class="level3">
+<h3 class="anchored" data-anchor-id="conditional-derivation">Conditional derivation</h3>
+<p>A result follows once specified physical assumptions or a projection class are supplied.</p>
+</section>
+<section id="open-hypothesis" class="level3">
+<h3 class="anchored" data-anchor-id="open-hypothesis">Open hypothesis</h3>
+<p>The mapping remains incomplete and defines a research target.</p>
+<p>These categories should not be blurred.</p>
+<p>An application becomes stronger by making its assumptions visible, not by calling every correspondence a derivation.</p>
+</section>
+</section>
+<section id="the-test" class="level1">
+<h1>The Test</h1>
+<p>For any new scientific problem, the R<sup>2</sup>D test is:</p>
+<ol type="1">
+<li><p>Define the scientific object.</p></li>
+<li><p>Identify the boundary that defines its readable states.</p></li>
+<li><p>Separate multiplicity, occurrence, and occupancy.</p></li>
+<li><p>Identify the enclosing compatibility relation.</p></li>
+<li><p>Identify possibility, constraint, and retention.</p></li>
+<li><p>Determine what closes and what recurs.</p></li>
+<li><p>Write the dimensionless relation before assigning familiar physical variables.</p></li>
+<li><p>Map independently measurable quantities onto that relation.</p></li>
+<li><p>Compare the result with established empirical law.</p></li>
+<li><p>State exactly where the mapping succeeds, where it remains conditional, and where it fails.</p></li>
+</ol>
+<p>The order matters.</p>
+<blockquote class="blockquote">
+<p><strong>Do not begin with the physical equation and rename its variables.</strong></p>
+</blockquote>
+<p>Instead:</p>
+<p><span class="math display">\[
+\boxed{
+\text{science}
+\rightarrow
+\text{boundary analysis}
+\rightarrow
+\text{R²D count structure}
+\rightarrow
+\text{physical remapping}
+\rightarrow
+\text{test}.
+}
+\]</span></p>
+</section>
+<section id="why-applications-matter-for-ai" class="level1">
+<h1>Why Applications Matter for AI</h1>
+<p>This is also where R<sup>2</sup>D becomes useful as an interface for AI-assisted science.</p>
+<p>AI can already manipulate equations extraordinarily well.</p>
+<p>The harder problem is deciding when two equations from different scientific domains describe the same underlying kind of relation.</p>
+<p>R<sup>2</sup>D provides a common representation in which AI can ask:</p>
+<ul>
+<li>What is the object?</li>
+<li>What boundary defines it?</li>
+<li>What is possible count?</li>
+<li>What is realized count?</li>
+<li>What is retained?</li>
+<li>What recurs?</li>
+<li>What changes identity when the boundary changes?</li>
+<li>Which physical quantities are primitive to the model, and which may be downstream reads?</li>
+</ul>
+<p>That turns application into a repeatable workflow.</p>
+<blockquote class="blockquote">
+<p><strong>Science supplies the empirical law.<br>
+R<sup>2</sup>D supplies the common mathematical representation.<br>
+AI can then test the mapping.</strong></p>
+</blockquote>
+<hr>
+<section id="try-it" class="level2">
+<h2 class="anchored" data-anchor-id="try-it">Try It</h2>
+<p><a href="../run/index.html" class="r2d-button r2d-primary">RUN R<sup>2</sup>D ON A SCIENTIFIC PROBLEM →</a></p>
+<p><a href="../understand/index.html" class="r2d-button">UNDERSTAND THE FORMALISM →</a></p>
+<p><a href="../understand/definitions.html" class="r2d-button">DEFINITIONS AND SYMBOLS →</a></p>
+<hr>
+<blockquote class="blockquote">
+<p><strong>Don’t believe R<sup>2</sup>D. Run it against something that already has to be true.</strong></p>
+</blockquote>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

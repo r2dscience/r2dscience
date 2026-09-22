@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Before Units – R²D Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R²D Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-understand" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Understand</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-understand">    
+        <li>
+    <a class="dropdown-item" href="../understand/what-is-r2d.html">
+ <span class="dropdown-text">What is R²D?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../understand/index.html">
+ <span class="dropdown-text">Understand R²D</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../run/index.html"> 
+<span class="menu-text">Run R²D</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../applications/index.html"> 
+<span class="menu-text">Applications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../canon/index.html"> 
+<span class="menu-text">Canon</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About R²D Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/authors.html">
+ <span class="dropdown-text">Authors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/publications.html">
+ <span class="dropdown-text">Publications &amp; Archive</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/contact.html">
+ <span class="dropdown-text">Contact</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#before-units" id="toc-before-units" class="nav-link active" data-scroll-target="#before-units">Before Units</a>
+  <ul class="collapse">
+  <li><a href="#a-measurement-requires-something-to-measure" id="toc-a-measurement-requires-something-to-measure" class="nav-link" data-scroll-target="#a-measurement-requires-something-to-measure">A Measurement Requires Something to Measure</a></li>
+  <li><a href="#counting-is-dimensionless" id="toc-counting-is-dimensionless" class="nav-link" data-scroll-target="#counting-is-dimensionless">Counting Is Dimensionless</a></li>
+  <li><a href="#multiplicity-comes-before-entropy-units" id="toc-multiplicity-comes-before-entropy-units" class="nav-link" data-scroll-target="#multiplicity-comes-before-entropy-units">Multiplicity Comes Before Entropy Units</a></li>
+  <li><a href="#why-the-logarithm-appears" id="toc-why-the-logarithm-appears" class="nav-link" data-scroll-target="#why-the-logarithm-appears">Why the Logarithm Appears</a></li>
+  <li><a href="#addition-can-hide-multiplication" id="toc-addition-can-hide-multiplication" class="nav-link" data-scroll-target="#addition-can-hide-multiplication">Addition Can Hide Multiplication</a></li>
+  <li><a href="#dimensionless-does-not-mean-unphysical" id="toc-dimensionless-does-not-mean-unphysical" class="nav-link" data-scroll-target="#dimensionless-does-not-mean-unphysical">Dimensionless Does Not Mean Unphysical</a></li>
+  <li><a href="#the-boundary-comes-before-the-ruler" id="toc-the-boundary-comes-before-the-ruler" class="nav-link" data-scroll-target="#the-boundary-comes-before-the-ruler">The Boundary Comes Before the Ruler</a></li>
+  <li><a href="#distinguishability-is-not-yet-length" id="toc-distinguishability-is-not-yet-length" class="nav-link" data-scroll-target="#distinguishability-is-not-yet-length">Distinguishability Is Not Yet Length</a></li>
+  <li><a href="#recurrence-is-not-yet-time" id="toc-recurrence-is-not-yet-time" class="nav-link" data-scroll-target="#recurrence-is-not-yet-time">Recurrence Is Not Yet Time</a></li>
+  <li><a href="#space-and-time-therefore-come-later" id="toc-space-and-time-therefore-come-later" class="nav-link" data-scroll-target="#space-and-time-therefore-come-later">Space and Time Therefore Come Later</a></li>
+  <li><a href="#r2d-does-not-reject-continuous-mathematics" id="toc-r2d-does-not-reject-continuous-mathematics" class="nav-link" data-scroll-target="#r2d-does-not-reject-continuous-mathematics">R<sup>2</sup>D Does Not Reject Continuous Mathematics</a></li>
+  <li><a href="#physical-coordinates-can-compress-count-structure" id="toc-physical-coordinates-can-compress-count-structure" class="nav-link" data-scroll-target="#physical-coordinates-can-compress-count-structure">Physical Coordinates Can Compress Count Structure</a></li>
+  <li><a href="#probability-also-comes-later" id="toc-probability-also-comes-later" class="nav-link" data-scroll-target="#probability-also-comes-later">Probability Also Comes Later</a></li>
+  <li><a href="#probability-is-not-possibility" id="toc-probability-is-not-possibility" class="nav-link" data-scroll-target="#probability-is-not-possibility">Probability Is Not Possibility</a></li>
+  <li><a href="#energy-also-comes-later" id="toc-energy-also-comes-later" class="nav-link" data-scroll-target="#energy-also-comes-later">Energy Also Comes Later</a></li>
+  <li><a href="#force-also-comes-later" id="toc-force-also-comes-later" class="nav-link" data-scroll-target="#force-also-comes-later">Force Also Comes Later</a></li>
+  <li><a href="#the-r2d-law-is-dimensionless-first" id="toc-the-r2d-law-is-dimensionless-first" class="nav-link" data-scroll-target="#the-r2d-law-is-dimensionless-first">The R<sup>2</sup>D Law Is Dimensionless First</a></li>
+  <li><a href="#dimensionalization-is-a-physical-mapping" id="toc-dimensionalization-is-a-physical-mapping" class="nav-link" data-scroll-target="#dimensionalization-is-a-physical-mapping">Dimensionalization Is a Physical Mapping</a></li>
+  <li><a href="#the-mapping-must-preserve-the-count-relation" id="toc-the-mapping-must-preserve-the-count-relation" class="nav-link" data-scroll-target="#the-mapping-must-preserve-the-count-relation">The Mapping Must Preserve the Count Relation</a></li>
+  <li><a href="#physical-constants-can-enter-at-the-mapping" id="toc-physical-constants-can-enter-at-the-mapping" class="nav-link" data-scroll-target="#physical-constants-can-enter-at-the-mapping">Physical Constants Can Enter at the Mapping</a></li>
+  <li><a href="#units-are-boundary-specific-reads" id="toc-units-are-boundary-specific-reads" class="nav-link" data-scroll-target="#units-are-boundary-specific-reads">Units Are Boundary-Specific Reads</a></li>
+  <li><a href="#different-units-can-describe-different-readability-regimes" id="toc-different-units-can-describe-different-readability-regimes" class="nav-link" data-scroll-target="#different-units-can-describe-different-readability-regimes">Different Units Can Describe Different Readability Regimes</a></li>
+  <li><a href="#unification-before-units" id="toc-unification-before-units" class="nav-link" data-scroll-target="#unification-before-units">Unification Before Units</a></li>
+  <li><a href="#unification-does-not-mean-one-universal-ruler" id="toc-unification-does-not-mean-one-universal-ruler" class="nav-link" data-scroll-target="#unification-does-not-mean-one-universal-ruler">Unification Does Not Mean One Universal Ruler</a></li>
+  <li><a href="#why-this-matters-for-scientific-objecthood" id="toc-why-this-matters-for-scientific-objecthood" class="nav-link" data-scroll-target="#why-this-matters-for-scientific-objecthood">Why This Matters for Scientific Objecthood</a></li>
+  <li><a href="#the-primitive-mathematics-is-the-common-layer" id="toc-the-primitive-mathematics-is-the-common-layer" class="nav-link" data-scroll-target="#the-primitive-mathematics-is-the-common-layer">The Primitive Mathematics Is the Common Layer</a></li>
+  <li><a href="#what-part-i-does-and-does-not-establish" id="toc-what-part-i-does-and-does-not-establish" class="nav-link" data-scroll-target="#what-part-i-does-and-does-not-establish">What Part I Does — and Does Not — Establish</a></li>
+  <li><a href="#the-architecture-in-one-view" id="toc-the-architecture-in-one-view" class="nav-link" data-scroll-target="#the-architecture-in-one-view">The Architecture in One View</a></li>
+  <li><a href="#the-key-distinction" id="toc-the-key-distinction" class="nav-link" data-scroll-target="#the-key-distinction">The Key Distinction</a></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Before Units</h1>
+<p class="subtitle lead">The primitive mathematics is dimensionless</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="before-units" class="level1">
+<h1>Before Units</h1>
+<p>Science measures almost everything with units.</p>
+<p>Distance is measured in meters.</p>
+<p>Time is measured in seconds.</p>
+<p>Energy is measured in joules.</p>
+<p>Force is measured in newtons.</p>
+<p>Temperature is measured in kelvin.</p>
+<p>But before any of those measurements can be made, something must already be distinguishable enough to measure.</p>
+<p>R<sup>2</sup>D begins there.</p>
+<blockquote class="blockquote">
+<p><strong>Science is not made of units.<br>
+Science uses units to read primitive counts.</strong></p>
+</blockquote>
+<p>The primitive R<sup>2</sup>D architecture is therefore dimensionless.</p>
+<p>Units come later.</p>
+<section id="a-measurement-requires-something-to-measure" class="level2">
+<h2 class="anchored" data-anchor-id="a-measurement-requires-something-to-measure">A Measurement Requires Something to Measure</h2>
+<p>Suppose we measure a distance.</p>
+<p>Before assigning meters, two distinguishable positions must already exist.</p>
+<p>Suppose we measure a recurrence rate.</p>
+<p>Before assigning inverse seconds, some recurrence must already be countable.</p>
+<p>Suppose we measure an energy difference.</p>
+<p>Before assigning joules, distinguishable states and a relation between them must already have been defined.</p>
+<p>Thus the logical order cannot begin with the unit.</p>
+<p>It must begin with the distinction.</p>
+<p>Schematically:</p>
+<p><span class="math display">\[
+\boxed{
+\text{distinction}
+\rightarrow
+\text{count relation}
+\rightarrow
+\text{physical coordinate}
+\rightarrow
+\text{unit}.
+}
+\]</span></p>
+<p>R<sup>2</sup>D develops the first two steps before introducing the last two.</p>
+</section>
+<section id="counting-is-dimensionless" class="level2">
+<h2 class="anchored" data-anchor-id="counting-is-dimensionless">Counting Is Dimensionless</h2>
+<p>A count does not require a physical unit.</p>
+<p>If a macrostate has</p>
+<p><span class="math display">\[
+W_{n,i}=120
+\]</span></p>
+<p>compatible realizations, the number</p>
+<p><span class="math display">\[
+120
+\]</span></p>
+<p>is simply a count.</p>
+<p>It is not</p>
+<p><span class="math display">\[
+120\ \mathrm{J},
+\]</span></p>
+<p>or</p>
+<p><span class="math display">\[
+120\ \mathrm{m},
+\]</span></p>
+<p>or</p>
+<p><span class="math display">\[
+120\ \mathrm{s}.
+\]</span></p>
+<p>Likewise, a ratio of counts is dimensionless.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+\frac{W_{n,k}}{W_{n,i}}
+\]</span></p>
+<p>has no physical unit.</p>
+<p>And therefore its logarithm</p>
+<p><span class="math display">\[
+\ln
+\left(
+\frac{W_{n,k}}{W_{n,i}}
+\right)
+\]</span></p>
+<p>is dimensionless as well.</p>
+<p>This gives R<sup>2</sup>D a mathematical language before physical dimensionalization.</p>
+</section>
+<section id="multiplicity-comes-before-entropy-units" class="level2">
+<h2 class="anchored" data-anchor-id="multiplicity-comes-before-entropy-units">Multiplicity Comes Before Entropy Units</h2>
+<p>For macrostate (i),</p>
+<p><span class="math display">\[
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+\]</span></p>
+<p>R<sup>2</sup>D defines its logarithmic multiplicity coordinate as</p>
+<p><span class="math display">\[
+\boxed{
+S_{n,i}
+=
+\ln W_{n,i}.
+}
+\]</span></p>
+<p>At this stage,</p>
+<p><span class="math display">\[
+S_{n,i}
+\]</span></p>
+<p>is dimensionless.</p>
+<p>It is not yet thermodynamic entropy in units such as</p>
+<p><span class="math display">\[
+\mathrm{J\,K^{-1}}.
+\]</span></p>
+<p>The primitive relation is simply</p>
+<p><span class="math display">\[
+\boxed{
+W
+\longleftrightarrow
+\ln W.
+}
+\]</span></p>
+<p>Thermodynamic dimensionalization comes later.</p>
+<p><a href="../understand/multiplicity.html">Multiplicity →</a></p>
+</section>
+<section id="why-the-logarithm-appears" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-logarithm-appears">Why the Logarithm Appears</h2>
+<p>Suppose compatible possibilities compose multiplicatively:</p>
+<p><span class="math display">\[
+W_{\mathrm{whole}}
+=
+\prod_\alpha W_\alpha.
+\]</span></p>
+<p>Taking the logarithm gives</p>
+<p><span class="math display">\[
+\boxed{
+\ln W_{\mathrm{whole}}
+=
+\sum_\alpha
+\ln W_\alpha.
+}
+\]</span></p>
+<p>Thus multiplication of compatible possibilities becomes addition in logarithmic coordinates.</p>
+<p>This relationship exists before any physical unit is introduced.</p>
+<p>The logarithm is not creating the multiplicity.</p>
+<p>It is providing an additive coordinate for multiplicative count structure.</p>
+<p>Conversely,</p>
+<p><span class="math display">\[
+\boxed{
+W=e^S
+}
+\]</span></p>
+<p>recovers the multiplicity from its logarithmic coordinate.</p>
+<blockquote class="blockquote">
+<p><strong>Multiplicity is primitive.<br>
+The logarithm is its additive reading.</strong></p>
+</blockquote>
+</section>
+<section id="addition-can-hide-multiplication" class="level2">
+<h2 class="anchored" data-anchor-id="addition-can-hide-multiplication">Addition Can Hide Multiplication</h2>
+<p>Much of science is written in additive coordinates.</p>
+<p>Energy differences add.</p>
+<p>Entropy changes add.</p>
+<p>Actions add.</p>
+<p>Potentials add.</p>
+<p>But R<sup>2</sup>D asks whether some of those additive structures are physical readings of a deeper multiplicative count architecture.</p>
+<p>At the primitive count level:</p>
+<p><span class="math display">\[
+\boxed{
+\text{compatible possibilities multiply}
+}
+\]</span></p>
+<p>while</p>
+<p><span class="math display">\[
+\boxed{
+\text{mutually exclusive alternatives add}.
+}
+\]</span></p>
+<p>Logarithms make multiplicative composition readable through addition.</p>
+<p>This is why R<sup>2</sup>D begins beneath the physical units attached to the additive coordinates.</p>
+</section>
+<section id="dimensionless-does-not-mean-unphysical" class="level2">
+<h2 class="anchored" data-anchor-id="dimensionless-does-not-mean-unphysical">Dimensionless Does Not Mean Unphysical</h2>
+<p>Calling the primitive structure dimensionless does not mean calling it abstract in the sense of physically irrelevant.</p>
+<p>R<sup>2</sup>D makes a stronger proposal.</p>
+<p>The dimensionless relation is the structure that exists <strong>before a particular physical coordinate system has been assigned to it</strong>.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{dimensionless}
+\neq
+\text{physically meaningless}.
+}
+\]</span></p>
+<p>Instead:</p>
+<p><span class="math display">\[
+\boxed{
+\text{dimensionless}
+=
+\text{not yet assigned a domain-specific physical unit}.
+}
+\]</span></p>
+<p>A later physical theory can provide that read.</p>
+</section>
+<section id="the-boundary-comes-before-the-ruler" class="level2">
+<h2 class="anchored" data-anchor-id="the-boundary-comes-before-the-ruler">The Boundary Comes Before the Ruler</h2>
+<p>A boundary defines which differences count as distinctions.</p>
+<p>Only after those distinctions are defined can a ruler be assigned.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinguishability}
+\rightarrow
+\text{physical ruler}.
+}
+\]</span></p>
+<p>R<sup>2</sup>D does not begin with a universal ruler and then ask what objects fit inside it.</p>
+<p>It begins with the count boundary and asks which physical coordinate makes that relation readable in a particular domain.</p>
+<p><a href="../understand/scientific-objecthood.html">Scientific Objecthood →</a></p>
+</section>
+<section id="distinguishability-is-not-yet-length" class="level2">
+<h2 class="anchored" data-anchor-id="distinguishability-is-not-yet-length">Distinguishability Is Not Yet Length</h2>
+<p>For a readable transition</p>
+<p><span class="math display">\[
+i\rightarrow k,
+\]</span></p>
+<p>R<sup>2</sup>D defines a distinguishable interval</p>
+<p><span class="math display">\[
+\lambda_{n,i\rightarrow k}.
+\]</span></p>
+<p>At the primitive level,</p>
+<p><span class="math display">\[
+\lambda
+\]</span></p>
+<p>is not necessarily a spatial displacement.</p>
+<p>It records the readable distinguishable interval between states.</p>
+<p>A later physical mapping might assign a spatial, mechanical, chemical, or other physical coordinate to that distinction.</p>
+<p>But Part I does not assume which one.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\lambda
+\neq
+\text{primitive length}.
+}
+\]</span></p>
+<p>Length can be one physical read of distinguishability.</p>
+</section>
+<section id="recurrence-is-not-yet-time" class="level2">
+<h2 class="anchored" data-anchor-id="recurrence-is-not-yet-time">Recurrence Is Not Yet Time</h2>
+<p>Likewise, R<sup>2</sup>D defines completed recurrence before introducing a clock.</p>
+<p>For adjacent boundaries,</p>
+<p><span class="math display">\[
+\rho_{n+1|n,\alpha}
+=
+\frac{
+N_{\mathcal D_R}(\chi_{n+1})
+}{
+N_{\mathcal D_R}(\mathcal C_{n,\alpha})
+}.
+\]</span></p>
+<p>This is a ratio of completed recurrence counts.</p>
+<p>It has no unit of seconds.</p>
+<p>It has no unit of hertz.</p>
+<p>It is dimensionless.</p>
+<p>Only later can a physical system test whether this count relation can be read as a ratio of physical rates.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{recurrence}
+\rightarrow
+\text{possible physical time or rate read}.
+}
+\]</span></p>
+<p>Not:</p>
+<p><span class="math display">\[
+\text{time}
+\rightarrow
+\text{recurrence}.
+\]</span></p>
+<p><a href="../understand/recurrence.html">Recurrence →</a></p>
+</section>
+<section id="space-and-time-therefore-come-later" class="level2">
+<h2 class="anchored" data-anchor-id="space-and-time-therefore-come-later">Space and Time Therefore Come Later</h2>
+<p>This produces one of the stronger claims of Part I.</p>
+<p>Boundaries, multiplicities, occurrences, occupancies, closures, and recurrences can all be defined without assuming a pre-existing spacetime.</p>
+<p>Therefore R<sup>2</sup>D does not place its count architecture inside a primitive space-time container.</p>
+<p>Instead, it asks whether spatial and temporal coordinates are later physical readings of relations that have already been defined.</p>
+<p>Schematically:</p>
+<p><span class="math display">\[
+\boxed{
+\text{distinguishability}
+\rightarrow
+\text{spatial read}
+}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\boxed{
+\text{recurrence}
+\rightarrow
+\text{temporal or rate read}.
+}
+\]</span></p>
+<p>These mappings are later physical hypotheses.</p>
+<p>They are not assumptions required to construct Part I.</p>
+</section>
+<section id="r2d-does-not-reject-continuous-mathematics" class="level2">
+<h2 class="anchored" data-anchor-id="r2d-does-not-reject-continuous-mathematics">R<sup>2</sup>D Does Not Reject Continuous Mathematics</h2>
+<p>Beginning from discrete count does not mean rejecting calculus or continuous coordinates.</p>
+<p>A continuous coordinate can provide an extremely accurate representation of large numbers of unresolved count relations.</p>
+<p>R<sup>2</sup>D therefore distinguishes:</p>
+<p><span class="math display">\[
+\boxed{
+\text{primitive count structure}
+}
+\]</span></p>
+<p>from</p>
+<p><span class="math display">\[
+\boxed{
+\text{continuous physical representation}.
+}
+\]</span></p>
+<p>The success of calculus does not require the primitive ontology itself to begin as a continuously divisible coordinate system.</p>
+<p>Continuous mathematics can remain an exact or extraordinarily accurate read of recursively organized count.</p>
+</section>
+<section id="physical-coordinates-can-compress-count-structure" class="level2">
+<h2 class="anchored" data-anchor-id="physical-coordinates-can-compress-count-structure">Physical Coordinates Can Compress Count Structure</h2>
+<p>Imagine a very large number of small distinguishable changes.</p>
+<p>Resolving every individual count may be unnecessary or impossible.</p>
+<p>A smooth coordinate can represent their collective relation.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{many unresolved count relations}
+\rightarrow
+\text{continuous readable coordinate}.
+}
+\]</span></p>
+<p>This does not make the continuous description false.</p>
+<p>It identifies the logical level at which it appears.</p>
+<p>The physical coordinate is a representation of already-organized distinguishability.</p>
+</section>
+<section id="probability-also-comes-later" class="level2">
+<h2 class="anchored" data-anchor-id="probability-also-comes-later">Probability Also Comes Later</h2>
+<p>Probability offers another example.</p>
+<p>Multiplicity is possible count:</p>
+<p><span class="math display">\[
+W_{n,i}.
+\]</span></p>
+<p>A probability can be formed only after a total count domain has been chosen.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+\boxed{
+p_{n,i}
+=
+\frac{
+W_{n,i}
+}{
+\sum_j W_{n,j}
+}.
+}
+\]</span></p>
+<p>The normalization does not create the possible states.</p>
+<p>It reads their relative multiplicities fractionally.</p>
+<p>Likewise, an observed occupancy fraction might be</p>
+<p><span class="math display">\[
+p_{n,i}^{\mathrm{obs}}
+=
+\frac{
+c_{n,i}
+}{
+\sum_j c_{n,j}
+}.
+\]</span></p>
+<p>Again, the probability is constructed after the count structure exists.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>Possible count comes before probability.</strong></p>
+</blockquote>
+<p><a href="../understand/occupancy-occurrence.html">Occupancy and Occurrence →</a></p>
+</section>
+<section id="probability-is-not-possibility" class="level2">
+<h2 class="anchored" data-anchor-id="probability-is-not-possibility">Probability Is Not Possibility</h2>
+<p>R<sup>2</sup>D possibility is</p>
+<p><span class="math display">\[
+P_{n,i}
+=
+\ln
+\left(
+\frac{
+\Theta_{n+1|n,i}
+}{
+W_{n,i}
+}
+\right).
+\]</span></p>
+<p>This measures compatible enclosing extension.</p>
+<p>Probability is a normalized reading of count.</p>
+<p>Therefore:</p>
+<p><span class="math display">\[
+\boxed{
+P
+\neq
+p.
+}
+\]</span></p>
+<p>Possibility belongs to the recursive count architecture.</p>
+<p>Probability appears only after a count domain is normalized.</p>
+<p>This distinction is important because R<sup>2</sup>D does not need probability to define direction.</p>
+<p><a href="../understand/possibility.html">Possibility →</a></p>
+</section>
+<section id="energy-also-comes-later" class="level2">
+<h2 class="anchored" data-anchor-id="energy-also-comes-later">Energy Also Comes Later</h2>
+<p>The same logic applies to energy.</p>
+<p>Before assigning an energy difference to two states, the states themselves must already be distinguishable.</p>
+<p>Thus the logical order is</p>
+<p><span class="math display">\[
+\boxed{
+\text{state distinction}
+\rightarrow
+\text{count relation}
+\rightarrow
+\text{energetic read}.
+}
+\]</span></p>
+<p>R<sup>2</sup>D does not deny energy.</p>
+<p>It places energy downstream of a dimensionless state architecture.</p>
+<p>In Part II, thermodynamics supplies some of the strongest physical calibrations of this idea.</p>
+<p>But the primitive count relation exists before the energetic units are attached.</p>
+</section>
+<section id="force-also-comes-later" class="level2">
+<h2 class="anchored" data-anchor-id="force-also-comes-later">Force Also Comes Later</h2>
+<p>The local retention relation is</p>
+<p><span class="math display">\[
+\Delta R
+=
+C^{\mathrm{out}}\lambda.
+\]</span></p>
+<p>Neither</p>
+<p><span class="math display">\[
+C
+\]</span></p>
+<p>nor</p>
+<p><span class="math display">\[
+\lambda
+\]</span></p>
+<p>is primitively mechanical.</p>
+<p>In a mechanical system, a physical mapping may make the product resemble a familiar force-displacement relation.</p>
+<p>But that physical interpretation comes after the abstract relation has been defined.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+C
+\neq
+\text{primitive force}
+}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\boxed{
+\lambda
+\neq
+\text{primitive displacement}.
+}
+\]</span></p>
+<p><a href="../understand/constraint-retention.html">Constraint and Retention →</a></p>
+</section>
+<section id="the-r2d-law-is-dimensionless-first" class="level2">
+<h2 class="anchored" data-anchor-id="the-r2d-law-is-dimensionless-first">The R<sup>2</sup>D Law Is Dimensionless First</h2>
+<p>The R<sup>2</sup>D law is</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+\]</span></p>
+<p>Every quantity is defined as part of the dimensionless count architecture.</p>
+<p>No joules are required.</p>
+<p>No meters are required.</p>
+<p>No seconds are required.</p>
+<p>No kelvin are required.</p>
+<p>This is deliberate.</p>
+<p>Only after a physical domain supplies appropriate mappings can the equation acquire familiar unit-bearing coordinates.</p>
+<p><a href="../understand/r2d-law.html">The R²D Law →</a></p>
+</section>
+<section id="dimensionalization-is-a-physical-mapping" class="level2">
+<h2 class="anchored" data-anchor-id="dimensionalization-is-a-physical-mapping">Dimensionalization Is a Physical Mapping</h2>
+<p>The general logic is</p>
+<p><span class="math display">\[
+\boxed{
+\text{dimensionless count relation}
+\rightarrow
+\text{domain-specific physical read}.
+}
+\]</span></p>
+<p>For example, a domain may provide a physical read of:</p>
+<p><span class="math display">\[
+S
+\]</span></p>
+<p>as an entropy coordinate,</p>
+<p><span class="math display">\[
+\lambda
+\]</span></p>
+<p>as a spatial or mechanical distinction,</p>
+<p><span class="math display">\[
+\rho
+\]</span></p>
+<p>as a rate relation,</p>
+<p>or</p>
+<p><span class="math display">\[
+C\lambda
+\]</span></p>
+<p>as a constrained physical quantity.</p>
+<p>But those mappings must be established.</p>
+<p>They cannot simply be assumed because the symbols resemble familiar physical variables.</p>
+</section>
+<section id="the-mapping-must-preserve-the-count-relation" class="level2">
+<h2 class="anchored" data-anchor-id="the-mapping-must-preserve-the-count-relation">The Mapping Must Preserve the Count Relation</h2>
+<p>A valid physical dimensionalization must preserve the underlying structure.</p>
+<p>If two physical quantities are proposed as reads of two R<sup>2</sup>D coordinates, their measured relation must reproduce the primitive count relation.</p>
+<p>This gives the mapping empirical content.</p>
+<p>The procedure is not:</p>
+<p><span class="math display">\[
+\text{choose familiar equation}
+\rightarrow
+\text{rename its terms R²D}.
+\]</span></p>
+<p>It is:</p>
+<p><span class="math display">\[
+\boxed{
+\text{define count relation}
+\rightarrow
+\text{identify physical reads}
+\rightarrow
+\text{test the mapping}.
+}
+\]</span></p>
+<p>That order is fundamental to the R<sup>2</sup>D program.</p>
+</section>
+<section id="physical-constants-can-enter-at-the-mapping" class="level2">
+<h2 class="anchored" data-anchor-id="physical-constants-can-enter-at-the-mapping">Physical Constants Can Enter at the Mapping</h2>
+<p>A dimensionless relation and a dimensional physical relation cannot be identified without a calibration.</p>
+<p>Physical constants can participate in that calibration.</p>
+<p>For example, conventional thermodynamics relates logarithmic multiplicity to unit-bearing entropy through a dimensional factor.</p>
+<p>R<sup>2</sup>D separates the two levels:</p>
+<p><span class="math display">\[
+\boxed{
+\ln W
+}
+\]</span></p>
+<p>is the primitive count coordinate,</p>
+<p>while the physically calibrated thermodynamic quantity appears only after the relevant dimensional mapping is supplied.</p>
+<p>The constant belongs to the physical read.</p>
+<p>The count comes first.</p>
+</section>
+<section id="units-are-boundary-specific-reads" class="level2">
+<h2 class="anchored" data-anchor-id="units-are-boundary-specific-reads">Units Are Boundary-Specific Reads</h2>
+<p>Different scientific boundaries can assign different physical meanings to the same primitive type of count relation.</p>
+<p>A distinguishability relation might receive one physical read in mechanics and another in chemistry.</p>
+<p>A recurrence relation might receive one read in spectroscopy and another in biological kinetics.</p>
+<p>The primitive grammar does not require the units to be identical.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{common count architecture}
+\not\Rightarrow
+\text{common physical unit}.
+}
+\]</span></p>
+<p>This is a central reason R<sup>2</sup>D can compare different scientific domains without forcing them into one pre-existing coordinate system.</p>
+</section>
+<section id="different-units-can-describe-different-readability-regimes" class="level2">
+<h2 class="anchored" data-anchor-id="different-units-can-describe-different-readability-regimes">Different Units Can Describe Different Readability Regimes</h2>
+<p>The physical vocabulary appropriate to a system depends on what remains readable from the relevant boundary.</p>
+<p>One domain may make recurrence especially accessible.</p>
+<p>Another may make geometric distinguishability especially accessible.</p>
+<p>Another may allow both to be jointly read.</p>
+<p>The physical units and variables can therefore differ dramatically even when the underlying count grammar is related.</p>
+<p>This is the basis for the later R<sup>2</sup>D readability program.</p>
+</section>
+<section id="unification-before-units" class="level2">
+<h2 class="anchored" data-anchor-id="unification-before-units">Unification Before Units</h2>
+<p>This changes the meaning of scientific unification.</p>
+<p>A conventional unification program often attempts to reconcile quantities that already carry physical meanings:</p>
+<ul>
+<li>mass;</li>
+<li>charge;</li>
+<li>energy;</li>
+<li>field;</li>
+<li>spacetime;</li>
+<li>curvature;</li>
+<li>frequency.</li>
+</ul>
+<p>R<sup>2</sup>D asks whether that begins too late.</p>
+<p>Once those quantities have units, much of the boundary-specific projection has already occurred.</p>
+<p>The proposed common structure may lie beneath them.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>R<sup>2</sup>D does not first try to put every science into one unit system.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>It asks whether they share one dimensionless count grammar before their units diverge.</strong></p>
+</blockquote>
+<p>This is <strong>unification before units</strong>.</p>
+</section>
+<section id="unification-does-not-mean-one-universal-ruler" class="level2">
+<h2 class="anchored" data-anchor-id="unification-does-not-mean-one-universal-ruler">Unification Does Not Mean One Universal Ruler</h2>
+<p>R<sup>2</sup>D therefore does not require one primitive spatial ruler.</p>
+<p>It does not require one primitive energetic coordinate.</p>
+<p>It does not require one universal clock already present beneath every scientific domain.</p>
+<p>The proposed invariant is earlier:</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinction}
+\rightarrow
+\text{multiplicity}
+\rightarrow
+\text{realization}
+\rightarrow
+\text{closure}
+\rightarrow
+\text{recurrence}.
+}
+\]</span></p>
+<p>Physical rulers are assigned afterward.</p>
+</section>
+<section id="why-this-matters-for-scientific-objecthood" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters-for-scientific-objecthood">Why This Matters for Scientific Objecthood</h2>
+<p>This connects directly to boundary-relative objects.</p>
+<p>An object must be distinguishable before physical properties can be assigned to it.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{objecthood}
+\rightarrow
+\text{physical measurement}.
+}
+\]</span></p>
+<p>The meter does not create the object.</p>
+<p>The joule does not create the state.</p>
+<p>The second does not create the recurrence.</p>
+<p>The probability does not create the possible count.</p>
+<p>The units tell us how an already-defined relation is physically readable.</p>
+<p><a href="../understand/scientific-objecthood.html">Scientific Objecthood →</a></p>
+</section>
+<section id="the-primitive-mathematics-is-the-common-layer" class="level2">
+<h2 class="anchored" data-anchor-id="the-primitive-mathematics-is-the-common-layer">The Primitive Mathematics Is the Common Layer</h2>
+<p>By this stage, R<sup>2</sup>D has defined without physical units:</p>
+<p><span class="math display">\[
+B_n
+\]</span></p>
+<p>for the count boundary,</p>
+<p><span class="math display">\[
+W_{n,i}
+\]</span></p>
+<p>for multiplicity,</p>
+<p><span class="math display">\[
+S_{n,i}
+=
+\ln W_{n,i}
+\]</span></p>
+<p>for logarithmic multiplicity,</p>
+<p><span class="math display">\[
+\nu_{n,i}
+\]</span></p>
+<p>for occurrence count,</p>
+<p><span class="math display">\[
+c_{n,i}
+\]</span></p>
+<p>for occupancy,</p>
+<p><span class="math display">\[
+P_{n,i}
+\]</span></p>
+<p>for compatible enclosing possibility,</p>
+<p><span class="math display">\[
+C_{n+1}
+\]</span></p>
+<p>for enclosing constraint,</p>
+<p><span class="math display">\[
+\lambda_n
+\]</span></p>
+<p>for distinguishability,</p>
+<p><span class="math display">\[
+\mathcal C_n
+\]</span></p>
+<p>for closure,</p>
+<p>and</p>
+<p><span class="math display">\[
+\rho_{n+1|n}
+\]</span></p>
+<p>for relative recurrence.</p>
+<p>The physical sciences can then ask how these relations become readable through their own coordinates.</p>
+</section>
+<section id="what-part-i-does-and-does-not-establish" class="level2">
+<h2 class="anchored" data-anchor-id="what-part-i-does-and-does-not-establish">What Part I Does — and Does Not — Establish</h2>
+<p>Part I establishes the dimensionless architecture.</p>
+<p>It does <strong>not</strong> automatically establish every proposed physical mapping.</p>
+<p>It does not prove merely from notation that</p>
+<p><span class="math display">\[
+\lambda
+\]</span></p>
+<p>must be physical length,</p>
+<p>that</p>
+<p><span class="math display">\[
+\rho
+\]</span></p>
+<p>must be physical frequency,</p>
+<p>or that any particular physical energy must equal a chosen count coordinate.</p>
+<p>Those are mapping questions.</p>
+<p>They require empirical and mathematical justification in the later program.</p>
+<p>This distinction protects the direction of the argument:</p>
+<blockquote class="blockquote">
+<p><strong>First define the mathematics.<br>
+Then test how physics reads it.</strong></p>
+</blockquote>
+</section>
+<section id="the-architecture-in-one-view" class="level2">
+<h2 class="anchored" data-anchor-id="the-architecture-in-one-view">The Architecture in One View</h2>
+<p>The R<sup>2</sup>D ordering can be summarized as</p>
+<p><span class="math display">\[
+\boxed{
+\begin{array}{c}
+\text{boundary}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{distinguishable states}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{dimensionless multiplicity}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{occurrence and occupancy}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{closure and recurrence}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{recursive count relation}
+\\[8pt]
+\Downarrow
+\\[8pt]
+\text{physical dimensionalization}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{meters, seconds, joules, kelvin, volts, pascals, \ldots}
+\end{array}
+}
+\]</span></p>
+<p>The unit-bearing world appears at the end of the sequence, not the beginning.</p>
+</section>
+<section id="the-key-distinction" class="level2">
+<h2 class="anchored" data-anchor-id="the-key-distinction">The Key Distinction</h2>
+<p>The simplest summary is:</p>
+<blockquote class="blockquote">
+<p><strong>A unit measures a relation.<br>
+It does not create the relation being measured.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>A physical coordinate makes recursive count readable in a particular domain.<br>
+It does not have to be primitive to that count.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>R<sup>2</sup>D therefore defines the common mathematics before assigning the units through which different sciences read it.</strong></p>
+</blockquote>
+<p>Or, more compactly:</p>
+<blockquote class="blockquote">
+<p><strong>Science uses units to read primitive counts.<br>
+R<sup>2</sup>D begins before units are assigned.</strong></p>
+</blockquote>
+<p>The next step is to ask how this dimensionless count architecture acquires the familiar physical quantities used by science.</p>
+<hr>
+</section>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<p><a href="../understand/from-count-to-physics.html">From Count to Physical Science →</a></p>
+<p><a href="../understand/scientific-objecthood.html">Scientific Objecthood →</a></p>
+<p><a href="../understand/r2d-law.html">The R²D Law →</a></p>
+<p><a href="../understand/index.html">Back to Understand R²D →</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/r2dscience\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The R²D Law – R²D Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R²D Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-understand" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Understand</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-understand">    
+        <li>
+    <a class="dropdown-item" href="../understand/what-is-r2d.html">
+ <span class="dropdown-text">What is R²D?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../understand/index.html">
+ <span class="dropdown-text">Understand R²D</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../run/index.html"> 
+<span class="menu-text">Run R²D</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../applications/index.html"> 
+<span class="menu-text">Applications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../canon/index.html"> 
+<span class="menu-text">Canon</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About R²D Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/authors.html">
+ <span class="dropdown-text">Authors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/publications.html">
+ <span class="dropdown-text">Publications &amp; Archive</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/contact.html">
+ <span class="dropdown-text">Contact</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-r2d-law" id="toc-the-r2d-law" class="nav-link active" data-scroll-target="#the-r2d-law">The R<sup>2</sup>D Law</a>
+  <ul class="collapse">
+  <li><a href="#one-relation-two-readings" id="toc-one-relation-two-readings" class="nav-link" data-scroll-target="#one-relation-two-readings">One Relation, Two Readings</a></li>
+  <li><a href="#the-causal-relation-still-points-downward" id="toc-the-causal-relation-still-points-downward" class="nav-link" data-scroll-target="#the-causal-relation-still-points-downward">The Causal Relation Still Points Downward</a></li>
+  <li><a href="#the-local-reading" id="toc-the-local-reading" class="nav-link" data-scroll-target="#the-local-reading">The Local Reading</a></li>
+  <li><a href="#the-local-recurrence-count" id="toc-the-local-recurrence-count" class="nav-link" data-scroll-target="#the-local-recurrence-count">The Local Recurrence Count</a></li>
+  <li><a href="#the-enclosing-reading" id="toc-the-enclosing-reading" class="nav-link" data-scroll-target="#the-enclosing-reading">The Enclosing Reading</a></li>
+  <li><a href="#the-enclosing-recurrence-count" id="toc-the-enclosing-recurrence-count" class="nav-link" data-scroll-target="#the-enclosing-recurrence-count">The Enclosing Recurrence Count</a></li>
+  <li><a href="#the-recurrence-weighted-form" id="toc-the-recurrence-weighted-form" class="nav-link" data-scroll-target="#the-recurrence-weighted-form">The Recurrence-Weighted Form</a></li>
+  <li><a href="#introduce-the-recurrence-ratio" id="toc-introduce-the-recurrence-ratio" class="nav-link" data-scroll-target="#introduce-the-recurrence-ratio">Introduce the Recurrence Ratio</a></li>
+  <li><a href="#expand-the-local-asymmetry" id="toc-expand-the-local-asymmetry" class="nav-link" data-scroll-target="#expand-the-local-asymmetry">Expand the Local Asymmetry</a></li>
+  <li><a href="#what-the-left-side-means" id="toc-what-the-left-side-means" class="nav-link" data-scroll-target="#what-the-left-side-means">What the Left Side Means</a></li>
+  <li><a href="#what-the-right-side-means" id="toc-what-the-right-side-means" class="nav-link" data-scroll-target="#what-the-right-side-means">What the Right Side Means</a></li>
+  <li><a href="#why-recurrence-is-necessary" id="toc-why-recurrence-is-necessary" class="nav-link" data-scroll-target="#why-recurrence-is-necessary">Why Recurrence Is Necessary</a></li>
+  <li><a href="#a-simple-numerical-example" id="toc-a-simple-numerical-example" class="nav-link" data-scroll-target="#a-simple-numerical-example">A Simple Numerical Example</a></li>
+  <li><a href="#the-law-does-not-say-local-retention-equals-enclosing-constraint" id="toc-the-law-does-not-say-local-retention-equals-enclosing-constraint" class="nav-link" data-scroll-target="#the-law-does-not-say-local-retention-equals-enclosing-constraint">The Law Does Not Say Local Retention Equals Enclosing Constraint</a></li>
+  <li><a href="#productive-and-background-associated-constraint" id="toc-productive-and-background-associated-constraint" class="nav-link" data-scroll-target="#productive-and-background-associated-constraint">Productive and Background-Associated Constraint</a></li>
+  <li><a href="#the-two-constraint-components-are-not-two-pathways" id="toc-the-two-constraint-components-are-not-two-pathways" class="nav-link" data-scroll-target="#the-two-constraint-components-are-not-two-pathways">The Two Constraint Components Are Not Two Pathways</a></li>
+  <li><a href="#the-r2d-law-is-not-the-second-law" id="toc-the-r2d-law-is-not-the-second-law" class="nav-link" data-scroll-target="#the-r2d-law-is-not-the-second-law">The R<sup>2</sup>D Law Is Not the Second Law</a></li>
+  <li><a href="#background-associated-constraint-is-not-the-background-increment" id="toc-background-associated-constraint-is-not-the-background-increment" class="nav-link" data-scroll-target="#background-associated-constraint-is-not-the-background-increment">Background-Associated Constraint Is Not the Background Increment</a></li>
+  <li><a href="#why-one-representative-peer-is-enough" id="toc-why-one-representative-peer-is-enough" class="nav-link" data-scroll-target="#why-one-representative-peer-is-enough">Why One Representative Peer Is Enough</a></li>
+  <li><a href="#representative-does-not-mean-average" id="toc-representative-does-not-mean-average" class="nav-link" data-scroll-target="#representative-does-not-mean-average">Representative Does Not Mean Average</a></li>
+  <li><a href="#the-law-is-not-bottom-up-export" id="toc-the-law-is-not-bottom-up-export" class="nav-link" data-scroll-target="#the-law-is-not-bottom-up-export">The Law Is Not Bottom-Up Export</a></li>
+  <li><a href="#the-law-is-not-a-conservation-law-of-substance" id="toc-the-law-is-not-a-conservation-law-of-substance" class="nav-link" data-scroll-target="#the-law-is-not-a-conservation-law-of-substance">The Law Is Not a Conservation Law of Substance</a></li>
+  <li><a href="#three-statements-must-remain-separate" id="toc-three-statements-must-remain-separate" class="nav-link" data-scroll-target="#three-statements-must-remain-separate">Three Statements Must Remain Separate</a>
+  <ul class="collapse">
+  <li><a href="#causality" id="toc-causality" class="nav-link" data-scroll-target="#causality">Causality</a></li>
+  <li><a href="#recursive-carry" id="toc-recursive-carry" class="nav-link" data-scroll-target="#recursive-carry">Recursive carry</a></li>
+  <li><a href="#the-r2d-law-1" id="toc-the-r2d-law-1" class="nav-link" data-scroll-target="#the-r2d-law-1">The R<sup>2</sup>D law</a></li>
+  </ul></li>
+  <li><a href="#why-the-law-is-recursive" id="toc-why-the-law-is-recursive" class="nav-link" data-scroll-target="#why-the-law-is-recursive">Why the Law Is Recursive</a></li>
+  <li><a href="#why-the-law-is-dimensionless" id="toc-why-the-law-is-dimensionless" class="nav-link" data-scroll-target="#why-the-law-is-dimensionless">Why the Law Is Dimensionless</a></li>
+  <li><a href="#physical-rate-can-come-later" id="toc-physical-rate-can-come-later" class="nav-link" data-scroll-target="#physical-rate-can-come-later">Physical Rate Can Come Later</a></li>
+  <li><a href="#physical-energy-can-come-later" id="toc-physical-energy-can-come-later" class="nav-link" data-scroll-target="#physical-energy-can-come-later">Physical Energy Can Come Later</a></li>
+  <li><a href="#what-would-test-the-law" id="toc-what-would-test-the-law" class="nav-link" data-scroll-target="#what-would-test-the-law">What Would Test the Law</a></li>
+  <li><a href="#what-would-falsify-the-relation" id="toc-what-would-falsify-the-relation" class="nav-link" data-scroll-target="#what-would-falsify-the-relation">What Would Falsify the Relation</a></li>
+  <li><a href="#the-architecture-in-one-view" id="toc-the-architecture-in-one-view" class="nav-link" data-scroll-target="#the-architecture-in-one-view">The Architecture in One View</a></li>
+  <li><a href="#core-equations" id="toc-core-equations" class="nav-link" data-scroll-target="#core-equations">Core Equations</a>
+  <ul class="collapse">
+  <li><a href="#local-closure-asymmetry" id="toc-local-closure-asymmetry" class="nav-link" data-scroll-target="#local-closure-asymmetry">Local closure asymmetry</a></li>
+  <li><a href="#adjacent-recurrence-ratio" id="toc-adjacent-recurrence-ratio" class="nav-link" data-scroll-target="#adjacent-recurrence-ratio">Adjacent recurrence ratio</a></li>
+  <li><a href="#recurrence-weighted-r2d-law" id="toc-recurrence-weighted-r2d-law" class="nav-link" data-scroll-target="#recurrence-weighted-r2d-law">Recurrence-weighted R<sup>2</sup>D law</a></li>
+  <li><a href="#compact-r2d-law" id="toc-compact-r2d-law" class="nav-link" data-scroll-target="#compact-r2d-law">Compact R<sup>2</sup>D law</a></li>
+  <li><a href="#expanded-form" id="toc-expanded-form" class="nav-link" data-scroll-target="#expanded-form">Expanded form</a></li>
+  <li><a href="#total-enclosing-constraint" id="toc-total-enclosing-constraint" class="nav-link" data-scroll-target="#total-enclosing-constraint">Total enclosing constraint</a></li>
+  <li><a href="#constraint-resolved-form" id="toc-constraint-resolved-form" class="nav-link" data-scroll-target="#constraint-resolved-form">Constraint-resolved form</a></li>
+  </ul></li>
+  <li><a href="#the-key-distinction" id="toc-the-key-distinction" class="nav-link" data-scroll-target="#the-key-distinction">The Key Distinction</a></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The R²D Law</h1>
+<p class="subtitle lead">One recursive relation, read from two adjacent boundaries</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-r2d-law" class="level1">
+<h1>The R<sup>2</sup>D Law</h1>
+<p>The preceding architecture has separated several things that conventional physical descriptions often combine.</p>
+<p>At a local boundary (B_n), we can define:</p>
+<ul>
+<li>a readable closure;</li>
+<li>enclosing-defined possibility;</li>
+<li>local retention;</li>
+<li>net closure asymmetry;</li>
+<li>and the number of times that closure recurs.</li>
+</ul>
+<p>At the enclosing boundary (B_{n+1}), the same recursively organized realization has a different readable form:</p>
+<ul>
+<li>an enclosing occurrence;</li>
+<li>an enclosing distinguishable interval;</li>
+<li>an enclosing constraint;</li>
+<li>and its own recurrence count.</li>
+</ul>
+<p>The R<sup>2</sup>D law proposes that these two boundary-specific readings are not independent.</p>
+<p>They are two count expressions of one recursive realization.</p>
+<p>The law is</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+\]</span></p>
+<p>Using</p>
+<p><span class="math display">\[
+\Delta A
+=
+\Delta P-\Delta R,
+\]</span></p>
+<p>the same law can be written</p>
+<p><span class="math display">\[
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+\]</span></p>
+<p>This is the R<sup>2</sup>D law.</p>
+<section id="one-relation-two-readings" class="level2">
+<h2 class="anchored" data-anchor-id="one-relation-two-readings">One Relation, Two Readings</h2>
+<p>Consider a completed representative local closure</p>
+<p><span class="math display">\[
+\mathcal C_{n,\alpha}.
+\]</span></p>
+<p>At the enclosing boundary, the same recursively organized relation is read through an enclosing occurrence</p>
+<p><span class="math display">\[
+\chi_{n+1}^{(r)}.
+\]</span></p>
+<p>These are not the same boundary-defined object:</p>
+<p><span class="math display">\[
+\mathcal C_{n,\alpha}
+\not\equiv
+\chi_{n+1}^{(r)}.
+\]</span></p>
+<p>The local boundary reads a completed closure.</p>
+<p>The enclosing boundary reads an enclosing occurrence.</p>
+<p>Recursive carry relates their count meanings:</p>
+<p><span class="math display">\[
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+}
+\]</span></p>
+<p>But this arrow is reclassification, not causation.</p>
+<p><a href="../understand/recursive-carry.html">Recursive Carry →</a></p>
+</section>
+<section id="the-causal-relation-still-points-downward" class="level2">
+<h2 class="anchored" data-anchor-id="the-causal-relation-still-points-downward">The Causal Relation Still Points Downward</h2>
+<p>The enclosing occurrence defines which local realizations are compatible with it.</p>
+<p>Thus the causal relation remains</p>
+<p><span class="math display">\[
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\mathcal C_{n,\alpha}.
+}
+\]</span></p>
+<p>The local closure does not independently generate the enclosing occurrence.</p>
+<p>This distinction must remain intact when reading the R<sup>2</sup>D law.</p>
+<p>The equation</p>
+<p><span class="math display">\[
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}
+\]</span></p>
+<p>is not a causal arrow from left to right.</p>
+<p>Nor is it a causal arrow from right to left.</p>
+<p>It is an <strong>invariant recursive relation between two boundary-specific readings</strong>.</p>
+<p><a href="../understand/causal-inversion.html">The Causal Inversion →</a></p>
+</section>
+<section id="the-local-reading" class="level2">
+<h2 class="anchored" data-anchor-id="the-local-reading">The Local Reading</h2>
+<p>At the representative peer boundary (B_{n,}), the completed closure has accumulated possibility</p>
+<p><span class="math display">\[
+\Delta P_{n,\alpha,\mathcal C},
+\]</span></p>
+<p>accumulated retention</p>
+<p><span class="math display">\[
+\Delta R_{n,\alpha,\mathcal C},
+\]</span></p>
+<p>and therefore net closure asymmetry</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}.
+}
+\]</span></p>
+<p>This is the directional asymmetry remaining around one completed local closure.</p>
+<p><a href="../understand/closure.html">Closure →</a></p>
+<p><a href="../understand/asymmetry.html">Asymmetry →</a></p>
+</section>
+<section id="the-local-recurrence-count" class="level2">
+<h2 class="anchored" data-anchor-id="the-local-recurrence-count">The Local Recurrence Count</h2>
+<p>Now choose one recurrence-comparison domain</p>
+<p><span class="math display">\[
+\mathcal D_R.
+\]</span></p>
+<p>Let</p>
+<p><span class="math display">\[
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+\]</span></p>
+<p>be the number of completed recurrences of the local closure within that domain.</p>
+<p>The recurrence-weighted local asymmetry is therefore</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right).
+}
+\]</span></p>
+<p>This quantity is still dimensionless.</p>
+<p>It is not:</p>
+<ul>
+<li>energy;</li>
+<li>power;</li>
+<li>elapsed time;</li>
+<li>force;</li>
+<li>or physical work.</li>
+</ul>
+<p>It is simply the asymmetry associated with one completed local closure, weighted by the number of times that closure recurs in the chosen comparison domain.</p>
+</section>
+<section id="the-enclosing-reading" class="level2">
+<h2 class="anchored" data-anchor-id="the-enclosing-reading">The Enclosing Reading</h2>
+<p>At boundary (B_{n+1}), the same recursively organized relation is read differently.</p>
+<p>Let</p>
+<p><span class="math display">\[
+\lambda_{n+1}
+\]</span></p>
+<p>be the enclosing distinguishable interval.</p>
+<p>Let</p>
+<p><span class="math display">\[
+C_{n+1}
+\]</span></p>
+<p>be the total enclosing constraint.</p>
+<p>The constrained distinguishability associated with one enclosing recurrence is</p>
+<p><span class="math display">\[
+\boxed{
+C_{n+1}\lambda_{n+1}.
+}
+\]</span></p>
+<p>Again, neither quantity is yet assigned a specific physical unit.</p>
+<p>The product is a dimensionless constrained-distinguishability relation.</p>
+</section>
+<section id="the-enclosing-recurrence-count" class="level2">
+<h2 class="anchored" data-anchor-id="the-enclosing-recurrence-count">The Enclosing Recurrence Count</h2>
+<p>Within the same recurrence-comparison domain</p>
+<p><span class="math display">\[
+\mathcal D_R,
+\]</span></p>
+<p>let</p>
+<p><span class="math display">\[
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+\]</span></p>
+<p>count completed recurrences of the enclosing transition class.</p>
+<p>The recurrence-weighted enclosing constrained distinguishability is</p>
+<p><span class="math display">\[
+\boxed{
+C_{n+1}
+\lambda_{n+1}
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right).
+}
+\]</span></p>
+<p>The two boundaries therefore provide two complete count expressions of the same recursively organized relation.</p>
+</section>
+<section id="the-recurrence-weighted-form" class="level2">
+<h2 class="anchored" data-anchor-id="the-recurrence-weighted-form">The Recurrence-Weighted Form</h2>
+<p>R<sup>2</sup>D postulates that these two recurrence-weighted readings are equal:</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+=
+C_{n+1}
+\lambda_{n+1}
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right).
+}
+\]</span></p>
+<p>This is the most explicit form of the R<sup>2</sup>D law.</p>
+<p>It says that over one common recurrence-comparison domain,</p>
+<blockquote class="blockquote">
+<p><strong>local recurrence-weighted closure asymmetry</strong></p>
+</blockquote>
+<p>and</p>
+<blockquote class="blockquote">
+<p><strong>enclosing recurrence-weighted constrained distinguishability</strong></p>
+</blockquote>
+<p>are two equivalent readings of one recursive relation.</p>
+</section>
+<section id="introduce-the-recurrence-ratio" class="level2">
+<h2 class="anchored" data-anchor-id="introduce-the-recurrence-ratio">Introduce the Recurrence Ratio</h2>
+<p>The adjacent recurrence ratio is</p>
+<p><span class="math display">\[
+\rho_{n+1|n,\alpha}
+=
+\frac{
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+}{
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+}.
+\]</span></p>
+<p>This asks how many enclosing recurrences occur per completed recurrence of the representative local closure.</p>
+<p><a href="../understand/recurrence.html">Recurrence →</a></p>
+<p>Divide the recurrence-weighted law by</p>
+<p><span class="math display">\[
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right).
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+\]</span></p>
+<p>This is the compact form of the R<sup>2</sup>D law.</p>
+</section>
+<section id="expand-the-local-asymmetry" class="level2">
+<h2 class="anchored" data-anchor-id="expand-the-local-asymmetry">Expand the Local Asymmetry</h2>
+<p>Because</p>
+<p><span class="math display">\[
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C},
+\]</span></p>
+<p>the law becomes</p>
+<p><span class="math display">\[
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+\]</span></p>
+<p>The left side is read at the local closure boundary.</p>
+<p>The right side is read through the enclosing occurrence.</p>
+<p>The equality relates them without identifying them as the same local quantity.</p>
+</section>
+<section id="what-the-left-side-means" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-left-side-means">What the Left Side Means</h2>
+<p>The left side asks:</p>
+<blockquote class="blockquote">
+<p><strong>How much enclosing-defined directional asymmetry remains around one completed compatible local closure?</strong></p>
+</blockquote>
+<p>Possibility contributes</p>
+<p><span class="math display">\[
+\Delta P_{n,\alpha,\mathcal C}.
+\]</span></p>
+<p>Local productive retention contributes</p>
+<p><span class="math display">\[
+\Delta R_{n,\alpha,\mathcal C}.
+\]</span></p>
+<p>Their difference is</p>
+<p><span class="math display">\[
+\Delta A_{n,\alpha,\mathcal C}.
+\]</span></p>
+<p>This is the local reading of the recursive relation.</p>
+</section>
+<section id="what-the-right-side-means" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-right-side-means">What the Right Side Means</h2>
+<p>The right side asks:</p>
+<blockquote class="blockquote">
+<p><strong>How much constrained distinguishability is readable per enclosing recurrence, and how often does that recurrence occur relative to the local closure?</strong></p>
+</blockquote>
+<p>The constrained enclosing distinction is</p>
+<p><span class="math display">\[
+C_{n+1}\lambda_{n+1}.
+\]</span></p>
+<p>Its recurrence relative to the local closure is</p>
+<p><span class="math display">\[
+\rho_{n+1|n,\alpha}.
+\]</span></p>
+<p>Together:</p>
+<p><span class="math display">\[
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+\]</span></p>
+<p>This is the enclosing reading of the same recursive relation.</p>
+</section>
+<section id="why-recurrence-is-necessary" class="level2">
+<h2 class="anchored" data-anchor-id="why-recurrence-is-necessary">Why Recurrence Is Necessary</h2>
+<p>Suppose the local and enclosing boundaries recur one-for-one.</p>
+<p>Then</p>
+<p><span class="math display">\[
+\rho_{n+1|n,\alpha}=1,
+\]</span></p>
+<p>and the law reduces to</p>
+<p><span class="math display">\[
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}\lambda_{n+1}.
+\]</span></p>
+<p>But recursive boundaries need not recur one-for-one.</p>
+<p>A local closure may recur many times for every enclosing recurrence.</p>
+<p>Then</p>
+<p><span class="math display">\[
+\rho_{n+1|n,\alpha}&lt;1.
+\]</span></p>
+<p>The recurrence factor is therefore necessary to compare the two boundary-specific readings correctly.</p>
+<p>The law does not equate one local event with one enclosing event.</p>
+<p>It relates their <strong>recurrence-weighted structure</strong>.</p>
+</section>
+<section id="a-simple-numerical-example" class="level2">
+<h2 class="anchored" data-anchor-id="a-simple-numerical-example">A Simple Numerical Example</h2>
+<p>Suppose one local closure has</p>
+<p><span class="math display">\[
+\Delta A_{\mathcal C}=2.
+\]</span></p>
+<p>Suppose that within the same comparison domain the local closure recurs</p>
+<p><span class="math display">\[
+1000
+\]</span></p>
+<p>times while the enclosing occurrence recurs</p>
+<p><span class="math display">\[
+100
+\]</span></p>
+<p>times.</p>
+<p>Then</p>
+<p><span class="math display">\[
+\rho
+=
+\frac{100}{1000}
+=
+0.1.
+\]</span></p>
+<p>The R<sup>2</sup>D law requires</p>
+<p><span class="math display">\[
+2
+=
+C\lambda(0.1).
+\]</span></p>
+<p>Therefore</p>
+<p><span class="math display">\[
+C\lambda=20.
+\]</span></p>
+<p>The local boundary reads asymmetry (2) per local recurrence.</p>
+<p>The enclosing boundary reads constrained distinguishability (20) per enclosing recurrence.</p>
+<p>Because the enclosing occurrence recurs only one tenth as often, the recurrence-weighted totals agree:</p>
+<p><span class="math display">\[
+2(1000)=20(100).
+\]</span></p>
+<p>Thus:</p>
+<p><span class="math display">\[
+2000=2000.
+\]</span></p>
+<p>The two per-recurrence quantities are different.</p>
+<p>Their recurrence-weighted recursive relation is the same.</p>
+</section>
+<section id="the-law-does-not-say-local-retention-equals-enclosing-constraint" class="level2">
+<h2 class="anchored" data-anchor-id="the-law-does-not-say-local-retention-equals-enclosing-constraint">The Law Does Not Say Local Retention Equals Enclosing Constraint</h2>
+<p>This distinction is important.</p>
+<p>Local retention is</p>
+<p><span class="math display">\[
+\Delta R_n
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_n.
+\]</span></p>
+<p>The enclosing side of the R<sup>2</sup>D law is</p>
+<p><span class="math display">\[
+C_{n+1}
+\lambda_{n+1}.
+\]</span></p>
+<p>These are not the same quantity.</p>
+<p>In particular,</p>
+<p><span class="math display">\[
+\boxed{
+\Delta R_n
+\neq
+C_{n+1}\lambda_{n+1}
+}
+\]</span></p>
+<p>in general.</p>
+<p>They use different distinguishable intervals and different readings of constraint at adjacent boundaries.</p>
+<p><a href="../understand/constraint-retention.html">Constraint and Retention →</a></p>
+</section>
+<section id="productive-and-background-associated-constraint" class="level2">
+<h2 class="anchored" data-anchor-id="productive-and-background-associated-constraint">Productive and Background-Associated Constraint</h2>
+<p>The total enclosing constraint can be decomposed as</p>
+<p><span class="math display">\[
+\boxed{
+C_{n+1}
+=
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}.
+}
+\]</span></p>
+<p>The productive/output component</p>
+<p><span class="math display">\[
+C_{n+1}^{\mathrm{out}}
+\]</span></p>
+<p>is the component that enters local retention:</p>
+<p><span class="math display">\[
+\Delta R_n
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_n.
+\]</span></p>
+<p>The background-associated component</p>
+<p><span class="math display">\[
+C_{n+1}^{\Phi}
+\]</span></p>
+<p>does not enter local retention.</p>
+<p>But both components contribute to the total enclosing constrained distinguishability read.</p>
+<p>Therefore the R<sup>2</sup>D law becomes</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\left(
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}
+\right)
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+\]</span></p>
+</section>
+<section id="the-two-constraint-components-are-not-two-pathways" class="level2">
+<h2 class="anchored" data-anchor-id="the-two-constraint-components-are-not-two-pathways">The Two Constraint Components Are Not Two Pathways</h2>
+<p>The decomposition</p>
+<p><span class="math display">\[
+C_{n+1}
+=
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}
+\]</span></p>
+<p>does not mean the enclosing occurrence splits into two separate transitions.</p>
+<p>Nor does it mean two independent streams travel upward or downward.</p>
+<p>Both terms belong to the same enclosing occurrence.</p>
+<p>They distinguish two readable aspects of its constrained realization:</p>
+<p><span class="math display">\[
+\boxed{
+C_{n+1}^{\mathrm{out}}
+\lambda_{n+1}
+\longleftrightarrow
+\text{retained distinguishable output}
+}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\boxed{
+C_{n+1}^{\Phi}
+\lambda_{n+1}
+\longleftrightarrow
+\text{background-associated realization}.
+}
+\]</span></p>
+<p>These are boundary-specific readings, not separate causal channels.</p>
+</section>
+<section id="the-r2d-law-is-not-the-second-law" class="level2">
+<h2 class="anchored" data-anchor-id="the-r2d-law-is-not-the-second-law">The R<sup>2</sup>D Law Is Not the Second Law</h2>
+<p>This distinction is especially important.</p>
+<p>The R<sup>2</sup>D law relates</p>
+<p><span class="math display">\[
+\boxed{
+\text{local recurrence-weighted asymmetry}
+}
+\]</span></p>
+<p>to</p>
+<p><span class="math display">\[
+\boxed{
+\text{enclosing recurrence-weighted constrained distinguishability}.
+}
+\]</span></p>
+<p>The R<sup>2</sup>D Second Law addresses something else.</p>
+<p>It relates local <strong>opposed-leg occurrence nonreciprocity</strong> to an enclosing <strong>background increment</strong>.</p>
+<p>Schematically:</p>
+<p><span class="math display">\[
+\boxed{
+\text{R²D law:}
+\qquad
+\text{local closure geometry}
+\longleftrightarrow
+\text{enclosing constrained geometry}
+}
+\]</span></p>
+<p>whereas</p>
+<p><span class="math display">\[
+\boxed{
+\text{Second Law:}
+\qquad
+\text{local occurrence nonreciprocity}
+\longleftrightarrow
+\text{enclosing background increment}.
+}
+\]</span></p>
+<p>They are complementary postulates.</p>
+<p>They are not two forms of the same equation.</p>
+<p><a href="../understand/second-law.html">The R²D Second Law →</a></p>
+</section>
+<section id="background-associated-constraint-is-not-the-background-increment" class="level2">
+<h2 class="anchored" data-anchor-id="background-associated-constraint-is-not-the-background-increment">Background-Associated Constraint Is Not the Background Increment</h2>
+<p>The R<sup>2</sup>D law contains</p>
+<p><span class="math display">\[
+C_{n+1}^{\Phi}
+\lambda_{n+1}.
+\]</span></p>
+<p>The Second Law later contains</p>
+<p><span class="math display">\[
+\delta_{\mathcal C}\Phi_{n+1}.
+\]</span></p>
+<p>Part I does <strong>not</strong> postulate</p>
+<p><span class="math display">\[
+C_{n+1}^{\Phi}
+\lambda_{n+1}
+=
+\delta_{\mathcal C}\Phi_{n+1}.
+\]</span></p>
+<p>These quantities play different roles.</p>
+<p>The first belongs to the decomposition of enclosing constrained distinguishability.</p>
+<p>The second is the enclosing read of local occurrence-count nonreciprocity.</p>
+<p>A later physical mapping may establish relationships between their physical reads in a specific domain.</p>
+<p>That relationship is not primitive to Part I.</p>
+</section>
+<section id="why-one-representative-peer-is-enough" class="level2">
+<h2 class="anchored" data-anchor-id="why-one-representative-peer-is-enough">Why One Representative Peer Is Enough</h2>
+<p>An enclosing occurrence can have many compatible peer realizations:</p>
+<p><span class="math display">\[
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\left\{
+\mathcal C_{n,\alpha}
+\right\}_{\alpha\in I_n}.
+\]</span></p>
+<p>Suppose peers () and () are equivalent under the same enclosing compatibility relation.</p>
+<p>Then either may serve as a representative local realization.</p>
+<p>Applying the law to each gives</p>
+<p><span class="math display">\[
+\Delta A_{n,\alpha,\mathcal C}
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+=
+C_{n+1}
+\lambda_{n+1}
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right),
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\Delta A_{n,\beta,\mathcal C}
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\beta}
+\right)
+=
+C_{n+1}
+\lambda_{n+1}
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right).
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\boxed{
+\frac{
+\Delta A_{n,\alpha,\mathcal C}
+}{
+\rho_{n+1|n,\alpha}
+}
+=
+\frac{
+\Delta A_{n,\beta,\mathcal C}
+}{
+\rho_{n+1|n,\beta}
+}
+=
+C_{n+1}\lambda_{n+1}.
+}
+\]</span></p>
+<p>Equivalent peers share the same enclosing recursive relation.</p>
+</section>
+<section id="representative-does-not-mean-average" class="level2">
+<h2 class="anchored" data-anchor-id="representative-does-not-mean-average">Representative Does Not Mean Average</h2>
+<p>The representative peer is not obtained by averaging all local peers.</p>
+<p>Nor does one selected peer causally stand in for the contributions of the others.</p>
+<p>It is representative because equivalent peers occupy the same compatibility class relative to the enclosing occurrence.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{representative peer}
+\neq
+\text{average peer}.
+}
+\]</span></p>
+<p>If peer closures are not equivalent under the enclosing relation, their indices must remain explicit.</p>
+<p>No averaging over nonequivalent peers is assumed.</p>
+</section>
+<section id="the-law-is-not-bottom-up-export" class="level2">
+<h2 class="anchored" data-anchor-id="the-law-is-not-bottom-up-export">The Law Is Not Bottom-Up Export</h2>
+<p>An earlier intuition might suggest that the local quantity</p>
+<p><span class="math display">\[
+\Delta A
+\]</span></p>
+<p>is somehow exported upward and becomes</p>
+<p><span class="math display">\[
+C\lambda.
+\]</span></p>
+<p>That is not the current R<sup>2</sup>D architecture.</p>
+<p>The law does not describe transport of a substance between scales.</p>
+<p>It does not say:</p>
+<p><span class="math display">\[
+\Delta A_n
+\longrightarrow
+C_{n+1}\lambda_{n+1}.
+\]</span></p>
+<p>Instead, it says that the same recursively organized realization has two boundary-specific mathematical readings whose recurrence-weighted forms are equal.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>Nothing has to travel from the local closure to the enclosing occurrence.</strong></p>
+</blockquote>
+<p>The boundary changes.</p>
+<p>The count meaning changes.</p>
+<p>The invariant recursive relation remains.</p>
+</section>
+<section id="the-law-is-not-a-conservation-law-of-substance" class="level2">
+<h2 class="anchored" data-anchor-id="the-law-is-not-a-conservation-law-of-substance">The Law Is Not a Conservation Law of Substance</h2>
+<p>For the same reason, the R<sup>2</sup>D law should not be interpreted as conservation of a material quantity.</p>
+<p>The equality</p>
+<p><span class="math display">\[
+\Delta A_n N_n
+=
+C_{n+1}\lambda_{n+1}N_{n+1}
+\]</span></p>
+<p>does not imply that some substance has been physically transferred from the left side to the right side.</p>
+<p>It states that two count representations of one recursively organized realization agree when recurrence is properly included.</p>
+<p>The invariant is relational.</p>
+</section>
+<section id="three-statements-must-remain-separate" class="level2">
+<h2 class="anchored" data-anchor-id="three-statements-must-remain-separate">Three Statements Must Remain Separate</h2>
+<p>The recursive architecture can now be summarized by three equations.</p>
+<section id="causality" class="level3">
+<h3 class="anchored" data-anchor-id="causality">Causality</h3>
+<p><span class="math display">\[
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\mathcal C_{n,\alpha}.
+}
+\]</span></p>
+<p>This asks:</p>
+<blockquote class="blockquote">
+<p>Which local realization is compatible with the enclosing occurrence?</p>
+</blockquote>
+</section>
+<section id="recursive-carry" class="level3">
+<h3 class="anchored" data-anchor-id="recursive-carry">Recursive carry</h3>
+<p><span class="math display">\[
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+}
+\]</span></p>
+<p>This asks:</p>
+<blockquote class="blockquote">
+<p>How does the completed local realization change count meaning when the boundary changes?</p>
+</blockquote>
+</section>
+<section id="the-r2d-law-1" class="level3">
+<h3 class="anchored" data-anchor-id="the-r2d-law-1">The R<sup>2</sup>D law</h3>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+\]</span></p>
+<p>This asks:</p>
+<blockquote class="blockquote">
+<p>How are the two boundary-specific realization geometries related after recurrence is accounted for?</p>
+</blockquote>
+<p>These are three different questions.</p>
+<p>They should not be collapsed into one arrow.</p>
+</section>
+</section>
+<section id="why-the-law-is-recursive" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-law-is-recursive">Why the Law Is Recursive</h2>
+<p>The law contains quantities from two adjacent boundaries simultaneously.</p>
+<p>The local side contains</p>
+<p><span class="math display">\[
+\Delta A_{n,\alpha,\mathcal C}.
+\]</span></p>
+<p>The enclosing side contains</p>
+<p><span class="math display">\[
+C_{n+1},
+\qquad
+\lambda_{n+1}.
+\]</span></p>
+<p>The bridge between them is</p>
+<p><span class="math display">\[
+\rho_{n+1|n,\alpha}.
+\]</span></p>
+<p>Thus the law cannot be reduced to a relation confined entirely to one boundary.</p>
+<p>Its primitive structure is intrinsically recursive:</p>
+<p><span class="math display">\[
+\boxed{
+B_n
+\longleftrightarrow
+B_{n+1}.
+}
+\]</span></p>
+<p>That is what distinguishes it from an ordinary within-scale state equation.</p>
+</section>
+<section id="why-the-law-is-dimensionless" class="level2">
+<h2 class="anchored" data-anchor-id="why-the-law-is-dimensionless">Why the Law Is Dimensionless</h2>
+<p>Every quantity in Part I remains a count relation.</p>
+<p>(A) is a logarithmic count asymmetry.</p>
+<p>(C) is a dimensionless constraint coordinate.</p>
+<p>() is a distinguishable count interval.</p>
+<p>() is a ratio of recurrence counts.</p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A
+=
+C\lambda\rho
+}
+\]</span></p>
+<p>is defined before any physical units are assigned.</p>
+<p>This is deliberate.</p>
+<p>R<sup>2</sup>D first defines the recursive relation.</p>
+<p>Later science can determine how a particular physical system reads each quantity.</p>
+<p><a href="../understand/before-units.html">Why the Mathematics Comes Before Units →</a></p>
+</section>
+<section id="physical-rate-can-come-later" class="level2">
+<h2 class="anchored" data-anchor-id="physical-rate-can-come-later">Physical Rate Can Come Later</h2>
+<p>The recurrence ratio</p>
+<p><span class="math display">\[
+\rho_{n+1|n}
+\]</span></p>
+<p>is not a physical rate in Part I.</p>
+<p>But a later domain-specific mapping may identify</p>
+<p><span class="math display">\[
+\rho_{n+1|n}
+\]</span></p>
+<p>with a ratio of physical recurrence rates.</p>
+<p>For example, if a physical system supplies valid mappings</p>
+<p><span class="math display">\[
+r_n
+\longleftrightarrow
+\text{local recurrence rate}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+r_{n+1}
+\longleftrightarrow
+\text{enclosing recurrence rate},
+\]</span></p>
+<p>then one may test whether</p>
+<p><span class="math display">\[
+\rho_{n+1|n}
+\longleftrightarrow
+\frac{r_{n+1}}{r_n}.
+\]</span></p>
+<p>That is an empirical calibration.</p>
+<p>It is not assumed by the primitive law.</p>
+</section>
+<section id="physical-energy-can-come-later" class="level2">
+<h2 class="anchored" data-anchor-id="physical-energy-can-come-later">Physical Energy Can Come Later</h2>
+<p>Likewise, a later thermodynamic mapping may assign an energetic scale to the dimensionless quantities.</p>
+<p>Then the R<sup>2</sup>D relation may acquire familiar physical units on both sides.</p>
+<p>But the physical mapping must preserve the primitive recursive structure.</p>
+<p>The logical order remains</p>
+<p><span class="math display">\[
+\boxed{
+\text{dimensionless recursive law}
+\rightarrow
+\text{physical calibration}.
+}
+\]</span></p>
+<p>Not the reverse.</p>
+<p>This is why one law can in principle be tested in very different physical domains.</p>
+</section>
+<section id="what-would-test-the-law" class="level2">
+<h2 class="anchored" data-anchor-id="what-would-test-the-law">What Would Test the Law</h2>
+<p>The R<sup>2</sup>D law is a postulate of the framework.</p>
+<p>It is not a combinatorial identity that follows automatically from the definitions of boundary, multiplicity, or closure.</p>
+<p>Its empirical burden is therefore substantial.</p>
+<p>A physical realization must supply independent readings of:</p>
+<p><span class="math display">\[
+\Delta A_{n,\alpha,\mathcal C},
+\]</span></p>
+<p><span class="math display">\[
+C_{n+1},
+\]</span></p>
+<p><span class="math display">\[
+\lambda_{n+1},
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\rho_{n+1|n,\alpha},
+\]</span></p>
+<p>and test whether</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+\]</span></p>
+<p>A successful mapping must also preserve the causal distinction:</p>
+<p>the local closure realizes the enclosing relation;</p>
+<p>it does not become its primitive cause.</p>
+</section>
+<section id="what-would-falsify-the-relation" class="level2">
+<h2 class="anchored" data-anchor-id="what-would-falsify-the-relation">What Would Falsify the Relation</h2>
+<p>Within a proposed physical mapping, the R<sup>2</sup>D law would fail if the independently identified boundary-specific quantities could not satisfy the recursive relation without arbitrary redefinition.</p>
+<p>In particular, one should not rescue the law by silently redefining:</p>
+<ul>
+<li>the count boundary;</li>
+<li>the local closure;</li>
+<li>the enclosing occurrence;</li>
+<li>the distinguishable interval;</li>
+<li>the constraint;</li>
+<li>or the recurrence ratio</li>
+</ul>
+<p>after the empirical comparison is made.</p>
+<p>The mapping must be specified first.</p>
+<p>The relation must then be tested.</p>
+<p>This is central to the <strong>Run R²D</strong> program.</p>
+</section>
+<section id="the-architecture-in-one-view" class="level2">
+<h2 class="anchored" data-anchor-id="the-architecture-in-one-view">The Architecture in One View</h2>
+<p>The complete adjacent-boundary architecture is</p>
+<p><span class="math display">\[
+\boxed{
+\begin{array}{ccccc}
+&amp;&amp;
+\chi_{n+1}^{(r)}
+&amp;&amp;
+\\[4pt]
+&amp;
+\swarrow
+&amp;&amp;
+&amp;
+\\[-2pt]
+\text{causal compatibility}
+&amp;&amp;
+\mathcal C_{n,\alpha}
+&amp;&amp;
+\\[8pt]
+&amp;&amp;
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}
+&amp;&amp;
+\\[8pt]
+&amp;&amp;
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}
+&amp;&amp;
+\end{array}
+}
+\]</span></p>
+<p>The first relation defines local realization.</p>
+<p>The second changes count meaning.</p>
+<p>The third relates the recurrence-weighted geometry of the two readings.</p>
+<p>Together they form the central recursive architecture of R<sup>2</sup>D.</p>
+<hr>
+</section>
+<section id="core-equations" class="level2">
+<h2 class="anchored" data-anchor-id="core-equations">Core Equations</h2>
+<section id="local-closure-asymmetry" class="level3">
+<h3 class="anchored" data-anchor-id="local-closure-asymmetry">Local closure asymmetry</h3>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}
+}
+\]</span></p>
+</section>
+<section id="adjacent-recurrence-ratio" class="level3">
+<h3 class="anchored" data-anchor-id="adjacent-recurrence-ratio">Adjacent recurrence ratio</h3>
+<p><span class="math display">\[
+\boxed{
+\rho_{n+1|n,\alpha}
+=
+\frac{
+N_{\mathcal D_R}(\chi_{n+1})
+}{
+N_{\mathcal D_R}(\mathcal C_{n,\alpha})
+}
+}
+\]</span></p>
+</section>
+<section id="recurrence-weighted-r2d-law" class="level3">
+<h3 class="anchored" data-anchor-id="recurrence-weighted-r2d-law">Recurrence-weighted R<sup>2</sup>D law</h3>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+=
+C_{n+1}
+\lambda_{n+1}
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+}
+\]</span></p>
+</section>
+<section id="compact-r2d-law" class="level3">
+<h3 class="anchored" data-anchor-id="compact-r2d-law">Compact R<sup>2</sup>D law</h3>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}
+}
+\]</span></p>
+</section>
+<section id="expanded-form" class="level3">
+<h3 class="anchored" data-anchor-id="expanded-form">Expanded form</h3>
+<p><span class="math display">\[
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}
+}
+\]</span></p>
+</section>
+<section id="total-enclosing-constraint" class="level3">
+<h3 class="anchored" data-anchor-id="total-enclosing-constraint">Total enclosing constraint</h3>
+<p><span class="math display">\[
+\boxed{
+C_{n+1}
+=
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}
+}
+\]</span></p>
+</section>
+<section id="constraint-resolved-form" class="level3">
+<h3 class="anchored" data-anchor-id="constraint-resolved-form">Constraint-resolved form</h3>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\left(
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}
+\right)
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+\]</span></p>
+<hr>
+</section>
+</section>
+<section id="the-key-distinction" class="level2">
+<h2 class="anchored" data-anchor-id="the-key-distinction">The Key Distinction</h2>
+<p>The R<sup>2</sup>D law does not say that local asymmetry is exported upward.</p>
+<p>It does not say that a subordinate closure creates an enclosing occurrence.</p>
+<p>And it does not say that the same physical state persists unchanged across the boundary.</p>
+<p>It says something more specific:</p>
+<blockquote class="blockquote">
+<p><strong>One recursively organized realization has different readable forms at adjacent boundaries.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Those forms can recur at different counts.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>When recurrence is included, their boundary-specific realization geometries satisfy one invariant relation.</strong></p>
+</blockquote>
+<p>That is the R<sup>2</sup>D law.</p>
+<p>The next question is different:</p>
+<blockquote class="blockquote">
+<p><strong>What happens when the opposed legs of a completed local closure are realized with unequal occurrence-count efficiency?</strong></p>
+</blockquote>
+<p>That is the R<sup>2</sup>D Second Law.</p>
+<hr>
+</section>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<p><a href="../understand/second-law.html">The R²D Second Law →</a></p>
+<p><a href="../understand/not-coarse-graining.html">Why R²D Is Not Coarse-Graining →</a></p>
+<p><a href="../understand/scientific-objecthood.html">Scientific Objecthood →</a></p>
+<p><a href="../understand/from-count-to-physics.html">From Count to Physical Science →</a></p>
+<p><a href="../understand/index.html">Back to Understand R²D →</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/r2dscience\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

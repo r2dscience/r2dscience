@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Recursive Replacement – R²D Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R²D Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-understand" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Understand</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-understand">    
+        <li>
+    <a class="dropdown-item" href="../understand/what-is-r2d.html">
+ <span class="dropdown-text">What is R²D?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../understand/index.html">
+ <span class="dropdown-text">Understand R²D</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../run/index.html"> 
+<span class="menu-text">Run R²D</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../applications/index.html"> 
+<span class="menu-text">Applications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../canon/index.html"> 
+<span class="menu-text">Canon</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About R²D Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/authors.html">
+ <span class="dropdown-text">Authors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/publications.html">
+ <span class="dropdown-text">Publications &amp; Archive</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/contact.html">
+ <span class="dropdown-text">Contact</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#recursive-replacement" id="toc-recursive-replacement" class="nav-link active" data-scroll-target="#recursive-replacement">Recursive Replacement</a>
+  <ul class="collapse">
+  <li><a href="#start-with-boundary-relative-statehood" id="toc-start-with-boundary-relative-statehood" class="nav-link" data-scroll-target="#start-with-boundary-relative-statehood">Start With Boundary-Relative Statehood</a></li>
+  <li><a href="#a-state-is-not-carried-upward-unchanged" id="toc-a-state-is-not-carried-upward-unchanged" class="nav-link" data-scroll-target="#a-state-is-not-carried-upward-unchanged">A State Is Not Carried Upward Unchanged</a></li>
+  <li><a href="#a-coin-example" id="toc-a-coin-example" class="nav-link" data-scroll-target="#a-coin-example">A Coin Example</a></li>
+  <li><a href="#replacement-is-many-to-one" id="toc-replacement-is-many-to-one" class="nav-link" data-scroll-target="#replacement-is-many-to-one">Replacement Is Many-to-One</a></li>
+  <li><a href="#replacement-is-not-destruction" id="toc-replacement-is-not-destruction" class="nav-link" data-scroll-target="#replacement-is-not-destruction">Replacement Is Not Destruction</a></li>
+  <li><a href="#replacement-is-not-coarse-graining" id="toc-replacement-is-not-coarse-graining" class="nav-link" data-scroll-target="#replacement-is-not-coarse-graining">Replacement Is Not Coarse-Graining</a></li>
+  <li><a href="#macrostate-here-microstate-there" id="toc-macrostate-here-microstate-there" class="nav-link" data-scroll-target="#macrostate-here-microstate-there">Macrostate Here, Microstate There</a></li>
+  <li><a href="#replacement-changes-what-the-object-is" id="toc-replacement-changes-what-the-object-is" class="nav-link" data-scroll-target="#replacement-changes-what-the-object-is">Replacement Changes What the Object Is</a></li>
+  <li><a href="#why-this-matters-in-biology" id="toc-why-this-matters-in-biology" class="nav-link" data-scroll-target="#why-this-matters-in-biology">Why This Matters in Biology</a></li>
+  <li><a href="#replacement-is-recursive" id="toc-replacement-is-recursive" class="nav-link" data-scroll-target="#replacement-is-recursive">Replacement Is Recursive</a></li>
+  <li><a href="#replacement-does-not-mean-bottom-up-construction" id="toc-replacement-does-not-mean-bottom-up-construction" class="nav-link" data-scroll-target="#replacement-does-not-mean-bottom-up-construction">Replacement Does Not Mean Bottom-Up Construction</a></li>
+  <li><a href="#two-directions-must-be-distinguished" id="toc-two-directions-must-be-distinguished" class="nav-link" data-scroll-target="#two-directions-must-be-distinguished">Two Directions Must Be Distinguished</a></li>
+  <li><a href="#replacement-and-carry-are-related-but-distinct" id="toc-replacement-and-carry-are-related-but-distinct" class="nav-link" data-scroll-target="#replacement-and-carry-are-related-but-distinct">Replacement and Carry Are Related but Distinct</a></li>
+  <li><a href="#replacement-preserves-multiplicity-consequence" id="toc-replacement-preserves-multiplicity-consequence" class="nav-link" data-scroll-target="#replacement-preserves-multiplicity-consequence">Replacement Preserves Multiplicity Consequence</a></li>
+  <li><a href="#a-recursive-counting-hierarchy" id="toc-a-recursive-counting-hierarchy" class="nav-link" data-scroll-target="#a-recursive-counting-hierarchy">A Recursive Counting Hierarchy</a></li>
+  <li><a href="#why-recursive-replacement-matters" id="toc-why-recursive-replacement-matters" class="nav-link" data-scroll-target="#why-recursive-replacement-matters">Why Recursive Replacement Matters</a>
+  <ul class="collapse">
+  <li><a href="#the-observer-problem" id="toc-the-observer-problem" class="nav-link" data-scroll-target="#the-observer-problem">The observer problem</a></li>
+  <li><a href="#the-many-body-problem" id="toc-the-many-body-problem" class="nav-link" data-scroll-target="#the-many-body-problem">The many-body problem</a></li>
+  <li><a href="#emergence" id="toc-emergence" class="nav-link" data-scroll-target="#emergence">Emergence</a></li>
+  <li><a href="#reduction" id="toc-reduction" class="nav-link" data-scroll-target="#reduction">Reduction</a></li>
+  <li><a href="#cross-scale-causality" id="toc-cross-scale-causality" class="nav-link" data-scroll-target="#cross-scale-causality">Cross-scale causality</a></li>
+  </ul></li>
+  <li><a href="#the-core-principle" id="toc-the-core-principle" class="nav-link" data-scroll-target="#the-core-principle">The Core Principle</a></li>
+  <li><a href="#the-architecture-so-far" id="toc-the-architecture-so-far" class="nav-link" data-scroll-target="#the-architecture-so-far">The Architecture So Far</a></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Recursive Replacement</h1>
+<p class="subtitle lead">Changing the boundary changes the state domain</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="recursive-replacement" class="level1">
+<h1>Recursive Replacement</h1>
+<p>R<sup>2</sup>D defines microstate and macrostate relative to a count boundary.</p>
+<p>That immediately creates a consequence:</p>
+<blockquote class="blockquote">
+<p><strong>When the boundary changes, the state domain changes.</strong></p>
+</blockquote>
+<p>A state that is readable as a macrostate at one boundary does not remain the same macrostate at the next boundary.</p>
+<p>Its count meaning changes.</p>
+<p>R<sup>2</sup>D calls this change in state domain <strong>recursive replacement</strong>.</p>
+<p>Recursive replacement is not the disappearance of the subordinate physical system.</p>
+<p>It is the replacement of one boundary-defined state classification by another.</p>
+<section id="start-with-boundary-relative-statehood" class="level2">
+<h2 class="anchored" data-anchor-id="start-with-boundary-relative-statehood">Start With Boundary-Relative Statehood</h2>
+<p>At boundary (B_n), a macrostate (i) is readable.</p>
+<p>Its formal microstates are compatible joint realizations of the immediately subordinate peer boundaries:</p>
+<p><span class="math display">\[
+\mu_n
+\in
+\mathfrak{M}_n.
+\]</span></p>
+<p>The classification map</p>
+<p><span class="math display">\[
+\pi_n:
+\mathfrak{M}_n
+\rightarrow
+\mathcal{M}_n
+\]</span></p>
+<p>assigns those compatible realizations to readable macrostates.</p>
+<p>Thus,</p>
+<p><span class="math display">\[
+\pi_n(\mu_n)=i.
+\]</span></p>
+<p>Now change the boundary.</p>
+<p>At (B_{n+1}), the formal microstate domain and classification map are different.</p>
+<p>The state (i) defined at (B_n) is no longer automatically a readable macrostate at (B_{n+1}).</p>
+<p>The count domain has changed.</p>
+<p>Therefore the state identity has changed.</p>
+<p><a href="../understand/macrostate-microstate.html">Macrostate and Microstate →</a></p>
+</section>
+<section id="a-state-is-not-carried-upward-unchanged" class="level2">
+<h2 class="anchored" data-anchor-id="a-state-is-not-carried-upward-unchanged">A State Is Not Carried Upward Unchanged</h2>
+<p>It is tempting to picture scale hierarchically:</p>
+<p><span class="math display">\[
+\text{small object}
+\rightarrow
+\text{larger object}
+\rightarrow
+\text{still larger object},
+\]</span></p>
+<p>while imagining that the smaller objects remain the same primitive state variables at every level.</p>
+<p>R<sup>2</sup>D proposes something different.</p>
+<p>At each boundary, the readable states belong to that boundary.</p>
+<p>Changing the boundary therefore gives:</p>
+<p><span class="math display">\[
+\boxed{
+\text{state domain at } B_n
+\rightarrow
+\text{boundary change}
+\rightarrow
+\text{new state domain at } B_{n+1}
+}
+\]</span></p>
+<p>The subordinate state can remain physically consequential.</p>
+<p>But it does not remain the same readable state at the enclosing boundary.</p>
+<blockquote class="blockquote">
+<p><strong>Recursive replacement preserves consequence without preserving state identity.</strong></p>
+</blockquote>
+</section>
+<section id="a-coin-example" class="level2">
+<h2 class="anchored" data-anchor-id="a-coin-example">A Coin Example</h2>
+<p>Consider one coin.</p>
+<p>At the single-coin boundary (B_{n-1}), the readable macrostates are</p>
+<p><span class="math display">\[
+H
+\qquad\text{and}\qquad
+T.
+\]</span></p>
+<p>A transition such as</p>
+<p><span class="math display">\[
+H \rightarrow T
+\]</span></p>
+<p>is directly readable at that boundary.</p>
+<p>Now consider an ensemble of ten such coins at (B_n).</p>
+<p>The readable macrostate may instead be</p>
+<p><span class="math display">\[
+N_H=3.
+\]</span></p>
+<p>One compatible realization might be</p>
+<p><span class="math display">\[
+HHTTTHTTTT,
+\]</span></p>
+<p>while another might be</p>
+<p><span class="math display">\[
+THTTHTHTTT.
+\]</span></p>
+<p>At (B_n), both are classified as</p>
+<p><span class="math display">\[
+N_H=3.
+\]</span></p>
+<p>The individual assignment of heads and tails has not become the ensemble macrostate.</p>
+<p>It has been replaced by a new boundary-defined classification.</p>
+<p>The ensemble does not ask:</p>
+<blockquote class="blockquote">
+<p>Which exact sequence of single-coin states exists?</p>
+</blockquote>
+<p>It asks:</p>
+<blockquote class="blockquote">
+<p>Which ensemble state is readable here?</p>
+</blockquote>
+<p><a href="../understand/coins.html">The Coins Example →</a></p>
+</section>
+<section id="replacement-is-many-to-one" class="level2">
+<h2 class="anchored" data-anchor-id="replacement-is-many-to-one">Replacement Is Many-to-One</h2>
+<p>Many subordinate realizations can correspond to one enclosing state.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+\mu_n^{(1)},
+\mu_n^{(2)},
+\mu_n^{(3)},
+\dots
+\]</span></p>
+<p>may all satisfy</p>
+<p><span class="math display">\[
+\pi_n(\mu_n^{(r)})=i.
+\]</span></p>
+<p>Thus several distinguishable subordinate realizations become one readable enclosing classification.</p>
+<p>Schematically:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mu_n^{(1)} &amp;\rightarrow i \\
+\mu_n^{(2)} &amp;\rightarrow i \\
+\mu_n^{(3)} &amp;\rightarrow i
+\end{aligned}
+\]</span></p>
+<p>The enclosing state does not preserve enough information to reconstruct which subordinate realization supplied it uniquely.</p>
+<p>This is not an error.</p>
+<p>It is what the enclosing state <strong>is</strong>.</p>
+<p>Its multiplicity is</p>
+<p><span class="math display">\[
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+\]</span></p>
+<p>So multiplicity itself records the many-to-one structure of replacement.</p>
+<p><a href="../understand/multiplicity.html">Multiplicity →</a></p>
+</section>
+<section id="replacement-is-not-destruction" class="level2">
+<h2 class="anchored" data-anchor-id="replacement-is-not-destruction">Replacement Is Not Destruction</h2>
+<p>Suppose a subordinate path is readable at (B_n).</p>
+<p>After the boundary changes to (B_{n+1}), that path may no longer remain individually readable.</p>
+<p>This does not mean the subordinate realization never occurred.</p>
+<p>Nor does it mean its physical consequences vanish.</p>
+<p>The path remains defined relative to the boundary at which it was a readable state relation.</p>
+<p>What changes is its <strong>count identity</strong> at the enclosing boundary.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{subordinate state identity is replaced}
+}
+\]</span></p>
+<p>while</p>
+<p><span class="math display">\[
+\boxed{
+\text{the recursive relation can remain consequential}.
+}
+\]</span></p>
+<p>This distinction becomes important throughout R<sup>2</sup>D.</p>
+</section>
+<section id="replacement-is-not-coarse-graining" class="level2">
+<h2 class="anchored" data-anchor-id="replacement-is-not-coarse-graining">Replacement Is Not Coarse-Graining</h2>
+<p>Ordinary coarse-graining is often pictured as</p>
+<p><span class="math display">\[
+\text{same microscopic reality}
+\rightarrow
+\text{less detailed description}.
+\]</span></p>
+<p>The microscopic state remains the presumed primitive object.</p>
+<p>Information about it is merely ignored, averaged, or unresolved.</p>
+<p>R<sup>2</sup>D makes a stronger claim.</p>
+<p>When the count boundary changes,</p>
+<p><span class="math display">\[
+\boxed{
+\text{the classification itself changes}.
+}
+\]</span></p>
+<p>The enclosing macrostate is not simply a lower-resolution version of the subordinate state.</p>
+<p>It belongs to a different state domain.</p>
+<p>So the R<sup>2</sup>D sequence is</p>
+<p><span class="math display">\[
+\boxed{
+\text{subordinate state}
+\rightarrow
+\text{boundary change}
+\rightarrow
+\text{replacement by enclosing statehood}.
+}
+\]</span></p>
+<p><a href="../understand/not-coarse-graining.html">Why R²D Is Not Coarse-Graining →</a></p>
+</section>
+<section id="macrostate-here-microstate-there" class="level2">
+<h2 class="anchored" data-anchor-id="macrostate-here-microstate-there">Macrostate Here, Microstate There</h2>
+<p>The replacement becomes especially clear for transitions.</p>
+<p>Suppose</p>
+<p><span class="math display">\[
+u \rightarrow v
+\]</span></p>
+<p>is readable as a macrostate transition at subordinate boundary (B_{n-1,}).</p>
+<p>Relative to the enclosing boundary (B_n), that same subordinate change participates in a formal microstate transition.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{macrostate transition at } B_{n-1}
+=
+\text{microstate transition relative to } B_n.
+}
+\]</span></p>
+<p>Nothing requires the physical occurrence itself to disappear.</p>
+<p>Its count meaning changes because the boundary changes.</p>
+<p>This is why “micro” and “macro” cannot designate absolute physical scales in R<sup>2</sup>D.</p>
+<p>They designate relations to a boundary.</p>
+</section>
+<section id="replacement-changes-what-the-object-is" class="level2">
+<h2 class="anchored" data-anchor-id="replacement-changes-what-the-object-is">Replacement Changes What the Object Is</h2>
+<p>Consider a molecular motor.</p>
+<p>At one boundary, a conformational state of a myosin molecule may be the scientific object.</p>
+<p>At another boundary, an ensemble distribution of myosin states may be the scientific object.</p>
+<p>At another, muscle force or shortening may define the readable state.</p>
+<p>These are not increasingly blurry descriptions of one myosin molecule.</p>
+<p>They are different boundary-defined scientific objects.</p>
+<p>Schematically:</p>
+<p><span class="math display">\[
+\text{molecular state}
+\rightarrow
+\text{ensemble state}
+\rightarrow
+\text{muscle state}.
+\]</span></p>
+<p>Each arrow changes the count domain.</p>
+<p>The subordinate relation remains necessary for realization.</p>
+<p>But its state identity is replaced.</p>
+</section>
+<section id="why-this-matters-in-biology" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-matters-in-biology">Why This Matters in Biology</h2>
+<p>Biological systems make recursive replacement unusually visible because several neighboring boundaries can often be experimentally accessed.</p>
+<p>For example:</p>
+<p><span class="math display">\[
+\text{fast protein dynamics}
+\rightarrow
+\text{molecular switch state}
+\rightarrow
+\text{ensemble occupancy}
+\rightarrow
+\text{muscle-scale function}.
+\]</span></p>
+<p>At each stage, a new state domain becomes readable.</p>
+<p>The faster subordinate trajectory does not remain the trajectory of the larger-scale biological function.</p>
+<p>Instead, many subordinate realizations can belong to one persistent enclosing state.</p>
+<p>This is why a protein structure, cellular state, or muscle state cannot be identified with one privileged subordinate molecular trajectory.</p>
+</section>
+<section id="replacement-is-recursive" class="level2">
+<h2 class="anchored" data-anchor-id="replacement-is-recursive">Replacement Is Recursive</h2>
+<p>There is no reason for the process to stop after one boundary change.</p>
+<p>Suppose the hierarchy is</p>
+<p><span class="math display">\[
+B_{n-1}
+\rightarrow
+B_n
+\rightarrow
+B_{n+1}
+\rightarrow
+B_{n+2}.
+\]</span></p>
+<p>At every step:</p>
+<ol type="1">
+<li>a boundary defines its own readable states;</li>
+<li>those states are realized through compatible subordinate relations;</li>
+<li>changing to the enclosing boundary changes the state domain;</li>
+<li>the subordinate state identity is replaced by a new enclosing classification.</li>
+</ol>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{replacement}
+\rightarrow
+\text{replacement}
+\rightarrow
+\text{replacement}
+\rightarrow \cdots
+}
+\]</span></p>
+<p>This is why the framework is called <strong>Recursively Realized Distinguishability</strong>.</p>
+<p>The architecture repeats across boundaries.</p>
+</section>
+<section id="replacement-does-not-mean-bottom-up-construction" class="level2">
+<h2 class="anchored" data-anchor-id="replacement-does-not-mean-bottom-up-construction">Replacement Does Not Mean Bottom-Up Construction</h2>
+<p>One must be careful with the direction implied by the diagram.</p>
+<p>The sequence</p>
+<p><span class="math display">\[
+B_{n-1}
+\rightarrow
+B_n
+\rightarrow
+B_{n+1}
+\]</span></p>
+<p>does <strong>not</strong> mean that smaller states causally assemble themselves upward to create larger states.</p>
+<p>That would restore the bottom-up ontology R<sup>2</sup>D is trying to distinguish from the count architecture.</p>
+<p>The enclosing boundary defines which joint subordinate realizations are compatible with its state.</p>
+<p>Thus the causal relation is:</p>
+<p><span class="math display">\[
+\boxed{
+\text{enclosing organization}
+\Longrightarrow
+\text{compatible subordinate realization}.
+}
+\]</span></p>
+<p>The subordinate processes are necessary realizers.</p>
+<p>They do not thereby become the primitive source of the enclosing organization.</p>
+<p><a href="../understand/causal-inversion.html">The Causal Inversion →</a></p>
+</section>
+<section id="two-directions-must-be-distinguished" class="level2">
+<h2 class="anchored" data-anchor-id="two-directions-must-be-distinguished">Two Directions Must Be Distinguished</h2>
+<p>This produces one of the most important distinctions in R<sup>2</sup>D.</p>
+<p>There is a <strong>causal direction</strong>:</p>
+<p><span class="math display">\[
+\boxed{
+\text{enclosing relation}
+\Longrightarrow
+\text{compatible local realization}.
+}
+\]</span></p>
+<p>And there is a <strong>change in count meaning</strong> when the boundary changes:</p>
+<p><span class="math display">\[
+\boxed{
+\text{completed local realization}
+\mapsto
+\text{enclosing classification}.
+}
+\]</span></p>
+<p>These arrows point in opposite diagrammatic directions.</p>
+<p>They do not describe opposite causal flows.</p>
+<p>The first asks:</p>
+<blockquote class="blockquote">
+<p><strong>Which subordinate realizations are compatible with this enclosing relation?</strong></p>
+</blockquote>
+<p>The second asks:</p>
+<blockquote class="blockquote">
+<p><strong>How is a completed subordinate realization counted when the boundary changes?</strong></p>
+</blockquote>
+<p>The second operation is developed formally in R<sup>2</sup>D as <strong>recursive carry</strong>.</p>
+<p><a href="../understand/recursive-carry.html">Recursive Carry →</a></p>
+</section>
+<section id="replacement-and-carry-are-related-but-distinct" class="level2">
+<h2 class="anchored" data-anchor-id="replacement-and-carry-are-related-but-distinct">Replacement and Carry Are Related but Distinct</h2>
+<p>Recursive replacement describes the change of state domain itself.</p>
+<p>A state readable at one boundary is not preserved as the same state when the boundary changes.</p>
+<p>Recursive carry describes how a completed realization at one boundary is reclassified from the enclosing boundary.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{replacement}
+=
+\text{change in state domain}
+}
+\]</span></p>
+<p>whereas</p>
+<p><span class="math display">\[
+\boxed{
+\text{carry}
+=
+\text{change in count meaning of a completed realization}.
+}
+\]</span></p>
+<p>Keeping these concepts separate prevents an important mistake.</p>
+<p>Nothing has to be physically transported upward from one scale to another.</p>
+<p>The relation is a change of classification.</p>
+</section>
+<section id="replacement-preserves-multiplicity-consequence" class="level2">
+<h2 class="anchored" data-anchor-id="replacement-preserves-multiplicity-consequence">Replacement Preserves Multiplicity Consequence</h2>
+<p>Suppose several subordinate realizations are compatible with one enclosing state.</p>
+<p>Their individual identities may no longer be readable at the enclosing boundary.</p>
+<p>But the fact that many subordinate realizations belong to that state remains mathematically consequential.</p>
+<p>It appears as multiplicity.</p>
+<p>Thus recursive replacement can remove readable subordinate identity while preserving the count consequence of subordinate degeneracy.</p>
+<p>This is one reason multiplicity is so central to R<sup>2</sup>D.</p>
+<blockquote class="blockquote">
+<p><strong>Identity can be replaced while count consequence remains.</strong></p>
+</blockquote>
+</section>
+<section id="a-recursive-counting-hierarchy" class="level2">
+<h2 class="anchored" data-anchor-id="a-recursive-counting-hierarchy">A Recursive Counting Hierarchy</h2>
+<p>The resulting architecture can be summarized schematically:</p>
+<p><span class="math display">\[
+\boxed{
+\begin{array}{c}
+\text{readable states at } B_{n-1}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{compatible realization at } B_n
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{readable states at } B_n
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{compatible realization at } B_{n+1}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{readable states at } B_{n+1}
+\end{array}
+}
+\]</span></p>
+<p>At no point must one fixed object retain the same state identity across the entire hierarchy.</p>
+<p>Instead, scientific objecthood is recursively replaced.</p>
+<p><a href="../understand/scientific-objecthood.html">Scientific Objecthood →</a></p>
+</section>
+<section id="why-recursive-replacement-matters" class="level2">
+<h2 class="anchored" data-anchor-id="why-recursive-replacement-matters">Why Recursive Replacement Matters</h2>
+<p>Once recursive replacement is accepted, several familiar problems look different.</p>
+<section id="the-observer-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-observer-problem">The observer problem</h3>
+<p>Increasing resolution changes the count boundary and therefore changes the state classification.</p>
+</section>
+<section id="the-many-body-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-many-body-problem">The many-body problem</h3>
+<p>The enclosing boundary can classify a joint subordinate realization without preserving every peer trajectory as a readable state variable.</p>
+</section>
+<section id="emergence" class="level3">
+<h3 class="anchored" data-anchor-id="emergence">Emergence</h3>
+<p>A larger-scale state need not be treated merely as shorthand for the same microscopic object.</p>
+<p>It is a state belonging to a different count domain.</p>
+</section>
+<section id="reduction" class="level3">
+<h3 class="anchored" data-anchor-id="reduction">Reduction</h3>
+<p>Knowing every subordinate mechanism does not automatically specify the enclosing state classification or the enclosing relation that organizes those realizations.</p>
+</section>
+<section id="cross-scale-causality" class="level3">
+<h3 class="anchored" data-anchor-id="cross-scale-causality">Cross-scale causality</h3>
+<p>A subordinate mechanism may be necessary for realization without being the primitive source of the enclosing organization.</p>
+<p>These are not separate additions to R<sup>2</sup>D.</p>
+<p>They follow from the same boundary-relative definition of state.</p>
+</section>
+</section>
+<section id="the-core-principle" class="level2">
+<h2 class="anchored" data-anchor-id="the-core-principle">The Core Principle</h2>
+<p>Recursive replacement can be summarized in one statement:</p>
+<blockquote class="blockquote">
+<p><strong>Changing the count boundary changes what is being counted.</strong></p>
+</blockquote>
+<p>Or more formally:</p>
+<p><span class="math display">\[
+\boxed{
+B_n \rightarrow B_{n+1}
+\quad\Rightarrow\quad
+\mathcal{M}_n \not\equiv \mathcal{M}_{n+1}.
+}
+\]</span></p>
+<p>The two boundaries define different state domains.</p>
+<p>Therefore:</p>
+<blockquote class="blockquote">
+<p><strong>A subordinate state does not persist unchanged into an enclosing description. Its identity is replaced, while its recursive relation can remain consequential.</strong></p>
+</blockquote>
+<p>That is recursive replacement.</p>
+<hr>
+</section>
+<section id="the-architecture-so-far" class="level2">
+<h2 class="anchored" data-anchor-id="the-architecture-so-far">The Architecture So Far</h2>
+<p>R<sup>2</sup>D can now be summarized as:</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinguishable states}
+\rightarrow
+\text{multiplicity}
+\rightarrow
+\text{occurrence and occupancy}
+\rightarrow
+\text{recursive replacement}.
+}
+\]</span></p>
+<p>The next question is:</p>
+<blockquote class="blockquote">
+<p><strong>When a completed local realization is replaced at the enclosing boundary, how is it counted there?</strong></p>
+</blockquote>
+<p>That is the problem of recursive carry.</p>
+<hr>
+</section>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<p><a href="../understand/recursive-carry.html">Recursive Carry →</a></p>
+<p><a href="../understand/possibility.html">Possibility →</a></p>
+<p><a href="../understand/causal-inversion.html">The Causal Inversion →</a></p>
+<p><a href="../understand/index.html">Back to Understand R²D →</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/r2dscience\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

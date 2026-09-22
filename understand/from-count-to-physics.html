@@ -1,0 +1,1885 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>From Count to Physical Science – R²D Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R²D Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-understand" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Understand</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-understand">    
+        <li>
+    <a class="dropdown-item" href="../understand/what-is-r2d.html">
+ <span class="dropdown-text">What is R²D?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../understand/index.html">
+ <span class="dropdown-text">Understand R²D</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../run/index.html"> 
+<span class="menu-text">Run R²D</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../applications/index.html"> 
+<span class="menu-text">Applications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../canon/index.html"> 
+<span class="menu-text">Canon</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About R²D Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/authors.html">
+ <span class="dropdown-text">Authors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/publications.html">
+ <span class="dropdown-text">Publications &amp; Archive</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/contact.html">
+ <span class="dropdown-text">Contact</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#from-count-to-physical-science" id="toc-from-count-to-physical-science" class="nav-link active" data-scroll-target="#from-count-to-physical-science">From Count to Physical Science</a>
+  <ul class="collapse">
+  <li><a href="#the-mapping-problem" id="toc-the-mapping-problem" class="nav-link" data-scroll-target="#the-mapping-problem">The Mapping Problem</a></li>
+  <li><a href="#mapping-is-not-identity" id="toc-mapping-is-not-identity" class="nav-link" data-scroll-target="#mapping-is-not-identity">Mapping Is Not Identity</a></li>
+  <li><a href="#the-primitive-definition-must-survive-the-mapping" id="toc-the-primitive-definition-must-survive-the-mapping" class="nav-link" data-scroll-target="#the-primitive-definition-must-survive-the-mapping">The Primitive Definition Must Survive the Mapping</a></li>
+  <li><a href="#physical-constants-belong-to-the-read" id="toc-physical-constants-belong-to-the-read" class="nav-link" data-scroll-target="#physical-constants-belong-to-the-read">Physical Constants Belong to the Read</a></li>
+  <li><a href="#thermodynamics-is-the-strongest-bridge" id="toc-thermodynamics-is-the-strongest-bridge" class="nav-link" data-scroll-target="#thermodynamics-is-the-strongest-bridge">Thermodynamics Is the Strongest Bridge</a></li>
+  <li><a href="#entropy-reads-multiplicity" id="toc-entropy-reads-multiplicity" class="nav-link" data-scroll-target="#entropy-reads-multiplicity">Entropy Reads Multiplicity</a></li>
+  <li><a href="#gibbs-free-energy-reads-thermodynamic-direction" id="toc-gibbs-free-energy-reads-thermodynamic-direction" class="nav-link" data-scroll-target="#gibbs-free-energy-reads-thermodynamic-direction">Gibbs Free Energy Reads Thermodynamic Direction</a></li>
+  <li><a href="#gibbs-direction-comes-before-work-realization" id="toc-gibbs-direction-comes-before-work-realization" class="nav-link" data-scroll-target="#gibbs-direction-comes-before-work-realization">Gibbs Direction Comes Before Work Realization</a></li>
+  <li><a href="#constraint-can-acquire-a-mechanical-read" id="toc-constraint-can-acquire-a-mechanical-read" class="nav-link" data-scroll-target="#constraint-can-acquire-a-mechanical-read">Constraint Can Acquire a Mechanical Read</a></li>
+  <li><a href="#generalized-work-is-more-fundamental-than-one-mechanical-example" id="toc-generalized-work-is-more-fundamental-than-one-mechanical-example" class="nav-link" data-scroll-target="#generalized-work-is-more-fundamental-than-one-mechanical-example">Generalized Work Is More Fundamental Than One Mechanical Example</a></li>
+  <li><a href="#muscle-makes-several-reads-simultaneously-accessible" id="toc-muscle-makes-several-reads-simultaneously-accessible" class="nav-link" data-scroll-target="#muscle-makes-several-reads-simultaneously-accessible">Muscle Makes Several Reads Simultaneously Accessible</a></li>
+  <li><a href="#physical-rate-is-a-separate-mapping" id="toc-physical-rate-is-a-separate-mapping" class="nav-link" data-scroll-target="#physical-rate-is-a-separate-mapping">Physical Rate Is a Separate Mapping</a></li>
+  <li><a href="#state-occurrence-count-is-not-a-clock" id="toc-state-occurrence-count-is-not-a-clock" class="nav-link" data-scroll-target="#state-occurrence-count-is-not-a-clock">State-Occurrence Count Is Not a Clock</a></li>
+  <li><a href="#background-can-acquire-a-thermodynamic-entropy-read" id="toc-background-can-acquire-a-thermodynamic-entropy-read" class="nav-link" data-scroll-target="#background-can-acquire-a-thermodynamic-entropy-read">Background Can Acquire a Thermodynamic Entropy Read</a></li>
+  <li><a href="#heat-is-not-automatically-entropy-production" id="toc-heat-is-not-automatically-entropy-production" class="nav-link" data-scroll-target="#heat-is-not-automatically-entropy-production">Heat Is Not Automatically Entropy Production</a></li>
+  <li><a href="#probability-is-a-normalized-read" id="toc-probability-is-a-normalized-read" class="nav-link" data-scroll-target="#probability-is-a-normalized-read">Probability Is a Normalized Read</a></li>
+  <li><a href="#a-probability-read-must-specify-what-was-normalized" id="toc-a-probability-read-must-specify-what-was-normalized" class="nav-link" data-scroll-target="#a-probability-read-must-specify-what-was-normalized">A Probability Read Must Specify What Was Normalized</a></li>
+  <li><a href="#physical-geometry-is-also-a-mapping" id="toc-physical-geometry-is-also-a-mapping" class="nav-link" data-scroll-target="#physical-geometry-is-also-a-mapping">Physical Geometry Is Also a Mapping</a></li>
+  <li><a href="#space-is-not-assumed-in-order-to-define-a-boundary" id="toc-space-is-not-assumed-in-order-to-define-a-boundary" class="nav-link" data-scroll-target="#space-is-not-assumed-in-order-to-define-a-boundary">Space Is Not Assumed in Order to Define a Boundary</a></li>
+  <li><a href="#time-is-not-assumed-in-order-to-define-recurrence" id="toc-time-is-not-assumed-in-order-to-define-recurrence" class="nav-link" data-scroll-target="#time-is-not-assumed-in-order-to-define-recurrence">Time Is Not Assumed in Order to Define Recurrence</a></li>
+  <li><a href="#thermodynamics-occupies-a-joint-readability-regime" id="toc-thermodynamics-occupies-a-joint-readability-regime" class="nav-link" data-scroll-target="#thermodynamics-occupies-a-joint-readability-regime">Thermodynamics Occupies a Joint-Readability Regime</a></li>
+  <li><a href="#quantum-readability-emphasizes-recurrence" id="toc-quantum-readability-emphasizes-recurrence" class="nav-link" data-scroll-target="#quantum-readability-emphasizes-recurrence">Quantum Readability Emphasizes Recurrence</a></li>
+  <li><a href="#gravitational-readability-emphasizes-distinguishability" id="toc-gravitational-readability-emphasizes-distinguishability" class="nav-link" data-scroll-target="#gravitational-readability-emphasizes-distinguishability">Gravitational Readability Emphasizes Distinguishability</a></li>
+  <li><a href="#the-two-physical-limits-need-not-use-the-same-ruler" id="toc-the-two-physical-limits-need-not-use-the-same-ruler" class="nav-link" data-scroll-target="#the-two-physical-limits-need-not-use-the-same-ruler">The Two Physical Limits Need Not Use the Same Ruler</a></li>
+  <li><a href="#unification-happens-at-the-count-level" id="toc-unification-happens-at-the-count-level" class="nav-link" data-scroll-target="#unification-happens-at-the-count-level">Unification Happens at the Count Level</a></li>
+  <li><a href="#different-sciences-need-not-share-the-same-objects" id="toc-different-sciences-need-not-share-the-same-objects" class="nav-link" data-scroll-target="#different-sciences-need-not-share-the-same-objects">Different Sciences Need Not Share the Same Objects</a></li>
+  <li><a href="#the-physical-read-can-change-without-changing-the-primitive-role" id="toc-the-physical-read-can-change-without-changing-the-primitive-role" class="nav-link" data-scroll-target="#the-physical-read-can-change-without-changing-the-primitive-role">The Physical Read Can Change Without Changing the Primitive Role</a></li>
+  <li><a href="#conversely-the-same-physical-quantity-can-play-different-roles" id="toc-conversely-the-same-physical-quantity-can-play-different-roles" class="nav-link" data-scroll-target="#conversely-the-same-physical-quantity-can-play-different-roles">Conversely, the Same Physical Quantity Can Play Different Roles</a></li>
+  <li><a href="#never-map-by-units-alone" id="toc-never-map-by-units-alone" class="nav-link" data-scroll-target="#never-map-by-units-alone">Never Map by Units Alone</a></li>
+  <li><a href="#never-map-by-equation-shape-alone" id="toc-never-map-by-equation-shape-alone" class="nav-link" data-scroll-target="#never-map-by-equation-shape-alone">Never Map by Equation Shape Alone</a></li>
+  <li><a href="#the-boundary-must-be-specified-first" id="toc-the-boundary-must-be-specified-first" class="nav-link" data-scroll-target="#the-boundary-must-be-specified-first">The Boundary Must Be Specified First</a></li>
+  <li><a href="#the-physical-mapping-workflow" id="toc-the-physical-mapping-workflow" class="nav-link" data-scroll-target="#the-physical-mapping-workflow">The Physical Mapping Workflow</a></li>
+  <li><a href="#different-claims-have-different-logical-status" id="toc-different-claims-have-different-logical-status" class="nav-link" data-scroll-target="#different-claims-have-different-logical-status">Different Claims Have Different Logical Status</a>
+  <ul class="collapse">
+  <li><a href="#formal-definition" id="toc-formal-definition" class="nav-link" data-scroll-target="#formal-definition">Formal definition</a></li>
+  <li><a href="#mathematical-consequence" id="toc-mathematical-consequence" class="nav-link" data-scroll-target="#mathematical-consequence">Mathematical consequence</a></li>
+  <li><a href="#r2d-postulate" id="toc-r2d-postulate" class="nav-link" data-scroll-target="#r2d-postulate">R<sup>2</sup>D postulate</a></li>
+  <li><a href="#physical-mapping" id="toc-physical-mapping" class="nav-link" data-scroll-target="#physical-mapping">Physical mapping</a></li>
+  <li><a href="#empirical-calibration" id="toc-empirical-calibration" class="nav-link" data-scroll-target="#empirical-calibration">Empirical calibration</a></li>
+  <li><a href="#hypothesis-or-projection" id="toc-hypothesis-or-projection" class="nav-link" data-scroll-target="#hypothesis-or-projection">Hypothesis or projection</a></li>
+  </ul></li>
+  <li><a href="#a-mapping-is-not-a-derivation" id="toc-a-mapping-is-not-a-derivation" class="nav-link" data-scroll-target="#a-mapping-is-not-a-derivation">A Mapping Is Not a Derivation</a></li>
+  <li><a href="#an-exact-mapping-can-still-be-powerful" id="toc-an-exact-mapping-can-still-be-powerful" class="nav-link" data-scroll-target="#an-exact-mapping-can-still-be-powerful">An Exact Mapping Can Still Be Powerful</a></li>
+  <li><a href="#deprojection-runs-the-mapping-backward" id="toc-deprojection-runs-the-mapping-backward" class="nav-link" data-scroll-target="#deprojection-runs-the-mapping-backward">Deprojection Runs the Mapping Backward</a></li>
+  <li><a href="#deprojection-does-not-mean-rejecting-the-physical-theory" id="toc-deprojection-does-not-mean-rejecting-the-physical-theory" class="nav-link" data-scroll-target="#deprojection-does-not-mean-rejecting-the-physical-theory">Deprojection Does Not Mean Rejecting the Physical Theory</a></li>
+  <li><a href="#the-equation-can-survive-while-the-ontology-changes" id="toc-the-equation-can-survive-while-the-ontology-changes" class="nav-link" data-scroll-target="#the-equation-can-survive-while-the-ontology-changes">The Equation Can Survive While the Ontology Changes</a></li>
+  <li><a href="#thermodynamics-provides-the-calibration-window" id="toc-thermodynamics-provides-the-calibration-window" class="nav-link" data-scroll-target="#thermodynamics-provides-the-calibration-window">Thermodynamics Provides the Calibration Window</a></li>
+  <li><a href="#the-canon-does-not-assign-equal-confidence-to-every-mapping" id="toc-the-canon-does-not-assign-equal-confidence-to-every-mapping" class="nav-link" data-scroll-target="#the-canon-does-not-assign-equal-confidence-to-every-mapping">The Canon Does Not Assign Equal Confidence to Every Mapping</a></li>
+  <li><a href="#what-would-count-as-progress" id="toc-what-would-count-as-progress" class="nav-link" data-scroll-target="#what-would-count-as-progress">What Would Count as Progress</a></li>
+  <li><a href="#what-would-count-as-failure" id="toc-what-would-count-as-failure" class="nav-link" data-scroll-target="#what-would-count-as-failure">What Would Count as Failure</a></li>
+  <li><a href="#the-same-questions-can-be-asked-in-every-domain" id="toc-the-same-questions-can-be-asked-in-every-domain" class="nav-link" data-scroll-target="#the-same-questions-can-be-asked-in-every-domain">The Same Questions Can Be Asked in Every Domain</a></li>
+  <li><a href="#the-complete-logical-order" id="toc-the-complete-logical-order" class="nav-link" data-scroll-target="#the-complete-logical-order">The Complete Logical Order</a></li>
+  <li><a href="#the-key-distinction" id="toc-the-key-distinction" class="nav-link" data-scroll-target="#the-key-distinction">The Key Distinction</a></li>
+  <li><a href="#where-to-go-next" id="toc-where-to-go-next" class="nav-link" data-scroll-target="#where-to-go-next">Where to Go Next</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">From Count to Physical Science</h1>
+<p class="subtitle lead">Physical quantities are boundary-specific readings of recursive count</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="from-count-to-physical-science" class="level1">
+<h1>From Count to Physical Science</h1>
+<p>R<sup>2</sup>D begins before physics.</p>
+<p>Not because physics is unimportant.</p>
+<p>Because before a physical quantity can be measured, the relation being measured must already be distinguishable.</p>
+<p>Part I therefore defines a dimensionless architecture of:</p>
+<ul>
+<li>boundaries;</li>
+<li>states;</li>
+<li>multiplicity;</li>
+<li>occurrence;</li>
+<li>occupancy;</li>
+<li>possibility;</li>
+<li>constraint;</li>
+<li>asymmetry;</li>
+<li>closure;</li>
+<li>recurrence;</li>
+<li>recursive replacement;</li>
+<li>recursive carry;</li>
+<li>and background.</li>
+</ul>
+<p>Only afterward does R<sup>2</sup>D ask how familiar scientific quantities read that architecture.</p>
+<p>This gives the basic ordering:</p>
+<p><span class="math display">\[
+\boxed{
+\text{primitive count relation}
+\rightarrow
+\text{boundary-specific physical read}
+\rightarrow
+\text{measured scientific quantity}.
+}
+\]</span></p>
+<p>The physical quantity is real.</p>
+<p>But it enters after the count relation it reads.</p>
+<p><a href="../understand/before-units.html">Before Units →</a></p>
+<section id="the-mapping-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-mapping-problem">The Mapping Problem</h2>
+<p>Suppose R<sup>2</sup>D defines a dimensionless relation</p>
+<p><span class="math display">\[
+X_n.
+\]</span></p>
+<p>A physical theory may supply a measurable quantity</p>
+<p><span class="math display">\[
+X_n^{\mathrm{phys}}.
+\]</span></p>
+<p>The central question is not whether the two use similar mathematics.</p>
+<p>It is:</p>
+<blockquote class="blockquote">
+<p><strong>Does the physical quantity preserve the role played by the primitive count relation?</strong></p>
+</blockquote>
+<p>A valid mapping must preserve:</p>
+<ul>
+<li>the boundary at which the quantity is defined;</li>
+<li>the distinctions it measures;</li>
+<li>its causal role;</li>
+<li>its relation to adjacent boundaries;</li>
+<li>and the equations in which it participates.</li>
+</ul>
+<p>Thus a physical mapping is stronger than symbolic resemblance.</p>
+</section>
+<section id="mapping-is-not-identity" class="level2">
+<h2 class="anchored" data-anchor-id="mapping-is-not-identity">Mapping Is Not Identity</h2>
+<p>This distinction is fundamental.</p>
+<p>If a physical quantity reads a primitive R<sup>2</sup>D relation, that does not make the primitive quantity identical to the physical quantity in every domain.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+\lambda_n
+\]</span></p>
+<p>may receive a physical displacement read in one mechanical realization.</p>
+<p>That does not imply</p>
+<p><span class="math display">\[
+\boxed{
+\lambda_n
+=
+\text{length}
+}
+\]</span></p>
+<p>universally.</p>
+<p>Likewise,</p>
+<p><span class="math display">\[
+\rho_{n+1|n}
+\]</span></p>
+<p>may acquire a physical rate interpretation in a suitable system.</p>
+<p>That does not imply</p>
+<p><span class="math display">\[
+\boxed{
+\rho
+=
+\text{frequency}
+}
+\]</span></p>
+<p>by definition.</p>
+<p>The safe form is:</p>
+<p><span class="math display">\[
+\boxed{
+\text{primitive count relation}
+\xrightarrow{\text{physical read}}
+\text{domain-specific quantity}.
+}
+\]</span></p>
+</section>
+<section id="the-primitive-definition-must-survive-the-mapping" class="level2">
+<h2 class="anchored" data-anchor-id="the-primitive-definition-must-survive-the-mapping">The Primitive Definition Must Survive the Mapping</h2>
+<p>This is the most important methodological rule.</p>
+<p>Suppose a physical mapping is successful.</p>
+<p>The mapped physical quantity does not replace the primitive definition.</p>
+<p>Instead, both levels remain visible.</p>
+<p>For example:</p>
+<p><span class="math display">\[
+\boxed{
+\text{primitive: }
+S=\ln W
+}
+\]</span></p>
+<p>can acquire a thermodynamic read.</p>
+<p>But the logarithmic count relation remains the primitive structure underneath that thermodynamic coordinate.</p>
+<p>Likewise:</p>
+<p><span class="math display">\[
+\boxed{
+\Delta R
+=
+C^{\mathrm{out}}\lambda
+}
+\]</span></p>
+<p>may acquire a mechanical work-like read.</p>
+<p>The physical interpretation does not redefine primitive retention.</p>
+<blockquote class="blockquote">
+<p><strong>The physical read adds dimensional meaning.<br>
+It does not rewrite the count architecture.</strong></p>
+</blockquote>
+</section>
+<section id="physical-constants-belong-to-the-read" class="level2">
+<h2 class="anchored" data-anchor-id="physical-constants-belong-to-the-read">Physical Constants Belong to the Read</h2>
+<p>Dimensionless count and dimensional measurement generally require a calibration between them.</p>
+<p>Physical constants can provide that calibration.</p>
+<p>The familiar Boltzmann relation is the clearest example.</p>
+<p>R<sup>2</sup>D begins with</p>
+<p><span class="math display">\[
+S
+=
+\ln W.
+\]</span></p>
+<p>A thermodynamic read assigns the Boltzmann scale:</p>
+<p><span class="math display">\[
+\boxed{
+S^{\mathrm{th}}
+=
+k_B \ln W.
+}
+\]</span></p>
+<p>The count</p>
+<p><span class="math display">\[
+\ln W
+\]</span></p>
+<p>comes first.</p>
+<p>The constant</p>
+<p><span class="math display">\[
+k_B
+\]</span></p>
+<p>converts that logarithmic count coordinate into a thermodynamic entropy coordinate.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{count}
+\rightarrow
+\text{physical calibration}
+\rightarrow
+\text{unit-bearing quantity}.
+}
+\]</span></p>
+</section>
+<section id="thermodynamics-is-the-strongest-bridge" class="level2">
+<h2 class="anchored" data-anchor-id="thermodynamics-is-the-strongest-bridge">Thermodynamics Is the Strongest Bridge</h2>
+<p>Thermodynamics is especially important in the R<sup>2</sup>D program because many parts of the recursive architecture remain jointly readable there.</p>
+<p>A thermodynamic system can often expose simultaneously:</p>
+<ul>
+<li>multiplicity;</li>
+<li>occupancy;</li>
+<li>directional bias;</li>
+<li>constraint;</li>
+<li>recurrence;</li>
+<li>work;</li>
+<li>heat;</li>
+<li>and background production.</li>
+</ul>
+<p>This makes thermodynamics the strongest current bridge between the dimensionless architecture of Part I and familiar physical science.</p>
+<p>The program therefore does not begin by trying to map R<sup>2</sup>D directly onto the most inaccessible limits of quantum gravity.</p>
+<p>It begins where enough of the primitive relation remains measurable at once.</p>
+</section>
+<section id="entropy-reads-multiplicity" class="level2">
+<h2 class="anchored" data-anchor-id="entropy-reads-multiplicity">Entropy Reads Multiplicity</h2>
+<p>The first mapping is the most familiar.</p>
+<p>Primitive multiplicity is</p>
+<p><span class="math display">\[
+W.
+\]</span></p>
+<p>Its logarithmic coordinate is</p>
+<p><span class="math display">\[
+S
+=
+\ln W.
+\]</span></p>
+<p>A thermodynamic entropy read is</p>
+<p><span class="math display">\[
+\boxed{
+S^{\mathrm{th}}
+=
+k_B S
+=
+k_B\ln W.
+}
+\]</span></p>
+<p>R<sup>2</sup>D interprets this ordering literally:</p>
+<p><span class="math display">\[
+\boxed{
+\text{multiplicity}
+\rightarrow
+\text{logarithmic count}
+\rightarrow
+\text{thermodynamic entropy}.
+}
+\]</span></p>
+<p>Entropy therefore does not create multiplicity.</p>
+<p>It physically reads it.</p>
+<p><a href="../understand/multiplicity.html">Multiplicity →</a></p>
+</section>
+<section id="gibbs-free-energy-reads-thermodynamic-direction" class="level2">
+<h2 class="anchored" data-anchor-id="gibbs-free-energy-reads-thermodynamic-direction">Gibbs Free Energy Reads Thermodynamic Direction</h2>
+<p>The thermodynamic mapping becomes more interesting when enclosing possibility is added.</p>
+<p>For the fixed-temperature, fixed-pressure chemical realization developed in the Canon, the count relation becomes</p>
+<p><span class="math display">\[
+\boxed{
+\Delta S+\Delta P
+=
+-
+\frac{\Delta g}{k_BT}.
+}
+\]</span></p>
+<p>Here</p>
+<p><span class="math display">\[
+\Delta S+\Delta P
+\]</span></p>
+<p>is the dimensionless compatible-count direction.</p>
+<p>The physical quantity</p>
+<p><span class="math display">\[
+\Delta g
+\]</span></p>
+<p>is its molecular Gibbs free-energy read under the specified thermodynamic conditions.</p>
+<p>The important ordering is:</p>
+<p><span class="math display">\[
+\boxed{
+\text{compatible count direction}
+\rightarrow
+\text{Gibbs energetic read}.
+}
+\]</span></p>
+<p>Gibbs free energy is therefore not inserted as a primitive R<sup>2</sup>D quantity.</p>
+<p>It is a physical coordinate assigned to a relation already defined in count space.</p>
+</section>
+<section id="gibbs-direction-comes-before-work-realization" class="level2">
+<h2 class="anchored" data-anchor-id="gibbs-direction-comes-before-work-realization">Gibbs Direction Comes Before Work Realization</h2>
+<p>This also preserves an important distinction.</p>
+<p>The thermodynamic Gibbs relation describes available direction before productive retention is applied.</p>
+<p>R<sup>2</sup>D local asymmetry is instead</p>
+<p><span class="math display">\[
+\Delta A
+=
+\Delta P-\Delta R.
+\]</span></p>
+<p>So:</p>
+<p><span class="math display">\[
+\boxed{
+\text{available thermodynamic direction}
+\neq
+\text{work already performed}.
+}
+\]</span></p>
+<p>A state function can organize the available relation.</p>
+<p>A work coordinate describes one constrained realization of that relation.</p>
+<p>This is why free energy can bound possible work without being identical to a specific work trajectory.</p>
+</section>
+<section id="constraint-can-acquire-a-mechanical-read" class="level2">
+<h2 class="anchored" data-anchor-id="constraint-can-acquire-a-mechanical-read">Constraint Can Acquire a Mechanical Read</h2>
+<p>Primitive retention is</p>
+<p><span class="math display">\[
+\boxed{
+\Delta R_n
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_n.
+}
+\]</span></p>
+<p>At the primitive level,</p>
+<p><span class="math display">\[
+C^{\mathrm{out}}
+\]</span></p>
+<p>is not force and</p>
+<p><span class="math display">\[
+\lambda
+\]</span></p>
+<p>is not displacement.</p>
+<p>But in a mechanical realization, they may acquire those reads.</p>
+<p>Schematically,</p>
+<p><span class="math display">\[
+C^{\mathrm{out}}
+\xrightarrow{\text{mechanical read}}
+F,
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\lambda
+\xrightarrow{\text{mechanical read}}
+d.
+\]</span></p>
+<p>Then</p>
+<p><span class="math display">\[
+C^{\mathrm{out}}\lambda
+\]</span></p>
+<p>can acquire the familiar work-like form</p>
+<p><span class="math display">\[
+\boxed{
+Fd.
+}
+\]</span></p>
+<p>The mapping is powerful precisely because the primitive relation existed before force and distance were assigned.</p>
+</section>
+<section id="generalized-work-is-more-fundamental-than-one-mechanical-example" class="level2">
+<h2 class="anchored" data-anchor-id="generalized-work-is-more-fundamental-than-one-mechanical-example">Generalized Work Is More Fundamental Than One Mechanical Example</h2>
+<p>Nothing in</p>
+<p><span class="math display">\[
+\Delta R
+=
+C^{\mathrm{out}}\lambda
+\]</span></p>
+<p>requires the physical read to be force times linear displacement.</p>
+<p>Different thermodynamic systems may map the same structural relation onto different conjugate variables.</p>
+<p>Possible physical realizations include relations involving:</p>
+<ul>
+<li>force and displacement;</li>
+<li>pressure and volume;</li>
+<li>electrical potential and charge;</li>
+<li>chemical coupling;</li>
+<li>elastic deformation;</li>
+<li>or other generalized constraint-displacement pairs.</li>
+</ul>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>R<sup>2</sup>D does not make one form of work primitive.</strong></p>
+</blockquote>
+<p>It makes the underlying constraint-distinguishability relation primitive.</p>
+</section>
+<section id="muscle-makes-several-reads-simultaneously-accessible" class="level2">
+<h2 class="anchored" data-anchor-id="muscle-makes-several-reads-simultaneously-accessible">Muscle Makes Several Reads Simultaneously Accessible</h2>
+<p>Muscle is especially useful because multiple parts of the recursive architecture can be measured within one functioning system.</p>
+<p>At a molecular boundary, protein-state recurrence can be related to chemical cycling.</p>
+<p>At an enclosing muscle boundary, force and shortening are mechanically readable.</p>
+<p>Heat is measurable.</p>
+<p>Occupancy of molecular states can be measured.</p>
+<p>Chemical free-energy relations are experimentally accessible.</p>
+<p>This makes muscle unusually capable of testing whether distinct physical coordinates actually occupy the structural roles assigned by R<sup>2</sup>D.</p>
+<p>The muscle mapping is therefore more than an analogy.</p>
+<p>It is an empirical calibration problem.</p>
+</section>
+<section id="physical-rate-is-a-separate-mapping" class="level2">
+<h2 class="anchored" data-anchor-id="physical-rate-is-a-separate-mapping">Physical Rate Is a Separate Mapping</h2>
+<p>Recurrence must be treated carefully.</p>
+<p>Part I defines the adjacent recurrence ratio</p>
+<p><span class="math display">\[
+\rho_{n+1|n}
+=
+\frac{
+N_{\mathcal D_R}(\chi_{n+1})
+}{
+N_{\mathcal D_R}(\mathcal C_n)
+}.
+\]</span></p>
+<p>This is a ratio of counts.</p>
+<p>It is not yet a ratio of physical rates.</p>
+<p>A physical system may provide measurable recurrence rates</p>
+<p><span class="math display">\[
+r_n
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+r_{n+1}.
+\]</span></p>
+<p>Only after that physical calibration has been justified can one test a mapping of the form</p>
+<p><span class="math display">\[
+\boxed{
+\rho_{n+1|n}
+\xrightarrow{\text{rate read}}
+\frac{r_{n+1}}{r_n}.
+}
+\]</span></p>
+<p>Thus physical time and rate do not enter by simply renaming recurrence.</p>
+<p>They require an empirical bridge.</p>
+<p><a href="../understand/recurrence.html">Recurrence →</a></p>
+</section>
+<section id="state-occurrence-count-is-not-a-clock" class="level2">
+<h2 class="anchored" data-anchor-id="state-occurrence-count-is-not-a-clock">State-Occurrence Count Is Not a Clock</h2>
+<p>This distinction also protects the meaning of</p>
+<p><span class="math display">\[
+\tau_{n,i}
+=
+\ln\nu_{n,i}.
+\]</span></p>
+<p>The quantity</p>
+<p><span class="math display">\[
+\tau
+\]</span></p>
+<p>is a logarithmic occurrence-count coordinate.</p>
+<p>It is not primitive elapsed time.</p>
+<p>It is not a physical rate.</p>
+<p>Therefore:</p>
+<p><span class="math display">\[
+\boxed{
+\tau
+\neq
+t.
+}
+\]</span></p>
+<p>A physical clock may later read recurrence.</p>
+<p>That does not turn every occurrence coordinate into time.</p>
+</section>
+<section id="background-can-acquire-a-thermodynamic-entropy-read" class="level2">
+<h2 class="anchored" data-anchor-id="background-can-acquire-a-thermodynamic-entropy-read">Background Can Acquire a Thermodynamic Entropy Read</h2>
+<p>The R<sup>2</sup>D Second Law gives</p>
+<p><span class="math display">\[
+\delta_{\mathcal C}\Phi_{n+1}
+=
+L_{\tau,n,\alpha,\mathcal C}.
+\]</span></p>
+<p>Both are dimensionless logarithmic count relations.</p>
+<p>In thermodynamics, the enclosing background increment can acquire an entropy read:</p>
+<p><span class="math display">\[
+\boxed{
+S_{\mathrm{gen},\mathcal C}^{\mathrm{th}}
+=
+k_B
+\delta_{\mathcal C}\Phi_{n+1}.
+}
+\]</span></p>
+<p>This provides the bridge from primitive occurrence nonreciprocity to thermodynamic entropy generation.</p>
+<p>The logical order remains:</p>
+<p><span class="math display">\[
+\boxed{
+\text{local occurrence nonreciprocity}
+\longleftrightarrow
+\text{enclosing background increment}
+\rightarrow
+\text{generated thermodynamic entropy}.
+}
+\]</span></p>
+<p><a href="../understand/second-law.html">The R²D Second Law →</a></p>
+</section>
+<section id="heat-is-not-automatically-entropy-production" class="level2">
+<h2 class="anchored" data-anchor-id="heat-is-not-automatically-entropy-production">Heat Is Not Automatically Entropy Production</h2>
+<p>This mapping also clarifies why familiar thermodynamic quantities must not be collapsed.</p>
+<p>Heat can be exchanged reversibly.</p>
+<p>Work can be performed reversibly.</p>
+<p>Constraint can exist in a reversible system.</p>
+<p>A temperature difference can exist without itself being entropy production.</p>
+<p>The primitive irreversible coordinate is instead the nonreciprocity</p>
+<p><span class="math display">\[
+L_\tau&gt;0.
+\]</span></p>
+<p>Its enclosing thermodynamic read is generated entropy.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{heat}
+\neq
+\text{entropy production}
+}
+\]</span></p>
+<p>in general.</p>
+<p>The count architecture separates these relations before thermodynamic units are attached.</p>
+</section>
+<section id="probability-is-a-normalized-read" class="level2">
+<h2 class="anchored" data-anchor-id="probability-is-a-normalized-read">Probability Is a Normalized Read</h2>
+<p>Probability provides another example of physical or statistical reading.</p>
+<p>Possible count exists first:</p>
+<p><span class="math display">\[
+W_{n,i}.
+\]</span></p>
+<p>A normalized possible-count distribution can then be written</p>
+<p><span class="math display">\[
+\boxed{
+p_{n,i}
+=
+\frac{
+W_{n,i}
+}{
+\sum_j W_{n,j}
+}.
+}
+\]</span></p>
+<p>Likewise, realized occupancy can be normalized:</p>
+<p><span class="math display">\[
+\boxed{
+p_{n,i}^{\mathrm{obs}}
+=
+\frac{
+c_{n,i}
+}{
+\sum_j c_{n,j}
+}.
+}
+\]</span></p>
+<p>Normalization does not create the underlying count domain.</p>
+<p>It reads it fractionally.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>Possible count precedes probability.</strong></p>
+</blockquote>
+<p>And:</p>
+<blockquote class="blockquote">
+<p><strong>Occupancy precedes normalized observed occupancy.</strong></p>
+</blockquote>
+</section>
+<section id="a-probability-read-must-specify-what-was-normalized" class="level2">
+<h2 class="anchored" data-anchor-id="a-probability-read-must-specify-what-was-normalized">A Probability Read Must Specify What Was Normalized</h2>
+<p>This matters because several different R<sup>2</sup>D counts can be normalized.</p>
+<p>One could normalize:</p>
+<ul>
+<li>possible multiplicity;</li>
+<li>occurrence count;</li>
+<li>occupancy;</li>
+<li>or another appropriate finite count.</li>
+</ul>
+<p>Those normalized quantities need not have the same interpretation.</p>
+<p>Therefore simply seeing a number between zero and one does not identify its primitive origin.</p>
+<p>The count being normalized must first be specified.</p>
+</section>
+<section id="physical-geometry-is-also-a-mapping" class="level2">
+<h2 class="anchored" data-anchor-id="physical-geometry-is-also-a-mapping">Physical Geometry Is Also a Mapping</h2>
+<p>R<sup>2</sup>D defines a count boundary before assigning spatial geometry to it.</p>
+<p>Likewise, it defines distinguishability</p>
+<p><span class="math display">\[
+\lambda
+\]</span></p>
+<p>before interpreting that distinction as physical distance.</p>
+<p>A spatial mapping may therefore take the schematic form</p>
+<p><span class="math display">\[
+\boxed{
+\text{boundary}
+\xrightarrow{\text{spatial read}}
+\text{area or enclosing geometry}
+}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\boxed{
+\lambda
+\xrightarrow{\text{spatial read}}
+\text{distance-like coordinate}.
+}
+\]</span></p>
+<p>The physical geometry can be completely real.</p>
+<p>The R<sup>2</sup>D claim is only that the count relation is logically prior to that geometric representation.</p>
+</section>
+<section id="space-is-not-assumed-in-order-to-define-a-boundary" class="level2">
+<h2 class="anchored" data-anchor-id="space-is-not-assumed-in-order-to-define-a-boundary">Space Is Not Assumed in Order to Define a Boundary</h2>
+<p>This is why an R<sup>2</sup>D boundary is not initially a spatial surface.</p>
+<p>The boundary defines a count domain.</p>
+<p>Only later may a physical system represent that boundary geometrically.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+B_n
+\neq
+\text{primitive physical area}.
+}
+\]</span></p>
+<p>But a particular physical mapping may assign an areal read to (B_n).</p>
+<p>The distinction is exactly analogous to assigning an energetic read to a dimensionless logarithmic count coordinate.</p>
+</section>
+<section id="time-is-not-assumed-in-order-to-define-recurrence" class="level2">
+<h2 class="anchored" data-anchor-id="time-is-not-assumed-in-order-to-define-recurrence">Time Is Not Assumed in Order to Define Recurrence</h2>
+<p>Likewise, recurrence does not require an already-existing clock.</p>
+<p>A completed relation can be counted again.</p>
+<p>That count relation exists before seconds are assigned.</p>
+<p>A physical clock then provides a temporal read of recurrence.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{recurrence}
+\rightarrow
+\text{clock read}
+}
+\]</span></p>
+<p>rather than requiring</p>
+<p><span class="math display">\[
+\text{primitive time}
+\rightarrow
+\text{recurrence}.
+\]</span></p>
+<p>This becomes especially important in the recursive-clock program.</p>
+</section>
+<section id="thermodynamics-occupies-a-joint-readability-regime" class="level2">
+<h2 class="anchored" data-anchor-id="thermodynamics-occupies-a-joint-readability-regime">Thermodynamics Occupies a Joint-Readability Regime</h2>
+<p>R<sup>2</sup>D later asks what happens when distinguishability and recurrence do not remain equally readable.</p>
+<p>Thermodynamics is special because both can often be accessed together.</p>
+<p>A thermodynamic experiment may simultaneously measure:</p>
+<p><span class="math display">\[
+\text{state distinction},
+\]</span></p>
+<p><span class="math display">\[
+\text{occupancy},
+\]</span></p>
+<p><span class="math display">\[
+\text{recurrence rate},
+\]</span></p>
+<p><span class="math display">\[
+\text{constraint},
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\text{background production}.
+\]</span></p>
+<p>This makes thermodynamics the natural calibration regime for the primitive architecture.</p>
+</section>
+<section id="quantum-readability-emphasizes-recurrence" class="level2">
+<h2 class="anchored" data-anchor-id="quantum-readability-emphasizes-recurrence">Quantum Readability Emphasizes Recurrence</h2>
+<p>At one readability limit, subordinate geometric distinguishability becomes difficult or impossible to resolve while recurrence remains sharply readable.</p>
+<p>The later R<sup>2</sup>D program asks whether familiar quantum quantities are physical projections appropriate to that regime.</p>
+<p>Frequency, phase, occupancy statistics, amplitudes, and particle counts then become candidate reads of what remains accessible.</p>
+<p>But the logical status must remain explicit:</p>
+<blockquote class="blockquote">
+<p><strong>The current Canon does not derive all of quantum mechanics from Part I.</strong></p>
+</blockquote>
+<p>The quantum program tests whether quantum formalism can be deprojected onto the same recursive count architecture.</p>
+</section>
+<section id="gravitational-readability-emphasizes-distinguishability" class="level2">
+<h2 class="anchored" data-anchor-id="gravitational-readability-emphasizes-distinguishability">Gravitational Readability Emphasizes Distinguishability</h2>
+<p>At the opposite readability limit, enclosing distinguishability can remain readable after the relevant enclosing recurrence is no longer jointly resolved.</p>
+<p>The later gravitational program asks whether geometric quantities such as</p>
+<ul>
+<li>distance;</li>
+<li>area;</li>
+<li>metric;</li>
+<li>curvature;</li>
+<li>and horizon structure</li>
+</ul>
+<p>are physical reads appropriate to that limit.</p>
+<p>Again, the distinction is essential:</p>
+<blockquote class="blockquote">
+<p><strong>A successful geometric mapping does not make geometry primitive to the count architecture.</strong></p>
+</blockquote>
+<p>Geometry can be real without being logically first.</p>
+</section>
+<section id="the-two-physical-limits-need-not-use-the-same-ruler" class="level2">
+<h2 class="anchored" data-anchor-id="the-two-physical-limits-need-not-use-the-same-ruler">The Two Physical Limits Need Not Use the Same Ruler</h2>
+<p>This offers a different view of the quantum-gravity problem.</p>
+<p>If quantum physics and gravity occupy opposite readability limits of the same recursive relation, their most natural physical coordinates need not be the same.</p>
+<p>One side may preserve recurrence more directly.</p>
+<p>The other may preserve distinguishability more directly.</p>
+<p>Trying to force both descriptions into one already-dimensional primitive ruler may therefore begin after the important distinction has already been lost.</p>
+<p>R<sup>2</sup>D instead looks for the common structure before dimensional projection.</p>
+</section>
+<section id="unification-happens-at-the-count-level" class="level2">
+<h2 class="anchored" data-anchor-id="unification-happens-at-the-count-level">Unification Happens at the Count Level</h2>
+<p>The proposed unification is therefore not</p>
+<p><span class="math display">\[
+\boxed{
+\text{quantum object}
+=
+\text{gravitational object}.
+}
+\]</span></p>
+<p>Nor is it</p>
+<p><span class="math display">\[
+\boxed{
+\text{quantum unit system}
+=
+\text{gravitational unit system}.
+}
+\]</span></p>
+<p>It is</p>
+<p><span class="math display">\[
+\boxed{
+\text{same primitive count grammar}
+\rightarrow
+\text{different boundary-specific physical reads}.
+}
+\]</span></p>
+<p>This is <strong>unification before units</strong>.</p>
+<p><a href="../understand/before-units.html">Before Units →</a></p>
+</section>
+<section id="different-sciences-need-not-share-the-same-objects" class="level2">
+<h2 class="anchored" data-anchor-id="different-sciences-need-not-share-the-same-objects">Different Sciences Need Not Share the Same Objects</h2>
+<p>The same logic extends beyond physics.</p>
+<p>A molecule is not a cell.</p>
+<p>A cell is not an organism.</p>
+<p>An organism is not an ecosystem.</p>
+<p>Yet each can be represented through:</p>
+<ul>
+<li>a count boundary;</li>
+<li>readable states;</li>
+<li>compatible subordinate realizations;</li>
+<li>multiplicity;</li>
+<li>occurrence;</li>
+<li>occupancy;</li>
+<li>enclosing compatibility;</li>
+<li>constraint;</li>
+<li>closure;</li>
+<li>and recurrence.</li>
+</ul>
+<p>Thus R<sup>2</sup>D does not unify the sciences by insisting that they study the same object.</p>
+<p>It asks whether their different objects become scientifically defined through the same formal grammar.</p>
+<p><a href="../understand/scientific-objecthood.html">Scientific Objecthood →</a></p>
+</section>
+<section id="the-physical-read-can-change-without-changing-the-primitive-role" class="level2">
+<h2 class="anchored" data-anchor-id="the-physical-read-can-change-without-changing-the-primitive-role">The Physical Read Can Change Without Changing the Primitive Role</h2>
+<p>Suppose</p>
+<p><span class="math display">\[
+C\lambda
+\]</span></p>
+<p>has one mechanical read in muscle.</p>
+<p>Another physical system might assign the same primitive role to a completely different conjugate pair.</p>
+<p>The physical variables change.</p>
+<p>The structural position in the recursive architecture does not.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{same primitive role}
+\not\Rightarrow
+\text{same physical quantity}.
+}
+\]</span></p>
+<p>This is one of the central advantages of working dimensionlessly first.</p>
+</section>
+<section id="conversely-the-same-physical-quantity-can-play-different-roles" class="level2">
+<h2 class="anchored" data-anchor-id="conversely-the-same-physical-quantity-can-play-different-roles">Conversely, the Same Physical Quantity Can Play Different Roles</h2>
+<p>The reverse caution also matters.</p>
+<p>The word “energy,” for example, appears in many contexts.</p>
+<p>But two energetic quantities at different boundaries need not read the same primitive R<sup>2</sup>D relation.</p>
+<p>Likewise, two quantities both called entropy may refer to different count relations.</p>
+<p>Therefore matching physical units alone is not enough to establish an R<sup>2</sup>D mapping.</p>
+<p>The structural role must also match.</p>
+</section>
+<section id="never-map-by-units-alone" class="level2">
+<h2 class="anchored" data-anchor-id="never-map-by-units-alone">Never Map by Units Alone</h2>
+<p>Suppose two quantities both have units of energy.</p>
+<p>That does not prove that they correspond to the same count coordinate.</p>
+<p>Likewise, two rates need not correspond to the same recurrence relation.</p>
+<p>Two lengths need not correspond to the same distinguishability relation.</p>
+<p>A valid mapping requires:</p>
+<p><span class="math display">\[
+\boxed{
+\text{matching dimensions}
++
+\text{matching boundary role}
++
+\text{matching recursive relation}.
+}
+\]</span></p>
+<p>Units are necessary for a physical calibration.</p>
+<p>They are not sufficient to identify the primitive quantity.</p>
+</section>
+<section id="never-map-by-equation-shape-alone" class="level2">
+<h2 class="anchored" data-anchor-id="never-map-by-equation-shape-alone">Never Map by Equation Shape Alone</h2>
+<p>Another danger is recognizing a familiar equation and assigning R<sup>2</sup>D symbols to it afterward.</p>
+<p>That reverses the method.</p>
+<p>The correct order is:</p>
+<p><span class="math display">\[
+\boxed{
+\text{define the R²D boundary and count relations first}
+}
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+\boxed{
+\text{identify independently measurable physical quantities}
+}
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+\boxed{
+\text{test whether the mapping preserves the relation}.
+}
+\]</span></p>
+<p>A physical equation that merely resembles an R<sup>2</sup>D equation is not yet a derivation.</p>
+</section>
+<section id="the-boundary-must-be-specified-first" class="level2">
+<h2 class="anchored" data-anchor-id="the-boundary-must-be-specified-first">The Boundary Must Be Specified First</h2>
+<p>Every physical mapping should therefore begin by asking:</p>
+<blockquote class="blockquote">
+<p><strong>What is the scientific object?</strong></p>
+</blockquote>
+<p>Then:</p>
+<blockquote class="blockquote">
+<p><strong>What boundary defines it?</strong></p>
+</blockquote>
+<p>Only after that can we ask:</p>
+<blockquote class="blockquote">
+<p>What are its readable macrostates?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What are its compatible subordinate realizations?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What counts as multiplicity?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What is occupancy?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What is the enclosing relation?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What closes?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What recurs?</p>
+</blockquote>
+<p>Without a defined boundary, the physical dictionary is underdetermined.</p>
+</section>
+<section id="the-physical-mapping-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="the-physical-mapping-workflow">The Physical Mapping Workflow</h2>
+<p>A disciplined R<sup>2</sup>D mapping proceeds in the following order:</p>
+<ol type="1">
+<li><p>Define the object and count boundary.</p></li>
+<li><p>Identify its readable macrostates.</p></li>
+<li><p>Identify compatible subordinate realizations.</p></li>
+<li><p>Construct the native multiplicity structure.</p></li>
+<li><p>Separate multiplicity, occurrence, and occupancy.</p></li>
+<li><p>Identify enclosing compatibility and directional possibility.</p></li>
+<li><p>Identify constraint and retention.</p></li>
+<li><p>Define closure and recurrence.</p></li>
+<li><p>Write the dimensionless R<sup>2</sup>D relation.</p></li>
+<li><p>Only then identify candidate physical quantities that read those relations.</p></li>
+<li><p>Test the resulting mapping against established empirical law.</p></li>
+<li><p>State what was derived, what was mapped, and what remains hypothetical.</p></li>
+</ol>
+<p>This order prevents a familiar physical ontology from being silently inserted into the primitive definitions.</p>
+</section>
+<section id="different-claims-have-different-logical-status" class="level2">
+<h2 class="anchored" data-anchor-id="different-claims-have-different-logical-status">Different Claims Have Different Logical Status</h2>
+<p>Not every equation in the R<sup>2</sup>D program has the same status.</p>
+<p>This distinction should remain explicit.</p>
+<section id="formal-definition" class="level3">
+<h3 class="anchored" data-anchor-id="formal-definition">Formal definition</h3>
+<p>A relation may follow directly from how the count domain is defined.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+\]</span></p>
+</section>
+<section id="mathematical-consequence" class="level3">
+<h3 class="anchored" data-anchor-id="mathematical-consequence">Mathematical consequence</h3>
+<p>A relation may follow from the definitions.</p>
+<p>For example, native multiplicity closes around a genuine return:</p>
+<p><span class="math display">\[
+\Delta S_{\mathcal C}=0.
+\]</span></p>
+</section>
+<section id="r2d-postulate" class="level3">
+<h3 class="anchored" data-anchor-id="r2d-postulate">R<sup>2</sup>D postulate</h3>
+<p>A relation may be proposed as part of the recursive theory.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+\]</span></p>
+</section>
+<section id="physical-mapping" class="level3">
+<h3 class="anchored" data-anchor-id="physical-mapping">Physical mapping</h3>
+<p>A dimensionless R<sup>2</sup>D quantity may be assigned a conventional physical read.</p>
+<p>For example,</p>
+<p><span class="math display">\[
+S^{\mathrm{th}}
+=
+k_B\ln W.
+\]</span></p>
+</section>
+<section id="empirical-calibration" class="level3">
+<h3 class="anchored" data-anchor-id="empirical-calibration">Empirical calibration</h3>
+<p>A specific physical system may quantitatively calibrate a proposed mapping.</p>
+<p>Muscle is particularly important in this category.</p>
+</section>
+<section id="hypothesis-or-projection" class="level3">
+<h3 class="anchored" data-anchor-id="hypothesis-or-projection">Hypothesis or projection</h3>
+<p>Later quantum, gravitational, or cosmological interpretations may remain proposals requiring additional derivation or testing.</p>
+<p>Keeping these categories distinct makes the entire program stronger.</p>
+</section>
+</section>
+<section id="a-mapping-is-not-a-derivation" class="level2">
+<h2 class="anchored" data-anchor-id="a-mapping-is-not-a-derivation">A Mapping Is Not a Derivation</h2>
+<p>Suppose an established physical law can be written exactly in R<sup>2</sup>D form once a set of physical identifications is supplied.</p>
+<p>That is important.</p>
+<p>But it is not necessarily a first-principles derivation of the physical law from the Part I axioms.</p>
+<p>The distinction is:</p>
+<p><span class="math display">\[
+\boxed{
+\text{R²D relation}
++
+\text{independently justified physical mapping}
+\Rightarrow
+\text{known physical law}
+}
+\]</span></p>
+<p>versus</p>
+<p><span class="math display">\[
+\boxed{
+\text{R²D axioms alone}
+\Rightarrow
+\text{physical law}.
+}
+\]</span></p>
+<p>Those are different achievements.</p>
+<p>The Canon intentionally keeps them separate.</p>
+</section>
+<section id="an-exact-mapping-can-still-be-powerful" class="level2">
+<h2 class="anchored" data-anchor-id="an-exact-mapping-can-still-be-powerful">An Exact Mapping Can Still Be Powerful</h2>
+<p>Calling something a mapping rather than a derivation does not make it weak.</p>
+<p>If independently measured physical quantities occupy exactly the roles predicted by the count architecture, and the mapped relation reproduces an established physical law, that is a nontrivial test.</p>
+<p>It means that two descriptions share the same formal structure.</p>
+<p>The stronger question—whether every physical parameter can itself be derived from primitive count—can then be asked separately.</p>
+</section>
+<section id="deprojection-runs-the-mapping-backward" class="level2">
+<h2 class="anchored" data-anchor-id="deprojection-runs-the-mapping-backward">Deprojection Runs the Mapping Backward</h2>
+<p>Once a physical mapping has been established, R<sup>2</sup>D can also be used in reverse.</p>
+<p>Begin with a physical theory:</p>
+<p><span class="math display">\[
+\text{physical law}.
+\]</span></p>
+<p>Identify which variables correspond to:</p>
+<p><span class="math display">\[
+\text{boundary},
+\quad
+\text{multiplicity},
+\quad
+\text{occupancy},
+\quad
+\text{constraint},
+\quad
+\text{recurrence},
+\quad
+\dots
+\]</span></p>
+<p>Then ask whether the domain-specific ontology can be stripped away while the underlying count relation remains.</p>
+<p>This is <strong>deprojection</strong>.</p>
+<p>Schematically:</p>
+<p><span class="math display">\[
+\boxed{
+\text{physical theory}
+\rightarrow
+\text{dimensionless count relation}.
+}
+\]</span></p>
+<p>That operation is one of the main ways R<sup>2</sup>D can be used as a scientific discovery tool.</p>
+</section>
+<section id="deprojection-does-not-mean-rejecting-the-physical-theory" class="level2">
+<h2 class="anchored" data-anchor-id="deprojection-does-not-mean-rejecting-the-physical-theory">Deprojection Does Not Mean Rejecting the Physical Theory</h2>
+<p>If a physical law deprojects successfully, its equations need not be wrong.</p>
+<p>Quite the opposite.</p>
+<p>Their accuracy is evidence that the boundary-specific relation they describe is real.</p>
+<p>The question becomes:</p>
+<blockquote class="blockquote">
+<p><strong>What is this equation reading?</strong></p>
+</blockquote>
+<p>rather than</p>
+<blockquote class="blockquote">
+<p><strong>How do we replace this equation?</strong></p>
+</blockquote>
+<p>R<sup>2</sup>D is therefore often conservative about mathematics while being more radical about ontology.</p>
+</section>
+<section id="the-equation-can-survive-while-the-ontology-changes" class="level2">
+<h2 class="anchored" data-anchor-id="the-equation-can-survive-while-the-ontology-changes">The Equation Can Survive While the Ontology Changes</h2>
+<p>This can be written compactly:</p>
+<p><span class="math display">\[
+\boxed{
+\text{same empirical equation}
++
+\text{different primitive interpretation}.
+}
+\]</span></p>
+<p>Entropy can remain entropy.</p>
+<p>Gibbs free energy can remain Gibbs free energy.</p>
+<p>Mechanical work can remain mechanical work.</p>
+<p>Quantum probabilities can remain predictive probabilities.</p>
+<p>Spacetime curvature can remain physically measurable curvature.</p>
+<p>What changes is the claim that any one of these must be primitive before the recursive count relation that makes it meaningful.</p>
+</section>
+<section id="thermodynamics-provides-the-calibration-window" class="level2">
+<h2 class="anchored" data-anchor-id="thermodynamics-provides-the-calibration-window">Thermodynamics Provides the Calibration Window</h2>
+<p>The larger program can therefore be pictured as</p>
+<p><span class="math display">\[
+\boxed{
+\text{dimensionless R²D}
+\rightarrow
+\text{thermodynamic joint readability}
+\rightarrow
+\begin{cases}
+\text{quantum-facing projection},\\
+\text{gravitational-facing projection}.
+\end{cases}
+}
+\]</span></p>
+<p>Thermodynamics is the middle regime where enough of both distinguishability and recurrence remains visible to calibrate the architecture.</p>
+<p>The more one side becomes unreadable, the more domain-specific the surviving physical ontology becomes.</p>
+</section>
+<section id="the-canon-does-not-assign-equal-confidence-to-every-mapping" class="level2">
+<h2 class="anchored" data-anchor-id="the-canon-does-not-assign-equal-confidence-to-every-mapping">The Canon Does Not Assign Equal Confidence to Every Mapping</h2>
+<p>The current program is deliberately uneven in evidentiary status.</p>
+<p>The thermodynamic mappings are the most developed.</p>
+<p>Muscle provides unusually direct empirical calibration.</p>
+<p>The quantum program contains several structural and mathematical mappings that still require further extension.</p>
+<p>The gravitational program identifies recursive geometric structure and multiple physical bridges, but the full derivation connecting the primitive R<sup>2</sup>D architecture to Einsteinian field geometry remains incomplete.</p>
+<p>This is not a defect to hide.</p>
+<p>It defines the research program.</p>
+</section>
+<section id="what-would-count-as-progress" class="level2">
+<h2 class="anchored" data-anchor-id="what-would-count-as-progress">What Would Count as Progress</h2>
+<p>The strongest future R<sup>2</sup>D results will not be additional verbal analogies.</p>
+<p>They will be cases in which:</p>
+<p><span class="math display">\[
+\boxed{
+\text{independently defined count architecture}
+}
+\]</span></p>
+<p>predicts</p>
+<p><span class="math display">\[
+\boxed{
+\text{a specific physical mapping}
+}
+\]</span></p>
+<p>which then reproduces or extends</p>
+<p><span class="math display">\[
+\boxed{
+\text{an independently established empirical law}.
+}
+\]</span></p>
+<p>Better still, the framework should eventually produce new testable relations not inserted through the mapping itself.</p>
+<p>That is the transition from reinterpretation to discovery.</p>
+</section>
+<section id="what-would-count-as-failure" class="level2">
+<h2 class="anchored" data-anchor-id="what-would-count-as-failure">What Would Count as Failure</h2>
+<p>A proposed physical mapping should be rejected if it requires redefining the primitive quantities merely to fit the target equation.</p>
+<p>Likewise, the broader R<sup>2</sup>D program would be challenged if different domains required mutually incompatible definitions of:</p>
+<ul>
+<li>boundary;</li>
+<li>multiplicity;</li>
+<li>possibility;</li>
+<li>constraint;</li>
+<li>closure;</li>
+<li>recurrence;</li>
+<li>or recursive replacement.</li>
+</ul>
+<p>Universality raises the empirical burden.</p>
+<p>It does not lower it.</p>
+</section>
+<section id="the-same-questions-can-be-asked-in-every-domain" class="level2">
+<h2 class="anchored" data-anchor-id="the-same-questions-can-be-asked-in-every-domain">The Same Questions Can Be Asked in Every Domain</h2>
+<p>For any scientific system, R<sup>2</sup>D asks:</p>
+<blockquote class="blockquote">
+<p>What boundary defines the object?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What distinctions are readable?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What are the compatible subordinate realizations?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What is the multiplicity?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What occurs?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What occupancy is realized?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What enclosing relation supplies directional possibility?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What constraint supplies retention?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What closes?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What recurs?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What changes meaning when the boundary changes?</p>
+</blockquote>
+<p>Only after answering those questions does it ask:</p>
+<blockquote class="blockquote">
+<p><strong>What physical variables read these relations here?</strong></p>
+</blockquote>
+<p>That is the bridge from count to science.</p>
+</section>
+<section id="the-complete-logical-order" class="level2">
+<h2 class="anchored" data-anchor-id="the-complete-logical-order">The Complete Logical Order</h2>
+<p>The full R<sup>2</sup>D sequence can now be written:</p>
+<p><span class="math display">\[
+\boxed{
+\begin{array}{c}
+\text{boundary}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{distinguishable states}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{multiplicity}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{occurrence and occupancy}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{enclosing possibility and constraint}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{asymmetry}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{closure and recurrence}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{recursive relation}
+\\[8pt]
+\Downarrow
+\\[8pt]
+\text{physical read}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{thermodynamics, chemistry, mechanics, biology, quantum theory, gravity, \ldots}
+\end{array}
+}
+\]</span></p>
+<p>The physical sciences appear at the end because they assign readable coordinates to an architecture that has already been defined.</p>
+</section>
+<section id="the-key-distinction" class="level2">
+<h2 class="anchored" data-anchor-id="the-key-distinction">The Key Distinction</h2>
+<p>The central idea is simple:</p>
+<blockquote class="blockquote">
+<p><strong>R<sup>2</sup>D does not begin by translating one physical theory into another.</strong></p>
+</blockquote>
+<p>It begins beneath their units and objects.</p>
+<p>Then it asks how each physical domain reads the same primitive grammar.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>Entropy is a read of count.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Probability is a normalized read of count.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Work can be a constrained-distinguishability read.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Physical rate can be a recurrence read.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Generated entropy can be a background read.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Geometry can be a distinguishability read.</strong></p>
+</blockquote>
+<p>The physical quantities differ because the boundaries differ.</p>
+<p>The proposed invariant is the count architecture beneath them.</p>
+<p>Or, most compactly:</p>
+<blockquote class="blockquote">
+<p><strong>The domain changes.<br>
+The units change.<br>
+The readable ontology changes.<br>
+The primitive count grammar does not.</strong></p>
+</blockquote>
+<hr>
+</section>
+<section id="where-to-go-next" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-go-next">Where to Go Next</h2>
+<p><a href="../understand/definitions.html">Definitions and Symbols →</a></p>
+<p><a href="../understand/coins.html">The Coins Example →</a></p>
+<p><a href="../run/index.html">Run R²D →</a></p>
+<p><a href="../understand/index.html">Back to Understand R²D →</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/r2dscience\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

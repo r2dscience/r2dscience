@@ -1,0 +1,1642 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>The R²D Second Law – R²D Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R²D Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-understand" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Understand</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-understand">    
+        <li>
+    <a class="dropdown-item" href="../understand/what-is-r2d.html">
+ <span class="dropdown-text">What is R²D?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../understand/index.html">
+ <span class="dropdown-text">Understand R²D</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../run/index.html"> 
+<span class="menu-text">Run R²D</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../applications/index.html"> 
+<span class="menu-text">Applications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../canon/index.html"> 
+<span class="menu-text">Canon</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About R²D Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/authors.html">
+ <span class="dropdown-text">Authors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/publications.html">
+ <span class="dropdown-text">Publications &amp; Archive</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/contact.html">
+ <span class="dropdown-text">Contact</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-r2d-second-law" id="toc-the-r2d-second-law" class="nav-link active" data-scroll-target="#the-r2d-second-law">The R<sup>2</sup>D Second Law</a>
+  <ul class="collapse">
+  <li><a href="#closure-does-not-require-reversibility" id="toc-closure-does-not-require-reversibility" class="nav-link" data-scroll-target="#closure-does-not-require-reversibility">Closure Does Not Require Reversibility</a></li>
+  <li><a href="#directional-occurrence-count-efficiency" id="toc-directional-occurrence-count-efficiency" class="nav-link" data-scroll-target="#directional-occurrence-count-efficiency">Directional Occurrence-Count Efficiency</a></li>
+  <li><a href="#nonreciprocal-realization" id="toc-nonreciprocal-realization" class="nav-link" data-scroll-target="#nonreciprocal-realization">Nonreciprocal Realization</a></li>
+  <li><a href="#occurrence-count-loss" id="toc-occurrence-count-loss" class="nav-link" data-scroll-target="#occurrence-count-loss">Occurrence-Count Loss</a></li>
+  <li><a href="#loss-does-not-mean-destruction" id="toc-loss-does-not-mean-destruction" class="nav-link" data-scroll-target="#loss-does-not-mean-destruction">“Loss” Does Not Mean Destruction</a></li>
+  <li><a href="#exact-multiplicity-closure-can-coexist-with-irreversibility" id="toc-exact-multiplicity-closure-can-coexist-with-irreversibility" class="nav-link" data-scroll-target="#exact-multiplicity-closure-can-coexist-with-irreversibility">Exact Multiplicity Closure Can Coexist With Irreversibility</a></li>
+  <li><a href="#possible-count-and-realized-count-behave-differently" id="toc-possible-count-and-realized-count-behave-differently" class="nav-link" data-scroll-target="#possible-count-and-realized-count-behave-differently">Possible Count and Realized Count Behave Differently</a></li>
+  <li><a href="#background-is-a-different-kind-of-count" id="toc-background-is-a-different-kind-of-count" class="nav-link" data-scroll-target="#background-is-a-different-kind-of-count">Background Is a Different Kind of Count</a></li>
+  <li><a href="#background-is-nondirectional-locally" id="toc-background-is-nondirectional-locally" class="nav-link" data-scroll-target="#background-is-nondirectional-locally">Background Is Nondirectional Locally</a></li>
+  <li><a href="#but-background-is-boundary-relative" id="toc-but-background-is-boundary-relative" class="nav-link" data-scroll-target="#but-background-is-boundary-relative">But Background Is Boundary Relative</a></li>
+  <li><a href="#the-enclosing-background-increment" id="toc-the-enclosing-background-increment" class="nav-link" data-scroll-target="#the-enclosing-background-increment">The Enclosing Background Increment</a></li>
+  <li><a href="#the-second-law-postulate" id="toc-the-second-law-postulate" class="nav-link" data-scroll-target="#the-second-law-postulate">The Second-Law Postulate</a></li>
+  <li><a href="#reciprocal-realization-produces-no-background-increment" id="toc-reciprocal-realization-produces-no-background-increment" class="nav-link" data-scroll-target="#reciprocal-realization-produces-no-background-increment">Reciprocal Realization Produces No Background Increment</a></li>
+  <li><a href="#nonreciprocal-realization-produces-a-positive-background-increment" id="toc-nonreciprocal-realization-produces-a-positive-background-increment" class="nav-link" data-scroll-target="#nonreciprocal-realization-produces-a-positive-background-increment">Nonreciprocal Realization Produces a Positive Background Increment</a></li>
+  <li><a href="#this-is-not-bottom-up-transfer" id="toc-this-is-not-bottom-up-transfer" class="nav-link" data-scroll-target="#this-is-not-bottom-up-transfer">This Is Not Bottom-Up Transfer</a></li>
+  <li><a href="#the-causal-direction-does-not-reverse" id="toc-the-causal-direction-does-not-reverse" class="nav-link" data-scroll-target="#the-causal-direction-does-not-reverse">The Causal Direction Does Not Reverse</a></li>
+  <li><a href="#productive-output-does-not-define-irreversibility" id="toc-productive-output-does-not-define-irreversibility" class="nav-link" data-scroll-target="#productive-output-does-not-define-irreversibility">Productive Output Does Not Define Irreversibility</a></li>
+  <li><a href="#zero-productive-output-is-not-reversibility" id="toc-zero-productive-output-is-not-reversibility" class="nav-link" data-scroll-target="#zero-productive-output-is-not-reversibility">Zero Productive Output Is Not Reversibility</a></li>
+  <li><a href="#the-background-associated-constraint-is-not-the-background-increment" id="toc-the-background-associated-constraint-is-not-the-background-increment" class="nav-link" data-scroll-target="#the-background-associated-constraint-is-not-the-background-increment">The Background-Associated Constraint Is Not the Background Increment</a></li>
+  <li><a href="#the-r2d-law-and-second-law-do-different-jobs" id="toc-the-r2d-law-and-second-law-do-different-jobs" class="nav-link" data-scroll-target="#the-r2d-law-and-second-law-do-different-jobs">The R<sup>2</sup>D Law and Second Law Do Different Jobs</a></li>
+  <li><a href="#asymmetry-is-not-irreversibility" id="toc-asymmetry-is-not-irreversibility" class="nav-link" data-scroll-target="#asymmetry-is-not-irreversibility">Asymmetry Is Not Irreversibility</a></li>
+  <li><a href="#closure-direction-and-irreversibility-are-three-different-questions" id="toc-closure-direction-and-irreversibility-are-three-different-questions" class="nav-link" data-scroll-target="#closure-direction-and-irreversibility-are-three-different-questions">Closure, Direction, and Irreversibility Are Three Different Questions</a>
+  <ul class="collapse">
+  <li><a href="#did-the-state-return" id="toc-did-the-state-return" class="nav-link" data-scroll-target="#did-the-state-return">Did the state return?</a></li>
+  <li><a href="#is-the-enclosing-relation-directional" id="toc-is-the-enclosing-relation-directional" class="nav-link" data-scroll-target="#is-the-enclosing-relation-directional">Is the enclosing relation directional?</a></li>
+  <li><a href="#are-the-opposed-realization-counts-reciprocal" id="toc-are-the-opposed-realization-counts-reciprocal" class="nav-link" data-scroll-target="#are-the-opposed-realization-counts-reciprocal">Are the opposed realization counts reciprocal?</a></li>
+  </ul></li>
+  <li><a href="#nothing-is-destroyed" id="toc-nothing-is-destroyed" class="nav-link" data-scroll-target="#nothing-is-destroyed">Nothing Is Destroyed</a></li>
+  <li><a href="#why-this-resembles-the-thermodynamic-second-law" id="toc-why-this-resembles-the-thermodynamic-second-law" class="nav-link" data-scroll-target="#why-this-resembles-the-thermodynamic-second-law">Why This Resembles the Thermodynamic Second Law</a></li>
+  <li><a href="#the-empirical-burden" id="toc-the-empirical-burden" class="nav-link" data-scroll-target="#the-empirical-burden">The Empirical Burden</a></li>
+  <li><a href="#the-primitive-second-law-architecture" id="toc-the-primitive-second-law-architecture" class="nav-link" data-scroll-target="#the-primitive-second-law-architecture">The Primitive Second-Law Architecture</a></li>
+  <li><a href="#core-equations" id="toc-core-equations" class="nav-link" data-scroll-target="#core-equations">Core Equations</a>
+  <ul class="collapse">
+  <li><a href="#native-multiplicity-closure" id="toc-native-multiplicity-closure" class="nav-link" data-scroll-target="#native-multiplicity-closure">Native multiplicity closure</a></li>
+  <li><a href="#directional-occurrence-count-efficiency-1" id="toc-directional-occurrence-count-efficiency-1" class="nav-link" data-scroll-target="#directional-occurrence-count-efficiency-1">Directional occurrence-count efficiency</a></li>
+  <li><a href="#reciprocal-realization" id="toc-reciprocal-realization" class="nav-link" data-scroll-target="#reciprocal-realization">Reciprocal realization</a></li>
+  <li><a href="#nonreciprocal-realization-1" id="toc-nonreciprocal-realization-1" class="nav-link" data-scroll-target="#nonreciprocal-realization-1">Nonreciprocal realization</a></li>
+  <li><a href="#occurrence-count-loss-1" id="toc-occurrence-count-loss-1" class="nav-link" data-scroll-target="#occurrence-count-loss-1">Occurrence-count loss</a></li>
+  <li><a href="#background-increment" id="toc-background-increment" class="nav-link" data-scroll-target="#background-increment">Background increment</a></li>
+  <li><a href="#the-second-law-of-recursive-counting" id="toc-the-second-law-of-recursive-counting" class="nav-link" data-scroll-target="#the-second-law-of-recursive-counting">The Second Law of Recursive Counting</a></li>
+  </ul></li>
+  <li><a href="#the-key-distinction" id="toc-the-key-distinction" class="nav-link" data-scroll-target="#the-key-distinction">The Key Distinction</a></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">The R²D Second Law</h1>
+<p class="subtitle lead">Irreversibility is nonreciprocal realization around closure</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="the-r2d-second-law" class="level1">
+<h1>The R<sup>2</sup>D Second Law</h1>
+<p>A completed local closure can return exactly to its starting state.</p>
+<p>Its native multiplicity can also close exactly:</p>
+<p><span class="math display">\[
+\Delta S_{n,\alpha,\mathcal C}=0.
+\]</span></p>
+<p>But this does not require the two opposed directions around the closure to be realized with equal occurrence-count efficiency.</p>
+<p>R<sup>2</sup>D identifies this distinction as the primitive origin of irreversibility.</p>
+<blockquote class="blockquote">
+<p><strong>Structural closure can be exact while occurrence realization is nonreciprocal.</strong></p>
+</blockquote>
+<p>The R<sup>2</sup>D Second Law then makes an additional cross-boundary statement:</p>
+<blockquote class="blockquote">
+<p><strong>Local occurrence-count nonreciprocity is read at the enclosing boundary as an increment in nondirectional background.</strong></p>
+</blockquote>
+<p>Formally,</p>
+<p><span class="math display">\[
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}
+=
+\delta_{\mathcal C}\Phi_{n+1}
+\geq0.
+}
+\]</span></p>
+<p>This is the Second Law of Recursive Counting.</p>
+<section id="closure-does-not-require-reversibility" class="level2">
+<h2 class="anchored" data-anchor-id="closure-does-not-require-reversibility">Closure Does Not Require Reversibility</h2>
+<p>Consider a completed local closure</p>
+<p><span class="math display">\[
+\mathcal C_{n,\alpha}:
+i
+\rightarrow
+k
+\rightarrow
+i.
+\]</span></p>
+<p>The state has returned.</p>
+<p>Therefore its native multiplicity closes:</p>
+<p><span class="math display">\[
+\boxed{
+\Delta S_{n,\alpha,\mathcal C}=0.
+}
+\]</span></p>
+<p>But there is another question:</p>
+<blockquote class="blockquote">
+<p><strong>Were the two opposed legs realized equally often?</strong></p>
+</blockquote>
+<p>The answer need not be yes.</p>
+<p>This is why R<sup>2</sup>D separates <strong>closure</strong> from <strong>reversibility</strong>.</p>
+<p><a href="../understand/closure.html">Closure →</a></p>
+</section>
+<section id="directional-occurrence-count-efficiency" class="level2">
+<h2 class="anchored" data-anchor-id="directional-occurrence-count-efficiency">Directional Occurrence-Count Efficiency</h2>
+<p>Let</p>
+<p><span class="math display">\[
+\nu_{n,\alpha,H}
+\]</span></p>
+<p>be the realized occurrence count of one oriented leg of the closure.</p>
+<p>Let</p>
+<p><span class="math display">\[
+\nu_{n,\alpha,L}
+\]</span></p>
+<p>be the occurrence count of the opposed return leg.</p>
+<p>Define the directional occurrence-count efficiency</p>
+<p><span class="math display">\[
+\boxed{
+\eta_{n,\alpha,\mathcal C}
+=
+\frac{
+\nu_{n,\alpha,L}
+}{
+\nu_{n,\alpha,H}
+}.
+}
+\]</span></p>
+<p>Choose the orientation such that</p>
+<p><span class="math display">\[
+0&lt;
+\eta_{n,\alpha,\mathcal C}
+\leq1.
+\]</span></p>
+<p>If the two opposed directions are realized equally,</p>
+<p><span class="math display">\[
+\nu_{n,\alpha,L}
+=
+\nu_{n,\alpha,H},
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+\boxed{
+\eta_{n,\alpha,\mathcal C}=1.
+}
+\]</span></p>
+<p>The closure is occurrence-count reciprocal.</p>
+</section>
+<section id="nonreciprocal-realization" class="level2">
+<h2 class="anchored" data-anchor-id="nonreciprocal-realization">Nonreciprocal Realization</h2>
+<p>If</p>
+<p><span class="math display">\[
+\nu_{n,\alpha,L}
+&lt;
+\nu_{n,\alpha,H},
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+\boxed{
+0&lt;
+\eta_{n,\alpha,\mathcal C}
+&lt;1.
+}
+\]</span></p>
+<p>The structural cycle still closes.</p>
+<p>But its two opposed directions are not realized with equal count efficiency.</p>
+<p>This is the primitive R<sup>2</sup>D definition of irreversible realization.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{irreversibility}
+\neq
+\text{failure of state closure}.
+}
+\]</span></p>
+<p>Instead,</p>
+<p><span class="math display">\[
+\boxed{
+\text{irreversibility}
+=
+\text{nonreciprocal occurrence realization around closure}.
+}
+\]</span></p>
+</section>
+<section id="occurrence-count-loss" class="level2">
+<h2 class="anchored" data-anchor-id="occurrence-count-loss">Occurrence-Count Loss</h2>
+<p>R<sup>2</sup>D represents this directional inefficiency logarithmically.</p>
+<p>Define</p>
+<p><span class="math display">\[
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}
+=
+\ln
+\left(
+\frac{
+\nu_{n,\alpha,H}
+}{
+\nu_{n,\alpha,L}
+}
+\right).
+}
+\]</span></p>
+<p>Because</p>
+<p><span class="math display">\[
+\eta_{n,\alpha,\mathcal C}
+=
+\frac{
+\nu_{n,\alpha,L}
+}{
+\nu_{n,\alpha,H}
+},
+\]</span></p>
+<p>we can also write</p>
+<p><span class="math display">\[
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}
+=
+-\ln
+\eta_{n,\alpha,\mathcal C}.
+}
+\]</span></p>
+<p>For reciprocal realization,</p>
+<p><span class="math display">\[
+\eta=1,
+\]</span></p>
+<p>so</p>
+<p><span class="math display">\[
+\boxed{
+L_\tau=0.
+}
+\]</span></p>
+<p>For nonreciprocal realization,</p>
+<p><span class="math display">\[
+0&lt;\eta&lt;1,
+\]</span></p>
+<p>so</p>
+<p><span class="math display">\[
+\boxed{
+L_\tau&gt;0.
+}
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\boxed{
+L_\tau\geq0.
+}
+\]</span></p>
+</section>
+<section id="loss-does-not-mean-destruction" class="level2">
+<h2 class="anchored" data-anchor-id="loss-does-not-mean-destruction">“Loss” Does Not Mean Destruction</h2>
+<p>The word <strong>loss</strong> requires care.</p>
+<p>R<sup>2</sup>D does not propose that occurrence count is annihilated.</p>
+<p>Nor does it propose that multiplicity is destroyed.</p>
+<p>Nor does it propose that direction disappears.</p>
+<p>The quantity</p>
+<p><span class="math display">\[
+L_\tau
+\]</span></p>
+<p>measures a <strong>logarithmic deficit in reciprocal directional realization</strong>.</p>
+<p>It says that one opposed leg is realized less efficiently than the other.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>Occurrence-count loss is nonreciprocity, not count destruction.</strong></p>
+</blockquote>
+</section>
+<section id="exact-multiplicity-closure-can-coexist-with-irreversibility" class="level2">
+<h2 class="anchored" data-anchor-id="exact-multiplicity-closure-can-coexist-with-irreversibility">Exact Multiplicity Closure Can Coexist With Irreversibility</h2>
+<p>This gives one of the cleanest relations in Part I:</p>
+<p><span class="math display">\[
+\boxed{
+\Delta S_{n,\alpha,\mathcal C}=0
+}
+\]</span></p>
+<p>while simultaneously</p>
+<p><span class="math display">\[
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}&gt;0.
+}
+\]</span></p>
+<p>The first statement says:</p>
+<blockquote class="blockquote">
+<p>native possible multiplicity closes exactly.</p>
+</blockquote>
+<p>The second says:</p>
+<blockquote class="blockquote">
+<p>realized occurrence count is directionally nonreciprocal.</p>
+</blockquote>
+<p>These are different count relations.</p>
+<p>So an irreversible closure does not require a failure of the underlying multiplicity structure to close.</p>
+</section>
+<section id="possible-count-and-realized-count-behave-differently" class="level2">
+<h2 class="anchored" data-anchor-id="possible-count-and-realized-count-behave-differently">Possible Count and Realized Count Behave Differently</h2>
+<p>This distinction returns us to the separation between multiplicity and occurrence.</p>
+<p>Multiplicity is possible count:</p>
+<p><span class="math display">\[
+W.
+\]</span></p>
+<p>Occurrence is realized count:</p>
+<p><span class="math display">\[
+\nu.
+\]</span></p>
+<p>The closure condition</p>
+<p><span class="math display">\[
+\Delta S_{\mathcal C}=0
+\]</span></p>
+<p>belongs to possible count.</p>
+<p>The irreversible condition</p>
+<p><span class="math display">\[
+L_\tau&gt;0
+\]</span></p>
+<p>belongs to realized occurrence count.</p>
+<p>Therefore:</p>
+<p><span class="math display">\[
+\boxed{
+\text{possible-count closure}
+\neq
+\text{occurrence-count reciprocity}.
+}
+\]</span></p>
+<p><a href="../understand/occupancy-occurrence.html">Occupancy and Occurrence →</a></p>
+</section>
+<section id="background-is-a-different-kind-of-count" class="level2">
+<h2 class="anchored" data-anchor-id="background-is-a-different-kind-of-count">Background Is a Different Kind of Count</h2>
+<p>R<sup>2</sup>D now introduces <strong>background</strong>.</p>
+<p>Let a local peer boundary () have a positive background count</p>
+<p><span class="math display">\[
+b_{n,\alpha}&gt;0.
+\]</span></p>
+<p>Define its logarithmic coordinate</p>
+<p><span class="math display">\[
+\boxed{
+\Phi_{n,\alpha}
+=
+\ln b_{n,\alpha}.
+}
+\]</span></p>
+<p>Background is not another local directional state.</p>
+<p>Within peer boundary (), it is common to the local macrostates.</p>
+<p>Thus, for a local transition</p>
+<p><span class="math display">\[
+i\rightarrow k,
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+\Delta\Phi_{n,\alpha,i\rightarrow k}=0.
+}
+\]</span></p>
+<p>Background therefore does not independently favor one local macrostate over another.</p>
+</section>
+<section id="background-is-nondirectional-locally" class="level2">
+<h2 class="anchored" data-anchor-id="background-is-nondirectional-locally">Background Is Nondirectional Locally</h2>
+<p>This gives background its defining local property.</p>
+<p>At the boundary where it is background,</p>
+<p><span class="math display">\[
+\boxed{
+\Delta\Phi=0.
+}
+\]</span></p>
+<p>It does not supply a local directional tilt.</p>
+<p>So background is fundamentally different from</p>
+<p><span class="math display">\[
+\Delta P,
+\]</span></p>
+<p><span class="math display">\[
+\Delta R,
+\]</span></p>
+<p>or</p>
+<p><span class="math display">\[
+\Delta A.
+\]</span></p>
+<p>Those quantities distinguish directions within the local state domain.</p>
+<p>Background does not.</p>
+<blockquote class="blockquote">
+<p><strong>Background is nondirectional relative to the boundary at which it is background.</strong></p>
+</blockquote>
+</section>
+<section id="but-background-is-boundary-relative" class="level2">
+<h2 class="anchored" data-anchor-id="but-background-is-boundary-relative">But Background Is Boundary Relative</h2>
+<p>Now consider two peer boundaries,</p>
+<p><span class="math display">\[
+\alpha
+\qquad\text{and}\qquad
+\beta.
+\]</span></p>
+<p>Their local background coordinates might be</p>
+<p><span class="math display">\[
+\Phi_{n,\alpha}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\Phi_{n,\beta}.
+\]</span></p>
+<p>Each is nondirectional within its own peer boundary.</p>
+<p>But the enclosing boundary can compare them.</p>
+<p>Define</p>
+<p><span class="math display">\[
+\boxed{
+\Delta\Phi_{n+1|n,\alpha:\beta}
+=
+\Phi_{n,\alpha}
+-
+\Phi_{n,\beta}.
+}
+\]</span></p>
+<p>Equivalently,</p>
+<p><span class="math display">\[
+\boxed{
+\Delta\Phi_{n+1|n,\alpha:\beta}
+=
+\ln
+\left(
+\frac{
+b_{n,\alpha}
+}{
+b_{n,\beta}
+}
+\right).
+}
+\]</span></p>
+<p>If this quantity is nonzero, then the enclosing boundary can distinguish a relation between the two subordinate backgrounds.</p>
+<p>So:</p>
+<blockquote class="blockquote">
+<p><strong>What is nondirectional background at one boundary can become part of a distinguishable relation at an enclosing boundary.</strong></p>
+</blockquote>
+<p>Background is therefore boundary relative, just like state identity itself.</p>
+</section>
+<section id="the-enclosing-background-increment" class="level2">
+<h2 class="anchored" data-anchor-id="the-enclosing-background-increment">The Enclosing Background Increment</h2>
+<p>Now consider one completed representative local closure.</p>
+<p>Let</p>
+<p><span class="math display">\[
+b_{n+1}^{-}
+\]</span></p>
+<p>denote the enclosing background count before the associated realization,</p>
+<p>and</p>
+<p><span class="math display">\[
+b_{n+1}^{+}
+\]</span></p>
+<p>the enclosing background count afterward.</p>
+<p>Define the logarithmic background increment</p>
+<p><span class="math display">\[
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}
+=
+\ln
+\left(
+\frac{
+b_{n+1}^{+}
+}{
+b_{n+1}^{-}
+}
+\right).
+}
+\]</span></p>
+<p>This is an enclosing-boundary count relation.</p>
+<p>It is not the same object as the local occurrence-count loss.</p>
+<p>The Second Law relates the two.</p>
+</section>
+<section id="the-second-law-postulate" class="level2">
+<h2 class="anchored" data-anchor-id="the-second-law-postulate">The Second-Law Postulate</h2>
+<p>R<sup>2</sup>D postulates that the local logarithmic occurrence-count loss and the enclosing logarithmic background increment are two boundary-specific readings of one recursively organized realization.</p>
+<p>Thus,</p>
+<p><span class="math display">\[
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}
+=
+L_{\tau,n,\alpha,\mathcal C}.
+}
+\]</span></p>
+<p>Substituting the occurrence counts,</p>
+<p><span class="math display">\[
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}
+=
+\ln
+\left(
+\frac{
+\nu_{n,\alpha,H}
+}{
+\nu_{n,\alpha,L}
+}
+\right).
+}
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}
+\geq0.
+}
+\]</span></p>
+</section>
+<section id="reciprocal-realization-produces-no-background-increment" class="level2">
+<h2 class="anchored" data-anchor-id="reciprocal-realization-produces-no-background-increment">Reciprocal Realization Produces No Background Increment</h2>
+<p>If</p>
+<p><span class="math display">\[
+\eta=1,
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+L_\tau=0.
+\]</span></p>
+<p>The Second Law gives</p>
+<p><span class="math display">\[
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}=0.
+}
+\]</span></p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\eta=1
+\iff
+\delta_{\mathcal C}\Phi_{n+1}=0.
+}
+\]</span></p>
+<p>Reciprocal local realization corresponds to no Second-Law background increment.</p>
+</section>
+<section id="nonreciprocal-realization-produces-a-positive-background-increment" class="level2">
+<h2 class="anchored" data-anchor-id="nonreciprocal-realization-produces-a-positive-background-increment">Nonreciprocal Realization Produces a Positive Background Increment</h2>
+<p>If</p>
+<p><span class="math display">\[
+0&lt;\eta&lt;1,
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+L_\tau&gt;0.
+\]</span></p>
+<p>Therefore,</p>
+<p><span class="math display">\[
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}&gt;0.
+}
+\]</span></p>
+<p>So:</p>
+<p><span class="math display">\[
+\boxed{
+0&lt;\eta&lt;1
+\iff
+\delta_{\mathcal C}\Phi_{n+1}&gt;0.
+}
+\]</span></p>
+<p>The primitive irreversible relation is therefore nonnegative.</p>
+</section>
+<section id="this-is-not-bottom-up-transfer" class="level2">
+<h2 class="anchored" data-anchor-id="this-is-not-bottom-up-transfer">This Is Not Bottom-Up Transfer</h2>
+<p>The equation</p>
+<p><span class="math display">\[
+\delta_{\mathcal C}\Phi_{n+1}
+=
+L_{\tau,n,\alpha,\mathcal C}
+\]</span></p>
+<p>must not be read as</p>
+<p><span class="math display">\[
+\text{lost local count}
+\longrightarrow
+\text{background substance}.
+\]</span></p>
+<p>No destroyed count is physically transported upward.</p>
+<p>The local quantity and enclosing quantity are defined at different boundaries.</p>
+<p>They are two boundary-specific readings.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{local nonreciprocity}
+\longleftrightarrow
+\text{enclosing background increment}.
+}
+\]</span></p>
+<p>The equality is between logarithmic count coordinates.</p>
+<p>It is not arithmetic equality between raw counts.</p>
+</section>
+<section id="the-causal-direction-does-not-reverse" class="level2">
+<h2 class="anchored" data-anchor-id="the-causal-direction-does-not-reverse">The Causal Direction Does Not Reverse</h2>
+<p>The Second Law also does not reverse the causal inversion developed earlier.</p>
+<p>R<sup>2</sup>D does not say that local occurrence-count loss <strong>causes</strong> the enclosing background.</p>
+<p>The enclosing-to-local causal architecture remains</p>
+<p><span class="math display">\[
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\mathcal C_{n,\alpha}.
+}
+\]</span></p>
+<p>The Second Law says how one realized relation is read differently at the two boundaries.</p>
+<p>As with recursive carry, cross-boundary correspondence must not be confused with upward causation.</p>
+<p><a href="../understand/causal-inversion.html">The Causal Inversion →</a></p>
+</section>
+<section id="productive-output-does-not-define-irreversibility" class="level2">
+<h2 class="anchored" data-anchor-id="productive-output-does-not-define-irreversibility">Productive Output Does Not Define Irreversibility</h2>
+<p>The enclosing constraint can be decomposed as</p>
+<p><span class="math display">\[
+C_{n+1}
+=
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}.
+\]</span></p>
+<p>The productive component is associated with retained distinguishable output:</p>
+<p><span class="math display">\[
+C_{n+1}^{\mathrm{out}}
+\lambda_{n+1}.
+\]</span></p>
+<p>The background-associated component is associated with realization read as background:</p>
+<p><span class="math display">\[
+C_{n+1}^{\Phi}
+\lambda_{n+1}.
+\]</span></p>
+<p>But productive output does not determine whether a closure is irreversible.</p>
+<p>The irreversibility criterion remains</p>
+<p><span class="math display">\[
+\boxed{
+L_\tau&gt;0.
+}
+\]</span></p>
+<p>For example,</p>
+<p><span class="math display">\[
+C_{n+1}^{\mathrm{out}}=0
+\]</span></p>
+<p>does not imply</p>
+<p><span class="math display">\[
+L_\tau=0.
+\]</span></p>
+<p>A system can retain no productive distinguishable output and still realize its opposed closure legs nonreciprocally.</p>
+</section>
+<section id="zero-productive-output-is-not-reversibility" class="level2">
+<h2 class="anchored" data-anchor-id="zero-productive-output-is-not-reversibility">Zero Productive Output Is Not Reversibility</h2>
+<p>This distinction is important physically.</p>
+<p>A process can produce no useful output and still be irreversible.</p>
+<p>Likewise, productive output can be present without itself defining the degree of irreversibility.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{productive output}
+\neq
+\text{irreversibility}.
+}
+\]</span></p>
+<p>Irreversibility is determined by the reciprocity of occurrence realization around closure.</p>
+</section>
+<section id="the-background-associated-constraint-is-not-the-background-increment" class="level2">
+<h2 class="anchored" data-anchor-id="the-background-associated-constraint-is-not-the-background-increment">The Background-Associated Constraint Is Not the Background Increment</h2>
+<p>Two quantities must remain distinct:</p>
+<p><span class="math display">\[
+C_{n+1}^{\Phi}\lambda_{n+1}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\delta_{\mathcal C}\Phi_{n+1}.
+\]</span></p>
+<p>The first belongs to the decomposition of the total constrained enclosing realization.</p>
+<p>The second belongs to the Second-Law correspondence with local occurrence nonreciprocity.</p>
+<p>Part I does <strong>not</strong> postulate</p>
+<p><span class="math display">\[
+C_{n+1}^{\Phi}\lambda_{n+1}
+=
+\delta_{\mathcal C}\Phi_{n+1}.
+\]</span></p>
+<p>A later physical mapping may relate their physical reads in a particular system.</p>
+<p>That is a separate empirical question.</p>
+</section>
+<section id="the-r2d-law-and-second-law-do-different-jobs" class="level2">
+<h2 class="anchored" data-anchor-id="the-r2d-law-and-second-law-do-different-jobs">The R<sup>2</sup>D Law and Second Law Do Different Jobs</h2>
+<p>The R<sup>2</sup>D law is</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+\]</span></p>
+<p>It relates:</p>
+<blockquote class="blockquote">
+<p><strong>local recurrence-weighted asymmetry</strong></p>
+</blockquote>
+<p>to</p>
+<blockquote class="blockquote">
+<p><strong>enclosing recurrence-weighted constrained distinguishability.</strong></p>
+</blockquote>
+<p>The Second Law is</p>
+<p><span class="math display">\[
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}
+=
+\delta_{\mathcal C}\Phi_{n+1}.
+}
+\]</span></p>
+<p>It relates:</p>
+<blockquote class="blockquote">
+<p><strong>local occurrence-count nonreciprocity</strong></p>
+</blockquote>
+<p>to</p>
+<blockquote class="blockquote">
+<p><strong>enclosing nondirectional background increment.</strong></p>
+</blockquote>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{R²D law}
+\neq
+\text{R²D Second Law}.
+}
+\]</span></p>
+<p>They are complementary postulates.</p>
+<p><a href="../understand/r2d-law.html">The R²D Law →</a></p>
+</section>
+<section id="asymmetry-is-not-irreversibility" class="level2">
+<h2 class="anchored" data-anchor-id="asymmetry-is-not-irreversibility">Asymmetry Is Not Irreversibility</h2>
+<p>Another distinction follows.</p>
+<p>Closure asymmetry is</p>
+<p><span class="math display">\[
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}.
+\]</span></p>
+<p>Occurrence nonreciprocity is measured by</p>
+<p><span class="math display">\[
+L_{\tau,n,\alpha,\mathcal C}.
+\]</span></p>
+<p>These are not the same relation.</p>
+<p>A closure can be asymmetrically organized while its opposed occurrence counts remain reciprocal.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\Delta A_{\mathcal C}\neq0
+\not\Rightarrow
+L_\tau&gt;0.
+}
+\]</span></p>
+<p>R<sup>2</sup>D therefore separates:</p>
+<blockquote class="blockquote">
+<p><strong>directionality</strong></p>
+</blockquote>
+<p>from</p>
+<blockquote class="blockquote">
+<p><strong>irreversibility</strong>.</p>
+</blockquote>
+<p>Direction tells us which realization is favored.</p>
+<p>Irreversibility tells us whether opposed realization occurs with equal directional efficiency.</p>
+</section>
+<section id="closure-direction-and-irreversibility-are-three-different-questions" class="level2">
+<h2 class="anchored" data-anchor-id="closure-direction-and-irreversibility-are-three-different-questions">Closure, Direction, and Irreversibility Are Three Different Questions</h2>
+<p>For one completed cycle, ask:</p>
+<section id="did-the-state-return" class="level3">
+<h3 class="anchored" data-anchor-id="did-the-state-return">Did the state return?</h3>
+<p>For a closure, yes.</p>
+</section>
+<section id="is-the-enclosing-relation-directional" class="level3">
+<h3 class="anchored" data-anchor-id="is-the-enclosing-relation-directional">Is the enclosing relation directional?</h3>
+<p>Possibly:</p>
+<p><span class="math display">\[
+\Delta A_{\mathcal C}\neq0.
+\]</span></p>
+</section>
+<section id="are-the-opposed-realization-counts-reciprocal" class="level3">
+<h3 class="anchored" data-anchor-id="are-the-opposed-realization-counts-reciprocal">Are the opposed realization counts reciprocal?</h3>
+<p>Possibly not:</p>
+<p><span class="math display">\[
+L_\tau&gt;0.
+\]</span></p>
+<p>These questions are independent enough that they require separate mathematical quantities.</p>
+<p>This is one of the reasons R<sup>2</sup>D does not identify irreversibility simply with “the system moved downhill.”</p>
+</section>
+</section>
+<section id="nothing-is-destroyed" class="level2">
+<h2 class="anchored" data-anchor-id="nothing-is-destroyed">Nothing Is Destroyed</h2>
+<p>The R<sup>2</sup>D Second Law can therefore be stated without invoking destruction.</p>
+<p>Native multiplicity closes:</p>
+<p><span class="math display">\[
+\Delta S_{\mathcal C}=0.
+\]</span></p>
+<p>The local state closes.</p>
+<p>Occurrence continues.</p>
+<p>Direction can remain.</p>
+<p>What fails to be reciprocal is the <strong>efficiency with which opposed directions realize occurrence count</strong>.</p>
+<p>The logarithmic difference is</p>
+<p><span class="math display">\[
+L_\tau.
+\]</span></p>
+<p>At the enclosing boundary, that same recursive relation is read as</p>
+<p><span class="math display">\[
+\delta_{\mathcal C}\Phi.
+\]</span></p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>Nothing must disappear for irreversibility to exist.</strong></p>
+</blockquote>
+<p>The primitive irreversible relation is a change in <strong>how count is realized and subsequently classified across boundaries</strong>.</p>
+</section>
+<section id="why-this-resembles-the-thermodynamic-second-law" class="level2">
+<h2 class="anchored" data-anchor-id="why-this-resembles-the-thermodynamic-second-law">Why This Resembles the Thermodynamic Second Law</h2>
+<p>The structure is deliberately suggestive.</p>
+<p>Thermodynamic irreversibility is associated with nonnegative entropy production.</p>
+<p>R<sup>2</sup>D has now produced a primitive nonnegative count relation:</p>
+<p><span class="math display">\[
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}
+=
+L_{\tau,n,\alpha,\mathcal C}
+\geq0.
+}
+\]</span></p>
+<p>But Part I has not yet identified</p>
+<p><span class="math display">\[
+\Phi
+\]</span></p>
+<p>with thermodynamic entropy.</p>
+<p>It has not yet introduced temperature or heat.</p>
+<p>The thermodynamic Second Law is therefore not assumed here.</p>
+<p>Instead, Part II asks whether thermodynamic entropy production is a physical read of this more primitive recursive-count relation.</p>
+<p><a href="../understand/from-count-to-physics.html">From Count to Physical Science →</a></p>
+</section>
+<section id="the-empirical-burden" class="level2">
+<h2 class="anchored" data-anchor-id="the-empirical-burden">The Empirical Burden</h2>
+<p>The Second Law of Recursive Counting is a postulate.</p>
+<p>The definitions of</p>
+<p><span class="math display">\[
+\eta
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+L_\tau
+\]</span></p>
+<p>follow from occurrence counts.</p>
+<p>The statement</p>
+<p><span class="math display">\[
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}
+=
+L_{\tau,n,\alpha,\mathcal C}
+}
+\]</span></p>
+<p>is an additional R<sup>2</sup>D claim.</p>
+<p>A physical realization must therefore establish independently:</p>
+<ul>
+<li>the relevant closure;</li>
+<li>its opposed occurrence counts;</li>
+<li>the resulting (L_);</li>
+<li>the appropriate enclosing boundary;</li>
+<li>and the corresponding background increment.</li>
+</ul>
+<p>Only then can the proposed correspondence be tested.</p>
+<p>The later thermodynamic program carries that empirical burden.</p>
+</section>
+<section id="the-primitive-second-law-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="the-primitive-second-law-architecture">The Primitive Second-Law Architecture</h2>
+<p>The complete structure can be written:</p>
+<p><span class="math display">\[
+\boxed{
+\begin{array}{c}
+\text{local closure}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\Delta S_{\mathcal C}=0
+\\[8pt]
+\text{opposed occurrence realization}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\eta_{\mathcal C}
+=
+\dfrac{\nu_L}{\nu_H}
+\\[8pt]
+\Downarrow
+\\[4pt]
+L_\tau
+=
+-\ln\eta_{\mathcal C}
+\geq0
+\\[8pt]
+\Longleftrightarrow
+\\[8pt]
+\delta_{\mathcal C}\Phi_{n+1}
+\geq0
+\\[4pt]
+\text{enclosing background increment}
+\end{array}
+}
+\]</span></p>
+<p>The native structure closes.</p>
+<p>The realized directional efficiencies need not.</p>
+<p>The enclosing boundary reads the difference as background.</p>
+</section>
+<section id="core-equations" class="level2">
+<h2 class="anchored" data-anchor-id="core-equations">Core Equations</h2>
+<section id="native-multiplicity-closure" class="level3">
+<h3 class="anchored" data-anchor-id="native-multiplicity-closure">Native multiplicity closure</h3>
+<p><span class="math display">\[
+\boxed{
+\Delta S_{n,\alpha,\mathcal C}=0
+}
+\]</span></p>
+</section>
+<section id="directional-occurrence-count-efficiency-1" class="level3">
+<h3 class="anchored" data-anchor-id="directional-occurrence-count-efficiency-1">Directional occurrence-count efficiency</h3>
+<p><span class="math display">\[
+\boxed{
+\eta_{n,\alpha,\mathcal C}
+=
+\frac{
+\nu_{n,\alpha,L}
+}{
+\nu_{n,\alpha,H}
+}
+}
+\]</span></p>
+</section>
+<section id="reciprocal-realization" class="level3">
+<h3 class="anchored" data-anchor-id="reciprocal-realization">Reciprocal realization</h3>
+<p><span class="math display">\[
+\boxed{
+\eta_{n,\alpha,\mathcal C}=1
+\iff
+L_{\tau,n,\alpha,\mathcal C}=0
+}
+\]</span></p>
+</section>
+<section id="nonreciprocal-realization-1" class="level3">
+<h3 class="anchored" data-anchor-id="nonreciprocal-realization-1">Nonreciprocal realization</h3>
+<p><span class="math display">\[
+\boxed{
+0&lt;
+\eta_{n,\alpha,\mathcal C}
+&lt;1
+\iff
+L_{\tau,n,\alpha,\mathcal C}&gt;0
+}
+\]</span></p>
+</section>
+<section id="occurrence-count-loss-1" class="level3">
+<h3 class="anchored" data-anchor-id="occurrence-count-loss-1">Occurrence-count loss</h3>
+<p><span class="math display">\[
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}
+=
+-\ln
+\eta_{n,\alpha,\mathcal C}
+=
+\ln
+\left(
+\frac{
+\nu_{n,\alpha,H}
+}{
+\nu_{n,\alpha,L}
+}
+\right)
+}
+\]</span></p>
+</section>
+<section id="background-increment" class="level3">
+<h3 class="anchored" data-anchor-id="background-increment">Background increment</h3>
+<p><span class="math display">\[
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}
+=
+\ln
+\left(
+\frac{
+b_{n+1}^{+}
+}{
+b_{n+1}^{-}
+}
+\right)
+}
+\]</span></p>
+</section>
+<section id="the-second-law-of-recursive-counting" class="level3">
+<h3 class="anchored" data-anchor-id="the-second-law-of-recursive-counting">The Second Law of Recursive Counting</h3>
+<p><span class="math display">\[
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}
+=
+\delta_{\mathcal C}\Phi_{n+1}
+\geq0
+}
+\]</span></p>
+<hr>
+</section>
+</section>
+<section id="the-key-distinction" class="level2">
+<h2 class="anchored" data-anchor-id="the-key-distinction">The Key Distinction</h2>
+<p>The R<sup>2</sup>D Second Law does not say that entropy-like substance is created because something has been destroyed.</p>
+<p>It says:</p>
+<blockquote class="blockquote">
+<p><strong>A local structure can close exactly while its opposed realization counts are nonreciprocal.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>That logarithmic nonreciprocity is read from the enclosing boundary as nondirectional background.</strong></p>
+</blockquote>
+<p>So the primitive second-law architecture is</p>
+<p><span class="math display">\[
+\boxed{
+\text{exact structural closure}
++
+\text{nonreciprocal realization}
+\longleftrightarrow
+\text{enclosing background increment}.
+}
+\]</span></p>
+<p>This separates structural closure, directionality, irreversibility, and background before thermodynamic entropy has been introduced.</p>
+<hr>
+</section>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<p><a href="../understand/not-coarse-graining.html">Why R²D Is Not Coarse-Graining →</a></p>
+<p><a href="../understand/scientific-objecthood.html">Scientific Objecthood →</a></p>
+<p><a href="../understand/before-units.html">Why the Mathematics Comes Before Units →</a></p>
+<p><a href="../understand/from-count-to-physics.html">From Count to Physical Science →</a></p>
+<p><a href="../understand/index.html">Back to Understand R²D →</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/r2dscience\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

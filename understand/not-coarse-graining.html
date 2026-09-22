@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Why R²D Is Not Coarse-Graining – R²D Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R²D Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-understand" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Understand</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-understand">    
+        <li>
+    <a class="dropdown-item" href="../understand/what-is-r2d.html">
+ <span class="dropdown-text">What is R²D?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../understand/index.html">
+ <span class="dropdown-text">Understand R²D</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../run/index.html"> 
+<span class="menu-text">Run R²D</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../applications/index.html"> 
+<span class="menu-text">Applications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../canon/index.html"> 
+<span class="menu-text">Canon</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About R²D Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/authors.html">
+ <span class="dropdown-text">Authors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/publications.html">
+ <span class="dropdown-text">Publications &amp; Archive</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/contact.html">
+ <span class="dropdown-text">Contact</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-r²d-is-not-coarse-graining" id="toc-why-r²d-is-not-coarse-graining" class="nav-link active" data-scroll-target="#why-r²d-is-not-coarse-graining">Why R²D Is Not Coarse-Graining</a>
+  <ul class="collapse">
+  <li><a href="#the-familiar-coarse-graining-picture" id="toc-the-familiar-coarse-graining-picture" class="nav-link" data-scroll-target="#the-familiar-coarse-graining-picture">The Familiar Coarse-Graining Picture</a></li>
+  <li><a href="#r2d-starts-one-step-earlier" id="toc-r2d-starts-one-step-earlier" class="nav-link" data-scroll-target="#r2d-starts-one-step-earlier">R<sup>2</sup>D Starts One Step Earlier</a></li>
+  <li><a href="#change-the-boundary-change-the-domain" id="toc-change-the-boundary-change-the-domain" class="nav-link" data-scroll-target="#change-the-boundary-change-the-domain">Change the Boundary, Change the Domain</a></li>
+  <li><a href="#the-difference-is-not-merely-resolution" id="toc-the-difference-is-not-merely-resolution" class="nav-link" data-scroll-target="#the-difference-is-not-merely-resolution">The Difference Is Not Merely Resolution</a></li>
+  <li><a href="#a-microstate-is-not-an-absolute-underlying-object" id="toc-a-microstate-is-not-an-absolute-underlying-object" class="nav-link" data-scroll-target="#a-microstate-is-not-an-absolute-underlying-object">A Microstate Is Not an Absolute Underlying Object</a></li>
+  <li><a href="#many-to-one-classification-is-not-yet-the-difference" id="toc-many-to-one-classification-is-not-yet-the-difference" class="nav-link" data-scroll-target="#many-to-one-classification-is-not-yet-the-difference">Many-to-One Classification Is Not Yet the Difference</a></li>
+  <li><a href="#the-coin-example-makes-the-difference-concrete" id="toc-the-coin-example-makes-the-difference-concrete" class="nav-link" data-scroll-target="#the-coin-example-makes-the-difference-concrete">The Coin Example Makes the Difference Concrete</a></li>
+  <li><a href="#a-closed-form-result-does-not-restore-the-lower-ontology" id="toc-a-closed-form-result-does-not-restore-the-lower-ontology" class="nav-link" data-scroll-target="#a-closed-form-result-does-not-restore-the-lower-ontology">A Closed-Form Result Does Not Restore the Lower Ontology</a></li>
+  <li><a href="#what-is-replaced" id="toc-what-is-replaced" class="nav-link" data-scroll-target="#what-is-replaced">What Is Replaced?</a></li>
+  <li><a href="#what-is-preserved" id="toc-what-is-preserved" class="nav-link" data-scroll-target="#what-is-preserved">What Is Preserved?</a></li>
+  <li><a href="#unreadable-does-not-mean-destroyed" id="toc-unreadable-does-not-mean-destroyed" class="nav-link" data-scroll-target="#unreadable-does-not-mean-destroyed">Unreadable Does Not Mean Destroyed</a></li>
+  <li><a href="#information-loss-is-not-the-primitive-operation" id="toc-information-loss-is-not-the-primitive-operation" class="nav-link" data-scroll-target="#information-loss-is-not-the-primitive-operation">Information Loss Is Not the Primitive Operation</a></li>
+  <li><a href="#the-enclosing-state-is-not-an-incomplete-lower-state" id="toc-the-enclosing-state-is-not-an-incomplete-lower-state" class="nav-link" data-scroll-target="#the-enclosing-state-is-not-an-incomplete-lower-state">The Enclosing State Is Not an Incomplete Lower State</a></li>
+  <li><a href="#renormalization-is-an-important-precedent" id="toc-renormalization-is-an-important-precedent" class="nav-link" data-scroll-target="#renormalization-is-an-important-precedent">Renormalization Is an Important Precedent</a></li>
+  <li><a href="#effective-theory-is-also-a-precedent" id="toc-effective-theory-is-also-a-precedent" class="nav-link" data-scroll-target="#effective-theory-is-also-a-precedent">Effective Theory Is Also a Precedent</a></li>
+  <li><a href="#emergence-is-not-enough-either" id="toc-emergence-is-not-enough-either" class="nav-link" data-scroll-target="#emergence-is-not-enough-either">Emergence Is Not Enough Either</a></li>
+  <li><a href="#direction-makes-the-distinction-even-stronger" id="toc-direction-makes-the-distinction-even-stronger" class="nav-link" data-scroll-target="#direction-makes-the-distinction-even-stronger">Direction Makes the Distinction Even Stronger</a></li>
+  <li><a href="#constraint-adds-another-enclosing-relation" id="toc-constraint-adds-another-enclosing-relation" class="nav-link" data-scroll-target="#constraint-adds-another-enclosing-relation">Constraint Adds Another Enclosing Relation</a></li>
+  <li><a href="#coarse-graining-does-not-automatically-specify-causality" id="toc-coarse-graining-does-not-automatically-specify-causality" class="nav-link" data-scroll-target="#coarse-graining-does-not-automatically-specify-causality">Coarse-Graining Does Not Automatically Specify Causality</a></li>
+  <li><a href="#readability-loss-is-not-an-error" id="toc-readability-loss-is-not-an-error" class="nav-link" data-scroll-target="#readability-loss-is-not-an-error">Readability Loss Is Not an Error</a></li>
+  <li><a href="#readability-limit-is-not-ep-projection" id="toc-readability-limit-is-not-ep-projection" class="nav-link" data-scroll-target="#readability-limit-is-not-ep-projection">Readability Limit Is Not EP Projection</a></li>
+  <li><a href="#a-model-can-be-effective-without-being-ontologically-primitive" id="toc-a-model-can-be-effective-without-being-ontologically-primitive" class="nav-link" data-scroll-target="#a-model-can-be-effective-without-being-ontologically-primitive">A Model Can Be Effective Without Being Ontologically Primitive</a></li>
+  <li><a href="#three-different-questions" id="toc-three-different-questions" class="nav-link" data-scroll-target="#three-different-questions">Three Different Questions</a>
+  <ul class="collapse">
+  <li><a href="#what-is-readable" id="toc-what-is-readable" class="nav-link" data-scroll-target="#what-is-readable">What is readable?</a></li>
+  <li><a href="#what-mathematics-describes-the-readable-relation" id="toc-what-mathematics-describes-the-readable-relation" class="nav-link" data-scroll-target="#what-mathematics-describes-the-readable-relation">What mathematics describes the readable relation?</a></li>
+  <li><a href="#what-organizes-that-relation" id="toc-what-organizes-that-relation" class="nav-link" data-scroll-target="#what-organizes-that-relation">What organizes that relation?</a></li>
+  </ul></li>
+  <li><a href="#the-r2d-difference-in-one-diagram" id="toc-the-r2d-difference-in-one-diagram" class="nav-link" data-scroll-target="#the-r2d-difference-in-one-diagram">The R<sup>2</sup>D Difference in One Diagram</a></li>
+  <li><a href="#the-strongest-statement" id="toc-the-strongest-statement" class="nav-link" data-scroll-target="#the-strongest-statement">The Strongest Statement</a></li>
+  <li><a href="#core-relations" id="toc-core-relations" class="nav-link" data-scroll-target="#core-relations">Core Relations</a>
+  <ul class="collapse">
+  <li><a href="#boundary-relative-classification" id="toc-boundary-relative-classification" class="nav-link" data-scroll-target="#boundary-relative-classification">Boundary-relative classification</a></li>
+  <li><a href="#boundary-change" id="toc-boundary-change" class="nav-link" data-scroll-target="#boundary-change">Boundary change</a></li>
+  <li><a href="#change-in-transition-meaning" id="toc-change-in-transition-meaning" class="nav-link" data-scroll-target="#change-in-transition-meaning">Change in transition meaning</a></li>
+  <li><a href="#recursive-replacement" id="toc-recursive-replacement" class="nav-link" data-scroll-target="#recursive-replacement">Recursive replacement</a></li>
+  <li><a href="#recursive-carry" id="toc-recursive-carry" class="nav-link" data-scroll-target="#recursive-carry">Recursive carry</a></li>
+  <li><a href="#distinct-boundary-specific-objects" id="toc-distinct-boundary-specific-objects" class="nav-link" data-scroll-target="#distinct-boundary-specific-objects">Distinct boundary-specific objects</a></li>
+  </ul></li>
+  <li><a href="#the-key-distinction" id="toc-the-key-distinction" class="nav-link" data-scroll-target="#the-key-distinction">The Key Distinction</a></li>
+  <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Why R²D Is Not Coarse-Graining</h1>
+<p class="subtitle lead">Changing the boundary changes what is being counted</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="why-r²d-is-not-coarse-graining" class="level1">
+<h1>Why R²D Is Not Coarse-Graining</h1>
+<p>R<sup>2</sup>D can initially sound like coarse-graining.</p>
+<p>Many subordinate realizations correspond to one readable enclosing state.</p>
+<p>Fine-scale distinctions become unreadable from a larger boundary.</p>
+<p>Detailed paths can cease to be recoverable from the enclosing description.</p>
+<p>Those features resemble familiar ideas from statistical mechanics, renormalization, effective theory, and information reduction.</p>
+<p>But R<sup>2</sup>D makes a different claim.</p>
+<blockquote class="blockquote">
+<p><strong>Coarse-graining usually changes the description of an already-defined state. R<sup>2</sup>D changes the count boundary that defines what the state is.</strong></p>
+</blockquote>
+<p>The distinction is between</p>
+<p><span class="math display">\[
+\boxed{
+\text{less detail about the same state}
+}
+\]</span></p>
+<p>and</p>
+<p><span class="math display">\[
+\boxed{
+\text{a different state domain}.
+}
+\]</span></p>
+<p><a href="../understand/boundaries.html">Boundaries Define Scientific Objects →</a></p>
+<section id="the-familiar-coarse-graining-picture" class="level2">
+<h2 class="anchored" data-anchor-id="the-familiar-coarse-graining-picture">The Familiar Coarse-Graining Picture</h2>
+<p>A conventional coarse-graining procedure often begins with a detailed state</p>
+<p><span class="math display">\[
+x
+\]</span></p>
+<p>in some underlying state space.</p>
+<p>A map then assigns many detailed states to one coarser description:</p>
+<p><span class="math display">\[
+x
+\longmapsto
+X.
+\]</span></p>
+<p>The detailed states remain mathematically defined underneath the reduced description.</p>
+<p>The observer or model simply retains fewer distinctions.</p>
+<p>Schematically,</p>
+<p><span class="math display">\[
+\boxed{
+\text{detailed state}
+\rightarrow
+\text{reduced description of that state}.
+}
+\]</span></p>
+<p>This is enormously useful.</p>
+<p>R<sup>2</sup>D does not dispute it.</p>
+<p>The question is whether this operation is primitive enough to explain why the original state was a <strong>microstate</strong> in the first place.</p>
+</section>
+<section id="r2d-starts-one-step-earlier" class="level2">
+<h2 class="anchored" data-anchor-id="r2d-starts-one-step-earlier">R<sup>2</sup>D Starts One Step Earlier</h2>
+<p>At boundary (B_n), R<sup>2</sup>D defines a formal microstate as one compatible joint realization of the immediately subordinate peer boundaries:</p>
+<p><span class="math display">\[
+\mu_n
+\in
+\mathfrak M_n.
+\]</span></p>
+<p>The boundary then classifies those realizations through</p>
+<p><span class="math display">\[
+\pi_n:
+\mathfrak M_n
+\rightarrow
+\mathcal M_n.
+\]</span></p>
+<p>A readable macrostate is</p>
+<p><span class="math display">\[
+i
+=
+\pi_n(\mu_n).
+\]</span></p>
+<p>Thus neither “microstate” nor “macrostate” is assigned independently of the boundary.</p>
+<p>They are boundary-relative categories.</p>
+<p><a href="../understand/macrostate-microstate.html">Macrostate and Microstate →</a></p>
+</section>
+<section id="change-the-boundary-change-the-domain" class="level2">
+<h2 class="anchored" data-anchor-id="change-the-boundary-change-the-domain">Change the Boundary, Change the Domain</h2>
+<p>Now change from</p>
+<p><span class="math display">\[
+B_n
+\]</span></p>
+<p>to</p>
+<p><span class="math display">\[
+B_{n+1}.
+\]</span></p>
+<p>The enclosing boundary defines its own formal microstate domain</p>
+<p><span class="math display">\[
+\mathfrak M_{n+1}
+\]</span></p>
+<p>and its own readable macrostate domain</p>
+<p><span class="math display">\[
+\mathcal M_{n+1}.
+\]</span></p>
+<p>R<sup>2</sup>D does not assume a boundary-independent identity map such that</p>
+<p><span class="math display">\[
+\mathfrak M_n
+\equiv
+\mathfrak M_{n+1}
+\]</span></p>
+<p>or</p>
+<p><span class="math display">\[
+\mathcal M_n
+\equiv
+\mathcal M_{n+1}.
+\]</span></p>
+<p>Instead,</p>
+<p><span class="math display">\[
+\boxed{
+B_n\rightarrow B_{n+1}
+\quad\Rightarrow\quad
+\text{new count domain}.
+}
+\]</span></p>
+<p>And therefore,</p>
+<p><span class="math display">\[
+\boxed{
+\text{new count domain}
+\quad\Rightarrow\quad
+\text{new state identity}.
+}
+\]</span></p>
+<p>This is recursive replacement.</p>
+<p><a href="../understand/recursive-replacement.html">Recursive Replacement →</a></p>
+</section>
+<section id="the-difference-is-not-merely-resolution" class="level2">
+<h2 class="anchored" data-anchor-id="the-difference-is-not-merely-resolution">The Difference Is Not Merely Resolution</h2>
+<p>Suppose a transition</p>
+<p><span class="math display">\[
+i\rightarrow k
+\]</span></p>
+<p>is readable as a macrostate transition at subordinate boundary</p>
+<p><span class="math display">\[
+B_{n-1,\alpha}.
+\]</span></p>
+<p>Relative to the enclosing boundary (B_n), that same physical realization has microstate meaning.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{macrostate transition at }B_{n-1,\alpha}
+=
+\text{microstate transition relative to }B_n.
+}
+\]</span></p>
+<p>If the observer wants to resolve the transition directly, the observer must move back to the boundary where it has macrostate meaning.</p>
+<p>So increased resolution does not merely reveal a hidden microstate while leaving its classification unchanged.</p>
+<p>It changes the count boundary.</p>
+<p>And that changes what kind of state the transition is.</p>
+</section>
+<section id="a-microstate-is-not-an-absolute-underlying-object" class="level2">
+<h2 class="anchored" data-anchor-id="a-microstate-is-not-an-absolute-underlying-object">A Microstate Is Not an Absolute Underlying Object</h2>
+<p>This is the conceptual break.</p>
+<p>In an ordinary coarse-graining picture, one may imagine a fully specified microscopic state existing underneath every larger-scale description.</p>
+<p>R<sup>2</sup>D does not require such an absolute microstate classification.</p>
+<p>A state is a microstate <strong>relative to a particular boundary</strong>.</p>
+<p>Change the boundary, and the word “microstate” refers to a different relationship.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>Microstate is not a synonym for smallest object.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Macrostate is not a synonym for largest object.</strong></p>
+</blockquote>
+<p>They are count relations.</p>
+</section>
+<section id="many-to-one-classification-is-not-yet-the-difference" class="level2">
+<h2 class="anchored" data-anchor-id="many-to-one-classification-is-not-yet-the-difference">Many-to-One Classification Is Not Yet the Difference</h2>
+<p>The classification map</p>
+<p><span class="math display">\[
+\pi_n:
+\mathfrak M_n
+\rightarrow
+\mathcal M_n
+\]</span></p>
+<p>is generally many-to-one.</p>
+<p>For macrostate (i),</p>
+<p><span class="math display">\[
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+\]</span></p>
+<p>Many formal microstates belong to one macrostate.</p>
+<p>This mathematical structure certainly resembles coarse-graining.</p>
+<p>But the many-to-one map is not, by itself, what distinguishes R<sup>2</sup>D.</p>
+<p>The stronger claim appears when the boundary changes.</p>
+<p>At the next boundary, the old state classification does not simply remain the hidden primitive state beneath a reduced description.</p>
+<p>A new state domain is defined.</p>
+<p>That is recursive replacement.</p>
+</section>
+<section id="the-coin-example-makes-the-difference-concrete" class="level2">
+<h2 class="anchored" data-anchor-id="the-coin-example-makes-the-difference-concrete">The Coin Example Makes the Difference Concrete</h2>
+<p>Take ten coins.</p>
+<p>At the single-coin boundary, the readable states are</p>
+<p><span class="math display">\[
+H
+\qquad\text{and}\qquad
+T.
+\]</span></p>
+<p>At the ten-coin boundary, the readable state might instead be</p>
+<p><span class="math display">\[
+N_H=0,1,\ldots,10.
+\]</span></p>
+<p>The ensemble macrostate</p>
+<p><span class="math display">\[
+N_H=6
+\]</span></p>
+<p>has multiplicity</p>
+<p><span class="math display">\[
+W_{n,6}
+=
+\binom{10}{6}.
+\]</span></p>
+<p>One might describe this as coarse-graining over individual coin identities.</p>
+<p>That description is mathematically useful.</p>
+<p>But now take the next recursive step.</p>
+<p>Suppose ten such ensemble boundaries become the immediately subordinate peers of (B_{n+1}).</p>
+<p>R<sup>2</sup>D says (B_{n+1}) counts <strong>ten already-defined ensemble landscapes</strong>.</p>
+<p>It does not restore one hundred individual (H/T) identities as the primitive readable states of the new boundary.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+10\text{ coin states}
+\rightarrow
+1\text{ ensemble landscape}
+\rightarrow
+1\text{ enclosing landscape}.
+}
+\]</span></p>
+<p>Each step defines a new count domain.</p>
+<p><a href="../understand/coins.html">The Coins Example →</a></p>
+</section>
+<section id="a-closed-form-result-does-not-restore-the-lower-ontology" class="level2">
+<h2 class="anchored" data-anchor-id="a-closed-form-result-does-not-restore-the-lower-ontology">A Closed-Form Result Does Not Restore the Lower Ontology</h2>
+<p>The enclosing multiplicity may sometimes be simplified into a familiar closed-form expression.</p>
+<p>For example, recursive composition can recover the same combinatorial total that would be obtained by directly counting one hundred binary elements.</p>
+<p>That equality is mathematically important.</p>
+<p>But it does not imply that the one hundred individual coin identities have become the primitive readable states at the enclosing boundary.</p>
+<p>The equality concerns <strong>count consequence</strong>.</p>
+<p>It does not establish <strong>identity persistence</strong>.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{same multiplicity result}
+\not\Rightarrow
+\text{same state ontology}.
+}
+\]</span></p>
+<p>This distinction becomes important far beyond the coin example.</p>
+</section>
+<section id="what-is-replaced" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-replaced">What Is Replaced?</h2>
+<p>When the count boundary changes, several identities need not persist as the same readable objects.</p>
+<p>A subordinate:</p>
+<ul>
+<li>state,</li>
+<li>transition,</li>
+<li>source identity,</li>
+<li>or internal path</li>
+</ul>
+<p>can remain consequential without remaining readable under the same classification.</p>
+<p>The important relation is therefore not</p>
+<p><span class="math display">\[
+\boxed{
+\text{same object}
+\rightarrow
+\text{less information}.
+}
+\]</span></p>
+<p>It is</p>
+<p><span class="math display">\[
+\boxed{
+\text{subordinate count identity}
+\rightarrow
+\text{recursive replacement}
+\rightarrow
+\text{enclosing count identity}.
+}
+\]</span></p>
+</section>
+<section id="what-is-preserved" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-preserved">What Is Preserved?</h2>
+<p>Recursive replacement does not imply that everything disappears.</p>
+<p>What can persist is the <strong>recursive relation</strong>.</p>
+<p>A completed local closure</p>
+<p><span class="math display">\[
+\mathcal C_{n,\alpha}
+\]</span></p>
+<p>can remain related to an enclosing occurrence</p>
+<p><span class="math display">\[
+\chi_{n+1}^{(r)}.
+\]</span></p>
+<p>But</p>
+<p><span class="math display">\[
+\boxed{
+\mathcal C_{n,\alpha}
+\not\equiv
+\chi_{n+1}^{(r)}.
+}
+\]</span></p>
+<p>They are different boundary-defined count objects.</p>
+<p>Recursive carry expresses their relationship:</p>
+<p><span class="math display">\[
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+}
+\]</span></p>
+<p>The path identity is replaced.</p>
+<p>The recursive relation remains consequential.</p>
+<p><a href="../understand/recursive-carry.html">Recursive Carry →</a></p>
+</section>
+<section id="unreadable-does-not-mean-destroyed" class="level2">
+<h2 class="anchored" data-anchor-id="unreadable-does-not-mean-destroyed">Unreadable Does Not Mean Destroyed</h2>
+<p>This is another important distinction.</p>
+<p>Suppose the enclosing boundary does not preserve the identity of the local peer or its internal path.</p>
+<p>That does not mean the local path was destroyed.</p>
+<p>It remains definable at the boundary where it was readable.</p>
+<p>It has simply ceased to possess the same count meaning from the new boundary.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{unreadable from }B_{n+1}
+\not\Rightarrow
+\text{nonexistent at }B_n.
+}
+\]</span></p>
+<p>R<sup>2</sup>D therefore does not replace reductionism with a claim that smaller-scale structures are unreal.</p>
+<p>It makes their identity boundary relative.</p>
+</section>
+<section id="information-loss-is-not-the-primitive-operation" class="level2">
+<h2 class="anchored" data-anchor-id="information-loss-is-not-the-primitive-operation">Information Loss Is Not the Primitive Operation</h2>
+<p>The language of information loss can also obscure the distinction.</p>
+<p>One might say that moving to (B_{n+1}) “loses information” about the subordinate realization.</p>
+<p>That may be a useful description from the perspective of an observer who wants to reconstruct the lower-boundary path.</p>
+<p>But R<sup>2</sup>D does not take that loss as primitive.</p>
+<p>The primitive statement is:</p>
+<p><span class="math display">\[
+\boxed{
+\text{the new boundary defines a different count domain}.
+}
+\]</span></p>
+<p>Failure to reconstruct the previous path is then a consequence of the new classification.</p>
+<p>The ontology changes first.</p>
+<p>The recoverability changes with it.</p>
+</section>
+<section id="the-enclosing-state-is-not-an-incomplete-lower-state" class="level2">
+<h2 class="anchored" data-anchor-id="the-enclosing-state-is-not-an-incomplete-lower-state">The Enclosing State Is Not an Incomplete Lower State</h2>
+<p>This changes how a macrostate should be interpreted.</p>
+<p>The enclosing macrostate is not merely an incomplete report about a more fundamental subordinate macrostate.</p>
+<p>It is a state defined by a different classification.</p>
+<p>Thus:</p>
+<blockquote class="blockquote">
+<p><strong>A macrostate is not merely a lossy microstate.</strong></p>
+</blockquote>
+<p>And:</p>
+<blockquote class="blockquote">
+<p><strong>A microstate is not merely a more detailed macrostate.</strong></p>
+</blockquote>
+<p>They belong to different boundary-relative relations.</p>
+</section>
+<section id="renormalization-is-an-important-precedent" class="level2">
+<h2 class="anchored" data-anchor-id="renormalization-is-an-important-precedent">Renormalization Is an Important Precedent</h2>
+<p>Renormalization provides a powerful example of scale-dependent scientific description.</p>
+<p>Under renormalization, variables and couplings can change as the scale of description changes.</p>
+<p>Degrees of freedom that are explicit at one scale need not remain explicit at another.</p>
+<p>R<sup>2</sup>D treats this as an important mathematical and conceptual precedent.</p>
+<p>But its starting question is different.</p>
+<p>Renormalization generally asks:</p>
+<blockquote class="blockquote">
+<p><strong>Given a state description, how does its effective representation change with scale?</strong></p>
+</blockquote>
+<p>R<sup>2</sup>D asks:</p>
+<blockquote class="blockquote">
+<p><strong>What makes a state micro or macro before that scale transformation is performed?</strong></p>
+</blockquote>
+<p>Its answer is:</p>
+<p><span class="math display">\[
+\boxed{
+\text{the count boundary}.
+}
+\]</span></p>
+</section>
+<section id="effective-theory-is-also-a-precedent" class="level2">
+<h2 class="anchored" data-anchor-id="effective-theory-is-also-a-precedent">Effective Theory Is Also a Precedent</h2>
+<p>Effective theories likewise show that not every lower-scale degree of freedom must remain explicit in a useful higher-level description.</p>
+<p>Their residual effects may instead appear through effective parameters or interactions.</p>
+<p>R<sup>2</sup>D is compatible with the practical usefulness of this approach.</p>
+<p>Its stronger claim is that the issue is not only which variables remain useful.</p>
+<p>The state categories themselves are boundary indexed.</p>
+<p>Therefore the scale transformation can alter what qualifies as the object being described.</p>
+</section>
+<section id="emergence-is-not-enough-either" class="level2">
+<h2 class="anchored" data-anchor-id="emergence-is-not-enough-either">Emergence Is Not Enough Either</h2>
+<p>R<sup>2</sup>D is also related to familiar ideas of emergence.</p>
+<p>Larger-scale systems can display organizing principles not obvious from inspection of isolated components.</p>
+<p>But the R<sup>2</sup>D claim is more specific than</p>
+<blockquote class="blockquote">
+<p>“the whole is more than the sum of its parts.”</p>
+</blockquote>
+<p>It identifies a proposed mathematical reason:</p>
+<p><span class="math display">\[
+\boxed{
+\text{changing the count boundary changes what is being counted}.
+}
+\]</span></p>
+<p>The enclosing state is a classification of compatible subordinate realizations.</p>
+<p>Its multiplicity belongs to that classification.</p>
+<p>Its directional possibility depends on compatibility with a still enclosing domain.</p>
+<p>Thus the recursive architecture is specified mathematically rather than introduced only as a general philosophical notion of emergence.</p>
+</section>
+<section id="direction-makes-the-distinction-even-stronger" class="level2">
+<h2 class="anchored" data-anchor-id="direction-makes-the-distinction-even-stronger">Direction Makes the Distinction Even Stronger</h2>
+<p>The difference from ordinary coarse-graining becomes sharper when direction is introduced.</p>
+<p>Suppose the local multiplicity landscape remains fixed:</p>
+<p><span class="math display">\[
+\mathcal W_n
+=
+\{W_{n,i}\}.
+\]</span></p>
+<p>Now change the enclosing compatibility relation.</p>
+<p>The local possibility difference</p>
+<p><span class="math display">\[
+\Delta P_{n,i\rightarrow k}
+\]</span></p>
+<p>can change.</p>
+<p>It can vanish.</p>
+<p>It can increase.</p>
+<p>It can reverse sign.</p>
+<p>All without changing the native local multiplicities.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{same local state space}
++
+\text{different enclosing compatibility}
+\rightarrow
+\text{different directional support}.
+}
+\]</span></p>
+<p>This is not simply information removal.</p>
+<p>It is a new across-boundary count relation.</p>
+<p><a href="../understand/possibility.html">Possibility →</a></p>
+</section>
+<section id="constraint-adds-another-enclosing-relation" class="level2">
+<h2 class="anchored" data-anchor-id="constraint-adds-another-enclosing-relation">Constraint Adds Another Enclosing Relation</h2>
+<p>Likewise, changing the enclosing productive constraint changes</p>
+<p><span class="math display">\[
+\Delta R
+=
+C_{n+1}^{\mathrm{out}}\lambda_n.
+\]</span></p>
+<p>Therefore the local asymmetry</p>
+<p><span class="math display">\[
+\Delta A
+=
+\Delta P-\Delta R
+\]</span></p>
+<p>can change while the native multiplicity landscape remains fixed.</p>
+<p>So the local realized state depends not merely on how much subordinate information is retained.</p>
+<p>It depends on relations defined by the enclosing boundary.</p>
+<p><a href="../understand/constraint-retention.html">Constraint and Retention →</a></p>
+</section>
+<section id="coarse-graining-does-not-automatically-specify-causality" class="level2">
+<h2 class="anchored" data-anchor-id="coarse-graining-does-not-automatically-specify-causality">Coarse-Graining Does Not Automatically Specify Causality</h2>
+<p>This distinction matters because coarse-graining itself need not make any claim about causal priority.</p>
+<p>It may simply be a mathematical transformation used to construct an effective description.</p>
+<p>R<sup>2</sup>D adds a separate causal proposal:</p>
+<p><span class="math display">\[
+\boxed{
+\text{enclosing relation organizes}
+\Longrightarrow
+\text{subordinate mechanism realizes}.
+}
+\]</span></p>
+<p>That causal inversion does not follow merely from the fact that a description is coarse-grained.</p>
+<p>It follows from the additional R<sup>2</sup>D architecture of boundary-defined multiplicity, enclosing compatibility, possibility, constraint, and local realization.</p>
+<p><a href="../understand/causal-inversion.html">The Causal Inversion →</a></p>
+</section>
+<section id="readability-loss-is-not-an-error" class="level2">
+<h2 class="anchored" data-anchor-id="readability-loss-is-not-an-error">Readability Loss Is Not an Error</h2>
+<p>A boundary cannot read every relation simultaneously.</p>
+<p>A subordinate transition may be individually unreadable from an enclosing boundary.</p>
+<p>An enclosing relation may likewise be unavailable from a subordinate boundary.</p>
+<p>This is simply a <strong>readability limit</strong>.</p>
+<p>It is not automatically a theoretical error.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{unreadable}
+\neq
+\text{incorrect}.
+}
+\]</span></p>
+<p>A boundary-specific theory can accurately describe what remains readable.</p>
+</section>
+<section id="readability-limit-is-not-ep-projection" class="level2">
+<h2 class="anchored" data-anchor-id="readability-limit-is-not-ep-projection">Readability Limit Is Not EP Projection</h2>
+<p>R<sup>2</sup>D distinguishes a readability limit from what it calls <strong>epiphenomenological projection</strong>, or EP projection.</p>
+<p>A readability limit asks:</p>
+<blockquote class="blockquote">
+<p><strong>What can be directly resolved from this boundary?</strong></p>
+</blockquote>
+<p>An EP projection makes an additional causal inference:</p>
+<blockquote class="blockquote">
+<p><strong>Because only this consequence is readable, it must be the primitive cause.</strong></p>
+</blockquote>
+<p>The latter does not follow from the former.</p>
+<p>Thus:</p>
+<p><span class="math display">\[
+\boxed{
+\text{readability limit}
+\neq
+\text{EP projection}.
+}
+\]</span></p>
+<p>An effective or coarse-grained theory can therefore be useful and accurate without committing an EP projection.</p>
+<p>The proposed error occurs only when an omitted recursive relation is replaced by primitive causal agency assigned to one of its readable consequences.</p>
+</section>
+<section id="a-model-can-be-effective-without-being-ontologically-primitive" class="level2">
+<h2 class="anchored" data-anchor-id="a-model-can-be-effective-without-being-ontologically-primitive">A Model Can Be Effective Without Being Ontologically Primitive</h2>
+<p>This gives R<sup>2</sup>D a way to preserve successful science.</p>
+<p>A model can:</p>
+<ul>
+<li>predict observations;</li>
+<li>identify useful effective variables;</li>
+<li>compress inaccessible detail;</li>
+<li>and correctly describe correlations</li>
+</ul>
+<p>without proving that its state variables are the primitive objects of nature.</p>
+<p>That distinction is especially important across scientific scales.</p>
+<p>Predictive success and primitive ontology are different questions.</p>
+</section>
+<section id="three-different-questions" class="level2">
+<h2 class="anchored" data-anchor-id="three-different-questions">Three Different Questions</h2>
+<p>R<sup>2</sup>D therefore separates three questions.</p>
+<section id="what-is-readable" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-readable">What is readable?</h3>
+<p>The count boundary determines this.</p>
+</section>
+<section id="what-mathematics-describes-the-readable-relation" class="level3">
+<h3 class="anchored" data-anchor-id="what-mathematics-describes-the-readable-relation">What mathematics describes the readable relation?</h3>
+<p>The domain-specific scientific theory answers this.</p>
+</section>
+<section id="what-organizes-that-relation" class="level3">
+<h3 class="anchored" data-anchor-id="what-organizes-that-relation">What organizes that relation?</h3>
+<p>This is the causal question addressed by recursive counting.</p>
+<p>Confusing the three creates unnecessary ontological commitments.</p>
+<p>Keeping them separate allows a scientific model to remain completely useful within its proper boundary.</p>
+</section>
+</section>
+<section id="the-r2d-difference-in-one-diagram" class="level2">
+<h2 class="anchored" data-anchor-id="the-r2d-difference-in-one-diagram">The R<sup>2</sup>D Difference in One Diagram</h2>
+<p>The ordinary coarse-graining picture can be represented as</p>
+<p><span class="math display">\[
+\boxed{
+\text{underlying detailed state}
+\rightarrow
+\text{reduced representation of that state}.
+}
+\]</span></p>
+<p>The R<sup>2</sup>D architecture is</p>
+<p><span class="math display">\[
+\boxed{
+\begin{array}{c}
+\text{state domain at }B_n
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{completed realization}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{change of count boundary}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{new state domain at }B_{n+1}
+\end{array}
+}
+\]</span></p>
+<p>What survives is not necessarily an unchanged lower-boundary state.</p>
+<p>What survives is the recursively organized relation.</p>
+</section>
+<section id="the-strongest-statement" class="level2">
+<h2 class="anchored" data-anchor-id="the-strongest-statement">The Strongest Statement</h2>
+<p>The difference can be summarized in one sentence:</p>
+<blockquote class="blockquote">
+<p><strong>Coarse-graining asks what happens when detail is removed from a state description. R<sup>2</sup>D asks what happens when the boundary defining the state itself changes.</strong></p>
+</blockquote>
+<p>That is why recursive replacement is not simply another name for coarse-graining.</p>
+<p>It begins one logical step earlier.</p>
+<hr>
+</section>
+<section id="core-relations" class="level2">
+<h2 class="anchored" data-anchor-id="core-relations">Core Relations</h2>
+<section id="boundary-relative-classification" class="level3">
+<h3 class="anchored" data-anchor-id="boundary-relative-classification">Boundary-relative classification</h3>
+<p><span class="math display">\[
+\boxed{
+\pi_n:
+\mathfrak M_n
+\rightarrow
+\mathcal M_n
+}
+\]</span></p>
+</section>
+<section id="boundary-change" class="level3">
+<h3 class="anchored" data-anchor-id="boundary-change">Boundary change</h3>
+<p><span class="math display">\[
+\boxed{
+B_n
+\rightarrow
+B_{n+1}
+\quad\Rightarrow\quad
+\mathcal M_n
+\not\equiv
+\mathcal M_{n+1}
+}
+\]</span></p>
+</section>
+<section id="change-in-transition-meaning" class="level3">
+<h3 class="anchored" data-anchor-id="change-in-transition-meaning">Change in transition meaning</h3>
+<p><span class="math display">\[
+\boxed{
+\text{macrostate transition at }B_{n-1,\alpha}
+=
+\text{microstate transition relative to }B_n
+}
+\]</span></p>
+</section>
+<section id="recursive-replacement" class="level3">
+<h3 class="anchored" data-anchor-id="recursive-replacement">Recursive replacement</h3>
+<p><span class="math display">\[
+\boxed{
+\text{state identity changes while recursive consequence can remain}
+}
+\]</span></p>
+</section>
+<section id="recursive-carry" class="level3">
+<h3 class="anchored" data-anchor-id="recursive-carry">Recursive carry</h3>
+<p><span class="math display">\[
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}
+}
+\]</span></p>
+</section>
+<section id="distinct-boundary-specific-objects" class="level3">
+<h3 class="anchored" data-anchor-id="distinct-boundary-specific-objects">Distinct boundary-specific objects</h3>
+<p><span class="math display">\[
+\boxed{
+\mathcal C_{n,\alpha}
+\not\equiv
+\chi_{n+1}^{(r)}
+}
+\]</span></p>
+<hr>
+</section>
+</section>
+<section id="the-key-distinction" class="level2">
+<h2 class="anchored" data-anchor-id="the-key-distinction">The Key Distinction</h2>
+<p>R<sup>2</sup>D does not claim that coarse-graining is mathematically wrong.</p>
+<p>It makes a different ontological proposal.</p>
+<blockquote class="blockquote">
+<p><strong>The subordinate state is not merely hidden.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>Its boundary-defined identity has been replaced.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>The enclosing state is not merely a blurrier version of the same object.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>It belongs to a new count domain.</strong></p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>What can persist across the change is the recursive relation, not an unchanged state identity.</strong></p>
+</blockquote>
+<p>That distinction leads directly to the R<sup>2</sup>D concept of scientific objecthood.</p>
+<hr>
+</section>
+<section id="next" class="level2">
+<h2 class="anchored" data-anchor-id="next">Next</h2>
+<p><a href="../understand/scientific-objecthood.html">Scientific Objecthood →</a></p>
+<p><a href="../understand/before-units.html">Why the Mathematics Comes Before Units →</a></p>
+<p><a href="../understand/from-count-to-physics.html">From Count to Physical Science →</a></p>
+<p><a href="../understand/index.html">Back to Understand R²D →</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/r2dscience\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
