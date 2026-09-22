@@ -1,0 +1,205 @@
+---
+title: "About the R²D Canon"
+toc: true
+---
+
+The **R<sup>2</sup>D Canon** is the master source document for
+Recursively Realized Distinguishability.
+
+The current integrated archive is approximately **2,750 pages** and
+contains the four-part formal development of R<sup>2</sup>D together
+with a growing series of addenda that extend, test, and refine the
+framework.
+
+It is intentionally large.
+
+The Canon is not primarily designed to be read from beginning to end
+like a conventional textbook or journal article. It serves a different
+purpose: to preserve the complete mathematical and conceptual
+architecture of R<sup>2</sup>D in one authoritative source.
+
+## Why the Canon Exists
+
+R<sup>2</sup>D changes the order in which scientific objects and laws
+are interpreted. A focused paper on muscle, thermodynamics, quantum
+mechanics, gravity, or biology cannot reproduce the entire framework
+every time.
+
+The Canon therefore provides the common source beneath those narrower
+developments.
+
+It preserves:
+
+- the primitive definitions and mathematical architecture of R<sup>2</sup>D;
+- the derivations and logical dependencies connecting those definitions;
+- physical mappings and empirical calibrations;
+- applications across scientific domains;
+- failed routes, qualifications, and unresolved questions;
+- and the subsequent addenda through which the framework continues to develop.
+
+The Canon has three primary roles.
+
+### Archive
+
+The Canon preserves the development of R<sup>2</sup>D as completely as
+possible at a particular stage of the program.
+
+Formal versions are deposited on Zenodo so that earlier formulations
+remain permanently available, citable, and distinguishable from later
+developments.
+
+### Authoritative Source
+
+The Canon is the authoritative mathematical source for R<sup>2</sup>D.
+
+The explanatory pages on R2DScience.org are designed to make the
+framework easier to navigate, understand, and use. Applications isolate
+particular scientific problems. Essays provide interpretation and
+commentary.
+
+When a question depends on the formal definitions, assumptions,
+derivations, or logical status of an R<sup>2</sup>D claim, the Canon is
+the reference document.
+
+### AI Source Corpus
+
+The Canon is also designed to be used by artificial intelligence.
+
+R<sup>2</sup>D introduces a mathematical language that differs from the
+physical ontologies normally used in science. An AI given only a short
+description will tend to translate that language immediately back into
+familiar concepts such as particles, forces, fields, trajectories,
+energy, space, or time.
+
+The Canon provides enough of the internal mathematical structure for an
+AI to remain inside the R<sup>2</sup>D framework long enough to
+interrogate it.
+
+It can therefore be supplied to an LLM as a source corpus and used to:
+
+- reconstruct an R<sup>2</sup>D argument;
+- test a proposed implication;
+- search for internal contradictions;
+- compare R<sup>2</sup>D with an established scientific theory;
+- analyze a scientific law or paradox;
+- and explore whether a scientific problem changes when its inherited
+  physical ontology is removed.
+
+The goal is not for an AI to accept R<sup>2</sup>D.
+
+The goal is to give AI enough of the mathematics to **run it**.
+
+# The Four Parts
+
+## Part I — The Primitive Count Architecture
+
+Part I develops R<sup>2</sup>D before physical units are assigned.
+
+It begins with counting and develops the dimensionless architecture of
+boundary, distinguishability, multiplicity, occupancy, occurrence,
+possibility, constraint, closure, recursive replacement, and
+background.
+
+Its central task is to define the mathematical objects that must exist
+before familiar physical quantities are assigned.
+
+## Part II — Thermodynamic Readability
+
+Part II asks what the primitive architecture looks like when both sides
+of the recursive relation remain physically readable.
+
+Thermodynamics provides the primary bridge.
+
+Gibbs free energy, chemical activity, entropy, heat, work, mechanical
+constraint, molecular motors, and muscle are examined as physical reads
+of relations first defined in dimensionless count form.
+
+Muscle is especially important because chemical, thermodynamic, and
+mechanical quantities can be measured in the same functioning system
+while the scientific object changes across scale.
+
+## Part III — Readability Horizons
+
+Part III asks what happens when the recursive relation is no longer
+jointly readable.
+
+It develops recursive recurrence, occupancy statistics, and two
+complementary readability limits.
+
+At the **quantum-facing horizon**, recurrence remains readable while
+subordinate distinguishability is lost.
+
+At the **gravitational-facing horizon**, distinguishability remains
+readable while the relevant enclosing recurrence is lost.
+
+Thermodynamic and biological systems occupy the jointly readable regime
+between those limits.
+
+## Part IV — Projection
+
+Part IV asks what physical description is constructed from what remains
+readable after joint access to the primitive count relation is lost.
+
+Particles, mass, charge, motion, fields, quantum amplitude, gauge
+structure, gravity, spacetime, and cosmology are examined as
+boundary-specific physical projections rather than primitive starting
+objects.
+
+Part IV also introduces the converse problem of **deprojection**:
+whether a familiar physical description can be traced back toward the
+more primitive count architecture from which it is read.
+
+# The Addenda
+
+The four Parts establish the core architecture. The **addenda are the
+continuing research program**.
+
+Rather than repeatedly rewriting the Canon whenever a new consequence
+is developed, an addendum begins from the existing framework and asks
+what follows in a more narrowly defined problem.
+
+The addenda currently extend R<sup>2</sup>D across several major
+directions, including:
+
+- direct experimental tests of recursive replacement in muscle and
+  molecular motors;
+- biological scale transitions, probe-frequency-dependent readability,
+  protein folding, and biological function;
+- the relationship between the jointly readable biological regime and
+  the quantum and gravitational readability horizons;
+- relativity, reference geometry, mass, free fall, curvature, and the
+  Einstein projection;
+- gravitational area, horizons, black-hole multiplicity, and boundary
+  clocks;
+- gravitational radiation and recursive carry;
+- and cosmological boundary structure and large-scale gravitational
+  projection.
+
+The addenda deliberately distinguish between results that follow
+directly from the formal architecture, empirical mappings, physical
+calibrations, hypotheses, and more speculative extensions.
+
+They are therefore not a separate theory appended to the Canon.
+
+They are the record of **R<sup>2</sup>D being run against science**.
+
+# A Living Framework, a Fixed Archive
+
+R<sup>2</sup>D continues to develop.
+
+R2DScience.org presents the framework as a navigable and evolving
+scientific tool. The integrated Canon provides the complete working
+source. Zenodo preserves fixed releases so that the development of the
+framework remains permanently traceable.
+
+This separation is intentional:
+
+**The website is the interface.**
+
+**The Canon is the source.**
+
+**Zenodo is the archive.**
+
+And increasingly:
+
+**AI is the instrument used to interrogate it.**

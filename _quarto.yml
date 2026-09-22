@@ -30,8 +30,8 @@ website:
         menu:
           - href: about/index.qmd
             text: About R²D Science
-          - href: about/josh-baker.qmd
-            text: Josh Baker
+          - href: about/authors.qmd
+            text: Authors
           - href: about/publications.qmd
             text: Publications & Archive
           - href: about/contact.qmd

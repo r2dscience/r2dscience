@@ -1,0 +1,95 @@
+---
+title: "Publications & Archive"
+toc: true
+---
+
+R<sup>2</sup>D emerged from a long-running research program in muscle,
+molecular motors, thermodynamics, and multiscale biological mechanics.
+The conventional scientific record of that work and the developing
+R<sup>2</sup>D archive serve different purposes.
+
+## Muscle and Molecular Motor Research
+
+For more than two decades, my research has examined how molecular-scale
+events become mechanical behavior at the scale of muscle.
+
+This work includes the molecular mechanisms of muscle contraction and
+regulation, the mechanochemistry of myosin molecular motors, muscle
+thermodynamics, ensemble mechanics, single-molecule and whole-cell
+measurements, and multiscale models of biological systems.
+
+A recurring question has been how randomly fluctuating molecular motors
+can collectively generate the deterministic force, shortening, and power
+measured at the scale of a muscle fiber.
+
+That question ultimately led beyond muscle. Muscle provides an unusually
+useful scientific system because chemistry, thermodynamics, statistical
+mechanics, and mechanics can all be measured on the same physical system
+while the definition of the scientific object changes with scale.
+
+The peer-reviewed publications documenting this research program can be
+found through Google Scholar.
+
+[VIEW PUBLICATIONS ON GOOGLE SCHOLAR →](https://scholar.google.com/citations?user=uofIPKMAAAAJ&hl=en){target="_blank"}
+
+
+## From Muscle to R<sup>2</sup>D
+
+The development of R<sup>2</sup>D began with a problem exposed by muscle:
+the mathematics that describes a muscle fiber cannot simply be assigned
+to one of its subordinate molecular components.
+
+A myosin molecule and a muscle fiber are different scientific objects.
+Each has its own states, transitions, constraints, and readable
+observables.
+
+R<sup>2</sup>D formalizes this boundary dependence by defining microstate
+and macrostate at the boundary where they are distinguished. Changing
+scale therefore does not merely coarse-grain the same object. It changes
+the mathematical state domain and, with it, the object being described.
+
+The resulting framework has since been developed beyond muscle into a
+general mathematical interface for examining scientific structure across
+physics, chemistry, biology, and geometry.
+
+
+## R<sup>2</sup>D Archive and Continuing Development
+
+Formal versions of R<sup>2</sup>D are archived on Zenodo.
+
+Zenodo provides permanent, citable records of the framework at defined
+stages of development. These archived releases include the R<sup>2</sup>D
+Canon and subsequent formal developments and applications.
+
+The distinction between the archive and this website is intentional:
+
+- **Zenodo preserves fixed scholarly versions.**
+- **R2DScience.org presents the current framework and makes it easier to navigate and use.**
+- **The Canon remains the authoritative mathematical source.**
+- **Applications show how the framework develops when it is run against specific scientific problems.**
+
+As R<sup>2</sup>D develops, major formal releases will continue to be
+deposited on Zenodo so that earlier formulations remain permanently
+available and citable.
+
+[VIEW THE R²D ARCHIVE ON ZENODO →](https://zenodo.org/me/uploads?q=&f=shared_with_me%3Afalse&l=list&p=1&s=10&sort=newest){target="_blank"}
+
+
+## Current Canon
+
+The current Canon is the master statement of the R<sup>2</sup>D
+framework.
+
+It is intended both for human readers and as a source document for AI.
+Future releases will be made available in formats suitable for reading,
+archiving, and machine interrogation.
+
+[READ THE CANON →](https://zenodo.org/records/22760358)
+
+
+## Citation and Contact
+
+For questions about the research program, publications, or the
+R<sup>2</sup>D archive:
+
+[**josh@r2dscience.org**](mailto:josh@r2dscience.org)

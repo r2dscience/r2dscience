@@ -1,7 +1,115 @@
 ---
 title: "Run R²D"
+toc: false
 ---
 
-# Run R²D
 
-Use R²D with AI to interrogate scientific laws, paradoxes, and problems.
+## Provide AI with the mathematics. Then ask it about science.
+
+AI can already reason over mathematics.
+
+R<sup>2</sup>D provides a mathematical interface for converting
+scientific objects into a common boundary-dependent representation.
+
+You do not need specialized R<sup>2</sup>D software to begin.
+
+Download the current R<sup>2</sup>D Canon, load it into an AI system
+that can work with large documents, provide the R<sup>2</sup>D
+instruction below, and then ask AI about a scientific law, paradox,
+paper, dataset, or unsolved problem.
+
+[DOWNLOAD THE CURRENT R²D CANON →](https://zenodo.org/records/22760358){target="_blank"}
+
+
+## 1. Load the Canon
+
+Download the current PDF of the R<sup>2</sup>D Canon from Zenodo and
+upload it to the AI system you want to use.  
+
+[DOWNLOAD THE CURRENT R²D CANON →](https://zenodo.org/records/22760358){target="_blank"}
+
+The Canon is the authoritative source. It contains the definitions,
+formal architecture, physical mappings, applications, and addenda
+needed for the AI to reason within R<sup>2</sup>D rather than
+immediately translating the framework back into conventional physical
+ontology.
+
+
+## 2. Give the AI the R<sup>2</sup>D instruction
+
+Copy and paste the following instruction:
+
+> Use the attached R²D Canon as the authoritative source for this analysis.
+>
+> Work within the definitions and mathematical architecture of R²D before
+> translating the problem into conventional physical ontology.
+>
+> Treat scientific objects, macrostates, microstates, multiplicity,
+> possibility, constraint, recurrence, closure, and recursive replacement
+> as boundary-dependent quantities as defined in the Canon.
+>
+> When analyzing the scientific problem I provide:
+>
+> 1. Identify the scientific object and the boundary at which it is defined.
+> 2. Identify which quantities are directly readable at that boundary.
+> 3. Separate the empirical mathematical relation from the physical ontology
+>    conventionally assigned to it.
+> 4. Determine whether the relation can be represented in the R²D
+>    architecture without changing the established empirical law.
+> 5. Identify any change in state domain produced by changing boundary or scale.
+> 6. Distinguish formal deductions from physical mappings, empirical
+>    calibrations, hypotheses, and speculation.
+> 7. State clearly if the proposed R²D interpretation conflicts with an
+>    established scientific result.
+>
+> Do not assume that R²D is correct. Try to break the mapping.
+
+## 3. Give it a problem
+
+Then ask the question you actually care about.
+
+For example:
+
+> Apply R²D to the Navier–Stokes singularity problem. Strip away the
+> inherited spatial ontology where possible, preserve the Navier–Stokes
+> mathematics, and determine what changes at the boundary where the
+> continuous description fails.
+
+Or:
+
+> Analyze the Einstein field equation using R²D. Separate the empirical
+> and geometric content of the equation from assumptions about which
+> quantities are primitive.
+
+Or simply:
+
+> Here is a scientific paper. What does R²D see that the conventional
+> interpretation does not?
+
+
+## What to Look For
+
+A useful R<sup>2</sup>D analysis should not merely rename familiar
+scientific quantities.
+
+It should expose whether a change of boundary changes the mathematical
+state domain, whether a familiar physical object is a projection of a
+more primitive count relation, and whether apparently different
+scientific descriptions can be deprojected onto the same mathematical
+architecture.
+
+Most importantly, it must preserve the empirical science.
+
+If an R<sup>2</sup>D interpretation requires changing an established
+law in order to make the framework work, that is evidence against the
+interpretation.
+
+
+## Don't Believe R<sup>2</sup>D. Run It.
+
+R<sup>2</sup>D was developed through repeated attempts to make the
+framework fail against established science.
+
+That remains the recommended way to use it.
+
+**Load the Canon. Give AI a problem. Try to break R<sup>2</sup>D.**

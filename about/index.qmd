@@ -1,16 +1,92 @@
-::: {.r2d-follow}
+---
+title: "About R²D Science"
+toc: false
+---
 
-## Follow R²D
 
-Long-form essays and ongoing commentary are published at  
-[**The Hand & The Arrow →**](YOUR-SUBSTACK-URL){target="_blank"}
+R<sup>2</sup>D Science is a research and development program built around
+**Recursively Realized Distinguishability (R<sup>2</sup>D)**: a mathematical
+framework for representing scientific objects in a form that artificial
+intelligence can interrogate across disciplines and scales.
 
-<div class="r2d-social-links">
+Science has powerful mathematics for describing what objects do. What it
+largely lacks is a common mathematics for defining what the scientific
+object itself is when the boundary of observation changes.
 
-[Facebook](YOUR-FACEBOOK-URL){target="_blank"}
-[X](YOUR-X-URL){target="_blank"}
-[LinkedIn](YOUR-LINKEDIN-URL){target="_blank"}
+R<sup>2</sup>D addresses that problem by treating microstate, macrostate,
+constraint, multiplicity, and recurrence as boundary-dependent mathematical
+objects. Changing the boundary therefore does not simply blur or coarse-grain
+the same object. It changes the state domain and replaces the scientific
+object being described.
 
-</div>
+## A Mathematical Interface for Science
 
-:::
+Artificial intelligence is exceptionally capable at operating on mathematics.
+The challenge is that science is presented to AI through many different
+physical ontologies: molecules, particles, fields, forces, organisms,
+geometries, and other domain-specific objects.
+
+R<sup>2</sup>D provides a common mathematical interface between those
+scientific descriptions and AI.
+
+Its purpose is not to replace established scientific laws. It is to transform
+the objects appearing in those laws into a common boundary-dependent
+mathematical representation so that relationships across disciplines and
+scales can be examined directly.
+
+In this sense, R<sup>2</sup>D functions as a front end for AI-driven
+scientific discovery.
+
+## From Muscle to a General Framework
+
+R<sup>2</sup>D emerged from research on muscle and molecular motors, where
+chemistry, thermodynamics, statistical mechanics, and mechanics can all be
+applied to the same biological system while the scientific object changes
+with scale.
+
+A myosin molecule can be the object. A collection of molecular motors can be
+the object. A muscle fiber can be the object.
+
+The laws remain valid within the boundary where their states and observables
+are defined, but the mathematical object itself changes as the boundary
+changes.
+
+Formalizing that observation led to a recursive mathematical architecture
+that can now be tested far beyond muscle.
+
+## The R<sup>2</sup>D Program
+
+R<sup>2</sup>D Science has four closely connected goals:
+
+1. **Develop the formal framework.**  
+   Maintain and extend the R<sup>2</sup>D Canon as the authoritative
+   mathematical statement of the theory.
+
+2. **Apply it across science.**  
+   Test the same primitive architecture against problems in thermodynamics,
+   statistical physics, quantum mechanics, gravity, geometry, fluid mechanics,
+   biology, and other domains.
+
+3. **Make the framework usable by AI.**  
+   Provide machine-readable versions of the Canon and tools that allow AI to
+   retrieve, transform, compare, and interrogate scientific structure using
+   R<sup>2</sup>D.
+
+4. **Preserve the development of the theory.**  
+   Archive formal releases on Zenodo so that each major stage of the framework
+   remains permanently available and citable.
+
+## Read It. Run It. Test It.
+
+R<sup>2</sup>D is intended to be used rather than merely accepted.
+
+**Read R<sup>2</sup>D** to understand the mathematical architecture.
+
+**Run R<sup>2</sup>D** by giving the framework to AI and applying it to a
+scientific law, paradox, paper, or unsolved problem.
+
+**Test R<sup>2</sup>D** by asking whether it can preserve established
+scientific relationships while removing unnecessary inherited assumptions
+about the objects those relationships describe.
+
+**Don't believe R<sup>2</sup>D. Try it.**

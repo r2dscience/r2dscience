@@ -1,7 +1,56 @@
----
-title: "Understand R²D"
----
-
 # Understand R²D
 
-Learn the boundary-dependent mathematics underlying R²D.
+R²D begins with two familiar statistical concepts—macrostate and
+microstate—and asks a more primitive question:
+
+**Relative to what is a state a microstate?**
+
+The Part I Introduction provides the shortest route into the full
+framework.
+
+## 0. Introduction
+
+- [READ THE PART I INTRODUCTION →](introduction.qmd)
+
+## 1. Define the object
+
+- [Counting Requires Distinguishability](counting.qmd)
+- [Boundaries Define Scientific Objects](boundaries.qmd)
+- [Macrostate and Microstate](macrostate-microstate.qmd)
+
+## 2. Define what can be realized
+
+- [Multiplicity](multiplicity.qmd)
+- [Occupancy and Occurrence](occupancy-occurrence.qmd)
+- [Recursive Replacement](recursive-replacement.qmd)
+- [Recursive Carry](recursive-carry.qmd)
+
+## 3. Define direction
+
+- [Possibility](possibility.qmd)
+- [Constraint and Retention](constraint-retention.qmd)
+- [Asymmetry](asymmetry.qmd)
+- [The Causal Inversion](causal-inversion.qmd)
+
+## 4. Define recurrence
+
+- [Closure](closure.qmd)
+- [Recurrence](recurrence.qmd)
+- [Recursive Counting Across Scale](recursive-counting.qmd)
+
+## 5. Put it together
+
+- [The R²D Law](r2d-law.qmd)
+- [The R²D Second Law](second-law.qmd)
+
+## 6. Understand the implications
+
+- [Why R²D Is Not Coarse-Graining](not-coarse-graining.qmd)
+- [Scientific Objecthood](scientific-objecthood.qmd)
+- [Why the Mathematics Comes Before Units](before-units.qmd)
+- [From Count Space to Physical Science](from-count-to-physics.qmd)
+
+## Reference
+
+- [Definitions & Symbols](definitions.qmd)
+- [The Coins Example](coins.qmd)

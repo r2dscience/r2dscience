@@ -13,13 +13,13 @@ toc: false
 <div class="r2d-lead">
 
 AI can solve mathematics.     
-**R<sup>2</sup>D is a mathematical interface that turns scientific objects into mathematics that AI can solve.**
+**R<sup>2</sup>D is a mathematical interface that defines scientific objects as recursive mathematical structures allowing AI to solve science.**
 
 </div>
 
 <div class="r2d-what-link">
 
-[WHAT IS R<sup>2</sup>D? →](understand/what-is-r2d.qmd)
+[**WHAT IS R<sup>2</sup>D? →**](understand/what-is-r2d.qmd)
 
 </div>
 
@@ -33,19 +33,29 @@ Learn about the boundary-dependent mathematics behind the framework — from rec
 ::: {.r2d-pathway}
 ### RUN R<sup>2</sup>D
 Give R²D to an AI and use it to interrogate a scientific law, paradox, paper, or unsolved problem.  
-[RUN R²D](run/index.qmd){.r2d-pathway-link}
+[USE R²D](run/index.qmd){.r2d-pathway-link}
 :::
 ::: {.r2d-pathway}
 ### TEST R<sup>2</sup>D
-See what happens when the same mathematical structure is applied to thermodynamics, quantum statistics, gravity, geometry, fluids, and biology.  
+See what happens when the same mathematical structure is applied to thermodynamics, quantum mechanics, gravity, geometry, and biology.  
 [EXPLORE APPLICATIONS](applications/index.qmd){.r2d-pathway-link}
 :::
 :::
 <div class="r2d-challenge">
-Don't believe it. Try it.
-</div>
+Don't believe it. Try it. </div>
+::: {.r2d-follow}
+# Follow R²D
 
-#
+Long-form essays and ongoing commentary on Substack at 
+[**The Hand & The Arrow**](https://hand0arrow.substack.com/){target="_blank"}
+
+<div class="r2d-social-links">
+
+[Facebook](https://www.facebook.com/profile.php?id=100005673914363){target="_blank"}  
+[X](https://x.com/JoshBaker5716){target="_blank"}  
+[LinkedIn](https://www.linkedin.com/in/josh-baker-75293b31/){target="_blank"}  
+</div>
+:::
 ## R<sup>2</sup>D at a glance
 
 ![](images/r2d-banner.png){width="100%"}

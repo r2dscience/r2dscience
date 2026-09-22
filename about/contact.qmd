@@ -1,2 +1,3 @@
-Josh Baker: josh@r2dscience.org
-Julie Ellsworth: julie@r2dscience.org
+Josh Baker: [josh@r2dscience.org](mailto: josh@r2dscience.org)  
+
+Julie Ellsworth: [julie@r2dscience.org](mailto: julie@r2dscience.org)  

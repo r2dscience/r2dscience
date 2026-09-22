@@ -4,11 +4,11 @@
     "href": "understand/what-is-r2d.html",
     "title": "What is R²D?",
     "section": "",
-    "text": "Science has a math that describes what an object does.\nR²D provides a math that defines what an object is.\n\nWe discovered R²D in muscle, where chemistry, thermodynamics, and mechanics apply equally to a macroscopic muscle fiber and a microscopic myosin molecule. The science is the same; the scientific object is replaced.\nScience is boundary dependent. It does not privilege any one object. It does not privilege any one scale.\nThe formal breakthrough was to define macrostate and microstate as boundary-dependent mathematical objects. Changing the boundary does not blur an object; it replaces its state domain. At one boundary, a water molecule is the scientific object. At another boundary, a glass of water replaces a water molecule as the scientific object. R²D merely states that a glass of water is not a water molecule.\nOnce microstate and macrostate are properly defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures: thermodynamics before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.\nR²D gives AI something science doesn’t provide: a single mathematical structure onto which chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by identifying inconsistencies with scientific laws across domains. AI consistently preserves both R²D and scientific laws. It breaks conventional ontologies.\nUpload R²D into an LLM. Give it a scientific law, a paradox, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows."
+    "text": "Science has a math that describes what an object does.\nR²D provides a math that defines what an object is.\n\nWe discovered R²D in muscle, where the same chemistry, thermodynamics, and mechanics describe both a macroscopic muscle fiber and a microscopic molecular motor. What changes is not the science, but the object described by science.\nScience is boundary dependent. It does not privilege any one object. It does not privilege any one scale.\nThe challenge was then to create a mathematics that defines both a generic object and the rules by which that object is replaced by a different object across scale. Boltzmann provided the foundation. Our formal breakthrough was to define macrostate and microstate as boundary-dependent mathematical objects. Changing the boundary does not blur an object; it replaces its state domain. At one boundary, a water molecule is the scientific object. At another boundary, a glass of water replaces a water molecule as the scientific object. At its core, R²D merely states that a glass of water is not a water molecule.\nOnce microstate and macrostate are properly defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures. Thermodynamics appears before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.\nR²D gives AI something science does not: a single mathematical structure onto which objects from chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by identifying inconsistencies between it and scientific laws across domains. AI consistently preserves both R²D and scientific laws while breaking conventional ontologies.\nUpload R²D into an LLM. Give it a scientific law, a paradox, a paper, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows."
   },
   {
-    "objectID": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-the-mathematics-that-allows-ai-to-solve-science.",
-    "href": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-the-mathematics-that-allows-ai-to-solve-science.",
+    "objectID": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-the-mathematical-interface-that-turns-science-into-mathematics-ai-can-solve.",
+    "href": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-the-mathematical-interface-that-turns-science-into-mathematics-ai-can-solve.",
     "title": "What is R²D?",
     "section": "",
     "text": "Science has a math that describes what an object does.\nR²D provides a math that defines what an object is.\n\nWe discovered R²D in muscle, where chemistry, thermodynamics, and mechanics apply equally to a macroscopic muscle fiber and a microscopic myosin molecule. The science is the same; the scientific object is replaced.\nScience is boundary dependent. It does not privilege any one object. It does not privilege any one scale.\nThe formal breakthrough was to define macrostate and microstate as boundary-dependent mathematical objects. Changing the boundary does not blur an object; it replaces its state domain. At one boundary, a water molecule is the scientific object. At another boundary, a glass of water replaces a water molecule as the scientific object. R²D merely states that a glass of water is not a water molecule.\nOnce microstate and macrostate are properly defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures: thermodynamics before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.\nR²D gives AI something science doesn’t provide: a single mathematical structure onto which chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by identifying inconsistencies with scientific laws across domains. AI consistently preserves both R²D and scientific laws. It breaks conventional ontologies.\nUpload R²D into an LLM. Give it a scientific law, a paradox, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows."
@@ -18,7 +18,28 @@
     "href": "run/index.html",
     "title": "Run R²D",
     "section": "",
-    "text": "Run R²D\nUse R²D with AI to interrogate scientific laws, paradoxes, and problems."
+    "text": "AI can already reason over mathematics.\nR2D provides a mathematical interface for converting scientific objects into a common boundary-dependent representation.\nYou do not need specialized R2D software to begin.\nDownload the current R2D Canon, load it into an AI system that can work with large documents, provide the R2D instruction below, and then ask AI about a scientific law, paradox, paper, dataset, or unsolved problem.\nDOWNLOAD THE CURRENT R²D CANON →"
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About R²D Science",
+    "section": "",
+    "text": "R2D Science is a research and development program built around Recursively Realized Distinguishability (R2D): a mathematical framework for representing scientific objects in a form that artificial intelligence can interrogate across disciplines and scales.\nScience has powerful mathematics for describing what objects do. What it largely lacks is a common mathematics for defining what the scientific object itself is when the boundary of observation changes.\nR2D addresses that problem by treating microstate, macrostate, constraint, multiplicity, and recurrence as boundary-dependent mathematical objects. Changing the boundary therefore does not simply blur or coarse-grain the same object. It changes the state domain and replaces the scientific object being described."
+  },
+  {
+    "objectID": "about/index.html#follow-r²d",
+    "href": "about/index.html#follow-r²d",
+    "title": "R²D Science",
+    "section": "",
+    "text": "Long-form essays and ongoing commentary are published at\nThe Hand & The Arrow →\n\nFacebook X LinkedIn"
+  },
+  {
+    "objectID": "about/contact.html",
+    "href": "about/contact.html",
+    "title": "R²D Science",
+    "section": "",
+    "text": "Josh Baker: josh@r2dscience.org\nJulie Ellsworth: julie@r2dscience.org"
   },
   {
     "objectID": "about.html",
@@ -46,34 +67,370 @@
     "href": "understand/index.html",
     "title": "Understand R²D",
     "section": "",
-    "text": "Understand R²D\nLearn the boundary-dependent mathematics underlying R²D."
+    "text": "R²D begins with two familiar statistical concepts—macrostate and microstate—and asks a more primitive question:\nRelative to what is a state a microstate?\nThe Part I Introduction provides the shortest route into the full framework.\n\n\n\nREAD THE PART I INTRODUCTION →\n\n\n\n\n\nCounting Requires Distinguishability\nBoundaries Define Scientific Objects\nMacrostate and Microstate\n\n\n\n\n\nMultiplicity\nOccupancy and Occurrence\nRecursive Replacement\nRecursive Carry\n\n\n\n\n\nPossibility\nConstraint and Retention\nAsymmetry\nThe Causal Inversion\n\n\n\n\n\nClosure\nRecurrence\nRecursive Counting Across Scale\n\n\n\n\n\nThe R²D Law\nThe R²D Second Law\n\n\n\n\n\nWhy R²D Is Not Coarse-Graining\nScientific Objecthood\nWhy the Mathematics Comes Before Units\nFrom Count Space to Physical Science\n\n\n\n\n\nDefinitions & Symbols\nThe Coins Example"
   },
   {
-    "objectID": "about/contact.html",
-    "href": "about/contact.html",
-    "title": "R²D Science",
-    "section": "",
-    "text": "Josh Baker: josh@r2dscience.org Julie Ellsworth: julie@r2dscience.org"
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "R²D Science",
-    "section": "",
-    "text": "Long-form essays and ongoing commentary are published at\nThe Hand & The Arrow →\n\nFacebook X LinkedIn"
-  },
-  {
-    "objectID": "about/index.html#follow-r²d",
-    "href": "about/index.html#follow-r²d",
-    "title": "R²D Science",
-    "section": "",
-    "text": "Long-form essays and ongoing commentary are published at\nThe Hand & The Arrow →\n\nFacebook X LinkedIn"
-  },
-  {
-    "objectID": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-the-mathematical-interface-that-turns-science-into-mathematics-ai-can-solve.",
-    "href": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-the-mathematical-interface-that-turns-science-into-mathematics-ai-can-solve.",
+    "objectID": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-a-mathematical-interface-that-turns-scientific-objects-into-mathematics-that-ai-can-solve.",
+    "href": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-a-mathematical-interface-that-turns-scientific-objects-into-mathematics-that-ai-can-solve.",
     "title": "What is R²D?",
     "section": "",
-    "text": "Science has a math that describes what an object does.\nR²D provides a math that defines what an object is.\n\nWe discovered R²D in muscle, where chemistry, thermodynamics, and mechanics apply equally to a macroscopic muscle fiber and a microscopic myosin molecule. The science is the same; the scientific object is replaced.\nScience is boundary dependent. It does not privilege any one object. It does not privilege any one scale.\nThe formal breakthrough was to define macrostate and microstate as boundary-dependent mathematical objects. Changing the boundary does not blur an object; it replaces its state domain. At one boundary, a water molecule is the scientific object. At another boundary, a glass of water replaces a water molecule as the scientific object. R²D merely states that a glass of water is not a water molecule.\nOnce microstate and macrostate are properly defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures: thermodynamics before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.\nR²D gives AI something science doesn’t provide: a single mathematical structure onto which chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by identifying inconsistencies with scientific laws across domains. AI consistently preserves both R²D and scientific laws. It breaks conventional ontologies.\nUpload R²D into an LLM. Give it a scientific law, a paradox, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows."
+    "text": "Science has a math that describes what an object does.\nR²D provides a math that defines what an object is.\n\nWe discovered R²D in muscle, where the same chemistry, thermodynamics, and mechanics describe both a macroscopic muscle fiber and a microscopic myosin molecule. What changes is not the science, but the object described by science.\nScience is boundary dependent. It does not privilege any one object. It does not privilege any one scale.\nThe challenge was to create a mathematics that defines both a generic object and the rules by which it is replaced across scale. Boltzmann provided the foundation. The formal breakthrough was to define macrostate and microstate as boundary-dependent mathematical objects. Changing the boundary does not blur an object; it replaces its state domain. At one boundary, a water molecule is the scientific object. At another boundary, a glass of water replaces a water molecule as the scientific object. R²D merely states that a glass of water is not a water molecule.\nOnce microstate and macrostate are properly defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures: thermodynamics appears before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.\nR²D gives AI something science doesn’t provide: a single mathematical structure onto which chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by identifying inconsistencies between it and scientific laws across domains. AI consistently preserves both R²D and scientific laws. It breaks conventional ontologies.\nUpload R²D into an LLM. Give it a scientific law, a paradox, a paper, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows."
+  },
+  {
+    "objectID": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-a-mathematical-interface-that-turns-scientific-objects-into-mathematics-so-that-ai-can-solve-science.",
+    "href": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-a-mathematical-interface-that-turns-scientific-objects-into-mathematics-so-that-ai-can-solve-science.",
+    "title": "What is R²D?",
+    "section": "",
+    "text": "Science has a math that describes what an object does.\nR²D provides a math that defines what an object is.\n\nWe discovered R²D in muscle, where the same chemistry, thermodynamics, and mechanics describe both a macroscopic muscle fiber and a microscopic molecular motor. What changes is not the science, but the object described by science.\nScience is boundary dependent. It does not privilege any one object. It does not privilege any one scale.\nThe challenge was then to create a mathematics that defines both a generic object and the rules by which it is replaced across scale. Boltzmann provided the foundation. The formal breakthrough was to define macrostate and microstate as boundary-dependent mathematical objects. Changing the boundary does not blur an object; it replaces its state domain. At one boundary, a water molecule is the scientific object. At another boundary, a glass of water replaces a water molecule as the scientific object. At it’s core, R²D merely states that a glass of water is not a water molecule.\nOnce microstate and macrostate are properly defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures: thermodynamics appears before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.\nR²D gives AI something science does not provide: a single mathematical structure onto which chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by identifying inconsistencies between it and scientific laws across domains. AI consistently preserves both R²D and scientific laws. It breaks conventional ontologies.\nUpload R²D into an LLM. Give it a scientific law, a paradox, a paper, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows."
+  },
+  {
+    "objectID": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-a-mathematical-interface-that-turns-scientific-objects-into-mathematical-structure-so-that-ai-can-solve-science.",
+    "href": "understand/what-is-r2d.html#ai-can-solve-mathematics.-r²d-is-a-mathematical-interface-that-turns-scientific-objects-into-mathematical-structure-so-that-ai-can-solve-science.",
+    "title": "What is R²D?",
+    "section": "",
+    "text": "Science has a math that describes what an object does.\nR²D provides a math that defines what an object is.\n\nWe discovered R²D in muscle, where the same chemistry, thermodynamics, and mechanics describe both a macroscopic muscle fiber and a microscopic molecular motor. What changes is not the science, but the object described by science.\nScience is boundary dependent. It does not privilege any one object. It does not privilege any one scale.\nThe challenge was then to create a mathematics that defines both a generic object and the rules by which that object is replaced by a different object across scale. Boltzmann provided the foundation. Our formal breakthrough was to define macrostate and microstate as boundary-dependent mathematical objects. Changing the boundary does not blur an object; it replaces its state domain. At one boundary, a water molecule is the scientific object. At another boundary, a glass of water replaces a water molecule as the scientific object. At its core, R²D merely states that a glass of water is not a water molecule.\nOnce microstate and macrostate are properly defined, scientific paradoxes disappear and familiar scientific objects appear – not as physical objects but – as mathematical structures. Thermodynamics appears before temperature and entropy, Fermi–Dirac statistics before fermions, Bose–Einstein statistics before bosons, area before radius, and quantum and gravitational horizons before quantum and gravitational phenomena.\nR²D gives AI something science does not: a single mathematical structure onto which objects from chemistry, physics, biology, and geometry can all be deprojected. This is more than a proposal. We have spent years asking AI to break R²D by identifying inconsistencies between it and scientific laws across domains. AI consistently preserves both R²D and scientific laws while breaking conventional ontologies.\nUpload R²D into an LLM. Give it a scientific law, a paradox, a paper, or an unsolved problem. Ask it to strip away the inherited physical ontology, recover the underlying mathematics, and see what follows."
+  },
+  {
+    "objectID": "about/authors.html",
+    "href": "about/authors.html",
+    "title": "R²D Science",
+    "section": "",
+    "text": "Josh Baker, Ph.D.\nAssociate Vice President for Research\nProfessor Pharmacology\nDirector NIH NV INBRE\nUniversity of Nevada, Reno\nJulie Ellsworth, Ph.D.\nDean of Life Sciences, Allied Health & Public Safety\nTruckee Meadows Community College"
+  },
+  {
+    "objectID": "index.html#follow-r²d",
+    "href": "index.html#follow-r²d",
+    "title": "Use AI to solve science.",
+    "section": "Follow R²D",
+    "text": "Follow R²D\nLong-form essays and ongoing commentary on Substack at The Hand & The Arrow\n\nFacebook\nX\nLinkedIn"
+  },
+  {
+    "objectID": "about/publications.html",
+    "href": "about/publications.html",
+    "title": "Publications & Archive",
+    "section": "",
+    "text": "R2D emerged from a long-running research program in muscle, molecular motors, thermodynamics, and multiscale biological mechanics. The conventional scientific record of that work and the developing R2D archive serve different purposes."
+  },
+  {
+    "objectID": "about/publications.html#muscle-and-molecular-motor-research",
+    "href": "about/publications.html#muscle-and-molecular-motor-research",
+    "title": "Publications & Archive",
+    "section": "Muscle and Molecular Motor Research",
+    "text": "Muscle and Molecular Motor Research\nFor more than two decades, my research has examined how molecular-scale events become mechanical behavior at the scale of muscle.\nThis work includes the molecular mechanisms of muscle contraction and regulation, the mechanochemistry of myosin molecular motors, muscle thermodynamics, ensemble mechanics, single-molecule and whole-cell measurements, and multiscale models of biological systems.\nA recurring question has been how randomly fluctuating molecular motors can collectively generate the deterministic force, shortening, and power measured at the scale of a muscle fiber.\nThat question ultimately led beyond muscle. Muscle provides an unusually useful scientific system because chemistry, thermodynamics, statistical mechanics, and mechanics can all be measured on the same physical system while the definition of the scientific object changes with scale.\nThe peer-reviewed publications documenting this research program can be found through Google Scholar.\nVIEW PUBLICATIONS ON GOOGLE SCHOLAR →"
+  },
+  {
+    "objectID": "about/publications.html#from-muscle-to-r2d",
+    "href": "about/publications.html#from-muscle-to-r2d",
+    "title": "Publications & Archive",
+    "section": "From Muscle to R2D",
+    "text": "From Muscle to R2D\nThe development of R2D began with a problem exposed by muscle: the mathematics that describes a muscle fiber cannot simply be assigned to one of its subordinate molecular components.\nA myosin molecule and a muscle fiber are different scientific objects. Each has its own states, transitions, constraints, and readable observables.\nR2D formalizes this boundary dependence by defining microstate and macrostate at the boundary where they are distinguished. Changing scale therefore does not merely coarse-grain the same object. It changes the mathematical state domain and, with it, the object being described.\nThe resulting framework has since been developed beyond muscle into a general mathematical interface for examining scientific structure across physics, chemistry, biology, and geometry."
+  },
+  {
+    "objectID": "about/publications.html#r2d-archive-and-continuing-development",
+    "href": "about/publications.html#r2d-archive-and-continuing-development",
+    "title": "Publications & Archive",
+    "section": "R2D Archive and Continuing Development",
+    "text": "R2D Archive and Continuing Development\nFormal versions of R2D are archived on Zenodo.\nZenodo provides permanent, citable records of the framework at defined stages of development. These archived releases include the R2D Canon and subsequent formal developments and applications.\nThe distinction between the archive and this website is intentional:\n\nZenodo preserves fixed scholarly versions.\nR2DScience.org presents the current framework and makes it easier to navigate and use.\nThe Canon remains the authoritative mathematical source.\nApplications show how the framework develops when it is run against specific scientific problems.\n\nAs R2D develops, major formal releases will continue to be deposited on Zenodo so that earlier formulations remain permanently available and citable.\nVIEW THE R²D ARCHIVE ON ZENODO →"
+  },
+  {
+    "objectID": "about/publications.html#current-canon",
+    "href": "about/publications.html#current-canon",
+    "title": "Publications & Archive",
+    "section": "Current Canon",
+    "text": "Current Canon\nThe current Canon is the master statement of the R2D framework.\nIt is intended both for human readers and as a source document for AI. Future releases will be made available in formats suitable for reading, archiving, and machine interrogation.\nREAD THE CANON →"
+  },
+  {
+    "objectID": "about/publications.html#citation-and-contact",
+    "href": "about/publications.html#citation-and-contact",
+    "title": "Publications & Archive",
+    "section": "Citation and Contact",
+    "text": "Citation and Contact\nFor questions about the research program, publications, or the R2D archive:\njosh@r2dscience.org"
+  },
+  {
+    "objectID": "about/index.html#a-mathematical-interface-for-science",
+    "href": "about/index.html#a-mathematical-interface-for-science",
+    "title": "About R²D Science",
+    "section": "A Mathematical Interface for Science",
+    "text": "A Mathematical Interface for Science\nArtificial intelligence is exceptionally capable at operating on mathematics. The challenge is that science is presented to AI through many different physical ontologies: molecules, particles, fields, forces, organisms, geometries, and other domain-specific objects.\nR2D provides a common mathematical interface between those scientific descriptions and AI.\nIts purpose is not to replace established scientific laws. It is to transform the objects appearing in those laws into a common boundary-dependent mathematical representation so that relationships across disciplines and scales can be examined directly.\nIn this sense, R2D functions as a front end for AI-driven scientific discovery."
+  },
+  {
+    "objectID": "about/index.html#from-muscle-to-a-general-framework",
+    "href": "about/index.html#from-muscle-to-a-general-framework",
+    "title": "About R²D Science",
+    "section": "From Muscle to a General Framework",
+    "text": "From Muscle to a General Framework\nR2D emerged from research on muscle and molecular motors, where chemistry, thermodynamics, statistical mechanics, and mechanics can all be applied to the same biological system while the scientific object changes with scale.\nA myosin molecule can be the object. A collection of molecular motors can be the object. A muscle fiber can be the object.\nThe laws remain valid within the boundary where their states and observables are defined, but the mathematical object itself changes as the boundary changes.\nFormalizing that observation led to a recursive mathematical architecture that can now be tested far beyond muscle."
+  },
+  {
+    "objectID": "about/index.html#the-r2d-program",
+    "href": "about/index.html#the-r2d-program",
+    "title": "About R²D Science",
+    "section": "The R2D Program",
+    "text": "The R2D Program\nR2D Science has four closely connected goals:\n\nDevelop the formal framework.\nMaintain and extend the R2D Canon as the authoritative mathematical statement of the theory.\nApply it across science.\nTest the same primitive architecture against problems in thermodynamics, statistical physics, quantum mechanics, gravity, geometry, fluid mechanics, biology, and other domains.\nMake the framework usable by AI.\nProvide machine-readable versions of the Canon and tools that allow AI to retrieve, transform, compare, and interrogate scientific structure using R2D.\nPreserve the development of the theory.\nArchive formal releases on Zenodo so that each major stage of the framework remains permanently available and citable."
+  },
+  {
+    "objectID": "about/index.html#read-it.-run-it.-test-it.",
+    "href": "about/index.html#read-it.-run-it.-test-it.",
+    "title": "About R²D Science",
+    "section": "Read It. Run It. Test It.",
+    "text": "Read It. Run It. Test It.\nR2D is intended to be used rather than merely accepted.\nRead R2D to understand the mathematical architecture.\nRun R2D by giving the framework to AI and applying it to a scientific law, paradox, paper, or unsolved problem.\nTest R2D by asking whether it can preserve established scientific relationships while removing unnecessary inherited assumptions about the objects those relationships describe.\nDon’t believe R2D. Try it."
+  },
+  {
+    "objectID": "canon/index.html",
+    "href": "canon/index.html",
+    "title": "About the R²D Canon",
+    "section": "",
+    "text": "The R2D Canon is the master source document for Recursively Realized Distinguishability.\nThe current integrated archive is approximately 2,750 pages and contains the four-part formal development of R2D together with a growing series of addenda that extend, test, and refine the framework.\nIt is intentionally large.\nThe Canon is not primarily designed to be read from beginning to end like a conventional textbook or journal article. It serves a different purpose: to preserve the complete mathematical and conceptual architecture of R2D in one authoritative source."
+  },
+  {
+    "objectID": "canon/index.html#why-the-canon-exists",
+    "href": "canon/index.html#why-the-canon-exists",
+    "title": "About the R²D Canon",
+    "section": "Why the Canon Exists",
+    "text": "Why the Canon Exists\nR2D changes the order in which scientific objects and laws are interpreted. A focused paper on muscle, thermodynamics, quantum mechanics, gravity, or biology cannot reproduce the entire framework every time.\nThe Canon therefore provides the common source beneath those narrower developments.\nIt preserves:\n\nthe primitive definitions and mathematical architecture of R2D;\nthe derivations and logical dependencies connecting those definitions;\nphysical mappings and empirical calibrations;\napplications across scientific domains;\nfailed routes, qualifications, and unresolved questions;\nand the subsequent addenda through which the framework continues to develop.\n\nThe Canon has three primary roles.\n\nArchive\nThe Canon preserves the development of R2D as completely as possible at a particular stage of the program.\nFormal versions are deposited on Zenodo so that earlier formulations remain permanently available, citable, and distinguishable from later developments.\n\n\nAuthoritative Source\nThe Canon is the authoritative mathematical source for R2D.\nThe explanatory pages on R2DScience.org are designed to make the framework easier to navigate, understand, and use. Applications isolate particular scientific problems. Essays provide interpretation and commentary.\nWhen a question depends on the formal definitions, assumptions, derivations, or logical status of an R2D claim, the Canon is the reference document.\n\n\nAI Source Corpus\nThe Canon is also designed to be used by artificial intelligence.\nR2D introduces a mathematical language that differs from the physical ontologies normally used in science. An AI given only a short description will tend to translate that language immediately back into familiar concepts such as particles, forces, fields, trajectories, energy, space, or time.\nThe Canon provides enough of the internal mathematical structure for an AI to remain inside the R2D framework long enough to interrogate it.\nIt can therefore be supplied to an LLM as a source corpus and used to:\n\nreconstruct an R2D argument;\ntest a proposed implication;\nsearch for internal contradictions;\ncompare R2D with an established scientific theory;\nanalyze a scientific law or paradox;\nand explore whether a scientific problem changes when its inherited physical ontology is removed.\n\nThe goal is not for an AI to accept R2D.\nThe goal is to give AI enough of the mathematics to run it."
+  },
+  {
+    "objectID": "canon/index.html#part-i-the-primitive-count-architecture",
+    "href": "canon/index.html#part-i-the-primitive-count-architecture",
+    "title": "About the R²D Canon",
+    "section": "Part I — The Primitive Count Architecture",
+    "text": "Part I — The Primitive Count Architecture\nPart I develops R2D before physical units are assigned.\nIt begins with counting and develops the dimensionless architecture of boundary, distinguishability, multiplicity, occupancy, occurrence, possibility, constraint, closure, recursive replacement, and background.\nIts central task is to define the mathematical objects that must exist before familiar physical quantities are assigned."
+  },
+  {
+    "objectID": "canon/index.html#part-ii-thermodynamic-readability",
+    "href": "canon/index.html#part-ii-thermodynamic-readability",
+    "title": "About the R²D Canon",
+    "section": "Part II — Thermodynamic Readability",
+    "text": "Part II — Thermodynamic Readability\nPart II asks what the primitive architecture looks like when both sides of the recursive relation remain physically readable.\nThermodynamics provides the primary bridge.\nGibbs free energy, chemical activity, entropy, heat, work, mechanical constraint, molecular motors, and muscle are examined as physical reads of relations first defined in dimensionless count form.\nMuscle is especially important because chemical, thermodynamic, and mechanical quantities can be measured in the same functioning system while the scientific object changes across scale."
+  },
+  {
+    "objectID": "canon/index.html#part-iii-readability-horizons",
+    "href": "canon/index.html#part-iii-readability-horizons",
+    "title": "About the R²D Canon",
+    "section": "Part III — Readability Horizons",
+    "text": "Part III — Readability Horizons\nPart III asks what happens when the recursive relation is no longer jointly readable.\nIt develops recursive recurrence, occupancy statistics, and two complementary readability limits.\nAt the quantum-facing horizon, recurrence remains readable while subordinate distinguishability is lost.\nAt the gravitational-facing horizon, distinguishability remains readable while the relevant enclosing recurrence is lost.\nThermodynamic and biological systems occupy the jointly readable regime between those limits."
+  },
+  {
+    "objectID": "canon/index.html#part-iv-projection",
+    "href": "canon/index.html#part-iv-projection",
+    "title": "About the R²D Canon",
+    "section": "Part IV — Projection",
+    "text": "Part IV — Projection\nPart IV asks what physical description is constructed from what remains readable after joint access to the primitive count relation is lost.\nParticles, mass, charge, motion, fields, quantum amplitude, gauge structure, gravity, spacetime, and cosmology are examined as boundary-specific physical projections rather than primitive starting objects.\nPart IV also introduces the converse problem of deprojection: whether a familiar physical description can be traced back toward the more primitive count architecture from which it is read."
+  },
+  {
+    "objectID": "about/canon.html",
+    "href": "about/canon.html",
+    "title": "About the R²D Canon",
+    "section": "",
+    "text": "The R2D Canon is the master source document for Recursively Realized Distinguishability.\nThe current integrated archive is approximately 2,750 pages and contains the four-part formal development of R2D together with a growing series of addenda that extend, test, and refine the framework.\nIt is intentionally large.\nThe Canon is not primarily designed to be read from beginning to end like a conventional textbook or journal article. It serves a different purpose: to preserve the complete mathematical and conceptual architecture of R2D in one authoritative source."
+  },
+  {
+    "objectID": "about/canon.html#why-the-canon-exists",
+    "href": "about/canon.html#why-the-canon-exists",
+    "title": "About the R²D Canon",
+    "section": "Why the Canon Exists",
+    "text": "Why the Canon Exists\nR2D changes the order in which scientific objects and laws are interpreted. A focused paper on muscle, thermodynamics, quantum mechanics, gravity, or biology cannot reproduce the entire framework every time.\nThe Canon therefore provides the common source beneath those narrower developments.\nIt preserves:\n\nthe primitive definitions and mathematical architecture of R2D;\nthe derivations and logical dependencies connecting those definitions;\nphysical mappings and empirical calibrations;\napplications across scientific domains;\nfailed routes, qualifications, and unresolved questions;\nand the subsequent addenda through which the framework continues to develop.\n\nThe Canon has three primary roles.\n\nArchive\nThe Canon preserves the development of R2D as completely as possible at a particular stage of the program.\nFormal versions are deposited on Zenodo so that earlier formulations remain permanently available, citable, and distinguishable from later developments.\n\n\nAuthoritative Source\nThe Canon is the authoritative mathematical source for R2D.\nThe explanatory pages on R2DScience.org are designed to make the framework easier to navigate, understand, and use. Applications isolate particular scientific problems. Essays provide interpretation and commentary.\nWhen a question depends on the formal definitions, assumptions, derivations, or logical status of an R2D claim, the Canon is the reference document.\n\n\nAI Source Corpus\nThe Canon is also designed to be used by artificial intelligence.\nR2D introduces a mathematical language that differs from the physical ontologies normally used in science. An AI given only a short description will tend to translate that language immediately back into familiar concepts such as particles, forces, fields, trajectories, energy, space, or time.\nThe Canon provides enough of the internal mathematical structure for an AI to remain inside the R2D framework long enough to interrogate it.\nIt can therefore be supplied to an LLM as a source corpus and used to:\n\nreconstruct an R2D argument;\ntest a proposed implication;\nsearch for internal contradictions;\ncompare R2D with an established scientific theory;\nanalyze a scientific law or paradox;\nand explore whether a scientific problem changes when its inherited physical ontology is removed.\n\nThe goal is not for an AI to accept R2D.\nThe goal is to give AI enough of the mathematics to run it."
+  },
+  {
+    "objectID": "about/canon.html#part-i-the-primitive-count-architecture",
+    "href": "about/canon.html#part-i-the-primitive-count-architecture",
+    "title": "About the R²D Canon",
+    "section": "Part I — The Primitive Count Architecture",
+    "text": "Part I — The Primitive Count Architecture\nPart I develops R2D before physical units are assigned.\nIt begins with counting and develops the dimensionless architecture of boundary, distinguishability, multiplicity, occupancy, occurrence, possibility, constraint, closure, recursive replacement, and background.\nIts central task is to define the mathematical objects that must exist before familiar physical quantities are assigned."
+  },
+  {
+    "objectID": "about/canon.html#part-ii-thermodynamic-readability",
+    "href": "about/canon.html#part-ii-thermodynamic-readability",
+    "title": "About the R²D Canon",
+    "section": "Part II — Thermodynamic Readability",
+    "text": "Part II — Thermodynamic Readability\nPart II asks what the primitive architecture looks like when both sides of the recursive relation remain physically readable.\nThermodynamics provides the primary bridge.\nGibbs free energy, chemical activity, entropy, heat, work, mechanical constraint, molecular motors, and muscle are examined as physical reads of relations first defined in dimensionless count form.\nMuscle is especially important because chemical, thermodynamic, and mechanical quantities can be measured in the same functioning system while the scientific object changes across scale."
+  },
+  {
+    "objectID": "about/canon.html#part-iii-readability-horizons",
+    "href": "about/canon.html#part-iii-readability-horizons",
+    "title": "About the R²D Canon",
+    "section": "Part III — Readability Horizons",
+    "text": "Part III — Readability Horizons\nPart III asks what happens when the recursive relation is no longer jointly readable.\nIt develops recursive recurrence, occupancy statistics, and two complementary readability limits.\nAt the quantum-facing horizon, recurrence remains readable while subordinate distinguishability is lost.\nAt the gravitational-facing horizon, distinguishability remains readable while the relevant enclosing recurrence is lost.\nThermodynamic and biological systems occupy the jointly readable regime between those limits."
+  },
+  {
+    "objectID": "about/canon.html#part-iv-projection",
+    "href": "about/canon.html#part-iv-projection",
+    "title": "About the R²D Canon",
+    "section": "Part IV — Projection",
+    "text": "Part IV — Projection\nPart IV asks what physical description is constructed from what remains readable after joint access to the primitive count relation is lost.\nParticles, mass, charge, motion, fields, quantum amplitude, gauge structure, gravity, spacetime, and cosmology are examined as boundary-specific physical projections rather than primitive starting objects.\nPart IV also introduces the converse problem of deprojection: whether a familiar physical description can be traced back toward the more primitive count architecture from which it is read."
+  },
+  {
+    "objectID": "run/index.html#give-ai-the-mathematics.-then-give-it-the-science.",
+    "href": "run/index.html#give-ai-the-mathematics.-then-give-it-the-science.",
+    "title": "Run R²D",
+    "section": "",
+    "text": "AI can already reason over mathematics.\nR2D provides a mathematical interface for converting scientific objects into a common boundary-dependent representation.\nYou do not need specialized R2D software to begin.\nDownload the current R2D Canon, load it into an AI system that can work with large documents, provide the R2D instruction below, and then give the AI a scientific law, paradox, paper, dataset, or unsolved problem.\nDOWNLOAD THE CURRENT R²D CANON →"
+  },
+  {
+    "objectID": "run/index.html#load-the-canon",
+    "href": "run/index.html#load-the-canon",
+    "title": "Run R²D",
+    "section": "1. Load the Canon",
+    "text": "1. Load the Canon\nDownload the current PDF of the R2D Canon from Zenodo and upload it to the AI system you want to use.\nDOWNLOAD THE CURRENT R²D CANON →\nThe Canon is the authoritative source. It contains the definitions, formal architecture, physical mappings, applications, and addenda needed for the AI to reason within R2D rather than immediately translating the framework back into conventional physical ontology."
+  },
+  {
+    "objectID": "run/index.html#give-the-ai-the-r2d-instruction",
+    "href": "run/index.html#give-the-ai-the-r2d-instruction",
+    "title": "Run R²D",
+    "section": "2. Give the AI the R2D instruction",
+    "text": "2. Give the AI the R2D instruction\nCopy and paste the following instruction:\n\nUse the attached R²D Canon as the authoritative source for this analysis.\nWork within the definitions and mathematical architecture of R²D before translating the problem into conventional physical ontology.\nTreat scientific objects, macrostates, microstates, multiplicity, possibility, constraint, recurrence, closure, and recursive replacement as boundary-dependent quantities as defined in the Canon.\nWhen analyzing the scientific problem I provide:\n\nIdentify the scientific object and the boundary at which it is defined.\nIdentify which quantities are directly readable at that boundary.\nSeparate the empirical mathematical relation from the physical ontology conventionally assigned to it.\nDetermine whether the relation can be represented in the R²D architecture without changing the established empirical law.\nIdentify any change in state domain produced by changing boundary or scale.\nDistinguish formal deductions from physical mappings, empirical calibrations, hypotheses, and speculation.\nState clearly if the proposed R²D interpretation conflicts with an established scientific result.\n\nDo not assume that R²D is correct. Try to break the mapping."
+  },
+  {
+    "objectID": "run/index.html#give-it-a-problem",
+    "href": "run/index.html#give-it-a-problem",
+    "title": "Run R²D",
+    "section": "3. Give it a problem",
+    "text": "3. Give it a problem\nThen ask the question you actually care about.\nFor example:\n\nApply R²D to the Navier–Stokes singularity problem. Strip away the inherited spatial ontology where possible, preserve the Navier–Stokes mathematics, and determine what changes at the boundary where the continuous description fails.\n\nOr:\n\nAnalyze the Einstein field equation using R²D. Separate the empirical and geometric content of the equation from assumptions about which quantities are primitive.\n\nOr simply:\n\nHere is a scientific paper. What does R²D see that the conventional interpretation does not?"
+  },
+  {
+    "objectID": "run/index.html#what-to-look-for",
+    "href": "run/index.html#what-to-look-for",
+    "title": "Run R²D",
+    "section": "What to Look For",
+    "text": "What to Look For\nA useful R2D analysis should not merely rename familiar scientific quantities.\nIt should expose whether a change of boundary changes the mathematical state domain, whether a familiar physical object is a projection of a more primitive count relation, and whether apparently different scientific descriptions can be deprojected onto the same mathematical architecture.\nMost importantly, it must preserve the empirical science.\nIf an R2D interpretation requires changing an established law in order to make the framework work, that is evidence against the interpretation."
+  },
+  {
+    "objectID": "run/index.html#dont-believe-r2d.-run-it.",
+    "href": "run/index.html#dont-believe-r2d.-run-it.",
+    "title": "Run R²D",
+    "section": "Don’t Believe R2D. Run It.",
+    "text": "Don’t Believe R2D. Run It.\nR2D was developed through repeated attempts to make the framework fail against established science.\nThat remains the recommended way to use it.\nLoad the Canon. Give AI a problem. Try to break R2D."
+  },
+  {
+    "objectID": "run/index.html#give-ai-the-mathematics.-then-ask-it-about-science.",
+    "href": "run/index.html#give-ai-the-mathematics.-then-ask-it-about-science.",
+    "title": "Run R²D",
+    "section": "",
+    "text": "AI can already reason over mathematics.\nR2D provides a mathematical interface for converting scientific objects into a common boundary-dependent representation.\nYou do not need specialized R2D software to begin.\nDownload the current R2D Canon, load it into an AI system that can work with large documents, provide the R2D instruction below, and then give the AI a scientific law, paradox, paper, dataset, or unsolved problem.\nDOWNLOAD THE CURRENT R²D CANON →"
+  },
+  {
+    "objectID": "run/index.html#provide-ai-with-the-mathematics.-then-ask-it-about-science.",
+    "href": "run/index.html#provide-ai-with-the-mathematics.-then-ask-it-about-science.",
+    "title": "Run R²D",
+    "section": "",
+    "text": "AI can already reason over mathematics.\nR2D provides a mathematical interface for converting scientific objects into a common boundary-dependent representation.\nYou do not need specialized R2D software to begin.\nDownload the current R2D Canon, load it into an AI system that can work with large documents, provide the R2D instruction below, and then ask AI about a scientific law, paradox, paper, dataset, or unsolved problem.\nDOWNLOAD THE CURRENT R²D CANON →"
+  },
+  {
+    "objectID": "understand/index.html#define-the-object",
+    "href": "understand/index.html#define-the-object",
+    "title": "Understand R²D",
+    "section": "",
+    "text": "Counting Requires Distinguishability\nBoundaries Define Scientific Objects\nMacrostate and Microstate"
+  },
+  {
+    "objectID": "understand/index.html#define-what-can-be-realized",
+    "href": "understand/index.html#define-what-can-be-realized",
+    "title": "Understand R²D",
+    "section": "",
+    "text": "Multiplicity\nOccupancy and Occurrence\nRecursive Replacement\nRecursive Carry"
+  },
+  {
+    "objectID": "understand/index.html#define-direction",
+    "href": "understand/index.html#define-direction",
+    "title": "Understand R²D",
+    "section": "",
+    "text": "Possibility\nConstraint and Retention\nAsymmetry\nThe Causal Inversion"
+  },
+  {
+    "objectID": "understand/index.html#define-recurrence",
+    "href": "understand/index.html#define-recurrence",
+    "title": "Understand R²D",
+    "section": "",
+    "text": "Closure\nRecurrence\nRecursive Counting Across Scale"
+  },
+  {
+    "objectID": "understand/index.html#put-it-together",
+    "href": "understand/index.html#put-it-together",
+    "title": "Understand R²D",
+    "section": "",
+    "text": "The R²D Law\nThe R²D Second Law"
+  },
+  {
+    "objectID": "understand/index.html#understand-the-implications",
+    "href": "understand/index.html#understand-the-implications",
+    "title": "Understand R²D",
+    "section": "",
+    "text": "Why R²D Is Not Coarse-Graining\nScientific Objecthood\nWhy the Mathematics Comes Before Units\nFrom Count Space to Physical Science"
+  },
+  {
+    "objectID": "understand/index.html#reference",
+    "href": "understand/index.html#reference",
+    "title": "Understand R²D",
+    "section": "",
+    "text": "Definitions & Symbols\nThe Coins Example"
+  },
+  {
+    "objectID": "understand/index.html#introduction",
+    "href": "understand/index.html#introduction",
+    "title": "Understand R²D",
+    "section": "",
+    "text": "READ THE PART I INTRODUCTION →"
+  },
+  {
+    "objectID": "understand/introduction.html",
+    "href": "understand/introduction.html",
+    "title": "Part I Introduction",
+    "section": "",
+    "text": "The question is simple.\nWhy do we use additive mathematics to describe a universe within which distinguishable multiplicities compose multiplicatively?\nScience starts with counting. But counting is usually introduced after the things being counted have already been defined. Once a set of objects and a count domain are given, addition is natural: one object plus another produces a larger count. However, that does not explain how a distinguishable whole arises from subordinate realizations.\nAt every nonprimitive count boundary, a distinguishable state can be realized in multiple compatible ways by subordinate states. Mutually exclusive possibilities within one count domain add. Compatible possibilities that jointly realize a larger state multiply. Their logarithms transform that multiplicative structure into additive coordinates.\nThe whole is therefore not primitively the arithmetic sum of its parts. It is the multiplicity of compatible ways in which subordinate distinctions can realize the whole. This distinction is familiar in statistical mechanics. A macrostate is not defined by adding its microstates. Its multiplicity counts how many microscopic realizations belong to it.\nYet the causal interpretation of this structure has usually remained mechanistic: microscopic transitions are treated as the agents through which the system evolves toward macroscopic states of greater statistical weight.\nR2D separates two relations that this conventional interpretation joins.\nA subordinate transition can change which realization is occupied. It cannot create the multiplicity landscape within which that realization is classified.\nAt a fixed boundary (B_n), the compatible formal microstate domain and its macrostate classification define\n\\[\nW_{n,i} = \\left| \\pi_n^{-1}(i) \\right|.\n\\]\nChanging realization does not change this cardinality unless the boundary-defined count domain or classification itself changes.\nA second result follows from the enclosing compatibility relation. For two local alternatives, the complete compatible-count difference is determined jointly by native local multiplicity and the multiplicity of compatible enclosing extension. Because the enclosing extension relation can change while the native local landscape remains fixed, enclosing compatibility can create, cancel, or reverse the directional support of the local alternatives without changing their native multiplicities.\nThese are general results of the R2D formal architecture.\nThe coin construction provides a finite exact realization of them. It makes visible, without energy, force, probability, or dynamics, both the invariance of local multiplicity under realization and the ability of enclosing compatibility to reverse local directional support.\nStatistical mechanics then supplies the empirical complement: changing enclosing thermal, chemical, mechanical, or field conditions changes the relative realization of local states.\nTogether these results suggest a causal inversion:\nExplore the causal inversion →"
+  },
+  {
+    "objectID": "understand/introduction.html#multiplication-beneath-addition",
+    "href": "understand/introduction.html#multiplication-beneath-addition",
+    "title": "Part I Introduction",
+    "section": "Multiplication Beneath Addition",
+    "text": "Multiplication Beneath Addition\nThe relation\n\\[\nS = \\ln W\n\\]\nis ordinarily introduced as an equation for entropy.\nR2D reads it first as a statement about counting.\nIf compatible multiplicities compose,\n\\[\nW_{\\mathrm{joint}} = \\prod_\\alpha W_\\alpha,\n\\]\nthen\n\\[\n\\ln W_{\\mathrm{joint}}\n=\n\\sum_\\alpha \\ln W_\\alpha.\n\\]\nLogarithmic addition is therefore the additive reading of multiplicative composition.\nThis relationship is more primitive than any particular thermodynamic interpretation. Multiplication describes the number of compatible ways a joint realization can occur. The logarithm converts that multiplicative structure into an additive coordinate.\nThe distinction matters because additive mathematics can describe a system with extraordinary precision while concealing the count structure beneath the coordinate.\nR2D does not reject additive mathematics. It asks what addition is measuring.\nAt the primitive level, two operations are sufficient to generate much of the mathematical structure used later in science:\ncompatible possibilities multiply; mutually exclusive alternatives add.\nLogarithms make the first readable through the second.\nUnits can subsequently be assigned to these additive coordinates. Entropy, energy, chemical potential, action, frequency, probability, curvature, and other familiar quantities may then become measurable physical readings of relations that began as dimensionless count structure.\nScience is not made of units. Science uses units to read primitive counts. R2D begins before units are assigned.\nWhy the mathematics comes before units →\nUnderstand multiplicity →"
+  },
+  {
+    "objectID": "understand/introduction.html#the-empirical-and-conceptual-origins-of-r2d",
+    "href": "understand/introduction.html#the-empirical-and-conceptual-origins-of-r2d",
+    "title": "Part I Introduction",
+    "section": "The Empirical and Conceptual Origins of R2D",
+    "text": "The Empirical and Conceptual Origins of R2D\nR2D originated in active muscle.\nA contracting muscle is a locally cycling system that converts an externally maintained asymmetry into force, shortening, heat, and structural change. The molecular transitions involved in contraction are themselves realized under chemical and mechanical conditions defined outside the individual molecular transition.\nFollowing the source of asymmetry repeatedly encounters another enclosing relation on a larger scale.\nThis motivated a simple question:\nDoes the subordinate event generate the direction of change, or does it realize a direction defined by a larger organization?\nSimultaneous measurements of force and protein-switch distributions in active muscle motivated the second interpretation. The experimentally readable structural change tracked the distribution of switch states across a multiplicity landscape rather than the trajectory of an individually identifiable switch.\nIndividual molecular transitions remained necessary for contraction, but the ensemble relation—not the trajectory of one switch—was the structural quantity that changed with force and closure.\nThis suggested that mechanism and causal organization might not be identical.\nA molecular transition can describe how a structural change is realized without necessarily defining why that realization is favored.\nThe same distinction appears much more broadly in science.\nWhole-system relations have repeatedly been established before subordinate mechanisms were proposed to explain them. Kepler described orbital regularities before Newtonian dynamics. Carnot described cyclic thermal organization before microscopic theories of heat. Hill described reproducible relations among force, shortening, and heat before molecular models of contraction.\nThese histories do not prove that whole-system relations are causally primitive. They show that successful science does not require causal explanation to begin with the smallest readable object.\nBoltzmann introduced the deeper mathematical clue.\nStatistical mechanics relates macroscopic states to the number of microscopic realizations compatible with them. Multiplicity therefore determines the structure of the macroscopic state space.\nBut this creates a causal problem that is easy to overlook.\nMicroscopic transitions can move realization through that state space.\nThey cannot create the multiplicity of the states through which they move.\nThe formal R2D definitions make the distinction exact. Multiplicity is defined by the boundary-relative classification of compatible realizations and therefore cannot be generated by the particular transitions that subsequently realize it.\nThe enclosing-compatibility relation adds a second result: while the native local multiplicity landscape is held fixed, varying only compatible enclosing extension can create, cancel, or reverse the complete directional count relation between local alternatives.\nThe coin construction is an exact finite illustration of these general results. Individual coin transitions change realization and occupancy but cannot generate the ensemble multiplicity landscape.\nStatistical mechanics supplies the complementary empirical result. Local state occupancies respond reproducibly to enclosing conditions. Temperature, applied fields, chemical potential, pressure, mechanical constraint, and related relations alter which local states are preferentially realized.\nR2D therefore does not merely observe that statistical mechanics resembles a recursive count theory. It formally exposes the primitive count architecture beneath an empirically established statistical relation.\nThis produces the central causal proposal of R2D:\n\nThe enclosing relation defines the organization of local realization; subordinate transitions realize that organization.\n\nThe conventional mechanistic hierarchy commonly assigns the causal arrow in the opposite direction because the subordinate events are directly observable and necessary for the change.\nR2D distinguishes necessity for realization from causal priority.\nThat distinction motivates the recursive theory developed below."
+  },
+  {
+    "objectID": "understand/introduction.html#what-is-r2d",
+    "href": "understand/introduction.html#what-is-r2d",
+    "title": "Part I Introduction",
+    "section": "What Is R2D?",
+    "text": "What Is R2D?\nR2D is a theory of boundary-indexed recursive counting.\nA boundary is not necessarily a physical surface. It is the relation that defines a count domain.\nIt determines:\n\nwhich differences are distinguishable;\nwhich subordinate realizations are mutually compatible;\nwhich compatible realizations belong to the same readable state;\nand which completed local processes count as realizations of an enclosing occurrence.\n\nUnderstand boundaries →\nStatehood is therefore boundary relative.\nA state does not first exist independently and then acquire a boundary label. The boundary defines the count domain within which that state has meaning.\nWithin a boundary, R2D distinguishes three count structures that are often conflated.\nMultiplicity is possible count.\nIt is the number of compatible joint realizations classified as a distinguishable macrostate.\nOccurrence is realized count.\nIt counts realized instances within the specified count domain.\nOccupancy is realized structure.\nIt records how occurrence is distributed among the available macrostates.\nMultiplicity →\nOccupancy and occurrence →\nA formal microstate at boundary (B_n) is one compatible joint realization of the peer subordinate boundaries.\nA macrostate is the boundary-defined classification of such microstates.\nMultiplicity therefore belongs to the classification structure itself.\nThis distinction is central.\nA realized transition can change occurrence or occupancy. It does not thereby change the multiplicity of the macrostate being occupied.\nMacrostate and microstate →\nR2D uses possibility, (P), in a more specific across-boundary sense.\nPossibility does not mean local multiplicity itself. It is the logarithmic measure of how the realizations associated with a local state extend compatibly into the enclosing boundary.\nThus:\nmultiplicity describes how many local realizations belong to a state;\npossibility describes how those local realizations participate in enclosing realizations.\nUnequal enclosing extension gives local alternatives unequal directional possibility.\nProbability is subsequent to both. It is a normalized reading of possible or realized count, not the primitive source of those counts.\nPossibility →\nThe recursive architecture is not bottom-up construction.\nAn enclosing occurrence defines which joint peer realizations are compatible with it. The subordinate processes through which that occurrence is realized remain locally readable at their own boundaries.\nWhen a completed local realization is instead read from the enclosing boundary, its peer-specific path no longer retains the same count meaning.\nR2D calls this boundary-relative change in count meaning recursive carry.\nRecursive carry is not causal transport upward.\nIt is reclassification.\nThe causal and recursive relations therefore have different directions:\n\\[\n\\text{enclosing organization}\n\\rightarrow\n\\text{compatible local realization}\n\\]\nwhile\n\\[\n\\text{completed local realization}\n\\rightarrow\n\\text{new enclosing count meaning}.\n\\]\nThe first concerns causal definition.\nThe second concerns boundary-relative readout.\nRecursive replacement →\nRecursive carry →\nThis differs from ordinary coarse-graining.\nA subordinate state is not merely hidden while preserving an unchanged ontological identity.\nChanging the count boundary changes which distinctions define a state.\nA macrostate transition readable at one boundary can become a microstate transition relative to the next. A completed peer closure can remain consequential after boundary change while its internal path and source identity cease to be readable as the same objects.\nR2D is therefore not a theory in which larger things are constructed by adding smaller independently causal things.\nEnclosing boundaries define distinguishable wholes and the compatible subordinate realizations through which those wholes are locally realized.\nWhy R²D is not coarse-graining →\nScientific objecthood →"
+  },
+  {
+    "objectID": "understand/introduction.html#relation-to-existing-scale-dependent-frameworks",
+    "href": "understand/introduction.html#relation-to-existing-scale-dependent-frameworks",
+    "title": "Part I Introduction",
+    "section": "Relation to Existing Scale-Dependent Frameworks",
+    "text": "Relation to Existing Scale-Dependent Frameworks\nR2D is not the first framework to challenge the idea that one fixed set of microscopic variables provides the natural description of nature at every scale.\nRenormalization, effective field theory, and theories of emergence have already established that changing scale can change the variables, state descriptions, and mathematical relations through which a system is most naturally represented.\nKadanoff’s block-spin construction groups microscopic states and replaces them with collective variables at a larger scale. Wilson’s renormalization group made such transformations systematic. Effective field theory similarly shows that the degrees of freedom useful at one scale need not remain explicit at another.\nR2D belongs to this intellectual lineage, but makes a different and more primitive claim.\nRenormalization and effective theories ordinarily begin with a microscopic state description and ask how its effective representation changes with scale.\nR2D instead asks:\nWhat makes a state a microstate or a macrostate in the first place?\nIts answer is boundary relative.\nChanging the count boundary therefore changes not merely the resolution or effective parameters of a persistent state description, but the count domain relative to which state identity itself is defined.\nFor this reason, recursive replacement should not be identified with renormalization-group coarse-graining, even though renormalization provides an important mathematical precedent.\nThe proposed novelty of R2D is not the general observation that different scales require different descriptions.\nIt is the attempt to derive boundary-relative statehood, recursive replacement, and enclosing directional organization from one dimensionless theory of recursive counting."
+  },
+  {
+    "objectID": "understand/introduction.html#possibility-retention-and-the-direction-of-realization",
+    "href": "understand/introduction.html#possibility-retention-and-the-direction-of-realization",
+    "title": "Part I Introduction",
+    "section": "Possibility, Retention, and the Direction of Realization",
+    "text": "Possibility, Retention, and the Direction of Realization\nA local multiplicity landscape defines which states are possible.\nIt does not, by itself, determine which state will be preferentially realized.\nDirection requires an across-boundary relation.\nA local state can participate in many realizations of an enclosing whole. If two local alternatives possess equal enclosing compatibility, the enclosing boundary supplies no directional preference between them.\nIf their compatible enclosing extension differs, one alternative has greater enclosing count support.\nR2D calls the logarithmic difference in that enclosing compatibility directional possibility.\nEnclosing constraint supplies a second relation.\nIts productive component retains part of the directional possibility against local distinguishable change.\nThe resulting local asymmetry is\n\\[\n\\Delta A = \\Delta P - \\Delta R.\n\\]\nThis asymmetry biases how occurrence is expressed as occupancy.\nThe primitive causal sequence is therefore not an object being pushed through a pre-existing landscape by a subordinate mechanism.\nInstead:\nnative multiplicity defines the available local possibilities;\nenclosing compatibility defines their directional support;\nproductive constraint determines how much of that directional relation is retained;\nsubordinate occurrence realizes the resulting occupancy change.\nThis is the meaning of the phrase:\n\nPossibility pulls occupancy.\n\nPossibility →\nConstraint and retention →\nAsymmetry →\nThe same architecture applies to closure.\nA completed local path can return to its initial macrostate while the enclosing relation organizing the opposed legs does not return to the same condition.\nNative multiplicity can therefore close while enclosing possibility remains asymmetric.\nLocal closure does not imply enclosing reversal.\nAn enclosing occurrence defines the compatible local closures through which it is realized. Those closures do not independently accumulate upward to create the enclosing occurrence.\nAfter local completion, recursive carry changes how that realization is counted from the enclosing boundary.\nClosure →\nIrreversibility introduces another distinction.\nEven when native multiplicity closes exactly, opposed branches need not realize occurrence count with equal directional efficiency.\nR2D calls the resulting logarithmic nonreciprocity occurrence-count loss.\nNo count is destroyed.\nThe local state can return while realization around the cycle remains nonreciprocal.\nR2D’s proposed Second Law states that this nonreciprocity has a complementary enclosing reading as nondirectional background.\nThe R²D Second Law →\nThus, four relations that are often compressed into one causal narrative are separated:\n\nthe enclosing relation defines what is favored;\nthe subordinate structure determines how it is realized;\nrecursive carry determines how a completed realization is reclassified across boundaries;\nirreversibility determines whether opposed realizations are reciprocal."
+  },
+  {
+    "objectID": "understand/introduction.html#from-recursive-count-to-scientific-description",
+    "href": "understand/introduction.html#from-recursive-count-to-scientific-description",
+    "title": "Part I Introduction",
+    "section": "From Recursive Count to Scientific Description",
+    "text": "From Recursive Count to Scientific Description\nPart I develops this architecture before physical units are introduced.\nIt does not begin with energy, temperature, force, time, probability, matter, field, or spacetime.\nIt begins with:\n\ncount boundaries;\ncompatible realizations;\nmultiplicity;\nlogarithmic count difference;\noccurrence;\noccupancy;\nenclosing possibility;\nconstraint;\nclosure;\nand recursive carry.\n\nLater parts ask whether familiar scientific quantities can be recovered as boundary-specific physical readings of these relations.\nEntropy reads logarithmic multiplicity.\nWork is proposed to read distinguishability retained against productive constraint.\nHeat is proposed to read dissipative realization.\nPhysical time and rate are proposed to read recurrence relations among completed realizations.\nProbability reads normalized unresolved possibility.\nSpacetime is proposed to read recursive count geometry.\nThese mappings are not assumed in Part I.\nThey are the empirical and theoretical burden of the later program.\nThe claim is therefore not that all sciences study the same objects.\nThey do not.\nThe claim is that apparently different scientific objects may become countable through the same primitive operations.\n\nThe domain changes.\nThe units change.\nThe readable ontology changes.\nThe primitive count grammar does not.\n\nFrom count space to physical science →"
+  },
+  {
+    "objectID": "understand/introduction.html#scope-logical-status-and-empirical-burden",
+    "href": "understand/introduction.html#scope-logical-status-and-empirical-burden",
+    "title": "Part I Introduction",
+    "section": "Scope, Logical Status, and Empirical Burden",
+    "text": "Scope, Logical Status, and Empirical Burden\nPart I develops R2D as a theory of dimensionless recursive counting.\nIts claims do not all have the same logical status.\n\nMathematical and ontological structure\nOnce a count boundary, compatible realization domain, and classification rule are defined, multiplicity follows exactly.\nThe formalism establishes that subordinate realization cannot create the native multiplicity landscape while that boundary definition remains fixed.\nIt further establishes that local directional support depends separately on compatible enclosing extension.\nHolding the native local multiplicities fixed while varying enclosing compatibility can create, cancel, or reverse the complete directional count relation.\nThese are general results of the R2D framework.\nThe coin example supplies a transparent finite realization.\n\n\nEmpirical realization\nR2D makes additional postulates concerning:\n\nhow possible multiplicity is realized as occurrence and occupancy;\nhow asymmetry biases occupancy;\nhow finite closure produces directional occurrence-count efficiency;\nhow representative local closure geometry relates to an enclosing occurrence;\nand how local occurrence-count nonreciprocity is read at the enclosing boundary.\n\nThese propositions do not follow from combinatorics alone.\nThey must be tested.\n\n\nCausal ontology\nR2D does not merely remove causal sufficiency from the conventional bottom-up account.\nIt supplies a proposed replacement ontology:\nstates are boundary defined;\nmultiplicity belongs to that boundary-defined classification;\nenclosing compatibility defines directional support;\nsubordinate dynamics realize the resulting relation;\nrecursive carry reclassifies completed realization without constructing the enclosing occurrence from below.\nWhether this formal ontology describes nature is an empirical question.\nR2D would fail if independently determined enclosing compatibility did not correctly structure local directional possibility.\nIt would fail if native multiplicity did not structure occurrence as proposed, if local asymmetry failed to organize occupancy, if equivalent peers failed to share the required closure geometry, or if occurrence-count nonreciprocity failed to correspond to the proposed enclosing background relation.\nMore broadly, R2D would fail as a unifying framework if mappings to thermodynamics, quantum theory, gravity, biology, and other domains required mutually incompatible primitive count architectures.\nUniversality therefore does not weaken the empirical burden. It enlarges it.\nThe central questions of Part I are consequently:\n\nWhat boundary defines the count?\nWhat multiplicity defines the possible state?\nWhat enclosing relation favors one realization over another?\nHow is that relation realized locally?\nHow is a completed realization reclassified when the count boundary changes?\n\nAnd, beneath them all:\n\nHave we mistaken the mechanism that realizes a relation for the cause that organizes it?"
+  },
+  {
+    "objectID": "understand/introduction.html#continue-through-r2d",
+    "href": "understand/introduction.html#continue-through-r2d",
+    "title": "Part I Introduction",
+    "section": "Continue through R2D",
+    "text": "Continue through R2D\nCounting requires distinguishability →\nDefinitions & symbols →\nThe coins example →\nThe R²D law →"
   }
 ]

@@ -40,5 +40,17 @@
   },
   "about/publications.qmd": {
     "publications.html": "34725a92"
+  },
+  "about/authors.qmd": {
+    "authors.html": "13437a85"
+  },
+  "about/canon.qmd": {
+    "canon.html": "6b44ec0a"
+  },
+  "canon/index.qmd": {
+    "index.html": "eb0aaf0a"
+  },
+  "understand/introduction.qmd": {
+    "introduction.html": "45834393"
   }
 }

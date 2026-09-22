@@ -1,0 +1,505 @@
+---
+title: "Part I Introduction"
+subtitle: "A Theory of Dimensionless Recursive Counting"
+toc: true
+---
+
+The question is simple.
+
+**Why do we use additive mathematics to describe a universe within which distinguishable multiplicities compose multiplicatively?**
+
+Science starts with counting. But counting is usually introduced after the things being counted have already been defined. Once a set of objects and a count domain are given, addition is natural: one object plus another produces a larger count. However, that does not explain how a distinguishable whole arises from subordinate realizations.
+
+At every nonprimitive count boundary, a distinguishable state can be realized in multiple compatible ways by subordinate states. Mutually exclusive possibilities within one count domain add. Compatible possibilities that jointly realize a larger state multiply. Their logarithms transform that multiplicative structure into additive coordinates.
+
+The whole is therefore not primitively the arithmetic sum of its parts. It is the multiplicity of compatible ways in which subordinate distinctions can realize the whole. This distinction is familiar in statistical mechanics. A macrostate is not defined by adding its microstates. Its multiplicity counts how many microscopic realizations belong to it.
+
+Yet the causal interpretation of this structure has usually remained mechanistic: microscopic transitions are treated as the agents through which the system evolves toward macroscopic states of greater statistical weight.
+
+R<sup>2</sup>D separates two relations that this conventional interpretation joins.
+
+A subordinate transition can change which realization is occupied. It cannot create the multiplicity landscape within which that realization is classified.
+
+At a fixed boundary \(B_n\), the compatible formal microstate domain and its macrostate classification define
+
+$$
+W_{n,i} = \left| \pi_n^{-1}(i) \right|.
+$$
+
+Changing realization does not change this cardinality unless the boundary-defined count domain or classification itself changes.
+
+A second result follows from the enclosing compatibility relation. For two local alternatives, the complete compatible-count difference is determined jointly by native local multiplicity and the multiplicity of compatible enclosing extension. Because the enclosing extension relation can change while the native local landscape remains fixed, enclosing compatibility can create, cancel, or reverse the directional support of the local alternatives without changing their native multiplicities.
+
+These are general results of the R<sup>2</sup>D formal architecture.
+
+The [coin construction](coins.qmd) provides a finite exact realization of them. It makes visible, without energy, force, probability, or dynamics, both the invariance of local multiplicity under realization and the ability of enclosing compatibility to reverse local directional support.
+
+Statistical mechanics then supplies the empirical complement: changing enclosing thermal, chemical, mechanical, or field conditions changes the relative realization of local states.
+
+Together these results suggest a causal inversion:
+
+> **The enclosing relation organizes which realization is favored.  
+> The subordinate process determines how that realization occurs.**
+
+[Explore the causal inversion →](causal-inversion.qmd)
+
+## Multiplication Beneath Addition
+
+The relation
+
+$$
+S = \ln W
+$$
+
+is ordinarily introduced as an equation for entropy.
+
+R<sup>2</sup>D reads it first as a statement about counting.
+
+If compatible multiplicities compose,
+
+$$
+W_{\mathrm{joint}} = \prod_\alpha W_\alpha,
+$$
+
+then
+
+$$
+\ln W_{\mathrm{joint}}
+=
+\sum_\alpha \ln W_\alpha.
+$$
+
+Logarithmic addition is therefore the additive reading of multiplicative composition.
+
+This relationship is more primitive than any particular thermodynamic interpretation. Multiplication describes the number of compatible ways a joint realization can occur. The logarithm converts that multiplicative structure into an additive coordinate.
+
+The distinction matters because additive mathematics can describe a system with extraordinary precision while concealing the count structure beneath the coordinate.
+
+R<sup>2</sup>D does not reject additive mathematics. It asks what addition is measuring.
+
+At the primitive level, two operations are sufficient to generate much of the mathematical structure used later in science:
+
+**compatible possibilities multiply; mutually exclusive alternatives add.**
+
+Logarithms make the first readable through the second.
+
+Units can subsequently be assigned to these additive coordinates. Entropy, energy, chemical potential, action, frequency, probability, curvature, and other familiar quantities may then become measurable physical readings of relations that began as dimensionless count structure.
+
+**Science is not made of units. Science uses units to read primitive counts. R<sup>2</sup>D begins before units are assigned.**
+
+[Why the mathematics comes before units →](before-units.qmd)
+
+[Understand multiplicity →](multiplicity.qmd)
+
+## The Empirical and Conceptual Origins of R<sup>2</sup>D
+
+R<sup>2</sup>D originated in active muscle.
+
+A contracting muscle is a locally cycling system that converts an externally maintained asymmetry into force, shortening, heat, and structural change. The molecular transitions involved in contraction are themselves realized under chemical and mechanical conditions defined outside the individual molecular transition.
+
+Following the source of asymmetry repeatedly encounters another enclosing relation on a larger scale.
+
+This motivated a simple question:
+
+**Does the subordinate event generate the direction of change, or does it realize a direction defined by a larger organization?**
+
+Simultaneous measurements of force and protein-switch distributions in active muscle motivated the second interpretation. The experimentally readable structural change tracked the distribution of switch states across a multiplicity landscape rather than the trajectory of an individually identifiable switch.
+
+Individual molecular transitions remained necessary for contraction, but the ensemble relation—not the trajectory of one switch—was the structural quantity that changed with force and closure.
+
+This suggested that mechanism and causal organization might not be identical.
+
+A molecular transition can describe **how** a structural change is realized without necessarily defining **why** that realization is favored.
+
+The same distinction appears much more broadly in science.
+
+Whole-system relations have repeatedly been established before subordinate mechanisms were proposed to explain them. Kepler described orbital regularities before Newtonian dynamics. Carnot described cyclic thermal organization before microscopic theories of heat. Hill described reproducible relations among force, shortening, and heat before molecular models of contraction.
+
+These histories do not prove that whole-system relations are causally primitive. They show that successful science does not require causal explanation to begin with the smallest readable object.
+
+Boltzmann introduced the deeper mathematical clue.
+
+Statistical mechanics relates macroscopic states to the number of microscopic realizations compatible with them. Multiplicity therefore determines the structure of the macroscopic state space.
+
+But this creates a causal problem that is easy to overlook.
+
+Microscopic transitions can move realization through that state space.
+
+They cannot create the multiplicity of the states through which they move.
+
+The formal R<sup>2</sup>D definitions make the distinction exact. Multiplicity is defined by the boundary-relative classification of compatible realizations and therefore cannot be generated by the particular transitions that subsequently realize it.
+
+The enclosing-compatibility relation adds a second result: while the native local multiplicity landscape is held fixed, varying only compatible enclosing extension can create, cancel, or reverse the complete directional count relation between local alternatives.
+
+The coin construction is an exact finite illustration of these general results. Individual coin transitions change realization and occupancy but cannot generate the ensemble multiplicity landscape.
+
+Statistical mechanics supplies the complementary empirical result. Local state occupancies respond reproducibly to enclosing conditions. Temperature, applied fields, chemical potential, pressure, mechanical constraint, and related relations alter which local states are preferentially realized.
+
+R<sup>2</sup>D therefore does not merely observe that statistical mechanics resembles a recursive count theory. It formally exposes the primitive count architecture beneath an empirically established statistical relation.
+
+This produces the central causal proposal of R<sup>2</sup>D:
+
+> **The enclosing relation defines the organization of local realization; subordinate transitions realize that organization.**
+
+The conventional mechanistic hierarchy commonly assigns the causal arrow in the opposite direction because the subordinate events are directly observable and necessary for the change.
+
+R<sup>2</sup>D distinguishes **necessity for realization** from **causal priority**.
+
+That distinction motivates the recursive theory developed below.
+
+## What Is R<sup>2</sup>D?
+
+R<sup>2</sup>D is a theory of **boundary-indexed recursive counting**.
+
+A boundary is not necessarily a physical surface. It is the relation that defines a count domain.
+
+It determines:
+
+- which differences are distinguishable;
+- which subordinate realizations are mutually compatible;
+- which compatible realizations belong to the same readable state;
+- and which completed local processes count as realizations of an enclosing occurrence.
+
+[Understand boundaries →](boundaries.qmd)
+
+Statehood is therefore boundary relative.
+
+A state does not first exist independently and then acquire a boundary label. The boundary defines the count domain within which that state has meaning.
+
+Within a boundary, R<sup>2</sup>D distinguishes three count structures that are often conflated.
+
+**Multiplicity is possible count.**  
+It is the number of compatible joint realizations classified as a distinguishable macrostate.
+
+**Occurrence is realized count.**  
+It counts realized instances within the specified count domain.
+
+**Occupancy is realized structure.**  
+It records how occurrence is distributed among the available macrostates.
+
+[Multiplicity →](multiplicity.qmd)
+
+[Occupancy and occurrence →](occupancy-occurrence.qmd)
+
+A formal microstate at boundary \(B_n\) is one compatible joint realization of the peer subordinate boundaries.
+
+A macrostate is the boundary-defined classification of such microstates.
+
+Multiplicity therefore belongs to the classification structure itself.
+
+This distinction is central.
+
+A realized transition can change occurrence or occupancy. It does not thereby change the multiplicity of the macrostate being occupied.
+
+[Macrostate and microstate →](macrostate-microstate.qmd)
+
+R<sup>2</sup>D uses possibility, \(P\), in a more specific across-boundary sense.
+
+Possibility does not mean local multiplicity itself. It is the logarithmic measure of how the realizations associated with a local state extend compatibly into the enclosing boundary.
+
+Thus:
+
+**multiplicity describes how many local realizations belong to a state;**
+
+**possibility describes how those local realizations participate in enclosing realizations.**
+
+Unequal enclosing extension gives local alternatives unequal directional possibility.
+
+Probability is subsequent to both. It is a normalized reading of possible or realized count, not the primitive source of those counts.
+
+[Possibility →](possibility.qmd)
+
+The recursive architecture is not bottom-up construction.
+
+An enclosing occurrence defines which joint peer realizations are compatible with it. The subordinate processes through which that occurrence is realized remain locally readable at their own boundaries.
+
+When a completed local realization is instead read from the enclosing boundary, its peer-specific path no longer retains the same count meaning.
+
+R<sup>2</sup>D calls this boundary-relative change in count meaning **recursive carry**.
+
+Recursive carry is not causal transport upward.
+
+It is reclassification.
+
+The causal and recursive relations therefore have different directions:
+
+$$
+\text{enclosing organization}
+\rightarrow
+\text{compatible local realization}
+$$
+
+while
+
+$$
+\text{completed local realization}
+\rightarrow
+\text{new enclosing count meaning}.
+$$
+
+The first concerns causal definition.
+
+The second concerns boundary-relative readout.
+
+[Recursive replacement →](recursive-replacement.qmd)
+
+[Recursive carry →](recursive-carry.qmd)
+
+This differs from ordinary coarse-graining.
+
+A subordinate state is not merely hidden while preserving an unchanged ontological identity.
+
+Changing the count boundary changes which distinctions define a state.
+
+A macrostate transition readable at one boundary can become a microstate transition relative to the next. A completed peer closure can remain consequential after boundary change while its internal path and source identity cease to be readable as the same objects.
+
+R<sup>2</sup>D is therefore not a theory in which larger things are constructed by adding smaller independently causal things.
+
+Enclosing boundaries define distinguishable wholes and the compatible subordinate realizations through which those wholes are locally realized.
+
+[Why R²D is not coarse-graining →](not-coarse-graining.qmd)
+
+[Scientific objecthood →](scientific-objecthood.qmd)
+
+## Relation to Existing Scale-Dependent Frameworks
+
+R<sup>2</sup>D is not the first framework to challenge the idea that one fixed set of microscopic variables provides the natural description of nature at every scale.
+
+Renormalization, effective field theory, and theories of emergence have already established that changing scale can change the variables, state descriptions, and mathematical relations through which a system is most naturally represented.
+
+Kadanoff's block-spin construction groups microscopic states and replaces them with collective variables at a larger scale. Wilson's renormalization group made such transformations systematic. Effective field theory similarly shows that the degrees of freedom useful at one scale need not remain explicit at another.
+
+R<sup>2</sup>D belongs to this intellectual lineage, but makes a different and more primitive claim.
+
+Renormalization and effective theories ordinarily begin with a microscopic state description and ask how its effective representation changes with scale.
+
+R<sup>2</sup>D instead asks:
+
+**What makes a state a microstate or a macrostate in the first place?**
+
+Its answer is boundary relative.
+
+Changing the count boundary therefore changes not merely the resolution or effective parameters of a persistent state description, but the count domain relative to which state identity itself is defined.
+
+For this reason, recursive replacement should not be identified with renormalization-group coarse-graining, even though renormalization provides an important mathematical precedent.
+
+The proposed novelty of R<sup>2</sup>D is not the general observation that different scales require different descriptions.
+
+It is the attempt to derive **boundary-relative statehood, recursive replacement, and enclosing directional organization from one dimensionless theory of recursive counting.**
+
+## Possibility, Retention, and the Direction of Realization
+
+A local multiplicity landscape defines which states are possible.
+
+It does not, by itself, determine which state will be preferentially realized.
+
+Direction requires an across-boundary relation.
+
+A local state can participate in many realizations of an enclosing whole. If two local alternatives possess equal enclosing compatibility, the enclosing boundary supplies no directional preference between them.
+
+If their compatible enclosing extension differs, one alternative has greater enclosing count support.
+
+R<sup>2</sup>D calls the logarithmic difference in that enclosing compatibility **directional possibility**.
+
+Enclosing constraint supplies a second relation.
+
+Its productive component retains part of the directional possibility against local distinguishable change.
+
+The resulting local asymmetry is
+
+$$
+\Delta A = \Delta P - \Delta R.
+$$
+
+This asymmetry biases how occurrence is expressed as occupancy.
+
+The primitive causal sequence is therefore not an object being pushed through a pre-existing landscape by a subordinate mechanism.
+
+Instead:
+
+**native multiplicity defines the available local possibilities;**
+
+**enclosing compatibility defines their directional support;**
+
+**productive constraint determines how much of that directional relation is retained;**
+
+**subordinate occurrence realizes the resulting occupancy change.**
+
+This is the meaning of the phrase:
+
+> **Possibility pulls occupancy.**
+
+[Possibility →](possibility.qmd)
+
+[Constraint and retention →](constraint-retention.qmd)
+
+[Asymmetry →](asymmetry.qmd)
+
+The same architecture applies to closure.
+
+A completed local path can return to its initial macrostate while the enclosing relation organizing the opposed legs does not return to the same condition.
+
+Native multiplicity can therefore close while enclosing possibility remains asymmetric.
+
+Local closure does not imply enclosing reversal.
+
+An enclosing occurrence defines the compatible local closures through which it is realized. Those closures do not independently accumulate upward to create the enclosing occurrence.
+
+After local completion, recursive carry changes how that realization is counted from the enclosing boundary.
+
+[Closure →](closure.qmd)
+
+Irreversibility introduces another distinction.
+
+Even when native multiplicity closes exactly, opposed branches need not realize occurrence count with equal directional efficiency.
+
+R<sup>2</sup>D calls the resulting logarithmic nonreciprocity **occurrence-count loss**.
+
+No count is destroyed.
+
+The local state can return while realization around the cycle remains nonreciprocal.
+
+R<sup>2</sup>D's proposed Second Law states that this nonreciprocity has a complementary enclosing reading as nondirectional background.
+
+[The R²D Second Law →](second-law.qmd)
+
+Thus, four relations that are often compressed into one causal narrative are separated:
+
+1. the enclosing relation defines what is favored;
+2. the subordinate structure determines how it is realized;
+3. recursive carry determines how a completed realization is reclassified across boundaries;
+4. irreversibility determines whether opposed realizations are reciprocal.
+
+## From Recursive Count to Scientific Description
+
+Part I develops this architecture before physical units are introduced.
+
+It does not begin with energy, temperature, force, time, probability, matter, field, or spacetime.
+
+It begins with:
+
+- count boundaries;
+- compatible realizations;
+- multiplicity;
+- logarithmic count difference;
+- occurrence;
+- occupancy;
+- enclosing possibility;
+- constraint;
+- closure;
+- and recursive carry.
+
+Later parts ask whether familiar scientific quantities can be recovered as boundary-specific physical readings of these relations.
+
+Entropy reads logarithmic multiplicity.
+
+Work is proposed to read distinguishability retained against productive constraint.
+
+Heat is proposed to read dissipative realization.
+
+Physical time and rate are proposed to read recurrence relations among completed realizations.
+
+Probability reads normalized unresolved possibility.
+
+Spacetime is proposed to read recursive count geometry.
+
+These mappings are **not assumed in Part I**.
+
+They are the empirical and theoretical burden of the later program.
+
+The claim is therefore not that all sciences study the same objects.
+
+They do not.
+
+The claim is that apparently different scientific objects may become countable through the same primitive operations.
+
+> **The domain changes.  
+> The units change.  
+> The readable ontology changes.  
+> The primitive count grammar does not.**
+
+[From count space to physical science →](from-count-to-physics.qmd)
+
+## Scope, Logical Status, and Empirical Burden
+
+Part I develops R<sup>2</sup>D as a theory of dimensionless recursive counting.
+
+Its claims do not all have the same logical status.
+
+### Mathematical and ontological structure
+
+Once a count boundary, compatible realization domain, and classification rule are defined, multiplicity follows exactly.
+
+The formalism establishes that subordinate realization cannot create the native multiplicity landscape while that boundary definition remains fixed.
+
+It further establishes that local directional support depends separately on compatible enclosing extension.
+
+Holding the native local multiplicities fixed while varying enclosing compatibility can create, cancel, or reverse the complete directional count relation.
+
+These are general results of the R<sup>2</sup>D framework.
+
+The [coin example](coins.qmd) supplies a transparent finite realization.
+
+### Empirical realization
+
+R<sup>2</sup>D makes additional postulates concerning:
+
+- how possible multiplicity is realized as occurrence and occupancy;
+- how asymmetry biases occupancy;
+- how finite closure produces directional occurrence-count efficiency;
+- how representative local closure geometry relates to an enclosing occurrence;
+- and how local occurrence-count nonreciprocity is read at the enclosing boundary.
+
+These propositions do not follow from combinatorics alone.
+
+They must be tested.
+
+### Causal ontology
+
+R<sup>2</sup>D does not merely remove causal sufficiency from the conventional bottom-up account.
+
+It supplies a proposed replacement ontology:
+
+**states are boundary defined;**
+
+**multiplicity belongs to that boundary-defined classification;**
+
+**enclosing compatibility defines directional support;**
+
+**subordinate dynamics realize the resulting relation;**
+
+**recursive carry reclassifies completed realization without constructing the enclosing occurrence from below.**
+
+Whether this formal ontology describes nature is an empirical question.
+
+R<sup>2</sup>D would fail if independently determined enclosing compatibility did not correctly structure local directional possibility.
+
+It would fail if native multiplicity did not structure occurrence as proposed, if local asymmetry failed to organize occupancy, if equivalent peers failed to share the required closure geometry, or if occurrence-count nonreciprocity failed to correspond to the proposed enclosing background relation.
+
+More broadly, R<sup>2</sup>D would fail as a unifying framework if mappings to thermodynamics, quantum theory, gravity, biology, and other domains required mutually incompatible primitive count architectures.
+
+**Universality therefore does not weaken the empirical burden. It enlarges it.**
+
+The central questions of Part I are consequently:
+
+- **What boundary defines the count?**
+- **What multiplicity defines the possible state?**
+- **What enclosing relation favors one realization over another?**
+- **How is that relation realized locally?**
+- **How is a completed realization reclassified when the count boundary changes?**
+
+And, beneath them all:
+
+> **Have we mistaken the mechanism that realizes a relation for the cause that organizes it?**
+
+---
+
+## Continue through R<sup>2</sup>D
+
+[Counting requires distinguishability →](counting.qmd)
+
+[Definitions & symbols →](definitions.qmd)
+
+[The coins example →](coins.qmd)
+
+[The R²D law →](r2d-law.qmd)
