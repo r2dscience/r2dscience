@@ -1,0 +1,1112 @@
+---
+title: "Before Units"
+subtitle: "The primitive mathematics is dimensionless"
+toc: true
+---
+
+# Before Units
+
+Science measures almost everything with units.
+
+Distance is measured in meters.
+
+Time is measured in seconds.
+
+Energy is measured in joules.
+
+Force is measured in newtons.
+
+Temperature is measured in kelvin.
+
+But before any of those measurements can be made, something must already be
+distinguishable enough to measure.
+
+R<sup>2</sup>D begins there.
+
+> **Science is not made of units.  
+> Science uses units to read primitive counts.**
+
+The primitive R<sup>2</sup>D architecture is therefore dimensionless.
+
+Units come later.
+
+## A Measurement Requires Something to Measure
+
+Suppose we measure a distance.
+
+Before assigning meters, two distinguishable positions must already exist.
+
+Suppose we measure a recurrence rate.
+
+Before assigning inverse seconds, some recurrence must already be countable.
+
+Suppose we measure an energy difference.
+
+Before assigning joules, distinguishable states and a relation between them
+must already have been defined.
+
+Thus the logical order cannot begin with the unit.
+
+It must begin with the distinction.
+
+Schematically:
+
+$$
+\boxed{
+\text{distinction}
+\rightarrow
+\text{count relation}
+\rightarrow
+\text{physical coordinate}
+\rightarrow
+\text{unit}.
+}
+$$
+
+R<sup>2</sup>D develops the first two steps before introducing the last two.
+
+## Counting Is Dimensionless
+
+A count does not require a physical unit.
+
+If a macrostate has
+
+$$
+W_{n,i}=120
+$$
+
+compatible realizations, the number
+
+$$
+120
+$$
+
+is simply a count.
+
+It is not
+
+$$
+120\ \mathrm{J},
+$$
+
+or
+
+$$
+120\ \mathrm{m},
+$$
+
+or
+
+$$
+120\ \mathrm{s}.
+$$
+
+Likewise, a ratio of counts is dimensionless.
+
+For example,
+
+$$
+\frac{W_{n,k}}{W_{n,i}}
+$$
+
+has no physical unit.
+
+And therefore its logarithm
+
+$$
+\ln
+\left(
+\frac{W_{n,k}}{W_{n,i}}
+\right)
+$$
+
+is dimensionless as well.
+
+This gives R<sup>2</sup>D a mathematical language before physical
+dimensionalization.
+
+## Multiplicity Comes Before Entropy Units
+
+For macrostate \(i\),
+
+$$
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+$$
+
+R<sup>2</sup>D defines its logarithmic multiplicity coordinate as
+
+$$
+\boxed{
+S_{n,i}
+=
+\ln W_{n,i}.
+}
+$$
+
+At this stage,
+
+$$
+S_{n,i}
+$$
+
+is dimensionless.
+
+It is not yet thermodynamic entropy in units such as
+
+$$
+\mathrm{J\,K^{-1}}.
+$$
+
+The primitive relation is simply
+
+$$
+\boxed{
+W
+\longleftrightarrow
+\ln W.
+}
+$$
+
+Thermodynamic dimensionalization comes later.
+
+[Multiplicity →](multiplicity.qmd)
+
+## Why the Logarithm Appears
+
+Suppose compatible possibilities compose multiplicatively:
+
+$$
+W_{\mathrm{whole}}
+=
+\prod_\alpha W_\alpha.
+$$
+
+Taking the logarithm gives
+
+$$
+\boxed{
+\ln W_{\mathrm{whole}}
+=
+\sum_\alpha
+\ln W_\alpha.
+}
+$$
+
+Thus multiplication of compatible possibilities becomes addition in
+logarithmic coordinates.
+
+This relationship exists before any physical unit is introduced.
+
+The logarithm is not creating the multiplicity.
+
+It is providing an additive coordinate for multiplicative count structure.
+
+Conversely,
+
+$$
+\boxed{
+W=e^S
+}
+$$
+
+recovers the multiplicity from its logarithmic coordinate.
+
+> **Multiplicity is primitive.  
+> The logarithm is its additive reading.**
+
+## Addition Can Hide Multiplication
+
+Much of science is written in additive coordinates.
+
+Energy differences add.
+
+Entropy changes add.
+
+Actions add.
+
+Potentials add.
+
+But R<sup>2</sup>D asks whether some of those additive structures are
+physical readings of a deeper multiplicative count architecture.
+
+At the primitive count level:
+
+$$
+\boxed{
+\text{compatible possibilities multiply}
+}
+$$
+
+while
+
+$$
+\boxed{
+\text{mutually exclusive alternatives add}.
+}
+$$
+
+Logarithms make multiplicative composition readable through addition.
+
+This is why R<sup>2</sup>D begins beneath the physical units attached to the
+additive coordinates.
+
+## Dimensionless Does Not Mean Unphysical
+
+Calling the primitive structure dimensionless does not mean calling it
+abstract in the sense of physically irrelevant.
+
+R<sup>2</sup>D makes a stronger proposal.
+
+The dimensionless relation is the structure that exists **before a particular
+physical coordinate system has been assigned to it**.
+
+Thus:
+
+$$
+\boxed{
+\text{dimensionless}
+\neq
+\text{physically meaningless}.
+}
+$$
+
+Instead:
+
+$$
+\boxed{
+\text{dimensionless}
+=
+\text{not yet assigned a domain-specific physical unit}.
+}
+$$
+
+A later physical theory can provide that read.
+
+## The Boundary Comes Before the Ruler
+
+A boundary defines which differences count as distinctions.
+
+Only after those distinctions are defined can a ruler be assigned.
+
+Thus:
+
+$$
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinguishability}
+\rightarrow
+\text{physical ruler}.
+}
+$$
+
+R<sup>2</sup>D does not begin with a universal ruler and then ask what objects
+fit inside it.
+
+It begins with the count boundary and asks which physical coordinate makes
+that relation readable in a particular domain.
+
+[Scientific Objecthood →](scientific-objecthood.qmd)
+
+## Distinguishability Is Not Yet Length
+
+For a readable transition
+
+$$
+i\rightarrow k,
+$$
+
+R<sup>2</sup>D defines a distinguishable interval
+
+$$
+\lambda_{n,i\rightarrow k}.
+$$
+
+At the primitive level,
+
+$$
+\lambda
+$$
+
+is not necessarily a spatial displacement.
+
+It records the readable distinguishable interval between states.
+
+A later physical mapping might assign a spatial, mechanical, chemical, or
+other physical coordinate to that distinction.
+
+But Part I does not assume which one.
+
+Thus:
+
+$$
+\boxed{
+\lambda
+\neq
+\text{primitive length}.
+}
+$$
+
+Length can be one physical read of distinguishability.
+
+## Recurrence Is Not Yet Time
+
+Likewise, R<sup>2</sup>D defines completed recurrence before introducing a
+clock.
+
+For adjacent boundaries,
+
+$$
+\rho_{n+1|n,\alpha}
+=
+\frac{
+N_{\mathcal D_R}(\chi_{n+1})
+}{
+N_{\mathcal D_R}(\mathcal C_{n,\alpha})
+}.
+$$
+
+This is a ratio of completed recurrence counts.
+
+It has no unit of seconds.
+
+It has no unit of hertz.
+
+It is dimensionless.
+
+Only later can a physical system test whether this count relation can be
+read as a ratio of physical rates.
+
+Thus:
+
+$$
+\boxed{
+\text{recurrence}
+\rightarrow
+\text{possible physical time or rate read}.
+}
+$$
+
+Not:
+
+$$
+\text{time}
+\rightarrow
+\text{recurrence}.
+$$
+
+[Recurrence →](recurrence.qmd)
+
+## Space and Time Therefore Come Later
+
+This produces one of the stronger claims of Part I.
+
+Boundaries, multiplicities, occurrences, occupancies, closures, and
+recurrences can all be defined without assuming a pre-existing spacetime.
+
+Therefore R<sup>2</sup>D does not place its count architecture inside a
+primitive space-time container.
+
+Instead, it asks whether spatial and temporal coordinates are later physical
+readings of relations that have already been defined.
+
+Schematically:
+
+$$
+\boxed{
+\text{distinguishability}
+\rightarrow
+\text{spatial read}
+}
+$$
+
+and
+
+$$
+\boxed{
+\text{recurrence}
+\rightarrow
+\text{temporal or rate read}.
+}
+$$
+
+These mappings are later physical hypotheses.
+
+They are not assumptions required to construct Part I.
+
+## R<sup>2</sup>D Does Not Reject Continuous Mathematics
+
+Beginning from discrete count does not mean rejecting calculus or continuous
+coordinates.
+
+A continuous coordinate can provide an extremely accurate representation of
+large numbers of unresolved count relations.
+
+R<sup>2</sup>D therefore distinguishes:
+
+$$
+\boxed{
+\text{primitive count structure}
+}
+$$
+
+from
+
+$$
+\boxed{
+\text{continuous physical representation}.
+}
+$$
+
+The success of calculus does not require the primitive ontology itself to
+begin as a continuously divisible coordinate system.
+
+Continuous mathematics can remain an exact or extraordinarily accurate read
+of recursively organized count.
+
+## Physical Coordinates Can Compress Count Structure
+
+Imagine a very large number of small distinguishable changes.
+
+Resolving every individual count may be unnecessary or impossible.
+
+A smooth coordinate can represent their collective relation.
+
+Thus:
+
+$$
+\boxed{
+\text{many unresolved count relations}
+\rightarrow
+\text{continuous readable coordinate}.
+}
+$$
+
+This does not make the continuous description false.
+
+It identifies the logical level at which it appears.
+
+The physical coordinate is a representation of already-organized
+distinguishability.
+
+## Probability Also Comes Later
+
+Probability offers another example.
+
+Multiplicity is possible count:
+
+$$
+W_{n,i}.
+$$
+
+A probability can be formed only after a total count domain has been chosen.
+
+For example,
+
+$$
+\boxed{
+p_{n,i}
+=
+\frac{
+W_{n,i}
+}{
+\sum_j W_{n,j}
+}.
+}
+$$
+
+The normalization does not create the possible states.
+
+It reads their relative multiplicities fractionally.
+
+Likewise, an observed occupancy fraction might be
+
+$$
+p_{n,i}^{\mathrm{obs}}
+=
+\frac{
+c_{n,i}
+}{
+\sum_j c_{n,j}
+}.
+$$
+
+Again, the probability is constructed after the count structure exists.
+
+Thus:
+
+> **Possible count comes before probability.**
+
+[Occupancy and Occurrence →](occupancy-occurrence.qmd)
+
+## Probability Is Not Possibility
+
+R<sup>2</sup>D possibility is
+
+$$
+P_{n,i}
+=
+\ln
+\left(
+\frac{
+\Theta_{n+1|n,i}
+}{
+W_{n,i}
+}
+\right).
+$$
+
+This measures compatible enclosing extension.
+
+Probability is a normalized reading of count.
+
+Therefore:
+
+$$
+\boxed{
+P
+\neq
+p.
+}
+$$
+
+Possibility belongs to the recursive count architecture.
+
+Probability appears only after a count domain is normalized.
+
+This distinction is important because R<sup>2</sup>D does not need
+probability to define direction.
+
+[Possibility →](possibility.qmd)
+
+## Energy Also Comes Later
+
+The same logic applies to energy.
+
+Before assigning an energy difference to two states, the states themselves
+must already be distinguishable.
+
+Thus the logical order is
+
+$$
+\boxed{
+\text{state distinction}
+\rightarrow
+\text{count relation}
+\rightarrow
+\text{energetic read}.
+}
+$$
+
+R<sup>2</sup>D does not deny energy.
+
+It places energy downstream of a dimensionless state architecture.
+
+In Part II, thermodynamics supplies some of the strongest physical
+calibrations of this idea.
+
+But the primitive count relation exists before the energetic units are
+attached.
+
+## Force Also Comes Later
+
+The local retention relation is
+
+$$
+\Delta R
+=
+C^{\mathrm{out}}\lambda.
+$$
+
+Neither
+
+$$
+C
+$$
+
+nor
+
+$$
+\lambda
+$$
+
+is primitively mechanical.
+
+In a mechanical system, a physical mapping may make the product resemble a
+familiar force-displacement relation.
+
+But that physical interpretation comes after the abstract relation has been
+defined.
+
+Thus:
+
+$$
+\boxed{
+C
+\neq
+\text{primitive force}
+}
+$$
+
+and
+
+$$
+\boxed{
+\lambda
+\neq
+\text{primitive displacement}.
+}
+$$
+
+[Constraint and Retention →](constraint-retention.qmd)
+
+## The R<sup>2</sup>D Law Is Dimensionless First
+
+The R<sup>2</sup>D law is
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+$$
+
+Every quantity is defined as part of the dimensionless count architecture.
+
+No joules are required.
+
+No meters are required.
+
+No seconds are required.
+
+No kelvin are required.
+
+This is deliberate.
+
+Only after a physical domain supplies appropriate mappings can the equation
+acquire familiar unit-bearing coordinates.
+
+[The R²D Law →](r2d-law.qmd)
+
+## Dimensionalization Is a Physical Mapping
+
+The general logic is
+
+$$
+\boxed{
+\text{dimensionless count relation}
+\rightarrow
+\text{domain-specific physical read}.
+}
+$$
+
+For example, a domain may provide a physical read of:
+
+$$
+S
+$$
+
+as an entropy coordinate,
+
+$$
+\lambda
+$$
+
+as a spatial or mechanical distinction,
+
+$$
+\rho
+$$
+
+as a rate relation,
+
+or
+
+$$
+C\lambda
+$$
+
+as a constrained physical quantity.
+
+But those mappings must be established.
+
+They cannot simply be assumed because the symbols resemble familiar physical
+variables.
+
+## The Mapping Must Preserve the Count Relation
+
+A valid physical dimensionalization must preserve the underlying structure.
+
+If two physical quantities are proposed as reads of two R<sup>2</sup>D
+coordinates, their measured relation must reproduce the primitive count
+relation.
+
+This gives the mapping empirical content.
+
+The procedure is not:
+
+$$
+\text{choose familiar equation}
+\rightarrow
+\text{rename its terms R²D}.
+$$
+
+It is:
+
+$$
+\boxed{
+\text{define count relation}
+\rightarrow
+\text{identify physical reads}
+\rightarrow
+\text{test the mapping}.
+}
+$$
+
+That order is fundamental to the R<sup>2</sup>D program.
+
+## Physical Constants Can Enter at the Mapping
+
+A dimensionless relation and a dimensional physical relation cannot be
+identified without a calibration.
+
+Physical constants can participate in that calibration.
+
+For example, conventional thermodynamics relates logarithmic multiplicity to
+unit-bearing entropy through a dimensional factor.
+
+R<sup>2</sup>D separates the two levels:
+
+$$
+\boxed{
+\ln W
+}
+$$
+
+is the primitive count coordinate,
+
+while the physically calibrated thermodynamic quantity appears only after
+the relevant dimensional mapping is supplied.
+
+The constant belongs to the physical read.
+
+The count comes first.
+
+## Units Are Boundary-Specific Reads
+
+Different scientific boundaries can assign different physical meanings to
+the same primitive type of count relation.
+
+A distinguishability relation might receive one physical read in mechanics
+and another in chemistry.
+
+A recurrence relation might receive one read in spectroscopy and another in
+biological kinetics.
+
+The primitive grammar does not require the units to be identical.
+
+Thus:
+
+$$
+\boxed{
+\text{common count architecture}
+\not\Rightarrow
+\text{common physical unit}.
+}
+$$
+
+This is a central reason R<sup>2</sup>D can compare different scientific
+domains without forcing them into one pre-existing coordinate system.
+
+## Different Units Can Describe Different Readability Regimes
+
+The physical vocabulary appropriate to a system depends on what remains
+readable from the relevant boundary.
+
+One domain may make recurrence especially accessible.
+
+Another may make geometric distinguishability especially accessible.
+
+Another may allow both to be jointly read.
+
+The physical units and variables can therefore differ dramatically even
+when the underlying count grammar is related.
+
+This is the basis for the later R<sup>2</sup>D readability program.
+
+## Unification Before Units
+
+This changes the meaning of scientific unification.
+
+A conventional unification program often attempts to reconcile quantities
+that already carry physical meanings:
+
+- mass;
+- charge;
+- energy;
+- field;
+- spacetime;
+- curvature;
+- frequency.
+
+R<sup>2</sup>D asks whether that begins too late.
+
+Once those quantities have units, much of the boundary-specific projection
+has already occurred.
+
+The proposed common structure may lie beneath them.
+
+Thus:
+
+> **R<sup>2</sup>D does not first try to put every science into one unit
+> system.**
+
+> **It asks whether they share one dimensionless count grammar before their
+> units diverge.**
+
+This is **unification before units**.
+
+## Unification Does Not Mean One Universal Ruler
+
+R<sup>2</sup>D therefore does not require one primitive spatial ruler.
+
+It does not require one primitive energetic coordinate.
+
+It does not require one universal clock already present beneath every
+scientific domain.
+
+The proposed invariant is earlier:
+
+$$
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinction}
+\rightarrow
+\text{multiplicity}
+\rightarrow
+\text{realization}
+\rightarrow
+\text{closure}
+\rightarrow
+\text{recurrence}.
+}
+$$
+
+Physical rulers are assigned afterward.
+
+## Why This Matters for Scientific Objecthood
+
+This connects directly to boundary-relative objects.
+
+An object must be distinguishable before physical properties can be assigned
+to it.
+
+Thus:
+
+$$
+\boxed{
+\text{objecthood}
+\rightarrow
+\text{physical measurement}.
+}
+$$
+
+The meter does not create the object.
+
+The joule does not create the state.
+
+The second does not create the recurrence.
+
+The probability does not create the possible count.
+
+The units tell us how an already-defined relation is physically readable.
+
+[Scientific Objecthood →](scientific-objecthood.qmd)
+
+## The Primitive Mathematics Is the Common Layer
+
+By this stage, R<sup>2</sup>D has defined without physical units:
+
+$$
+B_n
+$$
+
+for the count boundary,
+
+$$
+W_{n,i}
+$$
+
+for multiplicity,
+
+$$
+S_{n,i}
+=
+\ln W_{n,i}
+$$
+
+for logarithmic multiplicity,
+
+$$
+\nu_{n,i}
+$$
+
+for occurrence count,
+
+$$
+c_{n,i}
+$$
+
+for occupancy,
+
+$$
+P_{n,i}
+$$
+
+for compatible enclosing possibility,
+
+$$
+C_{n+1}
+$$
+
+for enclosing constraint,
+
+$$
+\lambda_n
+$$
+
+for distinguishability,
+
+$$
+\mathcal C_n
+$$
+
+for closure,
+
+and
+
+$$
+\rho_{n+1|n}
+$$
+
+for relative recurrence.
+
+The physical sciences can then ask how these relations become readable
+through their own coordinates.
+
+## What Part I Does — and Does Not — Establish
+
+Part I establishes the dimensionless architecture.
+
+It does **not** automatically establish every proposed physical mapping.
+
+It does not prove merely from notation that
+
+$$
+\lambda
+$$
+
+must be physical length,
+
+that
+
+$$
+\rho
+$$
+
+must be physical frequency,
+
+or that any particular physical energy must equal a chosen count coordinate.
+
+Those are mapping questions.
+
+They require empirical and mathematical justification in the later program.
+
+This distinction protects the direction of the argument:
+
+> **First define the mathematics.  
+> Then test how physics reads it.**
+
+## The Architecture in One View
+
+The R<sup>2</sup>D ordering can be summarized as
+
+$$
+\boxed{
+\begin{array}{c}
+\text{boundary}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{distinguishable states}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{dimensionless multiplicity}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{occurrence and occupancy}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{closure and recurrence}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{recursive count relation}
+\\[8pt]
+\Downarrow
+\\[8pt]
+\text{physical dimensionalization}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{meters, seconds, joules, kelvin, volts, pascals, \ldots}
+\end{array}
+}
+$$
+
+The unit-bearing world appears at the end of the sequence, not the beginning.
+
+## The Key Distinction
+
+The simplest summary is:
+
+> **A unit measures a relation.  
+> It does not create the relation being measured.**
+
+> **A physical coordinate makes recursive count readable in a particular
+> domain.  
+> It does not have to be primitive to that count.**
+
+> **R<sup>2</sup>D therefore defines the common mathematics before assigning
+> the units through which different sciences read it.**
+
+Or, more compactly:
+
+> **Science uses units to read primitive counts.  
+> R<sup>2</sup>D begins before units are assigned.**
+
+The next step is to ask how this dimensionless count architecture acquires
+the familiar physical quantities used by science.
+
+---
+
+## Next
+
+[From Count to Physical Science →](from-count-to-physics.qmd)
+
+[Scientific Objecthood →](scientific-objecthood.qmd)
+
+[The R²D Law →](r2d-law.qmd)
+
+[Back to Understand R²D →](index.qmd)

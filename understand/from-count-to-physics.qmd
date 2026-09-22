@@ -1,0 +1,1593 @@
+---
+title: "From Count to Physical Science"
+subtitle: "Physical quantities are boundary-specific readings of recursive count"
+toc: true
+---
+
+# From Count to Physical Science
+
+R<sup>2</sup>D begins before physics.
+
+Not because physics is unimportant.
+
+Because before a physical quantity can be measured, the relation being
+measured must already be distinguishable.
+
+Part I therefore defines a dimensionless architecture of:
+
+- boundaries;
+- states;
+- multiplicity;
+- occurrence;
+- occupancy;
+- possibility;
+- constraint;
+- asymmetry;
+- closure;
+- recurrence;
+- recursive replacement;
+- recursive carry;
+- and background.
+
+Only afterward does R<sup>2</sup>D ask how familiar scientific quantities
+read that architecture.
+
+This gives the basic ordering:
+
+$$
+\boxed{
+\text{primitive count relation}
+\rightarrow
+\text{boundary-specific physical read}
+\rightarrow
+\text{measured scientific quantity}.
+}
+$$
+
+The physical quantity is real.
+
+But it enters after the count relation it reads.
+
+[Before Units →](before-units.qmd)
+
+## The Mapping Problem
+
+Suppose R<sup>2</sup>D defines a dimensionless relation
+
+$$
+X_n.
+$$
+
+A physical theory may supply a measurable quantity
+
+$$
+X_n^{\mathrm{phys}}.
+$$
+
+The central question is not whether the two use similar mathematics.
+
+It is:
+
+> **Does the physical quantity preserve the role played by the primitive
+> count relation?**
+
+A valid mapping must preserve:
+
+- the boundary at which the quantity is defined;
+- the distinctions it measures;
+- its causal role;
+- its relation to adjacent boundaries;
+- and the equations in which it participates.
+
+Thus a physical mapping is stronger than symbolic resemblance.
+
+## Mapping Is Not Identity
+
+This distinction is fundamental.
+
+If a physical quantity reads a primitive R<sup>2</sup>D relation, that does
+not make the primitive quantity identical to the physical quantity in every
+domain.
+
+For example,
+
+$$
+\lambda_n
+$$
+
+may receive a physical displacement read in one mechanical realization.
+
+That does not imply
+
+$$
+\boxed{
+\lambda_n
+=
+\text{length}
+}
+$$
+
+universally.
+
+Likewise,
+
+$$
+\rho_{n+1|n}
+$$
+
+may acquire a physical rate interpretation in a suitable system.
+
+That does not imply
+
+$$
+\boxed{
+\rho
+=
+\text{frequency}
+}
+$$
+
+by definition.
+
+The safe form is:
+
+$$
+\boxed{
+\text{primitive count relation}
+\xrightarrow{\text{physical read}}
+\text{domain-specific quantity}.
+}
+$$
+
+## The Primitive Definition Must Survive the Mapping
+
+This is the most important methodological rule.
+
+Suppose a physical mapping is successful.
+
+The mapped physical quantity does not replace the primitive definition.
+
+Instead, both levels remain visible.
+
+For example:
+
+$$
+\boxed{
+\text{primitive: }
+S=\ln W
+}
+$$
+
+can acquire a thermodynamic read.
+
+But the logarithmic count relation remains the primitive structure underneath
+that thermodynamic coordinate.
+
+Likewise:
+
+$$
+\boxed{
+\Delta R
+=
+C^{\mathrm{out}}\lambda
+}
+$$
+
+may acquire a mechanical work-like read.
+
+The physical interpretation does not redefine primitive retention.
+
+> **The physical read adds dimensional meaning.  
+> It does not rewrite the count architecture.**
+
+## Physical Constants Belong to the Read
+
+Dimensionless count and dimensional measurement generally require a
+calibration between them.
+
+Physical constants can provide that calibration.
+
+The familiar Boltzmann relation is the clearest example.
+
+R<sup>2</sup>D begins with
+
+$$
+S
+=
+\ln W.
+$$
+
+A thermodynamic read assigns the Boltzmann scale:
+
+$$
+\boxed{
+S^{\mathrm{th}}
+=
+k_B \ln W.
+}
+$$
+
+The count
+
+$$
+\ln W
+$$
+
+comes first.
+
+The constant
+
+$$
+k_B
+$$
+
+converts that logarithmic count coordinate into a thermodynamic entropy
+coordinate.
+
+Thus:
+
+$$
+\boxed{
+\text{count}
+\rightarrow
+\text{physical calibration}
+\rightarrow
+\text{unit-bearing quantity}.
+}
+$$
+
+## Thermodynamics Is the Strongest Bridge
+
+Thermodynamics is especially important in the R<sup>2</sup>D program because
+many parts of the recursive architecture remain jointly readable there.
+
+A thermodynamic system can often expose simultaneously:
+
+- multiplicity;
+- occupancy;
+- directional bias;
+- constraint;
+- recurrence;
+- work;
+- heat;
+- and background production.
+
+This makes thermodynamics the strongest current bridge between the
+dimensionless architecture of Part I and familiar physical science.
+
+The program therefore does not begin by trying to map R<sup>2</sup>D directly
+onto the most inaccessible limits of quantum gravity.
+
+It begins where enough of the primitive relation remains measurable at once.
+
+## Entropy Reads Multiplicity
+
+The first mapping is the most familiar.
+
+Primitive multiplicity is
+
+$$
+W.
+$$
+
+Its logarithmic coordinate is
+
+$$
+S
+=
+\ln W.
+$$
+
+A thermodynamic entropy read is
+
+$$
+\boxed{
+S^{\mathrm{th}}
+=
+k_B S
+=
+k_B\ln W.
+}
+$$
+
+R<sup>2</sup>D interprets this ordering literally:
+
+$$
+\boxed{
+\text{multiplicity}
+\rightarrow
+\text{logarithmic count}
+\rightarrow
+\text{thermodynamic entropy}.
+}
+$$
+
+Entropy therefore does not create multiplicity.
+
+It physically reads it.
+
+[Multiplicity →](multiplicity.qmd)
+
+## Gibbs Free Energy Reads Thermodynamic Direction
+
+The thermodynamic mapping becomes more interesting when enclosing possibility
+is added.
+
+For the fixed-temperature, fixed-pressure chemical realization developed in
+the Canon, the count relation becomes
+
+$$
+\boxed{
+\Delta S+\Delta P
+=
+-
+\frac{\Delta g}{k_BT}.
+}
+$$
+
+Here
+
+$$
+\Delta S+\Delta P
+$$
+
+is the dimensionless compatible-count direction.
+
+The physical quantity
+
+$$
+\Delta g
+$$
+
+is its molecular Gibbs free-energy read under the specified thermodynamic
+conditions.
+
+The important ordering is:
+
+$$
+\boxed{
+\text{compatible count direction}
+\rightarrow
+\text{Gibbs energetic read}.
+}
+$$
+
+Gibbs free energy is therefore not inserted as a primitive R<sup>2</sup>D
+quantity.
+
+It is a physical coordinate assigned to a relation already defined in count
+space.
+
+## Gibbs Direction Comes Before Work Realization
+
+This also preserves an important distinction.
+
+The thermodynamic Gibbs relation describes available direction before
+productive retention is applied.
+
+R<sup>2</sup>D local asymmetry is instead
+
+$$
+\Delta A
+=
+\Delta P-\Delta R.
+$$
+
+So:
+
+$$
+\boxed{
+\text{available thermodynamic direction}
+\neq
+\text{work already performed}.
+}
+$$
+
+A state function can organize the available relation.
+
+A work coordinate describes one constrained realization of that relation.
+
+This is why free energy can bound possible work without being identical to a
+specific work trajectory.
+
+## Constraint Can Acquire a Mechanical Read
+
+Primitive retention is
+
+$$
+\boxed{
+\Delta R_n
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_n.
+}
+$$
+
+At the primitive level,
+
+$$
+C^{\mathrm{out}}
+$$
+
+is not force and
+
+$$
+\lambda
+$$
+
+is not displacement.
+
+But in a mechanical realization, they may acquire those reads.
+
+Schematically,
+
+$$
+C^{\mathrm{out}}
+\xrightarrow{\text{mechanical read}}
+F,
+$$
+
+and
+
+$$
+\lambda
+\xrightarrow{\text{mechanical read}}
+d.
+$$
+
+Then
+
+$$
+C^{\mathrm{out}}\lambda
+$$
+
+can acquire the familiar work-like form
+
+$$
+\boxed{
+Fd.
+}
+$$
+
+The mapping is powerful precisely because the primitive relation existed
+before force and distance were assigned.
+
+## Generalized Work Is More Fundamental Than One Mechanical Example
+
+Nothing in
+
+$$
+\Delta R
+=
+C^{\mathrm{out}}\lambda
+$$
+
+requires the physical read to be force times linear displacement.
+
+Different thermodynamic systems may map the same structural relation onto
+different conjugate variables.
+
+Possible physical realizations include relations involving:
+
+- force and displacement;
+- pressure and volume;
+- electrical potential and charge;
+- chemical coupling;
+- elastic deformation;
+- or other generalized constraint-displacement pairs.
+
+Thus:
+
+> **R<sup>2</sup>D does not make one form of work primitive.**
+
+It makes the underlying constraint-distinguishability relation primitive.
+
+## Muscle Makes Several Reads Simultaneously Accessible
+
+Muscle is especially useful because multiple parts of the recursive
+architecture can be measured within one functioning system.
+
+At a molecular boundary, protein-state recurrence can be related to chemical
+cycling.
+
+At an enclosing muscle boundary, force and shortening are mechanically
+readable.
+
+Heat is measurable.
+
+Occupancy of molecular states can be measured.
+
+Chemical free-energy relations are experimentally accessible.
+
+This makes muscle unusually capable of testing whether distinct physical
+coordinates actually occupy the structural roles assigned by
+R<sup>2</sup>D.
+
+The muscle mapping is therefore more than an analogy.
+
+It is an empirical calibration problem.
+
+## Physical Rate Is a Separate Mapping
+
+Recurrence must be treated carefully.
+
+Part I defines the adjacent recurrence ratio
+
+$$
+\rho_{n+1|n}
+=
+\frac{
+N_{\mathcal D_R}(\chi_{n+1})
+}{
+N_{\mathcal D_R}(\mathcal C_n)
+}.
+$$
+
+This is a ratio of counts.
+
+It is not yet a ratio of physical rates.
+
+A physical system may provide measurable recurrence rates
+
+$$
+r_n
+$$
+
+and
+
+$$
+r_{n+1}.
+$$
+
+Only after that physical calibration has been justified can one test a
+mapping of the form
+
+$$
+\boxed{
+\rho_{n+1|n}
+\xrightarrow{\text{rate read}}
+\frac{r_{n+1}}{r_n}.
+}
+$$
+
+Thus physical time and rate do not enter by simply renaming recurrence.
+
+They require an empirical bridge.
+
+[Recurrence →](recurrence.qmd)
+
+## State-Occurrence Count Is Not a Clock
+
+This distinction also protects the meaning of
+
+$$
+\tau_{n,i}
+=
+\ln\nu_{n,i}.
+$$
+
+The quantity
+
+$$
+\tau
+$$
+
+is a logarithmic occurrence-count coordinate.
+
+It is not primitive elapsed time.
+
+It is not a physical rate.
+
+Therefore:
+
+$$
+\boxed{
+\tau
+\neq
+t.
+}
+$$
+
+A physical clock may later read recurrence.
+
+That does not turn every occurrence coordinate into time.
+
+## Background Can Acquire a Thermodynamic Entropy Read
+
+The R<sup>2</sup>D Second Law gives
+
+$$
+\delta_{\mathcal C}\Phi_{n+1}
+=
+L_{\tau,n,\alpha,\mathcal C}.
+$$
+
+Both are dimensionless logarithmic count relations.
+
+In thermodynamics, the enclosing background increment can acquire an entropy
+read:
+
+$$
+\boxed{
+S_{\mathrm{gen},\mathcal C}^{\mathrm{th}}
+=
+k_B
+\delta_{\mathcal C}\Phi_{n+1}.
+}
+$$
+
+This provides the bridge from primitive occurrence nonreciprocity to
+thermodynamic entropy generation.
+
+The logical order remains:
+
+$$
+\boxed{
+\text{local occurrence nonreciprocity}
+\longleftrightarrow
+\text{enclosing background increment}
+\rightarrow
+\text{generated thermodynamic entropy}.
+}
+$$
+
+[The R²D Second Law →](second-law.qmd)
+
+## Heat Is Not Automatically Entropy Production
+
+This mapping also clarifies why familiar thermodynamic quantities must not be
+collapsed.
+
+Heat can be exchanged reversibly.
+
+Work can be performed reversibly.
+
+Constraint can exist in a reversible system.
+
+A temperature difference can exist without itself being entropy production.
+
+The primitive irreversible coordinate is instead the nonreciprocity
+
+$$
+L_\tau>0.
+$$
+
+Its enclosing thermodynamic read is generated entropy.
+
+Thus:
+
+$$
+\boxed{
+\text{heat}
+\neq
+\text{entropy production}
+}
+$$
+
+in general.
+
+The count architecture separates these relations before thermodynamic units
+are attached.
+
+## Probability Is a Normalized Read
+
+Probability provides another example of physical or statistical reading.
+
+Possible count exists first:
+
+$$
+W_{n,i}.
+$$
+
+A normalized possible-count distribution can then be written
+
+$$
+\boxed{
+p_{n,i}
+=
+\frac{
+W_{n,i}
+}{
+\sum_j W_{n,j}
+}.
+}
+$$
+
+Likewise, realized occupancy can be normalized:
+
+$$
+\boxed{
+p_{n,i}^{\mathrm{obs}}
+=
+\frac{
+c_{n,i}
+}{
+\sum_j c_{n,j}
+}.
+}
+$$
+
+Normalization does not create the underlying count domain.
+
+It reads it fractionally.
+
+Thus:
+
+> **Possible count precedes probability.**
+
+And:
+
+> **Occupancy precedes normalized observed occupancy.**
+
+## A Probability Read Must Specify What Was Normalized
+
+This matters because several different R<sup>2</sup>D counts can be
+normalized.
+
+One could normalize:
+
+- possible multiplicity;
+- occurrence count;
+- occupancy;
+- or another appropriate finite count.
+
+Those normalized quantities need not have the same interpretation.
+
+Therefore simply seeing a number between zero and one does not identify its
+primitive origin.
+
+The count being normalized must first be specified.
+
+## Physical Geometry Is Also a Mapping
+
+R<sup>2</sup>D defines a count boundary before assigning spatial geometry to
+it.
+
+Likewise, it defines distinguishability
+
+$$
+\lambda
+$$
+
+before interpreting that distinction as physical distance.
+
+A spatial mapping may therefore take the schematic form
+
+$$
+\boxed{
+\text{boundary}
+\xrightarrow{\text{spatial read}}
+\text{area or enclosing geometry}
+}
+$$
+
+and
+
+$$
+\boxed{
+\lambda
+\xrightarrow{\text{spatial read}}
+\text{distance-like coordinate}.
+}
+$$
+
+The physical geometry can be completely real.
+
+The R<sup>2</sup>D claim is only that the count relation is logically prior to
+that geometric representation.
+
+## Space Is Not Assumed in Order to Define a Boundary
+
+This is why an R<sup>2</sup>D boundary is not initially a spatial surface.
+
+The boundary defines a count domain.
+
+Only later may a physical system represent that boundary geometrically.
+
+Thus:
+
+$$
+\boxed{
+B_n
+\neq
+\text{primitive physical area}.
+}
+$$
+
+But a particular physical mapping may assign an areal read to \(B_n\).
+
+The distinction is exactly analogous to assigning an energetic read to a
+dimensionless logarithmic count coordinate.
+
+## Time Is Not Assumed in Order to Define Recurrence
+
+Likewise, recurrence does not require an already-existing clock.
+
+A completed relation can be counted again.
+
+That count relation exists before seconds are assigned.
+
+A physical clock then provides a temporal read of recurrence.
+
+Thus:
+
+$$
+\boxed{
+\text{recurrence}
+\rightarrow
+\text{clock read}
+}
+$$
+
+rather than requiring
+
+$$
+\text{primitive time}
+\rightarrow
+\text{recurrence}.
+$$
+
+This becomes especially important in the recursive-clock program.
+
+## Thermodynamics Occupies a Joint-Readability Regime
+
+R<sup>2</sup>D later asks what happens when distinguishability and recurrence
+do not remain equally readable.
+
+Thermodynamics is special because both can often be accessed together.
+
+A thermodynamic experiment may simultaneously measure:
+
+$$
+\text{state distinction},
+$$
+
+$$
+\text{occupancy},
+$$
+
+$$
+\text{recurrence rate},
+$$
+
+$$
+\text{constraint},
+$$
+
+and
+
+$$
+\text{background production}.
+$$
+
+This makes thermodynamics the natural calibration regime for the primitive
+architecture.
+
+## Quantum Readability Emphasizes Recurrence
+
+At one readability limit, subordinate geometric distinguishability becomes
+difficult or impossible to resolve while recurrence remains sharply readable.
+
+The later R<sup>2</sup>D program asks whether familiar quantum quantities are
+physical projections appropriate to that regime.
+
+Frequency, phase, occupancy statistics, amplitudes, and particle counts then
+become candidate reads of what remains accessible.
+
+But the logical status must remain explicit:
+
+> **The current Canon does not derive all of quantum mechanics from Part I.**
+
+The quantum program tests whether quantum formalism can be deprojected onto
+the same recursive count architecture.
+
+## Gravitational Readability Emphasizes Distinguishability
+
+At the opposite readability limit, enclosing distinguishability can remain
+readable after the relevant enclosing recurrence is no longer jointly
+resolved.
+
+The later gravitational program asks whether geometric quantities such as
+
+- distance;
+- area;
+- metric;
+- curvature;
+- and horizon structure
+
+are physical reads appropriate to that limit.
+
+Again, the distinction is essential:
+
+> **A successful geometric mapping does not make geometry primitive to the
+> count architecture.**
+
+Geometry can be real without being logically first.
+
+## The Two Physical Limits Need Not Use the Same Ruler
+
+This offers a different view of the quantum-gravity problem.
+
+If quantum physics and gravity occupy opposite readability limits of the same
+recursive relation, their most natural physical coordinates need not be the
+same.
+
+One side may preserve recurrence more directly.
+
+The other may preserve distinguishability more directly.
+
+Trying to force both descriptions into one already-dimensional primitive
+ruler may therefore begin after the important distinction has already been
+lost.
+
+R<sup>2</sup>D instead looks for the common structure before dimensional
+projection.
+
+## Unification Happens at the Count Level
+
+The proposed unification is therefore not
+
+$$
+\boxed{
+\text{quantum object}
+=
+\text{gravitational object}.
+}
+$$
+
+Nor is it
+
+$$
+\boxed{
+\text{quantum unit system}
+=
+\text{gravitational unit system}.
+}
+$$
+
+It is
+
+$$
+\boxed{
+\text{same primitive count grammar}
+\rightarrow
+\text{different boundary-specific physical reads}.
+}
+$$
+
+This is **unification before units**.
+
+[Before Units →](before-units.qmd)
+
+## Different Sciences Need Not Share the Same Objects
+
+The same logic extends beyond physics.
+
+A molecule is not a cell.
+
+A cell is not an organism.
+
+An organism is not an ecosystem.
+
+Yet each can be represented through:
+
+- a count boundary;
+- readable states;
+- compatible subordinate realizations;
+- multiplicity;
+- occurrence;
+- occupancy;
+- enclosing compatibility;
+- constraint;
+- closure;
+- and recurrence.
+
+Thus R<sup>2</sup>D does not unify the sciences by insisting that they study
+the same object.
+
+It asks whether their different objects become scientifically defined
+through the same formal grammar.
+
+[Scientific Objecthood →](scientific-objecthood.qmd)
+
+## The Physical Read Can Change Without Changing the Primitive Role
+
+Suppose
+
+$$
+C\lambda
+$$
+
+has one mechanical read in muscle.
+
+Another physical system might assign the same primitive role to a completely
+different conjugate pair.
+
+The physical variables change.
+
+The structural position in the recursive architecture does not.
+
+Thus:
+
+$$
+\boxed{
+\text{same primitive role}
+\not\Rightarrow
+\text{same physical quantity}.
+}
+$$
+
+This is one of the central advantages of working dimensionlessly first.
+
+## Conversely, the Same Physical Quantity Can Play Different Roles
+
+The reverse caution also matters.
+
+The word "energy," for example, appears in many contexts.
+
+But two energetic quantities at different boundaries need not read the same
+primitive R<sup>2</sup>D relation.
+
+Likewise, two quantities both called entropy may refer to different count
+relations.
+
+Therefore matching physical units alone is not enough to establish an
+R<sup>2</sup>D mapping.
+
+The structural role must also match.
+
+## Never Map by Units Alone
+
+Suppose two quantities both have units of energy.
+
+That does not prove that they correspond to the same count coordinate.
+
+Likewise, two rates need not correspond to the same recurrence relation.
+
+Two lengths need not correspond to the same distinguishability relation.
+
+A valid mapping requires:
+
+$$
+\boxed{
+\text{matching dimensions}
++
+\text{matching boundary role}
++
+\text{matching recursive relation}.
+}
+$$
+
+Units are necessary for a physical calibration.
+
+They are not sufficient to identify the primitive quantity.
+
+## Never Map by Equation Shape Alone
+
+Another danger is recognizing a familiar equation and assigning R<sup>2</sup>D
+symbols to it afterward.
+
+That reverses the method.
+
+The correct order is:
+
+$$
+\boxed{
+\text{define the R²D boundary and count relations first}
+}
+$$
+
+then
+
+$$
+\boxed{
+\text{identify independently measurable physical quantities}
+}
+$$
+
+then
+
+$$
+\boxed{
+\text{test whether the mapping preserves the relation}.
+}
+$$
+
+A physical equation that merely resembles an R<sup>2</sup>D equation is not
+yet a derivation.
+
+## The Boundary Must Be Specified First
+
+Every physical mapping should therefore begin by asking:
+
+> **What is the scientific object?**
+
+Then:
+
+> **What boundary defines it?**
+
+Only after that can we ask:
+
+> What are its readable macrostates?
+
+> What are its compatible subordinate realizations?
+
+> What counts as multiplicity?
+
+> What is occupancy?
+
+> What is the enclosing relation?
+
+> What closes?
+
+> What recurs?
+
+Without a defined boundary, the physical dictionary is underdetermined.
+
+## The Physical Mapping Workflow
+
+A disciplined R<sup>2</sup>D mapping proceeds in the following order:
+
+1. Define the object and count boundary.
+
+2. Identify its readable macrostates.
+
+3. Identify compatible subordinate realizations.
+
+4. Construct the native multiplicity structure.
+
+5. Separate multiplicity, occurrence, and occupancy.
+
+6. Identify enclosing compatibility and directional possibility.
+
+7. Identify constraint and retention.
+
+8. Define closure and recurrence.
+
+9. Write the dimensionless R<sup>2</sup>D relation.
+
+10. Only then identify candidate physical quantities that read those
+relations.
+
+11. Test the resulting mapping against established empirical law.
+
+12. State what was derived, what was mapped, and what remains hypothetical.
+
+This order prevents a familiar physical ontology from being silently inserted
+into the primitive definitions.
+
+## Different Claims Have Different Logical Status
+
+Not every equation in the R<sup>2</sup>D program has the same status.
+
+This distinction should remain explicit.
+
+### Formal definition
+
+A relation may follow directly from how the count domain is defined.
+
+For example,
+
+$$
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+$$
+
+### Mathematical consequence
+
+A relation may follow from the definitions.
+
+For example, native multiplicity closes around a genuine return:
+
+$$
+\Delta S_{\mathcal C}=0.
+$$
+
+### R<sup>2</sup>D postulate
+
+A relation may be proposed as part of the recursive theory.
+
+For example,
+
+$$
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+$$
+
+### Physical mapping
+
+A dimensionless R<sup>2</sup>D quantity may be assigned a conventional
+physical read.
+
+For example,
+
+$$
+S^{\mathrm{th}}
+=
+k_B\ln W.
+$$
+
+### Empirical calibration
+
+A specific physical system may quantitatively calibrate a proposed mapping.
+
+Muscle is particularly important in this category.
+
+### Hypothesis or projection
+
+Later quantum, gravitational, or cosmological interpretations may remain
+proposals requiring additional derivation or testing.
+
+Keeping these categories distinct makes the entire program stronger.
+
+## A Mapping Is Not a Derivation
+
+Suppose an established physical law can be written exactly in R<sup>2</sup>D
+form once a set of physical identifications is supplied.
+
+That is important.
+
+But it is not necessarily a first-principles derivation of the physical law
+from the Part I axioms.
+
+The distinction is:
+
+$$
+\boxed{
+\text{R²D relation}
++
+\text{independently justified physical mapping}
+\Rightarrow
+\text{known physical law}
+}
+$$
+
+versus
+
+$$
+\boxed{
+\text{R²D axioms alone}
+\Rightarrow
+\text{physical law}.
+}
+$$
+
+Those are different achievements.
+
+The Canon intentionally keeps them separate.
+
+## An Exact Mapping Can Still Be Powerful
+
+Calling something a mapping rather than a derivation does not make it weak.
+
+If independently measured physical quantities occupy exactly the roles
+predicted by the count architecture, and the mapped relation reproduces an
+established physical law, that is a nontrivial test.
+
+It means that two descriptions share the same formal structure.
+
+The stronger question—whether every physical parameter can itself be derived
+from primitive count—can then be asked separately.
+
+## Deprojection Runs the Mapping Backward
+
+Once a physical mapping has been established, R<sup>2</sup>D can also be used
+in reverse.
+
+Begin with a physical theory:
+
+$$
+\text{physical law}.
+$$
+
+Identify which variables correspond to:
+
+$$
+\text{boundary},
+\quad
+\text{multiplicity},
+\quad
+\text{occupancy},
+\quad
+\text{constraint},
+\quad
+\text{recurrence},
+\quad
+\dots
+$$
+
+Then ask whether the domain-specific ontology can be stripped away while the
+underlying count relation remains.
+
+This is **deprojection**.
+
+Schematically:
+
+$$
+\boxed{
+\text{physical theory}
+\rightarrow
+\text{dimensionless count relation}.
+}
+$$
+
+That operation is one of the main ways R<sup>2</sup>D can be used as a
+scientific discovery tool.
+
+## Deprojection Does Not Mean Rejecting the Physical Theory
+
+If a physical law deprojects successfully, its equations need not be wrong.
+
+Quite the opposite.
+
+Their accuracy is evidence that the boundary-specific relation they describe
+is real.
+
+The question becomes:
+
+> **What is this equation reading?**
+
+rather than
+
+> **How do we replace this equation?**
+
+R<sup>2</sup>D is therefore often conservative about mathematics while being
+more radical about ontology.
+
+## The Equation Can Survive While the Ontology Changes
+
+This can be written compactly:
+
+$$
+\boxed{
+\text{same empirical equation}
++
+\text{different primitive interpretation}.
+}
+$$
+
+Entropy can remain entropy.
+
+Gibbs free energy can remain Gibbs free energy.
+
+Mechanical work can remain mechanical work.
+
+Quantum probabilities can remain predictive probabilities.
+
+Spacetime curvature can remain physically measurable curvature.
+
+What changes is the claim that any one of these must be primitive before the
+recursive count relation that makes it meaningful.
+
+## Thermodynamics Provides the Calibration Window
+
+The larger program can therefore be pictured as
+
+$$
+\boxed{
+\text{dimensionless R²D}
+\rightarrow
+\text{thermodynamic joint readability}
+\rightarrow
+\begin{cases}
+\text{quantum-facing projection},\\
+\text{gravitational-facing projection}.
+\end{cases}
+}
+$$
+
+Thermodynamics is the middle regime where enough of both distinguishability
+and recurrence remains visible to calibrate the architecture.
+
+The more one side becomes unreadable, the more domain-specific the surviving
+physical ontology becomes.
+
+## The Canon Does Not Assign Equal Confidence to Every Mapping
+
+The current program is deliberately uneven in evidentiary status.
+
+The thermodynamic mappings are the most developed.
+
+Muscle provides unusually direct empirical calibration.
+
+The quantum program contains several structural and mathematical mappings
+that still require further extension.
+
+The gravitational program identifies recursive geometric structure and
+multiple physical bridges, but the full derivation connecting the primitive
+R<sup>2</sup>D architecture to Einsteinian field geometry remains incomplete.
+
+This is not a defect to hide.
+
+It defines the research program.
+
+## What Would Count as Progress
+
+The strongest future R<sup>2</sup>D results will not be additional verbal
+analogies.
+
+They will be cases in which:
+
+$$
+\boxed{
+\text{independently defined count architecture}
+}
+$$
+
+predicts
+
+$$
+\boxed{
+\text{a specific physical mapping}
+}
+$$
+
+which then reproduces or extends
+
+$$
+\boxed{
+\text{an independently established empirical law}.
+}
+$$
+
+Better still, the framework should eventually produce new testable relations
+not inserted through the mapping itself.
+
+That is the transition from reinterpretation to discovery.
+
+## What Would Count as Failure
+
+A proposed physical mapping should be rejected if it requires redefining the
+primitive quantities merely to fit the target equation.
+
+Likewise, the broader R<sup>2</sup>D program would be challenged if different
+domains required mutually incompatible definitions of:
+
+- boundary;
+- multiplicity;
+- possibility;
+- constraint;
+- closure;
+- recurrence;
+- or recursive replacement.
+
+Universality raises the empirical burden.
+
+It does not lower it.
+
+## The Same Questions Can Be Asked in Every Domain
+
+For any scientific system, R<sup>2</sup>D asks:
+
+> What boundary defines the object?
+
+> What distinctions are readable?
+
+> What are the compatible subordinate realizations?
+
+> What is the multiplicity?
+
+> What occurs?
+
+> What occupancy is realized?
+
+> What enclosing relation supplies directional possibility?
+
+> What constraint supplies retention?
+
+> What closes?
+
+> What recurs?
+
+> What changes meaning when the boundary changes?
+
+Only after answering those questions does it ask:
+
+> **What physical variables read these relations here?**
+
+That is the bridge from count to science.
+
+## The Complete Logical Order
+
+The full R<sup>2</sup>D sequence can now be written:
+
+$$
+\boxed{
+\begin{array}{c}
+\text{boundary}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{distinguishable states}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{multiplicity}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{occurrence and occupancy}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{enclosing possibility and constraint}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{asymmetry}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{closure and recurrence}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{recursive relation}
+\\[8pt]
+\Downarrow
+\\[8pt]
+\text{physical read}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{thermodynamics, chemistry, mechanics, biology, quantum theory, gravity, \ldots}
+\end{array}
+}
+$$
+
+The physical sciences appear at the end because they assign readable
+coordinates to an architecture that has already been defined.
+
+## The Key Distinction
+
+The central idea is simple:
+
+> **R<sup>2</sup>D does not begin by translating one physical theory into
+> another.**
+
+It begins beneath their units and objects.
+
+Then it asks how each physical domain reads the same primitive grammar.
+
+Thus:
+
+> **Entropy is a read of count.**
+
+> **Probability is a normalized read of count.**
+
+> **Work can be a constrained-distinguishability read.**
+
+> **Physical rate can be a recurrence read.**
+
+> **Generated entropy can be a background read.**
+
+> **Geometry can be a distinguishability read.**
+
+The physical quantities differ because the boundaries differ.
+
+The proposed invariant is the count architecture beneath them.
+
+Or, most compactly:
+
+> **The domain changes.  
+> The units change.  
+> The readable ontology changes.  
+> The primitive count grammar does not.**
+
+---
+
+## Where to Go Next
+
+[Definitions and Symbols →](definitions.qmd)
+
+[The Coins Example →](coins.qmd)
+
+[Run R²D →](../run/index.qmd)
+
+[Back to Understand R²D →](index.qmd)

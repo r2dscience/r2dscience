@@ -1,0 +1,883 @@
+---
+title: "Constraint and Retention"
+subtitle: "Possibility can be retained only against a distinguishable change"
+toc: true
+---
+
+# Constraint and Retention
+
+Possibility tells us which local alternative has greater compatible support
+from the enclosing count domain.
+
+But possibility alone does not uniquely determine local realization.
+
+A second relation can oppose that directional possibility.
+
+R<sup>2</sup>D calls that relation **constraint**.
+
+When constraint acts across a readable local distinction, part of the
+directional possibility is **retained**.
+
+The primitive relation is
+
+$$
+\boxed{
+\Delta R
+=
+C^{\mathrm{out}}\lambda
+}
+$$
+
+where
+
+- \(C^{\mathrm{out}}\) is the productive component of enclosing constraint;
+- \(\lambda\) is the readable distinguishable interval;
+- \(\Delta R\) is local retention.
+
+The distinction is important:
+
+> **Possibility supplies directional support.  
+> Constraint retains that possibility against distinguishable change.**
+
+[Possibility →](possibility.qmd)
+
+## A Constraint Requires a Distinction
+
+Consider a readable local transition
+
+$$
+i \rightarrow k
+$$
+
+at boundary \(B_n\).
+
+R<sup>2</sup>D assigns that transition a distinguishable interval
+
+$$
+\lambda_{n,i\rightarrow k}.
+$$
+
+This does not yet mean distance.
+
+It is the boundary-defined size of the readable distinction between the two
+macrostates.
+
+The reversed transition has opposite orientation:
+
+$$
+\boxed{
+\lambda_{n,k\rightarrow i}
+=
+-
+\lambda_{n,i\rightarrow k}.
+}
+$$
+
+Its magnitude,
+
+$$
+\left|
+\lambda_{n,i\rightarrow k}
+\right|,
+$$
+
+gives the size of the distinction.
+
+No primitive spatial, mechanical, energetic, or temporal interpretation has
+yet been assigned.
+
+## Constraint Comes From the Enclosing Relation
+
+The local transition is defined at \(B_n\).
+
+The relevant constraint is defined by the enclosing count relation at
+
+$$
+B_{n+1}.
+$$
+
+Write the total enclosing constraint as
+
+$$
+C_{n+1} \geq 0.
+$$
+
+This placement is important.
+
+Just as [possibility](possibility.qmd) is defined through compatibility with
+the enclosing boundary, constraint is also an enclosing relation.
+
+Thus the local transition does not contain within itself the complete
+relation that organizes its realization.
+
+Schematically,
+
+$$
+\boxed{
+B_{n+1}
+\longrightarrow
+\text{constraint on realization at } B_n.
+}
+$$
+
+## Retention Requires Both Constraint and Distinguishability
+
+For the readable transition
+
+$$
+i \rightarrow k,
+$$
+
+local retention is
+
+$$
+\boxed{
+\Delta R_{n,i\rightarrow k}
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_{n,i\rightarrow k}.
+}
+$$
+
+This equation contains two logically distinct quantities.
+
+### Constraint
+
+$$
+C_{n+1}^{\mathrm{out}}
+$$
+
+specifies the productive/output component of the enclosing constraint.
+
+### Distinguishability
+
+$$
+\lambda_{n,i\rightarrow k}
+$$
+
+specifies the readable local interval against which that constraint acts.
+
+Both are required.
+
+If
+
+$$
+C_{n+1}^{\mathrm{out}}=0,
+$$
+
+then
+
+$$
+\Delta R=0
+$$
+
+even when a local distinction exists.
+
+Likewise, if
+
+$$
+\lambda_{n,i\rightarrow k}=0,
+$$
+
+then
+
+$$
+\Delta R=0
+$$
+
+even when enclosing constraint is present.
+
+Therefore:
+
+> **Constraint without distinguishability produces no local retention.**
+
+and
+
+> **Distinguishability without productive constraint produces no local
+> retention.**
+
+## Distinguishability Is Not Created by Constraint
+
+The existence of a readable distinction does not require productive
+constraint.
+
+Thus,
+
+$$
+\boxed{
+C_{n+1}^{\mathrm{out}}=0
+\quad\not\Rightarrow\quad
+\lambda_n=0.
+}
+$$
+
+A transition can remain distinguishable even when none of its directional
+possibility is retained as productive output.
+
+This separation becomes important later when the same physical system can
+possess a readable distinction under zero productive load.
+
+Constraint determines **retention of a distinction**.
+
+It does not primitively define whether the distinction exists.
+
+## Constraint Is Not Yet Force
+
+The notation
+
+$$
+C
+$$
+
+should not be read immediately as mechanical force.
+
+Part I remains dimensionless.
+
+Depending on the physical domain, a later theory may map constrained
+distinguishability onto quantities involving:
+
+- force and displacement;
+- chemical work;
+- pressure and volume;
+- field coupling;
+- or some other conjugate physical relation.
+
+But these are later physical calibrations.
+
+The primitive relation is simply
+
+$$
+\boxed{
+\text{constraint}
+\times
+\text{distinguishable interval}
+=
+\text{retention}.
+}
+$$
+
+This is why R<sup>2</sup>D can use the same architecture before choosing a
+specific physical ontology.
+
+## Retention Is Oriented
+
+Because
+
+$$
+C_{n+1}^{\mathrm{out}} > 0
+$$
+
+and the distinguishable interval is oriented, retention inherits the
+orientation of the transition.
+
+Thus,
+
+$$
+\Delta R_{n,k\rightarrow i}
+=
+-
+\Delta R_{n,i\rightarrow k}.
+$$
+
+The sign therefore comes from
+
+$$
+\lambda.
+$$
+
+The constraint magnitude need not itself reverse sign.
+
+This lets R<sup>2</sup>D distinguish:
+
+- the magnitude of constraint;
+- the magnitude of the distinction;
+- and the orientation of the transition.
+
+That separation later becomes useful when physical quantities such as
+mechanical direction, charge, or spatial orientation are introduced.
+
+## Possibility and Retention Are Different Relations
+
+For a local transition
+
+$$
+i \rightarrow k,
+$$
+
+directional possibility is
+
+$$
+\Delta P_{n,i\rightarrow k}.
+$$
+
+Retention is
+
+$$
+\Delta R_{n,i\rightarrow k}.
+$$
+
+They should not be identified.
+
+Possibility asks:
+
+> **How differently do the two local alternatives participate in compatible
+> enclosing realizations?**
+
+Retention asks:
+
+> **How much of that directional possibility is retained against the readable
+> local distinction?**
+
+Thus:
+
+$$
+\boxed{
+\Delta P
+\neq
+\Delta R.
+}
+$$
+
+Their difference defines the remaining local asymmetry:
+
+$$
+\boxed{
+\Delta A
+=
+\Delta P
+-
+\Delta R.
+}
+$$
+
+[Asymmetry →](asymmetry.qmd)
+
+## Three Regimes
+
+The relation
+
+$$
+\Delta A
+=
+\Delta P-\Delta R
+$$
+
+immediately gives three important cases.
+
+### Incomplete retention
+
+If
+
+$$
+\Delta R < \Delta P,
+$$
+
+then
+
+$$
+\Delta A>0.
+$$
+
+Some directional possibility remains available for local realization.
+
+### Complete retention
+
+If
+
+$$
+\boxed{
+\Delta R=\Delta P,
+}
+$$
+
+then
+
+$$
+\boxed{
+\Delta A=0.
+}
+$$
+
+This is the R<sup>2</sup>D stall condition.
+
+The directional possibility has not disappeared.
+
+It has been completely retained.
+
+### Retention greater than directional possibility
+
+If
+
+$$
+\Delta R>\Delta P,
+$$
+
+then
+
+$$
+\Delta A<0.
+$$
+
+The local directional asymmetry reverses.
+
+These regimes are developed more fully in the next section.
+
+[Asymmetry →](asymmetry.qmd)
+
+## Zero Retention Is Not Stall
+
+Another important distinction follows immediately.
+
+If
+
+$$
+\Delta R=0,
+$$
+
+then
+
+$$
+\Delta A=\Delta P.
+$$
+
+All of the directional possibility remains locally available.
+
+That is very different from stall.
+
+At stall,
+
+$$
+\Delta R=\Delta P
+$$
+
+and therefore
+
+$$
+\Delta A=0.
+$$
+
+So two apparently quiet or zero-output limits can have opposite meanings.
+
+One can correspond to no productive retention.
+
+The other corresponds to complete retention.
+
+This distinction later becomes directly readable in muscle mechanics.
+
+## Why Mechanical Load Is a Useful Example
+
+Muscle provides an especially clear physical calibration.
+
+A myosin transition has a mechanically distinguishable interval.
+
+In a suitable physical mapping,
+
+$$
+\lambda_n
+\longrightarrow
+d,
+$$
+
+where \(d\) is a myosin-scale displacement.
+
+The productive constraint acquires a force coordinate,
+
+$$
+C_{n+1}^{\mathrm{out}}
+\longrightarrow
+F.
+$$
+
+Then local retention acquires the energetic read
+
+$$
+\Delta R
+\longrightarrow
+Fd.
+$$
+
+This is a physical calibration of the primitive relation
+
+$$
+\Delta R
+=
+C^{\mathrm{out}}\lambda.
+$$
+
+It does not define \(C\) primitively as force or \(\lambda\) primitively as
+distance.
+
+The count relation comes first.
+
+The mechanical interpretation comes later.
+
+## Changing Constraint Need Not Change Multiplicity
+
+This provides a clean separation among several quantities.
+
+Suppose the native multiplicity landscape remains fixed:
+
+$$
+\mathcal{W}_n
+=
+\{W_{n,i}\}.
+$$
+
+Suppose the enclosing possibility relation also remains fixed.
+
+Changing the productive constraint can still change
+
+$$
+\Delta R.
+$$
+
+Therefore it can change
+
+$$
+\Delta A.
+$$
+
+And because asymmetry biases occupancy, the realized state distribution can
+change.
+
+Thus:
+
+$$
+\boxed{
+\text{changing constraint}
+\not\Rightarrow
+\text{changing native multiplicity}.
+}
+$$
+
+A system can move through different realized states of the same multiplicity
+landscape because its enclosing constraint has changed.
+
+This distinction is particularly useful in systems such as muscle, where
+mechanical load can be varied experimentally while the molecular state
+architecture remains present.
+
+## Total Constraint and Productive Constraint Are Not the Same
+
+The local retention equation uses only the productive/output component
+
+$$
+C_{n+1}^{\mathrm{out}}.
+$$
+
+But the total enclosing constraint can contain more than one readable
+component.
+
+R<sup>2</sup>D writes
+
+$$
+\boxed{
+C_{n+1}
+=
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}.
+}
+$$
+
+Here
+
+$$
+C_{n+1}^{\mathrm{out}}
+$$
+
+is associated with realization that remains readable as distinguishable
+output.
+
+The term
+
+$$
+C_{n+1}^{\Phi}
+$$
+
+is the **background-associated constraint component**.
+
+The two act on the same enclosing transition.
+
+They are not two separate physical transitions.
+
+They are not two independent occurrence pathways.
+
+They are two boundary-specific readings associated with one enclosing
+realization.
+
+## Local Retention Uses the Productive Component
+
+At the local boundary,
+
+$$
+\boxed{
+\Delta R_n
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_n.
+}
+$$
+
+Only the productive/output component enters local retention.
+
+The background-associated component is not added to \(\Delta R_n\).
+
+This preserves an important distinction:
+
+> **local retention is not the same quantity as total enclosing constraint.**
+
+At the enclosing boundary, however, the full constraint
+
+$$
+C_{n+1}
+$$
+
+enters the recurrence-weighted R<sup>2</sup>D law.
+
+That law therefore connects two different boundary-specific reads of the
+same recursively organized relation.
+
+[The R²D Law →](r2d-law.qmd)
+
+## Productive and Background-Associated Constraint
+
+The decomposition can be summarized as
+
+$$
+\boxed{
+C_{n+1}
+=
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}.
+}
+$$
+
+The productive constrained distinguishability is
+
+$$
+C_{n+1}^{\mathrm{out}}\lambda_{n+1}.
+$$
+
+The background-associated constrained distinguishability is
+
+$$
+C_{n+1}^{\Phi}\lambda_{n+1}.
+$$
+
+These are distinct reads of the same enclosing occurrence.
+
+The existence of the background-associated component does not mean that
+background itself is a third directed local coordinate.
+
+The relationship between local nonreciprocal occurrence realization and
+enclosing background is introduced separately by the R<sup>2</sup>D Second
+Law.
+
+[The R²D Second Law →](second-law.qmd)
+
+## Constraint Does Not "Push" the Component
+
+The equation
+
+$$
+\Delta R
+=
+C^{\mathrm{out}}\lambda
+$$
+
+can invite a mechanical picture in which constraint physically pushes
+against a component.
+
+That interpretation is too specific for Part I.
+
+R<sup>2</sup>D has not yet defined a particle, force, trajectory, or spatial
+displacement.
+
+The more primitive statement is:
+
+> **An enclosing constraint acts across a boundary-readable distinction and
+> thereby retains part of the directional possibility associated with that
+> distinction.**
+
+A later physical theory can decide how that relation is measured.
+
+## The Causal Architecture
+
+Possibility came from enclosing compatibility:
+
+$$
+\Theta_{n+1|n,i}
+\rightarrow
+P_{n,i}
+\rightarrow
+\Delta P_{n,i\rightarrow k}.
+$$
+
+Constraint adds a second enclosing relation:
+
+$$
+C_{n+1}^{\mathrm{out}}
+\quad\text{acting through}\quad
+\lambda_{n,i\rightarrow k}.
+$$
+
+Together they define local asymmetry:
+
+$$
+\boxed{
+\Delta A_{n,i\rightarrow k}
+=
+\Delta P_{n,i\rightarrow k}
+-
+C_{n+1}^{\mathrm{out}}
+\lambda_{n,i\rightarrow k}.
+}
+$$
+
+The primitive ordering is therefore
+
+$$
+\boxed{
+\begin{array}{c}
+\text{enclosing compatibility}
+\rightarrow
+\Delta P
+\\[4pt]
+\text{enclosing constraint}
+\times
+\text{local distinguishability}
+\rightarrow
+\Delta R
+\\[4pt]
+\Delta P-\Delta R
+\rightarrow
+\Delta A
+\end{array}
+}
+$$
+
+The subordinate transition then realizes occupancy within that organized
+relation.
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## Why Constraint Matters
+
+Constraint makes several distinctions possible that would otherwise be
+collapsed.
+
+It separates:
+
+- **what is possible** from **what is retained**;
+- **a readable distinction** from **constraint acting on that distinction**;
+- **directional support** from **opposition to that support**;
+- **zero retention** from **complete retention**;
+- and **local productive retention** from **total enclosing constrained
+  realization**.
+
+These distinctions allow the same primitive architecture to be mapped later
+onto thermodynamic, mechanical, chemical, biological, and other physical
+systems.
+
+## Core Equations
+
+### Distinguishable interval
+
+$$
+\boxed{
+\lambda_{n,k\rightarrow i}
+=
+-
+\lambda_{n,i\rightarrow k}
+}
+$$
+
+### Total enclosing constraint
+
+$$
+\boxed{
+C_{n+1}
+=
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}
+}
+$$
+
+### Local retention
+
+$$
+\boxed{
+\Delta R_{n,i\rightarrow k}
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_{n,i\rightarrow k}
+}
+$$
+
+### Net local asymmetry
+
+$$
+\boxed{
+\Delta A_{n,i\rightarrow k}
+=
+\Delta P_{n,i\rightarrow k}
+-
+\Delta R_{n,i\rightarrow k}
+}
+$$
+
+or
+
+$$
+\boxed{
+\Delta A_{n,i\rightarrow k}
+=
+\Delta P_{n,i\rightarrow k}
+-
+C_{n+1}^{\mathrm{out}}
+\lambda_{n,i\rightarrow k}.
+}
+$$
+
+### Complete retention
+
+$$
+\boxed{
+\Delta P=\Delta R
+\quad\Rightarrow\quad
+\Delta A=0.
+}
+$$
+
+## The Key Distinction
+
+The simplest summary is:
+
+> **\(\lambda\) defines the readable difference.**
+
+> **\(C^{\mathrm{out}}\) defines the productive constraint acting across that
+> difference.**
+
+> **\(\Delta R=C^{\mathrm{out}}\lambda\) is the possibility retained against
+> the distinguishable change.**
+
+Possibility and retention can now be compared directly.
+
+Their difference is local asymmetry.
+
+---
+
+## Next
+
+[Asymmetry →](asymmetry.qmd)
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+[Closure →](closure.qmd)
+
+[The R²D Law →](r2d-law.qmd)
+
+[Back to Understand R²D →](index.qmd)

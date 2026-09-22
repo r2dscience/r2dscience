@@ -1,7 +1,1212 @@
 ---
-title: "Test R²D"
+title: "Applications"
+subtitle: "Where R²D is tested against existing science"
+toc: true
 ---
 
-# Test R²D
+# Applications
 
-Explore applications of R²D across physics, chemistry, biology, and geometry.
+A mathematical framework becomes scientifically useful only when it can be
+tested against things science already knows.
+
+R<sup>2</sup>D begins with a dimensionless count architecture:
+
+$$
+\text{boundary}
+\rightarrow
+\text{distinction}
+\rightarrow
+\text{multiplicity}
+\rightarrow
+\text{realization}
+\rightarrow
+\text{closure}
+\rightarrow
+\text{recurrence}.
+$$
+
+Applications ask whether that architecture survives contact with physical
+science.
+
+The goal is not to rename familiar equations.
+
+The goal is to determine whether independently defined R<sup>2</sup>D
+relations map onto established scientific quantities **without changing their
+primitive definitions to make the answer fit**.
+
+> **Don't believe R<sup>2</sup>D. Test it.**
+
+## Three Application Programs
+
+The current application program has three layers.
+
+| Program | Question | Primary role |
+|---|---|---|
+| **Thermodynamics** | Can the dimensionless count architecture be mapped onto jointly measurable physical quantities? | Calibration |
+| **Projection and deprojection** | What physical descriptions appear when only part of the recursive relation remains readable? | Reconstruction |
+| **Addenda** | Does the same architecture survive new systems, limits, and experimental tests? | Stress testing |
+
+These layers do not have equal evidentiary status.
+
+Thermodynamics currently provides the strongest direct physical mappings.
+
+Projection develops a broader interpretation of quantum, gravitational, and
+other physical coordinates.
+
+The addenda push the framework into new systems where it can succeed, fail, or
+require revision.
+
+# 1. Thermodynamics — The Calibration Regime
+
+Thermodynamics is where R<sup>2</sup>D first becomes directly physical.
+
+The reason is unusual.
+
+At ordinary thermodynamic scales, many parts of the recursive architecture
+remain accessible at the same time.
+
+One can measure:
+
+- state occupancy;
+- chemical direction;
+- temperature;
+- recurrence rate;
+- mechanical constraint;
+- work;
+- heat;
+- and entropy production.
+
+That makes thermodynamics a **joint-readability regime**.
+
+The dimensionless relations introduced before physical units can therefore be
+compared directly with measurable physical quantities.
+
+## Entropy Reads Multiplicity
+
+R<sup>2</sup>D begins with multiplicity:
+
+$$
+W_{n,i}.
+$$
+
+Its logarithmic coordinate is
+
+$$
+\boxed{
+S_{n,i}
+=
+\ln W_{n,i}.
+}
+$$
+
+Thermodynamics supplies the familiar dimensional read
+
+$$
+\boxed{
+S_{n,i}^{\mathrm{th}}
+=
+k_B\ln W_{n,i}.
+}
+$$
+
+The logical order is therefore
+
+$$
+\boxed{
+\text{multiplicity}
+\rightarrow
+\text{logarithmic count}
+\rightarrow
+\text{thermodynamic entropy}.
+}
+$$
+
+Entropy does not create multiplicity.
+
+It physically reads it.
+
+## Gibbs Free Energy Reads Compatible-Count Direction
+
+For the fixed-temperature, fixed-pressure chemical realization developed in
+the Canon, the complete compatible-count direction maps onto the Gibbs
+reaction criterion.
+
+At the molecular-event level,
+
+$$
+\boxed{
+\Delta S+\Delta P
+=
+-
+\frac{\Delta g}{k_BT}.
+}
+$$
+
+The left side is defined before energetic units are assigned.
+
+The right side is the thermodynamic energetic read.
+
+Thus:
+
+$$
+\boxed{
+\text{compatible enclosing count direction}
+\longleftrightarrow
+\text{Gibbs reaction direction}.
+}
+$$
+
+This is one of the strongest bridges in the current R<sup>2</sup>D program.
+
+It is an exact mapping within its specified thermodynamic domain.
+
+It is not yet a derivation of thermodynamics from the R<sup>2</sup>D axioms.
+
+## Chemical Activity Reads a Change in Possibility
+
+Chemical activity changes the enclosing conditions under which a local
+chemical state is realized.
+
+Within the R<sup>2</sup>D mapping, this gives a physical read of changing
+enclosing possibility.
+
+Schematically,
+
+$$
+\boxed{
+\text{activity change}
+\longleftrightarrow
+\text{change in enclosing compatible count}.
+}
+$$
+
+This makes chemical direction explicitly recursive.
+
+The molecular transition realizes the reaction.
+
+The enclosing thermodynamic relation determines which direction is supported.
+
+## Work Reads Retained Distinguishability
+
+Primitive retention is
+
+$$
+\boxed{
+\Delta R
+=
+C^{\mathrm{out}}\lambda.
+}
+$$
+
+In a mechanical realization,
+
+$$
+C^{\mathrm{out}}
+$$
+
+can acquire a generalized-force read and
+
+$$
+\lambda
+$$
+
+a generalized-displacement read.
+
+Then
+
+$$
+C^{\mathrm{out}}\lambda
+$$
+
+can acquire a familiar work-like form.
+
+For example,
+
+$$
+\boxed{
+C^{\mathrm{out}}\lambda
+\xrightarrow{\text{mechanical read}}
+F d.
+}
+$$
+
+Pressure-volume work, tensile work, chemical coupling, electrical work, and
+other conjugate pairs can occupy the same structural role.
+
+The physical coordinate changes.
+
+The primitive relation does not.
+
+## Irreversibility Reads Background Production
+
+The R<sup>2</sup>D Second Law defines local occurrence-count nonreciprocity:
+
+$$
+L_{\tau}
+=
+\ln
+\left(
+\frac{\nu_H}{\nu_L}
+\right)
+\geq0.
+$$
+
+and relates it to enclosing background:
+
+$$
+\boxed{
+\delta_{\mathcal C}\Phi
+=
+L_{\tau}.
+}
+$$
+
+Thermodynamics then provides the dimensional entropy read
+
+$$
+\boxed{
+S_{\mathrm{gen},\mathcal C}^{\mathrm{th}}
+=
+k_B
+\delta_{\mathcal C}\Phi
+=
+k_B L_{\tau}.
+}
+$$
+
+Thus generated thermodynamic entropy is mapped onto the enclosing read of
+nonreciprocal local realization.
+
+This keeps several familiar quantities distinct:
+
+$$
+\boxed{
+\text{heat}
+\neq
+\text{work}
+\neq
+\text{constraint}
+\neq
+\text{entropy production}.
+}
+$$
+
+Each can exist in a reversible process.
+
+Irreversibility enters through nonreciprocity.
+
+## Muscle Provides the Experimental Calibration
+
+Muscle is the physical system from which much of the R<sup>2</sup>D program
+emerged.
+
+It is unusually useful because several recursively related quantities can be
+measured in the same functioning system.
+
+At molecular and ensemble boundaries, experiments can access:
+
+- myosin structural-state occupancy;
+- ATP-dependent chemical direction;
+- ATPase and molecular cycling;
+- muscle force;
+- shortening;
+- mechanical work;
+- heat production;
+- and frequency-dependent mechanical response.
+
+The system therefore exposes both subordinate realization and enclosing
+function.
+
+## The Hill Relation Is a Critical Test
+
+A.V. Hill's force-velocity relation partitions muscle free-energy realization
+between mechanical output and shortening heat.
+
+After the required physical energetic and rate mappings are supplied, its
+structure can be compared directly with the R<sup>2</sup>D relation
+
+$$
+\boxed{
+\Delta A_{\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n}.
+}
+$$
+
+This makes Hill's relation an empirical calibration of the recursive
+architecture.
+
+It should not be described as though the Hill parameters had been derived
+from primitive combinatorics.
+
+The stronger claim is testable:
+
+> **Do independently measurable chemical, structural, mechanical, and
+> recurrence coordinates occupy the positions predicted by the dimensionless
+> R<sup>2</sup>D law?**
+
+That is the thermodynamic test.
+
+# 2. Projection — What Physics Builds From What Remains Readable
+
+Thermodynamics is informative because distinguishability and recurrence can
+remain jointly accessible.
+
+But they need not remain jointly readable at every boundary.
+
+The next application asks:
+
+> **What scientific description appears when one side of the recursive
+> relation becomes unreadable?**
+
+This is the projection program.
+
+The Canon develops the readability architecture first and then asks how
+familiar physical objects and coordinates arise from what remains.
+
+## Three Readability Regimes
+
+The central picture is
+
+$$
+\boxed{
+\text{Quantum}
+\longleftrightarrow
+\text{Thermodynamics}
+\longleftrightarrow
+\text{Gravity}.
+}
+$$
+
+The arrows indicate changing readability.
+
+They do **not** mean that quantum systems physically transform into
+thermodynamic systems and then into gravitational systems.
+
+The proposed regimes are:
+
+| Regime | Distinguishability | Recurrence |
+|---|---|---|
+| Quantum-facing | increasingly unreadable | readable |
+| Thermodynamic | readable | readable |
+| Gravitational-facing | readable | increasingly unreadable |
+
+Thermodynamics occupies the middle because enough of both relations remains
+accessible to expose the recursive architecture directly.
+
+## The Quantum-Facing Projection
+
+Toward the quantum-facing horizon, subordinate distinguishability becomes
+unreadable while recurrence remains accessible.
+
+The surviving physical description therefore becomes increasingly organized
+around quantities such as:
+
+- recurrence frequency;
+- phase;
+- occupancy;
+- amplitude;
+- normalized probability;
+- spectral state;
+- and particle count.
+
+The R<sup>2</sup>D question is not whether quantum mechanics works.
+
+It does.
+
+The question is:
+
+> **What primitive count relations are the quantum variables reading once
+> subordinate distinguishability is no longer available?**
+
+The program therefore examines blackbody radiation, atomic spectral closure,
+measurement, phase, wavefunction structure, and gauge relations as
+recurrence-dominant physical reads.
+
+## The Gravitational-Facing Projection
+
+Toward the opposite horizon, enclosing distinguishability remains readable
+while the relevant enclosing recurrence becomes progressively inaccessible.
+
+The physical description then becomes increasingly geometric.
+
+Candidate surviving reads include:
+
+- distance;
+- area;
+- force;
+- field;
+- metric;
+- curvature;
+- horizon structure;
+- and spacetime geometry.
+
+The R<sup>2</sup>D question again begins one level earlier:
+
+> **What count relation remains readable before it is represented as
+> gravitational geometry?**
+
+This leads to the area-before-radius program and to the proposed
+deprojection of gravitational geometry into boundary-relative
+distinguishability.
+
+## Projection Is Not Illusion
+
+R<sup>2</sup>D does not use *projection* to mean that a physical quantity is
+fake.
+
+A projected quantity can be:
+
+- physically real;
+- directly measurable;
+- mathematically exact;
+- experimentally indispensable;
+- and extraordinarily predictive.
+
+Projection becomes an ontological error only when a boundary-specific
+physical read is promoted into the primitive cause of the recursive relation
+from which it arises.
+
+Thus:
+
+> **A projected coordinate can be completely real without being primitive.**
+
+## Primitive Objects Are One Projection
+
+A particle can be real.
+
+A molecule can be real.
+
+A mass can be real.
+
+A charge can be real.
+
+A cell can be real.
+
+The projection question is whether the object's readable identity should be
+assumed to remain primitively unchanged across every count boundary.
+
+R<sup>2</sup>D proposes instead:
+
+$$
+\boxed{
+\text{object at }B_n
+\not\Rightarrow
+\text{primitive object at every }B.
+}
+$$
+
+## Interactions Are Another Projection
+
+Once independently primitive objects are assumed, their stable correlations
+are naturally represented as direct interactions.
+
+R<sup>2</sup>D asks whether some such correlations instead reflect common
+enclosing organization:
+
+$$
+\boxed{
+B_{n+1}
+\Longrightarrow
+\left(
+B_{n,\alpha},
+B_{n,\beta}
+\right).
+}
+$$
+
+If the enclosing relation is omitted, the surviving local correlation may be
+represented as
+
+$$
+B_{n,\alpha}
+\leftrightarrow
+B_{n,\beta}.
+$$
+
+The interaction can remain mathematically predictive.
+
+The question concerns its causal position.
+
+## Organizing Fields and Geometry Are a Third Projection
+
+A further step is then natural.
+
+Stable object-object interactions require mathematical organization.
+
+Science introduces:
+
+- potentials;
+- fields;
+- wavefunctions;
+- connections;
+- metrics;
+- curvature.
+
+R<sup>2</sup>D does not reject these structures.
+
+It asks whether they are the primitive organization or the mathematical
+coordinate system required to represent a boundary-relative projection.
+
+The projected sequence is therefore
+
+$$
+\boxed{
+\text{recursive organization}
+\rightarrow
+\text{object}
+\rightarrow
+\text{interaction}
+\rightarrow
+\text{field or geometry}.
+}
+$$
+
+## Part IV Follows This Projection Outward
+
+The projection program examines, in sequence, physical reads associated with:
+
+$$
+\boxed{
+\text{particles}
+\rightarrow
+\text{mass and charge}
+\rightarrow
+\text{motion}
+\rightarrow
+\text{fields}
+}
+$$
+
+followed by
+
+$$
+\boxed{
+\text{quantum phase and amplitude}
+}
+$$
+
+and
+
+$$
+\boxed{
+\text{gravitational geometry and spacetime}.
+}
+$$
+
+Cosmology asks what happens when these projected coordinates are extended to
+the largest readable physical boundaries.
+
+## Deprojection Runs the Logic Backward
+
+Applications are not limited to constructing projections.
+
+They can also begin with an established physical law and ask:
+
+> **What dimensionless count relation must exist for this physical equation
+> to be readable?**
+
+That is **deprojection**.
+
+Schematically,
+
+$$
+\boxed{
+\text{established physical law}
+\rightarrow
+\text{identify boundary}
+\rightarrow
+\text{identify surviving read}
+\rightarrow
+\text{recover recursive count relation}.
+}
+$$
+
+This is one of the main ways R<sup>2</sup>D can be used as a discovery tool.
+
+# 3. The Addenda — The Active Stress-Test Program
+
+The core Canon develops the general architecture.
+
+The addenda ask whether that architecture survives new systems that were not
+required to define the core.
+
+They are intentionally more exploratory.
+
+Some addenda establish exact mathematical results.
+
+Some construct physical mappings.
+
+Some provide empirical calibrations.
+
+Some are conditional derivations.
+
+Others identify open targets.
+
+They should not all be read as having the same logical status.
+
+> **The addenda are where R<sup>2</sup>D is pushed hard enough to break.**
+
+## Continuum Breakdown and Navier–Stokes
+
+The first addendum applies recursive replacement to the problem of a
+continuum singularity.
+
+The central question is:
+
+> **Can a continuous field remain a valid physical read as the count domain
+> supporting that continuum becomes sparsely occupied?**
+
+For the finite-time Navier–Stokes construction examined there, the
+R<sup>2</sup>D argument is that a finite physical occupancy threshold is
+crossed before the mathematical continuum reaches its formal singular limit.
+
+Schematically,
+
+$$
+\boxed{
+\text{dense count domain}
+\rightarrow
+\text{sparse realization}
+\rightarrow
+\text{change of readable boundary}
+\rightarrow
+\text{formal continuum singularity if extrapolated further}.
+}
+$$
+
+The proposal is therefore not that physical reality suddenly becomes
+discrete at the singularity.
+
+It is that the continuum description was already a projection, and that the
+projection can cease to be physically admissible before its own mathematics
+diverges.
+
+The addendum does not derive Navier–Stokes from R<sup>2</sup>D.
+
+It defines the next target:
+
+> **What invariant recursive count relation projects as the Navier–Stokes
+> equation?**
+
+## Mass, Scale, and the Quantum–Gravity Crossover
+
+The next addenda ask whether familiar physical quantities belong to a
+boundary before they belong to a universal physical coordinate system.
+
+Mass is treated as a physical read of boundary coupling rather than as a
+primitive substance.
+
+The complementary-readability program then asks whether quantum phase and
+gravitational radius are opposite physical reads of a more primitive
+recurrence-distinguishability relation.
+
+This leads to a different interpretation of the Planck regime.
+
+Rather than assuming that Planck quantities are themselves the primitive
+architecture, R<sup>2</sup>D asks whether they mark a crossover between
+physical rulers defined by opposite readability limits.
+
+The common target remains:
+
+$$
+\boxed{
+\text{unification before units}.
+}
+$$
+
+# Biology — The Directly Observable Recursive Window
+
+Addenda 4–11 form a particularly coherent application program.
+
+Biology is useful because several neighboring recursive boundaries can remain
+experimentally accessible within the same physical specimen.
+
+In muscle, one can observe an enclosing mechanical function while also
+measuring ensemble occupancy, individual molecular states, and faster
+subordinate dynamics.
+
+That makes recursive replacement unusually difficult to hide.
+
+## Addendum 4 — Myosin Switch Realization
+
+**Enclosing Organization Occurs Before Myosin Switch Realization**
+
+The spectroscopically resolved myosin-switch relation is separated into
+chemical possibility and mechanical retention.
+
+The central architecture is
+
+$$
+\boxed{
+A_M
+=
+P_M-R_M.
+}
+$$
+
+The switch remains the local realization mechanism.
+
+Its direction is organized by a relation that extends beyond the isolated
+switch.
+
+## Addendum 5 — Ensemble Replacement
+
+**Ensemble Replacement Occurs Before Muscle-Scale Statehood**
+
+Individual myosin switches possess identifiable states at their own
+boundaries.
+
+At the ensemble boundary, however, many distinct switch assignments can
+realize the same ensemble occupancy.
+
+Their identities are replaced by multiplicity.
+
+Thus:
+
+$$
+\boxed{
+\text{individual switch assignments}
+\rightarrow
+\text{ensemble multiplicity and occupancy}.
+}
+$$
+
+The individual switches remain physically necessary.
+
+They do not remain the state coordinates of the ensemble.
+
+## Addendum 6 — Replacement Across Biological Timescales
+
+**Closure-Complete Subordinate Dynamics Occur Before Biological Function**
+
+The myosin switch is not primitive either.
+
+It is itself realized through faster protein dynamics, which are realized
+through still faster molecular recurrence.
+
+The same recursive operation can therefore repeat:
+
+$$
+\boxed{
+\text{native trajectory}
+\rightarrow
+\text{closure}
+\rightarrow
+\text{replacement}
+\rightarrow
+\text{new enclosing state}.
+}
+$$
+
+No single trajectory must persist across the entire biological hierarchy.
+
+## Addendum 7 — Frequency-Selected Readability
+
+**Frequency-Selected Readability Occurs Before Cross-Scale Spectra**
+
+Mechanical oscillation provides an experimental way to move the read through
+recursive depth.
+
+The physical specimen remains the same muscle.
+
+But changing perturbation frequency changes which native recurrence can
+complete relative to the measurement.
+
+Thus:
+
+$$
+\boxed{
+B_{\mathrm{system}}
+=
+\text{constant},
+}
+$$
+
+while
+
+$$
+\boxed{
+B_{\mathrm{read}}
+=
+B_{\mathrm{read}}(f_p).
+}
+$$
+
+Frequency therefore acts as an experimental selector of candidate recursive
+depth.
+
+## Addendum 8 — Biological Replacement Is Directly Observable
+
+**Biological Function Makes Recursive Replacement Observable**
+
+Biology provides more than multiple timescales.
+
+It provides independently identifiable state boundaries on both sides of
+replacement.
+
+One can measure the enclosing function.
+
+One can measure subordinate state occupancy.
+
+One can perturb subordinate dynamics.
+
+And one can shift the read among them.
+
+Thus biology provides a regime in which recursive replacement can be
+**observed rather than inferred solely from a projected theory**.
+
+## Addendum 9 — Biology Between the Two Horizons
+
+**Joint Readability Occurs Before the Quantum and Gravitational Horizons**
+
+The biological window is interpreted as a directly accessible middle regime.
+
+Here both distinguishability and recurrence can remain readable:
+
+$$
+\boxed{
+(\lambda,\nu)
+=
+(\mathrm{readable},\mathrm{readable}).
+}
+$$
+
+Moving toward the quantum-facing limit loses subordinate distinction first.
+
+Moving toward the gravitational-facing limit loses the relevant enclosing
+recurrence first.
+
+Biology therefore provides a possible experimental bridge between the
+dimensionless architecture and the two one-sided projection regimes.
+
+## Addendum 10 — Protein Folding
+
+**Folded Statehood Occurs Before the Folding Trajectory**
+
+A folded protein is not identified with one unique microscopic
+configuration.
+
+Many subordinate conformations and many different folding histories can
+realize the same folded structural state.
+
+Thus:
+
+$$
+\boxed{
+\text{conformational multiplicity}
+\rightarrow
+\text{folded structural statehood}.
+}
+$$
+
+The folding trajectory is real at the boundary where it is readable.
+
+The folded state belongs to a new enclosing classification.
+
+## Addendum 11 — Protein Function
+
+**Enclosing Relation Occurs Before Biological Function**
+
+Protein structure constrains what a protein can do.
+
+But structure alone does not uniquely define what function is realized.
+
+A motor requires mechanical constraint.
+
+An enzyme requires a reaction relation.
+
+A receptor requires ligand and network context.
+
+Thus:
+
+$$
+\boxed{
+\text{structure}
++
+\text{enclosing relation}
+\rightarrow
+\text{realized function}.
+}
+$$
+
+The sequence
+
+$$
+\text{sequence}
+\rightarrow
+\text{structure}
+\rightarrow
+\text{function}
+$$
+
+therefore contains multiple recursive replacements.
+
+Taken together, Addenda 4–11 produce the biological hierarchy
+
+$$
+\boxed{
+\text{subordinate recurrence}
+\rightarrow
+\text{closure}
+\rightarrow
+\text{replacement}
+\rightarrow
+\text{structure}
+\rightarrow
+\text{replacement}
+\rightarrow
+\text{function}.
+}
+$$
+
+# Gravity, Horizons, and Cosmology
+
+The later addenda push the same logic much farther into gravitational
+physics.
+
+The program asks whether familiar geometric relations can be reconstructed
+in a logical order that begins before metric geometry.
+
+Among the targets are:
+
+- boundary-relative motion and reference;
+- Lorentz and rapidity relations;
+- free fall;
+- tidal distinguishability;
+- curvature;
+- Keplerian closure;
+- inverse-square relations;
+- gravitational area and radius;
+- Schwarzschild clock-ruler structure;
+- horizons and horizon multiplicity;
+- gravitational background calibration;
+- source compatibility and Einstein geometry;
+- gravitational radiation;
+- de Sitter and Nariai boundary replacement;
+- cosmological expansion;
+- cosmological singularities;
+- and continuum-breakdown criteria.
+
+The status varies substantially across this program.
+
+Some results begin from established physical relations and deproject them.
+
+Some produce conditional derivations once a specified projection class and
+physical calibration are assumed.
+
+Some remain hypotheses about how gravitational geometry is generated from
+the more primitive count architecture.
+
+The important methodological rule is the same throughout:
+
+> **A successful downstream equation does not by itself establish the
+> primitive ontology assigned to its variables.**
+
+# Cosmology and Continuum Limits
+
+The cosmological addenda extend the projection problem to the largest
+physical boundaries.
+
+The central question is whether familiar cosmological coordinates remain
+valid when the boundary that defines them changes.
+
+The program therefore distinguishes:
+
+$$
+\boxed{
+\text{physical coordinate singularity}
+}
+$$
+
+from
+
+$$
+\boxed{
+\text{failure of the count architecture}.
+}
+$$
+
+A scale factor, density, temperature, or continuum field can become singular
+under extrapolation even if the more primitive count description requires a
+boundary replacement before that limit is physically realized.
+
+This parallels the Navier–Stokes question at a very different physical scale.
+
+The common problem is:
+
+> **When does a successful continuous projection cease to describe the count
+> domain capable of realizing it?**
+
+# One Architecture, Many Stress Tests
+
+The application program can now be summarized:
+
+$$
+\boxed{
+\begin{array}{ccc}
+\text{Thermodynamics}
+&
+\longrightarrow
+&
+\text{direct physical calibration}
+\\[8pt]
+\text{Quantum / Gravity}
+&
+\longrightarrow
+&
+\text{projection and deprojection}
+\\[8pt]
+\text{Biology}
+&
+\longrightarrow
+&
+\text{direct observation of recursive replacement}
+\\[8pt]
+\text{Continuum singularities}
+&
+\longrightarrow
+&
+\text{boundary-failure tests}
+\\[8pt]
+\text{Cosmology}
+&
+\longrightarrow
+&
+\text{largest-scale projection tests}
+\end{array}
+}
+$$
+
+These are not separate theories.
+
+They are attempts to break the same primitive grammar in different scientific
+domains.
+
+# How to Read the Status of an Application
+
+Every application should identify its logical status explicitly.
+
+### Exact mathematical consequence
+
+The result follows from the defined count architecture or established
+mathematics.
+
+### Physical mapping
+
+An R<sup>2</sup>D relation is assigned a measurable physical read.
+
+### Empirical calibration
+
+Independent measurements test whether the proposed physical quantities
+occupy the predicted R<sup>2</sup>D roles.
+
+### R<sup>2</sup>D postulate
+
+The relation is part of the proposed recursive framework but does not follow
+from combinatorics alone.
+
+### Conditional derivation
+
+A result follows once specified physical assumptions or a projection class
+are supplied.
+
+### Open hypothesis
+
+The mapping remains incomplete and defines a research target.
+
+These categories should not be blurred.
+
+An application becomes stronger by making its assumptions visible, not by
+calling every correspondence a derivation.
+
+# The Test
+
+For any new scientific problem, the R<sup>2</sup>D test is:
+
+1. Define the scientific object.
+
+2. Identify the boundary that defines its readable states.
+
+3. Separate multiplicity, occurrence, and occupancy.
+
+4. Identify the enclosing compatibility relation.
+
+5. Identify possibility, constraint, and retention.
+
+6. Determine what closes and what recurs.
+
+7. Write the dimensionless relation before assigning familiar physical
+   variables.
+
+8. Map independently measurable quantities onto that relation.
+
+9. Compare the result with established empirical law.
+
+10. State exactly where the mapping succeeds, where it remains conditional,
+    and where it fails.
+
+The order matters.
+
+> **Do not begin with the physical equation and rename its variables.**
+
+Instead:
+
+$$
+\boxed{
+\text{science}
+\rightarrow
+\text{boundary analysis}
+\rightarrow
+\text{R²D count structure}
+\rightarrow
+\text{physical remapping}
+\rightarrow
+\text{test}.
+}
+$$
+
+# Why Applications Matter for AI
+
+This is also where R<sup>2</sup>D becomes useful as an interface for
+AI-assisted science.
+
+AI can already manipulate equations extraordinarily well.
+
+The harder problem is deciding when two equations from different scientific
+domains describe the same underlying kind of relation.
+
+R<sup>2</sup>D provides a common representation in which AI can ask:
+
+- What is the object?
+- What boundary defines it?
+- What is possible count?
+- What is realized count?
+- What is retained?
+- What recurs?
+- What changes identity when the boundary changes?
+- Which physical quantities are primitive to the model, and which may be
+  downstream reads?
+
+That turns application into a repeatable workflow.
+
+> **Science supplies the empirical law.  
+> R<sup>2</sup>D supplies the common mathematical representation.  
+> AI can then test the mapping.**
+
+---
+
+## Try It
+
+[RUN R<sup>2</sup>D ON A SCIENTIFIC PROBLEM →](../run/index.qmd){.r2d-button .r2d-primary}
+
+[UNDERSTAND THE FORMALISM →](../understand/index.qmd){.r2d-button}
+
+[DEFINITIONS AND SYMBOLS →](../understand/definitions.qmd){.r2d-button}
+
+---
+
+> **Don't believe R<sup>2</sup>D. Run it against something that already has
+> to be true.**

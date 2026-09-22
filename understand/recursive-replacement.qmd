@@ -1,0 +1,711 @@
+---
+title: "Recursive Replacement"
+subtitle: "Changing the boundary changes the state domain"
+toc: true
+---
+
+# Recursive Replacement
+
+R<sup>2</sup>D defines microstate and macrostate relative to a count boundary.
+
+That immediately creates a consequence:
+
+> **When the boundary changes, the state domain changes.**
+
+A state that is readable as a macrostate at one boundary does not remain the
+same macrostate at the next boundary.
+
+Its count meaning changes.
+
+R<sup>2</sup>D calls this change in state domain **recursive replacement**.
+
+Recursive replacement is not the disappearance of the subordinate physical
+system.
+
+It is the replacement of one boundary-defined state classification by another.
+
+## Start With Boundary-Relative Statehood
+
+At boundary \(B_n\), a macrostate \(i\) is readable.
+
+Its formal microstates are compatible joint realizations of the immediately
+subordinate peer boundaries:
+
+$$
+\mu_n
+\in
+\mathfrak{M}_n.
+$$
+
+The classification map
+
+$$
+\pi_n:
+\mathfrak{M}_n
+\rightarrow
+\mathcal{M}_n
+$$
+
+assigns those compatible realizations to readable macrostates.
+
+Thus,
+
+$$
+\pi_n(\mu_n)=i.
+$$
+
+Now change the boundary.
+
+At \(B_{n+1}\), the formal microstate domain and classification map are
+different.
+
+The state \(i\) defined at \(B_n\) is no longer automatically a readable
+macrostate at \(B_{n+1}\).
+
+The count domain has changed.
+
+Therefore the state identity has changed.
+
+[Macrostate and Microstate →](macrostate-microstate.qmd)
+
+## A State Is Not Carried Upward Unchanged
+
+It is tempting to picture scale hierarchically:
+
+$$
+\text{small object}
+\rightarrow
+\text{larger object}
+\rightarrow
+\text{still larger object},
+$$
+
+while imagining that the smaller objects remain the same primitive state
+variables at every level.
+
+R<sup>2</sup>D proposes something different.
+
+At each boundary, the readable states belong to that boundary.
+
+Changing the boundary therefore gives:
+
+$$
+\boxed{
+\text{state domain at } B_n
+\rightarrow
+\text{boundary change}
+\rightarrow
+\text{new state domain at } B_{n+1}
+}
+$$
+
+The subordinate state can remain physically consequential.
+
+But it does not remain the same readable state at the enclosing boundary.
+
+> **Recursive replacement preserves consequence without preserving state
+> identity.**
+
+## A Coin Example
+
+Consider one coin.
+
+At the single-coin boundary \(B_{n-1}\), the readable macrostates are
+
+$$
+H
+\qquad\text{and}\qquad
+T.
+$$
+
+A transition such as
+
+$$
+H \rightarrow T
+$$
+
+is directly readable at that boundary.
+
+Now consider an ensemble of ten such coins at \(B_n\).
+
+The readable macrostate may instead be
+
+$$
+N_H=3.
+$$
+
+One compatible realization might be
+
+$$
+HHTTTHTTTT,
+$$
+
+while another might be
+
+$$
+THTTHTHTTT.
+$$
+
+At \(B_n\), both are classified as
+
+$$
+N_H=3.
+$$
+
+The individual assignment of heads and tails has not become the ensemble
+macrostate.
+
+It has been replaced by a new boundary-defined classification.
+
+The ensemble does not ask:
+
+> Which exact sequence of single-coin states exists?
+
+It asks:
+
+> Which ensemble state is readable here?
+
+[The Coins Example →](coins.qmd)
+
+## Replacement Is Many-to-One
+
+Many subordinate realizations can correspond to one enclosing state.
+
+For example,
+
+$$
+\mu_n^{(1)},
+\mu_n^{(2)},
+\mu_n^{(3)},
+\dots
+$$
+
+may all satisfy
+
+$$
+\pi_n(\mu_n^{(r)})=i.
+$$
+
+Thus several distinguishable subordinate realizations become one readable
+enclosing classification.
+
+Schematically:
+
+$$
+\begin{aligned}
+\mu_n^{(1)} &\rightarrow i \\
+\mu_n^{(2)} &\rightarrow i \\
+\mu_n^{(3)} &\rightarrow i
+\end{aligned}
+$$
+
+The enclosing state does not preserve enough information to reconstruct which
+subordinate realization supplied it uniquely.
+
+This is not an error.
+
+It is what the enclosing state **is**.
+
+Its multiplicity is
+
+$$
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+$$
+
+So multiplicity itself records the many-to-one structure of replacement.
+
+[Multiplicity →](multiplicity.qmd)
+
+## Replacement Is Not Destruction
+
+Suppose a subordinate path is readable at \(B_n\).
+
+After the boundary changes to \(B_{n+1}\), that path may no longer remain
+individually readable.
+
+This does not mean the subordinate realization never occurred.
+
+Nor does it mean its physical consequences vanish.
+
+The path remains defined relative to the boundary at which it was a readable
+state relation.
+
+What changes is its **count identity** at the enclosing boundary.
+
+Thus:
+
+$$
+\boxed{
+\text{subordinate state identity is replaced}
+}
+$$
+
+while
+
+$$
+\boxed{
+\text{the recursive relation can remain consequential}.
+}
+$$
+
+This distinction becomes important throughout R<sup>2</sup>D.
+
+## Replacement Is Not Coarse-Graining
+
+Ordinary coarse-graining is often pictured as
+
+$$
+\text{same microscopic reality}
+\rightarrow
+\text{less detailed description}.
+$$
+
+The microscopic state remains the presumed primitive object.
+
+Information about it is merely ignored, averaged, or unresolved.
+
+R<sup>2</sup>D makes a stronger claim.
+
+When the count boundary changes,
+
+$$
+\boxed{
+\text{the classification itself changes}.
+}
+$$
+
+The enclosing macrostate is not simply a lower-resolution version of the
+subordinate state.
+
+It belongs to a different state domain.
+
+So the R<sup>2</sup>D sequence is
+
+$$
+\boxed{
+\text{subordinate state}
+\rightarrow
+\text{boundary change}
+\rightarrow
+\text{replacement by enclosing statehood}.
+}
+$$
+
+[Why R²D Is Not Coarse-Graining →](not-coarse-graining.qmd)
+
+## Macrostate Here, Microstate There
+
+The replacement becomes especially clear for transitions.
+
+Suppose
+
+$$
+u \rightarrow v
+$$
+
+is readable as a macrostate transition at subordinate boundary
+\(B_{n-1,\alpha}\).
+
+Relative to the enclosing boundary \(B_n\), that same subordinate change
+participates in a formal microstate transition.
+
+Thus:
+
+$$
+\boxed{
+\text{macrostate transition at } B_{n-1}
+=
+\text{microstate transition relative to } B_n.
+}
+$$
+
+Nothing requires the physical occurrence itself to disappear.
+
+Its count meaning changes because the boundary changes.
+
+This is why "micro" and "macro" cannot designate absolute physical scales in
+R<sup>2</sup>D.
+
+They designate relations to a boundary.
+
+## Replacement Changes What the Object Is
+
+Consider a molecular motor.
+
+At one boundary, a conformational state of a myosin molecule may be the
+scientific object.
+
+At another boundary, an ensemble distribution of myosin states may be the
+scientific object.
+
+At another, muscle force or shortening may define the readable state.
+
+These are not increasingly blurry descriptions of one myosin molecule.
+
+They are different boundary-defined scientific objects.
+
+Schematically:
+
+$$
+\text{molecular state}
+\rightarrow
+\text{ensemble state}
+\rightarrow
+\text{muscle state}.
+$$
+
+Each arrow changes the count domain.
+
+The subordinate relation remains necessary for realization.
+
+But its state identity is replaced.
+
+## Why This Matters in Biology
+
+Biological systems make recursive replacement unusually visible because
+several neighboring boundaries can often be experimentally accessed.
+
+For example:
+
+$$
+\text{fast protein dynamics}
+\rightarrow
+\text{molecular switch state}
+\rightarrow
+\text{ensemble occupancy}
+\rightarrow
+\text{muscle-scale function}.
+$$
+
+At each stage, a new state domain becomes readable.
+
+The faster subordinate trajectory does not remain the trajectory of the
+larger-scale biological function.
+
+Instead, many subordinate realizations can belong to one persistent
+enclosing state.
+
+This is why a protein structure, cellular state, or muscle state cannot be
+identified with one privileged subordinate molecular trajectory.
+
+## Replacement Is Recursive
+
+There is no reason for the process to stop after one boundary change.
+
+Suppose the hierarchy is
+
+$$
+B_{n-1}
+\rightarrow
+B_n
+\rightarrow
+B_{n+1}
+\rightarrow
+B_{n+2}.
+$$
+
+At every step:
+
+1. a boundary defines its own readable states;
+2. those states are realized through compatible subordinate relations;
+3. changing to the enclosing boundary changes the state domain;
+4. the subordinate state identity is replaced by a new enclosing
+   classification.
+
+Thus:
+
+$$
+\boxed{
+\text{replacement}
+\rightarrow
+\text{replacement}
+\rightarrow
+\text{replacement}
+\rightarrow \cdots
+}
+$$
+
+This is why the framework is called **Recursively Realized
+Distinguishability**.
+
+The architecture repeats across boundaries.
+
+## Replacement Does Not Mean Bottom-Up Construction
+
+One must be careful with the direction implied by the diagram.
+
+The sequence
+
+$$
+B_{n-1}
+\rightarrow
+B_n
+\rightarrow
+B_{n+1}
+$$
+
+does **not** mean that smaller states causally assemble themselves upward to
+create larger states.
+
+That would restore the bottom-up ontology R<sup>2</sup>D is trying to
+distinguish from the count architecture.
+
+The enclosing boundary defines which joint subordinate realizations are
+compatible with its state.
+
+Thus the causal relation is:
+
+$$
+\boxed{
+\text{enclosing organization}
+\Longrightarrow
+\text{compatible subordinate realization}.
+}
+$$
+
+The subordinate processes are necessary realizers.
+
+They do not thereby become the primitive source of the enclosing
+organization.
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## Two Directions Must Be Distinguished
+
+This produces one of the most important distinctions in R<sup>2</sup>D.
+
+There is a **causal direction**:
+
+$$
+\boxed{
+\text{enclosing relation}
+\Longrightarrow
+\text{compatible local realization}.
+}
+$$
+
+And there is a **change in count meaning** when the boundary changes:
+
+$$
+\boxed{
+\text{completed local realization}
+\mapsto
+\text{enclosing classification}.
+}
+$$
+
+These arrows point in opposite diagrammatic directions.
+
+They do not describe opposite causal flows.
+
+The first asks:
+
+> **Which subordinate realizations are compatible with this enclosing
+> relation?**
+
+The second asks:
+
+> **How is a completed subordinate realization counted when the boundary
+> changes?**
+
+The second operation is developed formally in R<sup>2</sup>D as
+**recursive carry**.
+
+[Recursive Carry →](recursive-carry.qmd)
+
+## Replacement and Carry Are Related but Distinct
+
+Recursive replacement describes the change of state domain itself.
+
+A state readable at one boundary is not preserved as the same state when the
+boundary changes.
+
+Recursive carry describes how a completed realization at one boundary is
+reclassified from the enclosing boundary.
+
+Thus:
+
+$$
+\boxed{
+\text{replacement}
+=
+\text{change in state domain}
+}
+$$
+
+whereas
+
+$$
+\boxed{
+\text{carry}
+=
+\text{change in count meaning of a completed realization}.
+}
+$$
+
+Keeping these concepts separate prevents an important mistake.
+
+Nothing has to be physically transported upward from one scale to another.
+
+The relation is a change of classification.
+
+## Replacement Preserves Multiplicity Consequence
+
+Suppose several subordinate realizations are compatible with one enclosing
+state.
+
+Their individual identities may no longer be readable at the enclosing
+boundary.
+
+But the fact that many subordinate realizations belong to that state remains
+mathematically consequential.
+
+It appears as multiplicity.
+
+Thus recursive replacement can remove readable subordinate identity while
+preserving the count consequence of subordinate degeneracy.
+
+This is one reason multiplicity is so central to R<sup>2</sup>D.
+
+> **Identity can be replaced while count consequence remains.**
+
+## A Recursive Counting Hierarchy
+
+The resulting architecture can be summarized schematically:
+
+$$
+\boxed{
+\begin{array}{c}
+\text{readable states at } B_{n-1}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{compatible realization at } B_n
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{readable states at } B_n
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{compatible realization at } B_{n+1}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{readable states at } B_{n+1}
+\end{array}
+}
+$$
+
+At no point must one fixed object retain the same state identity across the
+entire hierarchy.
+
+Instead, scientific objecthood is recursively replaced.
+
+[Scientific Objecthood →](scientific-objecthood.qmd)
+
+## Why Recursive Replacement Matters
+
+Once recursive replacement is accepted, several familiar problems look
+different.
+
+### The observer problem
+
+Increasing resolution changes the count boundary and therefore changes the
+state classification.
+
+### The many-body problem
+
+The enclosing boundary can classify a joint subordinate realization without
+preserving every peer trajectory as a readable state variable.
+
+### Emergence
+
+A larger-scale state need not be treated merely as shorthand for the same
+microscopic object.
+
+It is a state belonging to a different count domain.
+
+### Reduction
+
+Knowing every subordinate mechanism does not automatically specify the
+enclosing state classification or the enclosing relation that organizes
+those realizations.
+
+### Cross-scale causality
+
+A subordinate mechanism may be necessary for realization without being the
+primitive source of the enclosing organization.
+
+These are not separate additions to R<sup>2</sup>D.
+
+They follow from the same boundary-relative definition of state.
+
+## The Core Principle
+
+Recursive replacement can be summarized in one statement:
+
+> **Changing the count boundary changes what is being counted.**
+
+Or more formally:
+
+$$
+\boxed{
+B_n \rightarrow B_{n+1}
+\quad\Rightarrow\quad
+\mathcal{M}_n \not\equiv \mathcal{M}_{n+1}.
+}
+$$
+
+The two boundaries define different state domains.
+
+Therefore:
+
+> **A subordinate state does not persist unchanged into an enclosing
+> description. Its identity is replaced, while its recursive relation can
+> remain consequential.**
+
+That is recursive replacement.
+
+---
+
+## The Architecture So Far
+
+R<sup>2</sup>D can now be summarized as:
+
+$$
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinguishable states}
+\rightarrow
+\text{multiplicity}
+\rightarrow
+\text{occurrence and occupancy}
+\rightarrow
+\text{recursive replacement}.
+}
+$$
+
+The next question is:
+
+> **When a completed local realization is replaced at the enclosing
+> boundary, how is it counted there?**
+
+That is the problem of recursive carry.
+
+---
+
+## Next
+
+[Recursive Carry →](recursive-carry.qmd)
+
+[Possibility →](possibility.qmd)
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+[Back to Understand R²D →](index.qmd)

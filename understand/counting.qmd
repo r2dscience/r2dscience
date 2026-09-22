@@ -1,0 +1,330 @@
+---
+title: "Counting Requires Distinguishability"
+subtitle: "The primitive starting point of R²D"
+toc: true
+---
+
+# Counting Requires Distinguishability
+
+R<sup>2</sup>D begins before particles, molecules, forces, fields, energy,
+space, time, probability, or information.
+
+It begins with a simpler requirement:
+
+> **Counting requires distinguishability.**
+
+Before something can be measured, modeled, or assigned a physical unit,
+there must first be a distinction that can count as one state rather than
+another.
+
+If nothing is distinguishable, there is nothing to count.
+
+This is the primitive starting point of Recursively Realized
+Distinguishability.
+
+## A Count Is Not Yet a Physical Quantity
+
+Consider the statement:
+
+**There are ten possible realizations.**
+
+The number ten has no units.
+
+It is not ten joules, ten meters, ten seconds, or ten particles. It is a
+dimensionless count.
+
+R<sup>2</sup>D begins with these primitive counts and asks how the physical
+quantities used by science can later become readable coordinates of their
+relations.
+
+This reverses the usual explanatory order.
+
+A conventional scientific description often begins with something like
+
+$$
+\text{object}
+\rightarrow
+\text{physical quantity}
+\rightarrow
+\text{mathematics}.
+$$
+
+R<sup>2</sup>D asks whether the more primitive order is
+
+$$
+\text{distinguishable count structure}
+\rightarrow
+\text{physical read}
+\rightarrow
+\text{scientific object}.
+$$
+
+[Why the mathematics comes before units →](before-units.qmd)
+
+## Boltzmann Provides the Mathematical Clue
+
+The familiar Boltzmann relation is
+
+$$
+S = \ln W,
+$$
+
+where \(W\) is multiplicity.
+
+R<sup>2</sup>D first reads this not as a statement about thermodynamic
+entropy, but as a statement about counting.
+
+Multiplicity \(W\) is the number of distinguishable compatible
+realizations belonging to a state.
+
+Equivalently,
+
+$$
+W = e^S.
+$$
+
+Because \(W\) is a count, it is dimensionless. Its logarithm is therefore
+also dimensionless before a later physical calibration is assigned to it.
+
+In Part I, \(S\) is not yet thermodynamic entropy.
+
+It is the logarithmic coordinate of multiplicity.
+
+[Understand multiplicity →](multiplicity.qmd)
+
+## Multiplication Comes Before Logarithmic Addition
+
+Suppose several subordinate distinctions must all be compatible for one
+joint realization to occur.
+
+If their multiplicities are
+
+$$
+W_1, W_2, \ldots, W_m,
+$$
+
+then the number of compatible joint possibilities is
+
+$$
+W_{\mathrm{joint}}
+=
+\prod_{\alpha=1}^{m} W_\alpha.
+$$
+
+Taking the logarithm gives
+
+$$
+\ln W_{\mathrm{joint}}
+=
+\sum_{\alpha=1}^{m} \ln W_\alpha.
+$$
+
+This is a central mathematical observation in R<sup>2</sup>D:
+
+> **Compatible possibilities multiply. Their logarithmic coordinates add.**
+
+There is a second operation as well.
+
+Within one count domain, mutually exclusive alternatives add.
+
+Thus two very simple count operations sit underneath much of the additive
+mathematics later used in science:
+
+- **compatible possibilities multiply;**
+- **mutually exclusive alternatives add.**
+
+Logarithms convert multiplicative composition into an additive coordinate.
+
+R<sup>2</sup>D therefore does not reject additive mathematics.
+
+It asks:
+
+> **What is the additive coordinate counting?**
+
+## But Distinguishability Is Not Enough
+
+To say that two things are different is not yet enough to define a scientific
+count.
+
+We must also specify **where the distinction is being made**.
+
+Consider a coin.
+
+At one boundary, the readable distinction may be
+
+$$
+H \quad \text{or} \quad T.
+$$
+
+At another boundary, the object may instead be an ensemble of ten coins,
+with readable states such as
+
+$$
+(10H,0T),\;(9H,1T),\ldots,(0H,10T).
+$$
+
+The individual heads and tails have not simply become blurry.
+
+The count has changed.
+
+What counts as a state at the single-coin boundary is not what counts as a
+state at the ten-coin boundary.
+
+This introduces the second primitive requirement:
+
+> **A boundary defines what is being counted.**
+
+[Boundaries define scientific objects →](boundaries.qmd)
+
+## Statistical Mechanics Has No Preferred Object
+
+The same combinatorial structure can describe:
+
+- coins with two readable states;
+- molecular switches with two readable states;
+- proteins with alternative states;
+- spins with alternative states;
+- or any other system whose boundary defines the corresponding distinctions.
+
+The mathematics itself does not announce that one of these is the
+fundamental object.
+
+The identity of the object comes from the count boundary.
+
+This is why R<sup>2</sup>D does not define *microstate* as "the smallest
+thing."
+
+A microstate is a relation to a boundary.
+
+Likewise, a macrostate is not intrinsically "large."
+
+A state can have macrostate meaning at one boundary and microstate meaning
+relative to another.
+
+[Macrostate and microstate →](macrostate-microstate.qmd)
+
+## The Whole Is Not the Arithmetic Sum of Its Parts
+
+Suppose many subordinate realizations are compatible with the same readable
+state.
+
+The enclosing state is not defined by simply adding the subordinate objects
+together.
+
+Its multiplicity is the number of compatible subordinate realizations that
+the boundary classifies as that state.
+
+Schematically,
+
+$$
+\text{subordinate realizations}
+\longrightarrow
+\text{boundary classification}
+\longrightarrow
+\text{readable state}.
+$$
+
+This distinction becomes fundamental later.
+
+A subordinate transition can change **which realization occurs**.
+
+It cannot, by that transition alone, create the entire multiplicity structure
+within which the realization is classified.
+
+R<sup>2</sup>D therefore separates:
+
+> **possible structure**
+
+from
+
+> **particular realization.**
+
+That separation is the beginning of the distinction among multiplicity,
+occurrence, and occupancy.
+
+[Multiplicity →](multiplicity.qmd)
+
+[Occupancy and occurrence →](occupancy-occurrence.qmd)
+
+## Counting Changes the Question of Scale
+
+Conventional reasoning often imagines scale change as increased or decreased
+resolution of the same underlying object:
+
+$$
+\text{same object}
+\rightarrow
+\text{more detail or less detail}.
+$$
+
+R<sup>2</sup>D proposes a different architecture:
+
+$$
+\text{change boundary}
+\rightarrow
+\text{change count domain}
+\rightarrow
+\text{change state meaning}.
+$$
+
+Changing scale therefore need not merely hide or reveal detail.
+
+It can change what the scientific object is.
+
+This is the foundation of **recursive replacement**.
+
+[Recursive replacement →](recursive-replacement.qmd)
+
+## The Minimal Example
+
+Coins provide a useful demonstration because they remove nearly all physical
+interpretation.
+
+No energy, force, field, temperature, molecular mechanism, or probability is
+needed to define the combinatorics.
+
+The example shows how:
+
+1. a boundary defines readable states;
+2. subordinate realizations generate multiplicity;
+3. realization changes occupancy without creating multiplicity;
+4. changing the boundary changes the meaning of the state being counted.
+
+[Work through the coins example →](coins.qmd)
+
+## The Primitive Sequence
+
+The starting architecture can therefore be summarized as
+
+$$
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinction}
+\rightarrow
+\text{state}
+\rightarrow
+\text{count}
+}
+$$
+
+R<sup>2</sup>D then asks what happens when these count domains are recursively
+related.
+
+That question leads to macrostate and microstate, multiplicity, recursive
+replacement, possibility, constraint, closure, recurrence, and eventually the
+R<sup>2</sup>D law.
+
+But the entire structure begins here:
+
+> **Nothing can be counted until something can be distinguished.**
+
+---
+
+## Next
+
+[Boundaries Define Scientific Objects →](boundaries.qmd)
+
+[Macrostate and Microstate →](macrostate-microstate.qmd)
+
+[Definitions & Symbols →](definitions.qmd)

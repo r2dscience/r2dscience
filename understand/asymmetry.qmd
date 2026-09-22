@@ -1,0 +1,1065 @@
+---
+title: "Asymmetry"
+subtitle: "The directional relation remaining after retention"
+toc: true
+---
+
+# Asymmetry
+
+R<sup>2</sup>D separates two enclosing contributions to local realization.
+
+**Possibility** supplies directional support:
+
+$$
+\Delta P.
+$$
+
+**Retention** opposes or retains that directional possibility across a
+readable distinction:
+
+$$
+\Delta R.
+$$
+
+Their difference is **local asymmetry**:
+
+$$
+\boxed{
+\Delta A
+=
+\Delta P
+-
+\Delta R.
+}
+$$
+
+Asymmetry is therefore not an independent third quantity added to possibility
+and retention.
+
+It is what remains after they are compared.
+
+> **Possibility favors.  
+> Retention opposes.  
+> Asymmetry is the directional relation that remains.**
+
+[Possibility →](possibility.qmd)
+
+[Constraint and Retention →](constraint-retention.qmd)
+
+## The Local Asymmetry of a Transition
+
+Consider a readable transition at boundary \(B_n\):
+
+$$
+i \rightarrow k.
+$$
+
+The enclosing boundary supplies the directional possibility
+
+$$
+\Delta P_{n,i\rightarrow k}.
+$$
+
+Productive constraint acting across the distinguishable interval supplies
+retention
+
+$$
+\Delta R_{n,i\rightarrow k}
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_{n,i\rightarrow k}.
+$$
+
+The net local asymmetry is therefore
+
+$$
+\boxed{
+\Delta A_{n,i\rightarrow k}
+=
+\Delta P_{n,i\rightarrow k}
+-
+\Delta R_{n,i\rightarrow k}.
+}
+$$
+
+or
+
+$$
+\boxed{
+\Delta A_{n,i\rightarrow k}
+=
+\Delta P_{n,i\rightarrow k}
+-
+C_{n+1}^{\mathrm{out}}
+\lambda_{n,i\rightarrow k}.
+}
+$$
+
+This is the primitive directional relation at the local boundary.
+
+## Asymmetry Is Dimensionless
+
+Part I has not yet introduced energy, force, temperature, chemical potential,
+or physical work.
+
+Therefore
+
+$$
+\Delta A
+$$
+
+is not primitively any of those quantities.
+
+It is a dimensionless logarithmic count relation.
+
+Later physical theories can assign energetic, mechanical, chemical, or other
+coordinates to it.
+
+But the primitive definition remains
+
+$$
+\boxed{
+\text{asymmetry}
+=
+\text{directional possibility}
+-
+\text{retention}.
+}
+$$
+
+## Asymmetry Is Not Multiplicity
+
+The native multiplicity difference is
+
+$$
+\Delta S_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{W_{n,k}}{W_{n,i}}
+\right).
+$$
+
+This compares the possible local realization counts of two macrostates.
+
+Asymmetry is different.
+
+It depends on the enclosing compatibility and constraint relations under
+which the local transition is realized.
+
+Thus:
+
+$$
+\boxed{
+\Delta S
+\neq
+\Delta A.
+}
+$$
+
+The native multiplicity landscape can remain completely unchanged while
+\(\Delta A\) changes.
+
+This distinction allows R<sup>2</sup>D to separate:
+
+> **the structure of the local state space**
+
+from
+
+> **the directional relation under which that state space is realized.**
+
+[Multiplicity →](multiplicity.qmd)
+
+## Asymmetry Is Not Occurrence
+
+Occurrence count describes realized events.
+
+For two macrostates,
+
+$$
+\Delta\tau_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{\nu_{n,k}}{\nu_{n,i}}
+\right).
+$$
+
+Under proportional occurrence realization,
+
+$$
+\Delta\tau
+\approx
+\Delta S.
+$$
+
+Asymmetry does not replace this relation.
+
+R<sup>2</sup>D instead gives asymmetry a different role.
+
+It determines how the occurrence relation is expressed as **occupancy**.
+
+This is one of the most important separations in Part I:
+
+$$
+\boxed{
+\Delta S
+\longrightarrow
+\text{relative occurrence structure}
+}
+$$
+
+while
+
+$$
+\boxed{
+\Delta A
+\longrightarrow
+\text{occupancy bias}.
+}
+$$
+
+Or more compactly:
+
+> **Multiplicity structures occurrence.  
+> Asymmetry structures occupancy.**
+
+[Occupancy and Occurrence →](occupancy-occurrence.qmd)
+
+## Asymmetry Biases Occupancy
+
+Let
+
+$$
+G_{n,i}
+=
+\ln c_{n,i}
+$$
+
+be the logarithmic occupancy coordinate.
+
+R<sup>2</sup>D postulates
+
+$$
+\boxed{
+\Delta G_{n,i\rightarrow k}
+=
+\Delta\tau_{n,i\rightarrow k}
++
+\Delta A_{n,i\rightarrow k}.
+}
+$$
+
+Substituting
+
+$$
+\Delta A
+=
+\Delta P-\Delta R
+$$
+
+gives
+
+$$
+\boxed{
+\Delta G
+=
+\Delta\tau
++
+\Delta P
+-
+\Delta R.
+}
+$$
+
+Under proportional occurrence realization,
+
+$$
+\Delta\tau
+\approx
+\Delta S,
+$$
+
+so
+
+$$
+\boxed{
+\Delta G
+\approx
+\Delta S
++
+\Delta A.
+}
+$$
+
+or equivalently,
+
+$$
+\boxed{
+\Delta G
+\approx
+\Delta S
++
+\Delta P
+-
+\Delta R.
+}
+$$
+
+This equation separates the two structures controlling realized occupancy.
+
+The native multiplicity landscape supplies the relative occurrence structure.
+
+The enclosing relation supplies the directional bias.
+
+## Asymmetry Does Not Create Occurrences
+
+This distinction matters.
+
+R<sup>2</sup>D does not say that asymmetry manufactures subordinate events.
+
+The subordinate realization mechanism still supplies the occurrences.
+
+Instead, asymmetry changes how those occurrences are expressed as occupancy.
+
+Thus:
+
+$$
+\boxed{
+\text{occurrence}
+\neq
+\text{occupancy bias}.
+}
+$$
+
+A system can continue undergoing many subordinate transitions while its
+enclosing asymmetry changes the larger realized state distribution.
+
+This is especially important in systems such as muscle, chemical reactions,
+and molecular ensembles.
+
+## Three Directional Regimes
+
+The sign of
+
+$$
+\Delta A
+=
+\Delta P-\Delta R
+$$
+
+defines three regimes relative to the chosen orientation
+
+$$
+i\rightarrow k.
+$$
+
+### Positive asymmetry
+
+If
+
+$$
+\Delta P>\Delta R,
+$$
+
+then
+
+$$
+\boxed{
+\Delta A>0.
+}
+$$
+
+The enclosing relation provides residual directional support toward \(k\).
+
+This does not mean that every individual occurrence must proceed in that
+direction.
+
+It means that the realized occupancy relation is biased in that orientation.
+
+### Stall
+
+If
+
+$$
+\boxed{
+\Delta P=\Delta R,
+}
+$$
+
+then
+
+$$
+\boxed{
+\Delta A=0.
+}
+$$
+
+Directional possibility is completely retained.
+
+This is the R<sup>2</sup>D stall condition.
+
+### Negative asymmetry
+
+If
+
+$$
+\Delta R>\Delta P,
+$$
+
+then
+
+$$
+\boxed{
+\Delta A<0.
+}
+$$
+
+The net occupancy bias lies in the opposite orientation.
+
+So the sign of asymmetry is relational.
+
+It depends on both the selected transition orientation and the enclosing
+conditions under which that transition is realized.
+
+## Stall Does Not Mean No Possibility
+
+At stall,
+
+$$
+\Delta A=0.
+$$
+
+But this does not require
+
+$$
+\Delta P=0.
+$$
+
+Instead,
+
+$$
+\boxed{
+\Delta P=\Delta R.
+}
+$$
+
+Possibility can remain finite.
+
+It is simply completely retained.
+
+This distinction becomes important in thermodynamic and mechanical systems.
+
+A stalled molecular motor or muscle need not lack chemical possibility.
+
+The possibility can remain present while mechanical retention matches it.
+
+Thus:
+
+> **Stall is not absence of possibility.  
+> Stall is complete retention of possibility.**
+
+## Zero Retention Is the Opposite Limit
+
+If
+
+$$
+\Delta R=0,
+$$
+
+then
+
+$$
+\boxed{
+\Delta A=\Delta P.
+}
+$$
+
+All of the directional possibility remains available as local asymmetry.
+
+This is therefore very different from stall.
+
+At zero retention:
+
+$$
+\Delta A=\Delta P.
+$$
+
+At stall:
+
+$$
+\Delta A=0.
+$$
+
+These two limits can produce similar-looking macroscopic observations in
+some physical systems—for example, zero productive output—but their local
+R<sup>2</sup>D meanings are opposite.
+
+## Asymmetry Can Change While Multiplicity Does Not
+
+Suppose the native multiplicities remain fixed:
+
+$$
+W_{n,i},
+\qquad
+W_{n,k}.
+$$
+
+Then
+
+$$
+\Delta S
+$$
+
+is fixed.
+
+But the enclosing compatibility relation can change, altering
+
+$$
+\Delta P.
+$$
+
+Or the enclosing productive constraint can change, altering
+
+$$
+\Delta R.
+$$
+
+Therefore
+
+$$
+\Delta A
+$$
+
+can change while the native multiplicity landscape does not.
+
+Schematically:
+
+$$
+\boxed{
+\mathcal{W}_n
+=
+\text{constant}
+}
+$$
+
+while
+
+$$
+\boxed{
+\Delta A
+\rightarrow
+\Delta A'.
+}
+$$
+
+The occupancy landscape can consequently move through a fixed multiplicity
+landscape.
+
+This is one of the central distinctions of R<sup>2</sup>D.
+
+## A Simple Example
+
+Suppose a local transition has directional possibility
+
+$$
+\Delta P=5.
+$$
+
+With no productive retention,
+
+$$
+\Delta R=0,
+$$
+
+so
+
+$$
+\Delta A=5.
+$$
+
+Now increase the enclosing constraint so that
+
+$$
+\Delta R=2.
+$$
+
+Then
+
+$$
+\Delta A=3.
+$$
+
+Increase it further:
+
+$$
+\Delta R=5.
+$$
+
+Now
+
+$$
+\Delta A=0.
+$$
+
+The system is at stall.
+
+If retention increases again,
+
+$$
+\Delta R=7,
+$$
+
+then
+
+$$
+\Delta A=-2.
+$$
+
+The directional bias has reversed.
+
+Nothing in this sequence requires the native multiplicities
+
+$$
+W_{n,i}
+\qquad\text{and}\qquad
+W_{n,k}
+$$
+
+to change.
+
+Only the enclosing constraint relation changed.
+
+## An Occupancy Example
+
+Suppose under proportional occurrence realization,
+
+$$
+\Delta\tau
+\approx
+\Delta S
+=
+2.
+$$
+
+With no additional asymmetry,
+
+$$
+\Delta A=0,
+$$
+
+the occupancy difference is
+
+$$
+\Delta G\approx2.
+$$
+
+Now suppose the enclosing relation supplies
+
+$$
+\Delta A=3.
+$$
+
+Then
+
+$$
+\Delta G\approx5.
+$$
+
+The native multiplicity structure has not changed.
+
+The occurrence relation still reflects that multiplicity.
+
+But occupancy is shifted by the enclosing asymmetry.
+
+This is precisely the distinction R<sup>2</sup>D is designed to preserve.
+
+## Equal Occupancy Does Not Require Equal Multiplicity
+
+Suppose two competing structural macrostates reach an occupancy-exchange
+threshold:
+
+$$
+\Delta G\approx0.
+$$
+
+Under proportional occurrence realization,
+
+$$
+\Delta G
+\approx
+\Delta S+\Delta A.
+$$
+
+Therefore,
+
+$$
+\boxed{
+\Delta A
+\approx
+-\Delta S.
+}
+$$
+
+The states can have unequal native multiplicities and still be equally
+occupied because enclosing asymmetry offsets the multiplicity difference.
+
+This is the primitive count architecture that later acquires familiar
+thermodynamic forms.
+
+But at this stage there is still no Gibbs free energy, temperature, or
+chemical potential.
+
+There are only count relations.
+
+## Asymmetry Is Boundary Defined
+
+One might try to locate asymmetry intrinsically inside a subordinate
+microstate transition.
+
+R<sup>2</sup>D does not do this.
+
+A transition that has microstate meaning relative to \(B_n\) is not directly
+readable there as an individual local transition.
+
+To assign an asymmetry to it, one must move to the subordinate boundary at
+which that distinction has macrostate meaning.
+
+But then its possibility and retention are defined relative to that
+boundary's enclosing relation.
+
+Thus:
+
+$$
+\boxed{
+\text{asymmetry cannot be pushed downward without moving the boundary}.
+}
+$$
+
+This is another expression of boundary-relative causality.
+
+[Macrostate and Microstate →](macrostate-microstate.qmd)
+
+## The Causal Direction
+
+The occupancy relation
+
+$$
+\Delta G
+=
+\Delta\tau+\Delta A
+$$
+
+does not mean occupancy creates asymmetry.
+
+The proposed causal order is
+
+$$
+\boxed{
+\text{enclosing compatibility and constraint}
+\Longrightarrow
+\Delta A
+\Longrightarrow
+\text{local occupancy realization}.
+}
+$$
+
+In expanded form:
+
+$$
+\boxed{
+\begin{array}{c}
+\text{enclosing compatibility}
+\rightarrow
+\Delta P
+\\[4pt]
+\text{enclosing constraint}
+\times
+\text{local distinguishability}
+\rightarrow
+\Delta R
+\\[4pt]
+\Delta P-\Delta R
+\rightarrow
+\Delta A
+\\[4pt]
+\Delta A
+\rightarrow
+\text{occupancy bias}
+\end{array}
+}
+$$
+
+The subordinate transitions realize the resulting occupancy change.
+
+They do not independently define the asymmetry under which they occur.
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## Local Return Does Not Require Asymmetry to Close
+
+Asymmetry becomes even more interesting when a local state completes a
+return:
+
+$$
+i\rightarrow k\rightarrow i.
+$$
+
+The native multiplicity difference around that completed path closes exactly:
+
+$$
+\Delta S_{\mathcal C}=0.
+$$
+
+But the forward and return legs can occur under different enclosing
+compatibility and constraint relations.
+
+Therefore their possibility and retention terms need not be exact
+reciprocals.
+
+The accumulated closure asymmetry can satisfy
+
+$$
+\boxed{
+\Delta A_{\mathcal C}
+=
+\Delta P_{\mathcal C}
+-
+\Delta R_{\mathcal C}
+\neq0
+}
+$$
+
+even though the local state has returned.
+
+This is the primitive distinction between:
+
+> **local state closure**
+
+and
+
+> **closure of the enclosing directional relation.**
+
+They are not the same condition.
+
+[Closure →](closure.qmd)
+
+## Complete Retention Around a Closure
+
+For a completed local closure,
+
+$$
+\mathcal C_{n,\alpha},
+$$
+
+possibility and retention accumulate separately:
+
+$$
+\Delta P_{n,\alpha,\mathcal C}
+=
+\sum_{\chi\in\mathcal C_{n,\alpha}}
+\Delta P_{n,\alpha,\chi},
+$$
+
+and
+
+$$
+\Delta R_{n,\alpha,\mathcal C}
+=
+\sum_{\chi\in\mathcal C_{n,\alpha}}
+\Delta R_{n,\alpha,\chi}.
+$$
+
+The net closure asymmetry is
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}.
+}
+$$
+
+Complete retention around the closure satisfies
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}=0,
+}
+$$
+
+or equivalently,
+
+$$
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+=
+\Delta R_{n,\alpha,\mathcal C}.
+}
+$$
+
+Again, local macrostate return by itself does not require this condition.
+
+## Asymmetry Is What the Local Boundary Reads
+
+The possibility relation originates in compatible enclosing multiplicity.
+
+Retention originates in enclosing constraint acting across local
+distinguishability.
+
+Their difference is readable locally as asymmetry.
+
+Thus asymmetry is the local directional expression of a relation whose
+definition is not confined to the local boundary.
+
+This is why R<sup>2</sup>D separates:
+
+$$
+\boxed{
+\text{where a relation is realized}
+}
+$$
+
+from
+
+$$
+\boxed{
+\text{where its organization is defined}.
+}
+$$
+
+That distinction leads directly to the causal inversion.
+
+## Core Equations
+
+### Local asymmetry
+
+$$
+\boxed{
+\Delta A_{n,i\rightarrow k}
+=
+\Delta P_{n,i\rightarrow k}
+-
+\Delta R_{n,i\rightarrow k}
+}
+$$
+
+### Retention
+
+$$
+\boxed{
+\Delta R_{n,i\rightarrow k}
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_{n,i\rightarrow k}
+}
+$$
+
+### Occupancy realization
+
+$$
+\boxed{
+\Delta G_{n,i\rightarrow k}
+=
+\Delta\tau_{n,i\rightarrow k}
++
+\Delta A_{n,i\rightarrow k}
+}
+$$
+
+### Under proportional occurrence realization
+
+$$
+\boxed{
+\Delta G
+\approx
+\Delta S+\Delta A
+}
+$$
+
+or
+
+$$
+\boxed{
+\Delta G
+\approx
+\Delta S+\Delta P-\Delta R.
+}
+$$
+
+### Stall
+
+$$
+\boxed{
+\Delta P=\Delta R
+\iff
+\Delta A=0.
+}
+$$
+
+### Closure asymmetry
+
+$$
+\boxed{
+\Delta A_{\mathcal C}
+=
+\Delta P_{\mathcal C}
+-
+\Delta R_{\mathcal C}.
+}
+$$
+
+## The Key Distinction
+
+The simplest summary is:
+
+> **Multiplicity defines the available local structure.**
+
+> **Possibility supplies enclosing directional support.**
+
+> **Retention opposes that support across a readable distinction.**
+
+> **Asymmetry is what remains and biases occupancy.**
+
+So the architecture has now become:
+
+$$
+\boxed{
+\text{multiplicity}
+\rightarrow
+\text{occurrence structure}
+}
+$$
+
+together with
+
+$$
+\boxed{
+\text{enclosing possibility}
+-
+\text{retention}
+\rightarrow
+\text{asymmetry}
+\rightarrow
+\text{occupancy bias}.
+}
+$$
+
+The next question is causal:
+
+> **If the asymmetry is defined by an enclosing relation but realized through
+> subordinate transitions, which side organizes and which side realizes?**
+
+---
+
+## Next
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+[Closure →](closure.qmd)
+
+[The R²D Law →](r2d-law.qmd)
+
+[Back to Understand R²D →](index.qmd)

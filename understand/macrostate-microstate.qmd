@@ -1,0 +1,657 @@
+---
+title: "Macrostate and Microstate"
+subtitle: "Statehood is a relation to a boundary"
+toc: true
+---
+
+# Macrostate and Microstate
+
+Much of R<sup>2</sup>D follows from two familiar words:
+
+**macrostate** and **microstate**.
+
+Statistical mechanics uses both constantly.
+
+R<sup>2</sup>D asks a more primitive question:
+
+> **Relative to what is a state a microstate?**
+
+The answer is the count boundary.
+
+A microstate is not an intrinsically microscopic object.
+
+A macrostate is not an intrinsically large object.
+
+Both terms describe the relationship between a state and the boundary from which that state is counted.
+
+> **Statehood is boundary relative.**
+
+[Boundaries Define Scientific Objects →](boundaries.qmd)
+
+## The Conventional Picture
+
+A familiar description of statistical mechanics is:
+
+$$
+\text{microscopic reality}
+\rightarrow
+\text{coarse-grained macroscopic description}.
+$$
+
+On this picture, the microstate is often treated as the fully detailed underlying reality.
+
+The macrostate is then a less detailed description obtained by ignoring some microscopic information.
+
+This is often computationally useful.
+
+But it leaves a foundational question unanswered:
+
+> **What makes the underlying state a microstate in the first place?**
+
+R<sup>2</sup>D does not define "microstate" by physical size.
+
+It defines it relative to a count boundary.
+
+## The R<sup>2</sup>D Definition
+
+Let the boundary of interest be
+
+$$
+B_n.
+$$
+
+Immediately subordinate to \(B_n\) is a collection of peer boundaries
+
+$$
+\{B_{n-1,\alpha}\}_{\alpha \in I_{n-1}}.
+$$
+
+Each subordinate peer boundary has its own possible realization domain.
+
+Let
+
+$$
+\mathfrak{X}_{n-1,\alpha}
+$$
+
+denote the possible realization domain of peer \(\alpha\).
+
+A complete joint peer realization has the form
+
+$$
+\mathbf{x}_{n-1}
+=
+\{x_{n-1,\alpha}\}_{\alpha \in I_{n-1}},
+$$
+
+where
+
+$$
+x_{n-1,\alpha}
+\in
+\mathfrak{X}_{n-1,\alpha}.
+$$
+
+If every combination of peer realizations were allowed, the complete product domain would be
+
+$$
+\prod_{\alpha \in I_{n-1}}
+\mathfrak{X}_{n-1,\alpha}.
+$$
+
+But an enclosing boundary need not admit every formally imaginable combination.
+
+Boundary \(B_n\) defines which joint realizations are compatible.
+
+The compatible subset is the formal microstate domain:
+
+$$
+\mathfrak{M}_n
+\subseteq
+\prod_{\alpha \in I_{n-1}}
+\mathfrak{X}_{n-1,\alpha}.
+$$
+
+A **formal microstate at \(B_n\)** is one compatible joint peer realization:
+
+$$
+\mu_n
+=
+\{x_{n-1,\alpha}\}_{\alpha \in I_{n-1}}
+\in
+\mathfrak{M}_n.
+$$
+
+This is the first formal definition.
+
+> **A microstate at \(B_n\) is one compatible joint realization of the immediately subordinate peer boundaries.**
+
+It is not defined by being physically small.
+
+It is defined by its relation to \(B_n\).
+
+## The Macrostate Is a Classification
+
+The enclosing boundary does not ordinarily distinguish every peer-resolved joint realization individually.
+
+Instead, it classifies compatible formal microstates into states that are readable at \(B_n\).
+
+Let
+
+$$
+\mathcal{M}_n
+$$
+
+be the readable macrostate set.
+
+Define the classification map
+
+$$
+\pi_n:
+\mathfrak{M}_n
+\rightarrow
+\mathcal{M}_n.
+$$
+
+If
+
+$$
+\pi_n(\mu_n)=i,
+$$
+
+then formal microstate \(\mu_n\) is read at boundary \(B_n\) as macrostate \(i\).
+
+This gives the second definition:
+
+> **A macrostate at \(B_n\) is a distinguishable classification of compatible formal microstates that is readable at \(B_n\).**
+
+The macrostate is therefore not primitively assembled by adding subordinate states together.
+
+It is a boundary-defined classification.
+
+## A Simple Example: Ten Coins
+
+Suppose ten coins form one ensemble.
+
+At the single-coin boundary, the readable states are
+
+$$
+H
+\qquad\text{and}\qquad
+T.
+$$
+
+Now change to the ten-coin boundary.
+
+One formal microstate might be
+
+$$
+HHTHTHTTHH.
+$$
+
+Another might be
+
+$$
+THHHTHTHTH.
+$$
+
+These are distinct peer-resolved joint realizations.
+
+But the ten-coin boundary may classify both simply by the number of heads.
+
+If each realization contains six heads, then
+
+$$
+\pi_n(\mu_n)=6H.
+$$
+
+The ensemble macrostate is therefore
+
+$$
+N_H=6.
+$$
+
+Many different formal microstates belong to the same readable macrostate.
+
+This is exactly what multiplicity counts.
+
+[The Coins Example →](coins.qmd)
+
+## Multiplicity Is the Size of the Macrostate Class
+
+For a macrostate \(i\), the complete set of formal microstates classified as \(i\) is the preimage
+
+$$
+\pi_n^{-1}(i)
+=
+\{
+\mu_n \in \mathfrak{M}_n :
+\pi_n(\mu_n)=i
+\}.
+$$
+
+The notation
+
+$$
+\pi_n^{-1}(i)
+$$
+
+means:
+
+> all formal microstates that the classification map \(\pi_n\) sends to macrostate \(i\).
+
+Its cardinality is the multiplicity:
+
+$$
+\boxed{
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|
+}
+$$
+
+The vertical bars mean **the number of members in the set**.
+
+So:
+
+$$
+W_{n,i}
+$$
+
+is the number of compatible joint peer realizations that boundary \(B_n\) classifies as macrostate \(i\).
+
+Its logarithmic coordinate is
+
+$$
+S_{n,i}
+=
+\ln W_{n,i}.
+$$
+
+At this stage, \(S\) is not yet thermodynamic entropy.
+
+It is the logarithmic coordinate of multiplicity.
+
+[Multiplicity →](multiplicity.qmd)
+
+## Three Different Mathematical Objects
+
+It is important not to collapse microstate, macrostate, and multiplicity into one idea.
+
+They are three different things:
+
+$$
+\boxed{
+\mu_n
+=
+\text{one compatible joint peer realization}
+}
+$$
+
+$$
+\boxed{
+i
+=
+\text{the readable classification of that realization at } B_n
+}
+$$
+
+$$
+\boxed{
+W_{n,i}
+=
+\text{the number of compatible realizations classified as } i
+}
+$$
+
+A microstate is a realization.
+
+A macrostate is a classification.
+
+Multiplicity is a count of compatible realizations belonging to that classification.
+
+## The Boundary Owns the Classification
+
+The classification map
+
+$$
+\pi_n
+$$
+
+belongs to boundary \(B_n\).
+
+Change the boundary and the classification changes.
+
+This means a formal microstate at \(B_n\) does not simply remain the same microstate at \(B_{n+1}\).
+
+The enclosing boundary defines:
+
+- a different peer realization domain;
+- a different compatibility relation;
+- a different formal microstate space;
+- and a different classification map.
+
+Therefore:
+
+$$
+\boxed{
+B_n \rightarrow B_{n+1}
+\quad\Rightarrow\quad
+\text{new state domain}
+}
+$$
+
+Changing the boundary changes what counts as a state.
+
+This is why R<sup>2</sup>D treats scientific objecthood as boundary dependent.
+
+[Scientific Objecthood →](scientific-objecthood.qmd)
+
+## A Macrostate at One Boundary Can Have Microstate Meaning at Another
+
+This is one of the most important consequences.
+
+Suppose a transition
+
+$$
+u \rightarrow v
+$$
+
+is directly readable at subordinate boundary
+
+$$
+B_{n-1,\alpha}.
+$$
+
+At that boundary, \(u\) and \(v\) are macrostates.
+
+The transition is a readable macrostate transition.
+
+Now consider the same physical occurrence from enclosing boundary \(B_n\).
+
+The individual subordinate peer transition is no longer the state being classified.
+
+It participates in a joint realization of the peer ensemble.
+
+Relative to \(B_n\), the same subordinate change therefore has **microstate meaning**.
+
+Schematically:
+
+$$
+\boxed{
+\text{macrostate transition at } B_{n-1}
+=
+\text{microstate transition relative to } B_n
+}
+$$
+
+The physical occurrence has not necessarily changed.
+
+Its **count meaning** has.
+
+## Microstate Does Not Mean Hidden Little Object
+
+This distinction is easy to miss.
+
+R<sup>2</sup>D does not say that the microstate is a tiny physical object hiding beneath the macrostate.
+
+A formal microstate is mathematically defined relative to the enclosing classification.
+
+Its complete peer-resolved identity may be formally specified without being individually readable from the enclosing boundary.
+
+Thus:
+
+> **Defined does not imply readable.**
+
+Boundary \(B_n\) can classify a joint realization without resolving which subordinate peer transition produced it.
+
+This is the primitive source of a distinction that later becomes important in both quantum and many-body descriptions.
+
+## The Primitive Observer Effect
+
+Suppose a microstate transition relative to \(B_n\) is not directly readable.
+
+How can the observer see it?
+
+The observer must change to the subordinate boundary where that distinction is readable as a macrostate transition.
+
+Thus:
+
+$$
+\boxed{
+\text{resolution}
+\rightarrow
+\text{change of count boundary}
+\rightarrow
+\text{change of state classification}
+}
+$$
+
+This gives R<sup>2</sup>D a primitive observer effect before particles, measuring devices, wavefunctions, or quantum mechanics have been introduced.
+
+Observation does not need to begin by physically perturbing an independently fixed microscopic state.
+
+Increasing resolution changes the boundary from which the state is classified.
+
+And therefore changes what the state **is** relative to the count.
+
+## Why Better Resolution Does Not Recover One Fixed Ontology
+
+Consider the ten-coin ensemble again.
+
+At the ensemble boundary, the question might be:
+
+> Why does the ten-coin system occupy \(N_H=6\) rather than \(N_H=5\)?
+
+If we increase resolution and follow one particular coin, the question becomes:
+
+> Why did this coin change from \(H\) to \(T\)?
+
+The second question does not simply reveal the hidden detailed answer to the first.
+
+It is a different question at a different boundary.
+
+The object has changed.
+
+The state domain has changed.
+
+The causal relation being investigated has changed.
+
+This is why R<sup>2</sup>D rejects the assumption that causal explanation can always be made more fundamental merely by increasing resolution.
+
+## This Is Not Ordinary Coarse-Graining
+
+The conventional coarse-graining picture can be written schematically as
+
+$$
+\text{same underlying microscopic state}
+\rightarrow
+\text{less detailed macroscopic description}.
+$$
+
+R<sup>2</sup>D instead proposes
+
+$$
+\boxed{
+\text{boundary change}
+\rightarrow
+\text{state-domain replacement}
+}
+$$
+
+The subordinate realization may remain physically consequential.
+
+But it does not retain the same classification, path identity, or source identity at the enclosing boundary.
+
+A macrostate is therefore not merely a blurry microstate.
+
+And a microstate is not merely a sharper macrostate.
+
+They belong to different boundary-relative count relations.
+
+[Why R²D Is Not Coarse-Graining →](not-coarse-graining.qmd)
+
+## Why This Matters for Causality
+
+Suppose one tries to place directional causality entirely inside the microstate transitions.
+
+At boundary \(B_n\), however, those transitions are not individually readable as microstate transitions.
+
+To define their direction directly, one must move to \(B_{n-1}\), where the same transition has macrostate meaning.
+
+But at that boundary, its directional relation is itself defined relative to its enclosing compatibility.
+
+So moving the proposed cause "down into the microstates" does not escape the recursive architecture.
+
+It changes the count boundary.
+
+Schematically:
+
+$$
+\text{microstate at } B_n
+\longrightarrow
+\text{macrostate at } B_{n-1}
+\longrightarrow
+\text{enclosing relation at } B_n.
+$$
+
+This motivates the later R<sup>2</sup>D distinction between:
+
+**local realization**
+
+and
+
+**enclosing directional organization.**
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## Statehood Comes Before Physical Ontology
+
+Nothing in the formal definitions requires the peer boundaries to be:
+
+- molecules;
+- atoms;
+- particles;
+- spins;
+- proteins;
+- cells;
+- coins;
+- or spatial regions.
+
+Those physical interpretations come later.
+
+The primitive structure is:
+
+$$
+\boxed{
+\text{boundary}
+\rightarrow
+\text{compatible joint realization}
+\rightarrow
+\text{classification}
+\rightarrow
+\text{readable state}
+}
+$$
+
+Only afterward does science assign a physical interpretation to that state.
+
+This is why the R<sup>2</sup>D mathematics is intended to operate across scientific domains.
+
+The physical object changes.
+
+The count grammar can remain the same.
+
+## The Logical Fulcrum
+
+The entire R<sup>2</sup>D program can therefore be challenged at a very specific point.
+
+Ask:
+
+> **Are these definitions of macrostate and microstate wrong?**
+
+If they are wrong, the architecture built upon them fails.
+
+If they are accepted, several later features of R<sup>2</sup>D follow naturally:
+
+- boundary-relative objecthood;
+- recursive replacement;
+- the distinction between possible structure and realization;
+- the primitive observer effect;
+- the many-body readability problem;
+- recursive carry;
+- and eventually the complementary readability horizons.
+
+The definitions are therefore not merely terminology.
+
+They determine the architecture that follows.
+
+---
+
+## The Core Definitions
+
+At boundary \(B_n\):
+
+### Formal microstate
+
+$$
+\boxed{
+\mu_n
+\in
+\mathfrak{M}_n
+}
+$$
+
+One compatible joint realization of the immediately subordinate peer boundaries.
+
+### Macrostate
+
+$$
+\boxed{
+i
+=
+\pi_n(\mu_n)
+}
+$$
+
+The distinguishable classification of that realization readable at \(B_n\).
+
+### Multiplicity
+
+$$
+\boxed{
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|
+}
+$$
+
+The number of compatible formal microstates classified as macrostate \(i\).
+
+### Logarithmic multiplicity
+
+$$
+\boxed{
+S_{n,i}
+=
+\ln W_{n,i}
+}
+$$
+
+The dimensionless logarithmic coordinate of that multiplicity.
+
+---
+
+## Next
+
+[Multiplicity — Possible Structure Before Realization →](multiplicity.qmd)
+
+[Occupancy and Occurrence →](occupancy-occurrence.qmd)
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+[Back to Understand R²D →](index.qmd)

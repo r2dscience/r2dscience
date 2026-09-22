@@ -1,0 +1,1418 @@
+---
+title: "The R²D Law"
+subtitle: "One recursive relation, read from two adjacent boundaries"
+toc: true
+---
+
+# The R<sup>2</sup>D Law
+
+The preceding architecture has separated several things that conventional
+physical descriptions often combine.
+
+At a local boundary \(B_n\), we can define:
+
+- a readable closure;
+- enclosing-defined possibility;
+- local retention;
+- net closure asymmetry;
+- and the number of times that closure recurs.
+
+At the enclosing boundary \(B_{n+1}\), the same recursively organized
+realization has a different readable form:
+
+- an enclosing occurrence;
+- an enclosing distinguishable interval;
+- an enclosing constraint;
+- and its own recurrence count.
+
+The R<sup>2</sup>D law proposes that these two boundary-specific readings are
+not independent.
+
+They are two count expressions of one recursive realization.
+
+The law is
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+$$
+
+Using
+
+$$
+\Delta A
+=
+\Delta P-\Delta R,
+$$
+
+the same law can be written
+
+$$
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+$$
+
+This is the R<sup>2</sup>D law.
+
+## One Relation, Two Readings
+
+Consider a completed representative local closure
+
+$$
+\mathcal C_{n,\alpha}.
+$$
+
+At the enclosing boundary, the same recursively organized relation is
+read through an enclosing occurrence
+
+$$
+\chi_{n+1}^{(r)}.
+$$
+
+These are not the same boundary-defined object:
+
+$$
+\mathcal C_{n,\alpha}
+\not\equiv
+\chi_{n+1}^{(r)}.
+$$
+
+The local boundary reads a completed closure.
+
+The enclosing boundary reads an enclosing occurrence.
+
+Recursive carry relates their count meanings:
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+}
+$$
+
+But this arrow is reclassification, not causation.
+
+[Recursive Carry →](recursive-carry.qmd)
+
+## The Causal Relation Still Points Downward
+
+The enclosing occurrence defines which local realizations are compatible with
+it.
+
+Thus the causal relation remains
+
+$$
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\mathcal C_{n,\alpha}.
+}
+$$
+
+The local closure does not independently generate the enclosing occurrence.
+
+This distinction must remain intact when reading the R<sup>2</sup>D law.
+
+The equation
+
+$$
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}
+$$
+
+is not a causal arrow from left to right.
+
+Nor is it a causal arrow from right to left.
+
+It is an **invariant recursive relation between two boundary-specific
+readings**.
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## The Local Reading
+
+At the representative peer boundary \(B_{n,\alpha}\), the completed closure
+has accumulated possibility
+
+$$
+\Delta P_{n,\alpha,\mathcal C},
+$$
+
+accumulated retention
+
+$$
+\Delta R_{n,\alpha,\mathcal C},
+$$
+
+and therefore net closure asymmetry
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}.
+}
+$$
+
+This is the directional asymmetry remaining around one completed local
+closure.
+
+[Closure →](closure.qmd)
+
+[Asymmetry →](asymmetry.qmd)
+
+## The Local Recurrence Count
+
+Now choose one recurrence-comparison domain
+
+$$
+\mathcal D_R.
+$$
+
+Let
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+$$
+
+be the number of completed recurrences of the local closure within that
+domain.
+
+The recurrence-weighted local asymmetry is therefore
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right).
+}
+$$
+
+This quantity is still dimensionless.
+
+It is not:
+
+- energy;
+- power;
+- elapsed time;
+- force;
+- or physical work.
+
+It is simply the asymmetry associated with one completed local closure,
+weighted by the number of times that closure recurs in the chosen comparison
+domain.
+
+## The Enclosing Reading
+
+At boundary \(B_{n+1}\), the same recursively organized relation is read
+differently.
+
+Let
+
+$$
+\lambda_{n+1}
+$$
+
+be the enclosing distinguishable interval.
+
+Let
+
+$$
+C_{n+1}
+$$
+
+be the total enclosing constraint.
+
+The constrained distinguishability associated with one enclosing recurrence
+is
+
+$$
+\boxed{
+C_{n+1}\lambda_{n+1}.
+}
+$$
+
+Again, neither quantity is yet assigned a specific physical unit.
+
+The product is a dimensionless constrained-distinguishability relation.
+
+## The Enclosing Recurrence Count
+
+Within the same recurrence-comparison domain
+
+$$
+\mathcal D_R,
+$$
+
+let
+
+$$
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+$$
+
+count completed recurrences of the enclosing transition class.
+
+The recurrence-weighted enclosing constrained distinguishability is
+
+$$
+\boxed{
+C_{n+1}
+\lambda_{n+1}
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right).
+}
+$$
+
+The two boundaries therefore provide two complete count expressions of the
+same recursively organized relation.
+
+## The Recurrence-Weighted Form
+
+R<sup>2</sup>D postulates that these two recurrence-weighted readings are
+equal:
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+=
+C_{n+1}
+\lambda_{n+1}
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right).
+}
+$$
+
+This is the most explicit form of the R<sup>2</sup>D law.
+
+It says that over one common recurrence-comparison domain,
+
+> **local recurrence-weighted closure asymmetry**
+
+and
+
+> **enclosing recurrence-weighted constrained distinguishability**
+
+are two equivalent readings of one recursive relation.
+
+## Introduce the Recurrence Ratio
+
+The adjacent recurrence ratio is
+
+$$
+\rho_{n+1|n,\alpha}
+=
+\frac{
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+}{
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+}.
+$$
+
+This asks how many enclosing recurrences occur per completed recurrence of
+the representative local closure.
+
+[Recurrence →](recurrence.qmd)
+
+Divide the recurrence-weighted law by
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right).
+$$
+
+Then
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+$$
+
+This is the compact form of the R<sup>2</sup>D law.
+
+## Expand the Local Asymmetry
+
+Because
+
+$$
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C},
+$$
+
+the law becomes
+
+$$
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+$$
+
+The left side is read at the local closure boundary.
+
+The right side is read through the enclosing occurrence.
+
+The equality relates them without identifying them as the same local
+quantity.
+
+## What the Left Side Means
+
+The left side asks:
+
+> **How much enclosing-defined directional asymmetry remains around one
+> completed compatible local closure?**
+
+Possibility contributes
+
+$$
+\Delta P_{n,\alpha,\mathcal C}.
+$$
+
+Local productive retention contributes
+
+$$
+\Delta R_{n,\alpha,\mathcal C}.
+$$
+
+Their difference is
+
+$$
+\Delta A_{n,\alpha,\mathcal C}.
+$$
+
+This is the local reading of the recursive relation.
+
+## What the Right Side Means
+
+The right side asks:
+
+> **How much constrained distinguishability is readable per enclosing
+> recurrence, and how often does that recurrence occur relative to the local
+> closure?**
+
+The constrained enclosing distinction is
+
+$$
+C_{n+1}\lambda_{n+1}.
+$$
+
+Its recurrence relative to the local closure is
+
+$$
+\rho_{n+1|n,\alpha}.
+$$
+
+Together:
+
+$$
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+$$
+
+This is the enclosing reading of the same recursive relation.
+
+## Why Recurrence Is Necessary
+
+Suppose the local and enclosing boundaries recur one-for-one.
+
+Then
+
+$$
+\rho_{n+1|n,\alpha}=1,
+$$
+
+and the law reduces to
+
+$$
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}\lambda_{n+1}.
+$$
+
+But recursive boundaries need not recur one-for-one.
+
+A local closure may recur many times for every enclosing recurrence.
+
+Then
+
+$$
+\rho_{n+1|n,\alpha}<1.
+$$
+
+The recurrence factor is therefore necessary to compare the two
+boundary-specific readings correctly.
+
+The law does not equate one local event with one enclosing event.
+
+It relates their **recurrence-weighted structure**.
+
+## A Simple Numerical Example
+
+Suppose one local closure has
+
+$$
+\Delta A_{\mathcal C}=2.
+$$
+
+Suppose that within the same comparison domain the local closure recurs
+
+$$
+1000
+$$
+
+times while the enclosing occurrence recurs
+
+$$
+100
+$$
+
+times.
+
+Then
+
+$$
+\rho
+=
+\frac{100}{1000}
+=
+0.1.
+$$
+
+The R<sup>2</sup>D law requires
+
+$$
+2
+=
+C\lambda(0.1).
+$$
+
+Therefore
+
+$$
+C\lambda=20.
+$$
+
+The local boundary reads asymmetry \(2\) per local recurrence.
+
+The enclosing boundary reads constrained distinguishability \(20\) per
+enclosing recurrence.
+
+Because the enclosing occurrence recurs only one tenth as often, the
+recurrence-weighted totals agree:
+
+$$
+2(1000)=20(100).
+$$
+
+Thus:
+
+$$
+2000=2000.
+$$
+
+The two per-recurrence quantities are different.
+
+Their recurrence-weighted recursive relation is the same.
+
+## The Law Does Not Say Local Retention Equals Enclosing Constraint
+
+This distinction is important.
+
+Local retention is
+
+$$
+\Delta R_n
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_n.
+$$
+
+The enclosing side of the R<sup>2</sup>D law is
+
+$$
+C_{n+1}
+\lambda_{n+1}.
+$$
+
+These are not the same quantity.
+
+In particular,
+
+$$
+\boxed{
+\Delta R_n
+\neq
+C_{n+1}\lambda_{n+1}
+}
+$$
+
+in general.
+
+They use different distinguishable intervals and different readings of
+constraint at adjacent boundaries.
+
+[Constraint and Retention →](constraint-retention.qmd)
+
+## Productive and Background-Associated Constraint
+
+The total enclosing constraint can be decomposed as
+
+$$
+\boxed{
+C_{n+1}
+=
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}.
+}
+$$
+
+The productive/output component
+
+$$
+C_{n+1}^{\mathrm{out}}
+$$
+
+is the component that enters local retention:
+
+$$
+\Delta R_n
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_n.
+$$
+
+The background-associated component
+
+$$
+C_{n+1}^{\Phi}
+$$
+
+does not enter local retention.
+
+But both components contribute to the total enclosing constrained
+distinguishability read.
+
+Therefore the R<sup>2</sup>D law becomes
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\left(
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}
+\right)
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+$$
+
+## The Two Constraint Components Are Not Two Pathways
+
+The decomposition
+
+$$
+C_{n+1}
+=
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}
+$$
+
+does not mean the enclosing occurrence splits into two separate transitions.
+
+Nor does it mean two independent streams travel upward or downward.
+
+Both terms belong to the same enclosing occurrence.
+
+They distinguish two readable aspects of its constrained realization:
+
+$$
+\boxed{
+C_{n+1}^{\mathrm{out}}
+\lambda_{n+1}
+\longleftrightarrow
+\text{retained distinguishable output}
+}
+$$
+
+and
+
+$$
+\boxed{
+C_{n+1}^{\Phi}
+\lambda_{n+1}
+\longleftrightarrow
+\text{background-associated realization}.
+}
+$$
+
+These are boundary-specific readings, not separate causal channels.
+
+## The R<sup>2</sup>D Law Is Not the Second Law
+
+This distinction is especially important.
+
+The R<sup>2</sup>D law relates
+
+$$
+\boxed{
+\text{local recurrence-weighted asymmetry}
+}
+$$
+
+to
+
+$$
+\boxed{
+\text{enclosing recurrence-weighted constrained distinguishability}.
+}
+$$
+
+The R<sup>2</sup>D Second Law addresses something else.
+
+It relates local **opposed-leg occurrence nonreciprocity** to an enclosing
+**background increment**.
+
+Schematically:
+
+$$
+\boxed{
+\text{R²D law:}
+\qquad
+\text{local closure geometry}
+\longleftrightarrow
+\text{enclosing constrained geometry}
+}
+$$
+
+whereas
+
+$$
+\boxed{
+\text{Second Law:}
+\qquad
+\text{local occurrence nonreciprocity}
+\longleftrightarrow
+\text{enclosing background increment}.
+}
+$$
+
+They are complementary postulates.
+
+They are not two forms of the same equation.
+
+[The R²D Second Law →](second-law.qmd)
+
+## Background-Associated Constraint Is Not the Background Increment
+
+The R<sup>2</sup>D law contains
+
+$$
+C_{n+1}^{\Phi}
+\lambda_{n+1}.
+$$
+
+The Second Law later contains
+
+$$
+\delta_{\mathcal C}\Phi_{n+1}.
+$$
+
+Part I does **not** postulate
+
+$$
+C_{n+1}^{\Phi}
+\lambda_{n+1}
+=
+\delta_{\mathcal C}\Phi_{n+1}.
+$$
+
+These quantities play different roles.
+
+The first belongs to the decomposition of enclosing constrained
+distinguishability.
+
+The second is the enclosing read of local occurrence-count nonreciprocity.
+
+A later physical mapping may establish relationships between their physical
+reads in a specific domain.
+
+That relationship is not primitive to Part I.
+
+## Why One Representative Peer Is Enough
+
+An enclosing occurrence can have many compatible peer realizations:
+
+$$
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\left\{
+\mathcal C_{n,\alpha}
+\right\}_{\alpha\in I_n}.
+$$
+
+Suppose peers \(\alpha\) and \(\beta\) are equivalent under the same enclosing
+compatibility relation.
+
+Then either may serve as a representative local realization.
+
+Applying the law to each gives
+
+$$
+\Delta A_{n,\alpha,\mathcal C}
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+=
+C_{n+1}
+\lambda_{n+1}
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right),
+$$
+
+and
+
+$$
+\Delta A_{n,\beta,\mathcal C}
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\beta}
+\right)
+=
+C_{n+1}
+\lambda_{n+1}
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right).
+$$
+
+Therefore,
+
+$$
+\boxed{
+\frac{
+\Delta A_{n,\alpha,\mathcal C}
+}{
+\rho_{n+1|n,\alpha}
+}
+=
+\frac{
+\Delta A_{n,\beta,\mathcal C}
+}{
+\rho_{n+1|n,\beta}
+}
+=
+C_{n+1}\lambda_{n+1}.
+}
+$$
+
+Equivalent peers share the same enclosing recursive relation.
+
+## Representative Does Not Mean Average
+
+The representative peer is not obtained by averaging all local peers.
+
+Nor does one selected peer causally stand in for the contributions of the
+others.
+
+It is representative because equivalent peers occupy the same compatibility
+class relative to the enclosing occurrence.
+
+Thus:
+
+$$
+\boxed{
+\text{representative peer}
+\neq
+\text{average peer}.
+}
+$$
+
+If peer closures are not equivalent under the enclosing relation, their
+indices must remain explicit.
+
+No averaging over nonequivalent peers is assumed.
+
+## The Law Is Not Bottom-Up Export
+
+An earlier intuition might suggest that the local quantity
+
+$$
+\Delta A
+$$
+
+is somehow exported upward and becomes
+
+$$
+C\lambda.
+$$
+
+That is not the current R<sup>2</sup>D architecture.
+
+The law does not describe transport of a substance between scales.
+
+It does not say:
+
+$$
+\Delta A_n
+\longrightarrow
+C_{n+1}\lambda_{n+1}.
+$$
+
+Instead, it says that the same recursively organized realization has two
+boundary-specific mathematical readings whose recurrence-weighted forms are
+equal.
+
+Thus:
+
+> **Nothing has to travel from the local closure to the enclosing
+> occurrence.**
+
+The boundary changes.
+
+The count meaning changes.
+
+The invariant recursive relation remains.
+
+## The Law Is Not a Conservation Law of Substance
+
+For the same reason, the R<sup>2</sup>D law should not be interpreted as
+conservation of a material quantity.
+
+The equality
+
+$$
+\Delta A_n N_n
+=
+C_{n+1}\lambda_{n+1}N_{n+1}
+$$
+
+does not imply that some substance has been physically transferred from the
+left side to the right side.
+
+It states that two count representations of one recursively organized
+realization agree when recurrence is properly included.
+
+The invariant is relational.
+
+## Three Statements Must Remain Separate
+
+The recursive architecture can now be summarized by three equations.
+
+### Causality
+
+$$
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\mathcal C_{n,\alpha}.
+}
+$$
+
+This asks:
+
+> Which local realization is compatible with the enclosing occurrence?
+
+### Recursive carry
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+}
+$$
+
+This asks:
+
+> How does the completed local realization change count meaning when the
+> boundary changes?
+
+### The R<sup>2</sup>D law
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+$$
+
+This asks:
+
+> How are the two boundary-specific realization geometries related after
+> recurrence is accounted for?
+
+These are three different questions.
+
+They should not be collapsed into one arrow.
+
+## Why the Law Is Recursive
+
+The law contains quantities from two adjacent boundaries simultaneously.
+
+The local side contains
+
+$$
+\Delta A_{n,\alpha,\mathcal C}.
+$$
+
+The enclosing side contains
+
+$$
+C_{n+1},
+\qquad
+\lambda_{n+1}.
+$$
+
+The bridge between them is
+
+$$
+\rho_{n+1|n,\alpha}.
+$$
+
+Thus the law cannot be reduced to a relation confined entirely to one
+boundary.
+
+Its primitive structure is intrinsically recursive:
+
+$$
+\boxed{
+B_n
+\longleftrightarrow
+B_{n+1}.
+}
+$$
+
+That is what distinguishes it from an ordinary within-scale state equation.
+
+## Why the Law Is Dimensionless
+
+Every quantity in Part I remains a count relation.
+
+\(\Delta A\) is a logarithmic count asymmetry.
+
+\(C\) is a dimensionless constraint coordinate.
+
+\(\lambda\) is a distinguishable count interval.
+
+\(\rho\) is a ratio of recurrence counts.
+
+Therefore,
+
+$$
+\boxed{
+\Delta A
+=
+C\lambda\rho
+}
+$$
+
+is defined before any physical units are assigned.
+
+This is deliberate.
+
+R<sup>2</sup>D first defines the recursive relation.
+
+Later science can determine how a particular physical system reads each
+quantity.
+
+[Why the Mathematics Comes Before Units →](before-units.qmd)
+
+## Physical Rate Can Come Later
+
+The recurrence ratio
+
+$$
+\rho_{n+1|n}
+$$
+
+is not a physical rate in Part I.
+
+But a later domain-specific mapping may identify
+
+$$
+\rho_{n+1|n}
+$$
+
+with a ratio of physical recurrence rates.
+
+For example, if a physical system supplies valid mappings
+
+$$
+r_n
+\longleftrightarrow
+\text{local recurrence rate}
+$$
+
+and
+
+$$
+r_{n+1}
+\longleftrightarrow
+\text{enclosing recurrence rate},
+$$
+
+then one may test whether
+
+$$
+\rho_{n+1|n}
+\longleftrightarrow
+\frac{r_{n+1}}{r_n}.
+$$
+
+That is an empirical calibration.
+
+It is not assumed by the primitive law.
+
+## Physical Energy Can Come Later
+
+Likewise, a later thermodynamic mapping may assign an energetic scale to the
+dimensionless quantities.
+
+Then the R<sup>2</sup>D relation may acquire familiar physical units on both
+sides.
+
+But the physical mapping must preserve the primitive recursive structure.
+
+The logical order remains
+
+$$
+\boxed{
+\text{dimensionless recursive law}
+\rightarrow
+\text{physical calibration}.
+}
+$$
+
+Not the reverse.
+
+This is why one law can in principle be tested in very different physical
+domains.
+
+## What Would Test the Law
+
+The R<sup>2</sup>D law is a postulate of the framework.
+
+It is not a combinatorial identity that follows automatically from the
+definitions of boundary, multiplicity, or closure.
+
+Its empirical burden is therefore substantial.
+
+A physical realization must supply independent readings of:
+
+$$
+\Delta A_{n,\alpha,\mathcal C},
+$$
+
+$$
+C_{n+1},
+$$
+
+$$
+\lambda_{n+1},
+$$
+
+and
+
+$$
+\rho_{n+1|n,\alpha},
+$$
+
+and test whether
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+$$
+
+A successful mapping must also preserve the causal distinction:
+
+the local closure realizes the enclosing relation;
+
+it does not become its primitive cause.
+
+## What Would Falsify the Relation
+
+Within a proposed physical mapping, the R<sup>2</sup>D law would fail if the
+independently identified boundary-specific quantities could not satisfy the
+recursive relation without arbitrary redefinition.
+
+In particular, one should not rescue the law by silently redefining:
+
+- the count boundary;
+- the local closure;
+- the enclosing occurrence;
+- the distinguishable interval;
+- the constraint;
+- or the recurrence ratio
+
+after the empirical comparison is made.
+
+The mapping must be specified first.
+
+The relation must then be tested.
+
+This is central to the **Run R²D** program.
+
+## The Architecture in One View
+
+The complete adjacent-boundary architecture is
+
+$$
+\boxed{
+\begin{array}{ccccc}
+&&
+\chi_{n+1}^{(r)}
+&&
+\\[4pt]
+&
+\swarrow
+&&
+&
+\\[-2pt]
+\text{causal compatibility}
+&&
+\mathcal C_{n,\alpha}
+&&
+\\[8pt]
+&&
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}
+&&
+\\[8pt]
+&&
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}
+&&
+\end{array}
+}
+$$
+
+The first relation defines local realization.
+
+The second changes count meaning.
+
+The third relates the recurrence-weighted geometry of the two readings.
+
+Together they form the central recursive architecture of R<sup>2</sup>D.
+
+---
+
+## Core Equations
+
+### Local closure asymmetry
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}
+}
+$$
+
+### Adjacent recurrence ratio
+
+$$
+\boxed{
+\rho_{n+1|n,\alpha}
+=
+\frac{
+N_{\mathcal D_R}(\chi_{n+1})
+}{
+N_{\mathcal D_R}(\mathcal C_{n,\alpha})
+}
+}
+$$
+
+### Recurrence-weighted R<sup>2</sup>D law
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+=
+C_{n+1}
+\lambda_{n+1}
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+}
+$$
+
+### Compact R<sup>2</sup>D law
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}
+}
+$$
+
+### Expanded form
+
+$$
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}
+}
+$$
+
+### Total enclosing constraint
+
+$$
+\boxed{
+C_{n+1}
+=
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}
+}
+$$
+
+### Constraint-resolved form
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\left(
+C_{n+1}^{\mathrm{out}}
++
+C_{n+1}^{\Phi}
+\right)
+\lambda_{n+1}
+\rho_{n+1|n,\alpha}.
+}
+$$
+
+---
+
+## The Key Distinction
+
+The R<sup>2</sup>D law does not say that local asymmetry is exported upward.
+
+It does not say that a subordinate closure creates an enclosing occurrence.
+
+And it does not say that the same physical state persists unchanged across
+the boundary.
+
+It says something more specific:
+
+> **One recursively organized realization has different readable forms at
+> adjacent boundaries.**
+
+> **Those forms can recur at different counts.**
+
+> **When recurrence is included, their boundary-specific realization
+> geometries satisfy one invariant relation.**
+
+That is the R<sup>2</sup>D law.
+
+The next question is different:
+
+> **What happens when the opposed legs of a completed local closure are
+> realized with unequal occurrence-count efficiency?**
+
+That is the R<sup>2</sup>D Second Law.
+
+---
+
+## Next
+
+[The R²D Second Law →](second-law.qmd)
+
+[Why R²D Is Not Coarse-Graining →](not-coarse-graining.qmd)
+
+[Scientific Objecthood →](scientific-objecthood.qmd)
+
+[From Count to Physical Science →](from-count-to-physics.qmd)
+
+[Back to Understand R²D →](index.qmd)

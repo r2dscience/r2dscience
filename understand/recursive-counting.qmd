@@ -1,0 +1,1161 @@
+---
+title: "Recursive Counting Across Scale"
+subtitle: "Each boundary counts a different object"
+toc: true
+---
+
+# Recursive Counting Across Scale
+
+R<sup>2</sup>D is not simply a theory of counting states within one boundary.
+
+It is a theory of what happens when **count domains are recursively nested**.
+
+At one boundary, a distinction is readable as a state.
+
+At another boundary, that state no longer retains the same count identity.
+
+A completed local relation can instead participate in the realization of an
+enclosing state.
+
+The pattern can then repeat.
+
+This gives the primitive architecture:
+
+$$
+\boxed{
+B_{n-1}
+\rightarrow
+B_n
+\rightarrow
+B_{n+1}
+\rightarrow
+B_{n+2}
+\rightarrow
+\cdots
+}
+$$
+
+But the arrows do not mean that one unchanged object simply moves upward
+through larger containers.
+
+At every boundary:
+
+> **the count domain changes, the state domain changes, and the identity of
+> what is being counted changes.**
+
+That is recursive counting.
+
+## Each Boundary Has Its Own States
+
+At boundary \(B_n\), the readable macrostate domain is
+
+$$
+\mathcal M_n.
+$$
+
+Its formal microstates belong to
+
+$$
+\mathfrak M_n.
+$$
+
+The classification map
+
+$$
+\pi_n:
+\mathfrak M_n
+\rightarrow
+\mathcal M_n
+$$
+
+defines the multiplicity
+
+$$
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+$$
+
+Move to \(B_{n+1}\), and a new classification is defined.
+
+Thus:
+
+$$
+\boxed{
+\mathcal M_n
+\not\equiv
+\mathcal M_{n+1}.
+}
+$$
+
+The enclosing boundary does not simply inherit the same state space with less
+detail.
+
+It counts something new.
+
+[Macrostate and Microstate →](macrostate-microstate.qmd)
+
+## Recursive Replacement Comes Before Recursive Counting
+
+Because state identity is boundary relative, changing the count boundary
+produces **recursive replacement**.
+
+A state readable at \(B_n\) does not persist unchanged as a state of
+\(B_{n+1}\).
+
+Instead,
+
+$$
+\boxed{
+\text{state domain at } B_n
+\rightarrow
+\text{boundary change}
+\rightarrow
+\text{new state domain at } B_{n+1}.
+}
+$$
+
+The subordinate relation can remain consequential.
+
+Its local state identity does not.
+
+This is why recursion in R<sup>2</sup>D is not simply a stack of persistent
+objects.
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+## Completion Creates Something New to Count
+
+Suppose a readable path at \(B_n\) completes a closure:
+
+$$
+\mathcal C_{n,\alpha}:
+i
+\rightarrow
+k
+\rightarrow
+i.
+$$
+
+At \(B_n\), the internal path is readable.
+
+Once completed, that relation can be classified from the enclosing boundary.
+
+Recursive carry expresses this as
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+}
+$$
+
+The closure has not physically transformed into the enclosing occurrence.
+
+Its **count meaning has changed**.
+
+This is the basic recursive operation:
+
+> **A completed relation at one boundary becomes countable under a new
+> classification at the next.**
+
+[Recursive Carry →](recursive-carry.qmd)
+
+## The Count Does Not Preserve the Internal Sequence
+
+This provides a useful way to distinguish physical recursive counting from
+ordinary positional counting.
+
+In ordinary base-ten notation, a digit moves through a prescribed sequence:
+
+$$
+0,1,2,\ldots,9,
+$$
+
+and then carries to the next position.
+
+R<sup>2</sup>D does not require a physical state path to traverse a prescribed
+sequence.
+
+A closure might instead be
+
+$$
+A
+\rightarrow
+B
+\rightarrow
+D
+\rightarrow
+A,
+$$
+
+or
+
+$$
+0
+\rightarrow
+3
+\rightarrow
+6
+\rightarrow
+0.
+$$
+
+What matters for recursive counting is not the particular ordering of the
+intermediate labels.
+
+What matters is that the relation becomes distinguishably complete relative
+to its boundary and can then acquire a new count meaning at the enclosing
+boundary.
+
+Thus:
+
+$$
+\boxed{
+\text{internal path}
+\rightarrow
+\text{completion}
+\rightarrow
+\text{enclosing classification}.
+}
+$$
+
+The enclosing boundary need not preserve the full sequence in order to count
+its consequence.
+
+## The Base Changes With the Boundary
+
+Ordinary positional counting uses a fixed base.
+
+R<sup>2</sup>D does not assume one universal base.
+
+The available state domain is defined by the boundary itself.
+
+At one boundary there may be two readable states.
+
+At another there may be eleven.
+
+At another there may be an entirely different multiplicity landscape.
+
+So the recursive operation is not
+
+$$
+\text{same base}
++
+\text{larger number}.
+$$
+
+It is
+
+$$
+\boxed{
+\text{new boundary}
+\rightarrow
+\text{new state domain}
+\rightarrow
+\text{new count structure}.
+}
+$$
+
+This is another reason scale change in R<sup>2</sup>D is stronger than
+ordinary coarse-graining.
+
+## Coins Make the Recursion Concrete
+
+Begin with one coin boundary.
+
+Its readable states are
+
+$$
+H
+\qquad\text{and}\qquad
+T.
+$$
+
+Now let ten peer coin boundaries define one ensemble boundary.
+
+The ensemble does not possess twenty macrostates corresponding to ten copies
+of \(H\) and \(T\).
+
+Instead, it defines a new eleven-state macrostate domain:
+
+$$
+N_H
+=
+0,1,2,\ldots,10.
+$$
+
+Its multiplicity landscape is
+
+$$
+W_{n,i}
+=
+\binom{10}{i}.
+$$
+
+So:
+
+$$
+\boxed{
+10\text{ two-state boundaries}
+\rightarrow
+1\text{ eleven-state landscape}.
+}
+$$
+
+The subordinate binary domains have been recursively replaced by a new
+whole-system classification.
+
+[The Coins Example →](coins.qmd)
+
+## The Next Boundary Counts Landscapes, Not Restored Coins
+
+Now suppose the next boundary contains ten such ensemble boundaries.
+
+The crucial point is that \(B_{n+1}\) does **not** return to the lower
+description and treat one hundred individual \(H/T\) identities as its
+primitive states.
+
+It counts ten already-defined \(B_n\) landscapes.
+
+Schematically:
+
+$$
+\boxed{
+\underbrace{
+B_n,\,
+B_n,\,
+\dots,\,
+B_n
+}_{10\ \text{peer landscapes}}
+\rightarrow
+B_{n+1}.
+}
+$$
+
+A closed-form calculation may ultimately reproduce a familiar combinatorial
+result associated with one hundred binary elements.
+
+But that mathematical equivalence does not restore the one hundred
+lower-boundary identities as the primitive state variables at \(B_{n+1}\).
+
+This is the distinction between:
+
+$$
+\boxed{
+\text{recursive count consequence}
+}
+$$
+
+and
+
+$$
+\boxed{
+\text{persistence of subordinate state identity}.
+}
+$$
+
+They are not the same claim.
+
+## Compatible Possibilities Multiply
+
+The recursive structure retains the primitive counting rules introduced
+earlier.
+
+For compatible peer multiplicities,
+
+$$
+W_1,W_2,\ldots,W_m,
+$$
+
+the joint possible count is
+
+$$
+\boxed{
+W_{\mathrm{joint}}
+=
+\prod_{\alpha=1}^{m}W_\alpha.
+}
+$$
+
+Taking logarithms gives
+
+$$
+\boxed{
+\ln W_{\mathrm{joint}}
+=
+\sum_{\alpha=1}^{m}\ln W_\alpha.
+}
+$$
+
+Thus multiplicative count composition becomes additive in logarithmic
+coordinates.
+
+At the same time, mutually exclusive macrostate alternatives within one
+boundary add:
+
+$$
+\Theta_n
+=
+\sum_{i\in\mathcal M_n}
+W_{n,i}.
+$$
+
+So recursive counting is built from two primitive operations:
+
+> **Compatible possibilities multiply.**
+
+> **Mutually exclusive alternatives add.**
+
+[Counting Requires Distinguishability →](counting.qmd)
+
+## Recursion Is Not Bottom-Up Causation
+
+The direction of counting must not be confused with the direction of causal
+organization.
+
+Recursive carry can be written
+
+$$
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+$$
+
+This looks upward.
+
+But the arrow means **reclassification**, not causation.
+
+Causally, the enclosing occurrence defines which local realizations are
+compatible with it:
+
+$$
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\mathcal C_{n,\alpha}.
+}
+$$
+
+Thus two complementary relations coexist:
+
+$$
+\boxed{
+\text{enclosing organization}
+\Longrightarrow
+\text{local realization}
+}
+$$
+
+and
+
+$$
+\boxed{
+\text{completed local realization}
+\xmapsto{\text{boundary change}}
+\text{enclosing count meaning}.
+}
+$$
+
+Recursive counting therefore does not require smaller things to build larger
+things causally.
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## Recurrence Supplies the Across-Boundary Count
+
+Once a local closure is complete, it can recur.
+
+Within a common recurrence-comparison domain \(\mathcal D_R\), let
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+$$
+
+count completed local closure recurrences.
+
+Let
+
+$$
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+$$
+
+count corresponding enclosing recurrences.
+
+The adjacent recurrence ratio is
+
+$$
+\boxed{
+\rho_{n+1|n,\alpha}
+=
+\frac{
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+}{
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+}.
+}
+$$
+
+This ratio tells us how recursive realization scales from one boundary to the
+next.
+
+[Recurrence →](recurrence.qmd)
+
+## Recurrence Ratios Compose Multiplicatively
+
+Now consider a chain
+
+$$
+B_n
+\rightarrow
+B_{n+1}
+\rightarrow
+B_{n+2}
+\rightarrow
+\cdots
+\rightarrow
+B_N.
+$$
+
+The adjacent recurrence ratios are
+
+$$
+\rho_{n+1|n},
+\quad
+\rho_{n+2|n+1},
+\quad
+\dots,
+\quad
+\rho_{N|N-1}.
+$$
+
+If the same recurrence-comparison domain jointly counts the boundaries in
+the chain, the ratios compose multiplicatively:
+
+$$
+\boxed{
+\rho_{N|n}
+=
+\prod_{j=n}^{N-1}
+\rho_{j+1|j}.
+}
+$$
+
+The intermediate recurrence counts cancel.
+
+This is the recursive analogue of telescoping ratios.
+
+## Logarithms Turn Recursive Scaling Into Addition
+
+Define the adjacent logarithmic recurrence scaling
+
+$$
+\gamma_{j+1|j}
+=
+\ln\rho_{j+1|j}.
+$$
+
+Then the accumulated recurrence scaling from \(B_n\) to \(B_N\) is
+
+$$
+\boxed{
+\Gamma_{N|n}
+=
+\sum_{j=n}^{N-1}
+\ln\rho_{j+1|j}.
+}
+$$
+
+Equivalently,
+
+$$
+\boxed{
+\Gamma_{N|n}
+=
+\ln\rho_{N|n}.
+}
+$$
+
+Again, multiplicative recursive composition becomes additive in logarithmic
+coordinates.
+
+This is the same mathematical architecture already encountered with
+multiplicity.
+
+## Distinguishability Also Scales Across Boundaries
+
+Recurrence is only one aspect of the recursive relation.
+
+A readable transition at boundary \(B_j\) also has a distinguishable interval
+
+$$
+\lambda_j.
+$$
+
+For a reference boundary \(B_n\) and a larger boundary \(B_N\), define the
+accumulated distinguishability scaling
+
+$$
+\boxed{
+\Lambda_{N|n}
+=
+\ln
+\left(
+\frac{
+|\lambda_N|
+}{
+|\lambda_n|
+}
+\right).
+}
+$$
+
+This asks how the readable distinguishable interval changes across the same
+recursive hierarchy.
+
+Thus recursive comparison contains two independent scale relations:
+
+$$
+\boxed{
+\Lambda
+=
+\text{distinguishability scaling}
+}
+$$
+
+and
+
+$$
+\boxed{
+\Gamma
+=
+\text{recurrence scaling}.
+}
+$$
+
+Neither is yet space or time.
+
+## Two Coordinates of Recursive Readability
+
+This gives R<sup>2</sup>D two primitive aspects of recursive closure.
+
+One asks:
+
+> **How does distinguishability change across boundaries?**
+
+The other asks:
+
+> **How does recurrence change across boundaries?**
+
+These are quantified by
+
+$$
+\Lambda_{N|n}
+$$
+
+and
+
+$$
+\Gamma_{N|n}.
+$$
+
+Their accumulated difference can be written
+
+$$
+\boxed{
+H_{N|n}
+=
+\Lambda_{N|n}
+-
+\Gamma_{N|n}.
+}
+$$
+
+or
+
+$$
+\boxed{
+H_{N|n}
+=
+\ln
+\left[
+\frac{
+|\lambda_N|/|\lambda_n|
+}{
+\displaystyle
+\prod_{j=n}^{N-1}
+\rho_{j+1|j}
+}
+\right].
+}
+$$
+
+This quantity is not a third primitive coordinate.
+
+It measures the relative accumulated scaling of the two.
+
+## Recursive Scale Exists Before Spatial Scale
+
+The index
+
+$$
+n
+$$
+
+should not automatically be read as spatial size.
+
+A larger boundary is a more enclosing **count domain**.
+
+Physical size may later correlate with that hierarchy in a particular
+mapping.
+
+But the primitive recursion requires only:
+
+$$
+\boxed{
+\text{boundary nesting}
++
+\text{state replacement}
++
+\text{recursive recurrence}.
+}
+$$
+
+Thus R<sup>2</sup>D defines a notion of scale before meters, seconds, or
+spacetime coordinates have been introduced.
+
+This is why Part I is a theory of **dimensionless recursive counting**.
+
+## The Recursive Clock
+
+The recurrence hierarchy provides a useful intuition.
+
+Imagine each boundary as a gear.
+
+The local closure is the gear's readable cycle.
+
+Its distinguishable interval is associated with
+
+$$
+\lambda_n.
+$$
+
+Its recurrence relative to adjacent boundaries is associated with
+
+$$
+\rho_{n+1|n}.
+$$
+
+Smaller boundaries can complete many local recurrences while an enclosing
+boundary completes only one—or none within the same comparison domain.
+
+The smaller gear therefore appears active.
+
+The larger gear may appear nearly motionless.
+
+But rapid local recurrence does not imply causal priority.
+
+The smaller gear realizes the recursively organized relation.
+
+It does not independently create the enclosing relation.
+
+## What Looks Static May Still Organize
+
+Suppose
+
+$$
+\rho_{n+1|n}
+\ll1.
+$$
+
+Many local closures occur for one enclosing recurrence.
+
+Over a finite observation domain, the enclosing boundary may not visibly
+recur at all:
+
+$$
+\rho_{n+1|n}=0
+$$
+
+within that domain.
+
+But its compatibility relation can still define which subordinate
+realizations belong to the enclosing state.
+
+Thus:
+
+$$
+\boxed{
+\text{unresolved enclosing recurrence}
+\neq
+\text{absence of enclosing organization}.
+}
+$$
+
+This becomes essential when R<sup>2</sup>D later considers readability
+horizons.
+
+## Recursive Counting Can Outrun Joint Readability
+
+As recursive scaling accumulates, distinguishability and recurrence need not
+remain equally readable.
+
+If distinguishability becomes dominant relative to recurrence,
+
+$$
+H_{N|n}
+\rightarrow
++\infty,
+$$
+
+the recursive hierarchy approaches a distinguishability-dominant limit.
+
+If recurrence becomes dominant relative to distinguishability,
+
+$$
+H_{N|n}
+\rightarrow
+-\infty,
+$$
+
+it approaches the opposite limit.
+
+But a large mathematical imbalance alone is not yet a horizon.
+
+A readability horizon appears only when one relation actually becomes
+unresolvable while the other remains readable.
+
+Between those limits, both can remain jointly readable.
+
+This later produces the two opposite readability horizons developed in the
+Canon.
+
+## Occurrence Is Still Separate
+
+It is important not to confuse accumulated recurrence scaling
+
+$$
+\Gamma
+$$
+
+with the within-boundary occurrence coordinate
+
+$$
+\tau_{n,i}
+=
+\ln\nu_{n,i}.
+$$
+
+Likewise, closure nonreciprocity
+
+$$
+L_{\tau,n,\alpha,\mathcal C}
+$$
+
+does not define the recurrence scaling.
+
+These belong to different count relations.
+
+Occurrence asks how realization is distributed **within a boundary**.
+
+Recurrence scaling compares completed realization **across boundaries**.
+
+Thus:
+
+$$
+\boxed{
+\tau
+\neq
+\Gamma.
+}
+$$
+
+## Background Is Also Separate
+
+The R<sup>2</sup>D Second Law later relates local nonreciprocal
+occurrence-count realization to an enclosing nondirectional background
+increment.
+
+That relation is distinct from the recursive scaling coordinates
+
+$$
+\Lambda
+\qquad\text{and}\qquad
+\Gamma.
+$$
+
+Background therefore does not create a third recursive scale coordinate.
+
+Recursive geometry remains organized around the relation between
+distinguishability and recurrence.
+
+[The R²D Second Law →](second-law.qmd)
+
+## Recursive Counting Before Spacetime
+
+At this stage nothing requires:
+
+- physical distance;
+- elapsed time;
+- energy;
+- force;
+- matter;
+- particles;
+- fields;
+- or spacetime.
+
+The primitive architecture is already sufficient to define:
+
+$$
+\text{boundary},
+$$
+
+$$
+\text{state},
+$$
+
+$$
+\text{multiplicity},
+$$
+
+$$
+\text{occurrence},
+$$
+
+$$
+\text{closure},
+$$
+
+$$
+\text{recurrence},
+$$
+
+and
+
+$$
+\text{recursive scaling}.
+$$
+
+A later physical theory can assign familiar coordinates to those relations.
+
+But those coordinates are readings of a structure that has already been
+defined.
+
+## Why Recursive Counting Matters
+
+The full inversion can now be seen.
+
+Conventional science often begins with physical objects distributed through
+space and evolving through time.
+
+R<sup>2</sup>D begins instead with:
+
+$$
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinction}
+\rightarrow
+\text{multiplicity}
+\rightarrow
+\text{realization}
+\rightarrow
+\text{closure}
+\rightarrow
+\text{recurrence}
+\rightarrow
+\text{recursive replacement}.
+}
+$$
+
+Only afterward does it ask how familiar physical coordinates read that
+structure.
+
+Thus:
+
+> **Scale is first a relation among count boundaries.**
+
+> **Time is first approached through recurrence.**
+
+> **Geometry is first approached through distinguishability.**
+
+The familiar physical ontology comes later.
+
+## The Architecture in One Diagram
+
+The recursive architecture can be summarized as
+
+$$
+\boxed{
+\begin{array}{ccccc}
+B_n
+&
+\longrightarrow
+&
+B_{n+1}
+&
+\longrightarrow
+&
+B_{n+2}
+\\[6pt]
+
+\mathcal C_n
+&
+\xmapsto{\kappa_n}
+&
+\chi_{n+1}
+&
+\xmapsto{\kappa_{n+1}}
+&
+\chi_{n+2}
+\\[6pt]
+
+\lambda_n
+&
+\longrightarrow
+&
+\lambda_{n+1}
+&
+\longrightarrow
+&
+\lambda_{n+2}
+\\[6pt]
+
+N_n
+&
+\xrightarrow{\rho_{n+1|n}}
+&
+N_{n+1}
+&
+\xrightarrow{\rho_{n+2|n+1}}
+&
+N_{n+2}
+\end{array}
+}
+$$
+
+The first row changes the count boundary.
+
+The second changes the classification of completed realization.
+
+The third tracks distinguishability.
+
+The fourth tracks recurrence.
+
+Together they define recursive count structure.
+
+## Core Equations
+
+### Recursive carry
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}
+}
+$$
+
+### Adjacent recurrence ratio
+
+$$
+\boxed{
+\rho_{n+1|n,\alpha}
+=
+\frac{
+N_{\mathcal D_R}(\chi_{n+1})
+}{
+N_{\mathcal D_R}(\mathcal C_{n,\alpha})
+}
+}
+$$
+
+### Accumulated recurrence scaling
+
+$$
+\boxed{
+\Gamma_{N|n}
+=
+\sum_{j=n}^{N-1}
+\ln\rho_{j+1|j}
+}
+$$
+
+### Accumulated distinguishability scaling
+
+$$
+\boxed{
+\Lambda_{N|n}
+=
+\ln
+\left(
+\frac{
+|\lambda_N|
+}{
+|\lambda_n|
+}
+\right)
+}
+$$
+
+### Relative accumulated scaling
+
+$$
+\boxed{
+H_{N|n}
+=
+\Lambda_{N|n}
+-
+\Gamma_{N|n}
+}
+$$
+
+---
+
+## The Key Distinction
+
+The simplest summary is:
+
+> **A boundary counts states.**
+
+> **A completed state relation can itself become countable at an enclosing
+> boundary.**
+
+> **The enclosing boundary replaces the subordinate state domain rather than
+> preserving it unchanged.**
+
+> **Repeating this operation creates a hierarchy of recursively related count
+> domains.**
+
+Across that hierarchy, distinguishability and recurrence scale separately.
+
+That is the mathematical structure the R<sup>2</sup>D law now connects.
+
+---
+
+## Next
+
+[The R²D Law →](r2d-law.qmd)
+
+[The R²D Second Law →](second-law.qmd)
+
+[Why R²D Is Not Coarse-Graining →](not-coarse-graining.qmd)
+
+[From Count to Physical Science →](from-count-to-physics.qmd)
+
+[Back to Understand R²D →](index.qmd)

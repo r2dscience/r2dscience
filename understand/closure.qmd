@@ -1,0 +1,1257 @@
+---
+title: "Closure"
+subtitle: "A local state can return while its enclosing relation remains asymmetric"
+toc: true
+---
+
+# Closure
+
+A state can change and return to where it began.
+
+That is a **return**.
+
+But R<sup>2</sup>D gives **closure** a more specific meaning.
+
+A local return becomes a closure when that completed path is compatible with
+an occurrence at the enclosing boundary.
+
+Thus:
+
+> **Return is local path completion.**
+
+> **Closure is local return within an enclosing realization relation.**
+
+This distinction matters because the local state can close even when the
+enclosing relations organizing its forward and return paths do not.
+
+That is the basis of **asymmetric closure**.
+
+## A Macrostate Return
+
+At boundary \(B_n\), consider a finite readable path
+
+$$
+\mathcal{R}_n:
+i_0
+\rightarrow
+i_1
+\rightarrow
+\cdots
+\rightarrow
+i_m.
+$$
+
+If
+
+$$
+i_m=i_0,
+$$
+
+the path has returned to its initial macrostate.
+
+Thus:
+
+$$
+\boxed{
+\mathcal{R}_n:
+i_0
+\rightarrow
+i_1
+\rightarrow
+\cdots
+\rightarrow
+i_0
+}
+$$
+
+is a **macrostate return**.
+
+A return is defined entirely by the local state path.
+
+No statement about the enclosing relation has yet been made.
+
+## Return Is Not Yet Closure
+
+Now consider the enclosing boundary
+
+$$
+B_{n+1}.
+$$
+
+If the completed local return is compatible with at least one enclosing
+occurrence at \(B_{n+1}\), R<sup>2</sup>D calls it a **closure**.
+
+For peer boundary \(\alpha\), write
+
+$$
+\boxed{
+\mathcal{C}_{n,\alpha}.
+}
+$$
+
+So:
+
+$$
+\boxed{
+\text{return}
++
+\text{compatibility with an enclosing occurrence}
+=
+\text{closure}.
+}
+$$
+
+The local path is readable at \(B_n\).
+
+Its enclosing significance belongs to \(B_{n+1}\).
+
+This is what makes closure a recursive rather than merely cyclic concept.
+
+[Recursive Carry →](recursive-carry.qmd)
+
+## The Minimal Closure
+
+The simplest closure has two opposed legs:
+
+$$
+\boxed{
+\mathcal{C}_{n,\alpha}:
+i
+\rightarrow
+k
+\rightarrow
+i.
+}
+$$
+
+The first leg is
+
+$$
+i\rightarrow k,
+$$
+
+and the return leg is
+
+$$
+k\rightarrow i.
+$$
+
+The local state closes because the final macrostate equals the initial
+macrostate.
+
+But this does **not** require the two legs to occur under identical enclosing
+conditions.
+
+That is the key point.
+
+## Local Reversal Does Not Require Enclosing Reversal
+
+Suppose the forward leg
+
+$$
+i\rightarrow k
+$$
+
+is realized under enclosing condition \(H\).
+
+Suppose the return leg
+
+$$
+k\rightarrow i
+$$
+
+is realized under enclosing condition \(L\).
+
+The local transition has reversed.
+
+But the enclosing compatibility relation need not have reversed.
+
+The extension multiplicities can therefore differ between the two branches:
+
+$$
+K_{n+1|n,i}^{H},
+\qquad
+K_{n+1|n,k}^{H},
+$$
+
+and
+
+$$
+K_{n+1|n,i}^{L},
+\qquad
+K_{n+1|n,k}^{L}.
+$$
+
+Likewise, the enclosing productive constraints need not be identical on the
+two legs.
+
+Thus:
+
+$$
+\boxed{
+\text{local path reversal}
+\not\Rightarrow
+\text{reversal of the enclosing relation}.
+}
+$$
+
+This is the primitive structure of asymmetric closure.
+
+## Possibility Along the Forward Leg
+
+Under enclosing condition \(H\), the directional possibility for
+
+$$
+i\rightarrow k
+$$
+
+is
+
+$$
+\boxed{
+\Delta P_{n,\alpha,H}
+=
+\ln
+\left(
+\frac{
+K_{n+1|n,k}^{H}
+}{
+K_{n+1|n,i}^{H}
+}
+\right).
+}
+$$
+
+For the return leg under condition \(L\),
+
+$$
+k\rightarrow i,
+$$
+
+the directional possibility is
+
+$$
+\boxed{
+\Delta P_{n,\alpha,L}
+=
+\ln
+\left(
+\frac{
+K_{n+1|n,i}^{L}
+}{
+K_{n+1|n,k}^{L}
+}
+\right).
+}
+$$
+
+If the enclosing compatibility relation were identical on the two legs, then
+these quantities would be exact opposites:
+
+$$
+\Delta P_{n,\alpha,L}
+=
+-
+\Delta P_{n,\alpha,H}.
+$$
+
+But asymmetric closure does not require that condition.
+
+Therefore,
+
+$$
+\boxed{
+\Delta P_{n,\alpha,L}
+\neq
+-
+\Delta P_{n,\alpha,H}
+}
+$$
+
+is allowed.
+
+[Possibility →](possibility.qmd)
+
+## Closure Possibility
+
+The directional possibility accumulated around the completed closure is
+
+$$
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,H}
++
+\Delta P_{n,\alpha,L}.
+}
+$$
+
+More generally,
+
+$$
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+=
+\sum_{\chi\in\mathcal C_{n,\alpha}}
+\Delta P_{n,\alpha,\chi}.
+}
+$$
+
+The local state can return even when
+
+$$
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+\neq0.
+}
+$$
+
+This means:
+
+> **The local state can close while enclosing possibility does not.**
+
+That distinction is fundamental.
+
+## Constraint Can Also Differ Around the Closure
+
+The two branches can also experience different productive constraints.
+
+For the forward leg,
+
+$$
+\Delta R_{n,\alpha,H}
+=
+C_{n+1,H}^{\mathrm{out}}
+\lambda_{n,\alpha,i\rightarrow k}.
+$$
+
+For the return leg,
+
+$$
+\Delta R_{n,\alpha,L}
+=
+C_{n+1,L}^{\mathrm{out}}
+\lambda_{n,\alpha,k\rightarrow i}.
+$$
+
+Because distinguishability is oriented,
+
+$$
+\lambda_{n,\alpha,k\rightarrow i}
+=
+-
+\lambda_{n,\alpha,i\rightarrow k}.
+$$
+
+But the enclosing constraints themselves need not be equal:
+
+$$
+C_{n+1,H}^{\mathrm{out}}
+\neq
+C_{n+1,L}^{\mathrm{out}}.
+$$
+
+Therefore the two retention terms need not cancel.
+
+[Constraint and Retention →](constraint-retention.qmd)
+
+## Closure Retention
+
+The productive retention accumulated around the closure is
+
+$$
+\boxed{
+\Delta R_{n,\alpha,\mathcal C}
+=
+\Delta R_{n,\alpha,H}
++
+\Delta R_{n,\alpha,L}.
+}
+$$
+
+More generally,
+
+$$
+\boxed{
+\Delta R_{n,\alpha,\mathcal C}
+=
+\sum_{\chi\in\mathcal C_{n,\alpha}}
+\Delta R_{n,\alpha,\chi}.
+}
+$$
+
+Possibility and retention therefore accumulate independently around the same
+completed local path.
+
+## Closure Asymmetry
+
+The net asymmetry remaining around the closure is
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}.
+}
+$$
+
+Complete retention satisfies
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}=0,
+}
+$$
+
+or equivalently,
+
+$$
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+=
+\Delta R_{n,\alpha,\mathcal C}.
+}
+$$
+
+But a completed local return does not require complete retention.
+
+Therefore a closure can have
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}\neq0.
+}
+$$
+
+[Asymmetry →](asymmetry.qmd)
+
+## The Most Important Closure Result
+
+The local path
+
+$$
+i\rightarrow k\rightarrow i
+$$
+
+returns exactly.
+
+But the enclosing relation need not.
+
+That gives the central distinction:
+
+$$
+\boxed{
+\text{local state closure}
+\neq
+\text{closure of the enclosing directional relation}.
+}
+$$
+
+A locally closed cycle can therefore remain directionally organized.
+
+This is what makes a turbine-like cycle possible in R<sup>2</sup>D.
+
+The local machine returns.
+
+The relation driving its opposed branches need not.
+
+## Native Multiplicity Closes Exactly
+
+The local multiplicity difference for the forward transition is
+
+$$
+\Delta S_{n,\alpha,i\rightarrow k}
+=
+\ln
+\left(
+\frac{W_{n,k}}{W_{n,i}}
+\right).
+$$
+
+For the return,
+
+$$
+\Delta S_{n,\alpha,k\rightarrow i}
+=
+\ln
+\left(
+\frac{W_{n,i}}{W_{n,k}}
+\right).
+$$
+
+Adding them gives
+
+$$
+\Delta S_{n,\alpha,\mathcal C}
+=
+\Delta S_{n,\alpha,i\rightarrow k}
++
+\Delta S_{n,\alpha,k\rightarrow i}.
+$$
+
+Therefore,
+
+$$
+\boxed{
+\Delta S_{n,\alpha,\mathcal C}=0.
+}
+$$
+
+This is exact.
+
+The native multiplicity ratios are reciprocal because the state path has
+returned within the same native multiplicity landscape.
+
+## Multiplicity Closure Does Not Imply Possibility Closure
+
+The equation
+
+$$
+\Delta S_{n,\alpha,\mathcal C}=0
+$$
+
+does **not** imply
+
+$$
+\Delta P_{n,\alpha,\mathcal C}=0.
+$$
+
+These quantities belong to different relations.
+
+Native multiplicity is defined within the local boundary.
+
+Possibility is defined through compatibility with the enclosing boundary.
+
+Thus a closure can satisfy simultaneously
+
+$$
+\boxed{
+\Delta S_{n,\alpha,\mathcal C}=0
+}
+$$
+
+and
+
+$$
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}\neq0.
+}
+$$
+
+This is one of the cleanest examples of why R<sup>2</sup>D keeps local and
+enclosing count relations separate.
+
+## Multiplicity Closure Does Not Imply Asymmetry Closure
+
+Likewise,
+
+$$
+\Delta S_{n,\alpha,\mathcal C}=0
+$$
+
+does not imply
+
+$$
+\Delta A_{n,\alpha,\mathcal C}=0.
+$$
+
+The local multiplicity can return exactly while the enclosing-defined
+possibility-retention relation remains asymmetric.
+
+Thus:
+
+$$
+\boxed{
+\Delta S_{\mathcal C}=0
+\qquad\text{while}\qquad
+\Delta A_{\mathcal C}\neq0
+}
+$$
+
+is perfectly consistent.
+
+The first statement concerns possible local structure.
+
+The second concerns enclosing directional organization.
+
+## A Turbine Makes the Distinction Intuitive
+
+Imagine a turbine blade returning to the same position after one revolution.
+
+Locally:
+
+$$
+\text{position}
+\rightarrow
+\text{different position}
+\rightarrow
+\text{original position}.
+$$
+
+The blade has completed a return.
+
+But the pressure difference across the turbine need not have disappeared.
+
+The local mechanical path closes.
+
+The enclosing directional relation remains.
+
+That is the intuitive form of asymmetric closure:
+
+> **The local structure returns while the larger relation organizing the
+> cycle need not.**
+
+R<sup>2</sup>D abstracts this architecture away from the particular
+mechanical example.
+
+## Muscle Provides a Biological Example
+
+Muscle also contains cyclic local realization.
+
+Molecular switches can repeatedly move among states.
+
+At steady shortening, the ensemble can maintain a statistically stable
+local cycle while ATP free-energy relations and mechanical load continue to
+organize the cycle.
+
+The molecular states recur.
+
+The enclosing chemical-mechanical relation does not have to disappear each
+time one molecular cycle closes.
+
+Again:
+
+$$
+\boxed{
+\text{local recurrence}
+\neq
+\text{loss of enclosing direction}.
+}
+$$
+
+This is why closure is especially important for biological steady states.
+
+## Occurrence Around a Closure
+
+So far, closure has described the state path.
+
+But the two opposed legs can also be counted as realized occurrences.
+
+Let
+
+$$
+\nu_{n,\alpha,H}
+$$
+
+be the number of completed realizations of the forward oriented leg \(H\),
+
+and
+
+$$
+\nu_{n,\alpha,L}
+$$
+
+the number of completed realizations of the opposed leg \(L\),
+
+within a specified finite realization domain.
+
+These are **path occurrence counts**.
+
+They are not simply sums of state occurrence counts along the path.
+
+Define
+
+$$
+\tau_{n,\alpha,H}
+=
+\ln\nu_{n,\alpha,H},
+$$
+
+and
+
+$$
+\tau_{n,\alpha,L}
+=
+\ln\nu_{n,\alpha,L}.
+$$
+
+This introduces another closure question:
+
+> **Are the two opposed legs realized equally often?**
+
+## State-Occurrence Closure Is Exact
+
+The state occurrence coordinate for macrostate \(i\) is
+
+$$
+\tau_{n,i}
+=
+\ln\nu_{n,i}.
+$$
+
+For a genuine closed state path, the signed transition differences telescope:
+
+$$
+\boxed{
+\sum_{\chi\in\mathcal C_{n,\alpha}}
+\Delta\tau_{n,\alpha,\chi}
+=
+0.
+}
+$$
+
+This says that the **state-defined occurrence coordinate** returns with the
+closed state path.
+
+It does not mean that the two complete opposed legs occur equally often.
+
+That is a separate count relation.
+
+## Reciprocal Occurrence Realization
+
+Define the directional occurrence-count efficiency
+
+$$
+\boxed{
+\eta_{n,\alpha,\mathcal C}
+=
+\frac{
+\nu_{n,\alpha,L}
+}{
+\nu_{n,\alpha,H}
+}.
+}
+$$
+
+Choose the orientation so that
+
+$$
+0<
+\eta_{n,\alpha,\mathcal C}
+\leq1.
+$$
+
+If the two opposed legs are realized equally often,
+
+$$
+\nu_{n,\alpha,L}
+=
+\nu_{n,\alpha,H},
+$$
+
+then
+
+$$
+\boxed{
+\eta_{n,\alpha,\mathcal C}=1.
+}
+$$
+
+This is **reciprocal occurrence realization**.
+
+## Nonreciprocal Occurrence Realization
+
+If
+
+$$
+\nu_{n,\alpha,L}
+<
+\nu_{n,\alpha,H},
+$$
+
+then
+
+$$
+\boxed{
+0<
+\eta_{n,\alpha,\mathcal C}
+<1.
+}
+$$
+
+The two opposed legs are realized with unequal directional efficiency.
+
+Define the logarithmic opposed-leg difference
+
+$$
+\Delta\tau_{n,\alpha,\mathcal C}
+=
+\ln\eta_{n,\alpha,\mathcal C}.
+$$
+
+Then nonreciprocity gives
+
+$$
+\Delta\tau_{n,\alpha,\mathcal C}<0.
+$$
+
+This does not mean occurrence has been destroyed.
+
+It means the opposed directions are realized with unequal count efficiency.
+
+## Closure Asymmetry and Occurrence Nonreciprocity Are Not the Same
+
+This distinction is essential.
+
+A closure can have
+
+$$
+\Delta P_{n,\alpha,\mathcal C}\neq0
+$$
+
+while still satisfying
+
+$$
+\eta_{n,\alpha,\mathcal C}=1.
+$$
+
+Or it can have
+
+$$
+\Delta P_{n,\alpha,\mathcal C}\neq0
+$$
+
+together with
+
+$$
+0<
+\eta_{n,\alpha,\mathcal C}
+<1.
+$$
+
+Therefore:
+
+$$
+\boxed{
+\text{asymmetric enclosing organization}
+\not\equiv
+\text{nonreciprocal occurrence realization}.
+}
+$$
+
+The first concerns possibility and retention.
+
+The second concerns the realized occurrence counts of the opposed closure
+legs.
+
+They must remain distinct.
+
+## Occurrence-Count Loss
+
+For the chosen orientation, R<sup>2</sup>D defines
+
+$$
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}
+=
+-\ln\eta_{n,\alpha,\mathcal C}.
+}
+$$
+
+Equivalently,
+
+$$
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}
+=
+\ln
+\left(
+\frac{
+\nu_{n,\alpha,H}
+}{
+\nu_{n,\alpha,L}
+}
+\right).
+}
+$$
+
+Because
+
+$$
+0<
+\eta
+\leq1,
+$$
+
+we have
+
+$$
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}\geq0.
+}
+$$
+
+Reciprocal realization gives
+
+$$
+L_\tau=0.
+$$
+
+Nonreciprocal realization gives
+
+$$
+L_\tau>0.
+$$
+
+The word **loss** does not mean count destruction.
+
+It is the logarithmic measure of unequal opposed-leg occurrence efficiency.
+
+The relation between this local nonreciprocity and enclosing background is
+introduced later in the R<sup>2</sup>D Second Law.
+
+[The R²D Second Law →](second-law.qmd)
+
+## Four Different Closure Questions
+
+A completed closure therefore contains several mathematically different
+questions.
+
+### Did the local state return?
+
+For a closure,
+
+$$
+i\rightarrow k\rightarrow i.
+$$
+
+Yes.
+
+### Did native multiplicity close?
+
+Yes:
+
+$$
+\boxed{
+\Delta S_{\mathcal C}=0.
+}
+$$
+
+### Did enclosing asymmetry close?
+
+Not necessarily:
+
+$$
+\boxed{
+\Delta A_{\mathcal C}
+\neq0
+}
+$$
+
+is allowed.
+
+### Were the opposed legs realized reciprocally?
+
+Not necessarily:
+
+$$
+\boxed{
+0<\eta_{\mathcal C}<1
+}
+$$
+
+is allowed.
+
+These statements must not be collapsed into one notion of "closure" or
+"irreversibility."
+
+## Recurrence Is Yet Another Count
+
+There is still one more question:
+
+> **How many times does the completed closure recur?**
+
+That question is not answered by
+
+$$
+\Delta S_{\mathcal C},
+$$
+
+by
+
+$$
+\Delta A_{\mathcal C},
+$$
+
+or by
+
+$$
+\eta_{\mathcal C}.
+$$
+
+It requires a separate **whole-closure recurrence count**.
+
+Thus R<sup>2</sup>D separates:
+
+$$
+\boxed{
+\text{state return}
+}
+$$
+
+from
+
+$$
+\boxed{
+\text{directional asymmetry}
+}
+$$
+
+from
+
+$$
+\boxed{
+\text{opposed-leg occurrence reciprocity}
+}
+$$
+
+from
+
+$$
+\boxed{
+\text{number of closure recurrences}.
+}
+$$
+
+[Recurrence →](recurrence.qmd)
+
+## Closure Makes Recursive Carry Possible
+
+Once a local realization has completed its return, it can be treated as one
+completed relation at the local boundary.
+
+When the count boundary changes, that completed local relation need not remain
+readable through its internal path.
+
+Instead, it can acquire enclosing occurrence meaning.
+
+Thus:
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+}
+$$
+
+Closure therefore supplies the completed local realization that recursive
+carry can reclassify.
+
+The local path is readable below.
+
+Its enclosing meaning is readable above.
+
+[Recursive Carry →](recursive-carry.qmd)
+
+## Closure Is Not Upward Causation
+
+This does not mean that the completed closure creates the enclosing
+occurrence.
+
+Causally, R<sup>2</sup>D retains the opposite orientation:
+
+$$
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\mathcal C_{n,\alpha}.
+}
+$$
+
+The enclosing occurrence defines its compatible local realization.
+
+The completed local closure is then reclassified when the count boundary
+changes.
+
+Thus:
+
+> **Closure completes the local realization.**
+
+> **It does not generate the enclosing organization from below.**
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## What Closes and What Need Not Close
+
+The entire structure can now be summarized compactly.
+
+For a completed closure:
+
+### Native multiplicity closes
+
+$$
+\boxed{
+\Delta S_{n,\alpha,\mathcal C}=0.
+}
+$$
+
+### Enclosing possibility need not close
+
+$$
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}\neq0
+}
+$$
+
+in general.
+
+### Retention need not equal possibility
+
+$$
+\boxed{
+\Delta R_{n,\alpha,\mathcal C}
+\neq
+\Delta P_{n,\alpha,\mathcal C}
+}
+$$
+
+in general.
+
+### Closure asymmetry can remain
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+\neq0.
+}
+$$
+
+### Occurrence realization need not be reciprocal
+
+$$
+\boxed{
+0<
+\eta_{n,\alpha,\mathcal C}
+<1
+}
+$$
+
+is allowed.
+
+### Recurrence count is separate
+
+The number of times the completed closure recurs must be counted independently.
+
+This is the central lesson:
+
+> **A path can close in one count relation without every relation associated
+> with that path closing.**
+
+## The Key Distinction
+
+Closure is therefore not simply "coming back to the beginning."
+
+It is a layered recursive structure.
+
+The local macrostate returns.
+
+Native multiplicity closes exactly.
+
+But the enclosing relation organizing the opposed legs can remain
+asymmetric.
+
+The realization of those legs can remain nonreciprocal.
+
+And the completed closure can recur at its own count relative to the
+enclosing boundary.
+
+That separation allows R<sup>2</sup>D to distinguish **cycle**, **direction**,
+**irreversibility**, and **recurrence** before assigning physical units to any
+of them.
+
+---
+
+## Core Equations
+
+### Local closure
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}:
+i\rightarrow k\rightarrow i
+}
+$$
+
+### Native multiplicity closure
+
+$$
+\boxed{
+\Delta S_{n,\alpha,\mathcal C}=0
+}
+$$
+
+### Closure possibility
+
+$$
+\boxed{
+\Delta P_{n,\alpha,\mathcal C}
+=
+\sum_{\chi\in\mathcal C_{n,\alpha}}
+\Delta P_{n,\alpha,\chi}
+}
+$$
+
+### Closure retention
+
+$$
+\boxed{
+\Delta R_{n,\alpha,\mathcal C}
+=
+\sum_{\chi\in\mathcal C_{n,\alpha}}
+\Delta R_{n,\alpha,\chi}
+}
+$$
+
+### Closure asymmetry
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}
+}
+$$
+
+### Directional occurrence-count efficiency
+
+$$
+\boxed{
+\eta_{n,\alpha,\mathcal C}
+=
+\frac{
+\nu_{n,\alpha,L}
+}{
+\nu_{n,\alpha,H}
+}
+}
+$$
+
+### Occurrence-count loss
+
+$$
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}
+=
+-\ln\eta_{n,\alpha,\mathcal C}
+\geq0
+}
+$$
+
+---
+
+## Next
+
+[Recurrence →](recurrence.qmd)
+
+[Recursive Counting Across Scale →](recursive-counting.qmd)
+
+[The R²D Law →](r2d-law.qmd)
+
+[The R²D Second Law →](second-law.qmd)
+
+[Back to Understand R²D →](index.qmd)

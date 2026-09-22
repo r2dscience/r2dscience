@@ -1,0 +1,1046 @@
+---
+title: "Possibility"
+subtitle: "Directional support comes from the enclosing count domain"
+toc: true
+---
+
+# Possibility
+
+Multiplicity tells us how many realizations are possible **within** a local
+state domain.
+
+But multiplicity alone does not determine which local state is directionally
+favored.
+
+R<sup>2</sup>D therefore introduces a second kind of possible count:
+
+**compatible enclosing multiplicity**.
+
+The distinction is fundamental:
+
+> **Multiplicity describes the possibilities belonging to a local state.  
+> Possibility describes how those local possibilities extend into an enclosing
+> state domain.**
+
+R<sup>2</sup>D denotes the logarithmic measure of that enclosing extension by
+
+$$
+P.
+$$
+
+Possibility is therefore an **across-boundary count relation**.
+
+[Multiplicity →](multiplicity.qmd)
+
+## Local Multiplicity Does Not Supply Direction
+
+At boundary \(B_n\), macrostate \(i\) has multiplicity
+
+$$
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+$$
+
+Its logarithmic coordinate is
+
+$$
+S_{n,i}
+=
+\ln W_{n,i}.
+$$
+
+This tells us how many compatible formal microstates belong to \(i\).
+
+It defines the native possible-count landscape.
+
+But suppose the same local state domain can participate in different
+enclosing conditions.
+
+The local multiplicities
+
+$$
+W_{n,i}
+$$
+
+can remain unchanged while the realized occupancy changes.
+
+Therefore the native multiplicity landscape cannot, by itself, be the
+complete source of direction.
+
+Something outside the local count domain must distinguish how the local
+alternatives participate in the larger relation.
+
+That quantity is possibility.
+
+## The Enclosing Boundary Defines Additional Compatibility
+
+Consider local macrostate
+
+$$
+i \in \mathcal{M}_n.
+$$
+
+Now move one boundary outward to
+
+$$
+B_{n+1}.
+$$
+
+The enclosing boundary contains many possible realizations.
+
+Only some of those realizations are compatible with local state \(i\).
+
+Let the set of enclosing realizations compatible with \(i\) be
+
+$$
+\mathcal{E}_{n+1|n,i}.
+$$
+
+Its cardinality is
+
+$$
+\boxed{
+\Theta_{n+1|n,i}
+=
+\left|
+\mathcal{E}_{n+1|n,i}
+\right|
+}
+$$
+
+This answers a different question from local multiplicity.
+
+Local multiplicity asks:
+
+> **How many local realizations belong to state \(i\)?**
+
+Compatible enclosing multiplicity asks:
+
+> **How many enclosing realizations are compatible with realization of
+> local state \(i\)?**
+
+These counts belong to different boundaries.
+
+## Local Multiplicity and Enclosing Multiplicity
+
+The distinction can be written:
+
+$$
+\boxed{
+W_{n,i}
+=
+\text{local possibilities classified as } i
+}
+$$
+
+whereas
+
+$$
+\boxed{
+\Theta_{n+1|n,i}
+=
+\text{enclosing possibilities compatible with } i.
+}
+$$
+
+The local state itself is not physically stretched into the enclosing
+boundary.
+
+Rather, \(i\) is the local classification relative to which enclosing
+compatibility is counted.
+
+This matters because recursive comparison is a comparison of **count
+relations**, not the persistence of one object across boundaries.
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+## Extension Per Local Possibility
+
+A local macrostate with large multiplicity naturally contains more local
+realizations.
+
+So simply counting the total number of compatible enclosing realizations is
+not yet enough.
+
+R<sup>2</sup>D therefore defines the mean compatible enclosing extension
+multiplicity **per local possibility**:
+
+$$
+\boxed{
+K_{n+1|n,i}
+=
+\frac{
+\Theta_{n+1|n,i}
+}{
+W_{n,i}
+}
+}
+$$
+
+This asks:
+
+> For each local possibility classified as \(i\), how much compatible
+> enclosing realization is available?
+
+The quantity \(K\) is still a count ratio.
+
+No energy, force, probability, or physical potential has yet been introduced.
+
+## Possibility Is the Logarithm of Compatible Extension
+
+R<sup>2</sup>D defines possibility as
+
+$$
+\boxed{
+P_{n,i}
+=
+\ln K_{n+1|n,i}
+}
+$$
+
+or equivalently,
+
+$$
+\boxed{
+P_{n,i}
+=
+\ln
+\left(
+\frac{
+\Theta_{n+1|n,i}
+}{
+W_{n,i}
+}
+\right).
+}
+$$
+
+Because
+
+$$
+S_{n,i}
+=
+\ln W_{n,i},
+$$
+
+and the compatible enclosing entropy is
+
+$$
+S^{\mathrm{comp}}_{n+1|n,i}
+=
+\ln \Theta_{n+1|n,i},
+$$
+
+possibility can also be written
+
+$$
+\boxed{
+P_{n,i}
+=
+S^{\mathrm{comp}}_{n+1|n,i}
+-
+S_{n,i}.
+}
+$$
+
+Possibility is therefore an **across-boundary difference in logarithmic
+possible count**.
+
+## Possibility Is Not Local Multiplicity
+
+This distinction is easy to lose because both quantities involve possible
+count.
+
+But they answer different questions.
+
+### Multiplicity
+
+$$
+W_{n,i}
+$$
+
+counts possibilities **inside** the local state classification.
+
+### Possibility
+
+$$
+P_{n,i}
+$$
+
+measures how those local possibilities participate in the compatible
+realization structure of the **enclosing boundary**.
+
+Thus:
+
+$$
+\boxed{
+\text{multiplicity}
+\neq
+\text{possibility}.
+}
+$$
+
+Multiplicity belongs to the native local landscape.
+
+Possibility is defined across boundaries.
+
+## Possibility Is Not Probability
+
+The word "possibility" can sound probabilistic.
+
+That is not what \(P\) means in R<sup>2</sup>D.
+
+Probability is a normalized quantity.
+
+Possibility is defined before normalization as a count relation among
+compatible realizations.
+
+Thus:
+
+$$
+\boxed{
+P
+\neq
+\text{probability}.
+}
+$$
+
+Probability may later become a useful physical or statistical read of
+unresolved possible count.
+
+But it is not primitive to the definition of \(P\).
+
+## Possibility Is Not Energy
+
+Likewise,
+
+$$
+P
+$$
+
+is not primitive energy.
+
+Part I has not yet introduced joules, temperature, chemical potential, work,
+or any other energetic coordinate.
+
+Possibility is dimensionless.
+
+Later thermodynamic mappings can assign energetic meaning to particular
+physical realizations of the count relation.
+
+But the primitive definition remains:
+
+$$
+\boxed{
+P
+=
+\text{logarithmic compatible enclosing extension}.
+}
+$$
+
+This distinction allows the same formal quantity to be investigated across
+domains before any one physical interpretation is imposed.
+
+## Absolute Possibility Does Not Define Direction
+
+Suppose two local states \(i\) and \(k\) have the same compatible enclosing
+extension:
+
+$$
+K_{n+1|n,i}
+=
+K_{n+1|n,k}
+=
+K.
+$$
+
+Then
+
+$$
+P_{n,i}
+=
+P_{n,k}
+=
+\ln K.
+$$
+
+The enclosing multiplicity could be enormous.
+
+But the two local states receive equal support.
+
+Therefore,
+
+$$
+\boxed{
+\Delta P_{n,i\rightarrow k}
+=
+0.
+}
+$$
+
+A large common possibility does not, by itself, produce direction.
+
+This is crucial.
+
+> **Possibility provides enclosing support.  
+> Direction requires a difference in possibility.**
+
+## Directional Possibility
+
+For a readable local transition
+
+$$
+i \rightarrow k,
+$$
+
+define the possibility difference
+
+$$
+\boxed{
+\Delta P_{n,i\rightarrow k}
+=
+P_{n,k}
+-
+P_{n,i}.
+}
+$$
+
+Substituting the compatible extension multiplicities gives
+
+$$
+\boxed{
+\Delta P_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{
+K_{n+1|n,k}
+}{
+K_{n+1|n,i}
+}
+\right).
+}
+$$
+
+Thus:
+
+- if \(K_{n+1|n,k} > K_{n+1|n,i}\), then \(\Delta P>0\);
+- if \(K_{n+1|n,k} = K_{n+1|n,i}\), then \(\Delta P=0\);
+- if \(K_{n+1|n,k} < K_{n+1|n,i}\), then \(\Delta P<0\).
+
+Direction emerges from **unequal compatible enclosing extension**.
+
+## A Simple Example
+
+Suppose two local states have equal native multiplicity:
+
+$$
+W_{n,i}
+=
+W_{n,k}
+=
+10.
+$$
+
+Now suppose state \(i\) participates in
+
+$$
+100
+$$
+
+compatible enclosing realizations while state \(k\) participates in
+
+$$
+1000.
+$$
+
+Then
+
+$$
+K_{n+1|n,i}
+=
+\frac{100}{10}
+=
+10,
+$$
+
+while
+
+$$
+K_{n+1|n,k}
+=
+\frac{1000}{10}
+=
+100.
+$$
+
+So
+
+$$
+P_{n,i}
+=
+\ln 10,
+$$
+
+and
+
+$$
+P_{n,k}
+=
+\ln 100.
+$$
+
+The directional possibility is
+
+$$
+\Delta P_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{100}{10}
+\right)
+=
+\ln 10.
+$$
+
+The local multiplicities are identical.
+
+The directional difference arises entirely from the enclosing compatibility
+relation.
+
+This is the simplest demonstration of the R<sup>2</sup>D causal inversion.
+
+## The Local Landscape Can Stay Fixed
+
+Suppose
+
+$$
+W_{n,i}
+$$
+
+and
+
+$$
+W_{n,k}
+$$
+
+remain unchanged.
+
+The native multiplicity landscape has not changed.
+
+But if the enclosing relation changes,
+
+$$
+\Theta_{n+1|n,i}
+\rightarrow
+\Theta'_{n+1|n,i}
+$$
+
+or
+
+$$
+\Theta_{n+1|n,k}
+\rightarrow
+\Theta'_{n+1|n,k},
+$$
+
+then the compatible extension ratios change.
+
+Therefore
+
+$$
+\Delta P
+$$
+
+can change.
+
+It can increase.
+
+It can vanish.
+
+It can reverse sign.
+
+All while the local multiplicity landscape remains unchanged.
+
+Thus:
+
+> **Enclosing compatibility can create, cancel, or reverse local directional
+> support without changing native local multiplicity.**
+
+This is one of the central formal results of Part I.
+
+## The Local and Enclosing Counts Fit Together
+
+For the transition
+
+$$
+i \rightarrow k,
+$$
+
+the directional possibility difference can be expanded as
+
+$$
+\Delta P_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{
+\Theta_{n+1|n,k}
+}{
+W_{n,k}
+}
+\right)
+-
+\ln
+\left(
+\frac{
+\Theta_{n+1|n,i}
+}{
+W_{n,i}
+}
+\right).
+$$
+
+Rearranging gives
+
+$$
+\Delta P_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{
+\Theta_{n+1|n,k}
+}{
+\Theta_{n+1|n,i}
+}
+\right)
+-
+\ln
+\left(
+\frac{
+W_{n,k}
+}{
+W_{n,i}
+}
+\right).
+$$
+
+Since
+
+$$
+\Delta S_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{
+W_{n,k}
+}{
+W_{n,i}
+}
+\right),
+$$
+
+we obtain
+
+$$
+\boxed{
+\Delta S_{n,i\rightarrow k}
++
+\Delta P_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{
+\Theta_{n+1|n,k}
+}{
+\Theta_{n+1|n,i}
+}
+\right).
+}
+$$
+
+This equation makes the architecture transparent.
+
+The left side separates:
+
+- native local multiplicity difference, and
+- across-boundary possibility difference.
+
+Together they equal the difference in enclosing multiplicity compatible with
+the two local alternatives.
+
+## Possibility Favors Compatible Realization
+
+The state with greater compatible enclosing multiplicity has greater
+directional possibility.
+
+This does not mean that an abstract quantity called \(P\) physically pushes
+an object through a landscape.
+
+Possibility is not a new force.
+
+It is a count relation.
+
+The primitive statement is:
+
+> **The local state compatible with more enclosing realization has greater
+> enclosing directional support.**
+
+R<sup>2</sup>D therefore locates the source of direction in relational
+compatibility rather than in an intrinsic push attached to the subordinate
+state.
+
+## Possibility Is Not Generated by Occupancy
+
+Occupancy describes realized structure:
+
+$$
+c_{n,i}.
+$$
+
+Possibility describes compatible enclosing count:
+
+$$
+P_{n,i}.
+$$
+
+Therefore
+
+$$
+\boxed{
+\text{occupancy does not generate possibility}.
+}
+$$
+
+The causal ordering instead runs from enclosing compatibility toward local
+realization:
+
+$$
+\boxed{
+\Theta_{n+1|n,i}
+\rightarrow
+P_{n,i}
+\rightarrow
+\Delta P_{n,i\rightarrow k}.
+}
+$$
+
+Only afterward does the directional relation participate in determining how
+occurrence is expressed as occupancy.
+
+[Occupancy and Occurrence →](occupancy-occurrence.qmd)
+
+## "Possibility Pulls Occupancy"
+
+This gives meaning to one of the compact statements used in R<sup>2</sup>D:
+
+> **Possibility pulls occupancy.**
+
+The word *pulls* should not be interpreted as a primitive mechanical force.
+
+It means that unequal enclosing compatibility biases which local occupancy
+structure is supported.
+
+Schematically,
+
+$$
+\boxed{
+\text{enclosing compatibility}
+\rightarrow
+\text{directional possibility}
+\rightarrow
+\text{local occupancy bias}.
+}
+$$
+
+The subordinate transitions remain necessary to realize the occupancy
+change.
+
+But the directional relation does not have to originate inside those
+transitions.
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## A Molecular Example
+
+Consider a molecular switch with two readable states:
+
+$$
+M_1
+\qquad\text{and}\qquad
+M_2.
+$$
+
+The switch has a local multiplicity structure.
+
+But its realized distribution may depend on chemical conditions, mechanical
+constraint, temperature, applied fields, or other enclosing relations.
+
+Changing one of those enclosing conditions can alter which switch state is
+preferentially occupied without redefining the native switch-state
+classification.
+
+R<sup>2</sup>D interprets this architecture as:
+
+$$
+\text{local state multiplicity}
++
+\text{enclosing compatible multiplicity}
+\rightarrow
+\text{directionally organized realization}.
+$$
+
+Part II later asks how familiar thermodynamic quantities physically calibrate
+this dimensionless count relation.
+
+But the primitive architecture is already present before those units are
+assigned.
+
+## Possibility Comes From Outside the Local Boundary
+
+This gives a precise meaning to the statement that the source of local
+direction lies "outside" the local boundary.
+
+It does not mean a mysterious external agency.
+
+It means that the directional relation cannot be fully specified from the
+native local multiplicity landscape alone.
+
+The relevant information belongs to how the local alternatives participate
+in an enclosing count domain.
+
+Thus:
+
+$$
+\boxed{
+\text{local structure}
+\neq
+\text{complete directional relation}.
+}
+$$
+
+Direction is inherently across-boundary.
+
+## But Possibility Is Not Sufficient by Itself
+
+Greater compatible enclosing possibility does not uniquely determine the
+local outcome.
+
+A second relation can retain part of that directional possibility against
+local distinguishable change.
+
+R<sup>2</sup>D calls that relation **retention**.
+
+For a local transition,
+
+$$
+i \rightarrow k,
+$$
+
+the eventual local asymmetry takes the form
+
+$$
+\boxed{
+\Delta A
+=
+\Delta P
+-
+\Delta R.
+}
+$$
+
+So possibility answers:
+
+> **How strongly does enclosing compatibility favor one local alternative
+> over another?**
+
+Retention asks:
+
+> **How much of that directional possibility is opposed or retained by
+> constraint?**
+
+That is the next step.
+
+[Constraint and Retention →](constraint-retention.qmd)
+
+## The Architecture So Far
+
+The count architecture can now be extended:
+
+$$
+\boxed{
+\begin{array}{c}
+\text{boundary}
+\\
+\Downarrow
+\\
+\text{local multiplicity}
+\\
+\Downarrow
+\\
+\text{possible local structure}
+\end{array}
+}
+$$
+
+while across the enclosing relation,
+
+$$
+\boxed{
+\begin{array}{c}
+\text{compatible enclosing multiplicity}
+\\
+\Downarrow
+\\
+P
+\\
+\Downarrow
+\\
+\Delta P
+\\
+\Downarrow
+\\
+\text{directional support}
+\end{array}
+}
+$$
+
+Multiplicity structures what can occur locally.
+
+Possibility distinguishes how those local alternatives participate in the
+enclosing whole.
+
+## Core Equations
+
+### Local multiplicity
+
+$$
+\boxed{
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|
+}
+$$
+
+### Compatible enclosing multiplicity
+
+$$
+\boxed{
+\Theta_{n+1|n,i}
+=
+\left|
+\mathcal{E}_{n+1|n,i}
+\right|
+}
+$$
+
+### Enclosing extension per local possibility
+
+$$
+\boxed{
+K_{n+1|n,i}
+=
+\frac{
+\Theta_{n+1|n,i}
+}{
+W_{n,i}
+}
+}
+$$
+
+### Possibility
+
+$$
+\boxed{
+P_{n,i}
+=
+\ln K_{n+1|n,i}
+}
+$$
+
+or
+
+$$
+\boxed{
+P_{n,i}
+=
+\ln
+\left(
+\frac{
+\Theta_{n+1|n,i}
+}{
+W_{n,i}
+}
+\right)
+}
+$$
+
+### Directional possibility
+
+$$
+\boxed{
+\Delta P_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{
+K_{n+1|n,k}
+}{
+K_{n+1|n,i}
+}
+\right)
+}
+$$
+
+### Local and enclosing count relation
+
+$$
+\boxed{
+\Delta S_{n,i\rightarrow k}
++
+\Delta P_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{
+\Theta_{n+1|n,k}
+}{
+\Theta_{n+1|n,i}
+}
+\right)
+}
+$$
+
+## The Key Distinction
+
+The simplest summary is:
+
+> **Multiplicity tells us how many realizations belong to a local state.**
+
+> **Possibility tells us how those local possibilities extend into the
+> enclosing count domain.**
+
+> **Directional possibility is the difference in that enclosing support
+> between local alternatives.**
+
+This is where R<sup>2</sup>D first locates the mathematical source of
+direction.
+
+The next question is what opposes or retains that possibility.
+
+---
+
+## Next
+
+[Constraint and Retention →](constraint-retention.qmd)
+
+[Asymmetry →](asymmetry.qmd)
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+[Back to Understand R²D →](index.qmd)

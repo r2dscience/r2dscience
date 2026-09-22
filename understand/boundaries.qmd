@@ -1,0 +1,424 @@
+---
+title: "Boundaries Define Scientific Objects"
+subtitle: "The count domain comes before the object"
+toc: true
+---
+
+# Boundaries Define Scientific Objects
+
+R<sup>2</sup>D begins with the principle:
+
+> **Counting requires distinguishability.**
+
+But distinguishability alone is not enough.
+
+A scientific count also requires a boundary that determines **what counts as a distinction**.
+
+R<sup>2</sup>D therefore makes the boundary primitive to the scientific object.
+
+> **A boundary defines the count domain.**
+
+The boundary does not merely surround an already-defined object.
+
+It participates in defining what the object is.
+
+## A Boundary Is Not Necessarily a Physical Surface
+
+In ordinary language, a boundary often means a wall, membrane, surface, or spatial edge.
+
+That is not the primitive R<sup>2</sup>D definition.
+
+A boundary is the relation that determines:
+
+- which differences are distinguishable;
+- which subordinate realizations are mutually compatible;
+- which compatible realizations belong to the same readable state;
+- and which completed subordinate processes count as realizations of an enclosing occurrence.
+
+A membrane can define a boundary.
+
+So can an ensemble definition.
+
+So can an experimental measurement.
+
+So can the distinction between one molecular state and another.
+
+The primitive requirement is not a physical surface.
+
+It is a **count domain**.
+
+## The Boundary Defines the Object
+
+Consider a single coin.
+
+At one boundary, the readable states are
+
+$$
+H
+\qquad \text{and} \qquad
+T.
+$$
+
+The coin is the object.
+
+Now consider ten coins together.
+
+At the ensemble boundary, the readable states might instead be
+
+$$
+(10H,0T),\;
+(9H,1T),\;
+\dots,\;
+(0H,10T).
+$$
+
+The ten-coin ensemble is now the object.
+
+The individual heads and tails have not disappeared physically.
+
+But they no longer possess the same state meaning at the ensemble boundary.
+
+The boundary has changed.
+
+Therefore the count domain has changed.
+
+Therefore the scientific object has changed.
+
+[Work through the coins example →](coins.qmd)
+
+## The Same Physical System Can Support Different Objects
+
+This distinction becomes especially important in science.
+
+Consider water.
+
+At one boundary, the scientific object may be a water molecule.
+
+Its readable states belong to the molecular state domain.
+
+At another boundary, the scientific object may be a glass of water.
+
+Its readable states belong to an enclosing thermodynamic or mechanical state domain.
+
+The glass is not a poorly resolved water molecule.
+
+And the molecule is not a highly resolved glass.
+
+They are different scientific objects because they are defined at different count boundaries.
+
+R<sup>2</sup>D therefore rejects the assumption that increasing or decreasing resolution always reveals more or less detail about one ontologically fixed object.
+
+Instead:
+
+$$
+\boxed{
+\text{change boundary}
+\rightarrow
+\text{change count domain}
+\rightarrow
+\text{change scientific object}
+}
+$$
+
+## There Is No Privileged Physical Scale
+
+Statistical mechanics itself provides an important clue.
+
+The same combinatorial mathematics can describe an ensemble of:
+
+- spins;
+- electrons;
+- molecules;
+- proteins;
+- molecular motors;
+- cells;
+- coins;
+- or other distinguishable systems.
+
+Nothing in the combinatorics declares one of these objects to be the uniquely fundamental scale.
+
+A protein can be the object.
+
+A molecular state within that protein can be the object.
+
+An ensemble of proteins can be the object.
+
+A muscle fiber can be the object.
+
+Which one is being counted depends on the boundary.
+
+> **Science is boundary dependent. It does not privilege one object or one scale.**
+
+## Boundary-Relative Statehood
+
+This leads directly to the most important definitions in R<sup>2</sup>D.
+
+A state does not first exist independently of the boundary and then receive a label such as
+"microstate" or "macrostate."
+
+Those terms describe a relationship to a boundary.
+
+At boundary \(B_n\):
+
+- a **macrostate** is a distinguishable state readable at \(B_n\);
+- a **formal microstate** is one compatible joint realization of the immediately subordinate peer boundaries.
+
+The distinction is relational.
+
+A state can therefore have macrostate meaning at one boundary and microstate meaning relative to another.
+
+[Macrostate and Microstate →](macrostate-microstate.qmd)
+
+## Immediately Subordinate Peer Boundaries
+
+Suppose the boundary being considered is
+
+$$
+B_n.
+$$
+
+Let its immediately subordinate peer boundaries be
+
+$$
+\{B_{n-1,\alpha}\}.
+$$
+
+Each subordinate peer possesses its own state domain.
+
+A realization of the enclosing boundary involves some joint realization of those peers.
+
+Not every formally imaginable combination must be compatible.
+
+The enclosing boundary \(B_n\) determines which joint peer realizations belong to its admissible count domain.
+
+Schematically:
+
+$$
+\text{peer realizations}
+\rightarrow
+\text{compatibility at } B_n
+\rightarrow
+\text{state domain at } B_n.
+$$
+
+This is why the enclosing boundary is not simply a passive container.
+
+It defines the relation under which subordinate realizations count together.
+
+## Compatibility Comes Before Multiplicity
+
+Once the boundary has defined which subordinate realizations are compatible, those realizations can be classified into readable states.
+
+If many compatible subordinate realizations are classified as the same readable state, that state has multiplicity.
+
+Thus the logical order is:
+
+$$
+\boxed{
+\text{boundary}
+\rightarrow
+\text{compatible realizations}
+\rightarrow
+\text{classification}
+\rightarrow
+\text{multiplicity}
+}
+$$
+
+Multiplicity therefore does not create the boundary.
+
+The boundary defines the count domain in which multiplicity can be counted.
+
+[Understand Multiplicity →](multiplicity.qmd)
+
+## Resolution Changes the Count Boundary
+
+This has an important consequence for observation.
+
+Suppose a subordinate transition is not individually readable at \(B_n\).
+
+One might imagine that better experimental resolution simply reveals that hidden transition while leaving the scientific description unchanged.
+
+R<sup>2</sup>D says something more precise.
+
+To read the subordinate transition directly, the observer must move to the subordinate boundary where that transition is distinguishable.
+
+But once the boundary changes, the state classification changes too.
+
+The transition that had **microstate meaning** relative to \(B_n\) now has **macrostate meaning** at \(B_{n-1}\).
+
+Therefore:
+
+$$
+\boxed{
+\text{increased resolution}
+\rightarrow
+\text{change of boundary}
+\rightarrow
+\text{change of state meaning}
+}
+$$
+
+Observation has not merely revealed more detail about the same formal state.
+
+It has changed the count domain from which the state is defined.
+
+## The Causal Question Changes Too
+
+Return to the ten-coin example.
+
+At the ten-coin boundary, one may ask:
+
+> Why does the ensemble occupy one macrostate rather than another?
+
+To resolve an individual coin transition, the observer changes to the single-coin boundary.
+
+The question is now:
+
+> Why does this coin realize heads rather than tails?
+
+These are not the same causal question at different resolutions.
+
+They belong to different count domains.
+
+This matters because bottom-up causation is often inferred by resolving smaller and smaller mechanisms.
+
+R<sup>2</sup>D warns that increasing resolution changes the boundary from which causality is being defined.
+
+A subordinate mechanism can be necessary for the realization of an enclosing state without therefore being the source of the organization that distinguishes the enclosing state.
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## A Boundary Is Not Coarse-Graining
+
+The difference from ordinary coarse-graining is fundamental.
+
+A coarse-graining picture often suggests:
+
+$$
+\text{same underlying state}
+\rightarrow
+\text{less information}.
+$$
+
+R<sup>2</sup>D instead proposes:
+
+$$
+\text{new boundary}
+\rightarrow
+\text{new classification}
+\rightarrow
+\text{new state domain}.
+$$
+
+The subordinate realization can remain physically consequential.
+
+But its internal path, source identity, and state classification need not remain readable as the same objects from the enclosing boundary.
+
+Changing the boundary is therefore not merely forgetting information.
+
+It changes the ontology of the count.
+
+[Why R²D Is Not Coarse-Graining →](not-coarse-graining.qmd)
+
+## Boundaries Make Recursive Replacement Possible
+
+Once statehood is boundary dependent, recursive replacement follows naturally.
+
+A subordinate state is readable at its own boundary.
+
+When an enclosing boundary becomes the count domain, the subordinate distinctions no longer remain the states being counted.
+
+Their compatible realizations instead participate in defining the multiplicity and state structure of the enclosing object.
+
+Thus:
+
+$$
+\text{subordinate state domain}
+\rightarrow
+\text{boundary change}
+\rightarrow
+\text{enclosing state domain}.
+$$
+
+The subordinate object has not been erased.
+
+Its count meaning has changed.
+
+R<sup>2</sup>D calls this operation **recursive replacement**.
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+## Scientific Objecthood Is Boundary Indexed
+
+The broader implication is straightforward.
+
+A particle can be real.
+
+A molecule can be real.
+
+A protein can be real.
+
+A cell can be real.
+
+A muscle can be real.
+
+A planet can be real.
+
+A spacetime metric can be real.
+
+R<sup>2</sup>D does not require any of them to be illusions.
+
+It requires only that their scientific identity be indexed to the boundary that makes their states distinguishable.
+
+A scientific object can therefore be:
+
+- completely real;
+- measurable;
+- predictive;
+- and causally useful
+
+without being primitive at every scale.
+
+This is why R<sup>2</sup>D is not merely a theory about particular objects.
+
+It is a proposed theory of **scientific objecthood**.
+
+[Scientific Objecthood →](scientific-objecthood.qmd)
+
+## The Boundary Comes First
+
+The primitive sequence can now be expanded:
+
+$$
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinction}
+\rightarrow
+\text{compatible realization}
+\rightarrow
+\text{state classification}
+\rightarrow
+\text{count}
+}
+$$
+
+The scientific object appears only after the count domain has been defined.
+
+This is the inversion at the foundation of R<sup>2</sup>D:
+
+> **The boundary does not merely tell us where the object is.  
+> The boundary helps define what the object is.**
+
+---
+
+## Next
+
+[Macrostate and Microstate →](macrostate-microstate.qmd)
+
+[Multiplicity →](multiplicity.qmd)
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+[Back to Understand R²D →](index.qmd)

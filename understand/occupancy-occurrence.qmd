@@ -1,0 +1,922 @@
+---
+title: "Occupancy and Occurrence"
+subtitle: "Possible structure, realized count, and realized state"
+toc: true
+---
+
+# Occupancy and Occurrence
+
+Multiplicity tells us what **can** be realized.
+
+It does not tell us what **is** realized.
+
+R<sup>2</sup>D therefore separates three different kinds of count:
+
+$$
+\boxed{
+W_{n,i}
+=
+\text{possible count}
+}
+$$
+
+$$
+\boxed{
+\nu_{n,i}
+=
+\text{realized occurrence count}
+}
+$$
+
+$$
+\boxed{
+c_{n,i}
+=
+\text{realized occupancy}
+}
+$$
+
+These quantities are related.
+
+They are not interchangeable.
+
+This distinction is essential because scientific descriptions often compress
+possible structure, realized events, and realized state into one statistical
+language.
+
+R<sup>2</sup>D keeps them separate.
+
+[Multiplicity →](multiplicity.qmd)
+
+## Multiplicity Comes First
+
+At boundary \(B_n\), macrostate \(i\) has multiplicity
+
+$$
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+$$
+
+This is the number of compatible formal microstates classified as \(i\).
+
+It defines possible structure.
+
+The corresponding logarithmic coordinate is
+
+$$
+S_{n,i}
+=
+\ln W_{n,i}.
+$$
+
+Nothing in this definition requires any particular microstate actually to be
+realized.
+
+Multiplicity therefore answers:
+
+> **How many compatible realizations are possible?**
+
+Occurrence and occupancy answer different questions.
+
+## Occurrence Is Realized Count
+
+A formal microstate
+
+$$
+\mu_n
+\in
+\mathfrak{M}_n
+$$
+
+is mathematically possible.
+
+When one such microstate is actually realized within a specified finite count
+domain, it becomes a **microstate occurrence**.
+
+Write the \(r\)-th realized microstate as
+
+$$
+\mu_n^{(r)}
+\in
+\mathfrak{M}_n.
+$$
+
+If
+
+$$
+\pi_n
+\left(
+\mu_n^{(r)}
+\right)
+=
+i,
+$$
+
+then that realization contributes one occurrence associated with macrostate
+\(i\).
+
+Let
+
+$$
+\nu_{n,i}
+$$
+
+be the number of realized microstate occurrences classified as macrostate
+\(i\) within the specified count domain.
+
+Thus:
+
+$$
+\boxed{
+\nu_{n,i}
+=
+\text{number of realized occurrences associated with } i
+}
+$$
+
+Occurrence answers:
+
+> **How many realizations occurred?**
+
+## Occurrence Does Not Yet Mean Time
+
+This point is important.
+
+The finite domain over which
+
+$$
+\nu_{n,i}
+$$
+
+is counted does not have to be a physical time interval.
+
+It is simply a specified domain of realized count.
+
+For positive occurrence count, R<sup>2</sup>D defines
+
+$$
+\tau_{n,i}
+=
+\ln \nu_{n,i}.
+$$
+
+The symbol
+
+$$
+\tau_{n,i}
+$$
+
+is therefore a logarithmic occurrence coordinate.
+
+At this stage it is **not physical time**.
+
+Likewise,
+
+$$
+\Delta \tau
+$$
+
+is not automatically a rate.
+
+Physical time, frequency, and recurrence are later physical readings of
+different relations.
+
+[Recurrence →](recurrence.qmd)
+
+## Occupancy Is Realized Structure
+
+Occurrence counts events.
+
+Occupancy describes the realized state structure produced through those events.
+
+Let
+
+$$
+c_{n,i}
+$$
+
+denote the realized occupancy of macrostate \(i\).
+
+For positive occupancy,
+
+$$
+G_{n,i}
+=
+\ln c_{n,i}.
+$$
+
+The occupancy landscape is the collection
+
+$$
+\mathcal{G}_n
+=
+\{
+G_{n,i}
+\}_{i\in\mathcal{M}_n}.
+$$
+
+Occupancy answers:
+
+> **How is realized structure distributed across the available macrostates?**
+
+This is different from asking how many realizations occurred.
+
+## A Simple Two-State Example
+
+Suppose a system has two readable macrostates:
+
+$$
+1
+\qquad\text{and}\qquad
+2.
+$$
+
+Their possible multiplicities might be
+
+$$
+W_{n,1}=100,
+\qquad
+W_{n,2}=100.
+$$
+
+That tells us only that the two macrostate classes contain equal numbers of
+compatible formal microstates.
+
+Now suppose a finite realization domain contains
+
+$$
+\nu_{n,1}=1000
+$$
+
+occurrences associated with state 1 and
+
+$$
+\nu_{n,2}=1000
+$$
+
+occurrences associated with state 2.
+
+That describes realized occurrence count.
+
+But the realized occupancy at one particular configuration might still be
+
+$$
+c_{n,1}=80,
+\qquad
+c_{n,2}=20.
+$$
+
+These are three different descriptions:
+
+- multiplicity describes the available state structure;
+- occurrence describes realized events;
+- occupancy describes the realized state distribution.
+
+They must not be collapsed into one quantity.
+
+## Occupancy Is Not Multiplicity
+
+In general,
+
+$$
+\boxed{
+c_{n,i}
+\neq
+W_{n,i}
+}
+$$
+
+Multiplicity tells us how many compatible realizations belong to macrostate
+\(i\).
+
+Occupancy tells us how much realized structure is currently expressed at
+\(i\).
+
+So it is misleading to say that occupancy is simply "realized multiplicity."
+
+A more precise statement is:
+
+> **Occupancy is realized structure within a multiplicity-defined landscape.**
+
+The multiplicity landscape defines the possible structure.
+
+The occupancy landscape tells us what structure is presently expressed.
+
+## Occurrence Is Not Occupancy
+
+Likewise,
+
+$$
+\boxed{
+\nu_{n,i}
+\neq
+c_{n,i}
+}
+$$
+
+in general.
+
+Many occurrences can contribute to one occupancy structure.
+
+And repeated occurrences can occur without changing the structural
+macrostate.
+
+For example, a molecular ensemble may undergo many subordinate transitions
+while remaining in the same larger-scale occupancy mode.
+
+Thus:
+
+> **Occurrence counts realizations.  
+> Occupancy records realized structure.**
+
+## The Three Landscapes
+
+R<sup>2</sup>D therefore distinguishes three mathematical landscapes over
+the same macrostate domain.
+
+### Multiplicity landscape
+
+$$
+\mathcal{W}_n
+=
+\{
+W_{n,i}
+\}_{i\in\mathcal{M}_n}
+$$
+
+Possible structure.
+
+### Occurrence landscape
+
+$$
+\mathcal{T}_n
+=
+\{
+\tau_{n,i}
+\}
+$$
+
+where
+
+$$
+\tau_{n,i}
+=
+\ln \nu_{n,i}.
+$$
+
+Realized occurrence structure.
+
+### Occupancy landscape
+
+$$
+\mathcal{G}_n
+=
+\{
+G_{n,i}
+\}
+$$
+
+where
+
+$$
+G_{n,i}
+=
+\ln c_{n,i}.
+$$
+
+Realized state structure.
+
+The three landscapes answer three different questions:
+
+$$
+\boxed{
+W_{n,i}:
+\text{How many compatible realizations are possible?}
+}
+$$
+
+$$
+\boxed{
+\nu_{n,i}:
+\text{How many realizations occur?}
+}
+$$
+
+$$
+\boxed{
+c_{n,i}:
+\text{What realized structure is expressed?}
+}
+$$
+
+## Logarithms Do Not Change the Count Type
+
+Each count can be represented logarithmically:
+
+$$
+S_{n,i}
+=
+\ln W_{n,i},
+$$
+
+$$
+\tau_{n,i}
+=
+\ln \nu_{n,i},
+$$
+
+$$
+G_{n,i}
+=
+\ln c_{n,i}.
+$$
+
+But taking a logarithm does not turn these quantities into the same thing.
+
+They remain:
+
+$$
+S
+=
+\text{log possible count},
+$$
+
+$$
+\tau
+=
+\text{log occurrence count},
+$$
+
+$$
+G
+=
+\text{log occupancy}.
+$$
+
+Their mathematical similarity should not erase their conceptual distinction.
+
+## Macrostate Differences
+
+For a readable transition
+
+$$
+i \rightarrow k,
+$$
+
+the multiplicity difference is
+
+$$
+\Delta S_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{W_{n,k}}{W_{n,i}}
+\right).
+$$
+
+The occurrence-count difference is
+
+$$
+\Delta \tau_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{\nu_{n,k}}{\nu_{n,i}}
+\right).
+$$
+
+The occupancy difference is
+
+$$
+\Delta G_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{c_{n,k}}{c_{n,i}}
+\right).
+$$
+
+These have the same logarithmic form.
+
+But they compare different count structures.
+
+That distinction becomes important when R<sup>2</sup>D later asks how
+possible structure becomes realized occurrence and how occurrence becomes
+expressed as occupancy.
+
+## Multiplicity Structures Occurrence
+
+R<sup>2</sup>D proposes that, within a fixed realization relation and a
+sufficiently resolved realization domain, relative occurrence count
+proportionally realizes relative multiplicity.
+
+For two macrostates \(i\) and \(k\),
+
+$$
+\frac{\nu_{n,k}}{\nu_{n,i}}
+\approx
+\frac{W_{n,k}}{W_{n,i}}.
+$$
+
+Equivalently,
+
+$$
+\boxed{
+\Delta \tau_{n,i\rightarrow k}
+\approx
+\Delta S_{n,i\rightarrow k}
+}
+$$
+
+This is the proportional occurrence-realization relation.
+
+It does **not** state
+
+$$
+\nu_{n,i}
+=
+W_{n,i}.
+$$
+
+Multiplicity and occurrence remain different count types.
+
+The relation concerns their **relative structures**:
+
+> **relative possible count is realized as relative occurrence count.**
+
+## This Still Does Not Define Direction
+
+Even if occurrence proportionally realizes multiplicity, this does not yet
+tell us how a particular realized system becomes directionally biased.
+
+The native multiplicity landscape may remain fixed while enclosing conditions
+change.
+
+Those enclosing conditions can alter the realized occupancy.
+
+This is why R<sup>2</sup>D separates two relations:
+
+$$
+\text{multiplicity}
+\rightarrow
+\text{occurrence}
+$$
+
+and
+
+$$
+\text{enclosing asymmetry}
+\rightarrow
+\text{occupancy bias}.
+$$
+
+Direction requires more than multiplicity alone.
+
+It requires the across-boundary relation developed through possibility and
+retention.
+
+[Possibility →](possibility.qmd)
+
+[Constraint and Retention →](constraint-retention.qmd)
+
+## Asymmetry Acts on Occupancy
+
+For a readable transition,
+
+$$
+i \rightarrow k,
+$$
+
+R<sup>2</sup>D defines local asymmetry through
+
+$$
+\Delta A_{n,i\rightarrow k}
+=
+\Delta P_{n,i\rightarrow k}
+-
+R_{n,i\rightarrow k}.
+$$
+
+The occupancy relation is then expressed schematically as
+
+$$
+\boxed{
+\Delta G
+=
+\Delta \tau
++
+\Delta A
+}
+$$
+
+The terms play different roles.
+
+The occurrence relation reflects realized multiplicity structure.
+
+The asymmetry term changes how that realized occurrence is expressed as
+occupancy.
+
+Thus:
+
+> **Multiplicity structures occurrence.  
+> Asymmetry biases occupancy.**
+
+[Asymmetry →](asymmetry.qmd)
+
+## Structural Macrostate
+
+Because occupancy is a realized distribution, it can possess a mode.
+
+If the occupancy landscape has a unique maximum, define the structural
+macrostate by
+
+$$
+i_n^*
+=
+\operatorname*{arg\,max}_{i\in\mathcal{M}_n}
+c_{n,i}.
+$$
+
+Equivalently, because the logarithm is monotonic,
+
+$$
+i_n^*
+=
+\operatorname*{arg\,max}_{i\in\mathcal{M}_n}
+G_{n,i}.
+$$
+
+A change
+
+$$
+i_n^*
+\rightarrow
+k_n^*
+$$
+
+is a structural macrostate transition.
+
+This does not identify one unique subordinate trajectory.
+
+Many different microstate occurrences can realize the same change in
+occupancy mode.
+
+That is precisely why R<sup>2</sup>D separates the structural state from the
+subordinate mechanism that realizes it.
+
+## Muscle Makes the Distinction Concrete
+
+Muscle provides a useful physical example.
+
+Individual myosin molecules undergo many state transitions.
+
+Those transitions are occurrences.
+
+At the ensemble level, however, experiments can read the distribution of
+molecular states.
+
+That distribution is occupancy.
+
+The available combinatorial state structure of the switch ensemble is the
+multiplicity landscape.
+
+So:
+
+$$
+\text{switch multiplicity}
+\neq
+\text{switch transitions}
+\neq
+\text{ensemble occupancy}.
+$$
+
+All three are physically related.
+
+They are not the same mathematical object.
+
+This separation was one of the empirical routes by which R<sup>2</sup>D
+emerged.
+
+## Why the Distinction Matters for Causality
+
+If occurrence, occupancy, and multiplicity are conflated, a subordinate event
+can appear to create the larger state structure merely because the event is
+necessary for its realization.
+
+R<sup>2</sup>D instead gives them different causal roles.
+
+Multiplicity defines possible structure.
+
+Occurrence realizes possibilities.
+
+Occupancy records the resulting realized structure.
+
+Schematically:
+
+$$
+\boxed{
+\text{multiplicity}
+\rightarrow
+\text{occurrence}
+\rightarrow
+\text{occupancy}
+}
+$$
+
+But this sequence is incomplete.
+
+It does not yet explain direction.
+
+The enclosing relation supplies the asymmetry that determines how occurrence
+is expressed as occupancy.
+
+The fuller architecture is therefore
+
+$$
+\boxed{
+\text{multiplicity}
+\rightarrow
+\text{occurrence}
+}
+$$
+
+together with
+
+$$
+\boxed{
+\text{enclosing possibility and constraint}
+\rightarrow
+\text{occupancy bias}.
+}
+$$
+
+The subordinate mechanism realizes the change.
+
+The enclosing relation organizes which realization is favored.
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## Possible Structure and Realized Structure
+
+We can now sharpen a distinction introduced earlier.
+
+### Possible structure
+
+Defined by
+
+$$
+W_{n,i}.
+$$
+
+This belongs to the boundary-defined classification.
+
+### Realized event structure
+
+Defined by
+
+$$
+\nu_{n,i}.
+$$
+
+This counts occurrences within a specified finite count domain.
+
+### Realized occupancy structure
+
+Defined by
+
+$$
+c_{n,i}.
+$$
+
+This describes how realized structure is distributed across macrostates.
+
+These distinctions let R<sup>2</sup>D ask separate questions that are often
+compressed together:
+
+> What can happen?
+
+> What happens?
+
+> What state structure is realized?
+
+> Why is one realized structure favored over another?
+
+The first three are now defined.
+
+The fourth requires **possibility and constraint**.
+
+---
+
+## Core Equations
+
+### Possible count
+
+$$
+\boxed{
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|
+}
+$$
+
+### Occurrence count
+
+$$
+\boxed{
+\nu_{n,i}
+=
+\text{realized occurrences classified as } i
+}
+$$
+
+### Occupancy
+
+$$
+\boxed{
+c_{n,i}
+=
+\text{realized occupancy of macrostate } i
+}
+$$
+
+### Logarithmic coordinates
+
+$$
+\boxed{
+S_{n,i}
+=
+\ln W_{n,i}
+}
+$$
+
+$$
+\boxed{
+\tau_{n,i}
+=
+\ln \nu_{n,i}
+}
+$$
+
+$$
+\boxed{
+G_{n,i}
+=
+\ln c_{n,i}
+}
+$$
+
+### Relative occurrence realization
+
+$$
+\boxed{
+\Delta\tau
+\approx
+\Delta S
+}
+$$
+
+### Occupancy bias
+
+$$
+\boxed{
+\Delta G
+=
+\Delta\tau+\Delta A
+}
+$$
+
+---
+
+## The Key Distinction
+
+The simplest summary is:
+
+> **Multiplicity is what can be realized.**
+
+> **Occurrence is what happens.**
+
+> **Occupancy is the structure that is realized.**
+
+Keeping those three counts separate allows R<sup>2</sup>D to ask the next
+question cleanly:
+
+> **What makes one realized structure directionally favored over another?**
+
+That requires an enclosing relation.
+
+---
+
+## Next
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+[Possibility →](possibility.qmd)
+
+[Constraint and Retention →](constraint-retention.qmd)
+
+[Back to Understand R²D →](index.qmd)

@@ -1,0 +1,2557 @@
+---
+title: "The Coins Example"
+subtitle: "A finite exact construction of recursive counting"
+toc: true
+---
+
+# The Coins Example
+
+Coins provide the simplest complete example of R<sup>2</sup>D.
+
+Not because physical coin tossing is fundamental.
+
+And not because R<sup>2</sup>D assumes probability.
+
+The coins are useful because their possible states can be counted exactly.
+
+That lets us separate four things that are easily confused:
+
+- possible structure;
+- realized occurrence;
+- recursive replacement;
+- and enclosing compatibility.
+
+No energy is required.
+
+No force is required.
+
+No probability is required.
+
+No physical trajectory is required.
+
+No space or time is required.
+
+The construction is finite combinatorics.
+
+> **The coins do not model the mechanics of nature.  
+> They expose the counting architecture.**
+
+# Three Boundaries
+
+Use three adjacent count levels:
+
+$$
+B_{n-1},
+\qquad
+B_n,
+\qquad
+B_{n+1}.
+$$
+
+At \(B_{n-1}\), the object is one coin.
+
+At \(B_n\), the object is an ensemble of ten coins.
+
+At \(B_{n+1}\), the object is an enclosing system containing ten such
+ten-coin landscapes.
+
+The recursion is
+
+$$
+\boxed{
+10\times B_{n-1}
+\longrightarrow
+B_n
+}
+$$
+
+followed by
+
+$$
+\boxed{
+10\times B_n
+\longrightarrow
+B_{n+1}.
+}
+$$
+
+The critical point is that the second step counts **ten already-defined
+\(B_n\) landscapes**.
+
+It does not simply return to one hundred independently primitive coins.
+
+# Boundary \(B_{n-1}\): One Coin
+
+At one subordinate peer boundary
+
+$$
+B_{n-1,\alpha},
+$$
+
+the readable macrostate domain is
+
+$$
+\boxed{
+\mathcal M_{n-1,\alpha}
+=
+\{H,T\}.
+}
+$$
+
+There are two readable distinctions:
+
+$$
+H
+\qquad\text{and}\qquad
+T.
+$$
+
+For this construction, no deeper nontrivial multiplicity landscape is
+assigned beneath the individual coin.
+
+The coin is simply the primitive subordinate two-state object used in the
+example.
+
+# Boundary \(B_n\): Ten Coins Become One Ensemble
+
+Now let \(B_n\) contain ten peer coin boundaries:
+
+$$
+\left\{
+B_{n-1,\alpha}
+\right\}_{\alpha=1}^{10}.
+$$
+
+One joint realization is
+
+$$
+\mu_n
+=
+\left(
+x_{n-1,1},
+x_{n-1,2},
+\ldots,
+x_{n-1,10}
+\right),
+$$
+
+with
+
+$$
+x_{n-1,\alpha}\in\{H,T\}.
+$$
+
+The unrestricted formal microstate domain is therefore
+
+$$
+\boxed{
+\mathfrak M_n
+=
+\{H,T\}^{10}.
+}
+$$
+
+There are
+
+$$
+2^{10}=1024
+$$
+
+formal microstates.
+
+But \(B_n\) does not retain ten separate \(H/T\) macrostate systems.
+
+It introduces a new whole-system classification.
+
+# The New Macrostate
+
+Let
+
+$$
+i=N_T
+$$
+
+be the number of tails in the ten-coin realization.
+
+Then
+
+$$
+i\in\{0,1,\ldots,10\}.
+$$
+
+So the readable macrostate domain at \(B_n\) is
+
+$$
+\boxed{
+\mathcal M_n
+=
+\{0,1,\ldots,10\}.
+}
+$$
+
+Ten two-state boundaries have therefore become one eleven-state landscape:
+
+$$
+\boxed{
+10\times\{H,T\}
+\not\equiv
+\mathcal M_n.
+}
+$$
+
+Instead,
+
+$$
+\boxed{
+\left\{
+B_{n-1,\alpha}
+\right\}_{\alpha=1}^{10}
+\longrightarrow
+\mathcal M_n
+=
+\{0,\ldots,10\}.
+}
+$$
+
+This is the first recursive replacement.
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+# Formal Microstates and Macrostates
+
+Boundary \(B_n\) classifies each formal microstate by its number of tails:
+
+$$
+\boxed{
+\pi_n:
+\mathfrak M_n
+\rightarrow
+\mathcal M_n.
+}
+$$
+
+with
+
+$$
+\boxed{
+\pi_n(\mu_n)
+=
+N_T(\mu_n).
+}
+$$
+
+For example,
+
+$$
+\mu_n
+=
+(H,H,T,H,T,T,H,H,T,H)
+$$
+
+contains four tails.
+
+Therefore,
+
+$$
+\boxed{
+\pi_n(\mu_n)=4.
+}
+$$
+
+Many distinct formal microstates map to the same macrostate.
+
+That many-to-one classification creates multiplicity.
+
+# The Multiplicity Landscape
+
+The multiplicity of macrostate \(i\) is
+
+$$
+\boxed{
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|
+=
+\binom{10}{i}.
+}
+$$
+
+Its logarithmic coordinate is
+
+$$
+\boxed{
+S_{n,i}
+=
+\ln W_{n,i}
+=
+\ln
+\binom{10}{i}.
+}
+$$
+
+The complete native multiplicity landscape is therefore
+
+$$
+\boxed{
+\mathcal W_n
+=
+\left\{
+\binom{10}{i}
+\right\}_{i=0}^{10}.
+}
+$$
+
+Explicitly,
+
+$$
+\mathcal W_n
+=
+\{1,10,45,120,210,252,210,120,45,10,1\}.
+$$
+
+The maximum multiplicity occurs at
+
+$$
+i=5.
+$$
+
+# Compatible Possibilities Multiply
+
+The ten binary peer domains jointly contain
+
+$$
+\boxed{
+2^{10}
+=
+\prod_{\alpha=1}^{10}2
+}
+$$
+
+formal possibilities.
+
+This is multiplicative composition.
+
+# Mutually Exclusive Alternatives Add
+
+The whole-system macrostate fibers partition those possibilities:
+
+$$
+\boxed{
+2^{10}
+=
+\sum_{i=0}^{10}
+\binom{10}{i}.
+}
+$$
+
+Thus the coin example displays the two primitive count operations directly:
+
+> **Compatible possibilities multiply.**
+
+> **Mutually exclusive alternatives add.**
+
+[Counting Requires Distinguishability →](counting.qmd)
+
+# Realization Does Not Create Multiplicity
+
+Now suppose one particular coin configuration is realized.
+
+The multiplicity landscape does not suddenly appear because that realization
+occurred.
+
+Before any particular realization is selected,
+
+$$
+W_{n,i}
+=
+\binom{10}{i}
+$$
+
+is already defined by the boundary classification.
+
+For example,
+
+$$
+\boxed{
+W_{n,0}=1
+}
+$$
+
+while
+
+$$
+\boxed{
+W_{n,5}=252.
+}
+$$
+
+A subordinate coin transition can change which formal microstate is
+realized.
+
+It may also change which macrostate is occupied.
+
+But it does not change either multiplicity.
+
+Thus:
+
+$$
+\boxed{
+\text{subordinate transition}
+\longrightarrow
+\text{change of realization}
+}
+$$
+
+but
+
+$$
+\boxed{
+\text{subordinate transition}
+\not\longrightarrow
+\text{creation of }W_{n,i}.
+}
+$$
+
+This is the first major result of the coin construction.
+
+> **The subordinate event realizes the multiplicity landscape.  
+> It does not create the multiplicity landscape.**
+
+[Multiplicity →](multiplicity.qmd)
+
+# The Same Transition Changes Meaning With the Boundary
+
+At subordinate peer boundary
+
+$$
+B_{n-1,\alpha},
+$$
+
+the transition
+
+$$
+H_\alpha
+\rightarrow
+T_\alpha
+$$
+
+is a readable macrostate transition.
+
+But relative to \(B_n\), the same event is a transition between formal
+microstates:
+
+$$
+\mu_n
+=
+(x_1,\ldots,H_\alpha,\ldots,x_{10})
+$$
+
+to
+
+$$
+\mu_n'
+=
+(x_1,\ldots,T_\alpha,\ldots,x_{10}).
+$$
+
+Thus,
+
+$$
+\boxed{
+\mu_n
+\rightarrow
+\mu_n'
+}
+$$
+
+is a microstate transition relative to \(B_n\).
+
+If the original ensemble contained \(i\) tails, the readable \(B_n\)
+consequence is
+
+$$
+\boxed{
+i
+\rightarrow
+i+1.
+}
+$$
+
+But \(B_n\) need not identify which peer coin produced the transition.
+
+Therefore,
+
+$$
+\boxed{
+\text{macrostate transition at }B_{n-1,\alpha}
+=
+\text{microstate transition relative to }B_n.
+}
+$$
+
+Resolving the individual coin requires changing the count boundary.
+
+[Macrostate and Microstate →](macrostate-microstate.qmd)
+
+# Native Direction Within the Ten-Coin Landscape
+
+Consider the adjacent ensemble transition
+
+$$
+i\rightarrow i+1.
+$$
+
+Its native multiplicity ratio is
+
+$$
+\frac{
+W_{n,i+1}
+}{
+W_{n,i}
+}
+=
+\frac{
+\binom{10}{i+1}
+}{
+\binom{10}{i}
+}.
+$$
+
+Using the binomial identity,
+
+$$
+\boxed{
+\frac{
+W_{n,i+1}
+}{
+W_{n,i}
+}
+=
+\frac{
+10-i
+}{
+i+1
+}.
+}
+$$
+
+Therefore,
+
+$$
+\boxed{
+\Delta S_{n,i\rightarrow i+1}
+=
+\ln
+\left(
+\frac{
+10-i
+}{
+i+1
+}
+\right).
+}
+$$
+
+For the transition
+
+$$
+5\rightarrow6,
+$$
+
+we obtain
+
+$$
+\boxed{
+\Delta S_{n,5\rightarrow6}
+=
+\ln
+\left(
+\frac56
+\right)
+<0.
+}
+$$
+
+So native \(B_n\) multiplicity favors state \(5\) over state \(6\).
+
+Nothing about this calculation refers yet to an enclosing boundary.
+
+# Now Change the Boundary Again
+
+Introduce ten equivalent \(B_n\) landscapes:
+
+$$
+\left\{
+B_{n,\alpha}
+\right\}_{\alpha=1}^{10}.
+$$
+
+Each peer has the state domain
+
+$$
+\mathcal M_{n,\alpha}
+=
+\{0,\ldots,10\}
+$$
+
+and multiplicity
+
+$$
+W_{n,\alpha,i_\alpha}
+=
+\binom{10}{i_\alpha}.
+$$
+
+The individual \(H/T\) states have already been replaced as the readable
+macrostate classification of each \(B_n\) peer.
+
+The objects entering the next recursive composition are therefore:
+
+$$
+\boxed{
+10\text{ ten-coin landscapes},
+}
+$$
+
+not
+
+$$
+\boxed{
+100\text{ independently readable coin states}.
+}
+$$
+
+This distinction is central.
+
+# The Enclosing State \(J\)
+
+Let the enclosing boundary classify the ten peer macrostates by
+
+$$
+\boxed{
+J
+=
+\sum_{\alpha=1}^{10}
+i_\alpha.
+}
+$$
+
+Since each
+
+$$
+0\leq i_\alpha\leq10,
+$$
+
+we have
+
+$$
+J\in\{0,1,\ldots,100\}.
+$$
+
+Therefore,
+
+$$
+\boxed{
+\mathcal M_{n+1}
+=
+\{0,1,\ldots,100\}.
+}
+$$
+
+The second recursive replacement is
+
+$$
+\boxed{
+10\times\mathcal M_n
+\longrightarrow
+\mathcal M_{n+1}.
+}
+$$
+
+# Enclosing Multiplicity Is Built Recursively
+
+Take one specific peer-state tuple:
+
+$$
+(i_1,i_2,\ldots,i_{10}).
+$$
+
+The multiplicities of the compatible peer states multiply:
+
+$$
+\boxed{
+W_{\mathrm{tuple}}
+=
+\prod_{\alpha=1}^{10}
+W_{n,\alpha,i_\alpha}.
+}
+$$
+
+For the coin landscapes,
+
+$$
+W_{\mathrm{tuple}}
+=
+\prod_{\alpha=1}^{10}
+\binom{10}{i_\alpha}.
+$$
+
+Now fix enclosing state \(J\).
+
+Every mutually exclusive tuple satisfying
+
+$$
+i_1+i_2+\cdots+i_{10}=J
+$$
+
+belongs to that enclosing classification.
+
+Those alternatives add.
+
+Therefore,
+
+$$
+\boxed{
+W_{n+1,J}
+=
+\sum_{
+i_1+\cdots+i_{10}=J
+}
+\prod_{\alpha=1}^{10}
+W_{n,\alpha,i_\alpha}.
+}
+$$
+
+For the coin ensemble,
+
+$$
+\boxed{
+W_{n+1,J}
+=
+\sum_{
+i_1+\cdots+i_{10}=J
+}
+\prod_{\alpha=1}^{10}
+\binom{10}{i_\alpha}.
+}
+$$
+
+This is the primitive recursive definition.
+
+# The Familiar Hundred-Coin Result Emerges
+
+The multivariate Vandermonde identity gives
+
+$$
+\boxed{
+W_{n+1,J}
+=
+\binom{100}{J}.
+}
+$$
+
+This is exactly the same closed-form combinatorial result obtained by
+counting \(J\) tails among one hundred binary slots.
+
+But the logical order matters.
+
+R<sup>2</sup>D did not begin \(B_{n+1}\) with one hundred primitive coin
+identities.
+
+It began with ten already-defined \(B_n\) landscapes.
+
+Thus:
+
+$$
+\boxed{
+\text{recursive composition}
+\Rightarrow
+\binom{100}{J}
+}
+$$
+
+does not imply
+
+$$
+\boxed{
+\binom{100}{J}
+\Rightarrow
+100\text{ primitive }H/T\text{ objects at }B_{n+1}.
+}
+$$
+
+This is one of the most important results of the example.
+
+> **Recursive replacement preserves count consequence without preserving
+> subordinate state identity.**
+
+[Why R²D Is Not Coarse-Graining →](not-coarse-graining.qmd)
+
+# Total Multiplicity Is Preserved Recursively
+
+The unrestricted multiplicity of each \(B_n\) landscape is
+
+$$
+\Theta_n=2^{10}.
+$$
+
+Ten such landscapes therefore give
+
+$$
+\boxed{
+\Theta_{n+1}
+=
+\prod_{\alpha=1}^{10}
+\Theta_{n,\alpha}
+=
+(2^{10})^{10}
+=
+2^{100}.
+}
+$$
+
+Again, the familiar one-hundred-bit count is recovered.
+
+But it is recovered through recursive composition.
+
+# Select One Representative Peer
+
+Now select one \(B_n\) peer, labeled \(\alpha\), and let its local state be
+
+$$
+i.
+$$
+
+Fix the enclosing state at
+
+$$
+J.
+$$
+
+Then the other nine peer landscapes must satisfy
+
+$$
+\boxed{
+\sum_{\beta\neq\alpha}
+i_\beta
+=
+J-i.
+}
+$$
+
+This lets us calculate exactly how much enclosing multiplicity is compatible
+with one local state.
+
+# Compatible Enclosing Multiplicity
+
+The complete enclosing multiplicity compatible with selected local state
+\(i\) is
+
+$$
+\Theta_{n+1|n,\alpha,i}^{(J)}
+=
+W_{n,\alpha,i}
+\sum_{
+\sum_{\beta\neq\alpha}i_\beta=J-i
+}
+\prod_{\beta\neq\alpha}
+W_{n,\beta,i_\beta}.
+$$
+
+For the coin landscapes,
+
+$$
+\Theta_{n+1|n,\alpha,i}^{(J)}
+=
+\binom{10}{i}
+\sum_{
+\sum_{\beta\neq\alpha}i_\beta=J-i
+}
+\prod_{\beta\neq\alpha}
+\binom{10}{i_\beta}.
+$$
+
+The nine-landscape Vandermonde identity gives
+
+$$
+\boxed{
+\Theta_{n+1|n,\alpha,i}^{(J)}
+=
+\binom{10}{i}
+\binom{90}{J-i}.
+}
+$$
+
+This is the number of enclosing realizations compatible with the selected
+local classification \(i\).
+
+# Enclosing Extension Per Local Possibility
+
+Recall
+
+$$
+K_{n+1|n,\alpha,i}
+=
+\frac{
+\Theta_{n+1|n,\alpha,i}
+}{
+W_{n,\alpha,i}
+}.
+$$
+
+Therefore,
+
+$$
+\boxed{
+K_{n+1|n,\alpha,i}^{(J)}
+=
+\binom{90}{J-i}.
+}
+$$
+
+And the R<sup>2</sup>D possibility coordinate is
+
+$$
+\boxed{
+P_{n,\alpha,i}^{(J)}
+=
+\ln
+\binom{90}{J-i}.
+}
+$$
+
+This makes the meaning of possibility particularly clear.
+
+> **Possibility is not the multiplicity of the local state.**
+
+It is the compatible enclosing extension available **per local possibility**.
+
+[Possibility →](possibility.qmd)
+
+# Why the Ninety Does Not Mean Ninety Primitive Coins
+
+The term
+
+$$
+\binom{90}{J-i}
+$$
+
+has a familiar closed form.
+
+But within the recursive construction it counts compatible compositions of
+the other nine \(B_n\) landscapes.
+
+It should not be interpreted as proof that \(B_{n+1}\) has directly recovered
+ninety individually readable coin states.
+
+Again:
+
+> **Closed-form equivalence does not restore subordinate state identity.**
+
+# Large Enclosing Multiplicity Alone Does Not Create Direction
+
+Now remove the restriction to one fixed enclosing state \(J\).
+
+If the other nine \(B_n\) landscapes are unrestricted, each selected local
+state has the same amount of compatible enclosing extension:
+
+$$
+K_{n+1|n,\alpha,i}
+=
+\prod_{\beta\neq\alpha}
+\Theta_{n,\beta}.
+$$
+
+Since
+
+$$
+\Theta_{n,\beta}=2^{10},
+$$
+
+we obtain
+
+$$
+\boxed{
+K_{n+1|n,\alpha,i}
+=
+(2^{10})^9
+=
+2^{90}
+}
+$$
+
+for every \(i\).
+
+Therefore,
+
+$$
+P_{n,\alpha,i}
+=
+90\ln2
+$$
+
+for every \(i\), and consequently
+
+$$
+\boxed{
+\Delta P_{n,\alpha,i\rightarrow k}=0.
+}
+$$
+
+This gives an important exact result:
+
+> **Large enclosing multiplicity is not sufficient for direction.**
+
+Direction requires **unequal** enclosing compatibility.
+
+# Directional Possibility Under Fixed \(J\)
+
+Return to a fixed enclosing state \(J\).
+
+For
+
+$$
+i\rightarrow i+1,
+$$
+
+directional possibility is
+
+$$
+\Delta P_{n,\alpha,i\rightarrow i+1}^{(J)}
+=
+\ln
+\left(
+\frac{
+K_{n+1|n,\alpha,i+1}^{(J)}
+}{
+K_{n+1|n,\alpha,i}^{(J)}
+}
+\right).
+$$
+
+Substituting the exact extension multiplicities,
+
+$$
+\Delta P_{n,\alpha,i\rightarrow i+1}^{(J)}
+=
+\ln
+\left[
+\frac{
+\binom{90}{J-i-1}
+}{
+\binom{90}{J-i}
+}
+\right].
+$$
+
+Therefore,
+
+$$
+\boxed{
+\Delta P_{n,\alpha,i\rightarrow i+1}^{(J)}
+=
+\ln
+\left(
+\frac{
+J-i
+}{
+91-J+i
+}
+\right).
+}
+$$
+
+This is an exact enclosing-defined directional count relation.
+
+No occupancy postulate has been used.
+
+No probability has been introduced.
+
+# Enclosing Compatibility Can Reverse Native Direction
+
+Now take the explicit transition
+
+$$
+5\rightarrow6.
+$$
+
+The native multiplicity relation is
+
+$$
+\boxed{
+\Delta S_{5\rightarrow6}
+=
+\ln
+\left(
+\frac56
+\right)
+\approx
+-0.1823.
+}
+$$
+
+Native multiplicity favors state \(5\).
+
+Now choose the enclosing state
+
+$$
+J=60.
+$$
+
+Then
+
+$$
+\boxed{
+\Delta P_{5\rightarrow6}^{(60)}
+=
+\ln
+\left(
+\frac{55}{36}
+\right)
+\approx
+0.4238.
+}
+$$
+
+Enclosing compatibility favors state \(6\).
+
+The complete compatible-count difference is therefore
+
+$$
+\Delta S+\Delta P
+=
+\ln
+\left(
+\frac56
+\right)
++
+\ln
+\left(
+\frac{55}{36}
+\right).
+$$
+
+So
+
+$$
+\boxed{
+\Delta S+\Delta P
+=
+\ln
+\left(
+\frac{275}{216}
+\right)
+\approx
+0.2415
+>0.
+}
+$$
+
+The net compatible count now favors \(6\).
+
+But nothing about the native landscape
+
+$$
+W_{n,i}
+=
+\binom{10}{i}
+$$
+
+has changed.
+
+Only the enclosing compatibility relation changed.
+
+# This Is the Exact Top-Down Result
+
+The coin construction therefore proves:
+
+$$
+\boxed{
+\text{same local multiplicity landscape}
++
+\text{different enclosing compatibility}
+\rightarrow
+\text{different local directional support}.
+}
+$$
+
+More strongly, the enclosing relation can:
+
+- create direction;
+- cancel native direction;
+- or reverse native direction.
+
+The subordinate transition does not define the relation capable of doing
+this.
+
+This is the second major exact result of the example.
+
+# Reconstructing the Enclosing State
+
+The compatibility fibers associated with one selected peer partition the
+fixed enclosing macrostate.
+
+Therefore,
+
+$$
+\boxed{
+W_{n+1,J}
+=
+\sum_i
+\Theta_{n+1|n,\alpha,i}^{(J)}.
+}
+$$
+
+For the coin construction,
+
+$$
+\boxed{
+\binom{100}{J}
+=
+\sum_i
+\binom{10}{i}
+\binom{90}{J-i}.
+}
+$$
+
+Since
+
+$$
+e^{P_{n,\alpha,i}^{(J)}}
+=
+\binom{90}{J-i},
+$$
+
+the same relation can be written
+
+$$
+\boxed{
+W_{n+1,J}
+=
+\sum_i
+W_{n,i}
+e^{P_{n,\alpha,i}^{(J)}}.
+}
+$$
+
+This equation makes the recursive architecture visible:
+
+> **The enclosing multiplicity is reconstructed from local multiplicity
+> multiplied by compatible enclosing extension.**
+
+# What Is Exact So Far?
+
+Everything up to this point follows from finite combinatorics once the
+boundaries and classification maps have been defined.
+
+We have not yet needed:
+
+$$
+\Delta R,
+$$
+
+$$
+\Delta A,
+$$
+
+$$
+\Delta G,
+$$
+
+the R<sup>2</sup>D law,
+
+or the R<sup>2</sup>D Second Law.
+
+That separation matters.
+
+The combinatorics establish the count architecture.
+
+The next step introduces R<sup>2</sup>D realization postulates.
+
+# Add Productive Constraint
+
+Return to
+
+$$
+5\rightarrow6
+$$
+
+under
+
+$$
+J=60.
+$$
+
+Choose a unit distinguishability for the example:
+
+$$
+\boxed{
+\lambda_{n,5\rightarrow6}=1.
+}
+$$
+
+Let the productive component of enclosing constraint be
+
+$$
+C_{n+1}^{\mathrm{out}}\geq0.
+$$
+
+Retention is then
+
+$$
+\Delta R_{n,5\rightarrow6}
+=
+C_{n+1}^{\mathrm{out}}
+\lambda_{n,5\rightarrow6}.
+$$
+
+So
+
+$$
+\boxed{
+\Delta R_{n,5\rightarrow6}
+=
+C_{n+1}^{\mathrm{out}}.
+}
+$$
+
+The local asymmetry is
+
+$$
+\boxed{
+\Delta A_{n,5\rightarrow6}
+=
+\ln
+\left(
+\frac{55}{36}
+\right)
+-
+C_{n+1}^{\mathrm{out}}.
+}
+$$
+
+[Constraint and Retention →](constraint-retention.qmd)
+
+# Now the Occupancy Postulate Enters
+
+R<sup>2</sup>D postulates
+
+$$
+\Delta G
+=
+\Delta\tau+\Delta A.
+$$
+
+Under proportional occurrence realization,
+
+$$
+\Delta\tau
+\approx
+\Delta S.
+$$
+
+Therefore,
+
+$$
+\Delta G_{5\rightarrow6}
+\approx
+\Delta S_{5\rightarrow6}
++
+\Delta P_{5\rightarrow6}^{(60)}
+-
+\Delta R_{5\rightarrow6}.
+$$
+
+Substituting the exact coin counts,
+
+$$
+\boxed{
+\Delta G_{5\rightarrow6}
+\approx
+\ln
+\left(
+\frac{275}{216}
+\right)
+-
+C_{n+1}^{\mathrm{out}}.
+}
+$$
+
+Exponentiating gives the predicted occupancy ratio
+
+$$
+\boxed{
+\frac{c_{n,6}}{c_{n,5}}
+\approx
+\frac{275}{216}
+e^{-C_{n+1}^{\mathrm{out}}}.
+}
+$$
+
+This result contains two logically different ingredients.
+
+The factor
+
+$$
+\frac{275}{216}
+$$
+
+comes from exact combinatorics.
+
+The mapping from that count bias into realized occupancy is an
+R<sup>2</sup>D realization postulate.
+
+[Occupancy and Occurrence →](occupancy-occurrence.qmd)
+
+# Constraint Can Cancel the Enclosing Bias
+
+At the mode-exchange condition,
+
+$$
+\Delta G\approx0.
+$$
+
+For this example that occurs when
+
+$$
+C_{n+1}^{\mathrm{out}}
+\approx
+\ln
+\left(
+\frac{275}{216}
+\right).
+$$
+
+Then the enclosing-compatible count bias is completely balanced by productive
+retention.
+
+This is a concrete realization of the general architecture
+
+$$
+\boxed{
+\text{multiplicity}
++
+\text{possibility}
+-
+\text{retention}
+\rightarrow
+\text{occupancy}.
+}
+$$
+
+# Closure Can Be Exact Locally but Asymmetric Enclosingly
+
+Now consider the local return
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}:
+5\rightarrow6\rightarrow5.
+}
+$$
+
+Let the forward transition occur while the enclosing state is
+
+$$
+J_H=60.
+$$
+
+Then
+
+$$
+\boxed{
+\Delta P_H
+=
+\ln
+\left(
+\frac{55}{36}
+\right).
+}
+$$
+
+Let the return transition occur under a different enclosing state,
+
+$$
+J_L=40.
+$$
+
+For
+
+$$
+6\rightarrow5,
+$$
+
+the enclosing possibility is
+
+$$
+\boxed{
+\Delta P_L
+=
+\ln
+\left(
+\frac{56}{35}
+\right).
+}
+$$
+
+Therefore the possibility accumulated around the local closure is
+
+$$
+\Delta P_{\mathcal C}
+=
+\Delta P_H+\Delta P_L.
+$$
+
+So
+
+$$
+\boxed{
+\Delta P_{\mathcal C}
+=
+\ln
+\left(
+\frac{55}{36}
+\frac{56}{35}
+\right)
+=
+\ln
+\left(
+\frac{154}{63}
+\right)
+>0.
+}
+$$
+
+# Native Multiplicity Still Closes Exactly
+
+The native multiplicity coordinate gives
+
+$$
+\Delta S_{\mathcal C}
+=
+\ln
+\left(
+\frac56
+\right)
++
+\ln
+\left(
+\frac65
+\right).
+$$
+
+Therefore,
+
+$$
+\boxed{
+\Delta S_{\mathcal C}=0.
+}
+$$
+
+So the same cycle satisfies
+
+$$
+\boxed{
+\Delta S_{\mathcal C}=0
+}
+$$
+
+while
+
+$$
+\boxed{
+\Delta P_{\mathcal C}>0.
+}
+$$
+
+This is exact combinatorics.
+
+> **The local multiplicity path closes.  
+> The enclosing compatibility relation need not.**
+
+[Closure →](closure.qmd)
+
+# Why This Is Not a Contradiction
+
+The two quantities describe different relations.
+
+$$
+\Delta S_{\mathcal C}
+$$
+
+belongs to the native local multiplicity landscape.
+
+$$
+\Delta P_{\mathcal C}
+$$
+
+belongs to the changing enclosing compatibility relation.
+
+The local state returns.
+
+But the forward and return legs do not have to occur under reciprocal
+enclosing conditions.
+
+This is the primitive architecture of asymmetric closure.
+
+# Closure Asymmetry Requires Retention Too
+
+If productive retention is also specified around the closure, define
+
+$$
+\boxed{
+\Delta R_{n,\alpha,\mathcal C}
+=
+\sum_{\chi\in\mathcal C_{n,\alpha}}
+\Delta R_{n,\alpha,\chi}.
+}
+$$
+
+Then
+
+$$
+\boxed{
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}.
+}
+$$
+
+The coin combinatorics alone do not determine
+
+$$
+\Delta R_{\mathcal C}
+$$
+
+or
+
+$$
+\Delta A_{\mathcal C}.
+$$
+
+Those require the additional R<sup>2</sup>D constraint and realization
+architecture.
+
+[Asymmetry →](asymmetry.qmd)
+
+# An Open Enclosing Path Organizes Every Equivalent Peer
+
+Now suppose the enclosing state follows an open path:
+
+$$
+\boxed{
+\mathcal O_{n+1}:
+J_0
+\rightarrow
+J_1
+\rightarrow
+\cdots
+\rightarrow
+J_m,
+}
+$$
+
+with
+
+$$
+J_m\neq J_0.
+$$
+
+For local transition
+
+$$
+i\rightarrow i+1,
+$$
+
+each enclosing state \(J_r\) defines
+
+$$
+\boxed{
+\Delta P_{n,\alpha,i\rightarrow i+1}^{(J_r)}
+=
+\ln
+\left(
+\frac{
+J_r-i
+}{
+91-J_r+i
+}
+\right).
+}
+$$
+
+For example, with
+
+$$
+i=5
+$$
+
+and enclosing path
+
+$$
+60\rightarrow61\rightarrow62,
+$$
+
+we obtain
+
+$$
+\Delta P(60)
+=
+\ln
+\left(
+\frac{55}{36}
+\right),
+$$
+
+$$
+\Delta P(61)
+=
+\ln
+\left(
+\frac{56}{35}
+\right),
+$$
+
+and
+
+$$
+\Delta P(62)
+=
+\ln
+\left(
+\frac{57}{34}
+\right).
+$$
+
+As the enclosing state changes, the directional possibility acting on the
+same local alternative changes.
+
+# Equivalent Peers Receive the Same Enclosing Relation
+
+Because the ten \(B_n\) landscapes are equivalent under the enclosing
+classification,
+
+$$
+K_{n+1|n,\alpha,i}^{(J)}
+=
+K_{n+1|n,\beta,i}^{(J)}
+$$
+
+for equivalent peers \(\alpha\) and \(\beta\).
+
+Therefore,
+
+$$
+\boxed{
+\Delta P_{n,\alpha,i\rightarrow i+1}^{(J)}
+=
+\Delta P_{n,\beta,i\rightarrow i+1}^{(J)}.
+}
+$$
+
+One enclosing compatibility relation simultaneously defines the same
+directional possibility for every equivalent peer.
+
+The peers do not have to communicate this organization laterally.
+
+They share the same enclosing relation.
+
+This is the mathematical core of the top-down architecture.
+
+# The Causal Proposal Comes After the Combinatorics
+
+The exact combinatorics establish that the enclosing relation defines which
+local alternatives have greater compatible extension.
+
+R<sup>2</sup>D then makes the stronger causal proposal:
+
+$$
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\left\{
+\mathcal C_{n,\alpha}
+\right\}_{\alpha=1}^{10}.
+}
+$$
+
+For one representative peer,
+
+$$
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\mathcal C_{n,\alpha}.
+}
+$$
+
+The enclosing occurrence defines its compatible local realization.
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+# Recursive Carry Points the Other Way — But Is Not Causal
+
+Once the local closure is completed, changing the count boundary reclassifies
+it:
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+}
+$$
+
+This arrow does not mean
+
+$$
+\mathcal C_{n,\alpha}
+\Longrightarrow
+\chi_{n+1}^{(r)}.
+$$
+
+The two relations answer different questions.
+
+Causal realization:
+
+$$
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\mathcal C_{n,\alpha}.
+}
+$$
+
+Recursive readout:
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+}
+$$
+
+[Recursive Carry →](recursive-carry.qmd)
+
+# Realization Adds Three More Count Relations
+
+The static coin construction defines multiplicity exactly.
+
+Once realized occurrence is introduced, three additional quantities must be
+kept separate.
+
+## State occurrence
+
+$$
+\Delta\tau_{n,i\rightarrow k}
+$$
+
+compares occurrence counts associated with two states.
+
+## Opposed-leg nonreciprocity
+
+$$
+L_{\tau,n,\alpha,\mathcal C}
+$$
+
+compares complete realizations of the two opposed closure legs.
+
+## Across-boundary recurrence
+
+$$
+\rho_{n+1|n,\alpha}
+$$
+
+compares how often the local closure and enclosing transition recur.
+
+These are not interchangeable.
+
+# Opposed Closure Legs
+
+Let
+
+$$
+\nu_{n,\alpha,H}
+$$
+
+count complete realizations of one oriented closure leg and
+
+$$
+\nu_{n,\alpha,L}
+$$
+
+count complete realizations of its opposed leg.
+
+Define
+
+$$
+\boxed{
+\eta_{n,\alpha,\mathcal C}
+=
+\frac{
+\nu_{n,\alpha,L}
+}{
+\nu_{n,\alpha,H}
+},
+\qquad
+0<\eta\leq1.
+}
+$$
+
+Then
+
+$$
+\boxed{
+L_{\tau,n,\alpha,\mathcal C}
+=
+-\ln\eta_{n,\alpha,\mathcal C}
+=
+\ln
+\left(
+\frac{
+\nu_{n,\alpha,H}
+}{
+\nu_{n,\alpha,L}
+}
+\right).
+}
+$$
+
+This is occurrence nonreciprocity.
+
+It is not closure recurrence.
+
+# Closure Recurrence Is Separate
+
+Within a recurrence-comparison domain \(\mathcal D_R\), define
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+$$
+
+as the number of local closure recurrences and
+
+$$
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+$$
+
+as the number of corresponding enclosing recurrences.
+
+Then
+
+$$
+\boxed{
+\rho_{n+1|n,\alpha}
+=
+\frac{
+N_{\mathcal D_R}(\chi_{n+1})
+}{
+N_{\mathcal D_R}(\mathcal C_{n,\alpha})
+}.
+}
+$$
+
+The static coin combinatorics do not determine \(\rho\).
+
+It belongs to realized recurrence.
+
+[Recurrence →](recurrence.qmd)
+
+# The Finite-Count Efficiency Postulate
+
+The Canon introduces a separate R<sup>2</sup>D realization postulate for
+finite opposed-leg counts.
+
+Let
+
+$$
+N_i>0,
+\qquad
+N_k>0.
+$$
+
+Define
+
+$$
+\boxed{
+\epsilon_H
+=
+\frac{
+N_i
+}{
+N_k+1
+}
+}
+$$
+
+and
+
+$$
+\boxed{
+\epsilon_L
+=
+\frac{
+N_k
+}{
+N_i+1
+}.
+}
+$$
+
+Their product is
+
+$$
+\boxed{
+\epsilon_H\epsilon_L
+=
+\frac{
+N_iN_k
+}{
+(N_i+1)(N_k+1)
+}.
+}
+$$
+
+For finite positive counts,
+
+$$
+\boxed{
+0<
+\epsilon_H\epsilon_L
+<1.
+}
+$$
+
+That inequality is mathematical.
+
+R<sup>2</sup>D then postulates the realization relation
+
+$$
+\boxed{
+\eta_{n,\alpha,\mathcal C}
+=
+\epsilon_H\epsilon_L.
+}
+$$
+
+The identification of the mathematical finite-count product with physical
+directional realization efficiency is therefore a postulate, not a
+combinatorial theorem.
+
+# A Symmetric Finite Example
+
+Take
+
+$$
+N_i=N_k=5.
+$$
+
+Then
+
+$$
+\epsilon_H
+=
+\epsilon_L
+=
+\frac56.
+$$
+
+Therefore,
+
+$$
+\boxed{
+\eta
+=
+\frac{25}{36}.
+}
+$$
+
+The corresponding occurrence-count loss is
+
+$$
+\boxed{
+L_\tau
+=
+\ln
+\left(
+\frac{36}{25}
+\right).
+}
+$$
+
+# The Second-Law Readout
+
+The R<sup>2</sup>D Second Law postulates
+
+$$
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}
+=
+L_{\tau,n,\alpha,\mathcal C}.
+}
+$$
+
+For this finite example,
+
+$$
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}
+=
+\ln
+\left(
+\frac{36}{25}
+\right).
+}
+$$
+
+If
+
+$$
+\delta_{\mathcal C}\Phi_{n+1}
+=
+\ln
+\left(
+\frac{
+b_{n+1}^{+}
+}{
+b_{n+1}^{-}
+}
+\right),
+$$
+
+then
+
+$$
+\boxed{
+\frac{
+b_{n+1}^{+}
+}{
+b_{n+1}^{-}
+}
+=
+\frac{36}{25}.
+}
+$$
+
+The local reading is
+
+$$
+\eta
+=
+\frac{25}{36},
+$$
+
+while the enclosing background read is its reciprocal count ratio:
+
+$$
+\frac{
+b_{n+1}^{+}
+}{
+b_{n+1}^{-}
+}
+=
+\frac{36}{25}.
+$$
+
+No count needs to be destroyed or transported upward.
+
+These are two boundary-specific logarithmic readings connected by the
+Second-Law postulate.
+
+[The R²D Second Law →](second-law.qmd)
+
+# What the Coins Prove Exactly
+
+The coin construction establishes several results without any physical
+R<sup>2</sup>D realization postulate.
+
+### 1. Boundary change creates a new state classification
+
+At \(B_n\),
+
+$$
+\mathcal M_n
+=
+\{0,\ldots,10\}.
+$$
+
+At \(B_{n+1}\),
+
+$$
+\mathcal M_{n+1}
+=
+\{0,\ldots,100\}.
+$$
+
+These are different state domains.
+
+### 2. Subordinate realization does not create multiplicity
+
+A coin transition changes realization.
+
+It does not create
+
+$$
+W_{n,i}
+=
+\binom{10}{i}.
+$$
+
+### 3. Recursive replacement preserves multiplicity consequence
+
+The recursively composed enclosing landscape satisfies
+
+$$
+\boxed{
+W_{n+1,J}
+=
+\binom{100}{J}.
+}
+$$
+
+But this does not restore one hundred subordinate coin identities as
+primitive states at \(B_{n+1}\).
+
+### 4. Uniform enclosing compatibility creates no directional possibility
+
+If every local state has the same compatible enclosing extension,
+
+$$
+\boxed{
+\Delta P=0.
+}
+$$
+
+### 5. Unequal enclosing compatibility creates directional possibility
+
+For fixed \(J\),
+
+$$
+\boxed{
+\Delta P_{i\rightarrow i+1}^{(J)}
+=
+\ln
+\left(
+\frac{
+J-i
+}{
+91-J+i
+}
+\right).
+}
+$$
+
+### 6. Enclosing compatibility can reverse native local bias
+
+For
+
+$$
+5\rightarrow6
+$$
+
+under
+
+$$
+J=60,
+$$
+
+$$
+\Delta S<0,
+$$
+
+while
+
+$$
+\Delta P>0
+$$
+
+and
+
+$$
+\boxed{
+\Delta S+\Delta P>0.
+}
+$$
+
+The native landscape has not changed.
+
+### 7. Local multiplicity can close while enclosing possibility does not
+
+For
+
+$$
+5\rightarrow6\rightarrow5
+$$
+
+under different enclosing conditions,
+
+$$
+\boxed{
+\Delta S_{\mathcal C}=0
+}
+$$
+
+while
+
+$$
+\boxed{
+\Delta P_{\mathcal C}>0.
+}
+$$
+
+These are exact mathematical results.
+
+# What the Coins Do Not Prove by Themselves
+
+The static combinatorics do **not** establish
+
+$$
+\boxed{
+\Delta G
+=
+\Delta\tau+\Delta A.
+}
+$$
+
+They do not establish proportional occurrence realization,
+
+$$
+\boxed{
+\Delta\tau\approx\Delta S.
+}
+$$
+
+They do not establish the finite-count realization postulate,
+
+$$
+\boxed{
+\eta
+=
+\epsilon_H\epsilon_L.
+}
+$$
+
+They do not establish the R<sup>2</sup>D law,
+
+$$
+\boxed{
+\Delta A_{\mathcal C}
+=
+C_{n+1}
+\lambda_{n+1}
+\rho_{n+1|n}.
+}
+$$
+
+And they do not establish the R<sup>2</sup>D Second Law,
+
+$$
+\boxed{
+\delta_{\mathcal C}\Phi_{n+1}
+=
+L_\tau.
+}
+$$
+
+Those are R<sup>2</sup>D realization propositions applied to the exact
+recursive count architecture.
+
+This distinction between **theorem** and **postulate** is essential.
+
+# What the Coins Establish About Causal Agency
+
+The exact construction does establish something stronger than ordinary
+statistical correlation.
+
+A subordinate transition cannot be the origin of the multiplicity landscape
+whose occupancy it changes.
+
+That landscape is already defined by the boundary classification.
+
+Likewise, a \(B_n\) transition cannot by itself define the \(B_{n+1}\)
+compatibility relation that can reverse the directional significance of that
+transition.
+
+Thus:
+
+> **The local event realizes structure that it does not generate.**
+
+R<sup>2</sup>D adds the causal proposal that the enclosing relation is
+causally prior to the compatible subordinate realization.
+
+That stronger statement remains a testable part of the R<sup>2</sup>D
+program.
+
+# The Entire Example in One View
+
+The recursion begins with ten binary peers:
+
+$$
+\boxed{
+10\times\{H,T\}
+\longrightarrow
+\mathcal M_n=\{0,\ldots,10\}.
+}
+$$
+
+Their multiplicity landscape is
+
+$$
+\boxed{
+W_{n,i}
+=
+\binom{10}{i}.
+}
+$$
+
+Ten such landscapes recursively compose:
+
+$$
+\boxed{
+10\times\mathcal M_n
+\longrightarrow
+\mathcal M_{n+1}
+=
+\{0,\ldots,100\}.
+}
+$$
+
+Their enclosing multiplicity is
+
+$$
+\boxed{
+W_{n+1,J}
+=
+\sum_{
+\sum_\alpha i_\alpha=J
+}
+\prod_\alpha
+W_{n,\alpha,i_\alpha}
+=
+\binom{100}{J}.
+}
+$$
+
+For one selected peer,
+
+$$
+\boxed{
+K_{n+1|n,\alpha,i}^{(J)}
+=
+\binom{90}{J-i},
+}
+$$
+
+so
+
+$$
+\boxed{
+P_{n,\alpha,i}^{(J)}
+=
+\ln
+\binom{90}{J-i}.
+}
+$$
+
+Direction is
+
+$$
+\boxed{
+\Delta P_{i\rightarrow i+1}^{(J)}
+=
+\ln
+\left(
+\frac{
+J-i
+}{
+91-J+i
+}
+\right).
+}
+$$
+
+Thus the complete architecture appears:
+
+$$
+\boxed{
+\begin{array}{c}
+\text{subordinate states}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{new boundary classification}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{native multiplicity}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{recursive composition}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{enclosing compatibility}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{directional possibility}
+\end{array}
+}
+$$
+
+Only after this exact structure is established are constraint, occupancy,
+recurrence, the R<sup>2</sup>D law, and the Second Law added as realization
+relations.
+
+# The Key Lesson
+
+The coin example reduces R<sup>2</sup>D to finite arithmetic.
+
+It shows that:
+
+> **The boundary defines the possible structure.**
+
+> **Subordinate events realize that structure; they do not create it.**
+
+> **Changing the boundary replaces state identity while preserving
+> multiplicity consequence.**
+
+> **The enclosing compatibility relation can change or reverse local
+> directional support without changing the native local landscape.**
+
+And that leads to the core causal question of R<sup>2</sup>D:
+
+> **Have we mistaken the mechanism that realizes a state for the relation
+> that organizes which state is favored?**
+
+---
+
+## Continue
+
+[Counting Requires Distinguishability →](counting.qmd)
+
+[Multiplicity →](multiplicity.qmd)
+
+[Possibility →](possibility.qmd)
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+[The R²D Law →](r2d-law.qmd)
+
+[Definitions and Symbols →](definitions.qmd)
+
+[Back to Understand R²D →](index.qmd)

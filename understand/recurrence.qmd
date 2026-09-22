@@ -1,0 +1,1065 @@
+---
+title: "Recurrence"
+subtitle: "A completed relation can itself become countable"
+toc: true
+---
+
+# Recurrence
+
+Occurrence tells us that something happened.
+
+Closure tells us that a readable state path returned.
+
+Recurrence asks a different question:
+
+> **How many times does the completed relation happen again?**
+
+This distinction is fundamental in R<sup>2</sup>D.
+
+A state can occur many times without completing a closure.
+
+A closure can complete once without recurring.
+
+And completed closures at neighboring boundaries can recur at very different
+counts.
+
+R<sup>2</sup>D therefore treats recurrence as its own primitive count
+relation.
+
+[Closure →](closure.qmd)
+
+## Occurrence Is Not Recurrence
+
+At boundary \(B_n\), the state occurrence count
+
+$$
+\nu_{n,i}
+$$
+
+counts realized instances classified as macrostate \(i\) within a specified
+finite realization domain.
+
+Its logarithmic coordinate is
+
+$$
+\tau_{n,i}
+=
+\ln\nu_{n,i}.
+$$
+
+This tells us how often realizations associated with a state occur.
+
+But it does not tell us how often an entire closed path completes.
+
+For example, a closure
+
+$$
+\mathcal C_{n,\alpha}:
+i
+\rightarrow
+k
+\rightarrow
+i
+$$
+
+contains multiple state occurrences.
+
+Counting those individual occurrences is not the same as counting completed
+recurrences of
+
+$$
+\mathcal C_{n,\alpha}.
+$$
+
+Thus:
+
+$$
+\boxed{
+\text{occurrence}
+\neq
+\text{recurrence}.
+}
+$$
+
+[Occupancy and Occurrence →](occupancy-occurrence.qmd)
+
+## Closure Creates a Countable Whole
+
+Before closure, we can count individual states and transitions.
+
+After closure, the completed path itself can be treated as one countable
+relation.
+
+Schematically:
+
+$$
+i
+\rightarrow
+k
+\rightarrow
+i
+$$
+
+becomes
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+}
+$$
+
+as one completed local closure.
+
+If the same closure completes again,
+
+$$
+\mathcal C_{n,\alpha},
+\quad
+\mathcal C_{n,\alpha}',
+\quad
+\mathcal C_{n,\alpha}'',
+\quad
+\dots,
+$$
+
+then the closure itself has become recurrent.
+
+This is a crucial step in recursive counting:
+
+> **Completion turns a path into something that can itself be counted.**
+
+## Whole-Closure Recurrence Count
+
+Choose a finite recurrence-comparison domain
+
+$$
+\mathcal D_R.
+$$
+
+Within that domain, let
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+$$
+
+be the number of completed recurrences of local closure
+
+$$
+\mathcal C_{n,\alpha}.
+$$
+
+This is a **whole-closure recurrence count**.
+
+It is not the same as the state occurrence count
+
+$$
+\nu_{n,i}.
+$$
+
+It is also not the same as the opposed-leg occurrence counts
+
+$$
+\nu_{n,\alpha,H}
+$$
+
+and
+
+$$
+\nu_{n,\alpha,L}.
+$$
+
+Those quantities answer different questions.
+
+## Four Counts Must Remain Separate
+
+By this point R<sup>2</sup>D contains several distinct realized counts.
+
+### State occurrence
+
+$$
+\nu_{n,i}
+$$
+
+asks:
+
+> How many realized instances are classified as state \(i\)?
+
+### Opposed-leg occurrence
+
+$$
+\nu_{n,\alpha,H},
+\qquad
+\nu_{n,\alpha,L}
+$$
+
+asks:
+
+> How many times was each complete oriented leg of the closure realized?
+
+### Closure recurrence
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+$$
+
+asks:
+
+> How many times did the complete closure recur?
+
+### Enclosing recurrence
+
+$$
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+$$
+
+asks:
+
+> How many completed realizations of the corresponding enclosing transition
+> occurred in the same comparison domain?
+
+These counts must not be collapsed into one quantity.
+
+## Recurrence Does Not Yet Mean Time
+
+The comparison domain
+
+$$
+\mathcal D_R
+$$
+
+is a domain of count.
+
+It is not assumed to be a physical time interval.
+
+Therefore
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+$$
+
+is not yet a frequency.
+
+Likewise, the comparison of recurrence counts across boundaries is not yet a
+physical rate.
+
+Part I remains dimensionless.
+
+Physical time appears only later, if a physical system supplies a valid
+mapping from recurrence count to temporal measurement.
+
+Thus:
+
+$$
+\boxed{
+\text{recurrence count}
+\neq
+\text{physical time}.
+}
+$$
+
+## Adjacent Boundaries Can Recur Differently
+
+Now consider a local closure at \(B_n\),
+
+$$
+\mathcal C_{n,\alpha},
+$$
+
+and its corresponding enclosing transition class at \(B_{n+1}\),
+
+$$
+\chi_{n+1}.
+$$
+
+Count both within the same recurrence-comparison domain
+
+$$
+\mathcal D_R.
+$$
+
+Let
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+$$
+
+be the number of completed local closure recurrences,
+
+and
+
+$$
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+$$
+
+the number of completed enclosing recurrences.
+
+R<sup>2</sup>D then defines their relative recurrence.
+
+## The Adjacent Recurrence Ratio
+
+For
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)>0,
+$$
+
+define
+
+$$
+\boxed{
+\rho_{n+1|n,\alpha}
+=
+\frac{
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+}{
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+}.
+}
+$$
+
+The ratio asks:
+
+> **How many enclosing recurrences are realized per completed recurrence of
+> the representative local closure?**
+
+This is one of the central across-boundary count relations in
+R<sup>2</sup>D.
+
+## A Simple Example
+
+Suppose within one recurrence-comparison domain a local closure completes
+
+$$
+1000
+$$
+
+times.
+
+Suppose the corresponding enclosing transition completes
+
+$$
+10
+$$
+
+times.
+
+Then
+
+$$
+\rho_{n+1|n,\alpha}
+=
+\frac{10}{1000}
+=
+0.01.
+$$
+
+The enclosing relation recurs once for every one hundred recurrences of the
+local closure.
+
+Nothing in this example requires seconds, hertz, or a physical clock.
+
+It is purely a ratio of completed counts.
+
+## The Ratio Is Independent of Comparison-Domain Size
+
+Suppose the same stationary recurrence relation persists while the comparison
+domain is enlarged.
+
+If
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+$$
+
+and
+
+$$
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+$$
+
+scale proportionally, then their ratio remains unchanged.
+
+For example,
+
+$$
+\frac{10}{1000}
+=
+\frac{100}{10000}.
+$$
+
+Thus
+
+$$
+\rho_{n+1|n,\alpha}
+$$
+
+describes the relative recurrence structure rather than the arbitrary size of
+the domain over which it was counted.
+
+## Logarithmic Recurrence Scaling
+
+As elsewhere in R<sup>2</sup>D, a multiplicative ratio can be represented
+logarithmically.
+
+For
+
+$$
+\rho_{n+1|n,\alpha}>0,
+$$
+
+define
+
+$$
+\boxed{
+\gamma_{n+1|n,\alpha}
+=
+\ln
+\rho_{n+1|n,\alpha}.
+}
+$$
+
+This is the logarithmic recurrence scaling between adjacent boundaries.
+
+Again,
+
+$$
+\gamma
+$$
+
+is dimensionless.
+
+It is not yet elapsed time, frequency, or rate.
+
+## A Zero Recurrence Ratio Is Allowed
+
+Suppose the local closure recurs,
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)>0,
+$$
+
+but the corresponding enclosing transition does not recur within the
+comparison domain:
+
+$$
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)=0.
+$$
+
+Then
+
+$$
+\boxed{
+\rho_{n+1|n,\alpha}=0.
+}
+$$
+
+This is permitted.
+
+It means:
+
+> **The local closure can recur while the enclosing relation has not yet
+> completed a recurrence within the same count domain.**
+
+This distinction becomes extremely important at large recursive boundaries.
+
+A smaller-scale process may appear repeatedly active while a larger enclosing
+relation appears effectively motionless.
+
+## Recurrence Is Different From Reciprocal Realization
+
+Recall the closure efficiency
+
+$$
+\eta_{n,\alpha,\mathcal C}
+=
+\frac{
+\nu_{n,\alpha,L}
+}{
+\nu_{n,\alpha,H}
+}.
+$$
+
+This asks whether the two opposed closure legs are realized with equal
+occurrence-count efficiency.
+
+The recurrence ratio
+
+$$
+\rho_{n+1|n,\alpha}
+$$
+
+asks something completely different.
+
+It compares the number of completed recurrences across adjacent boundaries.
+
+Thus:
+
+$$
+\boxed{
+\eta
+\neq
+\rho.
+}
+$$
+
+A closure can have reciprocal opposed-leg realization
+
+$$
+\eta=1
+$$
+
+while recurring at a very different count from its enclosing transition.
+
+Likewise, nonreciprocal occurrence realization does not itself tell us how
+often the whole closure recurs.
+
+## Recurrence Is Different From Closure Asymmetry
+
+Closure asymmetry is
+
+$$
+\Delta A_{n,\alpha,\mathcal C}
+=
+\Delta P_{n,\alpha,\mathcal C}
+-
+\Delta R_{n,\alpha,\mathcal C}.
+$$
+
+This measures the directional relation remaining around a completed closure.
+
+Recurrence asks how often that completed closure itself repeats.
+
+Therefore:
+
+$$
+\boxed{
+\Delta A_{\mathcal C}
+\neq
+\rho.
+}
+$$
+
+One describes direction.
+
+The other describes relative recurrence.
+
+The distinction between the two becomes essential in the R<sup>2</sup>D law.
+
+## Recurrence Is Different From Recursive Carry
+
+Recursive carry asks how a completed local realization is reclassified when
+the boundary changes:
+
+$$
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+$$
+
+The recurrence ratio asks how often the two boundary-specific realizations
+recur relative to one another.
+
+Thus:
+
+$$
+\boxed{
+\text{carry}
+\neq
+\text{recurrence}.
+}
+$$
+
+Carry is a classification relation.
+
+Recurrence is a count relation.
+
+[Recursive Carry →](recursive-carry.qmd)
+
+## One Recursive Relation, Different Recurrence Counts
+
+A local closure and an enclosing occurrence can be two boundary-specific
+readings of one recursively organized relation.
+
+But this does not require a one-to-one correspondence between their
+recurrence counts.
+
+In general,
+
+$$
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+\neq
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right).
+$$
+
+This is why R<sup>2</sup>D needs
+
+$$
+\rho_{n+1|n,\alpha}.
+$$
+
+The ratio preserves the recursive relation without requiring identical count
+rates at adjacent boundaries.
+
+## Recurrence Creates Scale
+
+This suggests a primitive meaning of scale.
+
+Two boundaries can be recursively related while their completed relations
+recur at very different counts.
+
+A subordinate boundary may complete many recurrences during one recurrence
+of its enclosing boundary.
+
+Schematically:
+
+$$
+\underbrace{
+\mathcal C_n
+\mathcal C_n
+\mathcal C_n
+\mathcal C_n
+\mathcal C_n
+}_{\text{many local recurrences}}
+\quad
+\longleftrightarrow
+\quad
+\underbrace{
+\chi_{n+1}
+}_{\text{one enclosing recurrence}}.
+$$
+
+The distinction between "fast" and "slow" can therefore begin as a count
+relation before physical time is assigned.
+
+That is the basis of the recursive clock developed later in the Canon.
+
+## The Recursive Clock
+
+Imagine recursively nested closures.
+
+A small boundary closes repeatedly.
+
+Its enclosing boundary closes less often.
+
+A still larger boundary may require many lower-boundary recurrences before
+one enclosing recurrence is completed.
+
+The hierarchy can be pictured as nested gears:
+
+$$
+B_n
+\rightarrow
+B_{n+1}
+\rightarrow
+B_{n+2}
+\rightarrow
+\cdots
+$$
+
+with each boundary carrying its own completed recurrence.
+
+The gear metaphor is useful only if the causal architecture is kept clear.
+
+The smaller gear does not independently generate the larger one.
+
+Rather, the recursively organized relation has different readable recurrence
+counts at different boundaries.
+
+> **Recurrence provides the primitive ordering from which physical clock
+> readings can later emerge.**
+
+## A Large Boundary Can Appear Motionless
+
+Suppose
+
+$$
+\rho_{n+1|n,\alpha}
+\ll1.
+$$
+
+Then many local closures occur for each enclosing recurrence.
+
+To an observer restricted to the local count domain, the enclosing relation
+may appear nearly fixed.
+
+Yet it can still organize the local realization.
+
+This gives R<sup>2</sup>D a useful distinction:
+
+$$
+\boxed{
+\text{slow enclosing recurrence}
+\neq
+\text{absence of enclosing organization}.
+}
+$$
+
+A boundary does not have to visibly complete a cycle during the observation
+domain in order to define compatibility for subordinate realization.
+
+## Recurrence Before Physical Rate
+
+Later physical science may supply a mapping such as
+
+$$
+\text{recurrence count}
+\longrightarrow
+\text{frequency}
+$$
+
+or
+
+$$
+\text{recurrence ratio}
+\longrightarrow
+\text{relative physical rate}.
+$$
+
+But the logical order matters.
+
+R<sup>2</sup>D begins with
+
+$$
+\boxed{
+\text{completed recurrence counts}
+}
+$$
+
+and only afterward asks whether a physical clock or frequency coordinate
+reads them.
+
+This reverses the assumption that time must already exist before recurrence
+can be counted.
+
+## A Clock Is a Physical Read of Recurrence
+
+A physical clock works by recurrence.
+
+A pendulum repeats.
+
+A quartz crystal oscillates.
+
+An atomic transition recurs.
+
+A rotating object cycles.
+
+In conventional physics, these recurrences are used to measure an already
+assumed temporal coordinate.
+
+R<sup>2</sup>D asks whether the logical direction can be reversed:
+
+$$
+\boxed{
+\text{recurrence}
+\rightarrow
+\text{physical clock read}.
+}
+$$
+
+Part I does not yet claim a specific physical clock mapping.
+
+It establishes only the primitive count relation that such a mapping would
+have to read.
+
+## Recurrence and Distinguishability Form Complementary Coordinates
+
+A closure contains at least two primitive aspects.
+
+There is **what distinction is traversed**:
+
+$$
+\lambda_n.
+$$
+
+And there is **how that completed distinction recurs relative to another
+boundary**:
+
+$$
+\rho_{n+1|n}.
+$$
+
+These are different count relations.
+
+One describes distinguishable interval.
+
+The other describes recursive repetition.
+
+Later parts of R<sup>2</sup>D ask what happens when both remain readable, or
+when one becomes unreadable while the other remains accessible.
+
+This becomes the basis of the later readability horizons.
+
+## Across More Than One Boundary
+
+Suppose we have a recursive chain
+
+$$
+B_n
+\rightarrow
+B_{n+1}
+\rightarrow
+B_{n+2}.
+$$
+
+Define adjacent recurrence ratios
+
+$$
+\rho_{n+1|n}
+$$
+
+and
+
+$$
+\rho_{n+2|n+1}.
+$$
+
+Because they are ratios, their recursive composition is multiplicative:
+
+$$
+\boxed{
+\rho_{n+2|n}
+=
+\rho_{n+2|n+1}
+\rho_{n+1|n}.
+}
+$$
+
+Taking logarithms gives additive recurrence scaling:
+
+$$
+\boxed{
+\gamma_{n+2|n}
+=
+\gamma_{n+2|n+1}
++
+\gamma_{n+1|n}.
+}
+$$
+
+The same architecture extends through a hierarchy of boundaries.
+
+This is the next step: **recursive counting across scale**.
+
+[Recursive Counting Across Scale →](recursive-counting.qmd)
+
+## Why Recurrence Matters for the R<sup>2</sup>D Law
+
+The local closure and enclosing occurrence are related recursively.
+
+But they need not recur one-for-one.
+
+The R<sup>2</sup>D law therefore cannot compare local and enclosing
+distinguishability alone.
+
+It must also account for their relative recurrence.
+
+That is why the recurrence ratio
+
+$$
+\rho_{n+1|n,\alpha}
+$$
+
+enters the bridge between local closure geometry and enclosing constrained
+geometry.
+
+Direction alone is not enough.
+
+Distinguishability alone is not enough.
+
+The recursive relation also has a recurrence structure.
+
+[The R²D Law →](r2d-law.qmd)
+
+## The Architecture So Far
+
+The primitive hierarchy can now be written:
+
+$$
+\boxed{
+\text{distinction}
+\rightarrow
+\text{change}
+\rightarrow
+\text{return}
+\rightarrow
+\text{closure}
+\rightarrow
+\text{recurrence}
+\rightarrow
+\text{recursive comparison}.
+}
+$$
+
+Each step adds a new count relation.
+
+A distinction can change.
+
+A changed state can return.
+
+A return can belong to an enclosing occurrence and become closure.
+
+A closure can recur.
+
+And recurrence at one boundary can be compared with recurrence at another.
+
+This is why recurrence is not merely repetition.
+
+It is the bridge that makes recursive counting possible.
+
+---
+
+## Core Equations
+
+### Whole-closure recurrence count
+
+$$
+\boxed{
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+}
+$$
+
+### Enclosing recurrence count
+
+$$
+\boxed{
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+}
+$$
+
+### Adjacent recurrence ratio
+
+$$
+\boxed{
+\rho_{n+1|n,\alpha}
+=
+\frac{
+N_{\mathcal D_R}
+\left(
+\chi_{n+1}
+\right)
+}{
+N_{\mathcal D_R}
+\left(
+\mathcal C_{n,\alpha}
+\right)
+}
+}
+$$
+
+### Logarithmic recurrence scaling
+
+$$
+\boxed{
+\gamma_{n+1|n,\alpha}
+=
+\ln
+\rho_{n+1|n,\alpha}
+}
+$$
+
+### Recursive composition
+
+$$
+\boxed{
+\rho_{N|n}
+=
+\prod_{j=n}^{N-1}
+\rho_{j+1|j}
+}
+$$
+
+and therefore
+
+$$
+\boxed{
+\ln\rho_{N|n}
+=
+\sum_{j=n}^{N-1}
+\ln\rho_{j+1|j}.
+}
+$$
+
+---
+
+## The Key Distinction
+
+The simplest summary is:
+
+> **Occurrence counts realized states.**
+
+> **Closure identifies a completed local return compatible with an enclosing
+> occurrence.**
+
+> **Recurrence counts repeated completion of that closure.**
+
+> **The recurrence ratio compares completed recurrence across boundaries.**
+
+None of these quantities requires physical time.
+
+Time can come later as a physical read of recurrence.
+
+The next step is to ask what happens when recurrence ratios compose through
+many recursively nested boundaries.
+
+---
+
+## Next
+
+[Recursive Counting Across Scale →](recursive-counting.qmd)
+
+[The R²D Law →](r2d-law.qmd)
+
+[The R²D Second Law →](second-law.qmd)
+
+[Back to Understand R²D →](index.qmd)

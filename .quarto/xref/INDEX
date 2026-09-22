@@ -52,5 +52,71 @@
   },
   "understand/introduction.qmd": {
     "introduction.html": "45834393"
+  },
+  "understand/asymmetry.qmd": {
+    "asymmetry.html": "342b00aa"
+  },
+  "understand/before-units.qmd": {
+    "before-units.html": "713d9432"
+  },
+  "understand/boundaries.qmd": {
+    "boundaries.html": "7c4216a3"
+  },
+  "understand/causal-inversion.qmd": {
+    "causal-inversion.html": "8fdb0118"
+  },
+  "understand/closure.qmd": {
+    "closure.html": "e34e87fe"
+  },
+  "understand/coins.qmd": {
+    "coins.html": "922c0ecf"
+  },
+  "understand/constraint-retention.qmd": {
+    "constraint-retention.html": "842060ca"
+  },
+  "understand/counting.qmd": {
+    "counting.html": "44009bc3"
+  },
+  "understand/definitions.qmd": {
+    "definitions.html": "4f2293ff"
+  },
+  "understand/from-count-to-physics.qmd": {
+    "from-count-to-physics.html": "7b5944aa"
+  },
+  "understand/macrostate-microstate.qmd": {
+    "macrostate-microstate.html": "eb66796a"
+  },
+  "understand/multiplicity.qmd": {
+    "multiplicity.html": "116c7477"
+  },
+  "understand/not-coarse-graining.qmd": {
+    "not-coarse-graining.html": "defc5e33"
+  },
+  "understand/occupancy-occurrence.qmd": {
+    "occupancy-occurrence.html": "936ad290"
+  },
+  "understand/possibility.qmd": {
+    "possibility.html": "d13d06be"
+  },
+  "understand/r2d-law.qmd": {
+    "r2d-law.html": "a9480792"
+  },
+  "understand/recurrence.qmd": {
+    "recurrence.html": "3b6ba643"
+  },
+  "understand/recursive-carry.qmd": {
+    "recursive-carry.html": "1c36d5ed"
+  },
+  "understand/recursive-counting.qmd": {
+    "recursive-counting.html": "a0c2b3cd"
+  },
+  "understand/recursive-replacement.qmd": {
+    "recursive-replacement.html": "0b9bbfdf"
+  },
+  "understand/scientific-objecthood.qmd": {
+    "scientific-objecthood.html": "e45097e5"
+  },
+  "understand/second-law.qmd": {
+    "second-law.html": "f057705a"
   }
 }

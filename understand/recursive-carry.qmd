@@ -1,0 +1,771 @@
+---
+title: "Recursive Carry"
+subtitle: "A completed realization acquires a new count meaning"
+toc: true
+---
+
+# Recursive Carry
+
+Recursive replacement tells us that changing the boundary changes the state
+domain.
+
+But that raises a new question:
+
+> **What happens to a completed realization when it is read from the enclosing
+> boundary?**
+
+R<sup>2</sup>D calls that change in count meaning **recursive carry**.
+
+Recursive carry is not the physical transport of a state from one scale to
+another.
+
+It is not the accumulation of subordinate processes into a larger cause.
+
+It is not reverse causation.
+
+It is **boundary-relative reclassification**.
+
+> **A completed local realization can acquire a different count meaning when
+> the count boundary changes.**
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+## Begin With a Completed Local Realization
+
+Consider a peer boundary
+
+$$
+B_{n,\alpha}.
+$$
+
+At that boundary, a completed local closure might be readable as
+
+$$
+\mathcal{C}_{n,\alpha}:
+i \rightarrow k \rightarrow i.
+$$
+
+The local states are readable.
+
+The peer identity is readable.
+
+The internal path is readable.
+
+The realization therefore has a well-defined local count meaning at
+\(B_{n,\alpha}\).
+
+Now change to the enclosing boundary
+
+$$
+B_{n+1}.
+$$
+
+The local path is no longer necessarily readable as the same macrostate
+sequence.
+
+The enclosing boundary has its own state domain and its own classification.
+
+The completed local realization must therefore be counted differently.
+
+That is recursive carry.
+
+## The Enclosing Occurrence Comes First Causally
+
+Suppose the enclosing boundary contains a readable transition class
+
+$$
+\chi_{n+1}:
+j \rightarrow k.
+$$
+
+Let one realized occurrence of that enclosing transition be
+
+$$
+\chi_{n+1}^{(r)}.
+$$
+
+The enclosing occurrence can be locally realized through compatible closures
+among its subordinate peer boundaries:
+
+$$
+\left\{
+\mathcal{C}_{n,\alpha}
+\right\}_{\alpha\in I_n}.
+$$
+
+The causal relation is therefore
+
+$$
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\left\{
+\mathcal{C}_{n,\alpha}
+\right\}_{\alpha\in I_n}
+}
+$$
+
+The enclosing occurrence defines which combinations of local realizations are
+compatible with it.
+
+The subordinate realizations are necessary for the enclosing occurrence to be
+locally expressed.
+
+But they do not independently combine to create the enclosing occurrence.
+
+> **The whole defines its compatible realizations.**
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## Carry Points the Other Way — But It Is Not a Causal Arrow
+
+Now select one completed local realization:
+
+$$
+\mathcal{C}_{n,\alpha}.
+$$
+
+When the count boundary changes from \(B_n\) to \(B_{n+1}\), that completed
+local realization is reclassified according to the enclosing occurrence to
+which it belongs.
+
+R<sup>2</sup>D denotes this as
+
+$$
+\boxed{
+\mathcal{C}_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}
+}
+$$
+
+The symbol
+
+$$
+\xmapsto{\kappa_n}
+$$
+
+means:
+
+> **change in count meaning under change of boundary.**
+
+It is not a dynamical arrow.
+
+It does not mean
+
+$$
+\mathcal{C}_{n,\alpha}
+\Longrightarrow
+\chi_{n+1}^{(r)}.
+$$
+
+The causal relation runs the other way.
+
+So R<sup>2</sup>D distinguishes two different questions.
+
+### Causal realization
+
+$$
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\mathcal{C}_{n,\alpha}
+}
+$$
+
+asks:
+
+> Which local realizations are compatible with this enclosing occurrence?
+
+### Recursive carry
+
+$$
+\boxed{
+\mathcal{C}_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}
+}
+$$
+
+asks:
+
+> How is this completed local realization classified when the count boundary
+> changes?
+
+The arrows point in opposite diagrammatic directions.
+
+They do not describe opposite causal flows.
+
+## Carry Is Reclassification
+
+This is the simplest way to think about recursive carry.
+
+At the local boundary:
+
+$$
+\mathcal{C}_{n,\alpha}
+$$
+
+has local closure meaning.
+
+At the enclosing boundary:
+
+$$
+\chi_{n+1}^{(r)}
+$$
+
+has enclosing occurrence meaning.
+
+The two are not the same boundary-defined state object.
+
+Thus,
+
+$$
+\boxed{
+\mathcal{C}_{n,\alpha}
+\not\equiv
+\chi_{n+1}^{(r)}
+}
+$$
+
+as count objects.
+
+Recursive carry does not preserve one unchanged state across the boundary.
+
+Instead:
+
+> **local state identity is replaced while the recursive relation remains
+> consequential.**
+
+This is why carry follows naturally from recursive replacement.
+
+Replacement changes the state domain.
+
+Carry tells us how a completed realization is counted after that change.
+
+## A Coin Example
+
+Consider one coin at a subordinate boundary.
+
+A local realization might complete a cycle such as
+
+$$
+H \rightarrow T \rightarrow H.
+$$
+
+At that boundary, the sequence is readable.
+
+The source coin is identifiable.
+
+The path is identifiable.
+
+Now suppose many such subordinate coin boundaries participate in an
+enclosing ensemble.
+
+At the ensemble boundary, the question is no longer:
+
+> Which exact coin followed which exact path?
+
+The enclosing state may instead classify the completed subordinate
+realizations according to an ensemble occurrence.
+
+Different local histories can therefore acquire the same enclosing count
+meaning.
+
+Schematically:
+
+$$
+H\rightarrow T\rightarrow H
+$$
+
+and
+
+$$
+H\rightarrow T\rightarrow H
+$$
+
+for two different peer coins can both participate in the same enclosing
+ensemble classification.
+
+The local path identities remain meaningful at the subordinate boundaries.
+
+But they need not remain recoverable as separate state identities from the
+enclosing occurrence.
+
+[The Coins Example →](coins.qmd)
+
+## Carry Is Generally Many-to-One
+
+Suppose two distinct local closures satisfy
+
+$$
+\mathcal{C}_{n,\alpha}
+\neq
+\mathcal{C}_{n,\beta},
+$$
+
+but both are classified as realizations of the same enclosing occurrence:
+
+$$
+\mathcal{C}_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}
+$$
+
+and
+
+$$
+\mathcal{C}_{n,\beta}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+$$
+
+Then the enclosing occurrence does not uniquely specify which local path
+occurred.
+
+Schematically,
+
+$$
+\boxed{
+\left|
+\kappa_n^{-1}
+\left(
+\chi_{n+1}^{(r)}
+\right)
+\right|
+>
+1
+}
+$$
+
+More than one locally distinguishable realization belongs to the same
+enclosing classification.
+
+This is a central feature of recursive carry.
+
+> **Carry can preserve count consequence while removing recoverable local
+> path identity.**
+
+## The Local Path Is Not Destroyed
+
+Many-to-one carry does not mean the subordinate path ceased to exist.
+
+The path remains definable at the boundary where it was readable.
+
+What changes is whether that identity can be reconstructed from the enclosing
+state.
+
+Thus:
+
+$$
+\boxed{
+\text{local readability}
+\not\Rightarrow
+\text{enclosing recoverability}
+}
+$$
+
+The subordinate realization remains real at its own boundary.
+
+But the enclosing boundary does not have to preserve its full path identity.
+
+This is another reason R<sup>2</sup>D differs from a picture in which one
+fixed microscopic ontology is carried unchanged through every scale.
+
+## One Enclosing Occurrence Can Organize Many Peers
+
+An enclosing occurrence generally involves multiple subordinate peer
+boundaries.
+
+Thus,
+
+$$
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\left\{
+\mathcal{C}_{n,\alpha}
+\right\}_{\alpha\in I_n}.
+$$
+
+If the peers are equivalent under the enclosing compatibility relation, one
+peer may sometimes be selected as a **representative peer**.
+
+That does not mean the representative peer generates the enclosing
+occurrence.
+
+Nor is it necessarily an average over all peers.
+
+It is simply one local realization representative of a class of equivalent
+peer relations under the same enclosing organization.
+
+If the peer boundaries are not equivalent, the peer index must remain
+explicit.
+
+No representative-peer reduction is then assumed.
+
+## Carry Does Not Mean "The Parts Build the Whole"
+
+This distinction is important because recursive diagrams are easy to read
+bottom-up.
+
+One might imagine:
+
+$$
+\text{local closure}
++
+\text{local closure}
++
+\text{local closure}
+\rightarrow
+\text{enclosing occurrence}.
+$$
+
+That is not the R<sup>2</sup>D causal architecture.
+
+The enclosing occurrence defines which local closures are jointly compatible
+with it.
+
+Thus:
+
+$$
+\boxed{
+\text{enclosing occurrence}
+\Longrightarrow
+\text{compatible subordinate closures}.
+}
+$$
+
+Only after a subordinate realization is completed do we ask how that
+realization is **read from the enclosing boundary**.
+
+That is carry.
+
+The distinction is:
+
+$$
+\boxed{
+\text{organization downward}
+}
+$$
+
+and
+
+$$
+\boxed{
+\text{classification across boundaries}.
+}
+$$
+
+Not:
+
+$$
+\text{causation upward}
++
+\text{causation downward}.
+$$
+
+## Carry Is Not Physical Transport
+
+Nothing must physically travel from \(B_n\) into \(B_{n+1}\).
+
+The boundary changes.
+
+The classification changes.
+
+The same recursively organized relation is now read differently.
+
+This is why the notation
+
+$$
+\xmapsto{\kappa_n}
+$$
+
+should not be interpreted as:
+
+- motion;
+- energy flow;
+- information flow;
+- force transmission;
+- or transport between scales.
+
+It denotes a formal operation:
+
+$$
+\boxed{
+\text{boundary-relative reclassification}.
+}
+$$
+
+## Carry Is Not a Dynamical Evolution Operator
+
+A dynamical operator ordinarily maps one state into another within a state
+space.
+
+Recursive carry does something different.
+
+It changes the state space from which the realization is being classified.
+
+Thus,
+
+$$
+\mathcal{C}_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}
+$$
+
+does not mean that the local closure dynamically evolves into the enclosing
+occurrence.
+
+It means that the completed local realization has enclosing occurrence
+meaning when the boundary changes.
+
+This is why recursive carry belongs to the architecture of counting before it
+belongs to any particular physical dynamics.
+
+## Carry and Replacement
+
+Recursive replacement and recursive carry are closely related but distinct.
+
+### Recursive replacement
+
+$$
+\boxed{
+\text{change of boundary}
+\rightarrow
+\text{change of state domain}
+}
+$$
+
+The old state classification does not persist unchanged.
+
+### Recursive carry
+
+$$
+\boxed{
+\text{completed local realization}
+\rightarrow
+\text{new enclosing count meaning}
+}
+$$
+
+The realized relation is reclassified at the new boundary.
+
+So:
+
+> **Replacement changes what the states are.**
+
+> **Carry changes what a completed realization counts as.**
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+## Carry and Closure
+
+Recursive carry becomes especially clear when the local relation has closed.
+
+A local closure might be
+
+$$
+\mathcal{C}_{n,\alpha}:
+i \rightarrow k \rightarrow i.
+$$
+
+The local state returns.
+
+The path is complete relative to that boundary.
+
+That completed relation can then be classified from the enclosing boundary
+without requiring its internal path identity to remain readable there.
+
+Closure therefore provides a natural unit of completed local realization for
+recursive carry.
+
+[Closure →](closure.qmd)
+
+## Carry and Recurrence Are Different
+
+A completed local closure may recur many times.
+
+An enclosing occurrence may recur at another count rate.
+
+Recursive carry does not assert that these recurrence counts are equal.
+
+It states only the compatibility and reclassification relation between the
+boundary-specific reads.
+
+The relative recurrence between adjacent boundaries is a separate count
+relation.
+
+Thus:
+
+$$
+\boxed{
+\text{carry}
+\neq
+\text{recurrence ratio}.
+}
+$$
+
+[Recurrence →](recurrence.qmd)
+
+## Carry and Irreversibility Are Different
+
+Recursive carry must also be separated from irreversibility.
+
+A completed local closure can return to its initial state while the opposed
+legs of the closure are realized with unequal occurrence-count efficiency.
+
+That is a question of local nonreciprocity.
+
+Recursive carry asks a different question:
+
+> How is the completed realization classified when the boundary changes?
+
+Thus:
+
+$$
+\boxed{
+\text{recursive carry}
+=
+\text{cross-boundary reclassification}
+}
+$$
+
+while
+
+$$
+\boxed{
+\text{occurrence-count loss}
+=
+\text{local directional nonreciprocity}.
+}
+$$
+
+The two should not be conflated.
+
+In particular, recursive carry does not require a special "surviving
+fraction" of a local realization to be selected before it can be carried.
+
+Nor does carry divide the local realization into separate upward directed and
+background channels.
+
+The relationship between local occurrence-count nonreciprocity and enclosing
+background belongs to the R<sup>2</sup>D Second Law, not to the definition of
+carry.
+
+[The R²D Second Law →](second-law.qmd)
+
+## The Two-Sided Recursive Architecture
+
+For every nonterminal boundary, R<sup>2</sup>D therefore contains two
+complementary relations.
+
+### Enclosing definition of local realization
+
+$$
+\boxed{
+\chi_{n+1}^{(r)}
+\Longrightarrow
+\left\{
+\mathcal{C}_{n,\alpha}
+\right\}
+}
+$$
+
+The whole defines which local realizations are compatible with it.
+
+### Boundary-relative reclassification
+
+$$
+\boxed{
+\mathcal{C}_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}
+}
+$$
+
+The completed local realization acquires enclosing count meaning when the
+boundary changes.
+
+These are not a causal cycle.
+
+They are two readings of one recursive relation.
+
+> **The enclosing relation defines its compatible local realizations.  
+> Recursive carry changes how those completed realizations are counted across
+> boundaries.**
+
+## Why Carry Matters
+
+Recursive carry supplies the bridge between neighboring state domains without
+requiring one fixed object to persist through them.
+
+It explains how:
+
+- subordinate realizations can remain consequential after their state
+  identities are replaced;
+- many distinct local histories can belong to one enclosing state;
+- an enclosing occurrence can be represented through local realizations
+  without being caused by their independent accumulation;
+- and the same recursively organized relation can have different readable
+  forms at adjacent boundaries.
+
+This is the architecture required before the R<sup>2</sup>D law can relate
+local closure and enclosing occurrence.
+
+[The R²D Law →](r2d-law.qmd)
+
+## The Core Distinction
+
+The entire idea can be summarized in three statements:
+
+> **Recursive replacement:** the state domain changes.
+
+> **Causal realization:** the enclosing relation defines its compatible local
+> realizations.
+
+> **Recursive carry:** a completed local realization acquires a new count
+> meaning when the boundary changes.
+
+Or schematically:
+
+$$
+\boxed{
+\begin{array}{ccc}
+& \chi_{n+1}^{(r)} & \\
+& \Downarrow & \\
+& \mathcal{C}_{n,\alpha} &
+\end{array}
+}
+$$
+
+for causal realization, while
+
+$$
+\boxed{
+\mathcal{C}_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}
+}
+$$
+
+denotes reclassification.
+
+The first is causal.
+
+The second is not.
+
+That distinction is essential to R<sup>2</sup>D.
+
+---
+
+## Next
+
+[Possibility →](possibility.qmd)
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+[Closure →](closure.qmd)
+
+[The R²D Law →](r2d-law.qmd)
+
+[Back to Understand R²D →](index.qmd)

@@ -1,0 +1,1185 @@
+---
+title: "Scientific Objecthood"
+subtitle: "The boundary participates in defining what counts as the object"
+toc: true
+---
+
+# Scientific Objecthood
+
+Science is organized around objects.
+
+Physics has particles, fields, masses, charges, and spacetime.
+
+Chemistry has atoms, molecules, and reactions.
+
+Biology has proteins, cells, tissues, and organisms.
+
+Other sciences define still other objects.
+
+R<sup>2</sup>D begins with a question that comes before deciding which of
+these objects is most fundamental:
+
+> **What makes something a scientific object in the first place?**
+
+Its answer is boundary relative.
+
+> **An object is a readable state distinction defined at a count boundary.**
+
+The boundary does not merely surround an independently existing object.
+
+It participates in defining what counts as the object.
+
+## From Objects to Objecthood
+
+A conventional foundational question is:
+
+> What are the fundamental objects of nature?
+
+R<sup>2</sup>D asks a logically earlier question:
+
+> What conditions must be satisfied before anything can count as an object?
+
+Before an electron, molecule, protein, cell, or organism can be scientifically
+identified, some differences must be readable.
+
+Those differences must be classified relative to a count domain.
+
+A boundary must therefore already define:
+
+- which distinctions are readable;
+- which realizations are compatible;
+- which compatible realizations belong to the same state;
+- and which differences count as changes of that state.
+
+Objecthood begins with this classification architecture.
+
+[Boundaries Define Scientific Objects →](boundaries.qmd)
+
+## A Boundary Defines a State Domain
+
+At boundary \(B_n\), let
+
+$$
+\mathfrak M_n
+$$
+
+be the compatible formal microstate domain.
+
+Let
+
+$$
+\mathcal M_n
+$$
+
+be the readable macrostate domain.
+
+The boundary supplies the classification
+
+$$
+\boxed{
+\pi_n:
+\mathfrak M_n
+\rightarrow
+\mathcal M_n.
+}
+$$
+
+A readable state
+
+$$
+i\in\mathcal M_n
+$$
+
+is therefore defined relative to that boundary.
+
+Its multiplicity is
+
+$$
+\boxed{
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+}
+$$
+
+The object is not added afterward to this structure.
+
+The readable state classification is what makes the object scientifically
+distinguishable there.
+
+## A Scientific Object Is a Readable Distinction
+
+R<sup>2</sup>D therefore uses a deliberately broad concept of objecthood.
+
+An object need not be a small solid thing.
+
+A scientific object can be any stable readable distinction defined by an
+appropriate boundary.
+
+Thus a particle can be an object.
+
+A molecule can be an object.
+
+A protein conformation can be an object.
+
+A cell can be an object.
+
+An organism can be an object.
+
+The common requirement is not a shared substance.
+
+It is a shared formal condition:
+
+$$
+\boxed{
+\text{boundary}
+\rightarrow
+\text{readable distinction}
+\rightarrow
+\text{state identity}.
+}
+$$
+
+## Objecthood Is Real
+
+Boundary-relative objecthood does not mean that objects are illusions.
+
+A molecule can be physically real.
+
+A cell can be physically real.
+
+A particle can be physically real.
+
+Their properties can be measured.
+
+Their transitions can be manipulated.
+
+They can enter highly predictive causal models.
+
+R<sup>2</sup>D does not require otherwise.
+
+The restriction is narrower:
+
+$$
+\boxed{
+\text{real at }B_n
+\not\Rightarrow
+\text{primitive at every boundary}.
+}
+$$
+
+Thus:
+
+> **Boundary-relative reality is still reality.**
+
+## Reality and Primitiveness Are Different Claims
+
+Suppose an object is experimentally readable at \(B_n\).
+
+That establishes its scientific reality relative to that boundary.
+
+It does not automatically establish that the same identity survives as a
+primitive object at
+
+$$
+B_{n+1}.
+$$
+
+R<sup>2</sup>D therefore separates:
+
+$$
+\boxed{
+\text{scientific reality}
+}
+$$
+
+from
+
+$$
+\boxed{
+\text{boundary-independent primitiveness}.
+}
+$$
+
+These are not equivalent claims.
+
+This distinction allows familiar scientific objects to remain completely real
+without requiring one privileged ontology to persist through all scales.
+
+## The Primitive-Object Error
+
+Suppose an object is a legitimate readable state distinction at \(B_n\).
+
+Now change the count boundary.
+
+The old state identity may no longer remain readable as the same state at
+
+$$
+B_{n+1}.
+$$
+
+Its realization may instead contribute to the multiplicity of a newly
+classified enclosing state.
+
+If the subordinate identity is nevertheless assumed to remain independently
+primitive, R<sup>2</sup>D calls this a **primitive-object projection**.
+
+Schematically:
+
+$$
+\boxed{
+\text{object at }B_n
+\not\Rightarrow
+\text{same primitive object at }B_{n+1}.
+}
+$$
+
+The problem is not believing that the object exists.
+
+The problem is assuming that its boundary-specific identity must persist
+unchanged after the state classification has changed.
+
+## Objecthood Changes With the Boundary
+
+At \(B_n\), an object may be represented by macrostate
+
+$$
+i_n.
+$$
+
+At \(B_{n+1}\), that local identity can become part of a compatible formal
+microstate realization:
+
+$$
+\mu_{n+1}.
+$$
+
+Thus the same recursively organized realization can change status:
+
+$$
+\boxed{
+\text{macrostate meaning at }B_n
+\rightarrow
+\text{microstate meaning relative to }B_{n+1}.
+}
+$$
+
+This is not merely a change in vocabulary.
+
+It is a change in the count relation by which the object is defined.
+
+[Macrostate and Microstate →](macrostate-microstate.qmd)
+
+## A Coin Is Already Boundary Relative
+
+A single coin provides the simplest example.
+
+At one boundary, the readable states may be
+
+$$
+H
+\qquad\text{and}\qquad
+T.
+$$
+
+The coin is the scientific object.
+
+Now place ten coins inside an ensemble boundary.
+
+The readable object can instead be the ensemble state
+
+$$
+N_H=0,1,\ldots,10.
+$$
+
+At that boundary, the individual coin states participate in the realization
+of the ensemble macrostate.
+
+The scientifically readable object has changed.
+
+The coins have not become unreal.
+
+But the ensemble is not merely another name for one of them.
+
+It has its own state domain and multiplicity.
+
+[The Coins Example →](coins.qmd)
+
+## A Component Is Also an Object — At Its Own Boundary
+
+This avoids another common misunderstanding.
+
+Calling something a component does not make it less real.
+
+A myosin molecule is a legitimate object at a molecular boundary.
+
+A protein is a legitimate object at a protein boundary.
+
+A cell is a legitimate object at a cellular boundary.
+
+But relative to a larger boundary, that same object may serve as one
+subordinate realization among many.
+
+Thus:
+
+$$
+\boxed{
+\text{object}
+\leftrightarrow
+\text{component}
+}
+$$
+
+is itself boundary dependent.
+
+What is a whole at one boundary can participate as a component of another.
+
+## Components Do Not Create the Multiplicity of the Whole
+
+Suppose boundary \(B_n\) defines macrostate \(i\).
+
+Its multiplicity is
+
+$$
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+$$
+
+That cardinality is defined by the boundary classification.
+
+A particular subordinate component realization can occupy one member of that
+class.
+
+It cannot create the cardinality of the class by occurring.
+
+Therefore:
+
+> **Components realize multiplicity structure.  
+> They do not create multiplicity structure.**
+
+This distinction is central to R<sup>2</sup>D objecthood.
+
+The object defined at the enclosing boundary has a possible structure that is
+not reducible to the history of one subordinate component.
+
+[Multiplicity →](multiplicity.qmd)
+
+## The Whole Is Not the Arithmetic Sum of Its Objects
+
+Suppose many peer boundaries are jointly compatible.
+
+Their possible realizations compose multiplicatively:
+
+$$
+W_{\mathrm{joint}}
+=
+\prod_\alpha W_\alpha.
+$$
+
+The enclosing boundary then classifies those compatible joint realizations
+into its own readable macrostates.
+
+Thus the whole-system object is not simply
+
+$$
+\text{object}_1
++
+\text{object}_2
++
+\cdots.
+$$
+
+Instead:
+
+$$
+\boxed{
+\text{compatible peer realizations}
+\rightarrow
+\text{new enclosing classification}.
+}
+$$
+
+The larger object exists through a new multiplicity structure.
+
+## Persistence Does Not Require Persistent Parts
+
+Boundary-relative objecthood also changes what it means for an object to
+persist.
+
+Suppose the classification defining an enclosing object remains stable while
+its subordinate realizations change.
+
+Then the object can remain identifiable even while its components are
+replaced.
+
+Thus:
+
+$$
+\boxed{
+\text{persistent object identity}
+\not\Rightarrow
+\text{persistent subordinate identity}.
+}
+$$
+
+This is common in organized systems.
+
+A biological structure can persist while molecules turn over.
+
+A cell can persist while proteins are synthesized and degraded.
+
+An organism can persist while large numbers of its subordinate components
+change.
+
+Persistence belongs to the boundary-defined organization, not necessarily to
+the permanent identity of every subordinate part.
+
+## Object Persistence Is Recurrent Organization
+
+What makes an object persist is therefore not simply possession of the same
+matter at every occurrence.
+
+More generally, persistence requires that the boundary continue to support
+the distinctions by which the object is identified.
+
+Schematically:
+
+$$
+\boxed{
+\text{stable boundary classification}
++
+\text{recurrent compatible realization}
+\rightarrow
+\text{persistent objecthood}.
+}
+$$
+
+The particular subordinate realization can change.
+
+The organizing relation can remain.
+
+This gives R<sup>2</sup>D a natural account of objects whose components
+continually turn over.
+
+## Stability Does Not Make an Object Primitive
+
+A long-lived object may appear especially fundamental.
+
+But persistence does not establish boundary independence.
+
+An object can remain stable for billions of local recurrences and still be
+defined relative to a particular count domain.
+
+Thus:
+
+$$
+\boxed{
+\text{stability}
+\not\Rightarrow
+\text{primitiveness}.
+}
+$$
+
+Stability tells us that a classification is recurrently realized.
+
+It does not tell us that the classification exists independently of every
+boundary.
+
+## Change Can Occur Without Loss of Objecthood
+
+An object also need not remain in one macrostate to remain the same
+scientific object.
+
+Its state may change:
+
+$$
+i
+\rightarrow
+k.
+$$
+
+What persists is the boundary-defined state domain within which both
+macrostates belong to the same object classification.
+
+Thus a muscle can shorten.
+
+A protein can change conformation.
+
+A cell can divide or differentiate.
+
+An atom can change state.
+
+Objecthood does not require absence of change.
+
+It requires that the change remain readable within an organizing state
+domain.
+
+## Structural Change Can Redefine the Object
+
+But sometimes the classification itself changes.
+
+Suppose
+
+$$
+\pi_n
+\rightarrow
+\pi_n'.
+$$
+
+Then the state domain changes.
+
+The previous object classification may no longer apply.
+
+Thus:
+
+$$
+\boxed{
+\text{parameter change}
+\neq
+\text{classification change}.
+}
+$$
+
+A model can therefore fail not because one parameter drifted, but because the
+scientific object itself has been redefined by a changed count boundary.
+
+This distinction can be important in systems undergoing phase transitions,
+developmental transitions, structural reorganization, or other changes in
+what distinctions remain scientifically meaningful.
+
+## Objecthood Is Not Mere Spatial Containment
+
+A boundary in R<sup>2</sup>D is not necessarily a physical surface.
+
+Therefore objecthood is not defined merely by drawing a geometric outline
+around something.
+
+A boundary is the relation that defines the count domain.
+
+It determines which differences belong to the same state classification and
+which do not.
+
+Thus:
+
+$$
+\boxed{
+\text{object boundary}
+\neq
+\text{necessarily geometric surface}.
+}
+$$
+
+A spatial surface can later become one physical read of a boundary.
+
+But boundary-defined objecthood comes first.
+
+## Objecthood Comes Before Physical Geometry
+
+This has an important consequence.
+
+If a physical object must already be distinguishable before we can assign it a
+position, radius, volume, or trajectory, then those spatial coordinates
+cannot be logically prior to objecthood.
+
+The order is
+
+$$
+\boxed{
+\text{boundary-defined distinction}
+\rightarrow
+\text{object}
+\rightarrow
+\text{physical coordinate}.
+}
+$$
+
+Not
+
+$$
+\text{pre-existing spatial coordinate}
+\rightarrow
+\text{object}.
+$$
+
+The later gravitational program develops this distinction much further.
+
+[Why the Mathematics Comes Before Units →](before-units.qmd)
+
+## Objecthood Comes Before Probability
+
+The same argument applies statistically.
+
+Before assigning a probability to an object being in state \(i\), the state
+domain must already exist.
+
+The boundary must already define
+
+$$
+\mathcal M_n.
+$$
+
+The compatible realizations must already define
+
+$$
+W_{n,i}.
+$$
+
+Only then can those counts be normalized into probability.
+
+Thus:
+
+$$
+\boxed{
+\text{object and state definition}
+\rightarrow
+\text{possible count}
+\rightarrow
+\text{probability}.
+}
+$$
+
+Probability does not define the object whose states it normalizes.
+
+## Objecthood Comes Before Energy
+
+Likewise, assigning an energy
+
+$$
+E_i
+$$
+
+to state \(i\) presupposes that state \(i\) has already been distinguished.
+
+So the logical order is
+
+$$
+\boxed{
+\text{state distinction}
+\rightarrow
+\text{physical energy read}.
+}
+$$
+
+R<sup>2</sup>D therefore begins before energetic ontology.
+
+Part II asks how energetic quantities become physical readings of already
+defined recursive count relations.
+
+## Different Sciences Can Have Different Real Objects
+
+If objecthood is boundary relative, then different sciences do not need to
+share one privileged object vocabulary.
+
+Physics can legitimately describe particles.
+
+Chemistry can legitimately describe molecules.
+
+Biology can legitimately describe cells and organisms.
+
+The existence of one level does not make the others fictional.
+
+Each domain can identify real objects defined by the distinctions readable
+there.
+
+Thus:
+
+> **Boundary-relative objecthood permits scientific pluralism without
+> abandoning formal unification.**
+
+What changes across domains is the object.
+
+What can remain invariant is the grammar by which an object is defined.
+
+## Unification Does Not Require One Universal Object
+
+This changes the usual unification problem.
+
+A common strategy is to search for one final object from which every other
+scientific object is built.
+
+R<sup>2</sup>D proposes a different invariant.
+
+Not:
+
+$$
+\boxed{
+\text{one object at every scale}.
+}
+$$
+
+But:
+
+$$
+\boxed{
+\text{one formal architecture by which objects become distinguishable}.
+}
+$$
+
+That architecture is
+
+$$
+\boxed{
+\text{boundary}
+\rightarrow
+\text{distinction}
+\rightarrow
+\text{classification}
+\rightarrow
+\text{multiplicity}
+\rightarrow
+\text{realization}.
+}
+$$
+
+The objects change.
+
+The grammar need not.
+
+## A Particle and an Organism Need Not Share an Ontology
+
+This is why R<sup>2</sup>D does not need to claim that an organism is
+"really" only a collection of particles in order to connect physics and
+biology formally.
+
+Nor does it need to claim that particles and organisms are the same kind of
+physical object.
+
+Their count domains differ.
+
+Their readable states differ.
+
+Their physical coordinates differ.
+
+Yet both can instantiate the same primitive relation:
+
+$$
+\boxed{
+\text{boundary-defined objecthood}.
+}
+$$
+
+The unification occurs at the level of the grammar, not the domain-specific
+object.
+
+## Mechanism Does Not Define Objecthood
+
+Once an object has been defined, one can ask how its state changes.
+
+That is a mechanistic question.
+
+A sequence of subordinate transitions may realize
+
+$$
+i\rightarrow k.
+$$
+
+Those events can be necessary.
+
+They can be experimentally manipulable.
+
+They can be legitimate effective causes.
+
+But the mechanism does not, by itself, define the state domain within which
+
+$$
+i
+$$
+
+and
+
+$$
+k
+$$
+
+are distinguishable.
+
+Thus:
+
+$$
+\boxed{
+\text{mechanism}
+\neq
+\text{definition of the object}.
+}
+$$
+
+Mechanism operates within an object architecture that must already be
+specified.
+
+## Effective Causes Can Be Real
+
+Boundary-relative causality follows the same logic as boundary-relative
+objecthood.
+
+Suppose manipulating local variable \(X\) changes readable outcome \(Y\).
+
+Then \(X\) can legitimately be described as an effective cause within that
+boundary.
+
+R<sup>2</sup>D does not prohibit such causal language.
+
+It asks a separate question:
+
+> Does that local effective cause also define the enclosing organization under
+> which the relation is realized?
+
+Not necessarily.
+
+Thus:
+
+$$
+\boxed{
+\text{effective cause}
+\not\Rightarrow
+\text{primitive causal organizer}.
+}
+$$
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## Object, Interaction, and Organizing Structure
+
+R<sup>2</sup>D identifies a common explanatory sequence.
+
+First, a boundary-relative object is treated as primitive.
+
+Then correlations among such objects are represented as primitive
+object-object interactions.
+
+Then a field, potential, geometry, wavefunction, or other organizing
+structure may be introduced to organize those interactions.
+
+Schematically,
+
+$$
+\boxed{
+\text{recursive organization}
+\rightarrow
+\text{object}
+\rightarrow
+\text{interaction}
+\rightarrow
+\text{organizing field or geometry}.
+}
+$$
+
+The resulting theories can be extraordinarily accurate.
+
+R<sup>2</sup>D does not object to their mathematics.
+
+It asks whether the projected objects and structures have been promoted too
+far down the ontological hierarchy.
+
+## Predictive Success Does Not Establish Primitive Objecthood
+
+A theory written in terms of boundary-relative objects can be extremely
+predictive.
+
+That is expected.
+
+Stable enclosing organization can generate stable local correlations.
+
+A model of those correlations can therefore work exceptionally well.
+
+Thus:
+
+$$
+\boxed{
+\text{predictive success}
+\not\Rightarrow
+\text{primitive objecthood}.
+}
+$$
+
+The equations may be right.
+
+The question of what their variables are **fundamentally** remains separate.
+
+## No View From No Boundary
+
+If every readable object is boundary indexed, there is no scientifically
+readable description from "no boundary."
+
+Every measurement resolves some distinctions and not others.
+
+Every state classification belongs to some count domain.
+
+Science can compare boundaries.
+
+It can move between them.
+
+It can reconstruct recursive relations.
+
+But a readable scientific object is always defined somewhere.
+
+Thus:
+
+> **There is no view from no boundary.**
+
+This does not make science subjective.
+
+The boundary is part of the formal definition of what is being measured.
+
+## Boundary Relative Does Not Mean Observer Arbitrary
+
+A boundary is also not merely whatever an observer chooses to imagine.
+
+The proposed boundary must correctly identify:
+
+- the readable distinctions;
+- the compatible realization domain;
+- the macrostate classification;
+- the multiplicity structure;
+- the observable transitions;
+- and the enclosing relations organizing realization.
+
+A poor boundary definition will fail empirically.
+
+Boundary relativity therefore does not mean arbitrary relativity.
+
+It means that scientific claims must be indexed to the count domain in which
+their objects are defined.
+
+## Scientific Truth Can Be Boundary Relative
+
+A particle description can be true within the boundary where particles are
+readable.
+
+A thermodynamic description can be true where temperature, entropy, heat,
+and work are readable.
+
+A gravitational geometry can be true where that geometry is the appropriate
+physical read.
+
+These truths do not have to be false merely because R<sup>2</sup>D places
+them downstream of a more primitive count architecture.
+
+Thus:
+
+$$
+\boxed{
+\text{boundary-relative truth}
+\neq
+\text{falsehood}.
+}
+$$
+
+The stronger question is whether a boundary-relative scientific coordinate
+should be promoted to universal primitive ontology.
+
+## The Primitive Invariant Is Not the Object
+
+This leads to the broadest interpretation of R<sup>2</sup>D.
+
+The proposed invariant across science is not:
+
+- one particle;
+- one molecule;
+- one force;
+- one field;
+- one organism;
+- one geometry;
+- or one universal ruler.
+
+It is the architecture by which scientific objects become defined.
+
+That architecture includes:
+
+$$
+\boxed{
+\text{boundary}
+}
+$$
+
+$$
+\boxed{
+\text{distinguishability}
+}
+$$
+
+$$
+\boxed{
+\text{classification}
+}
+$$
+
+$$
+\boxed{
+\text{multiplicity}
+}
+$$
+
+$$
+\boxed{
+\text{occurrence}
+}
+$$
+
+$$
+\boxed{
+\text{occupancy}
+}
+$$
+
+$$
+\boxed{
+\text{recurrence}
+}
+$$
+
+and
+
+$$
+\boxed{
+\text{recursive replacement}.
+}
+$$
+
+The object can change.
+
+The architecture can remain.
+
+## R<sup>2</sup>D as a Theory of Scientific Objecthood
+
+This is why R<sup>2</sup>D is broader than a proposal about one physical
+domain.
+
+It does not primarily ask:
+
+> What is an electron?
+
+It asks:
+
+> What makes an electron count as one scientific object?
+
+It does not primarily ask:
+
+> What is a protein?
+
+It asks:
+
+> What makes a protein a persistent readable state while its subordinate
+> realization changes?
+
+It does not primarily ask:
+
+> What is an organism?
+
+It asks:
+
+> What defines the boundary within which an organism remains a scientific
+> object despite continual component replacement?
+
+And it does not begin by asking:
+
+> What is spacetime?
+
+It asks:
+
+> What must already be distinguishable before a spatial or temporal
+> coordinate can be assigned?
+
+That is why the Canon describes R<sup>2</sup>D as a proposed theory of
+**scientific objecthood and organization**.
+
+## The Architecture in One View
+
+Scientific objecthood can be summarized as
+
+$$
+\boxed{
+\begin{array}{c}
+B_n
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{readable distinctions}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\mathcal M_n
+\\[4pt]
+\Downarrow
+\\[4pt]
+W_{n,i}
+=
+\left|\pi_n^{-1}(i)\right|
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{realized state}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{scientific object at }B_n
+\end{array}
+}
+$$
+
+Changing the boundary gives
+
+$$
+\boxed{
+B_n
+\rightarrow
+B_{n+1}
+\quad\Rightarrow\quad
+\text{new count domain}
+\rightarrow
+\text{new object classification}.
+}
+$$
+
+So:
+
+$$
+\boxed{
+\text{object at }B_n
+\not\Rightarrow
+\text{primitive object at }B_{n+1}.
+}
+$$
+
+## The Key Distinction
+
+The simplest summary is:
+
+> **An object is real where it is distinguishable.**
+
+> **Its identity is defined by the boundary that makes those distinctions
+> countable.**
+
+> **Its subordinate realizations can change while its organization
+> persists.**
+
+> **Its reality at one boundary does not require its identity to remain
+> primitive at every other boundary.**
+
+R<sup>2</sup>D therefore shifts the foundational question from
+
+> **What is the fundamental object?**
+
+to
+
+> **What is the formal grammar by which anything becomes a scientific
+> object?**
+
+The next step is to recognize that this grammar has been defined without
+meters, seconds, joules, kelvin, or any other physical unit.
+
+---
+
+## Next
+
+[Why the Mathematics Comes Before Units →](before-units.qmd)
+
+[From Count to Physical Science →](from-count-to-physics.qmd)
+
+[Why R²D Is Not Coarse-Graining →](not-coarse-graining.qmd)
+
+[Back to Understand R²D →](index.qmd)

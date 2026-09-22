@@ -1,0 +1,728 @@
+---
+title: "Multiplicity"
+subtitle: "Possible structure before particular realization"
+toc: true
+---
+
+# Multiplicity
+
+Once a boundary has defined a state domain, the next question is:
+
+> **How many compatible realizations belong to each readable state?**
+
+R<sup>2</sup>D calls that count **multiplicity**.
+
+Multiplicity is not the number of times a state occurs.
+
+It is not the current occupancy of the state.
+
+It is the number of compatible formal microstates that the boundary classifies as that macrostate.
+
+Multiplicity therefore describes **possible structure**.
+
+It exists mathematically before any one realization is selected.
+
+## From Classification to Multiplicity
+
+At boundary \(B_n\), let
+
+$$
+\mathfrak{M}_n
+$$
+
+be the formal microstate domain and
+
+$$
+\mathcal{M}_n
+$$
+
+the readable macrostate set.
+
+The boundary classification map is
+
+$$
+\pi_n:
+\mathfrak{M}_n
+\rightarrow
+\mathcal{M}_n.
+$$
+
+For macrostate \(i\), the set of all compatible formal microstates classified as \(i\) is
+
+$$
+\pi_n^{-1}(i)
+=
+\{
+\mu_n \in \mathfrak{M}_n :
+\pi_n(\mu_n)=i
+\}.
+$$
+
+The multiplicity of macrostate \(i\) is the number of members in that set:
+
+$$
+\boxed{
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|
+}
+$$
+
+The vertical bars mean **cardinality**:
+
+> how many compatible realizations belong to that macrostate.
+
+[Macrostate and Microstate →](macrostate-microstate.qmd)
+
+## Multiplicity Is Possible Count
+
+Suppose a ten-coin ensemble has macrostate
+
+$$
+N_H=3.
+$$
+
+There are many different individual arrangements of heads and tails that produce that same readable ensemble state.
+
+Its multiplicity is
+
+$$
+W_{n,3}
+=
+\binom{10}{3}.
+$$
+
+So
+
+$$
+W_{n,3}=120.
+$$
+
+The value 120 does not say that 120 realizations have actually occurred.
+
+It says that **120 compatible formal microstates belong to the macrostate \(N_H=3\)**.
+
+This distinction is fundamental:
+
+$$
+\boxed{
+\text{multiplicity}
+=
+\text{possible count}
+}
+$$
+
+[The Coins Example →](coins.qmd)
+
+## Multiplicity Exists Before a Particular Realization
+
+A particular transition may change which microstate is realized.
+
+It may change which macrostate is occupied.
+
+It may change the observed distribution of states.
+
+But while the boundary definition remains fixed, the transition does not create the number of compatible realizations belonging to the state.
+
+For example, flipping one coin can change
+
+$$
+N_H=3
+\rightarrow
+N_H=4.
+$$
+
+But that flip does not create
+
+$$
+\binom{10}{4}.
+$$
+
+The multiplicity of the \(N_H=4\) macrostate is already defined by the ensemble count structure.
+
+Thus:
+
+> **A realization can move through a multiplicity landscape.  
+> It does not create the multiplicity landscape.**
+
+This is the R<sup>2</sup>D distinction between
+
+$$
+\boxed{
+\text{possible structure}
+\neq
+\text{particular realization}
+}
+$$
+
+## The Native Multiplicity Landscape
+
+A boundary generally contains many readable macrostates.
+
+Each macrostate \(i\) has its own multiplicity
+
+$$
+W_{n,i}.
+$$
+
+The collection
+
+$$
+\mathcal{W}_n
+=
+\{W_{n,i}\}_{i\in\mathcal{M}_n}
+$$
+
+is the **native multiplicity landscape** of boundary \(B_n\).
+
+For the ten-coin ensemble,
+
+$$
+W_{n,i}
+=
+\binom{10}{i}.
+$$
+
+The landscape is therefore
+
+$$
+1,\;10,\;45,\;120,\;210,\;252,\;210,\;120,\;45,\;10,\;1.
+$$
+
+It is largest near equal numbers of heads and tails.
+
+That structure is defined by the classification itself.
+
+It does not depend on which macrostate happens to be occupied at one particular moment.
+
+## Entropy Is the Logarithmic Coordinate of Multiplicity
+
+R<sup>2</sup>D defines
+
+$$
+\boxed{
+S_{n,i}
+=
+\ln W_{n,i}
+}
+$$
+
+as the logarithmic coordinate of multiplicity.
+
+At this stage,
+
+$$
+S_{n,i}
+$$
+
+is **not yet thermodynamic entropy**.
+
+No temperature, heat, energy, or thermodynamic unit has been introduced.
+
+It is simply the dimensionless logarithm of a count.
+
+For two readable macrostates
+
+$$
+i \rightarrow k,
+$$
+
+the multiplicity difference can be expressed logarithmically as
+
+$$
+\Delta S_{n,i\rightarrow k}
+=
+S_{n,k}-S_{n,i}.
+$$
+
+Equivalently,
+
+$$
+\boxed{
+\Delta S_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{W_{n,k}}{W_{n,i}}
+\right)
+}
+$$
+
+This is a comparison of possible counts.
+
+It does not yet specify which transition will actually occur.
+
+## Why the Logarithm Matters
+
+Compatible joint possibilities multiply.
+
+If independent compatible structures have multiplicities
+
+$$
+W_1,\;W_2,\;\ldots,\;W_m,
+$$
+
+then the unrestricted joint multiplicity is
+
+$$
+W_{\mathrm{joint}}
+=
+\prod_{\alpha=1}^{m} W_\alpha.
+$$
+
+Taking the logarithm gives
+
+$$
+\ln W_{\mathrm{joint}}
+=
+\sum_{\alpha=1}^{m}
+\ln W_\alpha.
+$$
+
+Thus:
+
+> **Multiplicities compose multiplicatively.  
+> Their logarithmic coordinates compose additively.**
+
+This is why additive scientific coordinates can arise from a more primitive multiplicative count structure.
+
+[Counting Requires Distinguishability →](counting.qmd)
+
+## Mutually Exclusive States Add
+
+There is a second composition rule.
+
+At one boundary, different macrostates are mutually exclusive alternatives.
+
+If the macrostate fibers partition the formal microstate domain, then the total number of compatible formal microstates is
+
+$$
+\Theta_n
+=
+|\mathfrak{M}_n|.
+$$
+
+Because each microstate belongs to one macrostate class,
+
+$$
+\boxed{
+\Theta_n
+=
+\sum_{i\in\mathcal{M}_n}
+W_{n,i}
+}
+$$
+
+So R<sup>2</sup>D distinguishes two forms of count composition:
+
+- compatible joint possibilities multiply;
+- mutually exclusive alternatives add.
+
+The logarithm converts the first into an additive coordinate.
+
+## Multiplicity Is Not Occupancy
+
+Suppose the macrostate \(i\) has multiplicity
+
+$$
+W_{n,i}=120.
+$$
+
+That does not tell us how much realized occupancy is currently expressed at \(i\).
+
+Let
+
+$$
+c_{n,i}
+$$
+
+denote the realized occupancy of macrostate \(i\).
+
+In general,
+
+$$
+\boxed{
+c_{n,i}
+\neq
+W_{n,i}
+}
+$$
+
+Multiplicity asks:
+
+> **How many compatible realizations belong to this state?**
+
+Occupancy asks:
+
+> **How much realized structure is presently expressed at this state?**
+
+These are different questions.
+
+[Occupancy and Occurrence →](occupancy-occurrence.qmd)
+
+## Multiplicity Is Not Occurrence
+
+Likewise, let
+
+$$
+\nu_{n,i}
+$$
+
+denote a realized occurrence count within a specified finite count domain.
+
+Then, in general,
+
+$$
+\boxed{
+\nu_{n,i}
+\neq
+W_{n,i}
+}
+$$
+
+Multiplicity is possible count.
+
+Occurrence is realized count.
+
+A state may have large multiplicity but relatively few realized occurrences in one finite observation domain.
+
+Or many occurrences may be recorded without changing the underlying multiplicity structure.
+
+R<sup>2</sup>D therefore keeps three quantities distinct:
+
+$$
+W_{n,i}
+=
+\text{possible count},
+$$
+
+$$
+\nu_{n,i}
+=
+\text{realized occurrence count},
+$$
+
+and
+
+$$
+c_{n,i}
+=
+\text{realized occupancy}.
+$$
+
+They describe three different mathematical structures.
+
+## Realization Does Not Generate Multiplicity
+
+This distinction has an important causal consequence.
+
+A component transition can change the realized state of a system.
+
+It can alter occupancy.
+
+It can contribute to occurrence.
+
+But it cannot, merely by occurring, define how many possible realizations belong to the macrostate classification.
+
+The multiplicity structure is defined by:
+
+$$
+\text{boundary}
++
+\text{compatible realization domain}
++
+\text{classification rule}.
+$$
+
+Thus:
+
+$$
+\boxed{
+\text{multiplicity structure}
+\rightarrow
+\text{possible realization}
+}
+$$
+
+not
+
+$$
+\text{particular realization}
+\rightarrow
+\text{multiplicity structure}.
+$$
+
+The latter reverses the logical order.
+
+## Components Occupy Structure; They Do Not Create It
+
+This is easy to misunderstand physically.
+
+If a muscle contains molecular motors, one may say that the motors "generate" the ensemble state.
+
+If a gas contains molecules, one may say that the molecular motions "generate" the thermodynamic state.
+
+R<sup>2</sup>D makes a narrower distinction.
+
+The components are necessary to **realize** the state.
+
+But the combinatorial state structure is defined statistically before any particular component trajectory is selected.
+
+Thus:
+
+> **Components realize multiplicity structure.  
+> They do not create multiplicity structure.**
+
+The same principle applies recursively.
+
+A subordinate object's components realize its state domain.
+
+At the next boundary, that object itself becomes part of another compatible realization domain.
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+## Multiplicity Does Not Supply Direction
+
+A multiplicity landscape defines possible structure.
+
+It does not, by itself, determine which state is directionally favored under every enclosing condition.
+
+This is crucial.
+
+The same local multiplicity landscape can participate in different enclosing relations.
+
+Those enclosing relations can alter which local state is preferentially realized without changing the native multiplicities.
+
+Therefore:
+
+$$
+\boxed{
+\text{multiplicity}
+\neq
+\text{direction}
+}
+$$
+
+Multiplicity tells us what can be realized and how many compatible realizations belong to each state.
+
+Directional support requires an additional across-boundary relation.
+
+R<sup>2</sup>D calls that relation **possibility**.
+
+[Possibility →](possibility.qmd)
+
+## The Landscape Can Remain Fixed While Occupancy Changes
+
+Consider a two-state system.
+
+Its multiplicities might remain fixed:
+
+$$
+W_{n,1},
+\qquad
+W_{n,2}.
+$$
+
+But its realized occupancy can change:
+
+$$
+c_{n,1}
+\rightarrow
+c_{n,1}',
+$$
+
+$$
+c_{n,2}
+\rightarrow
+c_{n,2}'.
+$$
+
+Nothing about that change requires the native multiplicity landscape itself to change.
+
+This distinction is familiar empirically.
+
+A chemical condition, applied field, mechanical load, or temperature can change which states are preferentially occupied while the underlying state classification remains the same.
+
+R<sup>2</sup>D therefore separates:
+
+$$
+\text{state architecture}
+$$
+
+from
+
+$$
+\text{realized distribution within that architecture}.
+$$
+
+## When Can Multiplicity Change?
+
+Multiplicity can change when the state domain itself changes.
+
+For example:
+
+- the count boundary changes;
+- the compatibility relation changes;
+- the macrostate classification changes;
+- or the admissible realization domain changes.
+
+In that case, a new multiplicity landscape is defined.
+
+But this is different from simply moving from one realization to another within an unchanged boundary.
+
+So:
+
+$$
+\boxed{
+\text{realization change}
+\not\Rightarrow
+\text{multiplicity change}
+}
+$$
+
+while
+
+$$
+\boxed{
+\text{boundary or classification change}
+\Rightarrow
+\text{new multiplicity structure}
+}
+$$
+
+## Multiplicity and Scientific Objecthood
+
+Because multiplicity depends on the boundary-defined classification map, it belongs to the object defined at that boundary.
+
+A water molecule has one state domain.
+
+A glass of water has another.
+
+A protein has one multiplicity structure when conformational states are being classified.
+
+A cell has another when cellular states are being classified.
+
+A muscle fiber has another when ensemble mechanical states are being classified.
+
+These multiplicities are not competing descriptions of one absolute microscopic state space.
+
+They belong to different scientific objects.
+
+This is why multiplicity is central to R<sup>2</sup>D's theory of scientific objecthood.
+
+[Scientific Objecthood →](scientific-objecthood.qmd)
+
+## The Core Distinction
+
+The central architecture can be summarized as
+
+$$
+\boxed{
+\text{boundary}
+\rightarrow
+\text{classification}
+\rightarrow
+\text{multiplicity}
+\rightarrow
+\text{possible structure}
+}
+$$
+
+Realization then occurs **within** that structure.
+
+So the primitive ordering is:
+
+$$
+\boxed{
+\text{possible structure}
+\rightarrow
+\text{occurrence and occupancy}
+}
+$$
+
+not:
+
+$$
+\text{occurrence}
+\rightarrow
+\text{possible structure}.
+$$
+
+This is one of the central causal inversions of R<sup>2</sup>D.
+
+> **Multiplicity structures what can occur.  
+> Occurrence realizes that structure.**
+
+---
+
+## Core Equations
+
+### Multiplicity
+
+$$
+\boxed{
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|
+}
+$$
+
+### Logarithmic multiplicity
+
+$$
+\boxed{
+S_{n,i}
+=
+\ln W_{n,i}
+}
+$$
+
+### Macrostate multiplicity difference
+
+$$
+\boxed{
+\Delta S_{n,i\rightarrow k}
+=
+\ln
+\left(
+\frac{W_{n,k}}{W_{n,i}}
+\right)
+}
+$$
+
+### Total boundary multiplicity
+
+$$
+\boxed{
+\Theta_n
+=
+\sum_{i\in\mathcal{M}_n}
+W_{n,i}
+}
+$$
+
+### Compatible joint multiplicity
+
+$$
+\boxed{
+W_{\mathrm{joint}}
+=
+\prod_\alpha W_\alpha
+}
+$$
+
+---
+
+## Next
+
+[Occupancy and Occurrence →](occupancy-occurrence.qmd)
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+[Possibility →](possibility.qmd)
+
+[Back to Understand R²D →](index.qmd)

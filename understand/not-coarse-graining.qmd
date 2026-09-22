@@ -1,0 +1,963 @@
+---
+title: "Why R²D Is Not Coarse-Graining"
+subtitle: "Changing the boundary changes what is being counted"
+toc: true
+---
+
+# Why R²D Is Not Coarse-Graining
+
+R<sup>2</sup>D can initially sound like coarse-graining.
+
+Many subordinate realizations correspond to one readable enclosing state.
+
+Fine-scale distinctions become unreadable from a larger boundary.
+
+Detailed paths can cease to be recoverable from the enclosing description.
+
+Those features resemble familiar ideas from statistical mechanics,
+renormalization, effective theory, and information reduction.
+
+But R<sup>2</sup>D makes a different claim.
+
+> **Coarse-graining usually changes the description of an already-defined
+> state. R<sup>2</sup>D changes the count boundary that defines what the state
+> is.**
+
+The distinction is between
+
+$$
+\boxed{
+\text{less detail about the same state}
+}
+$$
+
+and
+
+$$
+\boxed{
+\text{a different state domain}.
+}
+$$
+
+[Boundaries Define Scientific Objects →](boundaries.qmd)
+
+## The Familiar Coarse-Graining Picture
+
+A conventional coarse-graining procedure often begins with a detailed state
+
+$$
+x
+$$
+
+in some underlying state space.
+
+A map then assigns many detailed states to one coarser description:
+
+$$
+x
+\longmapsto
+X.
+$$
+
+The detailed states remain mathematically defined underneath the reduced
+description.
+
+The observer or model simply retains fewer distinctions.
+
+Schematically,
+
+$$
+\boxed{
+\text{detailed state}
+\rightarrow
+\text{reduced description of that state}.
+}
+$$
+
+This is enormously useful.
+
+R<sup>2</sup>D does not dispute it.
+
+The question is whether this operation is primitive enough to explain why
+the original state was a **microstate** in the first place.
+
+## R<sup>2</sup>D Starts One Step Earlier
+
+At boundary \(B_n\), R<sup>2</sup>D defines a formal microstate as one
+compatible joint realization of the immediately subordinate peer boundaries:
+
+$$
+\mu_n
+\in
+\mathfrak M_n.
+$$
+
+The boundary then classifies those realizations through
+
+$$
+\pi_n:
+\mathfrak M_n
+\rightarrow
+\mathcal M_n.
+$$
+
+A readable macrostate is
+
+$$
+i
+=
+\pi_n(\mu_n).
+$$
+
+Thus neither "microstate" nor "macrostate" is assigned independently of the
+boundary.
+
+They are boundary-relative categories.
+
+[Macrostate and Microstate →](macrostate-microstate.qmd)
+
+## Change the Boundary, Change the Domain
+
+Now change from
+
+$$
+B_n
+$$
+
+to
+
+$$
+B_{n+1}.
+$$
+
+The enclosing boundary defines its own formal microstate domain
+
+$$
+\mathfrak M_{n+1}
+$$
+
+and its own readable macrostate domain
+
+$$
+\mathcal M_{n+1}.
+$$
+
+R<sup>2</sup>D does not assume a boundary-independent identity map such that
+
+$$
+\mathfrak M_n
+\equiv
+\mathfrak M_{n+1}
+$$
+
+or
+
+$$
+\mathcal M_n
+\equiv
+\mathcal M_{n+1}.
+$$
+
+Instead,
+
+$$
+\boxed{
+B_n\rightarrow B_{n+1}
+\quad\Rightarrow\quad
+\text{new count domain}.
+}
+$$
+
+And therefore,
+
+$$
+\boxed{
+\text{new count domain}
+\quad\Rightarrow\quad
+\text{new state identity}.
+}
+$$
+
+This is recursive replacement.
+
+[Recursive Replacement →](recursive-replacement.qmd)
+
+## The Difference Is Not Merely Resolution
+
+Suppose a transition
+
+$$
+i\rightarrow k
+$$
+
+is readable as a macrostate transition at subordinate boundary
+
+$$
+B_{n-1,\alpha}.
+$$
+
+Relative to the enclosing boundary \(B_n\), that same physical realization
+has microstate meaning.
+
+Thus:
+
+$$
+\boxed{
+\text{macrostate transition at }B_{n-1,\alpha}
+=
+\text{microstate transition relative to }B_n.
+}
+$$
+
+If the observer wants to resolve the transition directly, the observer must
+move back to the boundary where it has macrostate meaning.
+
+So increased resolution does not merely reveal a hidden microstate while
+leaving its classification unchanged.
+
+It changes the count boundary.
+
+And that changes what kind of state the transition is.
+
+## A Microstate Is Not an Absolute Underlying Object
+
+This is the conceptual break.
+
+In an ordinary coarse-graining picture, one may imagine a fully specified
+microscopic state existing underneath every larger-scale description.
+
+R<sup>2</sup>D does not require such an absolute microstate classification.
+
+A state is a microstate **relative to a particular boundary**.
+
+Change the boundary, and the word "microstate" refers to a different
+relationship.
+
+Thus:
+
+> **Microstate is not a synonym for smallest object.**
+
+> **Macrostate is not a synonym for largest object.**
+
+They are count relations.
+
+## Many-to-One Classification Is Not Yet the Difference
+
+The classification map
+
+$$
+\pi_n:
+\mathfrak M_n
+\rightarrow
+\mathcal M_n
+$$
+
+is generally many-to-one.
+
+For macrostate \(i\),
+
+$$
+W_{n,i}
+=
+\left|
+\pi_n^{-1}(i)
+\right|.
+$$
+
+Many formal microstates belong to one macrostate.
+
+This mathematical structure certainly resembles coarse-graining.
+
+But the many-to-one map is not, by itself, what distinguishes R<sup>2</sup>D.
+
+The stronger claim appears when the boundary changes.
+
+At the next boundary, the old state classification does not simply remain
+the hidden primitive state beneath a reduced description.
+
+A new state domain is defined.
+
+That is recursive replacement.
+
+## The Coin Example Makes the Difference Concrete
+
+Take ten coins.
+
+At the single-coin boundary, the readable states are
+
+$$
+H
+\qquad\text{and}\qquad
+T.
+$$
+
+At the ten-coin boundary, the readable state might instead be
+
+$$
+N_H=0,1,\ldots,10.
+$$
+
+The ensemble macrostate
+
+$$
+N_H=6
+$$
+
+has multiplicity
+
+$$
+W_{n,6}
+=
+\binom{10}{6}.
+$$
+
+One might describe this as coarse-graining over individual coin identities.
+
+That description is mathematically useful.
+
+But now take the next recursive step.
+
+Suppose ten such ensemble boundaries become the immediately subordinate
+peers of \(B_{n+1}\).
+
+R<sup>2</sup>D says \(B_{n+1}\) counts **ten already-defined ensemble
+landscapes**.
+
+It does not restore one hundred individual \(H/T\) identities as the
+primitive readable states of the new boundary.
+
+Thus:
+
+$$
+\boxed{
+10\text{ coin states}
+\rightarrow
+1\text{ ensemble landscape}
+\rightarrow
+1\text{ enclosing landscape}.
+}
+$$
+
+Each step defines a new count domain.
+
+[The Coins Example →](coins.qmd)
+
+## A Closed-Form Result Does Not Restore the Lower Ontology
+
+The enclosing multiplicity may sometimes be simplified into a familiar
+closed-form expression.
+
+For example, recursive composition can recover the same combinatorial total
+that would be obtained by directly counting one hundred binary elements.
+
+That equality is mathematically important.
+
+But it does not imply that the one hundred individual coin identities have
+become the primitive readable states at the enclosing boundary.
+
+The equality concerns **count consequence**.
+
+It does not establish **identity persistence**.
+
+Thus:
+
+$$
+\boxed{
+\text{same multiplicity result}
+\not\Rightarrow
+\text{same state ontology}.
+}
+$$
+
+This distinction becomes important far beyond the coin example.
+
+## What Is Replaced?
+
+When the count boundary changes, several identities need not persist as the
+same readable objects.
+
+A subordinate:
+
+- state,
+- transition,
+- source identity,
+- or internal path
+
+can remain consequential without remaining readable under the same
+classification.
+
+The important relation is therefore not
+
+$$
+\boxed{
+\text{same object}
+\rightarrow
+\text{less information}.
+}
+$$
+
+It is
+
+$$
+\boxed{
+\text{subordinate count identity}
+\rightarrow
+\text{recursive replacement}
+\rightarrow
+\text{enclosing count identity}.
+}
+$$
+
+## What Is Preserved?
+
+Recursive replacement does not imply that everything disappears.
+
+What can persist is the **recursive relation**.
+
+A completed local closure
+
+$$
+\mathcal C_{n,\alpha}
+$$
+
+can remain related to an enclosing occurrence
+
+$$
+\chi_{n+1}^{(r)}.
+$$
+
+But
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+\not\equiv
+\chi_{n+1}^{(r)}.
+}
+$$
+
+They are different boundary-defined count objects.
+
+Recursive carry expresses their relationship:
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}.
+}
+$$
+
+The path identity is replaced.
+
+The recursive relation remains consequential.
+
+[Recursive Carry →](recursive-carry.qmd)
+
+## Unreadable Does Not Mean Destroyed
+
+This is another important distinction.
+
+Suppose the enclosing boundary does not preserve the identity of the local
+peer or its internal path.
+
+That does not mean the local path was destroyed.
+
+It remains definable at the boundary where it was readable.
+
+It has simply ceased to possess the same count meaning from the new boundary.
+
+Thus:
+
+$$
+\boxed{
+\text{unreadable from }B_{n+1}
+\not\Rightarrow
+\text{nonexistent at }B_n.
+}
+$$
+
+R<sup>2</sup>D therefore does not replace reductionism with a claim that
+smaller-scale structures are unreal.
+
+It makes their identity boundary relative.
+
+## Information Loss Is Not the Primitive Operation
+
+The language of information loss can also obscure the distinction.
+
+One might say that moving to \(B_{n+1}\) "loses information" about the
+subordinate realization.
+
+That may be a useful description from the perspective of an observer who
+wants to reconstruct the lower-boundary path.
+
+But R<sup>2</sup>D does not take that loss as primitive.
+
+The primitive statement is:
+
+$$
+\boxed{
+\text{the new boundary defines a different count domain}.
+}
+$$
+
+Failure to reconstruct the previous path is then a consequence of the new
+classification.
+
+The ontology changes first.
+
+The recoverability changes with it.
+
+## The Enclosing State Is Not an Incomplete Lower State
+
+This changes how a macrostate should be interpreted.
+
+The enclosing macrostate is not merely an incomplete report about a more
+fundamental subordinate macrostate.
+
+It is a state defined by a different classification.
+
+Thus:
+
+> **A macrostate is not merely a lossy microstate.**
+
+And:
+
+> **A microstate is not merely a more detailed macrostate.**
+
+They belong to different boundary-relative relations.
+
+## Renormalization Is an Important Precedent
+
+Renormalization provides a powerful example of scale-dependent scientific
+description.
+
+Under renormalization, variables and couplings can change as the scale of
+description changes.
+
+Degrees of freedom that are explicit at one scale need not remain explicit
+at another.
+
+R<sup>2</sup>D treats this as an important mathematical and conceptual
+precedent.
+
+But its starting question is different.
+
+Renormalization generally asks:
+
+> **Given a state description, how does its effective representation change
+> with scale?**
+
+R<sup>2</sup>D asks:
+
+> **What makes a state micro or macro before that scale transformation is
+> performed?**
+
+Its answer is:
+
+$$
+\boxed{
+\text{the count boundary}.
+}
+$$
+
+## Effective Theory Is Also a Precedent
+
+Effective theories likewise show that not every lower-scale degree of
+freedom must remain explicit in a useful higher-level description.
+
+Their residual effects may instead appear through effective parameters or
+interactions.
+
+R<sup>2</sup>D is compatible with the practical usefulness of this approach.
+
+Its stronger claim is that the issue is not only which variables remain
+useful.
+
+The state categories themselves are boundary indexed.
+
+Therefore the scale transformation can alter what qualifies as the object
+being described.
+
+## Emergence Is Not Enough Either
+
+R<sup>2</sup>D is also related to familiar ideas of emergence.
+
+Larger-scale systems can display organizing principles not obvious from
+inspection of isolated components.
+
+But the R<sup>2</sup>D claim is more specific than
+
+> "the whole is more than the sum of its parts."
+
+It identifies a proposed mathematical reason:
+
+$$
+\boxed{
+\text{changing the count boundary changes what is being counted}.
+}
+$$
+
+The enclosing state is a classification of compatible subordinate
+realizations.
+
+Its multiplicity belongs to that classification.
+
+Its directional possibility depends on compatibility with a still enclosing
+domain.
+
+Thus the recursive architecture is specified mathematically rather than
+introduced only as a general philosophical notion of emergence.
+
+## Direction Makes the Distinction Even Stronger
+
+The difference from ordinary coarse-graining becomes sharper when direction
+is introduced.
+
+Suppose the local multiplicity landscape remains fixed:
+
+$$
+\mathcal W_n
+=
+\{W_{n,i}\}.
+$$
+
+Now change the enclosing compatibility relation.
+
+The local possibility difference
+
+$$
+\Delta P_{n,i\rightarrow k}
+$$
+
+can change.
+
+It can vanish.
+
+It can increase.
+
+It can reverse sign.
+
+All without changing the native local multiplicities.
+
+Thus:
+
+$$
+\boxed{
+\text{same local state space}
++
+\text{different enclosing compatibility}
+\rightarrow
+\text{different directional support}.
+}
+$$
+
+This is not simply information removal.
+
+It is a new across-boundary count relation.
+
+[Possibility →](possibility.qmd)
+
+## Constraint Adds Another Enclosing Relation
+
+Likewise, changing the enclosing productive constraint changes
+
+$$
+\Delta R
+=
+C_{n+1}^{\mathrm{out}}\lambda_n.
+$$
+
+Therefore the local asymmetry
+
+$$
+\Delta A
+=
+\Delta P-\Delta R
+$$
+
+can change while the native multiplicity landscape remains fixed.
+
+So the local realized state depends not merely on how much subordinate
+information is retained.
+
+It depends on relations defined by the enclosing boundary.
+
+[Constraint and Retention →](constraint-retention.qmd)
+
+## Coarse-Graining Does Not Automatically Specify Causality
+
+This distinction matters because coarse-graining itself need not make any
+claim about causal priority.
+
+It may simply be a mathematical transformation used to construct an
+effective description.
+
+R<sup>2</sup>D adds a separate causal proposal:
+
+$$
+\boxed{
+\text{enclosing relation organizes}
+\Longrightarrow
+\text{subordinate mechanism realizes}.
+}
+$$
+
+That causal inversion does not follow merely from the fact that a description
+is coarse-grained.
+
+It follows from the additional R<sup>2</sup>D architecture of boundary-defined
+multiplicity, enclosing compatibility, possibility, constraint, and local
+realization.
+
+[The Causal Inversion →](causal-inversion.qmd)
+
+## Readability Loss Is Not an Error
+
+A boundary cannot read every relation simultaneously.
+
+A subordinate transition may be individually unreadable from an enclosing
+boundary.
+
+An enclosing relation may likewise be unavailable from a subordinate
+boundary.
+
+This is simply a **readability limit**.
+
+It is not automatically a theoretical error.
+
+Thus:
+
+$$
+\boxed{
+\text{unreadable}
+\neq
+\text{incorrect}.
+}
+$$
+
+A boundary-specific theory can accurately describe what remains readable.
+
+## Readability Limit Is Not EP Projection
+
+R<sup>2</sup>D distinguishes a readability limit from what it calls
+**epiphenomenological projection**, or EP projection.
+
+A readability limit asks:
+
+> **What can be directly resolved from this boundary?**
+
+An EP projection makes an additional causal inference:
+
+> **Because only this consequence is readable, it must be the primitive
+> cause.**
+
+The latter does not follow from the former.
+
+Thus:
+
+$$
+\boxed{
+\text{readability limit}
+\neq
+\text{EP projection}.
+}
+$$
+
+An effective or coarse-grained theory can therefore be useful and accurate
+without committing an EP projection.
+
+The proposed error occurs only when an omitted recursive relation is replaced
+by primitive causal agency assigned to one of its readable consequences.
+
+## A Model Can Be Effective Without Being Ontologically Primitive
+
+This gives R<sup>2</sup>D a way to preserve successful science.
+
+A model can:
+
+- predict observations;
+- identify useful effective variables;
+- compress inaccessible detail;
+- and correctly describe correlations
+
+without proving that its state variables are the primitive objects of nature.
+
+That distinction is especially important across scientific scales.
+
+Predictive success and primitive ontology are different questions.
+
+## Three Different Questions
+
+R<sup>2</sup>D therefore separates three questions.
+
+### What is readable?
+
+The count boundary determines this.
+
+### What mathematics describes the readable relation?
+
+The domain-specific scientific theory answers this.
+
+### What organizes that relation?
+
+This is the causal question addressed by recursive counting.
+
+Confusing the three creates unnecessary ontological commitments.
+
+Keeping them separate allows a scientific model to remain completely useful
+within its proper boundary.
+
+## The R<sup>2</sup>D Difference in One Diagram
+
+The ordinary coarse-graining picture can be represented as
+
+$$
+\boxed{
+\text{underlying detailed state}
+\rightarrow
+\text{reduced representation of that state}.
+}
+$$
+
+The R<sup>2</sup>D architecture is
+
+$$
+\boxed{
+\begin{array}{c}
+\text{state domain at }B_n
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{completed realization}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{change of count boundary}
+\\[4pt]
+\Downarrow
+\\[4pt]
+\text{new state domain at }B_{n+1}
+\end{array}
+}
+$$
+
+What survives is not necessarily an unchanged lower-boundary state.
+
+What survives is the recursively organized relation.
+
+## The Strongest Statement
+
+The difference can be summarized in one sentence:
+
+> **Coarse-graining asks what happens when detail is removed from a state
+> description. R<sup>2</sup>D asks what happens when the boundary defining
+> the state itself changes.**
+
+That is why recursive replacement is not simply another name for
+coarse-graining.
+
+It begins one logical step earlier.
+
+---
+
+## Core Relations
+
+### Boundary-relative classification
+
+$$
+\boxed{
+\pi_n:
+\mathfrak M_n
+\rightarrow
+\mathcal M_n
+}
+$$
+
+### Boundary change
+
+$$
+\boxed{
+B_n
+\rightarrow
+B_{n+1}
+\quad\Rightarrow\quad
+\mathcal M_n
+\not\equiv
+\mathcal M_{n+1}
+}
+$$
+
+### Change in transition meaning
+
+$$
+\boxed{
+\text{macrostate transition at }B_{n-1,\alpha}
+=
+\text{microstate transition relative to }B_n
+}
+$$
+
+### Recursive replacement
+
+$$
+\boxed{
+\text{state identity changes while recursive consequence can remain}
+}
+$$
+
+### Recursive carry
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+\xmapsto{\kappa_n}
+\chi_{n+1}^{(r)}
+}
+$$
+
+### Distinct boundary-specific objects
+
+$$
+\boxed{
+\mathcal C_{n,\alpha}
+\not\equiv
+\chi_{n+1}^{(r)}
+}
+$$
+
+---
+
+## The Key Distinction
+
+R<sup>2</sup>D does not claim that coarse-graining is mathematically wrong.
+
+It makes a different ontological proposal.
+
+> **The subordinate state is not merely hidden.**
+
+> **Its boundary-defined identity has been replaced.**
+
+> **The enclosing state is not merely a blurrier version of the same
+> object.**
+
+> **It belongs to a new count domain.**
+
+> **What can persist across the change is the recursive relation, not an
+> unchanged state identity.**
+
+That distinction leads directly to the R<sup>2</sup>D concept of scientific
+objecthood.
+
+---
+
+## Next
+
+[Scientific Objecthood →](scientific-objecthood.qmd)
+
+[Why the Mathematics Comes Before Units →](before-units.qmd)
+
+[From Count to Physical Science →](from-count-to-physics.qmd)
+
+[Back to Understand R²D →](index.qmd)
