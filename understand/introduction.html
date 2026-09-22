@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Part I Introduction – R²D Science</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-172ba59bd5e0b52282274ba0c0cc16fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">R²D Science</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-understand" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Understand</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-understand">    
+        <li>
+    <a class="dropdown-item" href="../understand/what-is-r2d.html">
+ <span class="dropdown-text">What is R²D?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../understand/index.html">
+ <span class="dropdown-text">Understand R²D</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../run/index.html"> 
+<span class="menu-text">Run R²D</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../applications/index.html"> 
+<span class="menu-text">Applications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../canon/index.html"> 
+<span class="menu-text">Canon</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-about" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">About</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-about">    
+        <li>
+    <a class="dropdown-item" href="../about/index.html">
+ <span class="dropdown-text">About R²D Science</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/authors.html">
+ <span class="dropdown-text">Authors</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/publications.html">
+ <span class="dropdown-text">Publications &amp; Archive</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../about/contact.html">
+ <span class="dropdown-text">Contact</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#multiplication-beneath-addition" id="toc-multiplication-beneath-addition" class="nav-link active" data-scroll-target="#multiplication-beneath-addition">Multiplication Beneath Addition</a></li>
+  <li><a href="#the-empirical-and-conceptual-origins-of-r2d" id="toc-the-empirical-and-conceptual-origins-of-r2d" class="nav-link" data-scroll-target="#the-empirical-and-conceptual-origins-of-r2d">The Empirical and Conceptual Origins of R<sup>2</sup>D</a></li>
+  <li><a href="#what-is-r2d" id="toc-what-is-r2d" class="nav-link" data-scroll-target="#what-is-r2d">What Is R<sup>2</sup>D?</a></li>
+  <li><a href="#relation-to-existing-scale-dependent-frameworks" id="toc-relation-to-existing-scale-dependent-frameworks" class="nav-link" data-scroll-target="#relation-to-existing-scale-dependent-frameworks">Relation to Existing Scale-Dependent Frameworks</a></li>
+  <li><a href="#possibility-retention-and-the-direction-of-realization" id="toc-possibility-retention-and-the-direction-of-realization" class="nav-link" data-scroll-target="#possibility-retention-and-the-direction-of-realization">Possibility, Retention, and the Direction of Realization</a></li>
+  <li><a href="#from-recursive-count-to-scientific-description" id="toc-from-recursive-count-to-scientific-description" class="nav-link" data-scroll-target="#from-recursive-count-to-scientific-description">From Recursive Count to Scientific Description</a></li>
+  <li><a href="#scope-logical-status-and-empirical-burden" id="toc-scope-logical-status-and-empirical-burden" class="nav-link" data-scroll-target="#scope-logical-status-and-empirical-burden">Scope, Logical Status, and Empirical Burden</a>
+  <ul class="collapse">
+  <li><a href="#mathematical-and-ontological-structure" id="toc-mathematical-and-ontological-structure" class="nav-link" data-scroll-target="#mathematical-and-ontological-structure">Mathematical and ontological structure</a></li>
+  <li><a href="#empirical-realization" id="toc-empirical-realization" class="nav-link" data-scroll-target="#empirical-realization">Empirical realization</a></li>
+  <li><a href="#causal-ontology" id="toc-causal-ontology" class="nav-link" data-scroll-target="#causal-ontology">Causal ontology</a></li>
+  </ul></li>
+  <li><a href="#continue-through-r2d" id="toc-continue-through-r2d" class="nav-link" data-scroll-target="#continue-through-r2d">Continue through R<sup>2</sup>D</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Part I Introduction</h1>
+<p class="subtitle lead">A Theory of Dimensionless Recursive Counting</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The question is simple.</p>
+<p><strong>Why do we use additive mathematics to describe a universe within which distinguishable multiplicities compose multiplicatively?</strong></p>
+<p>Science starts with counting. But counting is usually introduced after the things being counted have already been defined. Once a set of objects and a count domain are given, addition is natural: one object plus another produces a larger count. However, that does not explain how a distinguishable whole arises from subordinate realizations.</p>
+<p>At every nonprimitive count boundary, a distinguishable state can be realized in multiple compatible ways by subordinate states. Mutually exclusive possibilities within one count domain add. Compatible possibilities that jointly realize a larger state multiply. Their logarithms transform that multiplicative structure into additive coordinates.</p>
+<p>The whole is therefore not primitively the arithmetic sum of its parts. It is the multiplicity of compatible ways in which subordinate distinctions can realize the whole. This distinction is familiar in statistical mechanics. A macrostate is not defined by adding its microstates. Its multiplicity counts how many microscopic realizations belong to it.</p>
+<p>Yet the causal interpretation of this structure has usually remained mechanistic: microscopic transitions are treated as the agents through which the system evolves toward macroscopic states of greater statistical weight.</p>
+<p>R<sup>2</sup>D separates two relations that this conventional interpretation joins.</p>
+<p>A subordinate transition can change which realization is occupied. It cannot create the multiplicity landscape within which that realization is classified.</p>
+<p>At a fixed boundary (B_n), the compatible formal microstate domain and its macrostate classification define</p>
+<p><span class="math display">\[
+W_{n,i} = \left| \pi_n^{-1}(i) \right|.
+\]</span></p>
+<p>Changing realization does not change this cardinality unless the boundary-defined count domain or classification itself changes.</p>
+<p>A second result follows from the enclosing compatibility relation. For two local alternatives, the complete compatible-count difference is determined jointly by native local multiplicity and the multiplicity of compatible enclosing extension. Because the enclosing extension relation can change while the native local landscape remains fixed, enclosing compatibility can create, cancel, or reverse the directional support of the local alternatives without changing their native multiplicities.</p>
+<p>These are general results of the R<sup>2</sup>D formal architecture.</p>
+<p>The <a href="coins.qmd">coin construction</a> provides a finite exact realization of them. It makes visible, without energy, force, probability, or dynamics, both the invariance of local multiplicity under realization and the ability of enclosing compatibility to reverse local directional support.</p>
+<p>Statistical mechanics then supplies the empirical complement: changing enclosing thermal, chemical, mechanical, or field conditions changes the relative realization of local states.</p>
+<p>Together these results suggest a causal inversion:</p>
+<blockquote class="blockquote">
+<p><strong>The enclosing relation organizes which realization is favored.<br>
+The subordinate process determines how that realization occurs.</strong></p>
+</blockquote>
+<p><a href="causal-inversion.qmd">Explore the causal inversion →</a></p>
+<section id="multiplication-beneath-addition" class="level2">
+<h2 class="anchored" data-anchor-id="multiplication-beneath-addition">Multiplication Beneath Addition</h2>
+<p>The relation</p>
+<p><span class="math display">\[
+S = \ln W
+\]</span></p>
+<p>is ordinarily introduced as an equation for entropy.</p>
+<p>R<sup>2</sup>D reads it first as a statement about counting.</p>
+<p>If compatible multiplicities compose,</p>
+<p><span class="math display">\[
+W_{\mathrm{joint}} = \prod_\alpha W_\alpha,
+\]</span></p>
+<p>then</p>
+<p><span class="math display">\[
+\ln W_{\mathrm{joint}}
+=
+\sum_\alpha \ln W_\alpha.
+\]</span></p>
+<p>Logarithmic addition is therefore the additive reading of multiplicative composition.</p>
+<p>This relationship is more primitive than any particular thermodynamic interpretation. Multiplication describes the number of compatible ways a joint realization can occur. The logarithm converts that multiplicative structure into an additive coordinate.</p>
+<p>The distinction matters because additive mathematics can describe a system with extraordinary precision while concealing the count structure beneath the coordinate.</p>
+<p>R<sup>2</sup>D does not reject additive mathematics. It asks what addition is measuring.</p>
+<p>At the primitive level, two operations are sufficient to generate much of the mathematical structure used later in science:</p>
+<p><strong>compatible possibilities multiply; mutually exclusive alternatives add.</strong></p>
+<p>Logarithms make the first readable through the second.</p>
+<p>Units can subsequently be assigned to these additive coordinates. Entropy, energy, chemical potential, action, frequency, probability, curvature, and other familiar quantities may then become measurable physical readings of relations that began as dimensionless count structure.</p>
+<p><strong>Science is not made of units. Science uses units to read primitive counts. R<sup>2</sup>D begins before units are assigned.</strong></p>
+<p><a href="before-units.qmd">Why the mathematics comes before units →</a></p>
+<p><a href="multiplicity.qmd">Understand multiplicity →</a></p>
+</section>
+<section id="the-empirical-and-conceptual-origins-of-r2d" class="level2">
+<h2 class="anchored" data-anchor-id="the-empirical-and-conceptual-origins-of-r2d">The Empirical and Conceptual Origins of R<sup>2</sup>D</h2>
+<p>R<sup>2</sup>D originated in active muscle.</p>
+<p>A contracting muscle is a locally cycling system that converts an externally maintained asymmetry into force, shortening, heat, and structural change. The molecular transitions involved in contraction are themselves realized under chemical and mechanical conditions defined outside the individual molecular transition.</p>
+<p>Following the source of asymmetry repeatedly encounters another enclosing relation on a larger scale.</p>
+<p>This motivated a simple question:</p>
+<p><strong>Does the subordinate event generate the direction of change, or does it realize a direction defined by a larger organization?</strong></p>
+<p>Simultaneous measurements of force and protein-switch distributions in active muscle motivated the second interpretation. The experimentally readable structural change tracked the distribution of switch states across a multiplicity landscape rather than the trajectory of an individually identifiable switch.</p>
+<p>Individual molecular transitions remained necessary for contraction, but the ensemble relation—not the trajectory of one switch—was the structural quantity that changed with force and closure.</p>
+<p>This suggested that mechanism and causal organization might not be identical.</p>
+<p>A molecular transition can describe <strong>how</strong> a structural change is realized without necessarily defining <strong>why</strong> that realization is favored.</p>
+<p>The same distinction appears much more broadly in science.</p>
+<p>Whole-system relations have repeatedly been established before subordinate mechanisms were proposed to explain them. Kepler described orbital regularities before Newtonian dynamics. Carnot described cyclic thermal organization before microscopic theories of heat. Hill described reproducible relations among force, shortening, and heat before molecular models of contraction.</p>
+<p>These histories do not prove that whole-system relations are causally primitive. They show that successful science does not require causal explanation to begin with the smallest readable object.</p>
+<p>Boltzmann introduced the deeper mathematical clue.</p>
+<p>Statistical mechanics relates macroscopic states to the number of microscopic realizations compatible with them. Multiplicity therefore determines the structure of the macroscopic state space.</p>
+<p>But this creates a causal problem that is easy to overlook.</p>
+<p>Microscopic transitions can move realization through that state space.</p>
+<p>They cannot create the multiplicity of the states through which they move.</p>
+<p>The formal R<sup>2</sup>D definitions make the distinction exact. Multiplicity is defined by the boundary-relative classification of compatible realizations and therefore cannot be generated by the particular transitions that subsequently realize it.</p>
+<p>The enclosing-compatibility relation adds a second result: while the native local multiplicity landscape is held fixed, varying only compatible enclosing extension can create, cancel, or reverse the complete directional count relation between local alternatives.</p>
+<p>The coin construction is an exact finite illustration of these general results. Individual coin transitions change realization and occupancy but cannot generate the ensemble multiplicity landscape.</p>
+<p>Statistical mechanics supplies the complementary empirical result. Local state occupancies respond reproducibly to enclosing conditions. Temperature, applied fields, chemical potential, pressure, mechanical constraint, and related relations alter which local states are preferentially realized.</p>
+<p>R<sup>2</sup>D therefore does not merely observe that statistical mechanics resembles a recursive count theory. It formally exposes the primitive count architecture beneath an empirically established statistical relation.</p>
+<p>This produces the central causal proposal of R<sup>2</sup>D:</p>
+<blockquote class="blockquote">
+<p><strong>The enclosing relation defines the organization of local realization; subordinate transitions realize that organization.</strong></p>
+</blockquote>
+<p>The conventional mechanistic hierarchy commonly assigns the causal arrow in the opposite direction because the subordinate events are directly observable and necessary for the change.</p>
+<p>R<sup>2</sup>D distinguishes <strong>necessity for realization</strong> from <strong>causal priority</strong>.</p>
+<p>That distinction motivates the recursive theory developed below.</p>
+</section>
+<section id="what-is-r2d" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-r2d">What Is R<sup>2</sup>D?</h2>
+<p>R<sup>2</sup>D is a theory of <strong>boundary-indexed recursive counting</strong>.</p>
+<p>A boundary is not necessarily a physical surface. It is the relation that defines a count domain.</p>
+<p>It determines:</p>
+<ul>
+<li>which differences are distinguishable;</li>
+<li>which subordinate realizations are mutually compatible;</li>
+<li>which compatible realizations belong to the same readable state;</li>
+<li>and which completed local processes count as realizations of an enclosing occurrence.</li>
+</ul>
+<p><a href="boundaries.qmd">Understand boundaries →</a></p>
+<p>Statehood is therefore boundary relative.</p>
+<p>A state does not first exist independently and then acquire a boundary label. The boundary defines the count domain within which that state has meaning.</p>
+<p>Within a boundary, R<sup>2</sup>D distinguishes three count structures that are often conflated.</p>
+<p><strong>Multiplicity is possible count.</strong><br>
+It is the number of compatible joint realizations classified as a distinguishable macrostate.</p>
+<p><strong>Occurrence is realized count.</strong><br>
+It counts realized instances within the specified count domain.</p>
+<p><strong>Occupancy is realized structure.</strong><br>
+It records how occurrence is distributed among the available macrostates.</p>
+<p><a href="multiplicity.qmd">Multiplicity →</a></p>
+<p><a href="occupancy-occurrence.qmd">Occupancy and occurrence →</a></p>
+<p>A formal microstate at boundary (B_n) is one compatible joint realization of the peer subordinate boundaries.</p>
+<p>A macrostate is the boundary-defined classification of such microstates.</p>
+<p>Multiplicity therefore belongs to the classification structure itself.</p>
+<p>This distinction is central.</p>
+<p>A realized transition can change occurrence or occupancy. It does not thereby change the multiplicity of the macrostate being occupied.</p>
+<p><a href="macrostate-microstate.qmd">Macrostate and microstate →</a></p>
+<p>R<sup>2</sup>D uses possibility, (P), in a more specific across-boundary sense.</p>
+<p>Possibility does not mean local multiplicity itself. It is the logarithmic measure of how the realizations associated with a local state extend compatibly into the enclosing boundary.</p>
+<p>Thus:</p>
+<p><strong>multiplicity describes how many local realizations belong to a state;</strong></p>
+<p><strong>possibility describes how those local realizations participate in enclosing realizations.</strong></p>
+<p>Unequal enclosing extension gives local alternatives unequal directional possibility.</p>
+<p>Probability is subsequent to both. It is a normalized reading of possible or realized count, not the primitive source of those counts.</p>
+<p><a href="possibility.qmd">Possibility →</a></p>
+<p>The recursive architecture is not bottom-up construction.</p>
+<p>An enclosing occurrence defines which joint peer realizations are compatible with it. The subordinate processes through which that occurrence is realized remain locally readable at their own boundaries.</p>
+<p>When a completed local realization is instead read from the enclosing boundary, its peer-specific path no longer retains the same count meaning.</p>
+<p>R<sup>2</sup>D calls this boundary-relative change in count meaning <strong>recursive carry</strong>.</p>
+<p>Recursive carry is not causal transport upward.</p>
+<p>It is reclassification.</p>
+<p>The causal and recursive relations therefore have different directions:</p>
+<p><span class="math display">\[
+\text{enclosing organization}
+\rightarrow
+\text{compatible local realization}
+\]</span></p>
+<p>while</p>
+<p><span class="math display">\[
+\text{completed local realization}
+\rightarrow
+\text{new enclosing count meaning}.
+\]</span></p>
+<p>The first concerns causal definition.</p>
+<p>The second concerns boundary-relative readout.</p>
+<p><a href="recursive-replacement.qmd">Recursive replacement →</a></p>
+<p><a href="recursive-carry.qmd">Recursive carry →</a></p>
+<p>This differs from ordinary coarse-graining.</p>
+<p>A subordinate state is not merely hidden while preserving an unchanged ontological identity.</p>
+<p>Changing the count boundary changes which distinctions define a state.</p>
+<p>A macrostate transition readable at one boundary can become a microstate transition relative to the next. A completed peer closure can remain consequential after boundary change while its internal path and source identity cease to be readable as the same objects.</p>
+<p>R<sup>2</sup>D is therefore not a theory in which larger things are constructed by adding smaller independently causal things.</p>
+<p>Enclosing boundaries define distinguishable wholes and the compatible subordinate realizations through which those wholes are locally realized.</p>
+<p><a href="not-coarse-graining.qmd">Why R²D is not coarse-graining →</a></p>
+<p><a href="scientific-objecthood.qmd">Scientific objecthood →</a></p>
+</section>
+<section id="relation-to-existing-scale-dependent-frameworks" class="level2">
+<h2 class="anchored" data-anchor-id="relation-to-existing-scale-dependent-frameworks">Relation to Existing Scale-Dependent Frameworks</h2>
+<p>R<sup>2</sup>D is not the first framework to challenge the idea that one fixed set of microscopic variables provides the natural description of nature at every scale.</p>
+<p>Renormalization, effective field theory, and theories of emergence have already established that changing scale can change the variables, state descriptions, and mathematical relations through which a system is most naturally represented.</p>
+<p>Kadanoff’s block-spin construction groups microscopic states and replaces them with collective variables at a larger scale. Wilson’s renormalization group made such transformations systematic. Effective field theory similarly shows that the degrees of freedom useful at one scale need not remain explicit at another.</p>
+<p>R<sup>2</sup>D belongs to this intellectual lineage, but makes a different and more primitive claim.</p>
+<p>Renormalization and effective theories ordinarily begin with a microscopic state description and ask how its effective representation changes with scale.</p>
+<p>R<sup>2</sup>D instead asks:</p>
+<p><strong>What makes a state a microstate or a macrostate in the first place?</strong></p>
+<p>Its answer is boundary relative.</p>
+<p>Changing the count boundary therefore changes not merely the resolution or effective parameters of a persistent state description, but the count domain relative to which state identity itself is defined.</p>
+<p>For this reason, recursive replacement should not be identified with renormalization-group coarse-graining, even though renormalization provides an important mathematical precedent.</p>
+<p>The proposed novelty of R<sup>2</sup>D is not the general observation that different scales require different descriptions.</p>
+<p>It is the attempt to derive <strong>boundary-relative statehood, recursive replacement, and enclosing directional organization from one dimensionless theory of recursive counting.</strong></p>
+</section>
+<section id="possibility-retention-and-the-direction-of-realization" class="level2">
+<h2 class="anchored" data-anchor-id="possibility-retention-and-the-direction-of-realization">Possibility, Retention, and the Direction of Realization</h2>
+<p>A local multiplicity landscape defines which states are possible.</p>
+<p>It does not, by itself, determine which state will be preferentially realized.</p>
+<p>Direction requires an across-boundary relation.</p>
+<p>A local state can participate in many realizations of an enclosing whole. If two local alternatives possess equal enclosing compatibility, the enclosing boundary supplies no directional preference between them.</p>
+<p>If their compatible enclosing extension differs, one alternative has greater enclosing count support.</p>
+<p>R<sup>2</sup>D calls the logarithmic difference in that enclosing compatibility <strong>directional possibility</strong>.</p>
+<p>Enclosing constraint supplies a second relation.</p>
+<p>Its productive component retains part of the directional possibility against local distinguishable change.</p>
+<p>The resulting local asymmetry is</p>
+<p><span class="math display">\[
+\Delta A = \Delta P - \Delta R.
+\]</span></p>
+<p>This asymmetry biases how occurrence is expressed as occupancy.</p>
+<p>The primitive causal sequence is therefore not an object being pushed through a pre-existing landscape by a subordinate mechanism.</p>
+<p>Instead:</p>
+<p><strong>native multiplicity defines the available local possibilities;</strong></p>
+<p><strong>enclosing compatibility defines their directional support;</strong></p>
+<p><strong>productive constraint determines how much of that directional relation is retained;</strong></p>
+<p><strong>subordinate occurrence realizes the resulting occupancy change.</strong></p>
+<p>This is the meaning of the phrase:</p>
+<blockquote class="blockquote">
+<p><strong>Possibility pulls occupancy.</strong></p>
+</blockquote>
+<p><a href="possibility.qmd">Possibility →</a></p>
+<p><a href="constraint-retention.qmd">Constraint and retention →</a></p>
+<p><a href="asymmetry.qmd">Asymmetry →</a></p>
+<p>The same architecture applies to closure.</p>
+<p>A completed local path can return to its initial macrostate while the enclosing relation organizing the opposed legs does not return to the same condition.</p>
+<p>Native multiplicity can therefore close while enclosing possibility remains asymmetric.</p>
+<p>Local closure does not imply enclosing reversal.</p>
+<p>An enclosing occurrence defines the compatible local closures through which it is realized. Those closures do not independently accumulate upward to create the enclosing occurrence.</p>
+<p>After local completion, recursive carry changes how that realization is counted from the enclosing boundary.</p>
+<p><a href="closure.qmd">Closure →</a></p>
+<p>Irreversibility introduces another distinction.</p>
+<p>Even when native multiplicity closes exactly, opposed branches need not realize occurrence count with equal directional efficiency.</p>
+<p>R<sup>2</sup>D calls the resulting logarithmic nonreciprocity <strong>occurrence-count loss</strong>.</p>
+<p>No count is destroyed.</p>
+<p>The local state can return while realization around the cycle remains nonreciprocal.</p>
+<p>R<sup>2</sup>D’s proposed Second Law states that this nonreciprocity has a complementary enclosing reading as nondirectional background.</p>
+<p><a href="second-law.qmd">The R²D Second Law →</a></p>
+<p>Thus, four relations that are often compressed into one causal narrative are separated:</p>
+<ol type="1">
+<li>the enclosing relation defines what is favored;</li>
+<li>the subordinate structure determines how it is realized;</li>
+<li>recursive carry determines how a completed realization is reclassified across boundaries;</li>
+<li>irreversibility determines whether opposed realizations are reciprocal.</li>
+</ol>
+</section>
+<section id="from-recursive-count-to-scientific-description" class="level2">
+<h2 class="anchored" data-anchor-id="from-recursive-count-to-scientific-description">From Recursive Count to Scientific Description</h2>
+<p>Part I develops this architecture before physical units are introduced.</p>
+<p>It does not begin with energy, temperature, force, time, probability, matter, field, or spacetime.</p>
+<p>It begins with:</p>
+<ul>
+<li>count boundaries;</li>
+<li>compatible realizations;</li>
+<li>multiplicity;</li>
+<li>logarithmic count difference;</li>
+<li>occurrence;</li>
+<li>occupancy;</li>
+<li>enclosing possibility;</li>
+<li>constraint;</li>
+<li>closure;</li>
+<li>and recursive carry.</li>
+</ul>
+<p>Later parts ask whether familiar scientific quantities can be recovered as boundary-specific physical readings of these relations.</p>
+<p>Entropy reads logarithmic multiplicity.</p>
+<p>Work is proposed to read distinguishability retained against productive constraint.</p>
+<p>Heat is proposed to read dissipative realization.</p>
+<p>Physical time and rate are proposed to read recurrence relations among completed realizations.</p>
+<p>Probability reads normalized unresolved possibility.</p>
+<p>Spacetime is proposed to read recursive count geometry.</p>
+<p>These mappings are <strong>not assumed in Part I</strong>.</p>
+<p>They are the empirical and theoretical burden of the later program.</p>
+<p>The claim is therefore not that all sciences study the same objects.</p>
+<p>They do not.</p>
+<p>The claim is that apparently different scientific objects may become countable through the same primitive operations.</p>
+<blockquote class="blockquote">
+<p><strong>The domain changes.<br>
+The units change.<br>
+The readable ontology changes.<br>
+The primitive count grammar does not.</strong></p>
+</blockquote>
+<p><a href="from-count-to-physics.qmd">From count space to physical science →</a></p>
+</section>
+<section id="scope-logical-status-and-empirical-burden" class="level2">
+<h2 class="anchored" data-anchor-id="scope-logical-status-and-empirical-burden">Scope, Logical Status, and Empirical Burden</h2>
+<p>Part I develops R<sup>2</sup>D as a theory of dimensionless recursive counting.</p>
+<p>Its claims do not all have the same logical status.</p>
+<section id="mathematical-and-ontological-structure" class="level3">
+<h3 class="anchored" data-anchor-id="mathematical-and-ontological-structure">Mathematical and ontological structure</h3>
+<p>Once a count boundary, compatible realization domain, and classification rule are defined, multiplicity follows exactly.</p>
+<p>The formalism establishes that subordinate realization cannot create the native multiplicity landscape while that boundary definition remains fixed.</p>
+<p>It further establishes that local directional support depends separately on compatible enclosing extension.</p>
+<p>Holding the native local multiplicities fixed while varying enclosing compatibility can create, cancel, or reverse the complete directional count relation.</p>
+<p>These are general results of the R<sup>2</sup>D framework.</p>
+<p>The <a href="coins.qmd">coin example</a> supplies a transparent finite realization.</p>
+</section>
+<section id="empirical-realization" class="level3">
+<h3 class="anchored" data-anchor-id="empirical-realization">Empirical realization</h3>
+<p>R<sup>2</sup>D makes additional postulates concerning:</p>
+<ul>
+<li>how possible multiplicity is realized as occurrence and occupancy;</li>
+<li>how asymmetry biases occupancy;</li>
+<li>how finite closure produces directional occurrence-count efficiency;</li>
+<li>how representative local closure geometry relates to an enclosing occurrence;</li>
+<li>and how local occurrence-count nonreciprocity is read at the enclosing boundary.</li>
+</ul>
+<p>These propositions do not follow from combinatorics alone.</p>
+<p>They must be tested.</p>
+</section>
+<section id="causal-ontology" class="level3">
+<h3 class="anchored" data-anchor-id="causal-ontology">Causal ontology</h3>
+<p>R<sup>2</sup>D does not merely remove causal sufficiency from the conventional bottom-up account.</p>
+<p>It supplies a proposed replacement ontology:</p>
+<p><strong>states are boundary defined;</strong></p>
+<p><strong>multiplicity belongs to that boundary-defined classification;</strong></p>
+<p><strong>enclosing compatibility defines directional support;</strong></p>
+<p><strong>subordinate dynamics realize the resulting relation;</strong></p>
+<p><strong>recursive carry reclassifies completed realization without constructing the enclosing occurrence from below.</strong></p>
+<p>Whether this formal ontology describes nature is an empirical question.</p>
+<p>R<sup>2</sup>D would fail if independently determined enclosing compatibility did not correctly structure local directional possibility.</p>
+<p>It would fail if native multiplicity did not structure occurrence as proposed, if local asymmetry failed to organize occupancy, if equivalent peers failed to share the required closure geometry, or if occurrence-count nonreciprocity failed to correspond to the proposed enclosing background relation.</p>
+<p>More broadly, R<sup>2</sup>D would fail as a unifying framework if mappings to thermodynamics, quantum theory, gravity, biology, and other domains required mutually incompatible primitive count architectures.</p>
+<p><strong>Universality therefore does not weaken the empirical burden. It enlarges it.</strong></p>
+<p>The central questions of Part I are consequently:</p>
+<ul>
+<li><strong>What boundary defines the count?</strong></li>
+<li><strong>What multiplicity defines the possible state?</strong></li>
+<li><strong>What enclosing relation favors one realization over another?</strong></li>
+<li><strong>How is that relation realized locally?</strong></li>
+<li><strong>How is a completed realization reclassified when the count boundary changes?</strong></li>
+</ul>
+<p>And, beneath them all:</p>
+<blockquote class="blockquote">
+<p><strong>Have we mistaken the mechanism that realizes a relation for the cause that organizes it?</strong></p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="continue-through-r2d" class="level2">
+<h2 class="anchored" data-anchor-id="continue-through-r2d">Continue through R<sup>2</sup>D</h2>
+<p><a href="counting.qmd">Counting requires distinguishability →</a></p>
+<p><a href="definitions.qmd">Definitions &amp; symbols →</a></p>
+<p><a href="coins.qmd">The coins example →</a></p>
+<p><a href="r2d-law.qmd">The R²D law →</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/r2dscience\.org");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

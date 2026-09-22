@@ -112,10 +112,11 @@
     min-height: auto;
   }
 }
+
 .r2d-what-link {
-  margin-top: 1.5rem;
+  margin-top: 0rem;
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.08em;
 }
 
@@ -130,14 +131,14 @@
 
 .r2d-follow {
   max-width: 900px;
-  margin: 3rem auto 4rem auto;
-  padding: 2.5rem 2rem;
+  margin: 0rem auto 0rem auto;
+  padding: 1rem 1rem;
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .r2d-follow h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .r2d-social-links {
@@ -145,7 +146,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 1.5rem;
+  margin-top: 0rem;
 }
 
 .r2d-social-links a {

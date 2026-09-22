@@ -2,14 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://r2dscience.org/understand/what-is-r2d.html</loc>
-    <lastmod>2026-09-21T16:52:53.761Z</lastmod>
+    <lastmod>2026-09-22T01:11:53.271Z</lastmod>
   </url>
   <url>
-    <loc>https://r2dscience.org/run/index.html</loc>
-    <lastmod>2026-09-20T23:08:07.741Z</lastmod>
+    <loc>https://r2dscience.org/understand/index.html</loc>
+    <lastmod>2026-09-22T04:30:25.972Z</lastmod>
   </url>
   <url>
-    <loc>https://r2dscience.org/essays.html</loc>
+    <loc>https://r2dscience.org/index.html</loc>
+    <lastmod>2026-09-22T04:03:15.985Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/canon/index.html</loc>
+    <lastmod>2026-09-22T03:52:41.858Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/applications/index.html</loc>
+    <lastmod>2026-09-20T23:08:22.476Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about.html</loc>
+    <lastmod>2026-09-20T04:38:09.868Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about/index.html</loc>
+    <lastmod>2026-09-22T03:24:19.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about/authors.html</loc>
+    <lastmod>2026-09-21T23:53:01.310Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about/contact.html</loc>
+    <lastmod>2026-09-21T23:46:18.802Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about/publications.html</loc>
+    <lastmod>2026-09-22T03:12:43.854Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/addenda.html</loc>
     <lastmod>2026-09-19T18:45:10.421Z</lastmod>
   </url>
   <url>
@@ -17,43 +49,15 @@
     <lastmod>2026-09-19T18:45:10.421Z</lastmod>
   </url>
   <url>
-    <loc>https://r2dscience.org/addenda.html</loc>
+    <loc>https://r2dscience.org/essays.html</loc>
     <lastmod>2026-09-19T18:45:10.421Z</lastmod>
   </url>
   <url>
-    <loc>https://r2dscience.org/about/publications.html</loc>
-    <lastmod>2026-09-21T16:16:29.149Z</lastmod>
+    <loc>https://r2dscience.org/run/index.html</loc>
+    <lastmod>2026-09-22T04:17:33.519Z</lastmod>
   </url>
   <url>
-    <loc>https://r2dscience.org/about/index.html</loc>
-    <lastmod>2026-09-21T16:23:47.491Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/about/contact.html</loc>
-    <lastmod>2026-09-21T16:23:50.891Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/about/josh-baker.html</loc>
-    <lastmod>2026-09-21T16:16:21.489Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/about.html</loc>
-    <lastmod>2026-09-20T04:38:09.868Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/applications/index.html</loc>
-    <lastmod>2026-09-20T23:08:22.476Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/canon.html</loc>
-    <lastmod>2026-09-19T18:45:10.421Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/index.html</loc>
-    <lastmod>2026-09-21T16:49:08.078Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/understand/index.html</loc>
-    <lastmod>2026-09-20T23:08:04.826Z</lastmod>
+    <loc>https://r2dscience.org/understand/introduction.html</loc>
+    <lastmod>2026-09-22T04:36:02.350Z</lastmod>
   </url>
 </urlset>
