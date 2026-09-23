@@ -194,9 +194,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#recursive-counting-across-scale" id="toc-recursive-counting-across-scale" class="nav-link active" data-scroll-target="#recursive-counting-across-scale">Recursive Counting Across Scale</a>
-  <ul class="collapse">
-  <li><a href="#each-boundary-has-its-own-states" id="toc-each-boundary-has-its-own-states" class="nav-link" data-scroll-target="#each-boundary-has-its-own-states">Each Boundary Has Its Own States</a></li>
+  <li><a href="#each-boundary-has-its-own-states" id="toc-each-boundary-has-its-own-states" class="nav-link active" data-scroll-target="#each-boundary-has-its-own-states">Each Boundary Has Its Own States</a></li>
   <li><a href="#recursive-replacement-comes-before-recursive-counting" id="toc-recursive-replacement-comes-before-recursive-counting" class="nav-link" data-scroll-target="#recursive-replacement-comes-before-recursive-counting">Recursive Replacement Comes Before Recursive Counting</a></li>
   <li><a href="#completion-creates-something-new-to-count" id="toc-completion-creates-something-new-to-count" class="nav-link" data-scroll-target="#completion-creates-something-new-to-count">Completion Creates Something New to Count</a></li>
   <li><a href="#the-count-does-not-preserve-the-internal-sequence" id="toc-the-count-does-not-preserve-the-internal-sequence" class="nav-link" data-scroll-target="#the-count-does-not-preserve-the-internal-sequence">The Count Does Not Preserve the Internal Sequence</a></li>
@@ -229,7 +227,6 @@ window.Quarto = {
   </ul></li>
   <li><a href="#the-key-distinction" id="toc-the-key-distinction" class="nav-link" data-scroll-target="#the-key-distinction">The Key Distinction</a></li>
   <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -256,8 +253,6 @@ window.Quarto = {
 </header>
 
 
-<section id="recursive-counting-across-scale" class="level1">
-<h1>Recursive Counting Across Scale</h1>
 <p>R<sup>2</sup>D is not simply a theory of counting states within one boundary.</p>
 <p>It is a theory of what happens when <strong>count domains are recursively nested</strong>.</p>
 <p>At one boundary, a distinction is readable as a state.</p>
@@ -286,7 +281,7 @@ B_{n+2}
 <p>That is recursive counting.</p>
 <section id="each-boundary-has-its-own-states" class="level2">
 <h2 class="anchored" data-anchor-id="each-boundary-has-its-own-states">Each Boundary Has Its Own States</h2>
-<p>At boundary (B_n), the readable macrostate domain is</p>
+<p>At boundary <span class="math inline">\(B_n\)</span>, the readable macrostate domain is</p>
 <p><span class="math display">\[
 \mathcal M_n.
 \]</span></p>
@@ -309,7 +304,7 @@ W_{n,i}
 \pi_n^{-1}(i)
 \right|.
 \]</span></p>
-<p>Move to (B_{n+1}), and a new classification is defined.</p>
+<p>Move to <span class="math inline">\(B_{n+1}\)</span>, and a new classification is defined.</p>
 <p>Thus:</p>
 <p><span class="math display">\[
 \boxed{
@@ -325,7 +320,7 @@ W_{n,i}
 <section id="recursive-replacement-comes-before-recursive-counting" class="level2">
 <h2 class="anchored" data-anchor-id="recursive-replacement-comes-before-recursive-counting">Recursive Replacement Comes Before Recursive Counting</h2>
 <p>Because state identity is boundary relative, changing the count boundary produces <strong>recursive replacement</strong>.</p>
-<p>A state readable at (B_n) does not persist unchanged as a state of (B_{n+1}).</p>
+<p>A state readable at <span class="math inline">\(B_n\)</span> does not persist unchanged as a state of <span class="math inline">\(B_{n+1}\)</span>.</p>
 <p>Instead,</p>
 <p><span class="math display">\[
 \boxed{
@@ -343,7 +338,7 @@ W_{n,i}
 </section>
 <section id="completion-creates-something-new-to-count" class="level2">
 <h2 class="anchored" data-anchor-id="completion-creates-something-new-to-count">Completion Creates Something New to Count</h2>
-<p>Suppose a readable path at (B_n) completes a closure:</p>
+<p>Suppose a readable path at <span class="math inline">\(B_n\)</span> completes a closure:</p>
 <p><span class="math display">\[
 \mathcal C_{n,\alpha}:
 i
@@ -352,7 +347,7 @@ k
 \rightarrow
 i.
 \]</span></p>
-<p>At (B_n), the internal path is readable.</p>
+<p>At <span class="math inline">\(B_n\)</span>, the internal path is readable.</p>
 <p>Once completed, that relation can be classified from the enclosing boundary.</p>
 <p>Recursive carry expresses this as</p>
 <p><span class="math display">\[
@@ -449,7 +444,7 @@ H
 T.
 \]</span></p>
 <p>Now let ten peer coin boundaries define one ensemble boundary.</p>
-<p>The ensemble does not possess twenty macrostates corresponding to ten copies of (H) and (T).</p>
+<p>The ensemble does not possess twenty macrostates corresponding to ten copies of <span class="math inline">\(H\)</span> and <span class="math inline">\(T\)</span>.</p>
 <p>Instead, it defines a new eleven-state macrostate domain:</p>
 <p><span class="math display">\[
 N_H
@@ -476,8 +471,8 @@ W_{n,i}
 <section id="the-next-boundary-counts-landscapes-not-restored-coins" class="level2">
 <h2 class="anchored" data-anchor-id="the-next-boundary-counts-landscapes-not-restored-coins">The Next Boundary Counts Landscapes, Not Restored Coins</h2>
 <p>Now suppose the next boundary contains ten such ensemble boundaries.</p>
-<p>The crucial point is that (B_{n+1}) does <strong>not</strong> return to the lower description and treat one hundred individual (H/T) identities as its primitive states.</p>
-<p>It counts ten already-defined (B_n) landscapes.</p>
+<p>The crucial point is that <span class="math inline">\(B_{n+1}\)</span> does <strong>not</strong> return to the lower description and treat one hundred individual <span class="math inline">\(H/T\)</span> identities as its primitive states.</p>
+<p>It counts ten already-defined <span class="math inline">\(B_n\)</span> landscapes.</p>
 <p>Schematically:</p>
 <p><span class="math display">\[
 \boxed{
@@ -492,7 +487,7 @@ B_{n+1}.
 }
 \]</span></p>
 <p>A closed-form calculation may ultimately reproduce a familiar combinatorial result associated with one hundred binary elements.</p>
-<p>But that mathematical equivalence does not restore the one hundred lower-boundary identities as the primitive state variables at (B_{n+1}).</p>
+<p>But that mathematical equivalence does not restore the one hundred lower-boundary identities as the primitive state variables at <span class="math inline">\(B_{n+1}\)</span>.</p>
 <p>This is the distinction between:</p>
 <p><span class="math display">\[
 \boxed{
@@ -588,7 +583,7 @@ W_{n,i}.
 <section id="recurrence-supplies-the-across-boundary-count" class="level2">
 <h2 class="anchored" data-anchor-id="recurrence-supplies-the-across-boundary-count">Recurrence Supplies the Across-Boundary Count</h2>
 <p>Once a local closure is complete, it can recur.</p>
-<p>Within a common recurrence-comparison domain (D_R), let</p>
+<p>Within a common recurrence-comparison domain <span class="math inline">\(\mathcal D_R\)</span>, let</p>
 <p><span class="math display">\[
 N_{\mathcal D_R}
 \left(
@@ -669,7 +664,7 @@ B_N.
 =
 \ln\rho_{j+1|j}.
 \]</span></p>
-<p>Then the accumulated recurrence scaling from (B_n) to (B_N) is</p>
+<p>Then the accumulated recurrence scaling from <span class="math inline">\(B_n\)</span> to <span class="math inline">\(B_N\)</span> is</p>
 <p><span class="math display">\[
 \boxed{
 \Gamma_{N|n}
@@ -692,11 +687,11 @@ B_N.
 <section id="distinguishability-also-scales-across-boundaries" class="level2">
 <h2 class="anchored" data-anchor-id="distinguishability-also-scales-across-boundaries">Distinguishability Also Scales Across Boundaries</h2>
 <p>Recurrence is only one aspect of the recursive relation.</p>
-<p>A readable transition at boundary (B_j) also has a distinguishable interval</p>
+<p>A readable transition at boundary <span class="math inline">\(B_j\)</span> also has a distinguishable interval</p>
 <p><span class="math display">\[
 \lambda_j.
 \]</span></p>
-<p>For a reference boundary (B_n) and a larger boundary (B_N), define the accumulated distinguishability scaling</p>
+<p>For a reference boundary <span class="math inline">\(B_n\)</span> and a larger boundary <span class="math inline">\(B_N\)</span>, define the accumulated distinguishability scaling</p>
 <p><span class="math display">\[
 \boxed{
 \Lambda_{N|n}
@@ -1089,7 +1084,6 @@ H_{N|n}
 <p><a href="../understand/index.html">Back to Understand R²D →</a></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

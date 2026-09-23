@@ -194,9 +194,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#macrostate-and-microstate" id="toc-macrostate-and-microstate" class="nav-link active" data-scroll-target="#macrostate-and-microstate">Macrostate and Microstate</a>
-  <ul class="collapse">
-  <li><a href="#the-conventional-picture" id="toc-the-conventional-picture" class="nav-link" data-scroll-target="#the-conventional-picture">The Conventional Picture</a></li>
+  <li><a href="#the-conventional-picture" id="toc-the-conventional-picture" class="nav-link active" data-scroll-target="#the-conventional-picture">The Conventional Picture</a></li>
   <li><a href="#the-r2d-definition" id="toc-the-r2d-definition" class="nav-link" data-scroll-target="#the-r2d-definition">The R<sup>2</sup>D Definition</a></li>
   <li><a href="#the-macrostate-is-a-classification" id="toc-the-macrostate-is-a-classification" class="nav-link" data-scroll-target="#the-macrostate-is-a-classification">The Macrostate Is a Classification</a></li>
   <li><a href="#a-simple-example-ten-coins" id="toc-a-simple-example-ten-coins" class="nav-link" data-scroll-target="#a-simple-example-ten-coins">A Simple Example: Ten Coins</a></li>
@@ -219,7 +217,6 @@ window.Quarto = {
   <li><a href="#logarithmic-multiplicity" id="toc-logarithmic-multiplicity" class="nav-link" data-scroll-target="#logarithmic-multiplicity">Logarithmic multiplicity</a></li>
   </ul></li>
   <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -246,8 +243,6 @@ window.Quarto = {
 </header>
 
 
-<section id="macrostate-and-microstate" class="level1">
-<h1>Macrostate and Microstate</h1>
 <p>Much of R<sup>2</sup>D follows from two familiar words:</p>
 <p><strong>macrostate</strong> and <strong>microstate</strong>.</p>
 <p>Statistical mechanics uses both constantly.</p>
@@ -287,7 +282,7 @@ window.Quarto = {
 <p><span class="math display">\[
 B_n.
 \]</span></p>
-<p>Immediately subordinate to (B_n) is a collection of peer boundaries</p>
+<p>Immediately subordinate to <span class="math inline">\(B_n\)</span> is a collection of peer boundaries</p>
 <p><span class="math display">\[
 \{B_{n-1,\alpha}\}_{\alpha \in I_{n-1}}.
 \]</span></p>
@@ -296,7 +291,7 @@ B_n.
 <p><span class="math display">\[
 \mathfrak{X}_{n-1,\alpha}
 \]</span></p>
-<p>denote the possible realization domain of peer ().</p>
+<p>denote the possible realization domain of peer <span class="math inline">\(\alpha\)</span>.</p>
 <p>A complete joint peer realization has the form</p>
 <p><span class="math display">\[
 \mathbf{x}_{n-1}
@@ -315,7 +310,7 @@ x_{n-1,\alpha}
 \mathfrak{X}_{n-1,\alpha}.
 \]</span></p>
 <p>But an enclosing boundary need not admit every formally imaginable combination.</p>
-<p>Boundary (B_n) defines which joint realizations are compatible.</p>
+<p>Boundary <span class="math inline">\(B_n\)</span> defines which joint realizations are compatible.</p>
 <p>The compatible subset is the formal microstate domain:</p>
 <p><span class="math display">\[
 \mathfrak{M}_n
@@ -323,7 +318,7 @@ x_{n-1,\alpha}
 \prod_{\alpha \in I_{n-1}}
 \mathfrak{X}_{n-1,\alpha}.
 \]</span></p>
-<p>A <strong>formal microstate at (B_n)</strong> is one compatible joint peer realization:</p>
+<p>A <strong>formal microstate at <span class="math inline">\(B_n\)</span></strong> is one compatible joint peer realization:</p>
 <p><span class="math display">\[
 \mu_n
 =
@@ -333,15 +328,15 @@ x_{n-1,\alpha}
 \]</span></p>
 <p>This is the first formal definition.</p>
 <blockquote class="blockquote">
-<p><strong>A microstate at (B_n) is one compatible joint realization of the immediately subordinate peer boundaries.</strong></p>
+<p><strong>A microstate at <span class="math inline">\(B_n\)</span> is one compatible joint realization of the immediately subordinate peer boundaries.</strong></p>
 </blockquote>
 <p>It is not defined by being physically small.</p>
-<p>It is defined by its relation to (B_n).</p>
+<p>It is defined by its relation to <span class="math inline">\(B_n\)</span>.</p>
 </section>
 <section id="the-macrostate-is-a-classification" class="level2">
 <h2 class="anchored" data-anchor-id="the-macrostate-is-a-classification">The Macrostate Is a Classification</h2>
 <p>The enclosing boundary does not ordinarily distinguish every peer-resolved joint realization individually.</p>
-<p>Instead, it classifies compatible formal microstates into states that are readable at (B_n).</p>
+<p>Instead, it classifies compatible formal microstates into states that are readable at <span class="math inline">\(B_n\)</span>.</p>
 <p>Let</p>
 <p><span class="math display">\[
 \mathcal{M}_n
@@ -358,10 +353,10 @@ x_{n-1,\alpha}
 <p><span class="math display">\[
 \pi_n(\mu_n)=i,
 \]</span></p>
-<p>then formal microstate (_n) is read at boundary (B_n) as macrostate (i).</p>
+<p>then formal microstate <span class="math inline">\(\mu_n\)</span> is read at boundary <span class="math inline">\(B_n\)</span> as macrostate <span class="math inline">\(i\)</span>.</p>
 <p>This gives the second definition:</p>
 <blockquote class="blockquote">
-<p><strong>A macrostate at (B_n) is a distinguishable classification of compatible formal microstates that is readable at (B_n).</strong></p>
+<p><strong>A macrostate at <span class="math inline">\(B_n\)</span> is a distinguishable classification of compatible formal microstates that is readable at <span class="math inline">\(B_n\)</span>.</strong></p>
 </blockquote>
 <p>The macrostate is therefore not primitively assembled by adding subordinate states together.</p>
 <p>It is a boundary-defined classification.</p>
@@ -400,7 +395,7 @@ N_H=6.
 </section>
 <section id="multiplicity-is-the-size-of-the-macrostate-class" class="level2">
 <h2 class="anchored" data-anchor-id="multiplicity-is-the-size-of-the-macrostate-class">Multiplicity Is the Size of the Macrostate Class</h2>
-<p>For a macrostate (i), the complete set of formal microstates classified as (i) is the preimage</p>
+<p>For a macrostate <span class="math inline">\(i\)</span>, the complete set of formal microstates classified as <span class="math inline">\(i\)</span> is the preimage</p>
 <p><span class="math display">\[
 \pi_n^{-1}(i)
 =
@@ -415,7 +410,7 @@ N_H=6.
 \]</span></p>
 <p>means:</p>
 <blockquote class="blockquote">
-<p>all formal microstates that the classification map (_n) sends to macrostate (i).</p>
+<p>all formal microstates that the classification map <span class="math inline">\(\pi_n\)</span> sends to macrostate <span class="math inline">\(i\)</span>.</p>
 </blockquote>
 <p>Its cardinality is the multiplicity:</p>
 <p><span class="math display">\[
@@ -432,14 +427,14 @@ W_{n,i}
 <p><span class="math display">\[
 W_{n,i}
 \]</span></p>
-<p>is the number of compatible joint peer realizations that boundary (B_n) classifies as macrostate (i).</p>
+<p>is the number of compatible joint peer realizations that boundary <span class="math inline">\(B_n\)</span> classifies as macrostate <span class="math inline">\(i\)</span>.</p>
 <p>Its logarithmic coordinate is</p>
 <p><span class="math display">\[
 S_{n,i}
 =
 \ln W_{n,i}.
 \]</span></p>
-<p>At this stage, (S) is not yet thermodynamic entropy.</p>
+<p>At this stage, <span class="math inline">\(S\)</span> is not yet thermodynamic entropy.</p>
 <p>It is the logarithmic coordinate of multiplicity.</p>
 <p><a href="../understand/multiplicity.html">Multiplicity →</a></p>
 </section>
@@ -478,9 +473,9 @@ W_{n,i}
 <p><span class="math display">\[
 \pi_n
 \]</span></p>
-<p>belongs to boundary (B_n).</p>
+<p>belongs to boundary <span class="math inline">\(B_n\)</span>.</p>
 <p>Change the boundary and the classification changes.</p>
-<p>This means a formal microstate at (B_n) does not simply remain the same microstate at (B_{n+1}).</p>
+<p>This means a formal microstate at <span class="math inline">\(B_n\)</span> does not simply remain the same microstate at <span class="math inline">\(B_{n+1}\)</span>.</p>
 <p>The enclosing boundary defines:</p>
 <ul>
 <li>a different peer realization domain;</li>
@@ -511,12 +506,12 @@ u \rightarrow v
 <p><span class="math display">\[
 B_{n-1,\alpha}.
 \]</span></p>
-<p>At that boundary, (u) and (v) are macrostates.</p>
+<p>At that boundary, <span class="math inline">\(u\)</span> and <span class="math inline">\(v\)</span> are macrostates.</p>
 <p>The transition is a readable macrostate transition.</p>
-<p>Now consider the same physical occurrence from enclosing boundary (B_n).</p>
+<p>Now consider the same physical occurrence from enclosing boundary <span class="math inline">\(B_n\)</span>.</p>
 <p>The individual subordinate peer transition is no longer the state being classified.</p>
 <p>It participates in a joint realization of the peer ensemble.</p>
-<p>Relative to (B_n), the same subordinate change therefore has <strong>microstate meaning</strong>.</p>
+<p>Relative to <span class="math inline">\(B_n\)</span>, the same subordinate change therefore has <strong>microstate meaning</strong>.</p>
 <p>Schematically:</p>
 <p><span class="math display">\[
 \boxed{
@@ -538,12 +533,12 @@ B_{n-1,\alpha}.
 <blockquote class="blockquote">
 <p><strong>Defined does not imply readable.</strong></p>
 </blockquote>
-<p>Boundary (B_n) can classify a joint realization without resolving which subordinate peer transition produced it.</p>
+<p>Boundary <span class="math inline">\(B_n\)</span> can classify a joint realization without resolving which subordinate peer transition produced it.</p>
 <p>This is the primitive source of a distinction that later becomes important in both quantum and many-body descriptions.</p>
 </section>
 <section id="the-primitive-observer-effect" class="level2">
 <h2 class="anchored" data-anchor-id="the-primitive-observer-effect">The Primitive Observer Effect</h2>
-<p>Suppose a microstate transition relative to (B_n) is not directly readable.</p>
+<p>Suppose a microstate transition relative to <span class="math inline">\(B_n\)</span> is not directly readable.</p>
 <p>How can the observer see it?</p>
 <p>The observer must change to the subordinate boundary where that distinction is readable as a macrostate transition.</p>
 <p>Thus:</p>
@@ -566,13 +561,13 @@ B_{n-1,\alpha}.
 <p>Consider the ten-coin ensemble again.</p>
 <p>At the ensemble boundary, the question might be:</p>
 <blockquote class="blockquote">
-<p>Why does the ten-coin system occupy (N_H=6) rather than (N_H=5)?</p>
+<p>Why does the ten-coin system occupy <span class="math inline">\(N_H=6\)</span> rather than <span class="math inline">\(N_H=5\)</span>?</p>
 </blockquote>
 <p>If we increase resolution and follow one particular coin, the question becomes:</p>
 <blockquote class="blockquote">
-<p>Why did this coin change from (H) to (T)?</p>
+<p>Why did this coin change from <span class="math inline">\(H\)</span> to <span class="math inline">\(T\)</span>?</p>
 </blockquote>
-<p>The second question does not simply reveal the hidden detailed answer to the first.</p>
+<p>The second question does not reveal the hidden detailed answer to the first.</p>
 <p>It is a different question at a different boundary.</p>
 <p>The object has changed.</p>
 <p>The state domain has changed.</p>
@@ -605,8 +600,8 @@ B_{n-1,\alpha}.
 <section id="why-this-matters-for-causality" class="level2">
 <h2 class="anchored" data-anchor-id="why-this-matters-for-causality">Why This Matters for Causality</h2>
 <p>Suppose one tries to place directional causality entirely inside the microstate transitions.</p>
-<p>At boundary (B_n), however, those transitions are not individually readable as microstate transitions.</p>
-<p>To define their direction directly, one must move to (B_{n-1}), where the same transition has macrostate meaning.</p>
+<p>At boundary <span class="math inline">\(B_n\)</span>, however, those transitions are not individually readable as microstate transitions.</p>
+<p>To define their direction directly, one must move to <span class="math inline">\(B_{n-1}\)</span>, where the same transition has macrostate meaning.</p>
 <p>But at that boundary, its directional relation is itself defined relative to its enclosing compatibility.</p>
 <p>So moving the proposed cause “down into the microstates” does not escape the recursive architecture.</p>
 <p>It changes the count boundary.</p>
@@ -651,9 +646,9 @@ B_{n-1,\alpha}.
 }
 \]</span></p>
 <p>Only afterward does science assign a physical interpretation to that state.</p>
-<p>This is why the R<sup>2</sup>D mathematics is intended to operate across scientific domains.</p>
+<p>This is how R<sup>2</sup>D mathematics operates across scientific domains.</p>
 <p>The physical object changes.</p>
-<p>The count grammar can remain the same.</p>
+<p>The count grammar remains the same.</p>
 </section>
 <section id="the-logical-fulcrum" class="level2">
 <h2 class="anchored" data-anchor-id="the-logical-fulcrum">The Logical Fulcrum</h2>
@@ -700,7 +695,7 @@ i
 \pi_n(\mu_n)
 }
 \]</span></p>
-<p>The distinguishable classification of that realization readable at (B_n).</p>
+<p>The distinguishable classification of that realization readable at <span class="math inline">\(B_n\)</span>.</p>
 </section>
 <section id="multiplicity" class="level3">
 <h3 class="anchored" data-anchor-id="multiplicity">Multiplicity</h3>
@@ -713,7 +708,7 @@ W_{n,i}
 \right|
 }
 \]</span></p>
-<p>The number of compatible formal microstates classified as macrostate (i).</p>
+<p>The number of compatible formal microstates classified as macrostate <span class="math inline">\(i\)</span>.</p>
 </section>
 <section id="logarithmic-multiplicity" class="level3">
 <h3 class="anchored" data-anchor-id="logarithmic-multiplicity">Logarithmic multiplicity</h3>
@@ -736,7 +731,6 @@ S_{n,i}
 <p><a href="../understand/index.html">Back to Understand R²D →</a></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

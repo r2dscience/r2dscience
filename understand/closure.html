@@ -194,9 +194,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#closure" id="toc-closure" class="nav-link active" data-scroll-target="#closure">Closure</a>
-  <ul class="collapse">
-  <li><a href="#a-macrostate-return" id="toc-a-macrostate-return" class="nav-link" data-scroll-target="#a-macrostate-return">A Macrostate Return</a></li>
+  <li><a href="#a-macrostate-return" id="toc-a-macrostate-return" class="nav-link active" data-scroll-target="#a-macrostate-return">A Macrostate Return</a></li>
   <li><a href="#return-is-not-yet-closure" id="toc-return-is-not-yet-closure" class="nav-link" data-scroll-target="#return-is-not-yet-closure">Return Is Not Yet Closure</a></li>
   <li><a href="#the-minimal-closure" id="toc-the-minimal-closure" class="nav-link" data-scroll-target="#the-minimal-closure">The Minimal Closure</a></li>
   <li><a href="#local-reversal-does-not-require-enclosing-reversal" id="toc-local-reversal-does-not-require-enclosing-reversal" class="nav-link" data-scroll-target="#local-reversal-does-not-require-enclosing-reversal">Local Reversal Does Not Require Enclosing Reversal</a></li>
@@ -248,7 +246,6 @@ window.Quarto = {
   <li><a href="#occurrence-count-loss-1" id="toc-occurrence-count-loss-1" class="nav-link" data-scroll-target="#occurrence-count-loss-1">Occurrence-count loss</a></li>
   </ul></li>
   <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -275,8 +272,6 @@ window.Quarto = {
 </header>
 
 
-<section id="closure" class="level1">
-<h1>Closure</h1>
 <p>A state can change and return to where it began.</p>
 <p>That is a <strong>return</strong>.</p>
 <p>But R<sup>2</sup>D gives <strong>closure</strong> a more specific meaning.</p>
@@ -292,7 +287,7 @@ window.Quarto = {
 <p>That is the basis of <strong>asymmetric closure</strong>.</p>
 <section id="a-macrostate-return" class="level2">
 <h2 class="anchored" data-anchor-id="a-macrostate-return">A Macrostate Return</h2>
-<p>At boundary (B_n), consider a finite readable path</p>
+<p>At boundary <span class="math inline">\(B_n\)</span>, consider a finite readable path</p>
 <p><span class="math display">\[
 \mathcal{R}_n:
 i_0
@@ -331,8 +326,8 @@ i_0
 <p><span class="math display">\[
 B_{n+1}.
 \]</span></p>
-<p>If the completed local return is compatible with at least one enclosing occurrence at (B_{n+1}), R<sup>2</sup>D calls it a <strong>closure</strong>.</p>
-<p>For peer boundary (), write</p>
+<p>If the completed local return is compatible with at least one enclosing occurrence at <span class="math inline">\(B_{n+1}\)</span>, R<sup>2</sup>D calls it a <strong>closure</strong>.</p>
+<p>For peer boundary <span class="math inline">\(\alpha\)</span>, write</p>
 <p><span class="math display">\[
 \boxed{
 \mathcal{C}_{n,\alpha}.
@@ -348,8 +343,8 @@ B_{n+1}.
 \text{closure}.
 }
 \]</span></p>
-<p>The local path is readable at (B_n).</p>
-<p>Its enclosing significance belongs to (B_{n+1}).</p>
+<p>The local path is readable at <span class="math inline">\(B_n\)</span>.</p>
+<p>Its enclosing significance belongs to <span class="math inline">\(B_{n+1}\)</span>.</p>
 <p>This is what makes closure a recursive rather than merely cyclic concept.</p>
 <p><a href="../understand/recursive-carry.html">Recursive Carry →</a></p>
 </section>
@@ -384,12 +379,12 @@ k\rightarrow i.
 <p><span class="math display">\[
 i\rightarrow k
 \]</span></p>
-<p>is realized under enclosing condition (H).</p>
+<p>is realized under enclosing condition <span class="math inline">\(H\)</span>.</p>
 <p>Suppose the return leg</p>
 <p><span class="math display">\[
 k\rightarrow i
 \]</span></p>
-<p>is realized under enclosing condition (L).</p>
+<p>is realized under enclosing condition <span class="math inline">\(L\)</span>.</p>
 <p>The local transition has reversed.</p>
 <p>But the enclosing compatibility relation need not have reversed.</p>
 <p>The extension multiplicities can therefore differ between the two branches:</p>
@@ -417,7 +412,7 @@ K_{n+1|n,k}^{L}.
 </section>
 <section id="possibility-along-the-forward-leg" class="level2">
 <h2 class="anchored" data-anchor-id="possibility-along-the-forward-leg">Possibility Along the Forward Leg</h2>
-<p>Under enclosing condition (H), the directional possibility for</p>
+<p>Under enclosing condition <span class="math inline">\(H\)</span>, the directional possibility for</p>
 <p><span class="math display">\[
 i\rightarrow k
 \]</span></p>
@@ -436,7 +431,7 @@ K_{n+1|n,i}^{H}
 \right).
 }
 \]</span></p>
-<p>For the return leg under condition (L),</p>
+<p>For the return leg under condition <span class="math inline">\(L\)</span>,</p>
 <p><span class="math display">\[
 k\rightarrow i,
 \]</span></p>
@@ -754,12 +749,12 @@ i\rightarrow k\rightarrow i
 <p><span class="math display">\[
 \nu_{n,\alpha,H}
 \]</span></p>
-<p>be the number of completed realizations of the forward oriented leg (H),</p>
+<p>be the number of completed realizations of the forward oriented leg <span class="math inline">\(H\)</span>,</p>
 <p>and</p>
 <p><span class="math display">\[
 \nu_{n,\alpha,L}
 \]</span></p>
-<p>the number of completed realizations of the opposed leg (L),</p>
+<p>the number of completed realizations of the opposed leg <span class="math inline">\(L\)</span>,</p>
 <p>within a specified finite realization domain.</p>
 <p>These are <strong>path occurrence counts</strong>.</p>
 <p>They are not simply sums of state occurrence counts along the path.</p>
@@ -782,7 +777,7 @@ i\rightarrow k\rightarrow i
 </section>
 <section id="state-occurrence-closure-is-exact" class="level2">
 <h2 class="anchored" data-anchor-id="state-occurrence-closure-is-exact">State-Occurrence Closure Is Exact</h2>
-<p>The state occurrence coordinate for macrostate (i) is</p>
+<p>The state occurrence coordinate for macrostate <span class="math inline">\(i\)</span> is</p>
 <p><span class="math display">\[
 \tau_{n,i}
 =
@@ -1238,7 +1233,6 @@ L_{\tau,n,\alpha,\mathcal C}
 <p><a href="../understand/index.html">Back to Understand R²D →</a></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

@@ -194,14 +194,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#recursive-carry" id="toc-recursive-carry" class="nav-link active" data-scroll-target="#recursive-carry">Recursive Carry</a>
-  <ul class="collapse">
-  <li><a href="#begin-with-a-completed-local-realization" id="toc-begin-with-a-completed-local-realization" class="nav-link" data-scroll-target="#begin-with-a-completed-local-realization">Begin With a Completed Local Realization</a></li>
+  <li><a href="#begin-with-a-completed-local-realization" id="toc-begin-with-a-completed-local-realization" class="nav-link active" data-scroll-target="#begin-with-a-completed-local-realization">Begin With a Completed Local Realization</a></li>
   <li><a href="#the-enclosing-occurrence-comes-first-causally" id="toc-the-enclosing-occurrence-comes-first-causally" class="nav-link" data-scroll-target="#the-enclosing-occurrence-comes-first-causally">The Enclosing Occurrence Comes First Causally</a></li>
   <li><a href="#carry-points-the-other-way-but-it-is-not-a-causal-arrow" id="toc-carry-points-the-other-way-but-it-is-not-a-causal-arrow" class="nav-link" data-scroll-target="#carry-points-the-other-way-but-it-is-not-a-causal-arrow">Carry Points the Other Way — But It Is Not a Causal Arrow</a>
   <ul class="collapse">
   <li><a href="#causal-realization" id="toc-causal-realization" class="nav-link" data-scroll-target="#causal-realization">Causal realization</a></li>
-  <li><a href="#recursive-carry-1" id="toc-recursive-carry-1" class="nav-link" data-scroll-target="#recursive-carry-1">Recursive carry</a></li>
+  <li><a href="#recursive-carry" id="toc-recursive-carry" class="nav-link" data-scroll-target="#recursive-carry">Recursive carry</a></li>
   </ul></li>
   <li><a href="#carry-is-reclassification" id="toc-carry-is-reclassification" class="nav-link" data-scroll-target="#carry-is-reclassification">Carry Is Reclassification</a></li>
   <li><a href="#a-coin-example" id="toc-a-coin-example" class="nav-link" data-scroll-target="#a-coin-example">A Coin Example</a></li>
@@ -214,7 +212,7 @@ window.Quarto = {
   <li><a href="#carry-and-replacement" id="toc-carry-and-replacement" class="nav-link" data-scroll-target="#carry-and-replacement">Carry and Replacement</a>
   <ul class="collapse">
   <li><a href="#recursive-replacement" id="toc-recursive-replacement" class="nav-link" data-scroll-target="#recursive-replacement">Recursive replacement</a></li>
-  <li><a href="#recursive-carry-2" id="toc-recursive-carry-2" class="nav-link" data-scroll-target="#recursive-carry-2">Recursive carry</a></li>
+  <li><a href="#recursive-carry-1" id="toc-recursive-carry-1" class="nav-link" data-scroll-target="#recursive-carry-1">Recursive carry</a></li>
   </ul></li>
   <li><a href="#carry-and-closure" id="toc-carry-and-closure" class="nav-link" data-scroll-target="#carry-and-closure">Carry and Closure</a></li>
   <li><a href="#carry-and-recurrence-are-different" id="toc-carry-and-recurrence-are-different" class="nav-link" data-scroll-target="#carry-and-recurrence-are-different">Carry and Recurrence Are Different</a></li>
@@ -227,7 +225,6 @@ window.Quarto = {
   <li><a href="#why-carry-matters" id="toc-why-carry-matters" class="nav-link" data-scroll-target="#why-carry-matters">Why Carry Matters</a></li>
   <li><a href="#the-core-distinction" id="toc-the-core-distinction" class="nav-link" data-scroll-target="#the-core-distinction">The Core Distinction</a></li>
   <li><a href="#next" id="toc-next" class="nav-link" data-scroll-target="#next">Next</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -254,8 +251,6 @@ window.Quarto = {
 </header>
 
 
-<section id="recursive-carry" class="level1">
-<h1>Recursive Carry</h1>
 <p>Recursive replacement tells us that changing the boundary changes the state domain.</p>
 <p>But that raises a new question:</p>
 <blockquote class="blockquote">
@@ -284,7 +279,7 @@ i \rightarrow k \rightarrow i.
 <p>The local states are readable.</p>
 <p>The peer identity is readable.</p>
 <p>The internal path is readable.</p>
-<p>The realization therefore has a well-defined local count meaning at (B_{n,}).</p>
+<p>The realization therefore has a well-defined local count meaning at <span class="math inline">\(B_{n,\alpha}\)</span>.</p>
 <p>Now change to the enclosing boundary</p>
 <p><span class="math display">\[
 B_{n+1}.
@@ -335,7 +330,7 @@ j \rightarrow k.
 <p><span class="math display">\[
 \mathcal{C}_{n,\alpha}.
 \]</span></p>
-<p>When the count boundary changes from (B_n) to (B_{n+1}), that completed local realization is reclassified according to the enclosing occurrence to which it belongs.</p>
+<p>When the count boundary changes from <span class="math inline">\(B_n\)</span> to <span class="math inline">\(B_{n+1}\)</span>, that completed local realization is reclassified according to the enclosing occurrence to which it belongs.</p>
 <p>R<sup>2</sup>D denotes this as</p>
 <p><span class="math display">\[
 \boxed{
@@ -375,8 +370,8 @@ j \rightarrow k.
 <p>Which local realizations are compatible with this enclosing occurrence?</p>
 </blockquote>
 </section>
-<section id="recursive-carry-1" class="level3">
-<h3 class="anchored" data-anchor-id="recursive-carry-1">Recursive carry</h3>
+<section id="recursive-carry" class="level3">
+<h3 class="anchored" data-anchor-id="recursive-carry">Recursive carry</h3>
 <p><span class="math display">\[
 \boxed{
 \mathcal{C}_{n,\alpha}
@@ -575,7 +570,7 @@ H\rightarrow T\rightarrow H
 </section>
 <section id="carry-is-not-physical-transport" class="level2">
 <h2 class="anchored" data-anchor-id="carry-is-not-physical-transport">Carry Is Not Physical Transport</h2>
-<p>Nothing must physically travel from (B_n) into (B_{n+1}).</p>
+<p>Nothing must physically travel from <span class="math inline">\(B_n\)</span> into <span class="math inline">\(B_{n+1}\)</span>.</p>
 <p>The boundary changes.</p>
 <p>The classification changes.</p>
 <p>The same recursively organized relation is now read differently.</p>
@@ -627,8 +622,8 @@ H\rightarrow T\rightarrow H
 \]</span></p>
 <p>The old state classification does not persist unchanged.</p>
 </section>
-<section id="recursive-carry-2" class="level3">
-<h3 class="anchored" data-anchor-id="recursive-carry-2">Recursive carry</h3>
+<section id="recursive-carry-1" class="level3">
+<h3 class="anchored" data-anchor-id="recursive-carry-1">Recursive carry</h3>
 <p><span class="math display">\[
 \boxed{
 \text{completed local realization}
@@ -801,7 +796,6 @@ Recursive carry changes how those completed realizations are counted across boun
 <p><a href="../understand/index.html">Back to Understand R²D →</a></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
