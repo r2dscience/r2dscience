@@ -4,8 +4,6 @@ subtitle: "A reference guide to the primitive R²D language"
 toc: true
 ---
 
-# Definitions and Symbols
-
 R<sup>2</sup>D uses familiar mathematical words in deliberately specific
 ways.
 

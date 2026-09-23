@@ -4,8 +4,6 @@ subtitle: "The count domain comes before the object"
 toc: true
 ---
 
-# Boundaries Define Scientific Objects
-
 R<sup>2</sup>D begins with the principle:
 
 > **Counting requires distinguishability.**

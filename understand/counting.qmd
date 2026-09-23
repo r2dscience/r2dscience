@@ -4,8 +4,6 @@ subtitle: "The primitive starting point of R²D"
 toc: true
 ---
 
-# Counting Requires Distinguishability
-
 R<sup>2</sup>D begins before particles, molecules, forces, fields, energy,
 space, time, probability, or information.
 

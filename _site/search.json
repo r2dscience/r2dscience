@@ -1701,88 +1701,88 @@
     "text": "(H_{N|n}) — Accumulated count-geometry imbalance\nDefine\n\\[\n\\boxed{\nH_{N|n}\n=\n\\Lambda_{N|n}\n-\n\\Gamma_{N|n}.\n}\n\\]\nEquivalently,\n\\[\n\\boxed{\nH_{N|n}\n=\n\\ln\n\\left[\n\\frac{\n|\\lambda_N|/|\\lambda_n|\n}{\n\\displaystyle\n\\prod_{j=n}^{N-1}\n\\rho_{j+1|j}\n}\n\\right].\n}\n\\]\n(H) is not a third primitive coordinate.\nIt measures the relative accumulated scaling of distinguishability and recurrence.\nRecursive Counting Across Scale →"
   },
   {
-    "objectID": "understand/definitions.html#b_-smallest-realized-boundary",
-    "href": "understand/definitions.html#b_-smallest-realized-boundary",
+    "objectID": "understand/definitions.html#b_alpha-smallest-realized-boundary",
+    "href": "understand/definitions.html#b_alpha-smallest-realized-boundary",
     "title": "Definitions and Symbols",
-    "section": "(B_) — Smallest realized boundary",
-    "text": "(B_) — Smallest realized boundary\n\\[\n\\boxed{\nB_\\alpha\n}\n\\]\nis the smallest realized count boundary in the present formalism.\nIt supplies primitive distinguishable recurrence without requiring a realized (B_{})."
+    "section": "\\(B_\\alpha\\) — Smallest realized boundary",
+    "text": "\\(B_\\alpha\\) — Smallest realized boundary\n\\[\n\\boxed{\nB_\\alpha\n}\n\\]\nis the smallest realized count boundary in the present formalism.\nIt supplies primitive distinguishable recurrence without requiring a realized \\(B_{\\alpha-1}\\)."
   },
   {
-    "objectID": "understand/definitions.html#b_-largest-presently-realized-boundary",
-    "href": "understand/definitions.html#b_-largest-presently-realized-boundary",
+    "objectID": "understand/definitions.html#b_omega-largest-presently-realized-boundary",
+    "href": "understand/definitions.html#b_omega-largest-presently-realized-boundary",
     "title": "Definitions and Symbols",
-    "section": "(B_) — Largest presently realized boundary",
-    "text": "(B_) — Largest presently realized boundary\n\\[\n\\boxed{\nB_\\omega\n}\n\\]\nis the largest presently realized count boundary."
+    "section": "\\(B_\\omega\\) — Largest presently realized boundary",
+    "text": "\\(B_\\omega\\) — Largest presently realized boundary\n\\[\n\\boxed{\nB_\\omega\n}\n\\]\nis the largest presently realized count boundary."
   },
   {
-    "objectID": "understand/definitions.html#o_-terminal-open-path",
-    "href": "understand/definitions.html#o_-terminal-open-path",
+    "objectID": "understand/definitions.html#mathcal-o_omega-terminal-open-path",
+    "href": "understand/definitions.html#mathcal-o_omega-terminal-open-path",
     "title": "Definitions and Symbols",
-    "section": "(O_) — Terminal open path",
-    "text": "(O_) — Terminal open path\nThe presently open path is\n\\[\n\\boxed{\n\\mathcal O_\\omega:\ni_{\\omega,0}\n\\rightarrow\n\\cdots\n\\rightarrow\ni_{\\omega,m},\n\\qquad\ni_{\\omega,m}\\neq i_{\\omega,0}.\n}\n\\]\nTherefore,\n\\[\n\\boxed{\n\\mathcal O_\\omega\n\\neq\n\\mathcal C_\\omega.\n}\n\\]\nThe terminal postulate therefore does not assume a completed enclosing (B_{+1})."
+    "section": "\\(\\mathcal O_\\omega\\) — Terminal open path",
+    "text": "\\(\\mathcal O_\\omega\\) — Terminal open path\nThe presently open path is\n\\[\n\\boxed{\n\\mathcal O_\\omega:\ni_{\\omega,0}\n\\rightarrow\n\\cdots\n\\rightarrow\ni_{\\omega,m},\n\\qquad\ni_{\\omega,m}\\neq i_{\\omega,0}.\n}\n\\]\nTherefore,\n\\[\n\\boxed{\n\\mathcal O_\\omega\n\\neq\n\\mathcal C_\\omega.\n}\n\\]\nThe terminal postulate therefore does not assume a completed enclosing \\(B_{\\omega+1}\\)."
   },
   {
-    "objectID": "understand/definitions.html#a_o-terminal-unresolved-asymmetry",
-    "href": "understand/definitions.html#a_o-terminal-unresolved-asymmetry",
+    "objectID": "understand/definitions.html#delta-a_omegamathcal-o-terminal-unresolved-asymmetry",
+    "href": "understand/definitions.html#delta-a_omegamathcal-o-terminal-unresolved-asymmetry",
     "title": "Definitions and Symbols",
-    "section": "(A_{,O}) — Terminal unresolved asymmetry",
-    "text": "(A_{,O}) — Terminal unresolved asymmetry\n\\[\n\\boxed{\n\\Delta A_{\\omega,\\mathcal O}\n}\n\\]\ndenotes the unresolved directional asymmetry of the terminal open path.\nUnlike ordinary local asymmetry, it is not defined from a still larger realized possibility-retention relation."
+    "section": "\\(\\Delta A_{\\omega,\\mathcal O}\\) — Terminal unresolved asymmetry",
+    "text": "\\(\\Delta A_{\\omega,\\mathcal O}\\) — Terminal unresolved asymmetry\n\\[\n\\boxed{\n\\Delta A_{\\omega,\\mathcal O}\n}\n\\]\ndenotes the unresolved directional asymmetry of the terminal open path.\nUnlike ordinary local asymmetry, it is not defined from a still larger realized possibility-retention relation."
   },
   {
-    "objectID": "understand/definitions.html#pp",
-    "href": "understand/definitions.html#pp",
+    "objectID": "understand/definitions.html#pneq-p",
+    "href": "understand/definitions.html#pneq-p",
     "title": "Definitions and Symbols",
-    "section": "(Pp)",
-    "text": "(Pp)\n\\[\nP\n\\]\nis R2D possibility: logarithmic compatible enclosing extension.\n\\[\np\n\\]\nis probability: a normalized count read.\nThey are not the same quantity."
+    "section": "\\(P\\neq p\\)",
+    "text": "\\(P\\neq p\\)\n\\[\nP\n\\]\nis R2D possibility: logarithmic compatible enclosing extension.\n\\[\np\n\\]\nis probability: a normalized count read.\nThey are not the same quantity."
   },
   {
-    "objectID": "understand/definitions.html#g-gibbs-free-energy",
-    "href": "understand/definitions.html#g-gibbs-free-energy",
+    "objectID": "understand/definitions.html#gneq-gibbs-free-energy",
+    "href": "understand/definitions.html#gneq-gibbs-free-energy",
     "title": "Definitions and Symbols",
-    "section": "(G) Gibbs free energy",
-    "text": "(G) Gibbs free energy\nPrimitive\n\\[\nG_{n,i}\n=\n\\ln c_{n,i}\n\\]\nis the logarithmic occupancy coordinate.\nConventional Gibbs free energy is a later thermodynamic quantity."
+    "section": "\\(G\\neq\\) Gibbs free energy",
+    "text": "\\(G\\neq\\) Gibbs free energy\nPrimitive\n\\[\nG_{n,i}\n=\n\\ln c_{n,i}\n\\]\nis the logarithmic occupancy coordinate.\nConventional Gibbs free energy is a later thermodynamic quantity."
   },
   {
-    "objectID": "understand/definitions.html#t",
-    "href": "understand/definitions.html#t",
+    "objectID": "understand/definitions.html#tauneq-t",
+    "href": "understand/definitions.html#tauneq-t",
     "title": "Definitions and Symbols",
-    "section": "(t)",
-    "text": "(t)\n\\[\n\\tau\n=\n\\ln\\nu\n\\]\nis a logarithmic occurrence coordinate.\nIt is not elapsed time."
+    "section": "\\(\\tau\\neq t\\)",
+    "text": "\\(\\tau\\neq t\\)\n\\[\n\\tau\n=\n\\ln\\nu\n\\]\nis a logarithmic occurrence coordinate.\nIt is not elapsed time."
   },
   {
-    "objectID": "understand/definitions.html#primitive-length",
-    "href": "understand/definitions.html#primitive-length",
+    "objectID": "understand/definitions.html#lambdaneq-primitive-length",
+    "href": "understand/definitions.html#lambdaneq-primitive-length",
     "title": "Definitions and Symbols",
-    "section": "() primitive length",
-    "text": "() primitive length\n\\[\n\\lambda\n\\]\nis readable distinguishability.\nA physical length or displacement may later read it in a specified mapping."
+    "section": "\\(\\lambda\\neq\\) primitive length",
+    "text": "\\(\\lambda\\neq\\) primitive length\n\\[\n\\lambda\n\\]\nis readable distinguishability.\nA physical length or displacement may later read it in a specified mapping."
   },
   {
-    "objectID": "understand/definitions.html#c-primitive-force",
-    "href": "understand/definitions.html#c-primitive-force",
+    "objectID": "understand/definitions.html#cneq-primitive-force",
+    "href": "understand/definitions.html#cneq-primitive-force",
     "title": "Definitions and Symbols",
-    "section": "(C) primitive force",
-    "text": "(C) primitive force\n\\[\nC\n\\]\nis enclosing constraint.\nForce can be one physical mechanical read."
+    "section": "\\(C\\neq\\) primitive force",
+    "text": "\\(C\\neq\\) primitive force\n\\[\nC\n\\]\nis enclosing constraint.\nForce can be one physical mechanical read."
   },
   {
-    "objectID": "understand/definitions.html#sw-is-dimensionless-first",
-    "href": "understand/definitions.html#sw-is-dimensionless-first",
+    "objectID": "understand/definitions.html#sln-w-is-dimensionless-first",
+    "href": "understand/definitions.html#sln-w-is-dimensionless-first",
     "title": "Definitions and Symbols",
-    "section": "(S=W) is dimensionless first",
-    "text": "(S=W) is dimensionless first\nPrimitive\n\\[\nS\n=\n\\ln W\n\\]\nis logarithmic multiplicity.\nThermodynamic entropy appears only after physical dimensionalization."
+    "section": "\\(S=\\ln W\\) is dimensionless first",
+    "text": "\\(S=\\ln W\\) is dimensionless first\nPrimitive\n\\[\nS\n=\n\\ln W\n\\]\nis logarithmic multiplicity.\nThermodynamic entropy appears only after physical dimensionalization."
   },
   {
-    "objectID": "understand/definitions.html#section",
-    "href": "understand/definitions.html#section",
+    "objectID": "understand/definitions.html#rhoneqeta",
+    "href": "understand/definitions.html#rhoneqeta",
     "title": "Definitions and Symbols",
-    "section": "()",
-    "text": "()\n\\[\n\\rho\n\\]\ncompares recurrence across boundaries.\n\\[\n\\eta\n\\]\ncompares occurrence efficiency between opposed legs of one local closure.\nThey answer different questions."
+    "section": "\\(\\rho\\neq\\eta\\)",
+    "text": "\\(\\rho\\neq\\eta\\)\n\\[\n\\rho\n\\]\ncompares recurrence across boundaries.\n\\[\n\\eta\n\\]\ncompares occurrence efficiency between opposed legs of one local closure.\nThey answer different questions."
   },
   {
-    "objectID": "understand/definitions.html#al_",
-    "href": "understand/definitions.html#al_",
+    "objectID": "understand/definitions.html#delta-aneq-l_tau",
+    "href": "understand/definitions.html#delta-aneq-l_tau",
     "title": "Definitions and Symbols",
-    "section": "(AL_)",
-    "text": "(AL_)\n\\[\n\\Delta A\n\\]\ndescribes directional asymmetry.\n\\[\nL_\\tau\n\\]\ndescribes occurrence nonreciprocity.\nDirectionality is not identical to irreversibility."
+    "section": "\\(\\Delta A\\neq L_\\tau\\)",
+    "text": "\\(\\Delta A\\neq L_\\tau\\)\n\\[\n\\Delta A\n\\]\ndescribes directional asymmetry.\n\\[\nL_\\tau\n\\]\ndescribes occurrence nonreciprocity.\nDirectionality is not identical to irreversibility."
   },
   {
     "objectID": "understand/definitions.html#explore-the-concepts",
@@ -4702,103 +4702,5 @@
     "title": "The R²D Second Law",
     "section": "Next",
     "text": "Next\nWhy R²D Is Not Coarse-Graining →\nScientific Objecthood →\nWhy the Mathematics Comes Before Units →\nFrom Count to Physical Science →\nBack to Understand R²D →"
-  },
-  {
-    "objectID": "index.html#ai-can-solve-mathematics.",
-    "href": "index.html#ai-can-solve-mathematics.",
-    "title": "Use AI to solve science.",
-    "section": "AI can solve mathematics.",
-    "text": "AI can solve mathematics."
-  },
-  {
-    "objectID": "index.html#r2d-is-a-mathematical-interface-that-gives-scientific-objects-mathematical-structure.",
-    "href": "index.html#r2d-is-a-mathematical-interface-that-gives-scientific-objects-mathematical-structure.",
-    "title": "Use AI to solve science.",
-    "section": "R2D is a mathematical interface that gives scientific objects mathematical structure.",
-    "text": "R2D is a mathematical interface that gives scientific objects mathematical structure.\nAI can now solve science."
-  },
-  {
-    "objectID": "understand/definitions.html#b_alpha-smallest-realized-boundary",
-    "href": "understand/definitions.html#b_alpha-smallest-realized-boundary",
-    "title": "Definitions and Symbols",
-    "section": "\\(B_\\alpha\\) — Smallest realized boundary",
-    "text": "\\(B_\\alpha\\) — Smallest realized boundary\n\\[\n\\boxed{\nB_\\alpha\n}\n\\]\nis the smallest realized count boundary in the present formalism.\nIt supplies primitive distinguishable recurrence without requiring a realized \\(B_{\\alpha-1}\\)."
-  },
-  {
-    "objectID": "understand/definitions.html#b_omega-largest-presently-realized-boundary",
-    "href": "understand/definitions.html#b_omega-largest-presently-realized-boundary",
-    "title": "Definitions and Symbols",
-    "section": "\\(B_\\omega\\) — Largest presently realized boundary",
-    "text": "\\(B_\\omega\\) — Largest presently realized boundary\n\\[\n\\boxed{\nB_\\omega\n}\n\\]\nis the largest presently realized count boundary."
-  },
-  {
-    "objectID": "understand/definitions.html#mathcal-o_omega-terminal-open-path",
-    "href": "understand/definitions.html#mathcal-o_omega-terminal-open-path",
-    "title": "Definitions and Symbols",
-    "section": "\\(\\mathcal O_\\omega\\) — Terminal open path",
-    "text": "\\(\\mathcal O_\\omega\\) — Terminal open path\nThe presently open path is\n\\[\n\\boxed{\n\\mathcal O_\\omega:\ni_{\\omega,0}\n\\rightarrow\n\\cdots\n\\rightarrow\ni_{\\omega,m},\n\\qquad\ni_{\\omega,m}\\neq i_{\\omega,0}.\n}\n\\]\nTherefore,\n\\[\n\\boxed{\n\\mathcal O_\\omega\n\\neq\n\\mathcal C_\\omega.\n}\n\\]\nThe terminal postulate therefore does not assume a completed enclosing \\(B_{\\omega+1}\\)."
-  },
-  {
-    "objectID": "understand/definitions.html#delta-a_omegamathcal-o-terminal-unresolved-asymmetry",
-    "href": "understand/definitions.html#delta-a_omegamathcal-o-terminal-unresolved-asymmetry",
-    "title": "Definitions and Symbols",
-    "section": "\\(\\Delta A_{\\omega,\\mathcal O}\\) — Terminal unresolved asymmetry",
-    "text": "\\(\\Delta A_{\\omega,\\mathcal O}\\) — Terminal unresolved asymmetry\n\\[\n\\boxed{\n\\Delta A_{\\omega,\\mathcal O}\n}\n\\]\ndenotes the unresolved directional asymmetry of the terminal open path.\nUnlike ordinary local asymmetry, it is not defined from a still larger realized possibility-retention relation."
-  },
-  {
-    "objectID": "understand/definitions.html#pneq-p",
-    "href": "understand/definitions.html#pneq-p",
-    "title": "Definitions and Symbols",
-    "section": "\\(P\\neq p\\)",
-    "text": "\\(P\\neq p\\)\n\\[\nP\n\\]\nis R2D possibility: logarithmic compatible enclosing extension.\n\\[\np\n\\]\nis probability: a normalized count read.\nThey are not the same quantity."
-  },
-  {
-    "objectID": "understand/definitions.html#gneq-gibbs-free-energy",
-    "href": "understand/definitions.html#gneq-gibbs-free-energy",
-    "title": "Definitions and Symbols",
-    "section": "\\(G\\neq\\) Gibbs free energy",
-    "text": "\\(G\\neq\\) Gibbs free energy\nPrimitive\n\\[\nG_{n,i}\n=\n\\ln c_{n,i}\n\\]\nis the logarithmic occupancy coordinate.\nConventional Gibbs free energy is a later thermodynamic quantity."
-  },
-  {
-    "objectID": "understand/definitions.html#tauneq-t",
-    "href": "understand/definitions.html#tauneq-t",
-    "title": "Definitions and Symbols",
-    "section": "\\(\\tau\\neq t\\)",
-    "text": "\\(\\tau\\neq t\\)\n\\[\n\\tau\n=\n\\ln\\nu\n\\]\nis a logarithmic occurrence coordinate.\nIt is not elapsed time."
-  },
-  {
-    "objectID": "understand/definitions.html#lambdaneq-primitive-length",
-    "href": "understand/definitions.html#lambdaneq-primitive-length",
-    "title": "Definitions and Symbols",
-    "section": "\\(\\lambda\\neq\\) primitive length",
-    "text": "\\(\\lambda\\neq\\) primitive length\n\\[\n\\lambda\n\\]\nis readable distinguishability.\nA physical length or displacement may later read it in a specified mapping."
-  },
-  {
-    "objectID": "understand/definitions.html#cneq-primitive-force",
-    "href": "understand/definitions.html#cneq-primitive-force",
-    "title": "Definitions and Symbols",
-    "section": "\\(C\\neq\\) primitive force",
-    "text": "\\(C\\neq\\) primitive force\n\\[\nC\n\\]\nis enclosing constraint.\nForce can be one physical mechanical read."
-  },
-  {
-    "objectID": "understand/definitions.html#sln-w-is-dimensionless-first",
-    "href": "understand/definitions.html#sln-w-is-dimensionless-first",
-    "title": "Definitions and Symbols",
-    "section": "\\(S=\\ln W\\) is dimensionless first",
-    "text": "\\(S=\\ln W\\) is dimensionless first\nPrimitive\n\\[\nS\n=\n\\ln W\n\\]\nis logarithmic multiplicity.\nThermodynamic entropy appears only after physical dimensionalization."
-  },
-  {
-    "objectID": "understand/definitions.html#rhoneqeta",
-    "href": "understand/definitions.html#rhoneqeta",
-    "title": "Definitions and Symbols",
-    "section": "\\(\\rho\\neq\\eta\\)",
-    "text": "\\(\\rho\\neq\\eta\\)\n\\[\n\\rho\n\\]\ncompares recurrence across boundaries.\n\\[\n\\eta\n\\]\ncompares occurrence efficiency between opposed legs of one local closure.\nThey answer different questions."
-  },
-  {
-    "objectID": "understand/definitions.html#delta-aneq-l_tau",
-    "href": "understand/definitions.html#delta-aneq-l_tau",
-    "title": "Definitions and Symbols",
-    "section": "\\(\\Delta A\\neq L_\\tau\\)",
-    "text": "\\(\\Delta A\\neq L_\\tau\\)\n\\[\n\\Delta A\n\\]\ndescribes directional asymmetry.\n\\[\nL_\\tau\n\\]\ndescribes occurrence nonreciprocity.\nDirectionality is not identical to irreversibility."
   }
 ]
