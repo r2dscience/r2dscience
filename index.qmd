@@ -14,7 +14,7 @@ toc: false
 
 **AI can solve mathematics.**   
   
-R<sup>2</sup>D is a mathematical interface that gives scientific objects mathematical structure.  
+R<sup>2</sup>D gives scientific objects mathematical structure.  
     
 **AI can now solve science.**
 
@@ -49,7 +49,8 @@ Don't believe it. Try it. </div>
 ::: {.r2d-follow}
 # Follow R²D
 
-Long-form essays and ongoing commentary on Substack at 
+Long-form essays and ongoing commentary on Substack at:  
+
 [**The Hand & The Arrow**](https://hand0arrow.substack.com/){target="_blank"}
 
 <div class="r2d-social-links">
