@@ -4,8 +4,6 @@ subtitle: "Changing the boundary changes the state domain"
 toc: true
 ---
 
-# Recursive Replacement
-
 R<sup>2</sup>D defines microstate and macrostate relative to a count boundary.
 
 That immediately creates a consequence:
@@ -26,7 +24,7 @@ It is the replacement of one boundary-defined state classification by another.
 
 ## Start With Boundary-Relative Statehood
 
-At boundary \(B_n\), a macrostate \(i\) is readable.
+At boundary $B_n$, a macrostate $i$ is readable.
 
 Its formal microstates are compatible joint realizations of the immediately
 subordinate peer boundaries:
@@ -56,11 +54,11 @@ $$
 
 Now change the boundary.
 
-At \(B_{n+1}\), the formal microstate domain and classification map are
+At $B_{n+1}$, the formal microstate domain and classification map are
 different.
 
-The state \(i\) defined at \(B_n\) is no longer automatically a readable
-macrostate at \(B_{n+1}\).
+The state $i$ defined at $B_n$ is no longer automatically a readable
+macrostate at $B_{n+1}$.
 
 The count domain has changed.
 
@@ -110,7 +108,7 @@ But it does not remain the same readable state at the enclosing boundary.
 
 Consider one coin.
 
-At the single-coin boundary \(B_{n-1}\), the readable macrostates are
+At the single-coin boundary $B_{n-1}$, the readable macrostates are
 
 $$
 H
@@ -126,7 +124,7 @@ $$
 
 is directly readable at that boundary.
 
-Now consider an ensemble of ten such coins at \(B_n\).
+Now consider an ensemble of ten such coins at $B_n$.
 
 The readable macrostate may instead be
 
@@ -146,7 +144,7 @@ $$
 THTTHTHTTT.
 $$
 
-At \(B_n\), both are classified as
+At $B_n$, both are classified as
 
 $$
 N_H=3.
@@ -222,9 +220,9 @@ So multiplicity itself records the many-to-one structure of replacement.
 
 ## Replacement Is Not Destruction
 
-Suppose a subordinate path is readable at \(B_n\).
+Suppose a subordinate path is readable at $B_n$.
 
-After the boundary changes to \(B_{n+1}\), that path may no longer remain
+After the boundary changes to $B_{n+1}$, that path may no longer remain
 individually readable.
 
 This does not mean the subordinate realization never occurred.
@@ -308,9 +306,9 @@ u \rightarrow v
 $$
 
 is readable as a macrostate transition at subordinate boundary
-\(B_{n-1,\alpha}\).
+$B_{n-1,\alpha}$.
 
-Relative to the enclosing boundary \(B_n\), that same subordinate change
+Relative to the enclosing boundary $B_n$, that same subordinate change
 participates in a formal microstate transition.
 
 Thus:

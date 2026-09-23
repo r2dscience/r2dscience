@@ -4,8 +4,6 @@ subtitle: "The directional relation remaining after retention"
 toc: true
 ---
 
-# Asymmetry
-
 R<sup>2</sup>D separates two enclosing contributions to local realization.
 
 **Possibility** supplies directional support:
@@ -48,7 +46,7 @@ It is what remains after they are compared.
 
 ## The Local Asymmetry of a Transition
 
-Consider a readable transition at boundary \(B_n\):
+Consider a readable transition at boundary $B_n$:
 
 $$
 i \rightarrow k.
@@ -158,7 +156,7 @@ $$
 $$
 
 The native multiplicity landscape can remain completely unchanged while
-\(\Delta A\) changes.
+$\Delta A$ changes.
 
 This distinction allows R<sup>2</sup>D to separate:
 
@@ -370,7 +368,7 @@ $$
 }
 $$
 
-The enclosing relation provides residual directional support toward \(k\).
+The enclosing relation provides residual directional support toward $k$.
 
 This does not mean that every individual occurrence must proceed in that
 direction.
@@ -719,7 +717,7 @@ microstate transition.
 
 R<sup>2</sup>D does not do this.
 
-A transition that has microstate meaning relative to \(B_n\) is not directly
+A transition that has microstate meaning relative to $B_n$ is not directly
 readable there as an individual local transition.
 
 To assign an asymmetry to it, one must move to the subordinate boundary at

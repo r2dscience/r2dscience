@@ -100,9 +100,9 @@ At another boundary, the scientific object may be a glass of water.
 
 Its readable states belong to an enclosing thermodynamic or mechanical state domain.
 
-The glass is not a poorly resolved water molecule.
+The water is not a poorly resolved water molecule.
 
-And the molecule is not a highly resolved glass.
+And the molecule is not highly resolved water.
 
 They are different scientific objects because they are defined at different count boundaries.
 
@@ -158,9 +158,9 @@ A state does not first exist independently of the boundary and then receive a la
 
 Those terms describe a relationship to a boundary.
 
-At boundary \(B_n\):
+At boundary $B_n$:
 
-- a **macrostate** is a distinguishable state readable at \(B_n\);
+- a **macrostate** is a distinguishable state readable at $B_n$;
 - a **formal microstate** is one compatible joint realization of the immediately subordinate peer boundaries.
 
 The distinction is relational.
@@ -180,7 +180,7 @@ $$
 Let its immediately subordinate peer boundaries be
 
 $$
-\{B_{n-1,\alpha}\}.
+B_{n-1,\alpha}.
 $$
 
 Each subordinate peer possesses its own state domain.
@@ -189,7 +189,7 @@ A realization of the enclosing boundary involves some joint realization of those
 
 Not every formally imaginable combination must be compatible.
 
-The enclosing boundary \(B_n\) determines which joint peer realizations belong to its admissible count domain.
+The enclosing boundary $B_n$ determines which joint peer realizations belong to its admissible count domain.
 
 Schematically:
 
@@ -235,7 +235,7 @@ The boundary defines the count domain in which multiplicity can be counted.
 
 This has an important consequence for observation.
 
-Suppose a subordinate transition is not individually readable at \(B_n\).
+Suppose a subordinate transition is not individually readable at $B_n$.
 
 One might imagine that better experimental resolution simply reveals that hidden transition while leaving the scientific description unchanged.
 
@@ -245,7 +245,7 @@ To read the subordinate transition directly, the observer must move to the subor
 
 But once the boundary changes, the state classification changes too.
 
-The transition that had **microstate meaning** relative to \(B_n\) now has **macrostate meaning** at \(B_{n-1}\).
+The transition that had **microstate meaning** relative to $B_n$ now has **macrostate meaning** at $B_{n-1}$.
 
 Therefore:
 

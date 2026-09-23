@@ -175,8 +175,9 @@ R<sup>2</sup>D SCIENCE
 <section id="use-ai-to-solve-science." class="level1">
 <h1>Use AI to solve science.</h1>
 <div class="r2d-lead">
-<p>AI can solve mathematics.<br>
-<strong>R<sup>2</sup>D is a mathematical interface that defines scientific objects as recursive mathematical structures allowing AI to solve science.</strong></p>
+<p><strong>AI can solve mathematics.</strong></p>
+<p>R<sup>2</sup>D is a mathematical interface that gives scientific objects mathematical structure.</p>
+<p><strong>AI can now solve science.</strong></p>
 </div>
 <div class="r2d-what-link">
 <p><a href="./understand/what-is-r2d.html"><strong>WHAT IS R<sup>2</sup>D? →</strong></a></p>
@@ -208,8 +209,8 @@ Don’t believe it. Try it.
 <p>Long-form essays and ongoing commentary on Substack at <a href="https://hand0arrow.substack.com/" target="_blank"><strong>The Hand &amp; The Arrow</strong></a></p>
 <div class="r2d-social-links">
 <p><a href="https://www.facebook.com/profile.php?id=100005673914363" target="_blank">Facebook</a><br>
-<a href="https://x.com/JoshBaker5716" target="_blank">X</a><br>
-<a href="https://www.linkedin.com/in/josh-baker-75293b31/" target="_blank">LinkedIn</a></p>
+<a href="https://www.linkedin.com/in/josh-baker-75293b31/" target="_blank">LinkedIn</a><br>
+<a href="https://x.com/JoshBaker5716" target="_blank">X</a></p>
 </div>
 </section>
 <section id="r2d-at-a-glance" class="level2">
@@ -293,7 +294,7 @@ Don’t believe it. Try it.
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/r2dscience\.org");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

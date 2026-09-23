@@ -4,8 +4,6 @@ subtitle: "Possible structure before particular realization"
 toc: true
 ---
 
-# Multiplicity
-
 Once a boundary has defined a state domain, the next question is:
 
 > **How many compatible realizations belong to each readable state?**
@@ -24,7 +22,7 @@ It exists mathematically before any one realization is selected.
 
 ## From Classification to Multiplicity
 
-At boundary \(B_n\), let
+At boundary $B_n$, let
 
 $$
 \mathfrak{M}_n
@@ -47,7 +45,7 @@ $$
 \mathcal{M}_n.
 $$
 
-For macrostate \(i\), the set of all compatible formal microstates classified as \(i\) is
+For macrostate $i$, the set of all compatible formal microstates classified as $i$ is
 
 $$
 \pi_n^{-1}(i)
@@ -58,7 +56,7 @@ $$
 \}.
 $$
 
-The multiplicity of macrostate \(i\) is the number of members in that set:
+The multiplicity of macrostate $i$ is the number of members in that set:
 
 $$
 \boxed{
@@ -102,7 +100,7 @@ $$
 
 The value 120 does not say that 120 realizations have actually occurred.
 
-It says that **120 compatible formal microstates belong to the macrostate \(N_H=3\)**.
+It says that **120 compatible formal microstates belong to the macrostate $N_H=3$**.
 
 This distinction is fundamental:
 
@@ -140,7 +138,7 @@ $$
 \binom{10}{4}.
 $$
 
-The multiplicity of the \(N_H=4\) macrostate is already defined by the ensemble count structure.
+The multiplicity of the $N_H=4$ macrostate is already defined by the ensemble count structure.
 
 Thus:
 
@@ -161,7 +159,7 @@ $$
 
 A boundary generally contains many readable macrostates.
 
-Each macrostate \(i\) has its own multiplicity
+Each macrostate $i$ has its own multiplicity
 
 $$
 W_{n,i}.
@@ -175,7 +173,7 @@ $$
 \{W_{n,i}\}_{i\in\mathcal{M}_n}
 $$
 
-is the **native multiplicity landscape** of boundary \(B_n\).
+is the **native multiplicity landscape** of boundary $B_n$.
 
 For the ten-coin ensemble,
 
@@ -324,13 +322,13 @@ The logarithm converts the first into an additive coordinate.
 
 ## Multiplicity Is Not Occupancy
 
-Suppose the macrostate \(i\) has multiplicity
+Suppose the macrostate $i$ has multiplicity
 
 $$
 W_{n,i}=120.
 $$
 
-That does not tell us how much realized occupancy is currently expressed at \(i\).
+That does not tell us how much realized occupancy is currently expressed at $i$.
 
 Let
 
@@ -338,7 +336,7 @@ $$
 c_{n,i}
 $$
 
-denote the realized occupancy of macrostate \(i\).
+denote the realized occupancy of macrostate $i$.
 
 In general,
 

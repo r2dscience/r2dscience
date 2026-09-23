@@ -3,9 +3,6 @@ title: "The Coins Example"
 subtitle: "A finite exact construction of recursive counting"
 toc: true
 ---
-
-# The Coins Example
-
 Coins provide the simplest complete example of R<sup>2</sup>D.
 
 Not because physical coin tossing is fundamental.
@@ -48,11 +45,11 @@ B_n,
 B_{n+1}.
 $$
 
-At \(B_{n-1}\), the object is one coin.
+At $B_{n-1}$, the object is one coin.
 
-At \(B_n\), the object is an ensemble of ten coins.
+At $B_n$, the object is an ensemble of ten coins.
 
-At \(B_{n+1}\), the object is an enclosing system containing ten such
+At $B_{n+1}$, the object is an enclosing system containing ten such
 ten-coin landscapes.
 
 The recursion is
@@ -76,11 +73,11 @@ B_{n+1}.
 $$
 
 The critical point is that the second step counts **ten already-defined
-\(B_n\) landscapes**.
+$B_n$ landscapes**.
 
 It does not simply return to one hundred independently primitive coins.
 
-# Boundary \(B_{n-1}\): One Coin
+# Boundary $B_{n-1}$: One Coin
 
 At one subordinate peer boundary
 
@@ -112,9 +109,9 @@ assigned beneath the individual coin.
 The coin is simply the primitive subordinate two-state object used in the
 example.
 
-# Boundary \(B_n\): Ten Coins Become One Ensemble
+# Boundary $B_n$: Ten Coins Become One Ensemble
 
-Now let \(B_n\) contain ten peer coin boundaries:
+Now let $B_n$ contain ten peer coin boundaries:
 
 $$
 \left\{
@@ -159,7 +156,7 @@ $$
 
 formal microstates.
 
-But \(B_n\) does not retain ten separate \(H/T\) macrostate systems.
+But $B_n$ does not retain ten separate $H/T$ macrostate systems.
 
 It introduces a new whole-system classification.
 
@@ -179,7 +176,7 @@ $$
 i\in\{0,1,\ldots,10\}.
 $$
 
-So the readable macrostate domain at \(B_n\) is
+So the readable macrostate domain at $B_n$ is
 
 $$
 \boxed{
@@ -219,7 +216,7 @@ This is the first recursive replacement.
 
 # Formal Microstates and Macrostates
 
-Boundary \(B_n\) classifies each formal microstate by its number of tails:
+Boundary $B_n$ classifies each formal microstate by its number of tails:
 
 $$
 \boxed{
@@ -264,7 +261,7 @@ That many-to-one classification creates multiplicity.
 
 # The Multiplicity Landscape
 
-The multiplicity of macrostate \(i\) is
+The multiplicity of macrostate $i$ is
 
 $$
 \boxed{
@@ -439,7 +436,7 @@ $$
 
 is a readable macrostate transition.
 
-But relative to \(B_n\), the same event is a transition between formal
+But relative to $B_n$, the same event is a transition between formal
 microstates:
 
 $$
@@ -466,9 +463,9 @@ $$
 }
 $$
 
-is a microstate transition relative to \(B_n\).
+is a microstate transition relative to $B_n$.
 
-If the original ensemble contained \(i\) tails, the readable \(B_n\)
+If the original ensemble contained $i$ tails, the readable $B_n$
 consequence is
 
 $$
@@ -479,7 +476,7 @@ i+1.
 }
 $$
 
-But \(B_n\) need not identify which peer coin produced the transition.
+But $B_n$ need not identify which peer coin produced the transition.
 
 Therefore,
 
@@ -574,13 +571,13 @@ $$
 }
 $$
 
-So native \(B_n\) multiplicity favors state \(5\) over state \(6\).
+So native $B_n$ multiplicity favors state $5$ over state $6$.
 
 Nothing about this calculation refers yet to an enclosing boundary.
 
 # Now Change the Boundary Again
 
-Introduce ten equivalent \(B_n\) landscapes:
+Introduce ten equivalent $B_n$ landscapes:
 
 $$
 \left\{
@@ -604,8 +601,8 @@ W_{n,\alpha,i_\alpha}
 \binom{10}{i_\alpha}.
 $$
 
-The individual \(H/T\) states have already been replaced as the readable
-macrostate classification of each \(B_n\) peer.
+The individual $H/T$ states have already been replaced as the readable
+macrostate classification of each $B_n$ peer.
 
 The objects entering the next recursive composition are therefore:
 
@@ -625,7 +622,7 @@ $$
 
 This distinction is central.
 
-# The Enclosing State \(J\)
+# The Enclosing State $J$
 
 Let the enclosing boundary classify the ten peer macrostates by
 
@@ -698,7 +695,7 @@ W_{\mathrm{tuple}}
 \binom{10}{i_\alpha}.
 $$
 
-Now fix enclosing state \(J\).
+Now fix enclosing state $J$.
 
 Every mutually exclusive tuple satisfying
 
@@ -753,14 +750,14 @@ W_{n+1,J}
 $$
 
 This is exactly the same closed-form combinatorial result obtained by
-counting \(J\) tails among one hundred binary slots.
+counting $J$ tails among one hundred binary slots.
 
 But the logical order matters.
 
-R<sup>2</sup>D did not begin \(B_{n+1}\) with one hundred primitive coin
+R<sup>2</sup>D did not begin $B_{n+1}$ with one hundred primitive coin
 identities.
 
-It began with ten already-defined \(B_n\) landscapes.
+It began with ten already-defined $B_n$ landscapes.
 
 Thus:
 
@@ -791,7 +788,7 @@ This is one of the most important results of the example.
 
 # Total Multiplicity Is Preserved Recursively
 
-The unrestricted multiplicity of each \(B_n\) landscape is
+The unrestricted multiplicity of each $B_n$ landscape is
 
 $$
 \Theta_n=2^{10}.
@@ -818,7 +815,7 @@ But it is recovered through recursive composition.
 
 # Select One Representative Peer
 
-Now select one \(B_n\) peer, labeled \(\alpha\), and let its local state be
+Now select one $B_n$ peer, labeled $\alpha$, and let its local state be
 
 $$
 i.
@@ -847,7 +844,7 @@ with one local state.
 # Compatible Enclosing Multiplicity
 
 The complete enclosing multiplicity compatible with selected local state
-\(i\) is
+$i$ is
 
 $$
 \Theta_{n+1|n,\alpha,i}^{(J)}
@@ -885,7 +882,7 @@ $$
 $$
 
 This is the number of enclosing realizations compatible with the selected
-local classification \(i\).
+local classification $i$.
 
 # Enclosing Extension Per Local Possibility
 
@@ -941,9 +938,9 @@ $$
 has a familiar closed form.
 
 But within the recursive construction it counts compatible compositions of
-the other nine \(B_n\) landscapes.
+the other nine $B_n$ landscapes.
 
-It should not be interpreted as proof that \(B_{n+1}\) has directly recovered
+It should not be interpreted as proof that $B_{n+1}$ has directly recovered
 ninety individually readable coin states.
 
 Again:
@@ -952,9 +949,9 @@ Again:
 
 # Large Enclosing Multiplicity Alone Does Not Create Direction
 
-Now remove the restriction to one fixed enclosing state \(J\).
+Now remove the restriction to one fixed enclosing state $J$.
 
-If the other nine \(B_n\) landscapes are unrestricted, each selected local
+If the other nine $B_n$ landscapes are unrestricted, each selected local
 state has the same amount of compatible enclosing extension:
 
 $$
@@ -982,7 +979,7 @@ K_{n+1|n,\alpha,i}
 }
 $$
 
-for every \(i\).
+for every $i$.
 
 Therefore,
 
@@ -992,7 +989,7 @@ P_{n,\alpha,i}
 90\ln2
 $$
 
-for every \(i\), and consequently
+for every $i$, and consequently
 
 $$
 \boxed{
@@ -1006,9 +1003,9 @@ This gives an important exact result:
 
 Direction requires **unequal** enclosing compatibility.
 
-# Directional Possibility Under Fixed \(J\)
+# Directional Possibility Under Fixed $J$
 
-Return to a fixed enclosing state \(J\).
+Return to a fixed enclosing state $J$.
 
 For
 
@@ -1092,7 +1089,7 @@ $$
 }
 $$
 
-Native multiplicity favors state \(5\).
+Native multiplicity favors state $5$.
 
 Now choose the enclosing state
 
@@ -1115,7 +1112,7 @@ $$
 }
 $$
 
-Enclosing compatibility favors state \(6\).
+Enclosing compatibility favors state $6$.
 
 The complete compatible-count difference is therefore
 
@@ -1149,7 +1146,7 @@ $$
 }
 $$
 
-The net compatible count now favors \(6\).
+The net compatible count now favors $6$.
 
 But nothing about the native landscape
 
@@ -1667,7 +1664,7 @@ $$
 i\rightarrow i+1,
 $$
 
-each enclosing state \(J_r\) defines
+each enclosing state $J_r$ defines
 
 $$
 \boxed{
@@ -1732,7 +1729,7 @@ same local alternative changes.
 
 # Equivalent Peers Receive the Same Enclosing Relation
 
-Because the ten \(B_n\) landscapes are equivalent under the enclosing
+Because the ten $B_n$ landscapes are equivalent under the enclosing
 classification,
 
 $$
@@ -1741,7 +1738,7 @@ K_{n+1|n,\alpha,i}^{(J)}
 K_{n+1|n,\beta,i}^{(J)}
 $$
 
-for equivalent peers \(\alpha\) and \(\beta\).
+for equivalent peers $\alpha$ and $\beta$.
 
 Therefore,
 
@@ -2178,7 +2175,7 @@ R<sup>2</sup>D realization postulate.
 
 ### 1. Boundary change creates a new state classification
 
-At \(B_n\),
+At $B_n$,
 
 $$
 \mathcal M_n
@@ -2186,7 +2183,7 @@ $$
 \{0,\ldots,10\}.
 $$
 
-At \(B_{n+1}\),
+At $B_{n+1}$,
 
 $$
 \mathcal M_{n+1}
@@ -2221,7 +2218,7 @@ W_{n+1,J}
 $$
 
 But this does not restore one hundred subordinate coin identities as
-primitive states at \(B_{n+1}\).
+primitive states at $B_{n+1}$.
 
 ### 4. Uniform enclosing compatibility creates no directional possibility
 
@@ -2235,7 +2232,7 @@ $$
 
 ### 5. Unequal enclosing compatibility creates directional possibility
 
-For fixed \(J\),
+For fixed $J$,
 
 $$
 \boxed{
@@ -2379,7 +2376,7 @@ whose occupancy it changes.
 
 That landscape is already defined by the boundary classification.
 
-Likewise, a \(B_n\) transition cannot by itself define the \(B_{n+1}\)
+Likewise, a $B_n$ transition cannot by itself define the $B_{n+1}$
 compatibility relation that can reverse the directional significance of that
 transition.
 

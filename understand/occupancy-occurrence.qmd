@@ -4,8 +4,6 @@ subtitle: "Possible structure, realized count, and realized state"
 toc: true
 ---
 
-# Occupancy and Occurrence
-
 Multiplicity tells us what **can** be realized.
 
 It does not tell us what **is** realized.
@@ -50,7 +48,7 @@ R<sup>2</sup>D keeps them separate.
 
 ## Multiplicity Comes First
 
-At boundary \(B_n\), macrostate \(i\) has multiplicity
+At boundary $B_n$, macrostate $i$ has multiplicity
 
 $$
 W_{n,i}
@@ -60,7 +58,7 @@ W_{n,i}
 \right|.
 $$
 
-This is the number of compatible formal microstates classified as \(i\).
+This is the number of compatible formal microstates classified as $i$.
 
 It defines possible structure.
 
@@ -96,7 +94,7 @@ is mathematically possible.
 When one such microstate is actually realized within a specified finite count
 domain, it becomes a **microstate occurrence**.
 
-Write the \(r\)-th realized microstate as
+Write the $r$-th realized microstate as
 
 $$
 \mu_n^{(r)}
@@ -116,7 +114,7 @@ i,
 $$
 
 then that realization contributes one occurrence associated with macrostate
-\(i\).
+$i$.
 
 Let
 
@@ -198,7 +196,7 @@ $$
 c_{n,i}
 $$
 
-denote the realized occupancy of macrostate \(i\).
+denote the realized occupancy of macrostate $i$.
 
 For positive occupancy,
 
@@ -290,10 +288,10 @@ W_{n,i}
 $$
 
 Multiplicity tells us how many compatible realizations belong to macrostate
-\(i\).
+$i$.
 
 Occupancy tells us how much realized structure is currently expressed at
-\(i\).
+$i$.
 
 So it is misleading to say that occupancy is simply "realized multiplicity."
 
@@ -513,7 +511,7 @@ R<sup>2</sup>D proposes that, within a fixed realization relation and a
 sufficiently resolved realization domain, relative occurrence count
 proportionally realizes relative multiplicity.
 
-For two macrostates \(i\) and \(k\),
+For two macrostates $i$ and $k$,
 
 $$
 \frac{\nu_{n,k}}{\nu_{n,i}}

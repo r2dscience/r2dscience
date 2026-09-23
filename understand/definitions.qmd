@@ -1818,7 +1818,7 @@ unresolvable while the other remains readable.
 
 # Recursive Limits
 
-## \(B_\alpha\) — Smallest realized boundary
+## $B_\alpha$ — Smallest realized boundary
 
 $$
 \boxed{
@@ -1829,9 +1829,9 @@ $$
 is the smallest realized count boundary in the present formalism.
 
 It supplies primitive distinguishable recurrence without requiring a realized
-\(B_{\alpha-1}\).
+$B_{\alpha-1}$.
 
-## \(B_\omega\) — Largest presently realized boundary
+## $B_\omega$ — Largest presently realized boundary
 
 $$
 \boxed{
@@ -1841,7 +1841,7 @@ $$
 
 is the largest presently realized count boundary.
 
-## \(\mathcal O_\omega\) — Terminal open path
+## $\mathcal O_\omega$ — Terminal open path
 
 The presently open path is
 
@@ -1869,9 +1869,9 @@ $$
 $$
 
 The terminal postulate therefore does not assume a completed enclosing
-\(B_{\omega+1}\).
+$B_{\omega+1}$.
 
-## \(\Delta A_{\omega,\mathcal O}\) — Terminal unresolved asymmetry
+## $\Delta A_{\omega,\mathcal O}$ — Terminal unresolved asymmetry
 
 $$
 \boxed{
@@ -1886,7 +1886,7 @@ realized possibility-retention relation.
 
 # Common Symbol Confusions
 
-## \(P\neq p\)
+## $P\neq p$
 
 $$
 P
@@ -1902,7 +1902,7 @@ is probability: a normalized count read.
 
 They are not the same quantity.
 
-## \(G\neq\) Gibbs free energy
+## $G\neq$ Gibbs free energy
 
 Primitive
 
@@ -1916,7 +1916,7 @@ is the logarithmic occupancy coordinate.
 
 Conventional Gibbs free energy is a later thermodynamic quantity.
 
-## \(\tau\neq t\)
+## $\tau\neq t$
 
 $$
 \tau
@@ -1928,7 +1928,7 @@ is a logarithmic occurrence coordinate.
 
 It is not elapsed time.
 
-## \(\lambda\neq\) primitive length
+## $\lambda\neq$ primitive length
 
 $$
 \lambda
@@ -1938,7 +1938,7 @@ is readable distinguishability.
 
 A physical length or displacement may later read it in a specified mapping.
 
-## \(C\neq\) primitive force
+## $C\neq$ primitive force
 
 $$
 C
@@ -1948,7 +1948,7 @@ is enclosing constraint.
 
 Force can be one physical mechanical read.
 
-## \(S=\ln W\) is dimensionless first
+## $S=\ln W$ is dimensionless first
 
 Primitive
 
@@ -1962,7 +1962,7 @@ is logarithmic multiplicity.
 
 Thermodynamic entropy appears only after physical dimensionalization.
 
-## \(\rho\neq\eta\)
+## $\rho\neq\eta$
 
 $$
 \rho
@@ -1978,7 +1978,7 @@ compares occurrence efficiency between opposed legs of one local closure.
 
 They answer different questions.
 
-## \(\Delta A\neq L_\tau\)
+## $\Delta A\neq L_\tau$
 
 $$
 \Delta A
@@ -1998,17 +1998,17 @@ Directionality is not identical to irreversibility.
 
 | Relation | State-defined | Transition-defined | Closure / across-boundary |
 |---|---|---|---|
-| Native multiplicity | \(W_{n,i},\,S_{n,i}\) | \(\Delta S_{n,i\rightarrow k}\) | \(\Delta S_{n,\alpha,\mathcal C}=0\) |
-| Enclosing possibility | \(P_{n,\alpha,i}\) | \(\Delta P_{n,\alpha,i\rightarrow k}\) | \(\Delta P_{n,\alpha,\mathcal C}\) |
-| State occurrence | \(\nu_{n,i},\,\tau_{n,i}\) | \(\Delta\tau_{n,i\rightarrow k}\) | — |
-| Occupancy | \(c_{n,i},\,G_{n,i}\) | \(\Delta G_{n,i\rightarrow k}\) | — |
-| Distinguishability | — | \(\lambda_{n,i\rightarrow k}\) | \(\lambda_{n+1}\) in enclosing read |
-| Retention | — | \(\Delta R_{n,i\rightarrow k}\) | \(\Delta R_{n,\alpha,\mathcal C}\) |
-| Asymmetry | — | \(\Delta A_{n,i\rightarrow k}\) | \(\Delta A_{n,\alpha,\mathcal C}\) |
-| Closure recurrence | — | — | \(N_{\mathcal D_R}(\mathcal C),\,\rho\) |
-| Complete-leg realization | — | — | \(\nu_H,\,\nu_L\) |
-| Leg nonreciprocity | — | — | \(\eta,\,\Delta\tau_{\mathcal C},\,L_\tau\) |
-| Background | \(b_n,\,\Phi_n\) | enclosing background comparison | \(\delta_{\mathcal C}\Phi_{n+1}\) |
+| Native multiplicity | $W_{n,i},\,S_{n,i}$ | $\Delta S_{n,i\rightarrow k}$ | $\Delta S_{n,\alpha,\mathcal C}=0$ |
+| Enclosing possibility | $P_{n,\alpha,i}$ | $\Delta P_{n,\alpha,i\rightarrow k}$ | $\Delta P_{n,\alpha,\mathcal C}$ |
+| State occurrence | $\nu_{n,i},\,\tau_{n,i}$ | $\Delta\tau_{n,i\rightarrow k}$ | — |
+| Occupancy | $c_{n,i},\,G_{n,i}$ | $\Delta G_{n,i\rightarrow k}$ | — |
+| Distinguishability | — | $\lambda_{n,i\rightarrow k}$ | $\lambda_{n+1}$ in enclosing read |
+| Retention | — | $\Delta R_{n,i\rightarrow k}$ | $\Delta R_{n,\alpha,\mathcal C}$ |
+| Asymmetry | — | $\Delta A_{n,i\rightarrow k}$ | $\Delta A_{n,\alpha,\mathcal C}$ |
+| Closure recurrence | — | — | $N_{\mathcal D_R}(\mathcal C),\,\rho$ |
+| Complete-leg realization | — | — | $\nu_H,\,\nu_L$ |
+| Leg nonreciprocity | — | — | $\eta,\,\Delta\tau_{\mathcal C},\,L_\tau$ |
+| Background | $b_n,\,\Phi_n$ | enclosing background comparison | $\delta_{\mathcal C}\Phi_{n+1}$ |
 
 # Primitive Definitions Versus Physical Reads
 

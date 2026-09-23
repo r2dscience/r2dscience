@@ -4,8 +4,6 @@ subtitle: "The primitive mathematics is dimensionless"
 toc: true
 ---
 
-# Before Units
-
 Science measures almost everything with units.
 
 Distance is measured in meters.
@@ -127,7 +125,7 @@ dimensionalization.
 
 ## Multiplicity Comes Before Entropy Units
 
-For macrostate \(i\),
+For macrostate $i$,
 
 $$
 W_{n,i}

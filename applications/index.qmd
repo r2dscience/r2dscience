@@ -4,8 +4,6 @@ subtitle: "Where R²D is tested against existing science"
 toc: true
 ---
 
-# Applications
-
 A mathematical framework becomes scientifically useful only when it can be
 tested against things science already knows.
 

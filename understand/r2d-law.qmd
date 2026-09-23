@@ -4,12 +4,10 @@ subtitle: "One recursive relation, read from two adjacent boundaries"
 toc: true
 ---
 
-# The R<sup>2</sup>D Law
-
 The preceding architecture has separated several things that conventional
 physical descriptions often combine.
 
-At a local boundary \(B_n\), we can define:
+At a local boundary $B_n$, we can define:
 
 - a readable closure;
 - enclosing-defined possibility;
@@ -17,7 +15,7 @@ At a local boundary \(B_n\), we can define:
 - net closure asymmetry;
 - and the number of times that closure recurs.
 
-At the enclosing boundary \(B_{n+1}\), the same recursively organized
+At the enclosing boundary $B_{n+1}$, the same recursively organized
 realization has a different readable form:
 
 - an enclosing occurrence;
@@ -147,7 +145,7 @@ readings**.
 
 ## The Local Reading
 
-At the representative peer boundary \(B_{n,\alpha}\), the completed closure
+At the representative peer boundary $B_{n,\alpha}$, the completed closure
 has accumulated possibility
 
 $$
@@ -227,7 +225,7 @@ domain.
 
 ## The Enclosing Reading
 
-At boundary \(B_{n+1}\), the same recursively organized relation is read
+At boundary $B_{n+1}$, the same recursively organized relation is read
 differently.
 
 Let
@@ -547,9 +545,9 @@ $$
 C\lambda=20.
 $$
 
-The local boundary reads asymmetry \(2\) per local recurrence.
+The local boundary reads asymmetry $2$ per local recurrence.
 
-The enclosing boundary reads constrained distinguishability \(20\) per
+The enclosing boundary reads constrained distinguishability $20$ per
 enclosing recurrence.
 
 Because the enclosing occurrence recurs only one tenth as often, the
@@ -809,7 +807,7 @@ $$
 \right\}_{\alpha\in I_n}.
 $$
 
-Suppose peers \(\alpha\) and \(\beta\) are equivalent under the same enclosing
+Suppose peers $\alpha$ and $\beta$ are equivalent under the same enclosing
 compatibility relation.
 
 Then either may serve as a representative local realization.
@@ -1054,13 +1052,13 @@ That is what distinguishes it from an ordinary within-scale state equation.
 
 Every quantity in Part I remains a count relation.
 
-\(\Delta A\) is a logarithmic count asymmetry.
+$\Delta A$ is a logarithmic count asymmetry.
 
-\(C\) is a dimensionless constraint coordinate.
+$C$ is a dimensionless constraint coordinate.
 
-\(\lambda\) is a distinguishable count interval.
+$\lambda$ is a distinguishable count interval.
 
-\(\rho\) is a ratio of recurrence counts.
+$\rho$ is a ratio of recurrence counts.
 
 Therefore,
 

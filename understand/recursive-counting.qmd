@@ -4,8 +4,6 @@ subtitle: "Each boundary counts a different object"
 toc: true
 ---
 
-# Recursive Counting Across Scale
-
 R<sup>2</sup>D is not simply a theory of counting states within one boundary.
 
 It is a theory of what happens when **count domains are recursively nested**.
@@ -47,7 +45,7 @@ That is recursive counting.
 
 ## Each Boundary Has Its Own States
 
-At boundary \(B_n\), the readable macrostate domain is
+At boundary $B_n$, the readable macrostate domain is
 
 $$
 \mathcal M_n.
@@ -78,7 +76,7 @@ W_{n,i}
 \right|.
 $$
 
-Move to \(B_{n+1}\), and a new classification is defined.
+Move to $B_{n+1}$, and a new classification is defined.
 
 Thus:
 
@@ -102,8 +100,8 @@ It counts something new.
 Because state identity is boundary relative, changing the count boundary
 produces **recursive replacement**.
 
-A state readable at \(B_n\) does not persist unchanged as a state of
-\(B_{n+1}\).
+A state readable at $B_n$ does not persist unchanged as a state of
+$B_{n+1}$.
 
 Instead,
 
@@ -128,7 +126,7 @@ objects.
 
 ## Completion Creates Something New to Count
 
-Suppose a readable path at \(B_n\) completes a closure:
+Suppose a readable path at $B_n$ completes a closure:
 
 $$
 \mathcal C_{n,\alpha}:
@@ -139,7 +137,7 @@ k
 i.
 $$
 
-At \(B_n\), the internal path is readable.
+At $B_n$, the internal path is readable.
 
 Once completed, that relation can be classified from the enclosing boundary.
 
@@ -278,7 +276,7 @@ $$
 Now let ten peer coin boundaries define one ensemble boundary.
 
 The ensemble does not possess twenty macrostates corresponding to ten copies
-of \(H\) and \(T\).
+of $H$ and $T$.
 
 Instead, it defines a new eleven-state macrostate domain:
 
@@ -315,11 +313,11 @@ whole-system classification.
 
 Now suppose the next boundary contains ten such ensemble boundaries.
 
-The crucial point is that \(B_{n+1}\) does **not** return to the lower
-description and treat one hundred individual \(H/T\) identities as its
+The crucial point is that $B_{n+1}$ does **not** return to the lower
+description and treat one hundred individual $H/T$ identities as its
 primitive states.
 
-It counts ten already-defined \(B_n\) landscapes.
+It counts ten already-defined $B_n$ landscapes.
 
 Schematically:
 
@@ -340,7 +338,7 @@ A closed-form calculation may ultimately reproduce a familiar combinatorial
 result associated with one hundred binary elements.
 
 But that mathematical equivalence does not restore the one hundred
-lower-boundary identities as the primitive state variables at \(B_{n+1}\).
+lower-boundary identities as the primitive state variables at $B_{n+1}$.
 
 This is the distinction between:
 
@@ -469,7 +467,7 @@ things causally.
 
 Once a local closure is complete, it can recur.
 
-Within a common recurrence-comparison domain \(\mathcal D_R\), let
+Within a common recurrence-comparison domain $\mathcal D_R$, let
 
 $$
 N_{\mathcal D_R}
@@ -570,7 +568,7 @@ $$
 \ln\rho_{j+1|j}.
 $$
 
-Then the accumulated recurrence scaling from \(B_n\) to \(B_N\) is
+Then the accumulated recurrence scaling from $B_n$ to $B_N$ is
 
 $$
 \boxed{
@@ -601,13 +599,13 @@ multiplicity.
 
 Recurrence is only one aspect of the recursive relation.
 
-A readable transition at boundary \(B_j\) also has a distinguishable interval
+A readable transition at boundary $B_j$ also has a distinguishable interval
 
 $$
 \lambda_j.
 $$
 
-For a reference boundary \(B_n\) and a larger boundary \(B_N\), define the
+For a reference boundary $B_n$ and a larger boundary $B_N$, define the
 accumulated distinguishability scaling
 
 $$

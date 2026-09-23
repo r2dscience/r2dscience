@@ -4,8 +4,6 @@ subtitle: "Possibility can be retained only against a distinguishable change"
 toc: true
 ---
 
-# Constraint and Retention
-
 Possibility tells us which local alternative has greater compatible support
 from the enclosing count domain.
 
@@ -30,9 +28,9 @@ $$
 
 where
 
-- \(C^{\mathrm{out}}\) is the productive component of enclosing constraint;
-- \(\lambda\) is the readable distinguishable interval;
-- \(\Delta R\) is local retention.
+- $C^{\mathrm{out}}$ is the productive component of enclosing constraint;
+- $\lambda$ is the readable distinguishable interval;
+- $\Delta R$ is local retention.
 
 The distinction is important:
 
@@ -49,7 +47,7 @@ $$
 i \rightarrow k
 $$
 
-at boundary \(B_n\).
+at boundary $B_n$.
 
 R<sup>2</sup>D assigns that transition a distinguishable interval
 
@@ -88,7 +86,7 @@ yet been assigned.
 
 ## Constraint Comes From the Enclosing Relation
 
-The local transition is defined at \(B_n\).
+The local transition is defined at $B_n$.
 
 The relevant constraint is defined by the enclosing count relation at
 
@@ -478,7 +476,7 @@ $$
 d,
 $$
 
-where \(d\) is a myosin-scale displacement.
+where $d$ is a myosin-scale displacement.
 
 The productive constraint acquires a force coordinate,
 
@@ -504,7 +502,7 @@ $$
 C^{\mathrm{out}}\lambda.
 $$
 
-It does not define \(C\) primitively as force or \(\lambda\) primitively as
+It does not define $C$ primitively as force or $\lambda$ primitively as
 distance.
 
 The count relation comes first.
@@ -621,7 +619,7 @@ $$
 
 Only the productive/output component enters local retention.
 
-The background-associated component is not added to \(\Delta R_n\).
+The background-associated component is not added to $\Delta R_n$.
 
 This preserves an important distinction:
 
@@ -856,12 +854,12 @@ $$
 
 The simplest summary is:
 
-> **\(\lambda\) defines the readable difference.**
+> **$\lambda$ defines the readable difference.**
 
-> **\(C^{\mathrm{out}}\) defines the productive constraint acting across that
+> **$C^{\mathrm{out}}$ defines the productive constraint acting across that
 > difference.**
 
-> **\(\Delta R=C^{\mathrm{out}}\lambda\) is the possibility retained against
+> **$\Delta R=C^{\mathrm{out}}\lambda$ is the possibility retained against
 > the distinguishable change.**
 
 Possibility and retention can now be compared directly.

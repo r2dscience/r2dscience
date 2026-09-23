@@ -4,8 +4,6 @@ subtitle: "The boundary participates in defining what counts as the object"
 toc: true
 ---
 
-# Scientific Objecthood
-
 Science is organized around objects.
 
 Physics has particles, fields, masses, charges, and spacetime.
@@ -57,7 +55,7 @@ Objecthood begins with this classification architecture.
 
 ## A Boundary Defines a State Domain
 
-At boundary \(B_n\), let
+At boundary $B_n$, let
 
 $$
 \mathfrak M_n
@@ -176,7 +174,7 @@ Thus:
 
 ## Reality and Primitiveness Are Different Claims
 
-Suppose an object is experimentally readable at \(B_n\).
+Suppose an object is experimentally readable at $B_n$.
 
 That establishes its scientific reality relative to that boundary.
 
@@ -210,7 +208,7 @@ without requiring one privileged ontology to persist through all scales.
 
 ## The Primitive-Object Error
 
-Suppose an object is a legitimate readable state distinction at \(B_n\).
+Suppose an object is a legitimate readable state distinction at $B_n$.
 
 Now change the count boundary.
 
@@ -243,13 +241,13 @@ unchanged after the state classification has changed.
 
 ## Objecthood Changes With the Boundary
 
-At \(B_n\), an object may be represented by macrostate
+At $B_n$, an object may be represented by macrostate
 
 $$
 i_n.
 $$
 
-At \(B_{n+1}\), that local identity can become part of a compatible formal
+At $B_{n+1}$, that local identity can become part of a compatible formal
 microstate realization:
 
 $$
@@ -338,7 +336,7 @@ What is a whole at one boundary can participate as a component of another.
 
 ## Components Do Not Create the Multiplicity of the Whole
 
-Suppose boundary \(B_n\) defines macrostate \(i\).
+Suppose boundary $B_n$ defines macrostate $i$.
 
 Its multiplicity is
 
@@ -653,7 +651,7 @@ $$
 E_i
 $$
 
-to state \(i\) presupposes that state \(i\) has already been distinguished.
+to state $i$ presupposes that state $i$ has already been distinguished.
 
 So the logical order is
 
@@ -816,9 +814,9 @@ specified.
 Boundary-relative causality follows the same logic as boundary-relative
 objecthood.
 
-Suppose manipulating local variable \(X\) changes readable outcome \(Y\).
+Suppose manipulating local variable $X$ changes readable outcome $Y$.
 
-Then \(X\) can legitimately be described as an effective cause within that
+Then $X$ can legitimately be described as an effective cause within that
 boundary.
 
 R<sup>2</sup>D does not prohibit such causal language.

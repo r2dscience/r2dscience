@@ -4,8 +4,6 @@ subtitle: "The enclosing relation organizes; the subordinate mechanism realizes"
 toc: true
 ---
 
-# The Causal Inversion
-
 R<sup>2</sup>D begins with a distinction that is mathematical before it is
 causal.
 
@@ -99,7 +97,7 @@ Those are different claims.
 
 ## Why Multiplicity Forces the Distinction
 
-At boundary \(B_n\), the multiplicity of macrostate \(i\) is
+At boundary $B_n$, the multiplicity of macrostate $i$ is
 
 $$
 W_{n,i}
@@ -109,7 +107,7 @@ W_{n,i}
 \right|.
 $$
 
-This is the number of compatible formal microstates classified as \(i\).
+This is the number of compatible formal microstates classified as $i$.
 
 A particular subordinate transition can change which one of those
 realizations is occupied.

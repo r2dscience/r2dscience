@@ -4,8 +4,6 @@ subtitle: "Physical quantities are boundary-specific readings of recursive count
 toc: true
 ---
 
-# From Count to Physical Science
-
 R<sup>2</sup>D begins before physics.
 
 Not because physics is unimportant.
@@ -794,7 +792,7 @@ B_n
 }
 $$
 
-But a particular physical mapping may assign an areal read to \(B_n\).
+But a particular physical mapping may assign an areal read to $B_n$.
 
 The distinction is exactly analogous to assigning an energetic read to a
 dimensionless logarithmic count coordinate.

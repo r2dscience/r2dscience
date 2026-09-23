@@ -3,9 +3,6 @@ title: "Recursive Carry"
 subtitle: "A completed realization acquires a new count meaning"
 toc: true
 ---
-
-# Recursive Carry
-
 Recursive replacement tells us that changing the boundary changes the state
 domain.
 
@@ -52,7 +49,7 @@ The peer identity is readable.
 The internal path is readable.
 
 The realization therefore has a well-defined local count meaning at
-\(B_{n,\alpha}\).
+$B_{n,\alpha}$.
 
 Now change to the enclosing boundary
 
@@ -125,7 +122,7 @@ $$
 \mathcal{C}_{n,\alpha}.
 $$
 
-When the count boundary changes from \(B_n\) to \(B_{n+1}\), that completed
+When the count boundary changes from $B_n$ to $B_{n+1}$, that completed
 local realization is reclassified according to the enclosing occurrence to
 which it belongs.
 
@@ -466,7 +463,7 @@ $$
 
 ## Carry Is Not Physical Transport
 
-Nothing must physically travel from \(B_n\) into \(B_{n+1}\).
+Nothing must physically travel from $B_n$ into $B_{n+1}$.
 
 The boundary changes.
 

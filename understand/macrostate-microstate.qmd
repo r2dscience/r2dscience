@@ -4,8 +4,6 @@ subtitle: "Statehood is a relation to a boundary"
 toc: true
 ---
 
-# Macrostate and Microstate
-
 Much of R<sup>2</sup>D follows from two familiar words:
 
 **macrostate** and **microstate**.
@@ -60,7 +58,7 @@ $$
 B_n.
 $$
 
-Immediately subordinate to \(B_n\) is a collection of peer boundaries
+Immediately subordinate to $B_n$ is a collection of peer boundaries
 
 $$
 \{B_{n-1,\alpha}\}_{\alpha \in I_{n-1}}.
@@ -74,7 +72,7 @@ $$
 \mathfrak{X}_{n-1,\alpha}
 $$
 
-denote the possible realization domain of peer \(\alpha\).
+denote the possible realization domain of peer $\alpha$.
 
 A complete joint peer realization has the form
 
@@ -101,7 +99,7 @@ $$
 
 But an enclosing boundary need not admit every formally imaginable combination.
 
-Boundary \(B_n\) defines which joint realizations are compatible.
+Boundary $B_n$ defines which joint realizations are compatible.
 
 The compatible subset is the formal microstate domain:
 
@@ -112,7 +110,7 @@ $$
 \mathfrak{X}_{n-1,\alpha}.
 $$
 
-A **formal microstate at \(B_n\)** is one compatible joint peer realization:
+A **formal microstate at $B_n$** is one compatible joint peer realization:
 
 $$
 \mu_n
@@ -124,17 +122,17 @@ $$
 
 This is the first formal definition.
 
-> **A microstate at \(B_n\) is one compatible joint realization of the immediately subordinate peer boundaries.**
+> **A microstate at $B_n$ is one compatible joint realization of the immediately subordinate peer boundaries.**
 
 It is not defined by being physically small.
 
-It is defined by its relation to \(B_n\).
+It is defined by its relation to $B_n$.
 
 ## The Macrostate Is a Classification
 
 The enclosing boundary does not ordinarily distinguish every peer-resolved joint realization individually.
 
-Instead, it classifies compatible formal microstates into states that are readable at \(B_n\).
+Instead, it classifies compatible formal microstates into states that are readable at $B_n$.
 
 Let
 
@@ -159,11 +157,11 @@ $$
 \pi_n(\mu_n)=i,
 $$
 
-then formal microstate \(\mu_n\) is read at boundary \(B_n\) as macrostate \(i\).
+then formal microstate $\mu_n$ is read at boundary $B_n$ as macrostate $i$.
 
 This gives the second definition:
 
-> **A macrostate at \(B_n\) is a distinguishable classification of compatible formal microstates that is readable at \(B_n\).**
+> **A macrostate at $B_n$ is a distinguishable classification of compatible formal microstates that is readable at $B_n$.**
 
 The macrostate is therefore not primitively assembled by adding subordinate states together.
 
@@ -219,7 +217,7 @@ This is exactly what multiplicity counts.
 
 ## Multiplicity Is the Size of the Macrostate Class
 
-For a macrostate \(i\), the complete set of formal microstates classified as \(i\) is the preimage
+For a macrostate $i$, the complete set of formal microstates classified as $i$ is the preimage
 
 $$
 \pi_n^{-1}(i)
@@ -238,7 +236,7 @@ $$
 
 means:
 
-> all formal microstates that the classification map \(\pi_n\) sends to macrostate \(i\).
+> all formal microstates that the classification map $\pi_n$ sends to macrostate $i$.
 
 Its cardinality is the multiplicity:
 
@@ -260,7 +258,7 @@ $$
 W_{n,i}
 $$
 
-is the number of compatible joint peer realizations that boundary \(B_n\) classifies as macrostate \(i\).
+is the number of compatible joint peer realizations that boundary $B_n$ classifies as macrostate $i$.
 
 Its logarithmic coordinate is
 
@@ -270,7 +268,7 @@ S_{n,i}
 \ln W_{n,i}.
 $$
 
-At this stage, \(S\) is not yet thermodynamic entropy.
+At this stage, $S$ is not yet thermodynamic entropy.
 
 It is the logarithmic coordinate of multiplicity.
 
@@ -320,11 +318,11 @@ $$
 \pi_n
 $$
 
-belongs to boundary \(B_n\).
+belongs to boundary $B_n$.
 
 Change the boundary and the classification changes.
 
-This means a formal microstate at \(B_n\) does not simply remain the same microstate at \(B_{n+1}\).
+This means a formal microstate at $B_n$ does not simply remain the same microstate at $B_{n+1}$.
 
 The enclosing boundary defines:
 
@@ -365,17 +363,17 @@ $$
 B_{n-1,\alpha}.
 $$
 
-At that boundary, \(u\) and \(v\) are macrostates.
+At that boundary, $u$ and $v$ are macrostates.
 
 The transition is a readable macrostate transition.
 
-Now consider the same physical occurrence from enclosing boundary \(B_n\).
+Now consider the same physical occurrence from enclosing boundary $B_n$.
 
 The individual subordinate peer transition is no longer the state being classified.
 
 It participates in a joint realization of the peer ensemble.
 
-Relative to \(B_n\), the same subordinate change therefore has **microstate meaning**.
+Relative to $B_n$, the same subordinate change therefore has **microstate meaning**.
 
 Schematically:
 
@@ -405,13 +403,13 @@ Thus:
 
 > **Defined does not imply readable.**
 
-Boundary \(B_n\) can classify a joint realization without resolving which subordinate peer transition produced it.
+Boundary $B_n$ can classify a joint realization without resolving which subordinate peer transition produced it.
 
 This is the primitive source of a distinction that later becomes important in both quantum and many-body descriptions.
 
 ## The Primitive Observer Effect
 
-Suppose a microstate transition relative to \(B_n\) is not directly readable.
+Suppose a microstate transition relative to $B_n$ is not directly readable.
 
 How can the observer see it?
 
@@ -443,13 +441,13 @@ Consider the ten-coin ensemble again.
 
 At the ensemble boundary, the question might be:
 
-> Why does the ten-coin system occupy \(N_H=6\) rather than \(N_H=5\)?
+> Why does the ten-coin system occupy $N_H=6$ rather than $N_H=5$?
 
 If we increase resolution and follow one particular coin, the question becomes:
 
-> Why did this coin change from \(H\) to \(T\)?
+> Why did this coin change from $H$ to $T$?
 
-The second question does not simply reveal the hidden detailed answer to the first.
+The second question does not reveal the hidden detailed answer to the first.
 
 It is a different question at a different boundary.
 
@@ -497,9 +495,9 @@ They belong to different boundary-relative count relations.
 
 Suppose one tries to place directional causality entirely inside the microstate transitions.
 
-At boundary \(B_n\), however, those transitions are not individually readable as microstate transitions.
+At boundary $B_n$, however, those transitions are not individually readable as microstate transitions.
 
-To define their direction directly, one must move to \(B_{n-1}\), where the same transition has macrostate meaning.
+To define their direction directly, one must move to $B_{n-1}$, where the same transition has macrostate meaning.
 
 But at that boundary, its directional relation is itself defined relative to its enclosing compatibility.
 
@@ -558,11 +556,11 @@ $$
 
 Only afterward does science assign a physical interpretation to that state.
 
-This is why the R<sup>2</sup>D mathematics is intended to operate across scientific domains.
+This is how R<sup>2</sup>D mathematics operates across scientific domains.
 
 The physical object changes.
 
-The count grammar can remain the same.
+The count grammar remains the same.
 
 ## The Logical Fulcrum
 
@@ -616,7 +614,7 @@ i
 }
 $$
 
-The distinguishable classification of that realization readable at \(B_n\).
+The distinguishable classification of that realization readable at $B_n$.
 
 ### Multiplicity
 
@@ -630,7 +628,7 @@ W_{n,i}
 }
 $$
 
-The number of compatible formal microstates classified as macrostate \(i\).
+The number of compatible formal microstates classified as macrostate $i$.
 
 ### Logarithmic multiplicity
 

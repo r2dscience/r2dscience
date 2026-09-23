@@ -4,8 +4,6 @@ subtitle: "Changing the boundary changes what is being counted"
 toc: true
 ---
 
-# Why R²D Is Not Coarse-Graining
-
 R<sup>2</sup>D can initially sound like coarse-graining.
 
 Many subordinate realizations correspond to one readable enclosing state.
@@ -83,7 +81,7 @@ the original state was a **microstate** in the first place.
 
 ## R<sup>2</sup>D Starts One Step Earlier
 
-At boundary \(B_n\), R<sup>2</sup>D defines a formal microstate as one
+At boundary $B_n$, R<sup>2</sup>D defines a formal microstate as one
 compatible joint realization of the immediately subordinate peer boundaries:
 
 $$
@@ -196,7 +194,7 @@ $$
 B_{n-1,\alpha}.
 $$
 
-Relative to the enclosing boundary \(B_n\), that same physical realization
+Relative to the enclosing boundary $B_n$, that same physical realization
 has microstate meaning.
 
 Thus:
@@ -254,7 +252,7 @@ $$
 
 is generally many-to-one.
 
-For macrostate \(i\),
+For macrostate $i$,
 
 $$
 W_{n,i}
@@ -318,12 +316,12 @@ That description is mathematically useful.
 But now take the next recursive step.
 
 Suppose ten such ensemble boundaries become the immediately subordinate
-peers of \(B_{n+1}\).
+peers of $B_{n+1}$.
 
-R<sup>2</sup>D says \(B_{n+1}\) counts **ten already-defined ensemble
+R<sup>2</sup>D says $B_{n+1}$ counts **ten already-defined ensemble
 landscapes**.
 
-It does not restore one hundred individual \(H/T\) identities as the
+It does not restore one hundred individual $H/T$ identities as the
 primitive readable states of the new boundary.
 
 Thus:
@@ -486,7 +484,7 @@ It makes their identity boundary relative.
 
 The language of information loss can also obscure the distinction.
 
-One might say that moving to \(B_{n+1}\) "loses information" about the
+One might say that moving to $B_{n+1}$ "loses information" about the
 subordinate realization.
 
 That may be a useful description from the perspective of an observer who

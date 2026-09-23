@@ -4,8 +4,6 @@ subtitle: "A local state can return while its enclosing relation remains asymmet
 toc: true
 ---
 
-# Closure
-
 A state can change and return to where it began.
 
 That is a **return**.
@@ -28,7 +26,7 @@ That is the basis of **asymmetric closure**.
 
 ## A Macrostate Return
 
-At boundary \(B_n\), consider a finite readable path
+At boundary $B_n$, consider a finite readable path
 
 $$
 \mathcal{R}_n:
@@ -79,9 +77,9 @@ B_{n+1}.
 $$
 
 If the completed local return is compatible with at least one enclosing
-occurrence at \(B_{n+1}\), R<sup>2</sup>D calls it a **closure**.
+occurrence at $B_{n+1}$, R<sup>2</sup>D calls it a **closure**.
 
-For peer boundary \(\alpha\), write
+For peer boundary $\alpha$, write
 
 $$
 \boxed{
@@ -101,9 +99,9 @@ $$
 }
 $$
 
-The local path is readable at \(B_n\).
+The local path is readable at $B_n$.
 
-Its enclosing significance belongs to \(B_{n+1}\).
+Its enclosing significance belongs to $B_{n+1}$.
 
 This is what makes closure a recursive rather than merely cyclic concept.
 
@@ -152,7 +150,7 @@ $$
 i\rightarrow k
 $$
 
-is realized under enclosing condition \(H\).
+is realized under enclosing condition $H$.
 
 Suppose the return leg
 
@@ -160,7 +158,7 @@ $$
 k\rightarrow i
 $$
 
-is realized under enclosing condition \(L\).
+is realized under enclosing condition $L$.
 
 The local transition has reversed.
 
@@ -199,7 +197,7 @@ This is the primitive structure of asymmetric closure.
 
 ## Possibility Along the Forward Leg
 
-Under enclosing condition \(H\), the directional possibility for
+Under enclosing condition $H$, the directional possibility for
 
 $$
 i\rightarrow k
@@ -222,7 +220,7 @@ K_{n+1|n,i}^{H}
 }
 $$
 
-For the return leg under condition \(L\),
+For the return leg under condition $L$,
 
 $$
 k\rightarrow i,
@@ -645,7 +643,7 @@ $$
 \nu_{n,\alpha,H}
 $$
 
-be the number of completed realizations of the forward oriented leg \(H\),
+be the number of completed realizations of the forward oriented leg $H$,
 
 and
 
@@ -653,7 +651,7 @@ $$
 \nu_{n,\alpha,L}
 $$
 
-the number of completed realizations of the opposed leg \(L\),
+the number of completed realizations of the opposed leg $L$,
 
 within a specified finite realization domain.
 
@@ -683,7 +681,7 @@ This introduces another closure question:
 
 ## State-Occurrence Closure Is Exact
 
-The state occurrence coordinate for macrostate \(i\) is
+The state occurrence coordinate for macrostate $i$ is
 
 $$
 \tau_{n,i}

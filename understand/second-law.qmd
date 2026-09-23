@@ -4,8 +4,6 @@ subtitle: "Irreversibility is nonreciprocal realization around closure"
 toc: true
 ---
 
-# The R<sup>2</sup>D Second Law
-
 A completed local closure can return exactly to its starting state.
 
 Its native multiplicity can also close exactly:
@@ -381,7 +379,7 @@ $$
 
 Background is not another local directional state.
 
-Within peer boundary \(\alpha\), it is common to the local macrostates.
+Within peer boundary $\alpha$, it is common to the local macrostates.
 
 Thus, for a local transition
 
@@ -1065,7 +1063,7 @@ A physical realization must therefore establish independently:
 
 - the relevant closure;
 - its opposed occurrence counts;
-- the resulting \(L_\tau\);
+- the resulting $L_\tau$;
 - the appropriate enclosing boundary;
 - and the corresponding background increment.
 

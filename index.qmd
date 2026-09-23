@@ -12,8 +12,11 @@ toc: false
 
 <div class="r2d-lead">
 
-AI can solve mathematics.     
-**R<sup>2</sup>D is a mathematical interface that defines scientific objects as recursive mathematical structures allowing AI to solve science.**
+**AI can solve mathematics.**   
+  
+R<sup>2</sup>D is a mathematical interface that gives scientific objects mathematical structure.  
+    
+**AI can now solve science.**
 
 </div>
 
@@ -52,8 +55,8 @@ Long-form essays and ongoing commentary on Substack at
 <div class="r2d-social-links">
 
 [Facebook](https://www.facebook.com/profile.php?id=100005673914363){target="_blank"}  
-[X](https://x.com/JoshBaker5716){target="_blank"}  
 [LinkedIn](https://www.linkedin.com/in/josh-baker-75293b31/){target="_blank"}  
+[X](https://x.com/JoshBaker5716){target="_blank"}  
 </div>
 :::
 ## R<sup>2</sup>D at a glance

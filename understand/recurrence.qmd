@@ -4,8 +4,6 @@ subtitle: "A completed relation can itself become countable"
 toc: true
 ---
 
-# Recurrence
-
 Occurrence tells us that something happened.
 
 Closure tells us that a readable state path returned.
@@ -30,13 +28,13 @@ relation.
 
 ## Occurrence Is Not Recurrence
 
-At boundary \(B_n\), the state occurrence count
+At boundary $B_n$, the state occurrence count
 
 $$
 \nu_{n,i}
 $$
 
-counts realized instances classified as macrostate \(i\) within a specified
+counts realized instances classified as macrostate $i$ within a specified
 finite realization domain.
 
 Its logarithmic coordinate is
@@ -185,7 +183,7 @@ $$
 
 asks:
 
-> How many realized instances are classified as state \(i\)?
+> How many realized instances are classified as state $i$?
 
 ### Opposed-leg occurrence
 
@@ -271,13 +269,13 @@ $$
 
 ## Adjacent Boundaries Can Recur Differently
 
-Now consider a local closure at \(B_n\),
+Now consider a local closure at $B_n$,
 
 $$
 \mathcal C_{n,\alpha},
 $$
 
-and its corresponding enclosing transition class at \(B_{n+1}\),
+and its corresponding enclosing transition class at $B_{n+1}$,
 
 $$
 \chi_{n+1}.
