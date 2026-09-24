@@ -2410,7 +2410,7 @@
   {
     "objectID": "index.html#r2d-at-a-glance",
     "href": "index.html#r2d-at-a-glance",
-    "title": "Use AI to solve science.",
+    "title": "R²D Science",
     "section": "R2D at a glance",
     "text": "R2D at a glance"
   },
@@ -3245,7 +3245,7 @@
     "href": "understand/counting.html#boltzmann-provides-the-mathematical-clue",
     "title": "Counting Requires Distinguishability",
     "section": "Boltzmann Provides the Mathematical Clue",
-    "text": "Boltzmann Provides the Mathematical Clue\nThe familiar Boltzmann relation is\n\\[\nS = \\ln W,\n\\]\nwhere (W) is multiplicity.\nR2D first reads this not as a statement about thermodynamic entropy, but as a statement about counting.\nMultiplicity (W) is the number of distinguishable compatible realizations belonging to a state.\nEquivalently,\n\\[\nW = e^S.\n\\]\nBecause (W) is a count, it is dimensionless. Its logarithm is therefore also dimensionless before a later physical calibration is assigned to it.\nIn Part I, (S) is not yet thermodynamic entropy.\nIt is the logarithmic coordinate of multiplicity.\nUnderstand multiplicity →"
+    "text": "Boltzmann Provides the Mathematical Clue\nThe familiar Boltzmann relation is\n\\[\nS = \\ln W,\n\\]\nwhere \\(W\\) is multiplicity.\nR2D first reads this not as a statement about thermodynamic entropy, but as a statement about counting.\nMultiplicity \\(W\\) is the number of distinguishable compatible realizations belonging to a state.\nEquivalently,\n\\[\nW = e^S.\n\\]\nBecause \\(W\\) is a count, it is dimensionless. Its logarithm is therefore also dimensionless before a later physical calibration is assigned to it.\nIn Part I, \\(S\\) is not yet thermodynamic entropy.\nIt is the logarithmic coordinate of multiplicity.\nUnderstand multiplicity →"
   },
   {
     "objectID": "understand/counting.html#multiplication-comes-before-logarithmic-addition",
