@@ -1,4 +1,9 @@
 ---
+title: "R²D Science"
+description: "Solving science with R²D Agents."
+image: images/r2d-card.png
+---
+---
 page-layout: full
 toc: false
 ---

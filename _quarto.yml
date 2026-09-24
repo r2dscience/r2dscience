@@ -4,6 +4,11 @@ project:
 
 website:
   title: "R²D Science"
+  site-url: https://r2dscience.org
+  image: images/r2d-card.png
+  image-alt: "R²D Science - Solving science with AI"
+  open-graph: true
+
 
   navbar:
     left:

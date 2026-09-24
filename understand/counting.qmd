@@ -67,12 +67,12 @@ $$
 S = \ln W,
 $$
 
-where \(W\) is multiplicity.
+where $W$ is multiplicity.
 
 R<sup>2</sup>D first reads this not as a statement about thermodynamic
 entropy, but as a statement about counting.
 
-Multiplicity \(W\) is the number of distinguishable compatible
+Multiplicity $W$ is the number of distinguishable compatible
 realizations belonging to a state.
 
 Equivalently,
@@ -81,10 +81,10 @@ $$
 W = e^S.
 $$
 
-Because \(W\) is a count, it is dimensionless. Its logarithm is therefore
+Because $W$ is a count, it is dimensionless. Its logarithm is therefore
 also dimensionless before a later physical calibration is assigned to it.
 
-In Part I, \(S\) is not yet thermodynamic entropy.
+In Part I, $S$ is not yet thermodynamic entropy.
 
 It is the logarithmic coordinate of multiplicity.
 
