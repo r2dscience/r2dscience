@@ -54,43 +54,47 @@
   </url>
   <url>
     <loc>https://r2dscience.org/index.html</loc>
-    <lastmod>2026-09-24T08:46:40.809Z</lastmod>
+    <lastmod>2026-09-28T04:39:56.204Z</lastmod>
   </url>
   <url>
     <loc>https://r2dscience.org/canon/index.html</loc>
     <lastmod>2026-09-22T03:52:41.858Z</lastmod>
   </url>
   <url>
-    <loc>https://r2dscience.org/applications/index.html</loc>
-    <lastmod>2026-09-23T04:07:35.211Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/about.html</loc>
-    <lastmod>2026-09-20T04:38:09.868Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/about/index.html</loc>
-    <lastmod>2026-09-22T03:24:19.359Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/about/authors.html</loc>
-    <lastmod>2026-09-21T23:53:01.310Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/about/contact.html</loc>
-    <lastmod>2026-09-21T23:46:18.802Z</lastmod>
-  </url>
-  <url>
-    <loc>https://r2dscience.org/about/publications.html</loc>
-    <lastmod>2026-09-23T18:28:44.434Z</lastmod>
+    <loc>https://r2dscience.org/applications.html</loc>
+    <lastmod>2026-09-19T18:45:10.421Z</lastmod>
   </url>
   <url>
     <loc>https://r2dscience.org/addenda.html</loc>
     <lastmod>2026-09-19T18:45:10.421Z</lastmod>
   </url>
   <url>
-    <loc>https://r2dscience.org/applications.html</loc>
-    <lastmod>2026-09-19T18:45:10.421Z</lastmod>
+    <loc>https://r2dscience.org/about/publications.html</loc>
+    <lastmod>2026-09-23T18:28:44.434Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about/contact.html</loc>
+    <lastmod>2026-09-21T23:46:18.802Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about/authors.html</loc>
+    <lastmod>2026-09-21T23:53:01.310Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about/index.html</loc>
+    <lastmod>2026-09-22T03:24:19.359Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/about.html</loc>
+    <lastmod>2026-09-20T04:38:09.868Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/applications/index.html</loc>
+    <lastmod>2026-09-23T04:07:35.211Z</lastmod>
+  </url>
+  <url>
+    <loc>https://r2dscience.org/ask/how-to-use.html</loc>
+    <lastmod>2026-09-28T08:36:32.000Z</lastmod>
   </url>
   <url>
     <loc>https://r2dscience.org/essays.html</loc>

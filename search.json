@@ -2408,11 +2408,18 @@
     "text": "Next\nThe Causal Inversion →\nClosure →\nThe R²D Law →\nBack to Understand R²D →"
   },
   {
-    "objectID": "index.html#r2d-at-a-glance",
-    "href": "index.html#r2d-at-a-glance",
-    "title": "R²D Science",
-    "section": "R2D at a glance",
-    "text": "R2D at a glance"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ask R2D",
+    "section": "",
+    "text": "One answer. A global analysis across the local domains of science.\n\n\n\n\nWhat do you want to ask?\n\n\n0 / 4,000 characters\n\n\nFive free questions per month.\n\n\n\nAsk R²D\n\nReasoning from the Canon… This could take a few minutes. \n\n\nTry: Was the Big Bang the beginning of time? Why can photons share a state while two electrons cannot? Can evolution have a direction without an external pull? When do many cells become one organism? Do singularities in cosmology and fluid equations mean the same thing?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow the precise R²D conclusion\n\n\n\n\n\n\n\nGo further with this answer\n\n\n\nCompare\n\n\nChallenge\n\n\nExplore\n\n\n\nSwitch views of this answer without using another question.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow R²D analysis\n\n\n\n\n\n\n\nR²D begins with a mathematical necessity: an enclosing state defines which local arrangements count as its microstates. Microscopic variables cannot have primitive priority as microstates over the relation that defines them. Statistical mechanics demonstrates the physical importance of this ordering across scales; R²D makes its recursive causal structure explicit.\n\n\n\nHow to use Ask R²D\nWhat is R²D?\nUnderstand R²D\nExplore applications\nRead the Canon\n\n\nDon’t believe it. Try it.\n\n\n\nLong-form essays and ongoing commentary on Substack at:\nThe Hand & The Arrow\n\nFacebook\nLinkedIn\nX"
+  },
+  {
+    "objectID": "index.html#follow-r²d",
+    "href": "index.html#follow-r²d",
+    "title": "Ask R2D",
+    "section": "",
+    "text": "Long-form essays and ongoing commentary on Substack at:\nThe Hand & The Arrow\n\nFacebook\nLinkedIn\nX"
   },
   {
     "objectID": "canon/index.html",
@@ -2455,6 +2462,104 @@
     "title": "About the R²D Canon",
     "section": "Part IV — Projection",
     "text": "Part IV — Projection\nPart IV asks what physical description is constructed from what remains readable after joint access to the primitive count relation is lost.\nParticles, mass, charge, motion, fields, quantum amplitude, gauge structure, gravity, spacetime, and cosmology are examined as boundary-specific physical projections rather than primitive starting objects.\nPart IV also introduces the converse problem of deprojection: whether a familiar physical description can be traced back toward the more primitive count architecture from which it is read."
+  },
+  {
+    "objectID": "about/publications.html",
+    "href": "about/publications.html",
+    "title": "Publications & Archive",
+    "section": "",
+    "text": "R2D emerged from a long-running research program in muscle, molecular motors, thermodynamics, and multiscale biological mechanics. The conventional scientific record of that work and the developing R2D archive serve different purposes."
+  },
+  {
+    "objectID": "about/publications.html#muscle-and-molecular-motor-research",
+    "href": "about/publications.html#muscle-and-molecular-motor-research",
+    "title": "Publications & Archive",
+    "section": "Muscle and Molecular Motor Research",
+    "text": "Muscle and Molecular Motor Research\nFor more than two decades, my research has examined how molecular-scale events become mechanical behavior at the scale of muscle.\nThis work includes the molecular mechanisms of muscle contraction and regulation, the mechanochemistry of myosin molecular motors, muscle thermodynamics, ensemble mechanics, single-molecule and whole-cell measurements, and multiscale models of biological systems.\nA recurring question has been how randomly fluctuating molecular motors can collectively generate the deterministic force, shortening, and power measured at the scale of a muscle fiber.\nThat question ultimately led beyond muscle. Muscle provides an unusually useful scientific system because chemistry, thermodynamics, statistical mechanics, and mechanics can all be measured on the same physical system while the definition of the scientific object changes with scale.\nThe peer-reviewed publications documenting this research program can be found through Google Scholar.\nVIEW PUBLICATIONS ON GOOGLE SCHOLAR →"
+  },
+  {
+    "objectID": "about/publications.html#from-muscle-to-r2d",
+    "href": "about/publications.html#from-muscle-to-r2d",
+    "title": "Publications & Archive",
+    "section": "From Muscle to R2D",
+    "text": "From Muscle to R2D\nThe development of R2D began with a problem exposed by muscle: the mathematics that describes a muscle fiber cannot simply be assigned to one of its subordinate molecular components.\nA myosin molecule and a muscle fiber are different scientific objects. Each has its own states, transitions, constraints, and readable observables.\nR2D formalizes this boundary dependence by defining microstate and macrostate at the boundary where they are distinguished. Changing scale therefore does not merely coarse-grain the same object. It changes the mathematical state domain and, with it, the object being described.\nThe resulting framework has since been developed beyond muscle into a general mathematical interface for examining scientific structure across physics, chemistry, biology, and geometry."
+  },
+  {
+    "objectID": "about/publications.html#r2d-archive-and-continuing-development",
+    "href": "about/publications.html#r2d-archive-and-continuing-development",
+    "title": "Publications & Archive",
+    "section": "R2D Archive and Continuing Development",
+    "text": "R2D Archive and Continuing Development\nFormal versions of R2D are archived on Zenodo.\nZenodo provides permanent, citable records of the framework at defined stages of development. These archived releases include the R2D Canon and subsequent formal developments and applications.\nThe distinction between the archive and this website is intentional:\n\nZenodo preserves fixed scholarly versions.\nR2DScience.org presents the current framework and makes it easier to navigate and use.\nThe Canon remains the authoritative mathematical source.\nApplications show how the framework develops when it is run against specific scientific problems.\n\nAs R2D develops, major formal releases will continue to be deposited on Zenodo so that earlier formulations remain permanently available and citable.\nVIEW THE R²D ARCHIVE ON ZENODO →"
+  },
+  {
+    "objectID": "about/publications.html#current-canon",
+    "href": "about/publications.html#current-canon",
+    "title": "Publications & Archive",
+    "section": "Current Canon",
+    "text": "Current Canon\nThe current Canon is the master statement of the R2D framework.\nIt is intended both for human readers and as a source document for AI. Future releases will be made available in formats suitable for reading, archiving, and machine interrogation.\nREAD THE CANON →"
+  },
+  {
+    "objectID": "about/publications.html#citation-and-contact",
+    "href": "about/publications.html#citation-and-contact",
+    "title": "Publications & Archive",
+    "section": "Citation and Contact",
+    "text": "Citation and Contact\nFor questions about the research program, publications, or the R2D archive:\njosh@r2dscience.org"
+  },
+  {
+    "objectID": "about/contact.html",
+    "href": "about/contact.html",
+    "title": "R²D Science",
+    "section": "",
+    "text": "Josh Baker: josh@r2dscience.org\nJulie Ellsworth: julie@r2dscience.org"
+  },
+  {
+    "objectID": "about/authors.html",
+    "href": "about/authors.html",
+    "title": "R²D Science",
+    "section": "",
+    "text": "Josh Baker, Ph.D.\nAssociate Vice President for Research\nProfessor Pharmacology\nDirector NIH NV INBRE\nUniversity of Nevada, Reno\nJulie Ellsworth, Ph.D.\nDean of Life Sciences, Allied Health & Public Safety\nTruckee Meadows Community College"
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "About R²D Science",
+    "section": "",
+    "text": "R2D Science is a research and development program built around Recursively Realized Distinguishability (R2D): a mathematical framework for representing scientific objects in a form that artificial intelligence can interrogate across disciplines and scales.\nScience has powerful mathematics for describing what objects do. What it largely lacks is a common mathematics for defining what the scientific object itself is when the boundary of observation changes.\nR2D addresses that problem by treating microstate, macrostate, constraint, multiplicity, and recurrence as boundary-dependent mathematical objects. Changing the boundary therefore does not simply blur or coarse-grain the same object. It changes the state domain and replaces the scientific object being described."
+  },
+  {
+    "objectID": "about/index.html#a-mathematical-interface-for-science",
+    "href": "about/index.html#a-mathematical-interface-for-science",
+    "title": "About R²D Science",
+    "section": "A Mathematical Interface for Science",
+    "text": "A Mathematical Interface for Science\nArtificial intelligence is exceptionally capable at operating on mathematics. The challenge is that science is presented to AI through many different physical ontologies: molecules, particles, fields, forces, organisms, geometries, and other domain-specific objects.\nR2D provides a common mathematical interface between those scientific descriptions and AI.\nIts purpose is not to replace established scientific laws. It is to transform the objects appearing in those laws into a common boundary-dependent mathematical representation so that relationships across disciplines and scales can be examined directly.\nIn this sense, R2D functions as a front end for AI-driven scientific discovery."
+  },
+  {
+    "objectID": "about/index.html#from-muscle-to-a-general-framework",
+    "href": "about/index.html#from-muscle-to-a-general-framework",
+    "title": "About R²D Science",
+    "section": "From Muscle to a General Framework",
+    "text": "From Muscle to a General Framework\nR2D emerged from research on muscle and molecular motors, where chemistry, thermodynamics, statistical mechanics, and mechanics can all be applied to the same biological system while the scientific object changes with scale.\nA myosin molecule can be the object. A collection of molecular motors can be the object. A muscle fiber can be the object.\nThe laws remain valid within the boundary where their states and observables are defined, but the mathematical object itself changes as the boundary changes.\nFormalizing that observation led to a recursive mathematical architecture that can now be tested far beyond muscle."
+  },
+  {
+    "objectID": "about/index.html#the-r2d-program",
+    "href": "about/index.html#the-r2d-program",
+    "title": "About R²D Science",
+    "section": "The R2D Program",
+    "text": "The R2D Program\nR2D Science has four closely connected goals:\n\nDevelop the formal framework.\nMaintain and extend the R2D Canon as the authoritative mathematical statement of the theory.\nApply it across science.\nTest the same primitive architecture against problems in thermodynamics, statistical physics, quantum mechanics, gravity, geometry, fluid mechanics, biology, and other domains.\nMake the framework usable by AI.\nProvide machine-readable versions of the Canon and tools that allow AI to retrieve, transform, compare, and interrogate scientific structure using R2D.\nPreserve the development of the theory.\nArchive formal releases on Zenodo so that each major stage of the framework remains permanently available and citable."
+  },
+  {
+    "objectID": "about/index.html#read-it.-run-it.-test-it.",
+    "href": "about/index.html#read-it.-run-it.-test-it.",
+    "title": "About R²D Science",
+    "section": "Read It. Run It. Test It.",
+    "text": "Read It. Run It. Test It.\nR2D is intended to be used rather than merely accepted.\nRead R2D to understand the mathematical architecture.\nRun R2D by giving the framework to AI and applying it to a scientific law, paradox, paper, or unsolved problem.\nTest R2D by asking whether it can preserve established scientific relationships while removing unnecessary inherited assumptions about the objects those relationships describe.\nDon’t believe R2D. Try it."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About R2D Science\nR2D Science is the home of Recursively Realized Distinguishability (R2D), a scientific framework developed by Josh E. Baker.\nContact: josh@r2dscience.org"
   },
   {
     "objectID": "applications/index.html",
@@ -2660,102 +2765,32 @@
     "text": "Try It\nRUN R2D ON A SCIENTIFIC PROBLEM →\nUNDERSTAND THE FORMALISM →\nDEFINITIONS AND SYMBOLS →\n\n\nDon’t believe R2D. Run it against something that already has to be true."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "ask/how-to-use.html",
+    "href": "ask/how-to-use.html",
+    "title": "How to use Ask R²D",
     "section": "",
-    "text": "About R2D Science\nR2D Science is the home of Recursively Realized Distinguishability (R2D), a scientific framework developed by Josh E. Baker.\nContact: josh@r2dscience.org"
+    "text": "Ask R²D is a way to question the R²D Canon. You can use it to understand a definition, test a deduction, challenge a proposed physical mapping, or compare R²D with another account of a phenomenon.\nStart asking on the homepage."
   },
   {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "About R²D Science",
-    "section": "",
-    "text": "R2D Science is a research and development program built around Recursively Realized Distinguishability (R2D): a mathematical framework for representing scientific objects in a form that artificial intelligence can interrogate across disciplines and scales.\nScience has powerful mathematics for describing what objects do. What it largely lacks is a common mathematics for defining what the scientific object itself is when the boundary of observation changes.\nR2D addresses that problem by treating microstate, macrostate, constraint, multiplicity, and recurrence as boundary-dependent mathematical objects. Changing the boundary therefore does not simply blur or coarse-grain the same object. It changes the state domain and replaces the scientific object being described."
+    "objectID": "ask/how-to-use.html#ask-a-specific-question",
+    "href": "ask/how-to-use.html#ask-a-specific-question",
+    "title": "How to use Ask R²D",
+    "section": "Ask a specific question",
+    "text": "Ask a specific question\nEnter a question and read the initial explanation. It should connect familiar scientific ideas to R²D before presenting technical detail. You can then choose Compare, Challenge, or Explore beneath the answer. For example:\n\nAsk: What does possibility count in R²D?\nCompare: How does the established account of evolution differ from an R²D interpretation?\nChallenge: Does the coin example prove physical causal inversion?\nExplore: What would an R²D mapping of a detector need to specify?\n\nThe three buttons use the same completed scientific analysis. Compare explains agreements and differences, Challenge identifies the strongest substantive objection, and Explore considers conditional implications and tests. Switching between them does not use another question. Submitting a new question does."
   },
   {
-    "objectID": "about/index.html#a-mathematical-interface-for-science",
-    "href": "about/index.html#a-mathematical-interface-for-science",
-    "title": "About R²D Science",
-    "section": "A Mathematical Interface for Science",
-    "text": "A Mathematical Interface for Science\nArtificial intelligence is exceptionally capable at operating on mathematics. The challenge is that science is presented to AI through many different physical ontologies: molecules, particles, fields, forces, organisms, geometries, and other domain-specific objects.\nR2D provides a common mathematical interface between those scientific descriptions and AI.\nIts purpose is not to replace established scientific laws. It is to transform the objects appearing in those laws into a common boundary-dependent mathematical representation so that relationships across disciplines and scales can be examined directly.\nIn this sense, R2D functions as a front end for AI-driven scientific discovery."
+    "objectID": "ask/how-to-use.html#check-the-status-of-the-answer",
+    "href": "ask/how-to-use.html#check-the-status-of-the-answer",
+    "title": "How to use Ask R²D",
+    "section": "Check the status of the answer",
+    "text": "Check the status of the answer\nRead the R²D status, Sources, and Open bridge sections along with the answer. A formal result within the Canon does not automatically establish a physical mapping. A candidate mapping needs its own boundary definitions, observable connection, and tests. The Canon and addenda can also contain conjectures; ask Ask R²D to identify them explicitly.\nThe full technical conclusion is available under Show the precise R²D conclusion. External scientific sources, when used, appear alongside Canon sources.\nWhen comparing another theory, ask what that theory actually claims. A successful local prediction establishes what follows from its specified state space and premises; an additional claim of universal bottom-up causal priority needs its own definition and derivation."
   },
   {
-    "objectID": "about/index.html#from-muscle-to-a-general-framework",
-    "href": "about/index.html#from-muscle-to-a-general-framework",
-    "title": "About R²D Science",
-    "section": "From Muscle to a General Framework",
-    "text": "From Muscle to a General Framework\nR2D emerged from research on muscle and molecular motors, where chemistry, thermodynamics, statistical mechanics, and mechanics can all be applied to the same biological system while the scientific object changes with scale.\nA myosin molecule can be the object. A collection of molecular motors can be the object. A muscle fiber can be the object.\nThe laws remain valid within the boundary where their states and observables are defined, but the mathematical object itself changes as the boundary changes.\nFormalizing that observation led to a recursive mathematical architecture that can now be tested far beyond muscle."
-  },
-  {
-    "objectID": "about/index.html#the-r2d-program",
-    "href": "about/index.html#the-r2d-program",
-    "title": "About R²D Science",
-    "section": "The R2D Program",
-    "text": "The R2D Program\nR2D Science has four closely connected goals:\n\nDevelop the formal framework.\nMaintain and extend the R2D Canon as the authoritative mathematical statement of the theory.\nApply it across science.\nTest the same primitive architecture against problems in thermodynamics, statistical physics, quantum mechanics, gravity, geometry, fluid mechanics, biology, and other domains.\nMake the framework usable by AI.\nProvide machine-readable versions of the Canon and tools that allow AI to retrieve, transform, compare, and interrogate scientific structure using R2D.\nPreserve the development of the theory.\nArchive formal releases on Zenodo so that each major stage of the framework remains permanently available and citable."
-  },
-  {
-    "objectID": "about/index.html#read-it.-run-it.-test-it.",
-    "href": "about/index.html#read-it.-run-it.-test-it.",
-    "title": "About R²D Science",
-    "section": "Read It. Run It. Test It.",
-    "text": "Read It. Run It. Test It.\nR2D is intended to be used rather than merely accepted.\nRead R2D to understand the mathematical architecture.\nRun R2D by giving the framework to AI and applying it to a scientific law, paradox, paper, or unsolved problem.\nTest R2D by asking whether it can preserve established scientific relationships while removing unnecessary inherited assumptions about the objects those relationships describe.\nDon’t believe R2D. Try it."
-  },
-  {
-    "objectID": "about/authors.html",
-    "href": "about/authors.html",
-    "title": "R²D Science",
-    "section": "",
-    "text": "Josh Baker, Ph.D.\nAssociate Vice President for Research\nProfessor Pharmacology\nDirector NIH NV INBRE\nUniversity of Nevada, Reno\nJulie Ellsworth, Ph.D.\nDean of Life Sciences, Allied Health & Public Safety\nTruckee Meadows Community College"
-  },
-  {
-    "objectID": "about/contact.html",
-    "href": "about/contact.html",
-    "title": "R²D Science",
-    "section": "",
-    "text": "Josh Baker: josh@r2dscience.org\nJulie Ellsworth: julie@r2dscience.org"
-  },
-  {
-    "objectID": "about/publications.html",
-    "href": "about/publications.html",
-    "title": "Publications & Archive",
-    "section": "",
-    "text": "R2D emerged from a long-running research program in muscle, molecular motors, thermodynamics, and multiscale biological mechanics. The conventional scientific record of that work and the developing R2D archive serve different purposes."
-  },
-  {
-    "objectID": "about/publications.html#muscle-and-molecular-motor-research",
-    "href": "about/publications.html#muscle-and-molecular-motor-research",
-    "title": "Publications & Archive",
-    "section": "Muscle and Molecular Motor Research",
-    "text": "Muscle and Molecular Motor Research\nFor more than two decades, my research has examined how molecular-scale events become mechanical behavior at the scale of muscle.\nThis work includes the molecular mechanisms of muscle contraction and regulation, the mechanochemistry of myosin molecular motors, muscle thermodynamics, ensemble mechanics, single-molecule and whole-cell measurements, and multiscale models of biological systems.\nA recurring question has been how randomly fluctuating molecular motors can collectively generate the deterministic force, shortening, and power measured at the scale of a muscle fiber.\nThat question ultimately led beyond muscle. Muscle provides an unusually useful scientific system because chemistry, thermodynamics, statistical mechanics, and mechanics can all be measured on the same physical system while the definition of the scientific object changes with scale.\nThe peer-reviewed publications documenting this research program can be found through Google Scholar.\nVIEW PUBLICATIONS ON GOOGLE SCHOLAR →"
-  },
-  {
-    "objectID": "about/publications.html#from-muscle-to-r2d",
-    "href": "about/publications.html#from-muscle-to-r2d",
-    "title": "Publications & Archive",
-    "section": "From Muscle to R2D",
-    "text": "From Muscle to R2D\nThe development of R2D began with a problem exposed by muscle: the mathematics that describes a muscle fiber cannot simply be assigned to one of its subordinate molecular components.\nA myosin molecule and a muscle fiber are different scientific objects. Each has its own states, transitions, constraints, and readable observables.\nR2D formalizes this boundary dependence by defining microstate and macrostate at the boundary where they are distinguished. Changing scale therefore does not merely coarse-grain the same object. It changes the mathematical state domain and, with it, the object being described.\nThe resulting framework has since been developed beyond muscle into a general mathematical interface for examining scientific structure across physics, chemistry, biology, and geometry."
-  },
-  {
-    "objectID": "about/publications.html#r2d-archive-and-continuing-development",
-    "href": "about/publications.html#r2d-archive-and-continuing-development",
-    "title": "Publications & Archive",
-    "section": "R2D Archive and Continuing Development",
-    "text": "R2D Archive and Continuing Development\nFormal versions of R2D are archived on Zenodo.\nZenodo provides permanent, citable records of the framework at defined stages of development. These archived releases include the R2D Canon and subsequent formal developments and applications.\nThe distinction between the archive and this website is intentional:\n\nZenodo preserves fixed scholarly versions.\nR2DScience.org presents the current framework and makes it easier to navigate and use.\nThe Canon remains the authoritative mathematical source.\nApplications show how the framework develops when it is run against specific scientific problems.\n\nAs R2D develops, major formal releases will continue to be deposited on Zenodo so that earlier formulations remain permanently available and citable.\nVIEW THE R²D ARCHIVE ON ZENODO →"
-  },
-  {
-    "objectID": "about/publications.html#current-canon",
-    "href": "about/publications.html#current-canon",
-    "title": "Publications & Archive",
-    "section": "Current Canon",
-    "text": "Current Canon\nThe current Canon is the master statement of the R2D framework.\nIt is intended both for human readers and as a source document for AI. Future releases will be made available in formats suitable for reading, archiving, and machine interrogation.\nREAD THE CANON →"
-  },
-  {
-    "objectID": "about/publications.html#citation-and-contact",
-    "href": "about/publications.html#citation-and-contact",
-    "title": "Publications & Archive",
-    "section": "Citation and Contact",
-    "text": "Citation and Contact\nFor questions about the research program, publications, or the R2D archive:\njosh@r2dscience.org"
+    "objectID": "ask/how-to-use.html#free-access",
+    "href": "ask/how-to-use.html#free-access",
+    "title": "How to use Ask R²D",
+    "section": "Free access",
+    "text": "Free access\nEach browser has five free questions per UTC month. New visitors can begin at any time. Switching between Compare, Challenge, and Explore does not send another question. Questions have a limit of 4,000 characters."
   },
   {
     "objectID": "run/index.html",

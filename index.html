@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Solving science with R²D Agents.">
 
 <title>R²D Science</title>
 <style>
@@ -77,8 +76,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="ask/ask-r2d.css">
 <meta property="og:title" content="R²D Science">
-<meta property="og:description" content="Solving science with R²D Agents.">
 <meta property="og:image" content="https://r2dscience.org/images/r2d-card.png">
 <meta property="og:site_name" content="R²D Science">
 <meta property="og:image:height" content="909">
@@ -121,10 +120,6 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./run/index.html"> 
-<span class="menu-text">Run R²D</span></a>
-  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./applications/index.html"> 
 <span class="menu-text">Applications</span></a>
@@ -169,71 +164,137 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">R²D Science</h1>
+
+
+
+<div class="r2d-home">
+<p><img src="images/R2D-Header.png" class="r2d-header img-fluid" style="width:100.0%"></p>
+<section id="ask-r2d-heading" class="level1 r2d-hero">
+<h1>Ask R<sup>2</sup>D</h1>
+<p class="r2d-lead">
+One answer. A global analysis across the local domains of science.
+</p>
+</section>
+<div id="ask-r2d" class="ask-r2d-shell">
+<div class="ask-r2d-card">
+<p><label for="ask-r2d-question" class="ask-r2d-label">What do you want to ask?</label></p>
+<textarea id="ask-r2d-question" rows="6" maxlength="4000" placeholder="For example: Could one idea connect quantum physics, gravity, and life?"></textarea>
+<div class="ask-r2d-counter">
+<span id="ask-r2d-character-count">0</span> / 4,000 characters
 </div>
-
-<div>
-  <div class="description">
-    Solving science with R²D Agents.
-  </div>
+<p class="ask-r2d-focus-note">
+Five free questions per month.
+</p>
+<div class="ask-r2d-actions">
+<button id="ask-r2d-submit" type="button">
+Ask R²D
+</button>
+<p><span id="ask-r2d-loading" class="ask-r2d-loading" hidden="">Reasoning from the Canon… This could take a few minutes. </span></p>
 </div>
-
-
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p><img src="images/R2D-Header.png" class="img-fluid" style="width:100.0%"></p>
-<div class="r2d-hero">
-<div class="r2d-kicker">
-R<sup>2</sup>D SCIENCE
+<div class="ask-r2d-examples">
+<p><span>Try:</span> <button class="ask-r2d-example">Was the Big Bang the beginning of time?</button> <button class="ask-r2d-example">Why can photons share a state while two electrons cannot?</button> <button class="ask-r2d-example">Can evolution have a direction without an external pull?</button> <button class="ask-r2d-example">When do many cells become one organism?</button> <button class="ask-r2d-example">Do singularities in cosmology and fluid equations mean the same thing?</button></p>
 </div>
-<section id="use-ai-to-solve-science." class="level1">
-<h1>Use AI to solve science.</h1>
-<div class="r2d-lead">
-<p><strong>AI can solve mathematics.</strong></p>
-<p>R<sup>2</sup>D gives scientific objects mathematical structure.</p>
-<p><strong>AI can now solve science.</strong></p>
+<div id="ask-r2d-error" class="ask-r2d-error" hidden="">
+
 </div>
-<div class="r2d-what-link">
-<p><a href="./understand/what-is-r2d.html"><strong>WHAT IS R<sup>2</sup>D? →</strong></a></p>
+<p id="ask-r2d-remaining" class="ask-r2d-focus-note" hidden="">
+</p>
+</div>
+<div id="ask-r2d-result" class="ask-r2d-result" hidden="">
+<section>
+<h2 class="anchored">
+Answer
+</h2>
+<div id="ask-r2d-answer" class="ask-r2d-answer">
+
 </div>
 </section>
+<details id="ask-r2d-precise-section" class="ask-r2d-precise" hidden="">
+<summary>
+Show the precise R²D conclusion
+</summary>
+<div id="ask-r2d-precise">
+
 </div>
-<div class="r2d-pathways">
-<section id="read-r2d" class="level3 r2d-pathway">
-<h3 class="anchored" data-anchor-id="read-r2d">READ R<sup>2</sup>D</h3>
-<p>Learn about the boundary-dependent mathematics behind the framework — from recursive counting and replacement to multiplicity, constraint, closure, and scale.<br>
-<a href="./understand/index.html" class="r2d-pathway-link">UNDERSTAND R²D</a></p>
+</details>
+<div class="ask-r2d-followups">
+<p class="ask-r2d-focus-label">
+Go further with this answer
+</p>
+<div id="ask-r2d-focus-controls" class="ask-r2d-focus-controls" role="group" aria-label="Go further with this answer">
+<button type="button" data-focus="compare" aria-pressed="false">
+Compare
+</button>
+<button type="button" data-focus="challenge" aria-pressed="false">
+Challenge
+</button>
+<button type="button" data-focus="explore" aria-pressed="false">
+Explore
+</button>
+</div>
+<p class="ask-r2d-focus-note">
+Switch views of this answer without using another question.
+</p>
+</div>
+<section id="ask-r2d-focus-section" hidden="">
+<h3 id="ask-r2d-focus-heading" class="anchored">
+Compare
+</h3>
+<div id="ask-r2d-focus-body">
+
+</div>
 </section>
-<section id="run-r2d" class="level3 r2d-pathway">
-<h3 class="anchored" data-anchor-id="run-r2d">RUN R<sup>2</sup>D</h3>
-<p>Give R²D to an AI and use it to interrogate a scientific law, paradox, paper, or unsolved problem.<br>
-<a href="./run/index.html" class="r2d-pathway-link">USE R²D</a></p>
+<section>
+<h3 class="anchored">
+R²D status
+</h3>
+<div id="ask-r2d-status" class="ask-r2d-status">
+
+</div>
 </section>
-<section id="test-r2d" class="level3 r2d-pathway">
-<h3 class="anchored" data-anchor-id="test-r2d">TEST R<sup>2</sup>D</h3>
-<p>See what happens when the same mathematical structure is applied to thermodynamics, quantum mechanics, gravity, geometry, and biology.<br>
-<a href="./applications/index.html" class="r2d-pathway-link">EXPLORE APPLICATIONS</a></p>
+<section id="ask-r2d-unresolved-section" hidden="">
+<h3 class="anchored">
+Open bridge
+</h3>
+<div id="ask-r2d-unresolved">
+
+</div>
 </section>
+<section>
+<h3 class="anchored">
+Sources
+</h3>
+<div id="ask-r2d-sources">
+
+</div>
+</section>
+<details class="ask-r2d-analysis">
+<summary>
+Show R²D analysis
+</summary>
+<div id="ask-r2d-analysis-body">
+
+</div>
+</details>
+</div>
+<div class="ask-r2d-footer-note">
+R²D begins with a mathematical necessity: an enclosing state defines which local arrangements count as its microstates. Microscopic variables cannot have primitive priority as microstates over the relation that defines them. Statistical mechanics demonstrates the physical importance of this ordering across scales; R²D makes its recursive causal structure explicit.
+</div>
+</div>
+<div class="r2d-home-links">
+<p><a href="./ask/how-to-use.html" class="r2d-home-button">How to use Ask R²D</a></p>
+<p><a href="./understand/what-is-r2d.html" class="r2d-home-button">What is R²D?</a></p>
+<p><a href="./understand/index.html" class="r2d-home-button">Understand R²D</a></p>
+<p><a href="./applications/index.html" class="r2d-home-button">Explore applications</a></p>
+<p><a href="./canon/index.html" class="r2d-home-button">Read the Canon</a></p>
 </div>
 <div class="r2d-challenge">
 Don’t believe it. Try it.
 </div>
-<section id="follow-r²d" class="level1 r2d-follow">
-<h1>Follow R²D</h1>
+<section id="follow-r²d" class="level2 r2d-follow">
+<h2 class="anchored" data-anchor-id="follow-r²d">Follow R²D</h2>
 <p>Long-form essays and ongoing commentary on Substack at:</p>
 <p><a href="https://hand0arrow.substack.com/" target="_blank"><strong>The Hand &amp; The Arrow</strong></a></p>
 <div class="r2d-social-links">
@@ -245,9 +306,10 @@ Don’t believe it. Try it.
 <section id="r2d-at-a-glance" class="level2">
 <h2 class="anchored" data-anchor-id="r2d-at-a-glance">R<sup>2</sup>D at a glance</h2>
 <p><img src="images/r2d-banner.png" class="img-fluid" style="width:100.0%"></p>
-
-
 </section>
+</div>
+
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -651,6 +713,8 @@ Don’t believe it. Try it.
   });
   </script>
 </div> <!-- /content -->
+<script src="ask/ask-r2d-config.js"></script>
+<script src="ask/ask-r2d.js"></script>
 
 
 
