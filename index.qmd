@@ -1,60 +1,126 @@
 ---
-title: "R²D Science"
-description: "Solving science with R²D Agents."
 image: images/r2d-card.png
----
----
 page-layout: full
 toc: false
+format:
+  html:
+    css:
+      - styles.css
+      - ask/ask-r2d.css
+    include-after-body:
+      - text: |
+          <script src="ask/ask-r2d-config.js"></script>
+          <script src="ask/ask-r2d.js"></script>
 ---
 
-![](images/R2D-Header.png){width="100%"}
+::: {.r2d-home}
+
+![](images/R2D-Header.png){.r2d-header width="100%"}
 
 ::: {.r2d-hero}
-<div class="r2d-kicker">R<sup>2</sup>D SCIENCE</div>
+# Ask R<sup>2</sup>D {#ask-r2d-heading}
 
-# Use AI to solve science.
+<p class="r2d-lead">One answer. A global analysis across the local domains of science.</p>
+:::
 
-<div class="r2d-lead">
+::: {#ask-r2d .ask-r2d-shell}
 
-**AI can solve mathematics.**   
-  
-R<sup>2</sup>D gives scientific objects mathematical structure.  
-    
-**AI can now solve science.**
+<div class="ask-r2d-card">
+<label for="ask-r2d-question" class="ask-r2d-label">What do you want to ask?</label>
 
+<textarea id="ask-r2d-question" rows="6" maxlength="4000" placeholder="For example: Could one idea connect quantum physics, gravity, and life?"></textarea>
+<div class="ask-r2d-counter"><span id="ask-r2d-character-count">0</span> / 4,000 characters</div>
+
+<p class="ask-r2d-focus-note">Five free questions per month. </p>
+
+<div class="ask-r2d-actions">
+<button id="ask-r2d-submit" type="button">Ask R²D</button>
+<span id="ask-r2d-loading" class="ask-r2d-loading" hidden>Reasoning from the Canon… This could take a few minutes. </span>
 </div>
 
-<div class="r2d-what-link">
-
-[**WHAT IS R<sup>2</sup>D? →**](understand/what-is-r2d.qmd)
-
+<div class="ask-r2d-examples">
+<span>Try:</span>
+<button class="ask-r2d-example">Was the Big Bang the beginning of time?</button>
+<button class="ask-r2d-example">Why can photons share a state while two electrons cannot?</button>
+<button class="ask-r2d-example">Can evolution have a direction without an external pull?</button>
+<button class="ask-r2d-example">When do many cells become one organism?</button>
+<button class="ask-r2d-example">Do singularities in cosmology and fluid equations mean the same thing?</button>
 </div>
 
+<div id="ask-r2d-error" class="ask-r2d-error" hidden></div>
+<p id="ask-r2d-remaining" class="ask-r2d-focus-note" hidden></p>
+</div>
+
+<div id="ask-r2d-result" class="ask-r2d-result" hidden>
+<section>
+<h2>Answer</h2>
+<div id="ask-r2d-answer" class="ask-r2d-answer"></div>
+</section>
+
+<details id="ask-r2d-precise-section" class="ask-r2d-precise" hidden>
+<summary>Show the precise R²D conclusion</summary>
+<div id="ask-r2d-precise"></div>
+</details>
+
+<div class="ask-r2d-followups">
+<p class="ask-r2d-focus-label">Go further with this answer</p>
+<div id="ask-r2d-focus-controls" class="ask-r2d-focus-controls" role="group" aria-label="Go further with this answer">
+<button type="button" data-focus="compare" aria-pressed="false">Compare</button>
+<button type="button" data-focus="challenge" aria-pressed="false">Challenge</button>
+<button type="button" data-focus="explore" aria-pressed="false">Explore</button>
+</div>
+<p class="ask-r2d-focus-note">Switch views of this answer without using another question.</p>
+</div>
+
+<section id="ask-r2d-focus-section" hidden>
+<h3 id="ask-r2d-focus-heading">Compare</h3>
+<div id="ask-r2d-focus-body"></div>
+</section>
+
+<section>
+<h3>R²D status</h3>
+<div id="ask-r2d-status" class="ask-r2d-status"></div>
+</section>
+
+<section id="ask-r2d-unresolved-section" hidden>
+<h3>Open bridge</h3>
+<div id="ask-r2d-unresolved"></div>
+</section>
+
+<section>
+<h3>Sources</h3>
+<div id="ask-r2d-sources"></div>
+</section>
+
+<details class="ask-r2d-analysis">
+<summary>Show R²D analysis</summary>
+<div id="ask-r2d-analysis-body"></div>
+</details>
+</div>
+
+<div class="ask-r2d-footer-note">R²D begins with a mathematical necessity: an enclosing state defines which local arrangements count as its microstates. Microscopic variables cannot have primitive priority as microstates over the relation that defines them. Statistical mechanics demonstrates the physical importance of this ordering across scales; R²D makes its recursive causal structure explicit.</div>
+
 :::
-::: {.r2d-pathways}
-::: {.r2d-pathway}
-### READ R<sup>2</sup>D
-Learn about the boundary-dependent mathematics behind the framework — from recursive counting and replacement to multiplicity, constraint, closure, and scale.  
-[UNDERSTAND R²D](understand/index.qmd){.r2d-pathway-link}
+
+::: {.r2d-home-links}
+[How to use Ask R²D](ask/how-to-use.qmd){.r2d-home-button}
+
+[What is R²D?](understand/what-is-r2d.qmd){.r2d-home-button}
+
+[Understand R²D](understand/index.qmd){.r2d-home-button}
+
+[Explore applications](applications/index.qmd){.r2d-home-button}
+
+[Read the Canon](canon/index.qmd){.r2d-home-button}
+
 :::
-::: {.r2d-pathway}
-### RUN R<sup>2</sup>D
-Give R²D to an AI and use it to interrogate a scientific law, paradox, paper, or unsolved problem.  
-[USE R²D](run/index.qmd){.r2d-pathway-link}
-:::
-::: {.r2d-pathway}
-### TEST R<sup>2</sup>D
-See what happens when the same mathematical structure is applied to thermodynamics, quantum mechanics, gravity, geometry, and biology.  
-[EXPLORE APPLICATIONS](applications/index.qmd){.r2d-pathway-link}
-:::
-:::
-<div class="r2d-challenge">
-Don't believe it. Try it. </div>
+
+<div class="r2d-challenge">Don't believe it. Try it.</div>
+
 ::: {.r2d-follow}
-# Follow R²D
+## Follow R²D
 
-Long-form essays and ongoing commentary on Substack at:  
+Long-form essays and ongoing commentary on Substack at:
 
 [**The Hand & The Arrow**](https://hand0arrow.substack.com/){target="_blank"}
 
@@ -62,9 +128,13 @@ Long-form essays and ongoing commentary on Substack at:
 
 [Facebook](https://www.facebook.com/profile.php?id=100005673914363){target="_blank"}  
 [LinkedIn](https://www.linkedin.com/in/josh-baker-75293b31/){target="_blank"}  
-[X](https://x.com/JoshBaker5716){target="_blank"}  
+[X](https://x.com/JoshBaker5716){target="_blank"}
+
 </div>
 :::
+
 ## R<sup>2</sup>D at a glance
 
 ![](images/r2d-banner.png){width="100%"}
+
+:::

@@ -1,0 +1,32 @@
+---
+title: "How to use Ask R²D"
+description: "Ask a question, explore the follow-up views, and inspect the Canon sources and open bridges."
+toc: true
+---
+
+Ask R²D is a way to question the R²D Canon. You can use it to understand a definition, test a deduction, challenge a proposed physical mapping, or compare R²D with another account of a phenomenon.
+
+[Start asking on the homepage](../index.qmd#ask-r2d).
+
+## Ask a specific question
+
+Enter a question and read the initial explanation. It should connect familiar scientific ideas to R²D before presenting technical detail. You can then choose **Compare**, **Challenge**, or **Explore** beneath the answer. For example:
+
+- **Ask:** What does *possibility* count in R²D?
+- **Compare:** How does the established account of evolution differ from an R²D interpretation?
+- **Challenge:** Does the coin example prove physical causal inversion?
+- **Explore:** What would an R²D mapping of a detector need to specify?
+
+The three buttons use the same completed scientific analysis. **Compare** explains agreements and differences, **Challenge** identifies the strongest substantive objection, and **Explore** considers conditional implications and tests. Switching between them does not use another question. Submitting a new question does.
+
+## Check the status of the answer
+
+Read the **R²D status**, **Sources**, and **Open bridge** sections along with the answer. A formal result within the Canon does not automatically establish a physical mapping. A candidate mapping needs its own boundary definitions, observable connection, and tests. The Canon and addenda can also contain conjectures; ask Ask R²D to identify them explicitly.
+
+The full technical conclusion is available under **Show the precise R²D conclusion**. External scientific sources, when used, appear alongside Canon sources.
+
+When comparing another theory, ask what that theory actually claims. A successful local prediction establishes what follows from its specified state space and premises; an additional claim of universal bottom-up causal priority needs its own definition and derivation.
+
+## Free access
+
+Each browser has five free questions per UTC month. New visitors can begin at any time. Switching between Compare, Challenge, and Explore does not send another question. Questions have a limit of 4,000 characters.
