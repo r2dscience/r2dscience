@@ -9,22 +9,11 @@
   const answer = q("ask-r2d-answer");
   const preciseSection = q("ask-r2d-precise-section");
   const precise = q("ask-r2d-precise");
-  const status = q("ask-r2d-status");
   const sources = q("ask-r2d-sources");
-  const unresolvedSection = q("ask-r2d-unresolved-section");
-  const unresolved = q("ask-r2d-unresolved");
   const analysis = q("ask-r2d-analysis-body");
-  const focusSection = q("ask-r2d-focus-section");
-  const focusHeading = q("ask-r2d-focus-heading");
-  const focusBody = q("ask-r2d-focus-body");
   const characterCount = q("ask-r2d-character-count");
   const remaining = q("ask-r2d-remaining");
-  const focusButtons = [...document.querySelectorAll("#ask-r2d-focus-controls button[data-focus]")];
-  let selectedFocus = "ask";
-  let cachedResponse = null;
   let answeredQuestion = "";
-
-  const focusLabels = { compare: "Compare", challenge: "Challenge", explore: "Explore" };
 
   function visitorId() {
     try {
@@ -130,22 +119,6 @@
     analysis.innerHTML = blocks.join("");
   }
 
-  function renderFocus(data) {
-    if (selectedFocus === "ask") {
-      focusSection.hidden = true;
-      focusBody.innerHTML = "";
-      return;
-    }
-    const sections = data.focus_variants?.[selectedFocus] ||
-      (data.focus === selectedFocus ? data.focus_sections : []) || [];
-    focusHeading.textContent = focusLabels[selectedFocus];
-    focusSection.hidden = sections.length === 0;
-    focusBody.innerHTML = sections.map(({ heading, body }) =>
-      `<div class="ask-r2d-focus-block"><h4>${escapeHtml(heading)}</h4>${lightMarkdown(body)}</div>`
-    ).join("");
-    typesetMath();
-  }
-
   function renderResponse(data) {
     if (remaining) {
       remaining.hidden = !Number.isInteger(data.public_quota?.remaining);
@@ -157,18 +130,6 @@
     preciseSection.hidden = !data.precise_conclusion;
     precise.innerHTML = data.precise_conclusion
       ? lightMarkdown(data.precise_conclusion) : "";
-
-    status.innerHTML = (data.status || []).map((x) =>
-      `<span class="ask-r2d-chip">${escapeHtml(x.replaceAll("_", " "))}</span>`
-    ).join(" ");
-
-    renderFocus(data);
-
-    const bridges = data.unresolved_bridges || [];
-    unresolvedSection.hidden = bridges.length === 0;
-    unresolved.innerHTML = bridges.length
-      ? "<ul>" + bridges.map((x) => `<li>${escapeHtml(x)}</li>`).join("") + "</ul>"
-      : "";
 
     const sourceList = data.sources || [];
     const r2dSources = sourceList.length
@@ -223,9 +184,6 @@
     setBusy(true);
     if (remaining) remaining.hidden = true;
     result.hidden = true;
-    cachedResponse = null;
-    selectedFocus = "ask";
-    focusButtons.forEach((item) => item.setAttribute("aria-pressed", "false"));
 
     try {
       const visitor = visitorId();
@@ -235,7 +193,7 @@
           "Content-Type": "application/json",
           ...(visitor ? { "X-Ask-R2D-Visitor": visitor } : {}),
         },
-        body: JSON.stringify({ question: value, focus: selectedFocus })
+        body: JSON.stringify({ question: value })
       });
 
       const data = await response.json();
@@ -244,7 +202,6 @@
         throw new Error(data.detail || data.error || `Request failed (${response.status})`);
       }
 
-      cachedResponse = data;
       answeredQuestion = value;
       renderResponse(data);
     } catch (err) {
@@ -256,18 +213,9 @@
 
   submit.addEventListener("click", ask);
 
-  focusButtons.forEach((button) => button.addEventListener("click", () => {
-    selectedFocus = button.dataset.focus;
-    focusButtons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
-    if (cachedResponse && question.value.trim() === answeredQuestion) {
-      renderFocus(cachedResponse); // Reuses the completed answer; no network call.
-    }
-  }));
-
   question.addEventListener("input", () => {
     characterCount.textContent = String(question.value.length);
     if (question.value.trim() !== answeredQuestion) {
-      cachedResponse = null;
       result.hidden = true;
     }
   });

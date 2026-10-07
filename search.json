@@ -2412,7 +2412,7 @@
     "href": "index.html",
     "title": "Ask R2D",
     "section": "",
-    "text": "One answer.\n\n\nA global analysis across the local domains of science.\n\n\n\n\nWhat do you want to ask?\n\n\n0 / 4,000 characters\n\n\n\nAsk R²D\n\nReasoning from the Canon… This could take a few minutes. \n\n\nFive free questions per month. Contact josh@r2dscience.org for expanded access or to collaborate.\n\n\nTry: Was the Big Bang the beginning of time? Why can photons share a state while two electrons cannot? Is evolution directional? If so, what determines its direction? When do many cells become one organism? Do singularities in cosmology and fluid equations mean the same thing? How does R²D resolve scientific paradoxes?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow the precise R²D conclusion\n\n\n\n\n\n\n\nGo further with this answer\n\n\n\nCompare\n\n\nChallenge\n\n\nExplore\n\n\n\nSwitch views of this answer without using another question.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow R²D analysis\n\n\n\n\n\n\n\nAn enclosing state defines what counts as a microstate.\nA microstate cannot have primitive priority over the enclosing state that defines it.\nStatistical mechanics instantiates this causal order across scales.\nR²D makes this recursive structure mathematically explicit.\n\n\n\nWhat is Ask R²D?\nHow to Ask R²D\nUnderstand R²D\nExplore applications\nRead the Canon\n\n\nDon’t believe it. Try it.\n\n\n\nLong-form essays and ongoing commentary on Substack at: The Hand & The Arrow\n\nFacebook\nLinkedIn\nX"
+    "text": "One answer.\n\n\nA global analysis across the local domains of science.\n\n\n\n\nWhat do you want to ask?\n\n\n0 / 4,000 characters\n\n\n\nAsk R²D\n\nReasoning from the Canon… This could take a few minutes. \n\n\nFive free questions per month. Contact josh@r2dscience.org for expanded access or to collaborate.\n\n\nTry: Was the Big Bang the beginning of time? Why can photons share a state while two electrons cannot? Is evolution directional? If so, what determines its direction? When do many cells become one organism? Do singularities in cosmology and fluid equations mean the same thing? How does R²D resolve scientific paradoxes?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow the precise R²D conclusion\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow R²D analysis\n\n\n\n\n\n\n\nAn enclosing state defines what counts as a microstate.\nA microstate cannot have primitive priority over the enclosing state that defines it.\nStatistical mechanics instantiates this causal order across scales.\nR²D makes this recursive structure mathematically explicit.\n\n\n\nWhat is Ask R²D?\nHow to Ask R²D\nUnderstand R²D\nExplore applications\nRead the Canon\n\n\nDon’t believe it. Try it.\n\n\n\nLong-form essays and ongoing commentary on Substack at: The Hand & The Arrow\n\nFacebook\nLinkedIn\nX"
   },
   {
     "objectID": "canon/index.html",
@@ -2769,21 +2769,21 @@
     "href": "ask/how-to-use.html#ask-a-specific-question",
     "title": "How to use Ask R²D",
     "section": "Ask a specific question",
-    "text": "Ask a specific question\nEnter a question and read the initial explanation. It should connect familiar scientific ideas to R²D before presenting technical detail. You can then choose Compare, Challenge, or Explore beneath the answer. For example:\n\nAsk: What does possibility count in R²D?\nCompare: How does the established account of evolution differ from an R²D interpretation?\nChallenge: Does the coin example prove physical causal inversion?\nExplore: What would an R²D mapping of a detector need to specify?\n\nThe three buttons use the same completed scientific analysis. Compare explains agreements and differences, Challenge identifies the strongest substantive objection, and Explore considers conditional implications and tests. Switching between them does not use another question. Submitting a new question does."
+    "text": "Ask a specific question\nAsk a question and read one answer reasoned from the R²D Canon. If you want a comparison, challenge, or possible new implication, ask for it explicitly in your question. For example:\n\nWhat does possibility count in R²D?\nHow does R²D relate to a Gibbs reaction criterion?\nDoes the finite binary count remain defined when one occupancy is zero?\nWhat might R²D imply for an evolutionary population?\n\nEach new question uses one monthly question. The answer includes the Canon sources used."
   },
   {
-    "objectID": "ask/how-to-use.html#check-the-status-of-the-answer",
-    "href": "ask/how-to-use.html#check-the-status-of-the-answer",
+    "objectID": "ask/how-to-use.html#check-the-answer",
+    "href": "ask/how-to-use.html#check-the-answer",
     "title": "How to use Ask R²D",
-    "section": "Check the status of the answer",
-    "text": "Check the status of the answer\nRead the R²D status, Sources, and Open bridge sections along with the answer. A formal result within the Canon does not automatically establish a physical mapping. A candidate mapping needs its own boundary definitions, observable connection, and tests. The Canon and addenda can also contain conjectures; ask Ask R²D to identify them explicitly.\nThe full technical conclusion is available under Show the precise R²D conclusion. External scientific sources, when used, appear alongside Canon sources.\nWhen comparing another theory, ask what that theory actually claims. A successful local prediction establishes what follows from its specified state space and premises; an additional claim of universal bottom-up causal priority needs its own definition and derivation."
+    "section": "Check the answer",
+    "text": "Check the answer\nThe answer gives the relevant R²D conclusion and its necessary premises. For a mathematical claim, inspect the stated definition or derivation. For a physical mapping, distinguish the Canon’s conditional proposal from an observation. The Sources section lists the retrieved Canon material. The technical conclusion is available under Show the precise R²D conclusion. External scientific sources appear when they were needed for the question."
   },
   {
     "objectID": "ask/how-to-use.html#free-access",
     "href": "ask/how-to-use.html#free-access",
     "title": "How to use Ask R²D",
     "section": "Free access",
-    "text": "Free access\nEach browser has five free questions per UTC month. New visitors can begin at any time. Switching between Compare, Challenge, and Explore does not send another question. Questions have a limit of 4,000 characters."
+    "text": "Free access\nEach browser has five free questions per UTC month. New visitors can begin at any time. Questions have a limit of 4,000 characters."
   },
   {
     "objectID": "run/index.html",

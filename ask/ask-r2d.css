@@ -62,46 +62,11 @@
   margin-top: .3rem;
 }
 
-.ask-r2d-focus-label {
-  font-weight: 700;
-  margin: 0 0 .5rem;
-}
-
-.ask-r2d-focus-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem;
-}
-
-.ask-r2d-focus-controls button {
-  border: 1px solid rgba(127,127,127,.35);
-  border-radius: 999px;
-  background: transparent;
-  color: inherit;
-  padding: .42rem .85rem;
-  font: inherit;
-  cursor: pointer;
-}
-
-.ask-r2d-focus-controls button[aria-pressed="true"] {
-  background: var(--bs-primary, #0d6efd);
-  border-color: var(--bs-primary, #0d6efd);
-  color: white;
-}
-
-.ask-r2d-focus-controls button:focus-visible {
-  outline: 3px solid var(--bs-primary, #0d6efd);
-  outline-offset: 2px;
-}
-
 .ask-r2d-focus-note {
   font-size: .88rem;
   opacity: .75;
   margin: .5rem 0 0;
 }
-
-.ask-r2d-focus-block + .ask-r2d-focus-block { margin-top: 1.2rem; }
-.ask-r2d-focus-block h4 { margin-bottom: .4rem; }
 
 .ask-r2d-actions {
   display: flex;
