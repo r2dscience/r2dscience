@@ -20,7 +20,8 @@ format:
 ::: {.r2d-hero}
 # Ask R<sup>2</sup>D {#ask-r2d-heading}
 
-<p class="r2d-lead">One answer. A global analysis across the local domains of science.</p>
+<p class="r2d-lead">One answer.</p>
+<p class="r2d-lead">A global analysis across the local domains of science.</p>
 :::
 
 ::: {#ask-r2d .ask-r2d-shell}
@@ -28,23 +29,24 @@ format:
 <div class="ask-r2d-card">
 <label for="ask-r2d-question" class="ask-r2d-label">What do you want to ask?</label>
 
-<textarea id="ask-r2d-question" rows="6" maxlength="4000" placeholder="For example: Could one idea connect quantum physics, gravity, and life?"></textarea>
+<textarea id="ask-r2d-question" rows="6" maxlength="4000" placeholder="For example: Could one mathematical structure connect quantum physics, gravity, and life?"></textarea>
 <div class="ask-r2d-counter"><span id="ask-r2d-character-count">0</span> / 4,000 characters</div>
-
-<p class="ask-r2d-focus-note">Five free questions per month. </p>
 
 <div class="ask-r2d-actions">
 <button id="ask-r2d-submit" type="button">Ask R²D</button>
 <span id="ask-r2d-loading" class="ask-r2d-loading" hidden>Reasoning from the Canon… This could take a few minutes. </span>
 </div>
 
+<p class="ask-r2d-focus-note">Five free questions per month. Contact josh@r2dscience.org for expanded access or to collaborate. </p>
+
 <div class="ask-r2d-examples">
 <span>Try:</span>
 <button class="ask-r2d-example">Was the Big Bang the beginning of time?</button>
 <button class="ask-r2d-example">Why can photons share a state while two electrons cannot?</button>
-<button class="ask-r2d-example">Can evolution have a direction without an external pull?</button>
+<button class="ask-r2d-example">Is evolution directional? If so, what determines its direction?</button>
 <button class="ask-r2d-example">When do many cells become one organism?</button>
 <button class="ask-r2d-example">Do singularities in cosmology and fluid equations mean the same thing?</button>
+<button class="ask-r2d-example">How does R²D resolve scientific paradoxes?</button>
 </div>
 
 <div id="ask-r2d-error" class="ask-r2d-error" hidden></div>
@@ -62,31 +64,6 @@ format:
 <div id="ask-r2d-precise"></div>
 </details>
 
-<div class="ask-r2d-followups">
-<p class="ask-r2d-focus-label">Go further with this answer</p>
-<div id="ask-r2d-focus-controls" class="ask-r2d-focus-controls" role="group" aria-label="Go further with this answer">
-<button type="button" data-focus="compare" aria-pressed="false">Compare</button>
-<button type="button" data-focus="challenge" aria-pressed="false">Challenge</button>
-<button type="button" data-focus="explore" aria-pressed="false">Explore</button>
-</div>
-<p class="ask-r2d-focus-note">Switch views of this answer without using another question.</p>
-</div>
-
-<section id="ask-r2d-focus-section" hidden>
-<h3 id="ask-r2d-focus-heading">Compare</h3>
-<div id="ask-r2d-focus-body"></div>
-</section>
-
-<section>
-<h3>R²D status</h3>
-<div id="ask-r2d-status" class="ask-r2d-status"></div>
-</section>
-
-<section id="ask-r2d-unresolved-section" hidden>
-<h3>Open bridge</h3>
-<div id="ask-r2d-unresolved"></div>
-</section>
-
 <section>
 <h3>Sources</h3>
 <div id="ask-r2d-sources"></div>
@@ -98,14 +75,18 @@ format:
 </details>
 </div>
 
-<div class="ask-r2d-footer-note">R²D begins with a mathematical necessity: an enclosing state defines which local arrangements count as its microstates. Microscopic variables cannot have primitive priority as microstates over the relation that defines them. Statistical mechanics demonstrates the physical importance of this ordering across scales; R²D makes its recursive causal structure explicit.</div>
+<div class="ask-r2d-footer-note">An enclosing state defines what counts as a microstate.  
+A microstate cannot have primitive priority over the enclosing state that defines it.  
+Statistical mechanics instantiates this causal order across scales.  
+ R²D makes this recursive structure mathematically explicit.</div>
 
 :::
 
 ::: {.r2d-home-links}
-[How to use Ask R²D](ask/how-to-use.qmd){.r2d-home-button}
 
-[What is R²D?](understand/what-is-r2d.qmd){.r2d-home-button}
+[What is Ask R²D?](understand/what-is-r2d.qmd){.r2d-home-button}
+
+[How to Ask R²D](ask/how-to-use.qmd){.r2d-home-button}
 
 [Understand R²D](understand/index.qmd){.r2d-home-button}
 
@@ -118,11 +99,9 @@ format:
 <div class="r2d-challenge">Don't believe it. Try it.</div>
 
 ::: {.r2d-follow}
-## Follow R²D
+# Follow R²D
 
-Long-form essays and ongoing commentary on Substack at:
-
-[**The Hand & The Arrow**](https://hand0arrow.substack.com/){target="_blank"}
+Long-form essays and ongoing commentary on Substack at: [**The Hand & The Arrow**](https://hand0arrow.substack.com/){target="_blank"}
 
 <div class="r2d-social-links">
 
